@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/book.min.ae6fd6beed62a91c91365df36217166ae1d9da225ddaa86e82b4fa21192daabf.css" integrity="sha256-rm/Wvu1iqRyRNl3zYhcWauHZ2iJd2qhugrT6IRktqr8=">
 
 
-<script defer src="/search.min.e9b19383138fbbc26d5f9e1e39fa0793e97b8724d67a420bf031897186c2568f.js" integrity="sha256-6bGTgxOPu8JtX54eOfoHk&#43;l7hyTWekIL8DGJcYbCVo8="></script>
+<script defer src="/search.min.bd953a5e4af4f3b398d1d740e44251f4fbd2593a98341dc7dda8619393edde1c.js" integrity="sha256-vZU6Xkr087OY0ddA5EJR9PvSWTqYNB3H3ahhk5Pt3hw="></script>
 
 
 
@@ -62,9 +62,9 @@ https://github.com/alex-shpak/hugo-book
 <ul>
 <li><a href="/posts/"><span class="wenxuan"></span>&nbsp;<font face="SYHei Bold">文選</font></a></li>
 <li><a href="/docs/movie/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">攝影與剪輯</font></a></li>
-<li><a href="/docs/jcxzx/jcxzx-toc/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">基礎寫作學</font></a></li>
-<li><a href="/docs/wxs/zgwxs-toc/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">中國文學史</font></a></li>
-<li><a href="/docs/zxs/zgzxs-toc/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">中國哲學史</font></a></li>
+<li><a href="/docs/jcxzx/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">基礎寫作學</font></a></li>
+<li><a href="/docs/wxs/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">中國文學史</font></a></li>
+<li><a href="/docs/zxs/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">中國哲學史</font></a></li>
 <li><a href="/docs/alinks/"><span class="lianjie"></span>&nbsp;<font face="SYHei Bold">鏈接</font></a></li>
 </ul>
 
@@ -102,11 +102,9 @@ https://github.com/alex-shpak/hugo-book
     <h5>
       第 03 章 漢字直排模式研究
     </h5>
-<p style="font-family:SYHei Medium;text-align:center"><span class="zuozhe"></span>李二狗 <a href="https://duoyu.ren/about/"><span class="zuozheat"></span>資深中年屌絲</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Tuesday, September 17, 2019 00:00&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;3235&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;7 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+<p style="font-family:SYHei Medium;text-align:center"><span class="zuozhe"></span>李二狗 <a href="https://duoyu.ren/about/"><span class="zuozheat"></span>資深中年屌絲</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Tuesday, September 17, 2019 00:00&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;65&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;1 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
 </header>
-<article class="markdown">
-
-<div style="font-family:SYHei Bold;text-align:center">
+<article class="markdown"><div style="font-family:SYHei Bold;text-align:center">
 
 
 
@@ -121,7 +119,7 @@ https://github.com/alex-shpak/hugo-book
 
   
 
-<a  href="/docs/zxs/zgzxs-toc/"   class="book-btn">
+<a  href="/docs/zxs/"   class="book-btn">
   &#9673;總目
 </a>
 &nbsp;&nbsp;&nbsp; 
@@ -135,209 +133,9 @@ https://github.com/alex-shpak/hugo-book
 </a>
 </div>
 
-<p>半個世紀以來，「橫排」逐漸成爲出版物排版的主流。十年前，境內還能偶爾看到一些出版社以「直排」方式出版一些古籍圖書。目下，僅有境外幾家出版社偶爾還以「直排」方式出版一些文史讀物。前幾日瀏覽素材，看到過去十年間網絡上零零散散的基於 LaTeX 的中文直排方案，逐一分析下來，發覺大都需要完善需求、更新源碼。自己久不讀書，讀「直排」書的機會就更少了。近來因飲酒吹風而感冒閉門，趁着這般光景，嘗試整理出一份基於 XeLaTeX 與 XeCJK 的中文直書方案。</p>
-
-<h1 id="直排與現代排版需求">直排與現代排版需求</h1>
-
-<p>爲了更好吸納西學現代科學，方便排版公式、符號、插圖等頁面元素，變「直書」爲「橫書」實乃大勢所趨。一百年來，經過時間與實踐檢驗，這個問題早已有了的明確答案。</p>
-
-<div class="mnotices mwarning"><p>本文並不爭論漢字「直書」與「橫書」之間的優劣問題。</p></div>
-
-<p>大多數傳統直排古籍出版物並無繁複的章節目錄、插圖、註釋、頁眉頁腳、索引項目、文獻徵引等現代排版需求（或者即使有，迫於當時的排版手段，難以實現，便放棄了）。現在，我們開歷史的倒車，以「直書」方式排版一些出版物，便不可避免地要回應以上現代排版需求。</p>
-
-<blockquote>
 <ul>
-<li><strong>章節目錄信息：</strong>傳統直排書籍皆可滿足此類需求，但詳細的目錄排版顯得較爲吃力，可從若干直排書籍的目錄處理感知到這一問題（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的目錄排版）。</li>
-<li><strong>頁眉頁腳信息：</strong>這個需求的處理並不複雜，傳統直排書籍亦大都能簡單呈現，但大都只顯示到卷（編）目，個別圖書可以顯示到章目層次，對更深層次的節、子節信息則難以呈現（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的頁眉頁腳信息排版）。</li>
-<li><strong>章節註釋信息：</strong>鑑於直排頁面的特徵，橫排頁面的腳註方式並不適宜用於直排頁面（只能放一些簡短的註釋，如《十三經注疏》整理本系列之<a href="https://books.google.co.jp/books?id=fqtZwx51nd8C&amp;pg=PA120&amp;lpg=PA120&amp;dq=%E5%89%B2%E8%A8%BB&amp;source=bl&amp;ots=f1UXtSWvZK&amp;sig=0SGsw_iwpe13W6rtTxVC1AXbEaA&amp;hl=zh-CN&amp;sa=X&amp;ved=2ahUKEwipq7Kexa3fAhWbHXAKHeoZAMAQ6AEwCHoECAAQAQ#v=onepage&amp;q=%E5%89%B2%E8%A8%BB&amp;f=false">《儀禮注疏》</a>第一〇二七頁的腳註），宜變腳註爲夾註（割註）或章節末註（如民 70 年<z>聯經出版事業公司</z>印行<z>劉若愚</z>所著<a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書，原註與譯註皆排在章節之後）。</li>
-<li><strong>索引項目信息：</strong>傳統直排書籍附帶索引的不多，即便製作了索引，排版起來亦頗顯繁瑣（如<a href="http://ap6.pccu.edu.tw/dictionary/index.asp">《中文大辭典》</a>附錄所示，不難推測其附錄製作、排版工程之浩大）；有些直排的學術著作，如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的索引部分則乾脆改爲橫排版。</li>
-<li><strong>文獻徵引信息：</strong>現代圖書常常附有翔實的 Bibliography 信息，對圖書正文參考、引用的各類文獻予以呈現，這是當代直排方案不可回避的需求；有些直排的學術著作，如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的參考文獻部分則直接改爲橫排版。</li>
-<li><strong>正文插圖與中英文混排信息：</strong>雖然一些直排的日文漢和辭典或國語辭典也能大量處理插圖與拉丁字母，但這方面總歸是直排方式的欠缺之處，若有大量拉丁文字的篇幅或大量的插圖，則全書不宜直排；如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書正文穿插大量的英文引文，與直排的漢文排在一起，除了可以協助治療讀者的頸椎病，版式讀起來並不友好，所以此後的版本大都改爲橫排版。</li>
+<li>內容建設中……</li>
 </ul>
-</blockquote>
-
-<h1 id="xecjk-直書設置">XeCJK 直書設置</h1>
-
-<p>在 XeCJK 中直書需要旋轉 PDF，並且原橫排環境中的樣式皆需調整以適應直排版式。以下爲需要調整的若干樣式。</p>
-
-<h2 id="總設置">總設置</h2>
-
-<pre><code class="language-Latex">%文檔類型加入landscape選項
-\documentclass[a4paper,12pt,openany,landscape]{book}
-%導入XeCJK Package
-\usepackage[CJKchecksingle,AutoFallBack=true]{xeCJK}
-%設定直排字體
-\setCJKmainfont[Script=CJK,Vertical=RotatedGlyphs,RawFeature={vertical:+vert},BoldFont=H-SiuNiu-Bold,ItalicFont=HGBLight-H]{I.MingCP}
-\defaultCJKfontfeatures{RawFeature={vertical:+vert}}
-</code></pre>
-
-<h2 id="調正漢字基線">調正漢字基線</h2>
-
-<pre><code class="language-Latex">%漢字基線調整適應中英文混排
-\let\CJKsymbolOrig\CJKsymbol
-\let\CJKpunctsymbolOrig\CJKpunctsymbol
-\newcommand*\CJKmovesymbol[1]{\raise.35em\hbox{\CJKsymbolOrig{#1}}}
-\newcommand*\CJKmovepunctsymbol[1]{\raise.35em\hbox{\CJKpunctsymbolOrig{#1}}}
-\newcommand*\CJKmove{\punctstyle{plain}
-	\let\CJKsymbol\CJKmovesymbol
-	\let\CJKpunctsymbol\CJKmovepunctsymbol}	
-%在\begin{document}後添加\CJKmove
-\begin{document}
-\CJKmove
-</code></pre>
-
-<h2 id="目錄中的章節樣式">目錄中的章節樣式</h2>
-
-<pre><code class="language-Latex">\titlecontents{chapter}[0em]{\addvspace{5pt}\fontsizec{0.7cm}\it}     % for  Chinese table of contents
-{\rotatebox[origin=cc]{-270}{\ncircbs{\thecontentslabel}}~}
-{\rotatebox[origin=cc]{-270}{\Alphcircwcu{21}}~\thecontentslabel\helfont}{\fontsizec{0.7cm}\color{black}\;\titlerule*[.5pc]{.}\;\zhnumsetup{style={Traditional,Financial}}\zhdigits{\thecontentspage}}
-
-\titlecontents{section}[0cm]{\it}
-{第{\thecontentslabel}節~~~}
-{\rotatebox[origin=cc]{-270}{\Alphcircwcu{21}}~\thecontentslabel\helfont}{\titlerule*[.5pc]{.}\;\color{black}\zhnumsetup{style={Traditional,Financial}}\zhdigits{\thecontentspage}}
-</code></pre>
-
-<p><a href="https://i.loli.net/2018/12/20/5c1b692106fe9.png"><img src="https://i.loli.net/2018/12/20/5c1b692106fe9.png" alt="目錄版式效果" /></a></p>
-
-<h2 id="正文中的章節樣式">正文中的章節樣式</h2>
-
-<pre><code class="language-Latex">%%竖排章样式
-\assignpagestyle{\chapter}{empty}%去掉章页面页码
-\assignpagestyle{\chapter*}{empty}%去掉章页面页码
-\newcommand{\mychapter}[1]{%
-	\color{myred}\HGBM\fontsize{37}{37}第~\rotatebox[x=0.715cm,origin=c]{-270}{\ncircbs{\thechapter}}~章{{\ZSKS·}#1}
-}
-\newcommand{\mychapterun}[1]{%
-	\color{myred}\fontsize{37}{37}\ding{109}~\akzfont\HGBM #1
-}
-\titleformat{\chapter}{}{}{0em}{\mychapter}% code preceding the title body  (title body is taken as argument)
-\titleformat{name=\chapter,numberless}{}{}{0pt}{\mychapterun}
-\titlespacing{\chapter}
-{0pt}{0pt}{36pt}
-%%竖排節样式
-\newcommand{\mysection}[1]{%
-			\color{myred}\MLan \fontsize{21}{21}第~{\thesection}~節~~~~ #1
-}
-\newcommand{\mysectionun}[1]{%
-			\color{myred}\fontsize{21}{21}\ding{109}~\akzfont\MLan #1
-}
-\titleformat{\section}{}{}{0mm}{\mysection}
-\titleformat{name=\section,numberless}{}{}{0pt}{\mysectionun}
-\titlespacing{\section}
-{0pt}{12pt}{6pt}
-</code></pre>
-
-<p><img src="https://i.loli.net/2018/12/20/5c1b678d460d3.png" alt="正文章節標題樣式" /></p>
-
-<h2 id="插圖樣式設定">插圖樣式設定</h2>
-
-<p>直排時，插圖不易調整，尤其是插圖的標題樣式。本文方案暫且處理如下。</p>
-
-<pre><code class="language-Latex">\usepackage{wrapfig}
-\usepackage{caption}
-\captionsetup[wrapfigure]{font=small,labelfont=bf,textfont=it,aboveskip=6pt,belowskip=-1.02em,justification=raggedright,name={Fig.}}%,labelsep=period
-\newcommand{\mafig}[2]{
-	\begin{wrapfigure}{O}[0pt]{0.2\textwidth}%[10]
-		\vspace{-6pt}
-	{\tcbincludegraphics[size=fbox,colframe=myred!50!black,colback=red!60!black,center title,drop fuzzy shadow,colback=myred,boxsep=3pt,arc=0pt,graphics options={scale=.5,angle=-270},title={\large\HGBR\helfont #2}]{#1}}
-		\vspace{-6pt}
-\end{wrapfigure}
-}
-</code></pre>
-
-<h2 id="參考文獻設定">參考文獻設定</h2>
-
-<pre><code class="language-Latex">%採用gb7714-2015格式
-\usepackage[backend = biber,bibstyle = gb7714-2015,citestyle=gb7714-2015ay,natbib=true,mcite=true,sorting=nyt,sortcites=true,autopunct=true,hyperref=true,abbreviate=false,backref=true]{biblatex}%國標2015文獻引用格式 %bibstyle = gb7714-2015,citestyle=gb7714-2015ay,bibstyle=alphabetic,%=gb7714-2015ay为（作者年份页码）样式引用
-\addbibresource{bibliography.bib} % BibTeX bibliography file bibliography.bib
-\defbibheading{bibempty}{}
-\DefineBibliographyStrings{english}{%
-	backrefpage = {引用頁：},
-	backrefpages= {引用頁：},
-}
-
-%正文行文示例
-……\cite[P178]{adornoRethinkingArchitectureReader1997}。
-\textcite[P352]{haidegeerHeErDeLinShiDeChanShi2000}認爲……
-
-%正文列印參考文獻
-\printbibliography[heading=bibempty]
-</code></pre>
-
-<p><img src="https://i.loli.net/2018/12/20/5c1b688b4f3c5.png" alt="參考文獻直排樣式" /></p>
-
-<h2 id="夾註樣式設置">夾註樣式設置</h2>
-
-<pre><code class="language-Latex">%%%gezhu environment
-\usepackage{zhulem}
-\usepackage{gezhu}
-\setgezhuraise{-3.5pt}
-\setgezhulines{2}
-\everygezhu{\linespread{1.2}\fontsize{9}{9}\HMOP\selectfont}
-\newcommand{\gz}[1]{{\gezhu{#1}}}
-%\newcommand{\gz}[1]{\disablepinyin\gezhu{\HMOP #1}\enablepinyin}
-</code></pre>
-
-<p><a href="https://i.loli.net/2018/12/20/5c1b6a9f161e3.png"><img src="https://i.loli.net/2018/12/20/5c1b6a9f161e3.png" alt="行間夾批樣式效果" /></a></p>
-
-<h2 id="頁眉頁腳樣式">頁眉頁腳樣式</h2>
-
-<pre><code class="language-Latex">\usepackage{titleps} %詳細參見說明文檔
-
-\newpagestyle{mapage}{%   %numbered chapter
-	\sethead[\MLan\color{myred}\bottitlemarks{第{\thesection}節}~~~\sectiontitle]
-	 []
-	 [{\MLan\color{myred}\rotatebox[x=0.225cm,origin=c]{-270}{\ncircbs{\thechapter}}~\chaptertitle《~\parttitle 編《~\thebooktitle《~第{\HGBM\color{black}\zhnumsetup{style={Traditional,Financial}}\zhdigits{\thepage}}頁}] %even head
-	 {}
-	 {}
-	 {} %odd head
-	 \setfoot[]
-	 []
-	 [] %even foot
-	 {\MLan\color{myred}\bottitlemarks{第{\thesection}節}~~~\sectiontitle}
-	 {}
-	 {{\MLan\color{myred}\rotatebox[x=0.225cm,origin=c]{-270}{\ncircbs{\thechapter}}~\chaptertitle《~\parttitle 編《~\thebooktitle《~第{\HGBM\color{black}\zhnumsetup{style={Traditional,Financial}}\zhdigits{\thepage}}頁}} %odd foot
-				}
-	\settitlemarks{part,chapter,section,subsection,subsubsection}
-
-</code></pre>
-
-<p><a href="https://i.loli.net/2018/12/20/5c1b6b2b43a2f.png"><img src="https://i.loli.net/2018/12/20/5c1b6b2b43a2f.png" alt="頁眉頁腳直排樣式" /></a></p>
-
-<h2 id="章節尾註樣式">章節尾註樣式</h2>
-
-<pre><code class="language-Latex">\usepackage[page]{pagenote}%[page] Because of how TeX writes information to files, when the page option is used there must be no notes on the page where \printnotes or \printnotes* closes the ent file. If necessary, a \clearpage or similar must be used before the \print （標記注釋所在頁碼必須讓printnotes另起一頁，否則可能吃掉與\printnotes同頁的注釋^_^）
-
-% 正文中的注释编号样式调整：圓圈數字
-\renewcommand\notenumintext[1]{\rotatebox[origin=cc]{-270}{\textsuperscript{\footnotesize\ncircrds{#1}}}}
-% 章节末尾的注释编号样式调整：方形黑底數字
-\renewcommand\notenuminnotes[1]{\rotatebox[origin=cc]{-270}{\ncircbs{#1}}}
-%尾註標記該註釋在正文出現的頁碼
-\renewcommand{\pagename}{{P.}}
-
-\makepagenote	
-</code></pre>
-
-<p><a href="https://i.loli.net/2018/12/20/5c1b6b9601691.png"><img src="https://i.loli.net/2018/12/20/5c1b6b9601691.png" alt="註釋採用章末尾註" /></a></p>
-
-<h2 id="索引样式設定">索引样式設定</h2>
-
-<p>直排模式的索引與橫排並無多少區別，參考本站 <em><a href="https://mengxianjun.org/2016/10/15/zhmakeindex/">Zhmakeindex and the Indices Creating of Chinese Books</a></em> 一文即可。效果見下圖：</p>
-
-<p><img src="https://i.loli.net/2018/12/20/5c1b5ed90a733.png" alt="直排索引樣式" /></p>
-
-<h1 id="復原古籍印版樣式">復原古籍印版樣式</h1>
-
-<div class="mnotices minfo"><p>這類字體近年來越來越多，許多沈睡在古籍中的字形得以重見天日。尤以<z>日本</z>[<zl>欣喜堂</zl>](http://www.kinkido.net/)的工作最爲出色。</p></div>
-
-<p>使用一些電子化的古籍印刷字體，如<a href="https://wytype.com/typeface/earlier">康熙字典體</a>（《康熙字典》印刷所用字型）、<a href="https://wytype.com/typeface/WyueGutiFangsong">聚珍仿宋</a>（北宋刊本中的字型）、<a href="https://www.justfont.com/fontdetail/145">浙江民間書刻體</a>之類，可以復原古籍原典部分印刷效果。下面兩副圖即大致以<a href="https://wytype.com/typeface/WyueGutiFangsong">聚珍仿宋</a>排版的圖書與電子化重排效果示意。</p>
-
-<p><img src="https://i.loli.net/2018/12/20/5c1b4a0148e76.png" alt="世界書局《駢體文鈔》版式" />
-<img src="https://i.loli.net/2018/12/20/5c1b4a148fdcb.png" alt="仿世界書局版" /></p>
-
-<h1 id="結語">結語</h1>
-
-<p>上文簡單展示了以 XeCJK 與 XeLaTeX 製作中文直排版式的方案。此外，尚有基於 <a href="https://texwiki.texjp.org/?upTeX%2CupLaTeX">upLaTeX</a> 以及較新的 <a href="https://github.com/clerkma/ptex-ng">Asiatic pTeX</a> 的直排方案，可資參考。</p>
 
 <div style="font-family:SYHei Bold;text-align:center">
 
@@ -354,7 +152,7 @@ https://github.com/alex-shpak/hugo-book
 
   
 
-<a  href="/docs/zxs/zgzxs-toc/"   class="book-btn">
+<a  href="/docs/zxs/"   class="book-btn">
   &#9673;總目
 </a>
 &nbsp;&nbsp;&nbsp; 
@@ -378,29 +176,6 @@ https://github.com/alex-shpak/hugo-book
 
     
   
-
-<aside class="book-toc level-true fixed">
-<nav id="TableOfContents">
-<ul>
-<li><a href="#直排與現代排版需求">直排與現代排版需求</a></li>
-<li><a href="#xecjk-直書設置">XeCJK 直書設置</a>
-<ul>
-<li><a href="#總設置">總設置</a></li>
-<li><a href="#調正漢字基線">調正漢字基線</a></li>
-<li><a href="#目錄中的章節樣式">目錄中的章節樣式</a></li>
-<li><a href="#正文中的章節樣式">正文中的章節樣式</a></li>
-<li><a href="#插圖樣式設定">插圖樣式設定</a></li>
-<li><a href="#參考文獻設定">參考文獻設定</a></li>
-<li><a href="#夾註樣式設置">夾註樣式設置</a></li>
-<li><a href="#頁眉頁腳樣式">頁眉頁腳樣式</a></li>
-<li><a href="#章節尾註樣式">章節尾註樣式</a></li>
-<li><a href="#索引样式設定">索引样式設定</a></li>
-</ul></li>
-<li><a href="#復原古籍印版樣式">復原古籍印版樣式</a></li>
-<li><a href="#結語">結語</a></li>
-</ul>
-</nav>
-</aside>
 
 
 
