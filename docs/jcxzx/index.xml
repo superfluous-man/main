@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>基礎寫作學 on 桃林筆記</title>
+    <link>https://mengxianjun.org/docs/jcxzx/</link>
+    <description>Recent content in 基礎寫作學 on 桃林筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 17 Sep 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://mengxianjun.org/docs/jcxzx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>《基礎寫作學》筆記大綱</title>
+      <link>https://mengxianjun.org/docs/jcxzx/jcxzx-toc/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxianjun.org/docs/jcxzx/jcxzx-toc/</guid>
+      <description>第 01 章 概要與目錄 第 02 章 第 03 章 第 04 章 第 05 章 第 06 章 本筆記主要基於以下兩書整理： 張麗珠. 中國哲學史三十講[M]. 臺北: 里仁書局, 2007 勞思光. 新編中國</description>
+    </item>
+    
+  </channel>
+</rss>

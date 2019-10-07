@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>友好鏈接 on 桃林筆記</title>
+    <link>https://mengxianjun.org/docs/alinks/</link>
+    <description>Recent content in 友好鏈接 on 桃林筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 16 Jul 2019 18:33:42 -0400</lastBuildDate>
+    
+	<atom:link href="https://mengxianjun.org/docs/alinks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>友好鏈接</title>
+      <link>https://mengxianjun.org/docs/alinks/links/</link>
+      <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxianjun.org/docs/alinks/links/</guid>
+      <description>多餘人的博客 建設中…… The Attachments shortcode displays a list of files attached to a page. BachGavotteShort.mp3 (357 ko) Carroll_AliceAuPaysDesMerveilles.pdf (175 ko) adivorciarsetoca00cape.pdf (361 ko) hugo.png (17 ko) movieselectricsheep-flock-244-32500-2.mp4 (340 ko) Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages If your page is a markdown file, attachements must be place in a folder named</description>
+    </item>
+    
+  </channel>
+</rss>
