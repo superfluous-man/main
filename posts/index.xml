@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 桃林筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 16 Jul 2019 18:33:42 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 15 Oct 2019 00:57:29 +0800</lastBuildDate>
     
 	<atom:link href="https://mengxianjun.org/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>站點寫作內容版式 Demos</title>
+      <link>https://mengxianjun.org/posts/20191015DEMOS/</link>
+      <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
+      
+      <guid>https://mengxianjun.org/posts/20191015DEMOS/</guid>
+      <description>本站爲便於整理、排版圖文內容，結合 Hugo 的 shortcode 功能，製作若干便捷樣式，以提高 markdown 書寫的效率。本文爲這些設計的備份。</description>
+    </item>
     
     <item>
       <title>漢語歐化與翻譯腔</title>

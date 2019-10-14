@@ -246,6 +246,15 @@
     </item>
     
     <item>
+      <title>站點寫作內容版式 Demos</title>
+      <link>https://mengxianjun.org/posts/20191015DEMOS/</link>
+      <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
+      
+      <guid>https://mengxianjun.org/posts/20191015DEMOS/</guid>
+      <description>本站爲便於整理、排版圖文內容，結合 Hugo 的 shortcode 功能，製作若干便捷樣式，以提高 markdown 書寫的效率。本文爲這些設計的備份。</description>
+    </item>
+    
+    <item>
       <title>漢語歐化與翻譯腔</title>
       <link>https://mengxianjun.org/posts/20190716hanyuouhuayufanyiqiang/</link>
       <pubDate>Tue, 16 Jul 2019 18:33:42 -0400</pubDate>
@@ -260,7 +269,7 @@
       <pubDate>Tue, 17 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://mengxianjun.org/docs/alinks/links/</guid>
-      <description>多餘人的博客 建設中…… The Attachments shortcode displays a list of files attached to a page. BachGavotteShort.mp3 (357 ko) Carroll_AliceAuPaysDesMerveilles.pdf (175 ko) adivorciarsetoca00cape.pdf (361 ko) hugo.png (17 ko) movieselectricsheep-flock-244-32500-2.mp4 (340 ko) Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages If your page is a markdown file, attachements must be place in a folder named</description>
+      <description>多餘人的博客 建設中…… The Attachments shortcode displays a list of files attached to a page. BachGavotteShort.mp3 (357 ko) hugo.png (17 ko) movieselectricsheep-flock-244-32500-2.mp4 (340 ko) 符合 GB-T 7714-2015 标准的 biblatex 参考文献样式.pdf (1490 ko) Usage The shortcurt lists files found in a specific folder. Currently, it support two implementations for pages If</description>
     </item>
     
     <item>
