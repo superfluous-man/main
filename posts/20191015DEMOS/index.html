@@ -6,10 +6,10 @@
 <title>站點內容 Demos | 桃林筆記</title>
 
 
-<link rel="stylesheet" href="/book.min.b18a84b972e4e4e778b09d366717a8572f871fe3567db8e9da63f1bf997411e7.css" integrity="sha256-sYqEuXLk5Od4sJ02ZxeoVy&#43;HH&#43;NWfbjp2mPxv5l0Eec=">
+<link rel="stylesheet" href="/book.min.a8b6eee1169bc0af2f2929b34a4b46976b15ead68741d293933605cc8e1cdfb2.css" integrity="sha256-qLbu4RabwK8vKSmzSktGl2sV6taHQdKTkzYFzI4c37I=">
 
 
-<script defer src="/search.min.26f1ac2aaba6e2efcb338c7cd14cb0b0d611598bddce0b77e682fe985261e1b8.js" integrity="sha256-JvGsKqum4u/LM4x80UywsNYRWYvdzgt35oL&#43;mFJh4bg="></script>
+<script defer src="/search.min.cbc5593838df66a4fa0ae094b149705a20ef2b80fc879e22b265c3e93dbbbabf.js" integrity="sha256-y8VZODjfZqT6CuCUsUlwWiDvK4D8h54ismXD6T27ur8="></script>
 
 
 
@@ -101,7 +101,7 @@ https://github.com/alex-shpak/hugo-book
     <p class="listpagetitle">
       站點內容 Demos
     </p>
-<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>張三瘋 <a href="https://duoyu.ren/"><span class="zuozheat"></span>三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Tuesday, October 15, 2019 00:57&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;5514&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;12 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>張三瘋 <a href="https://duoyu.ren/"><span class="zuozheat"></span>三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Tuesday, October 15, 2019 00:57&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;5879&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;12 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
 </header>
 <article class="markdown">
 
@@ -119,39 +119,6 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="本站新增樣式">本站新增樣式</h1>
 
 <p>參考衆多 Hugo shortcode 樣式，爲提高效率，本站新增以下幾種樣式。模板原有 shortcode 樣式在本文第二部分列出備查。</p>
-
-<h2 id="備註框">備註框</h2>
-
-<p>共計 info、warning、tip、note 四色四種，並分別漢化爲「編者按語」「特別警示」「友情提示」「官方吐槽」。行文時根據內容需要選取。以下爲示例效果。</p>
-
-<pre><code class="language-tpl">{{&lt; notice [info|warning|tip|note] &gt;}}備註框內容{{&lt; /notice &gt;}}
-</code></pre>
-
-
-<div class="notices info" ><p>这一天，韩学愈特来拜访。通名之后，方鸿渐倒窘起来，同时快意地失望。理想中的韩学愈不知怎样的嚣张浮滑，不料是个沉默寡言的人。他想陆子潇也许记错，孙小姐准是过信流言。</p>
-</div>
-
-
-
-
-<div class="notices warning" ><p><strong>本站是 18 禁網站，未成年人不宜瀏覽。否則，後果自負。</strong></p>
-</div>
-
-
-
-
-<div class="notices tip" ><p><chq>木讷朴实是韩学愈的看家本领——不，养家本钱，现代人有两个流行的信仰。第一：女子无貌便是德，所以漂亮的女人准比不上丑女人那样有思想，有品节；第二：男子无口才，就是表示有道德，所以哑巴是天下最诚朴的人。<chcite>Havard Politics Review</chcite></chq></p>
-</div>
-
-
-
-
-<div class="notices note" ><p>再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。
-<br>
-最后他听说韩太太是美国人，他简直改容相敬了，能娶外国老婆的非精通西学不可，自己年轻时不是想娶个比国女人没有成功么？这人做得系主任。他当时也没想到这外国老婆是在中国娶的白俄。</p>
-</div>
-
-
 
 <h2 id="漢語拼音標註">漢語拼音標註</h2>
 
@@ -182,14 +149,77 @@ I’m happy for that. <rp> (</rp><rt>My heart is broken.</rt><rp>) </rp>
 青山側耳聽！</li>
 </ul>
 
+<h2 id="備註及定義框">備註及定義框</h2>
+
+<p>分段、換行、列表的渲染，不同瀏覽器的支持情況未盡相同，大體皆可用。行文時根據內容需要選取，以下爲兩類文字框版式的示例效果。</p>
+
+<h3 id="備註無標題">備註無標題</h3>
+
+<p>共計 info、warning、tip、note 四色四種，並分別漢化爲「編者按語」「特別警示」「友情提示」「官方吐槽」。</p>
+
+<pre><code class="language-tpl">{{&lt; notice [info|warning|tip|note] &gt;}}備註框內容{{&lt; /notice &gt;}}
+</code></pre>
+
+
+<div class="notices info" ><p>这一天，韩学愈特来拜访。通名之后，方鸿渐倒窘起来，同时快意地失望。理想中的韩学愈不知怎样的嚣张浮滑，不料是个沉默寡言的人。他想陆子潇也许记错，孙小姐准是过信流言。</p>
+</div>
+
+
+
+
+<div class="notices warning" ><p><strong>本站是 18 禁網站，未成年人不宜瀏覽。否則，後果自負。</strong></p>
+</div>
+
+
+
+
+<div class="notices tip" ><p>木讷朴实是韩学愈的看家本领——不，养家本钱，现代人有两个流行的信仰。第一：女子无貌便是德，所以漂亮的女人准比不上丑女人那样有思想，有品节；第二：男子无口才，就是表示有道德，所以哑巴是天下最诚朴的人。</p>
+</div>
+
+
+
+
+<div class="notices note" ><p>再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。
+<br>
+最后他听说韩太太是美国人，他简直改容相敬了，能娶外国老婆的非精通西学不可，自己年轻时不是想娶个比国女人没有成功么？这人做得系主任。他当时也没想到这外国老婆是在中国娶的白俄。</p>
+</div>
+
+
+
+<h3 id="自定義標題">自定義標題</h3>
+
+<p>爲名詞解釋排版需要，編寫 definition 的 shortcode，具體效果如下。</p>
+
+<pre><code class="language-tpl">{{&lt; definition title=&quot;學位&quot; &gt;}}
+再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。
+&lt;br&gt;
+When meeting with senior officers stationed in Hubei, Xi extended sincere greetings to all officers and soldiers of the armed forces stationed in the province.
+{{&lt; /definition &gt;}}
+</code></pre>
+
+<p>在「title」後面填寫要定義的概念，上述源碼將渲染爲：</p>
+
+<p><div>
+  <div class="definitiontitle">
+    <span style="font-family:SYHei Heavy;"><span class="qmarkl"></span>學位</span>之定義<span class="qmarkr"></span>
+  </div>
+  <div class="definition">
+  <span style="font-family:SYHei Medium;">
+再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。
+<br>
+When meeting with senior officers stationed in Hubei, Xi extended sincere greetings to all officers and soldiers of the armed forces stationed in the province.
+</span>
+  </div>
+  </div></p>
+
 <h2 id="五七言詩歌排版">五七言詩歌排版</h2>
 
 <p><wuyan>
 <strong>古詩十九首</strong><br>
 生年不満百，
-常懐千歳憂。
+常懐千歳憂。<wbr>
 昼短苦夜長，
-何不秉燭遊。
+何不秉燭遊。<wbr>
 為楽当及時，
 何能待来茲。
 <chcite>佚名</chcite>
@@ -197,20 +227,20 @@ I’m happy for that. <rp> (</rp><rt>My heart is broken.</rt><rp>) </rp>
 
 <p><qiyan>
 <strong>春夜洛城闻笛</strong><br>
-谁家玉笛暗飞声，散入春风满洛城。
+谁家玉笛暗飞声，散入春风满洛城。<wbr>
 此夜曲中闻折柳，何人不起故园情。
 <chcite>李白</chcite>
 </qiyan></p>
 
 <p><bayan>
 <strong>短歌行</strong><br>
-對酒當歌。人生幾何。譬如朝露。去日苦多。
-慨當以慷。憂思難忘。何以解憂。唯有杜康。
-青青子衿。悠悠我心。但為君故。沈吟至今。
-呦呦鹿鳴。食野之苹。我有嘉賓。鼓瑟吹笙。
-明明如月。何時可輟。憂従中来。不可断絶。
-越陌度阡。枉用相存。契闊談讌。心念舊恩。
-月明星稀。烏鵲南飛。繞樹三匝。何枝可依。
+對酒當歌。人生幾何。譬如朝露。去日苦多。<wbr>
+慨當以慷。憂思難忘。何以解憂。唯有杜康。<wbr>
+青青子衿。悠悠我心。但為君故。沈吟至今。<wbr>
+呦呦鹿鳴。食野之苹。我有嘉賓。鼓瑟吹笙。<wbr>
+明明如月。何時可輟。憂従中来。不可断絶。<wbr>
+越陌度阡。枉用相存。契闊談讌。心念舊恩。<wbr>
+月明星稀。烏鵲南飛。繞樹三匝。何枝可依。<wbr>
 山不厭高。海不厭深。周公吐哺。天下歸心。
 <chcite>曹孟德</chcite>
 </bayan></p>
@@ -1091,7 +1121,7 @@ Lorem markdownum insigne...
   &#9673;返回文選列表
 </a>
 </div>
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span> The article was recently updated on Saturday, October 19, 2019, 19:24:11 by 編者.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span> The article was recently updated on Sunday, October 20, 2019, 02:25:35 by 編者.</p>
 </article>
 
      
@@ -1107,8 +1137,12 @@ Lorem markdownum insigne...
 <ul>
 <li><a href="#本站新增樣式">本站新增樣式</a>
 <ul>
-<li><a href="#備註框">備註框</a></li>
 <li><a href="#漢語拼音標註">漢語拼音標註</a></li>
+<li><a href="#備註及定義框">備註及定義框</a>
+<ul>
+<li><a href="#備註無標題">備註無標題</a></li>
+<li><a href="#自定義標題">自定義標題</a></li>
+</ul></li>
 <li><a href="#五七言詩歌排版">五七言詩歌排版</a></li>
 <li><a href="#源代碼展示框">源代碼展示框</a></li>
 <li><a href="#父子目錄樣式">父子目錄樣式</a></li>
