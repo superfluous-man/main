@@ -6,10 +6,10 @@
 <title>內容版式 Demos | 桃林筆記</title>
 
 
-<link rel="stylesheet" href="/book.min.c35ab9d4cfa9c29b889f26ae7a7572fbf687192869b6f2914904e8e8ec43714b.css" integrity="sha256-w1q51M&#43;pwpuInyauenVy&#43;/aHGShptvKRSQTo6OxDcUs=">
+<link rel="stylesheet" href="/book.min.8f5fa7359753ffd41620af9b799868acb14e2a6204c3c2b29e24ba622354ff67.css" integrity="sha256-j1&#43;nNZdT/9QWIK&#43;beZhorLFOKmIEw8KyniS6YiNU/2c=">
 
 
-<script defer src="/search.min.89c344bcb5544586dd7fd5b003580a6574d62ae9dd0224a112f379834cdd521c.js" integrity="sha256-icNEvLVURYbdf9WwA1gKZXTWKundAiShEvN5g0zdUhw="></script>
+<script defer src="/search.min.bd8773216ed5a6346b9a7cc0a705054ef605b0d0cf2445a50ef4d3020d8a02ca.js" integrity="sha256-vYdzIW7VpjRrmnzApwUFTvYFsNDPJEWlDvTTAg2KAso="></script>
 
 
 
@@ -100,7 +100,7 @@ https://github.com/alex-shpak/hugo-book
     <p class="listpagetitle">
       內容版式 Demos
     </p>
-<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>張三瘋 <a href="https://duoyu.ren/"><span class="zuozheat"></span>國立三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Tuesday, October 15, 2019 00:57&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;6064&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;13 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>張三瘋 <a href="https://duoyu.ren/"><span class="zuozheat"></span>國立三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Tuesday, October 15, 2019 00:57&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;6544&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;14 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
 </header>
 <article class="markdown">
 
@@ -123,10 +123,30 @@ https://github.com/alex-shpak/hugo-book
 
 <p>使用 <code>&lt;ruby&gt;</code> 標籤可以勉強在網頁爲漢字注音，此法甚爲笨拙，輕易不使用。Shortcode 使用方法與效果如下：</p>
 
-<pre><code class="language-tlp">- 每逢佳節高築牆，{{&lt;ruby rb=&quot;喜聞樂見&quot; rt=&quot;shēn biǎo yí hàn&quot;*/ &gt;}}毀雲梯！
-- OMG! {{&lt;/*ruby rb=&quot;I'm happy for that.&quot; rt=&quot;My heart is broken.&quot;&gt;}}
-- 烽煙滾滾唱{{&lt;ruby rb=&quot;英雄&quot; rt=&quot;えいゆう&quot;&gt;}}，{{&lt; ruby rb=&quot;四面&quot; rt=&quot;しめん&quot;&gt;}}青山側耳聽！
-</code></pre>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ &lt;ruby&gt; 標籤添加注音樣式源碼 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">- 每逢佳節高築牆，{{&lt;<span style="color:#f92672">ruby</span> <span style="color:#a6e22e">rb</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;喜聞樂見&#34;</span> <span style="color:#a6e22e">rt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;shēn biǎo yí hàn&#34;</span> &gt;}}毀雲梯！
+- OMG! 呵呵！{{&lt; <span style="color:#f92672">ruby</span> <span style="color:#a6e22e">rb</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;I&#39;m happy for that.&#34;</span> <span style="color:#a6e22e">rt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;My heart is broken.&#34;</span>&gt;}}
+- 烽煙滾滾唱{{&lt;<span style="color:#f92672">ruby</span> <span style="color:#a6e22e">rb</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;英雄&#34;</span> <span style="color:#a6e22e">rt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;えいゆう&#34;</span>&gt;}}，{{&lt; <span style="color:#f92672">ruby</span> <span style="color:#a6e22e">rb</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;四面&#34;</span> <span style="color:#a6e22e">rt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;しめん&#34;</span>&gt;}}青山側耳聽！</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <p>渲染爲：</p>
 
@@ -135,7 +155,7 @@ https://github.com/alex-shpak/hugo-book
 喜聞樂見 <rp> (</rp><rt>shēn biǎo yí hàn</rt><rp>) </rp>
 </ruby>
 毀雲梯！</li>
-<li>OMG! <ruby>
+<li>OMG! 呵呵！<ruby>
 I’m happy for that. <rp> (</rp><rt>My heart is broken.</rt><rp>) </rp>
 </ruby>
 </li>
@@ -154,10 +174,28 @@ I’m happy for that. <rp> (</rp><rt>My heart is broken.</rt><rp>) </rp>
 
 <h3 id="備註無標題">備註無標題</h3>
 
-<p>共計 info、warning、tip、note 四色四種，並分別漢化爲「編者按語」「特別警示」「友情提示」「官方吐槽」。</p>
+<p>共計 info、warning、tip、note 四色四種，並分別漢化爲「編者按語」「特別警示」「官方吐槽」「思考題目」。</p>
 
-<pre><code class="language-tpl">{{&lt; notice [info|warning|tip|note] &gt;}}備註框內容{{&lt; /notice &gt;}}
-</code></pre>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 備註框內容源碼 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">notice</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">info</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">warning</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">tip</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">note</span><span style="color:#960050;background-color:#1e0010">]</span> &gt;}}備註框內容{{&lt; /<span style="color:#f92672">notice</span> &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 
 <div class="notices info" ><p>这一天，韩学愈特来拜访。通名之后，方鸿渐倒窘起来，同时快意地失望。理想中的韩学愈不知怎样的嚣张浮滑，不料是个沉默寡言的人。他想陆子潇也许记错，孙小姐准是过信流言。</p>
@@ -185,12 +223,34 @@ I’m happy for that. <rp> (</rp><rt>My heart is broken.</rt><rp>) </rp>
 
 <p>爲名詞解釋排版需要，編寫 definition 的 shortcode，具體效果如下。</p>
 
-<pre><code class="language-tpl">{{&lt; definition title=&quot;學位&quot; &gt;}}
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 備註框內容源碼 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">definition</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;學位&#34;</span> &gt;}}
 再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。
-&lt;br&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
 When meeting with senior officers stationed in Hubei, Xi extended sincere greetings to all officers and soldiers of the armed forces stationed in the province.
-{{&lt; /definition &gt;}}
-</code></pre>
+{{&lt; /<span style="color:#f92672">definition</span> &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <p>在「title」後面填寫要定義的概念，上述源碼將渲染爲：</p>
 
@@ -203,6 +263,46 @@ When meeting with senior officers stationed in Hubei, Xi extended sincere greeti
 再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。
 <br>
 When meeting with senior officers stationed in Hubei, Xi extended sincere greetings to all officers and soldiers of the armed forces stationed in the province.
+🈡</span>
+  </div>
+  </div></p>
+
+<p>稍加變換色彩樣式與標題風格，新增 freebox shortcode。效果如下。</p>
+
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ freebox shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">freebox</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;這真是名場面&#34;</span> &gt;}}
+在导师制讨论会上，部视学先讲了十分钟冠冕堂皇的话，平均每分钟一句半“兄弟在英国的时候”。他讲完看一看手表，就退席了。听众喉咙里忍住的大小咳嗽声全放出来，此作彼继，Ehem，KeKeKe，——在中国集会上，静默三分钟后，主席报告后，照例有这么一阵咳嗽。
+{{&lt; /<span style="color:#f92672">freebox</span> &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+
+<p>上述源碼便渲染出如下格式：</p>
+
+<p><div>
+  <div class="freeboxtitle">
+    <span style="font-family:SYHei Heavy;">⦿ 這真是名場面 ⦿</span>
+  </div>
+  <div class="freebox">
+  <span style="font-family:SYHei Regular;">
+在导师制讨论会上，部视学先讲了十分钟冠冕堂皇的话，平均每分钟一句半“兄弟在英国的时候”。他讲完看一看手表，就退席了。听众喉咙里忍住的大小咳嗽声全放出来，此作彼继，Ehem，KeKeKe，——在中国集会上，静默三分钟后，主席报告后，照例有这么一阵咳嗽。
 🈡</span>
   </div>
   </div></p>
@@ -397,13 +497,36 @@ if __name__ == '__main__':
 </tbody>
 </table>
 
-<pre><code class="language-tpl">{{% children depth=&quot;1&quot; style=&quot;li&quot; showhidden=&quot;true&quot; sort=&quot;Name&quot;  %}}
-{{% children  %}}
-{{% children description=&quot;true&quot;   %}}
-{{% children depth=&quot;3&quot; showhidden=&quot;true&quot; %}}
-{{% children style=&quot;h2&quot; depth=&quot;3&quot; description=&quot;true&quot; %}}
-{{% children style=&quot;div&quot; depth=&quot;999&quot; %}}
-</code></pre>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ children shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">%</span> <span style="color:#a6e22e">children</span> <span style="color:#a6e22e">depth</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;li&#34;</span> <span style="color:#a6e22e">showhidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">sort</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Name&#34;</span>  <span style="color:#f92672">%</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">%</span> <span style="color:#a6e22e">children</span>  <span style="color:#f92672">%</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">%</span> <span style="color:#a6e22e">children</span> <span style="color:#a6e22e">description</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>   <span style="color:#f92672">%</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">%</span> <span style="color:#a6e22e">children</span> <span style="color:#a6e22e">depth</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">showhidden</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#f92672">%</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">%</span> <span style="color:#a6e22e">children</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;h2&#34;</span> <span style="color:#a6e22e">depth</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3&#34;</span> <span style="color:#a6e22e">description</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#f92672">%</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">%</span> <span style="color:#a6e22e">children</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;div&#34;</span> <span style="color:#a6e22e">depth</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;999&#34;</span> <span style="color:#f92672">%</span><span style="color:#75715e">}}</span></code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <h2 id="附錄文件">附錄文件</h2>
 
@@ -439,7 +562,28 @@ if __name__ == '__main__':
 </tbody>
 </table>
 
-<p>{{%attachments style=&ldquo;grey&rdquo; /%}} 渲染爲：</p>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ attachment shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">%</span><span style="color:#a6e22e">attachments</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;grey|orange|blue|green&#34;</span> <span style="color:#f92672">/%</span><span style="color:#75715e">}}</span> </code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+
+<p>分別渲染爲：</p>
 
 
 <section class="attachments grey">
@@ -508,8 +652,6 @@ if __name__ == '__main__':
 
 
 
-<p>{{%attachments style=&ldquo;orange&rdquo; /%}} 渲染爲：</p>
-
 
 <section class="attachments orange">
 	<label>
@@ -577,8 +719,6 @@ if __name__ == '__main__':
 
 
 
-<p>{{%attachments style=&ldquo;blue&rdquo; /%}} 渲染爲：</p>
-
 
 <section class="attachments blue">
 	<label>
@@ -645,8 +785,6 @@ if __name__ == '__main__':
 </section>
 
 
-
-<p>{{%attachments style=&ldquo;green&rdquo; /%}} 渲染爲：</p>
 
 
 <section class="attachments green">
@@ -719,12 +857,34 @@ if __name__ == '__main__':
 
 <p>以 blockquote 樣式爲基礎，編寫引文的 shortcode，不過這個 shortcode 一點都不 short，不如徑用 html 標籤。</p>
 
-<pre><code class="language-tlp">{{&lt;quocn link=&quot;http://www.eywedu.net/weicheng/007.htm&quot; title=&quot;钱钟书&quot; &gt;}}
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 中文引文 shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt;<span style="color:#f92672">quocn</span> <span style="color:#a6e22e">link</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.eywedu.net/weicheng/007.htm&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;钱钟书&#34;</span> &gt;}}
 鸿渐记得自己老师里的名教授从不点名，从不报告学生缺课。这才是堂堂大学者的风度：“你们要听就听，我可不在乎。”他企羡之余，不免模仿。
-&lt;br&gt;
+&lt;<span style="color:#f92672">br</span>&gt;
 上第一课，他像创世纪里原人阿大（Adam）唱新生禽兽的名字，以后他连点名簿子也不带了。到第二星期，他发现五十多学生里有七八个缺席，这些空座位像一嘴牙齿忽然吊了几枚，留下的空穴，看了心里不舒服。下一次，他注意女学生还固守着第一排原来的座位，男学生像从最后一排坐起的，空着第二排，第三排孤另另地坐一个男学生。
-{{&lt;/quocn&gt;}}
-</code></pre>
+{{&lt;/<span style="color:#f92672">quocn</span>&gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <p>渲染爲：</p>
 
@@ -764,10 +924,32 @@ if __name__ == '__main__':
 </div>
 
 
-<pre><code class="language-tlp">{{&lt;quoen link=&quot;http://www.eywedu.net/weicheng/007.htm&quot; title=&quot;Qian Zhongshu&quot; &gt;}}
-Qian’s scholarly works were greeted with critical acclaim as soon as they came off the press. Such was the case with the new edition of Tanyilu (1948; “Reflections in Appreciation”; revised and enlarged in 1983), Songshi xuanzhu (1958; “Selected and Annotated Poems of the Song Dynasty”), and the four-volume Guanzhuibian (1979; Limited Views, a partial translation)...
-{{&lt;/quoen&gt;}}
-</code></pre>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 英文引文 shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt;<span style="color:#f92672">quoen</span> <span style="color:#a6e22e">link</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.eywedu.net/weicheng/007.htm&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Qian Zhongshu&#34;</span> &gt;}}
+Qian’s scholarly works were greeted with critical acclaim as soon as they came off the press. 
+Such was the case with the new edition of Tanyilu (1948; “Reflections in Appreciation”; revised and enlarged in 1983), Songshi xuanzhu (1958; “Selected and Annotated Poems of the Song Dynasty”), and the four-volume Guanzhuibian (1979; Limited Views, a partial translation)...
+{{&lt;/<span style="color:#f92672">quoen</span>&gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <p>渲染爲：</p>
 
@@ -837,12 +1019,34 @@ Qian’s scholarly works were greeted with critical acclaim as soon as they came
 
 <p>強調色塊用來突出某些句子或段落（看起來沒啥用處）。原模板只有紅綠藍三色，本站新增灰色塊樣式，並重命名爲便於記憶書寫的 hblue、hred、hgray、hgreen。</p>
 
-<pre><code class="language-tpl">{{&lt; hint [hblue|hred|hgrey|hgreen] &gt;}}
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 強調色塊 shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">hint</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">hblue</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">hred</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">hgrey</span><span style="color:#960050;background-color:#1e0010">|</span><span style="color:#a6e22e">hgreen</span><span style="color:#960050;background-color:#1e0010">]</span> &gt;}}
 **Markdown content**  
 Lorem markdownum insigne. Olympo signis Delphis! Retexi Nereius nova develat
 stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
-{{&lt; /hint &gt;}}
-</code></pre>
+{{&lt; /<span style="color:#f92672">hint</span> &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <blockquote class="book-hint hblue">
   <strong>高松年校長治校金句（藍）</strong><br />
@@ -875,13 +1079,32 @@ stringit, frustra Saturnius uteroque inter! Oculis non ritibus Telethusa
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
-    <pre><code class="language-latex">{{&lt; katex [class=&quot;text-center&quot;] &gt;}}
-x = \begin{cases}
-   a &amp;\text{if } b \\
-   c &amp;\text{if } d
-\end{cases}
-{{&lt; /katex &gt;}}
-</code></pre>
+    <figure class="code">
+  <figcaption>
+    <span>☀ KaTeX shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex">{{&lt; katex [class=&#34;text-center&#34;] &gt;}}
+x = <span style="color:#66d9ef">\begin</span>{cases}
+   a &amp;<span style="color:#66d9ef">\text</span>{if } b <span style="color:#66d9ef">\\</span>
+   c &amp;<span style="color:#66d9ef">\text</span>{if } d
+<span style="color:#66d9ef">\end</span>{cases}
+{{&lt; /katex &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
   </div>
   
   <div class="flex-even markdown-inner">
@@ -910,7 +1133,28 @@ x = \begin{cases}
 <div class="book-columns flex flex-wrap">
   
   <div class="flex-even markdown-inner">
-    <pre><code class="language-tpl">{{&lt; mermaid [class=&quot;text-center&quot;]&gt;}}
+    <figure class="code">
+  <figcaption>
+    <span>☀ Mermaid Chart shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">mermaid</span> <span style="color:#f92672">[</span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-center&#34;</span><span style="color:#f92672">]&gt;</span><span style="color:#75715e">}}</span>
 sequenceDiagram
     Alice-&gt;&gt;Bob: Hello Bob, how are you?
     alt is sick
@@ -921,8 +1165,12 @@ sequenceDiagram
     opt Extra response
         Bob-&gt;&gt;Alice: Thanks for asking
     end
-{{&lt; /mermaid &gt;}}
-</code></pre>
+<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">mermaid</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span></code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
   </div>
   
   <div class="flex-even markdown-inner">
@@ -949,12 +1197,34 @@ sequenceDiagram
 
 <p>Tabs let you organize content by context, for example installation instructions for each supported platform.</p>
 
-<pre><code class="language-tpl">{{&lt; tabs &quot;uniqueid&quot; &gt;}}
-{{&lt; tab &quot;Title1&quot; &gt;}} # Content 1 {{&lt; /tab &gt;}}
-{{&lt; tab &quot;Title2&quot; &gt;}} # Content 2 {{&lt; /tab &gt;}}
-{{&lt; tab &quot;Title3&quot; &gt;}} # Content 3 {{&lt; /tab &gt;}}
-{{&lt; /tabs &gt;}}
-</code></pre>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ Tabs shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-tpl" data-lang="tpl"><span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">tabs</span> <span style="color:#e6db74">&#34;uniqueid&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">tab</span> <span style="color:#e6db74">&#34;Title1&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span> # Content 1 <span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tab</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">tab</span> <span style="color:#e6db74">&#34;Title2&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span> # Content 2 <span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tab</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">tab</span> <span style="color:#e6db74">&#34;Title3&#34;</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span> # Content 3 <span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tab</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span>
+<span style="color:#75715e">{{</span><span style="color:#f92672">&lt;</span> <span style="color:#f92672">/</span><span style="color:#a6e22e">tabs</span> <span style="color:#f92672">&gt;</span><span style="color:#75715e">}}</span></code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 
 
@@ -991,21 +1261,52 @@ sequenceDiagram
 
 <h2 id="分欄版式">分欄版式</h2>
 
-<pre><code class="language-html">{{&lt; columns &gt;}} &lt;!-- begin columns block --&gt;
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ Columns shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">columns</span> &gt;}} <span style="color:#75715e">&lt;!-- begin columns block --&gt;</span>
 # Left Content
 Lorem markdownum insigne...
 
-&lt;---&gt; &lt;!-- magic sparator, between columns --&gt;
+&lt;<span style="color:#f92672">---</span>&gt; <span style="color:#75715e">&lt;!-- magic sparator, between columns --&gt;</span>
 
 # Mid Content
 Lorem markdownum insigne...
 
-&lt;---&gt; &lt;!-- magic sparator, between columns --&gt;
+&lt;<span style="color:#f92672">---</span>&gt; <span style="color:#75715e">&lt;!-- magic sparator, between columns --&gt;</span>
 
 # Right Content
 Lorem markdownum insigne...
-{{&lt; /columns &gt;}}
-</code></pre>
+{{&lt; /<span style="color:#f92672">columns</span> &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <div class="book-columns flex flex-wrap">
   
@@ -1029,9 +1330,28 @@ Lorem markdownum insigne...
 
 <h2 id="鏈接按鈕">鏈接按鈕</h2>
 
-<pre><code class="language-tpl">{{&lt; button relref=&quot;/&quot; [class=&quot;...&quot;] &gt;}}回到總目{{&lt; /button &gt;}}
-{{&lt; button href=&quot;https://mengxianjun.org/posts/&quot; &gt;}}下一章{{&lt; /button &gt;}}
-</code></pre>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ Button shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">button</span> <span style="color:#a6e22e">relref</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#960050;background-color:#1e0010">[</span><span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;...&#34;</span><span style="color:#960050;background-color:#1e0010">]</span> &gt;}}回到總目{{&lt; /<span style="color:#f92672">button</span> &gt;}}
+{{&lt; <span style="color:#f92672">button</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://mengxianjun.org/posts/&#34;</span> &gt;}}下一章{{&lt; /<span style="color:#f92672">button</span> &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 
 
@@ -1065,11 +1385,32 @@ Lorem markdownum insigne...
 
 <h3 id="默認名稱爲-expand">默認名稱爲 expand</h3>
 
-<pre><code class="language-tpl">{{&lt; expand &gt;}}
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ expand shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">expand</span> &gt;}}
 **Markdown 內容** 
 高松年发奋办公，夙夜匪懈，精明得真是睡觉还睁着眼睛，戴着眼镜，做梦都不含糊的。
-{{&lt; /expand &gt;}}
-</code></pre>
+{{&lt; /<span style="color:#f92672">expand</span> &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <div class="book-expand">
   <label>
@@ -1088,11 +1429,32 @@ Lorem markdownum insigne...
 
 <h3 id="自定義名稱與樣式">自定義名稱與樣式</h3>
 
-<pre><code class="language-tpl">{{&lt; expand &quot;Custom Label&quot; &quot;...&quot; &gt;}}
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ expand shortcode ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">{{&lt; <span style="color:#f92672">expand</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">Custom</span> <span style="color:#a6e22e">Label</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">&#34;...&#34;</span> &gt;}}
 ## Markdown content
 Lorem markdownum insigne...
-{{&lt; /expand &gt;}}
-</code></pre>
+{{&lt; /<span style="color:#f92672">expand</span> &gt;}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
 
 <div class="book-expand">
   <label>
@@ -1122,11 +1484,11 @@ Lorem markdownum insigne...
   &#9673;返回文選列表
 </a>
 </div>
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>🈟The article was recently updated on Sunday, October 20, 2019, 17:10:23 by 李二狗.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>🈟The article was recently updated on Tuesday, October 22, 2019, 05:57:01 by 李二狗.</p>
 </article>
 
      
-      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> 
 
     </div>
 
