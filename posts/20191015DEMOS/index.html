@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/book.min.8f5fa7359753ffd41620af9b799868acb14e2a6204c3c2b29e24ba622354ff67.css" integrity="sha256-j1&#43;nNZdT/9QWIK&#43;beZhorLFOKmIEw8KyniS6YiNU/2c=">
 
 
-<script defer src="/search.min.bd8773216ed5a6346b9a7cc0a705054ef605b0d0cf2445a50ef4d3020d8a02ca.js" integrity="sha256-vYdzIW7VpjRrmnzApwUFTvYFsNDPJEWlDvTTAg2KAso="></script>
+<script defer src="/search.min.2eec321c3c6f7be7089c6c1d62353a51cd7608ea49d1480aaf17dec9a00bad03.js" integrity="sha256-LuwyHDxve&#43;cInGwdYjU6Uc12COpJ0UgKrxfeyaALrQM="></script>
 
 
 
@@ -100,7 +100,7 @@ https://github.com/alex-shpak/hugo-book
     <p class="listpagetitle">
       內容版式 Demos
     </p>
-<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>張三瘋 <a href="https://duoyu.ren/"><span class="zuozheat"></span>國立三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Tuesday, October 15, 2019 00:57&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;6544&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;14 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>張三瘋 <a href="https://duoyu.ren/"><span class="zuozheat"></span>國立三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Tuesday, October 15, 2019 00:57&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;6565&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;14 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
 </header>
 <article class="markdown">
 
@@ -118,6 +118,111 @@ https://github.com/alex-shpak/hugo-book
 <h1 id="本站新增樣式">本站新增樣式</h1>
 
 <p>參考衆多 Hugo shortcode 樣式案例，爲提高效率，本站新增以下幾種樣式。模板原有 shortcode 樣式在本文第二部分列出備查。</p>
+
+<h2 id="源代碼展示框">源代碼展示框</h2>
+
+<p>爲代碼高亮顯示效果，特整合 <a href="https://github.com/parsiya/Hugo-Octopress">Parsia Hakimian</a> 製作的源代碼展示框，效果如下。</p>
+
+<pre><code class="language-tlp">{{&lt; codecaption lang=&quot;python&quot; title=&quot;Python 計算算法源碼&quot; &gt;}}
+
+# -*- coding:utf-8 -*-
+def count_pm(*args):
+    alist = list([round(i*2-8,2) for i in args])  #计算三种颗粒浓度
+    result = []
+    for pm in alist:
+    	pm_abs = abs(pm)
+    	result.append(generate_iso_code(pm_abs))
+    print (result)
+    return result
+    	
+def generate_iso_code(x):
+	pm_value = [0.01,0.02,0.04,0.08,0.16,0.32,0.64,1.3,2.5,5,10,20,40,80]  #颗粒浓度
+	iso = list(range(1,25))   #iso级别，共24级
+	for i in range(len(pm_value)):           #for循环得到某个浓度范围的iso4006级别
+		if pm_value[i] &lt; x &lt;= pm_value[i+1]:
+			iso_code = iso[i]
+			break
+	return iso_code
+			
+if __name__ == '__main__':
+    count_pm(7.95,5.85,3.98)		
+    count_pm(7.918,5.949,5.456)	
+    count_pm(6.916,3.956,3.956)		
+}
+
+{{&lt; /codecaption&gt;}}
+</code></pre>
+
+<p>以上代碼將渲染爲下列樣式：</p>
+
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ Python 計算算法源碼 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># -*- coding:utf-8 -*-</span>
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_pm</span>(<span style="color:#f92672">*</span>args):
+    alist <span style="color:#f92672">=</span> list([round(i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> args])  <span style="color:#75715e">#计算三种颗粒浓度</span>
+    result <span style="color:#f92672">=</span> []
+    <span style="color:#66d9ef">for</span> pm <span style="color:#f92672">in</span> alist:
+    	pm_abs <span style="color:#f92672">=</span> abs(pm)
+    	result<span style="color:#f92672">.</span>append(generate_iso_code(pm_abs))
+    <span style="color:#66d9ef">print</span> (result)
+    <span style="color:#66d9ef">return</span> result
+    	
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_iso_code</span>(x):
+	pm_value <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.01</span>,<span style="color:#ae81ff">0.02</span>,<span style="color:#ae81ff">0.04</span>,<span style="color:#ae81ff">0.08</span>,<span style="color:#ae81ff">0.16</span>,<span style="color:#ae81ff">0.32</span>,<span style="color:#ae81ff">0.64</span>,<span style="color:#ae81ff">1.3</span>,<span style="color:#ae81ff">2.5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">80</span>]  <span style="color:#75715e">#颗粒浓度</span>
+	iso <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">25</span>))   <span style="color:#75715e">#iso级别，共24级</span>
+	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(pm_value)):           <span style="color:#75715e">#for循环得到某个浓度范围的iso4006级别</span>
+		<span style="color:#66d9ef">if</span> pm_value[i] <span style="color:#f92672">&lt;</span> x <span style="color:#f92672">&lt;=</span> pm_value[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]:
+			iso_code <span style="color:#f92672">=</span> iso[i]
+			<span style="color:#66d9ef">break</span>
+	<span style="color:#66d9ef">return</span> iso_code
+			
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+    count_pm(<span style="color:#ae81ff">7.95</span>,<span style="color:#ae81ff">5.85</span>,<span style="color:#ae81ff">3.98</span>)		
+    count_pm(<span style="color:#ae81ff">7.918</span>,<span style="color:#ae81ff">5.949</span>,<span style="color:#ae81ff">5.456</span>)	
+    count_pm(<span style="color:#ae81ff">6.916</span>,<span style="color:#ae81ff">3.956</span>,<span style="color:#ae81ff">3.956</span>)		
+}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+
+<p>下述行文中需要展示的源碼，皆以此樣式呈現。</p>
 
 <h2 id="漢語拼音標註">漢語拼音標註</h2>
 
@@ -341,109 +446,6 @@ When meeting with senior officers stationed in Hubei, Xi extended sincere greeti
 山不厭高。海不厭深。周公吐哺。天下歸心。
 <chcite>曹孟德</chcite>
 </bayan></p>
-
-<h2 id="源代碼展示框">源代碼展示框</h2>
-
-<p>爲代碼高亮顯示效果，特整合 <a href="https://github.com/parsiya/Hugo-Octopress">Parsia Hakimian</a> 製作的源代碼展示框，效果如下。</p>
-
-<pre><code class="language-tlp">{{&lt; codecaption lang=&quot;python&quot; title=&quot;Python 計算算法源碼&quot; &gt;}}
-
-# -*- coding:utf-8 -*-
-def count_pm(*args):
-    alist = list([round(i*2-8,2) for i in args])  #计算三种颗粒浓度
-    result = []
-    for pm in alist:
-    	pm_abs = abs(pm)
-    	result.append(generate_iso_code(pm_abs))
-    print (result)
-    return result
-    	
-def generate_iso_code(x):
-	pm_value = [0.01,0.02,0.04,0.08,0.16,0.32,0.64,1.3,2.5,5,10,20,40,80]  #颗粒浓度
-	iso = list(range(1,25))   #iso级别，共24级
-	for i in range(len(pm_value)):           #for循环得到某个浓度范围的iso4006级别
-		if pm_value[i] &lt; x &lt;= pm_value[i+1]:
-			iso_code = iso[i]
-			break
-	return iso_code
-			
-if __name__ == '__main__':
-    count_pm(7.95,5.85,3.98)		
-    count_pm(7.918,5.949,5.456)	
-    count_pm(6.916,3.956,3.956)		
-}
-
-{{&lt; /codecaption&gt;}}
-</code></pre>
-
-<p>以上代碼將渲染爲下列樣式：</p>
-
-
-
-
-
-<figure class="code">
-  <figcaption>
-  	<span>☀ Python 計算算法源碼 ☀</span>
-  </figcaption>
-  <div class="codewrapper">
-    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># -*- coding:utf-8 -*-</span>
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">count_pm</span>(<span style="color:#f92672">*</span>args):
-    alist <span style="color:#f92672">=</span> list([round(i<span style="color:#f92672">*</span><span style="color:#ae81ff">2</span><span style="color:#f92672">-</span><span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">2</span>) <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> args])  <span style="color:#75715e">#计算三种颗粒浓度</span>
-    result <span style="color:#f92672">=</span> []
-    <span style="color:#66d9ef">for</span> pm <span style="color:#f92672">in</span> alist:
-    	pm_abs <span style="color:#f92672">=</span> abs(pm)
-    	result<span style="color:#f92672">.</span>append(generate_iso_code(pm_abs))
-    <span style="color:#66d9ef">print</span> (result)
-    <span style="color:#66d9ef">return</span> result
-    	
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">generate_iso_code</span>(x):
-	pm_value <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0.01</span>,<span style="color:#ae81ff">0.02</span>,<span style="color:#ae81ff">0.04</span>,<span style="color:#ae81ff">0.08</span>,<span style="color:#ae81ff">0.16</span>,<span style="color:#ae81ff">0.32</span>,<span style="color:#ae81ff">0.64</span>,<span style="color:#ae81ff">1.3</span>,<span style="color:#ae81ff">2.5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">10</span>,<span style="color:#ae81ff">20</span>,<span style="color:#ae81ff">40</span>,<span style="color:#ae81ff">80</span>]  <span style="color:#75715e">#颗粒浓度</span>
-	iso <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">25</span>))   <span style="color:#75715e">#iso级别，共24级</span>
-	<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(pm_value)):           <span style="color:#75715e">#for循环得到某个浓度范围的iso4006级别</span>
-		<span style="color:#66d9ef">if</span> pm_value[i] <span style="color:#f92672">&lt;</span> x <span style="color:#f92672">&lt;=</span> pm_value[i<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>]:
-			iso_code <span style="color:#f92672">=</span> iso[i]
-			<span style="color:#66d9ef">break</span>
-	<span style="color:#66d9ef">return</span> iso_code
-			
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-    count_pm(<span style="color:#ae81ff">7.95</span>,<span style="color:#ae81ff">5.85</span>,<span style="color:#ae81ff">3.98</span>)		
-    count_pm(<span style="color:#ae81ff">7.918</span>,<span style="color:#ae81ff">5.949</span>,<span style="color:#ae81ff">5.456</span>)	
-    count_pm(<span style="color:#ae81ff">6.916</span>,<span style="color:#ae81ff">3.956</span>,<span style="color:#ae81ff">3.956</span>)		
-}</code></pre></td></tr></table>
-</div>
-</div>
-  </div>
-</figure>
-
 
 <h2 id="父子目錄樣式">父子目錄樣式</h2>
 
@@ -1484,7 +1486,7 @@ Lorem markdownum insigne...
   &#9673;返回文選列表
 </a>
 </div>
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>🈟The article was recently updated on Tuesday, October 22, 2019, 05:57:01 by 李二狗.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>🈟The article was recently updated on Tuesday, October 22, 2019, 21:49:51 by 李二狗.</p>
 </article>
 
      
@@ -1500,6 +1502,7 @@ Lorem markdownum insigne...
 <ul>
 <li><a href="#本站新增樣式">本站新增樣式</a>
 <ul>
+<li><a href="#源代碼展示框">源代碼展示框</a></li>
 <li><a href="#漢語拼音標註">漢語拼音標註</a></li>
 <li><a href="#備註及定義框">備註及定義框</a>
 <ul>
@@ -1507,7 +1510,6 @@ Lorem markdownum insigne...
 <li><a href="#自定義標題">自定義標題</a></li>
 </ul></li>
 <li><a href="#五七言詩歌排版">五七言詩歌排版</a></li>
-<li><a href="#源代碼展示框">源代碼展示框</a></li>
 <li><a href="#父子目錄樣式">父子目錄樣式</a></li>
 <li><a href="#附錄文件">附錄文件</a></li>
 <li><a href="#段落引用文字塊">段落引用文字塊</a></li>
