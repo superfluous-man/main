@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 桃林筆記</title>
@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 桃林筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 25 Oct 2019 23:28:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 28 Oct 2019 23:53:54 +0800</lastBuildDate>
     
 	<atom:link href="https://mengxianjun.org/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>從培根「請人代讀」說起</title>
+      <link>https://mengxianjun.org/posts/20191028-Du-Shu-Wai-Bao/</link>
+      <pubDate>Mon, 28 Oct 2019 23:53:54 +0800</pubDate>
+      
+      <guid>https://mengxianjun.org/posts/20191028-Du-Shu-Wai-Bao/</guid>
+      <description>本文爲作者學習培根關於的「讀書外包」重要論述的心得體會。作者行文皆就自以爲普遍的現象而言，並無針對特定單位、個人。讀者毋需對號入座，自尋煩惱。</description>
+    </item>
     
     <item>
       <title>偷桃术</title>
