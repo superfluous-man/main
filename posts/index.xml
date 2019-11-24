@@ -102,6 +102,15 @@
     </item>
     
     <item>
+      <title>秋登旗峯山</title>
+      <link>https://mengxianjun.org/posts/20171031-Qiu-Deng-Qi-Feng-Shan/</link>
+      <pubDate>Tue, 31 Oct 2017 12:53:43 +0800</pubDate>
+      
+      <guid>https://mengxianjun.org/posts/20171031-Qiu-Deng-Qi-Feng-Shan/</guid>
+      <description>下山急就章，雖事後略加調整，依然胡言亂語，略無詩意可言。</description>
+    </item>
+    
+    <item>
       <title>蒼頡檢字法簡易入門文檔</title>
       <link>https://mengxianjun.org/posts/20170717-Cang-Jie-Zi-Ma/</link>
       <pubDate>Mon, 17 Jul 2017 21:47:22 +0800</pubDate>
@@ -116,7 +125,7 @@
       <pubDate>Sat, 13 May 2017 11:29:32 +0800</pubDate>
       
       <guid>https://mengxianjun.org/posts/20170513-KaTeX-Test/</guid>
-      <description>&amp;#9673;返回文選列表 本頁面測試 \(\KaTeX\) 書寫 \(\LaTeX\) 公式。 \[\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} \equiv 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }\] \[\Gamma\ \Delta\ \Theta\ \Lambda\ \Xi\ \Pi\ \Sigma\ \Upsilon\ \Phi\ \Psi\ \Omega\] \[\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\] 測試結論 簡單測</description>
+      <description>本文爲 KaTeX 渲染網頁 LaTeX 公式之測試。</description>
     </item>
     
     <item>
