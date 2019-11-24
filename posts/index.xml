@@ -111,6 +111,15 @@
     </item>
     
     <item>
+      <title>電工王師傅</title>
+      <link>https://mengxianjun.org/posts/20170513-KaTeX-Test/</link>
+      <pubDate>Sat, 13 May 2017 11:29:32 +0800</pubDate>
+      
+      <guid>https://mengxianjun.org/posts/20170513-KaTeX-Test/</guid>
+      <description>&amp;#9673;返回文選列表 本頁面測試 \(\KaTeX\) 書寫 \(\LaTeX\) 公式。 \[\frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} \equiv 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}} {1+\frac{e^{-8\pi}} {1+\cdots} } } }\] \[\Gamma\ \Delta\ \Theta\ \Lambda\ \Xi\ \Pi\ \Sigma\ \Upsilon\ \Phi\ \Psi\ \Omega\] 測試結論 簡單測試，發覺此方法勉強可滿足公式</description>
+    </item>
+    
+    <item>
       <title>清世何須憂廟廊——漢語詩詞 LaTeX 樣式</title>
       <link>https://mengxianjun.org/posts/20161211-TeX-Han-Yu-Shi-Ci/</link>
       <pubDate>Sun, 11 Dec 2016 20:41:22 +0800</pubDate>
