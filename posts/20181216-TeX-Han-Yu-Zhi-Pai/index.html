@@ -62,13 +62,13 @@ https://github.com/alex-shpak/hugo-book
   </style>
 
 <ul>
-<li><a href="/posts/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->文選<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/Art/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->藝術學概論<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/Movie/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->攝影與剪輯<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/XZX/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->基礎寫作學<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/WXS/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->中國文學史<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/ZXS/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->中國哲學史<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/alinks/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->鏈接<!-- raw HTML omitted --></a></li>
+<li><a href="/posts/"> 文選</a></li>
+<li><a href="/Books/Art/"> 藝術學概論</a></li>
+<li><a href="/Books/Movie/"> 攝影與剪輯</a></li>
+<li><a href="/Books/XZX/"> 基礎寫作學</a></li>
+<li><a href="/Books/WXS/"> 中國文學史</a></li>
+<li><a href="/Books/ZXS/"> 中國哲學史</a></li>
+<li><a href="/Books/alinks/"> 鏈接</a></li>
 </ul>
 
 
@@ -106,22 +106,31 @@ https://github.com/alex-shpak/hugo-book
     <p class="listpagetitle">
       基於 XeLaTeX 的中文直書方案
     </p>
-<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>李二狗 <a href="https://mengxianjun.org/"><span class="zuozheat"></span>三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Sunday, December 16, 2018 18:03&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;3352&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;7 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>李二狗 <a href="https://mengxianjun.org/"><span class="zuozheat"></span>三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Sunday, December 16, 2018 18:03&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;3397&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;7 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
 </header>
-<article class="markdown"><!-- raw HTML omitted -->
+<article class="markdown"><div style="font-family:SYHei Bold;text-align:center">
+
+
+
+  
+
+<a  href="/posts/"   class="book-btn">
+  &#9673;返回文選列表
+</a>
+</div>
 <p>半個世紀以來，「橫排」逐漸成爲出版物排版的主流。十年前，境內還能偶爾看到一些出版社以「直排」方式出版一些古籍圖書。目下，僅有境外幾家出版社偶爾還以「直排」方式出版一些文史讀物。前幾日瀏覽素材，看到過去十年間網絡上零零散散的基於 LaTeX 的中文直排方案，逐一分析下來，發覺大都需要完善需求、更新源碼。自己久不讀書，讀「直排」書的機會就更少了。近來因飲酒吹風而感冒閉門，趁着這般光景，嘗試整理出一份基於 XeLaTeX 與 XeCJK 的中文直書方案。</p>
 <h1 id="heading">直排與現代排版需求</h1>
 <p>爲了更好吸納西學現代科學，方便排版公式、符號、插圖等頁面元素，變「直書」爲「橫書」實乃大勢所趨。一百年來，經過時間與實踐檢驗，這個問題早已有了的明確答案。</p>
-<!-- raw HTML omitted -->
+<div class="notices warning"><p>本文並不爭論漢字「直書」與「橫書」之間的優劣問題。</p></div>
 <p>大多數傳統直排古籍出版物並無繁複的章節目錄、插圖、註釋、頁眉頁腳、索引項目、文獻徵引等現代排版需求（或者即使有，迫於當時的排版手段，難以實現，便放棄了）。現在，我們開歷史的倒車，以「直書」方式排版一些出版物，便不可避免地要回應以上現代排版需求。</p>
 <blockquote>
 <ul>
-<li>**章節目錄信息：**傳統直排書籍皆可滿足此類需求，但詳細的目錄排版顯得較爲吃力，可從若干直排書籍的目錄處理感知到這一問題（如<!-- raw HTML omitted -->中華書局<!-- raw HTML omitted --> 1993 年 4 月所出<!-- raw HTML omitted -->錢基博<!-- raw HTML omitted -->《中國文學史》一書的目錄排版）。</li>
-<li>**頁眉頁腳信息：**這個需求的處理並不複雜，傳統直排書籍亦大都能簡單呈現，但大都只顯示到卷（編）目，個別圖書可以顯示到章目層次，對更深層次的節、子節信息則難以呈現（如<!-- raw HTML omitted -->中華書局<!-- raw HTML omitted --> 1993 年 4 月所出<!-- raw HTML omitted -->錢基博<!-- raw HTML omitted -->《中國文學史》一書的頁眉頁腳信息排版）。</li>
-<li>**章節註釋信息：**鑑於直排頁面的特徵，橫排頁面的腳註方式並不適宜用於直排頁面（只能放一些簡短的註釋，如《十三經注疏》整理本系列之<a href="https://books.google.co.jp/books?id=fqtZwx51nd8C&amp;pg=PA120&amp;lpg=PA120&amp;dq=%E5%89%B2%E8%A8%BB&amp;source=bl&amp;ots=f1UXtSWvZK&amp;sig=0SGsw_iwpe13W6rtTxVC1AXbEaA&amp;hl=zh-CN&amp;sa=X&amp;ved=2ahUKEwipq7Kexa3fAhWbHXAKHeoZAMAQ6AEwCHoECAAQAQ#v=onepage&amp;q=%E5%89%B2%E8%A8%BB&amp;f=false">《儀禮注疏》</a>第一〇二七頁的腳註），宜變腳註爲夾註（割註）或章節末註（如民 70 年<!-- raw HTML omitted -->聯經出版事業公司<!-- raw HTML omitted -->印行<!-- raw HTML omitted -->劉若愚<!-- raw HTML omitted -->所著<a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書，原註與譯註皆排在章節之後）。</li>
-<li>**索引項目信息：**傳統直排書籍附帶索引的不多，即便製作了索引，排版起來亦頗顯繁瑣（如<a href="http://ap6.pccu.edu.tw/dictionary/index.asp">《中文大辭典》</a>附錄所示，不難推測其附錄製作、排版工程之浩大）；有些直排的學術著作，如<!-- raw HTML omitted -->劉若愚<!-- raw HTML omitted --><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的索引部分則乾脆改爲橫排版。</li>
-<li>**文獻徵引信息：**現代圖書常常附有翔實的 Bibliography 信息，對圖書正文參考、引用的各類文獻予以呈現，這是當代直排方案不可回避的需求；有些直排的學術著作，如<!-- raw HTML omitted -->劉若愚<!-- raw HTML omitted --><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的參考文獻部分則直接改爲橫排版。</li>
-<li>**正文插圖與中英文混排信息：**雖然一些直排的日文漢和辭典或國語辭典也能大量處理插圖與拉丁字母，但這方面總歸是直排方式的欠缺之處，若有大量拉丁文字的篇幅或大量的插圖，則全書不宜直排；如<!-- raw HTML omitted -->劉若愚<!-- raw HTML omitted --><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書正文穿插大量的英文引文，與直排的漢文排在一起，除了可以協助治療讀者的頸椎病，版式讀起來並不友好，所以此後的版本大都改爲橫排版。</li>
+<li>**章節目錄信息：**傳統直排書籍皆可滿足此類需求，但詳細的目錄排版顯得較爲吃力，可從若干直排書籍的目錄處理感知到這一問題（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的目錄排版）。</li>
+<li>**頁眉頁腳信息：**這個需求的處理並不複雜，傳統直排書籍亦大都能簡單呈現，但大都只顯示到卷（編）目，個別圖書可以顯示到章目層次，對更深層次的節、子節信息則難以呈現（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的頁眉頁腳信息排版）。</li>
+<li>**章節註釋信息：**鑑於直排頁面的特徵，橫排頁面的腳註方式並不適宜用於直排頁面（只能放一些簡短的註釋，如《十三經注疏》整理本系列之<a href="https://books.google.co.jp/books?id=fqtZwx51nd8C&amp;pg=PA120&amp;lpg=PA120&amp;dq=%E5%89%B2%E8%A8%BB&amp;source=bl&amp;ots=f1UXtSWvZK&amp;sig=0SGsw_iwpe13W6rtTxVC1AXbEaA&amp;hl=zh-CN&amp;sa=X&amp;ved=2ahUKEwipq7Kexa3fAhWbHXAKHeoZAMAQ6AEwCHoECAAQAQ#v=onepage&amp;q=%E5%89%B2%E8%A8%BB&amp;f=false">《儀禮注疏》</a>第一〇二七頁的腳註），宜變腳註爲夾註（割註）或章節末註（如民 70 年<z>聯經出版事業公司</z>印行<z>劉若愚</z>所著<a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書，原註與譯註皆排在章節之後）。</li>
+<li>**索引項目信息：**傳統直排書籍附帶索引的不多，即便製作了索引，排版起來亦頗顯繁瑣（如<a href="http://ap6.pccu.edu.tw/dictionary/index.asp">《中文大辭典》</a>附錄所示，不難推測其附錄製作、排版工程之浩大）；有些直排的學術著作，如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的索引部分則乾脆改爲橫排版。</li>
+<li>**文獻徵引信息：**現代圖書常常附有翔實的 Bibliography 信息，對圖書正文參考、引用的各類文獻予以呈現，這是當代直排方案不可回避的需求；有些直排的學術著作，如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的參考文獻部分則直接改爲橫排版。</li>
+<li>**正文插圖與中英文混排信息：**雖然一些直排的日文漢和辭典或國語辭典也能大量處理插圖與拉丁字母，但這方面總歸是直排方式的欠缺之處，若有大量拉丁文字的篇幅或大量的插圖，則全書不宜直排；如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書正文穿插大量的英文引文，與直排的漢文排在一起，除了可以協助治療讀者的頸椎病，版式讀起來並不友好，所以此後的版本大都改爲橫排版。</li>
 </ul>
 </blockquote>
 <h1 id="xecjk-">XeCJK 直書設置</h1>
@@ -530,12 +539,21 @@ https://github.com/alex-shpak/hugo-book
 <p><img src="https://i.loli.net/2018/12/20/5c1b4a0148e76.png" alt="世界書局《駢體文鈔》版式">
 <img src="https://i.loli.net/2018/12/20/5c1b4a148fdcb.png" alt="仿世界書局版"></p>
 
-<div class="notices info" ><p>這類字體近年來越來越多，許多沈睡在古籍中的字形得以重見天日。尤以<!-- raw HTML omitted -->日本<!-- raw HTML omitted --><a href="http://www.kinkido.net/"><!-- raw HTML omitted -->欣喜堂<!-- raw HTML omitted --></a>的工作最爲出色。</p>
+<div class="notices info" ><p>這類字體近年來越來越多，許多沈睡在古籍中的字形得以重見天日。尤以<z>日本</z><a href="http://www.kinkido.net/"><zl>欣喜堂</zl></a>的工作最爲出色。</p>
 </div>
 
 <h1 id="heading12">結語</h1>
 <p>上文簡單展示了以 XeCJK 與 XeLaTeX 製作中文直排版式的方案。此外，尚有基於 <a href="https://texwiki.texjp.org/?upTeX%2CupLaTeX">upLaTeX</a> 以及較新的 <a href="https://github.com/clerkma/ptex-ng">Asiatic pTeX</a> 的直排方案，可資參考。</p>
-<!-- raw HTML omitted -->
+<div style="font-family:SYHei Bold;text-align:center">
+
+
+
+  
+
+<a  href="/posts/"   class="book-btn">
+  &#9673;返回文選列表
+</a>
+</div>
 <p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, November 23, 2019, 16:50:02 by 李二狗.</p>
 </article>
 

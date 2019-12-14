@@ -63,13 +63,13 @@ https://github.com/alex-shpak/hugo-book
   </style>
 
 <ul>
-<li><a href="/posts/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->文選<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/Art/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->藝術學概論<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/Movie/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->攝影與剪輯<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/XZX/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->基礎寫作學<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/WXS/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->中國文學史<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/ZXS/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->中國哲學史<!-- raw HTML omitted --></a></li>
-<li><a href="/Books/alinks/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->鏈接<!-- raw HTML omitted --></a></li>
+<li><a href="/posts/"> 文選</a></li>
+<li><a href="/Books/Art/"> 藝術學概論</a></li>
+<li><a href="/Books/Movie/"> 攝影與剪輯</a></li>
+<li><a href="/Books/XZX/"> 基礎寫作學</a></li>
+<li><a href="/Books/WXS/"> 中國文學史</a></li>
+<li><a href="/Books/ZXS/"> 中國哲學史</a></li>
+<li><a href="/Books/alinks/"> 鏈接</a></li>
 </ul>
 
 
@@ -106,9 +106,36 @@ https://github.com/alex-shpak/hugo-book
     <singlepagetitle>
       第 03 章 運鏡與三角形原理
     </singlepagetitle>
-<p style="font-family:SYHei Medium;text-align:center"><span class="zuozhe"></span>李二狗 <a href="https://mengxianjun.org/"><span class="zuozheat"></span>克萊登大學保衛科屌絲</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Monday, October 7, 2019 08:33&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;2245&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;5 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+<p style="font-family:SYHei Medium;text-align:center"><span class="zuozhe"></span>李二狗 <a href="https://mengxianjun.org/"><span class="zuozheat"></span>克萊登大學保衛科屌絲</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Monday, October 7, 2019 08:33&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;2375&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;5 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
 </header>
-<article class="markdown"><!-- raw HTML omitted -->
+<article class="markdown"><div style="font-family:SYHei Bold;text-align:center">
+
+
+
+  
+
+<a  href="/Books/Movie/CH02/"   class="book-btn">
+  &#9664;上章
+</a>
+&nbsp;&nbsp;&nbsp; 
+
+
+
+  
+
+<a  href="/Books/Movie/"   class="book-btn">
+  &#9673;總目
+</a>
+&nbsp;&nbsp;&nbsp; 
+
+
+
+  
+
+<a  href="/Books/Movie/CH04/"   class="book-btn">
+  下章&#9654;
+</a>
+</div>
 <p>半個世紀以來，「橫排」逐漸成爲出版物排版的主流。十年前，境內還能偶爾看到一些出版社以「直排」方式出版一些古籍圖書。目下，僅有境外幾家出版社偶爾還以「直排」方式出版一些文史讀物。前幾日瀏覽素材，看到過去十年間網絡上零零散散的基於 LaTeX 的中文直排方案，逐一分析下來，發覺大都需要完善需求、更新源碼。自己久不讀書，讀「直排」書的機會就更少了。近來因飲酒吹風而感冒閉門，趁着這般光景，嘗試整理出一份基於 XeLaTeX 與 XeCJK 的中文直書方案。</p>
 <h1 id="heading">直排與現代排版需求</h1>
 <p>爲了更好吸納西學現代科學，方便排版公式、符號、插圖等頁面元素，變「直書」爲「橫書」實乃大勢所趨。一百年來，經過時間與實踐檢驗，這個問題早已有了的明確答案。</p>
@@ -244,13 +271,40 @@ https://github.com/alex-shpak/hugo-book
 <p>直排模式的索引與橫排並無多少區別，參考本站 <em><a href="https://mengxianjun.org/2016/10/15/zhmakeindex/">Zhmakeindex and the Indices Creating of Chinese Books</a></em> 一文即可。效果見下圖：</p>
 <p><img src="https://i.loli.net/2018/12/20/5c1b5ed90a733.png" alt="直排索引樣式"></p>
 <h1 id="heading11">復原古籍印版樣式</h1>
-<!-- raw HTML omitted -->
+<div class="mnotices minfo"><p>這類字體近年來越來越多，許多沈睡在古籍中的字形得以重見天日。尤以<z>日本</z>[<zl>欣喜堂</zl>](http://www.kinkido.net/)的工作最爲出色。</p></div>
 <p>使用一些電子化的古籍印刷字體，如<a href="https://wytype.com/typeface/earlier">康熙字典體</a>（《康熙字典》印刷所用字型）、<a href="https://wytype.com/typeface/WyueGutiFangsong">聚珍仿宋</a>（北宋刊本中的字型）、<a href="https://www.justfont.com/fontdetail/145">浙江民間書刻體</a>之類，可以復原古籍原典部分印刷效果。下面兩副圖即大致以<a href="https://wytype.com/typeface/WyueGutiFangsong">聚珍仿宋</a>排版的圖書與電子化重排效果示意。</p>
 <p><img src="https://i.loli.net/2018/12/20/5c1b4a0148e76.png" alt="世界書局《駢體文鈔》版式">
 <img src="https://i.loli.net/2018/12/20/5c1b4a148fdcb.png" alt="仿世界書局版"></p>
 <h1 id="heading12">結語</h1>
 <p>上文簡單展示了以 XeCJK 與 XeLaTeX 製作中文直排版式的方案。此外，尚有基於 <a href="https://texwiki.texjp.org/?upTeX%2CupLaTeX">upLaTeX</a> 以及較新的 <a href="https://github.com/clerkma/ptex-ng">Asiatic pTeX</a> 的直排方案，可資參考。</p>
-<!-- raw HTML omitted -->
+<div style="font-family:SYHei Bold;text-align:center">
+
+
+
+  
+
+<a  href="/Books/Movie/CH02/"   class="book-btn">
+  &#9664;上章
+</a>
+&nbsp;&nbsp;&nbsp; 
+
+
+
+  
+
+<a  href="/Books/Movie/"   class="book-btn">
+  &#9673;總目
+</a>
+&nbsp;&nbsp;&nbsp; 
+
+
+
+  
+
+<a  href="/Books/Movie/CH04/"   class="book-btn">
+  下章&#9654;
+</a>
+</div>
 <p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, November 24, 2019, 19:53:11 by .</p>
 </article>
 
