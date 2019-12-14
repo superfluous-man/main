@@ -6,7 +6,7 @@
 <title>第 03 章 運鏡與三角形原理 | 桃林筆記</title>
 
 
-<link rel="stylesheet" href="/book.min.9192fc73578b81bbce52da79b8bb2fb35e581786249f3cf3d5d586bd0b42bf9c.css" integrity="sha256-kZL8c1eLgbvOUtp5uLsvs15YF4Yknzzz1dWGvQtCv5w=">
+<link rel="stylesheet" href="/book.min.8558940475d1699903c990cfc4455733cc31384f93defe9a87a26517ec4407a6.css" integrity="sha256-hViUBHXRaZkDyZDPxEVXM8wxOE&#43;T3v6ah6JlF&#43;xEB6Y=">
 
 
 
@@ -55,12 +55,12 @@ https://github.com/alex-shpak/hugo-book
   </style>
 
 <ul>
-<li><a href="/posts/"><span class="wenxuan"></span>&nbsp;<font face="SYHei Bold">文選</font></a></li>
-<li><a href="/Books/Movie/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">攝影與剪輯</font></a></li>
-<li><a href="/Books/XZX/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">基礎寫作學</font></a></li>
-<li><a href="/Books/WXS/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">中國文學史</font></a></li>
-<li><a href="/Books/ZXS/"><span class="tushu"></span>&nbsp;<font face="SYHei Bold">中國哲學史</font></a></li>
-<li><a href="/Books/alinks/"><span class="lianjie"></span>&nbsp;<font face="SYHei Bold">鏈接</font></a></li>
+<li><a href="/posts/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->文選<!-- raw HTML omitted --></a></li>
+<li><a href="/Books/Movie/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->攝影與剪輯<!-- raw HTML omitted --></a></li>
+<li><a href="/Books/XZX/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->基礎寫作學<!-- raw HTML omitted --></a></li>
+<li><a href="/Books/WXS/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->中國文學史<!-- raw HTML omitted --></a></li>
+<li><a href="/Books/ZXS/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->中國哲學史<!-- raw HTML omitted --></a></li>
+<li><a href="/Books/alinks/"><!-- raw HTML omitted --><!-- raw HTML omitted --> <!-- raw HTML omitted -->鏈接<!-- raw HTML omitted --></a></li>
 </ul>
 
 
@@ -106,256 +106,151 @@ https://github.com/alex-shpak/hugo-book
     <h5>
       第 03 章 運鏡與三角形原理
     </h5>
-<p style="font-family:SYHei Medium;text-align:center"><span class="zuozhe"></span>李二狗 <a href="https://mengxianjun.org/"><span class="zuozheat"></span>克萊登大學保衛科屌絲</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Monday, October 7, 2019 08:33&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;2375&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;5 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+<p style="font-family:SYHei Medium;text-align:center"><span class="zuozhe"></span>李二狗 <a href="https://mengxianjun.org/"><span class="zuozheat"></span>克萊登大學保衛科屌絲</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Monday, October 7, 2019 08:33&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;2245&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;5 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
 </header>
-<article class="markdown">
-
-<div style="font-family:SYHei Bold;text-align:center">
-
-
-
-  
-
-<a  href="/Books/ZXS/CH02/"   class="book-btn">
-  &#9664;上章
-</a>
-&nbsp;&nbsp;&nbsp; 
-
-
-
-  
-
-<a  href="/Books/ZXS/"   class="book-btn">
-  &#9673;總目
-</a>
-&nbsp;&nbsp;&nbsp; 
-
-
-
-  
-
-<a  href="/Books/ZXS/CH04/"   class="book-btn">
-  下章&#9654;
-</a>
-</div>
-
+<article class="markdown"><!-- raw HTML omitted -->
 <p>半個世紀以來，「橫排」逐漸成爲出版物排版的主流。十年前，境內還能偶爾看到一些出版社以「直排」方式出版一些古籍圖書。目下，僅有境外幾家出版社偶爾還以「直排」方式出版一些文史讀物。前幾日瀏覽素材，看到過去十年間網絡上零零散散的基於 LaTeX 的中文直排方案，逐一分析下來，發覺大都需要完善需求、更新源碼。自己久不讀書，讀「直排」書的機會就更少了。近來因飲酒吹風而感冒閉門，趁着這般光景，嘗試整理出一份基於 XeLaTeX 與 XeCJK 的中文直書方案。</p>
-
-<h1 id="直排與現代排版需求">直排與現代排版需求</h1>
-
+<h1 id="heading">直排與現代排版需求</h1>
 <p>爲了更好吸納西學現代科學，方便排版公式、符號、插圖等頁面元素，變「直書」爲「橫書」實乃大勢所趨。一百年來，經過時間與實踐檢驗，這個問題早已有了的明確答案。</p>
-
-<h1 id="xecjk-直書設置">XeCJK 直書設置</h1>
-
+<h1 id="xecjk-">XeCJK 直書設置</h1>
 <p>在 XeCJK 中直書需要旋轉 PDF，並且原橫排環境中的樣式皆需調整以適應直排版式。以下爲需要調整的若干樣式。</p>
+<h2 id="heading1">總設置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#75715e">%文檔類型加入landscape選項
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[a4paper,12pt,openany,landscape]</span>{book}
+<span style="color:#75715e">%導入XeCJK Package
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[CJKchecksingle,AutoFallBack=true]</span>{xeCJK}
+<span style="color:#75715e">%設定直排字體
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\setCJKmainfont</span><span style="color:#a6e22e">[Script=CJK,Vertical=RotatedGlyphs,RawFeature={vertical:+vert},BoldFont=H-SiuNiu-Bold,ItalicFont=HGBLight-H]</span>{I.MingCP}
+<span style="color:#66d9ef">\defaultCJKfontfeatures</span>{RawFeature={vertical:+vert}}
+</code></pre></div><h2 id="heading2">調正漢字基線</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#75715e">%漢字基線調整適應中英文混排
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\let</span><span style="color:#66d9ef">\CJKsymbolOrig</span><span style="color:#66d9ef">\CJKsymbol</span>
+<span style="color:#66d9ef">\let</span><span style="color:#66d9ef">\CJKpunctsymbolOrig</span><span style="color:#66d9ef">\CJKpunctsymbol</span>
+<span style="color:#66d9ef">\newcommand</span><span style="color:#66d9ef">*</span><span style="color:#66d9ef">\CJKmovesymbol</span><span style="color:#a6e22e">[1]</span>{<span style="color:#66d9ef">\raise</span>.35em<span style="color:#66d9ef">\hbox</span>{<span style="color:#66d9ef">\CJKsymbolOrig</span>{#1}}}
+<span style="color:#66d9ef">\newcommand</span><span style="color:#66d9ef">*</span><span style="color:#66d9ef">\CJKmovepunctsymbol</span><span style="color:#a6e22e">[1]</span>{<span style="color:#66d9ef">\raise</span>.35em<span style="color:#66d9ef">\hbox</span>{<span style="color:#66d9ef">\CJKpunctsymbolOrig</span>{#1}}}
+<span style="color:#66d9ef">\newcommand</span><span style="color:#66d9ef">*</span><span style="color:#66d9ef">\CJKmove</span>{<span style="color:#66d9ef">\punctstyle</span>{plain}
+	<span style="color:#66d9ef">\let</span><span style="color:#66d9ef">\CJKsymbol</span><span style="color:#66d9ef">\CJKmovesymbol</span>
+	<span style="color:#66d9ef">\let</span><span style="color:#66d9ef">\CJKpunctsymbol</span><span style="color:#66d9ef">\CJKmovepunctsymbol</span>}	
+<span style="color:#75715e">%在\begin{document}後添加\CJKmove
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\begin</span>{document}
+<span style="color:#66d9ef">\CJKmove</span>
+</code></pre></div><h2 id="heading3">目錄中的章節樣式</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#66d9ef">\titlecontents</span>{chapter}[0em]{<span style="color:#66d9ef">\addvspace</span>{5pt}<span style="color:#66d9ef">\fontsizec</span>{0.7cm}<span style="color:#66d9ef">\it</span>}     <span style="color:#75715e">% for  Chinese table of contents
+</span><span style="color:#75715e"></span>{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thecontentslabel</span>}}~}
+{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\Alphcircwcu</span>{21}}~<span style="color:#66d9ef">\thecontentslabel</span><span style="color:#66d9ef">\helfont</span>}{<span style="color:#66d9ef">\fontsizec</span>{0.7cm}<span style="color:#66d9ef">\color</span>{black}<span style="color:#66d9ef">\;</span><span style="color:#66d9ef">\titlerule</span><span style="color:#66d9ef">*</span><span style="color:#a6e22e">[.5pc]</span>{.}<span style="color:#66d9ef">\;</span><span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thecontentspage</span>}}
 
-<h2 id="總設置">總設置</h2>
-
-<pre><code class="language-Latex">%文檔類型加入landscape選項
-\documentclass[a4paper,12pt,openany,landscape]{book}
-%導入XeCJK Package
-\usepackage[CJKchecksingle,AutoFallBack=true]{xeCJK}
-%設定直排字體
-\setCJKmainfont[Script=CJK,Vertical=RotatedGlyphs,RawFeature={vertical:+vert},BoldFont=H-SiuNiu-Bold,ItalicFont=HGBLight-H]{I.MingCP}
-\defaultCJKfontfeatures{RawFeature={vertical:+vert}}
-</code></pre>
-
-<h2 id="調正漢字基線">調正漢字基線</h2>
-
-<pre><code class="language-Latex">%漢字基線調整適應中英文混排
-\let\CJKsymbolOrig\CJKsymbol
-\let\CJKpunctsymbolOrig\CJKpunctsymbol
-\newcommand*\CJKmovesymbol[1]{\raise.35em\hbox{\CJKsymbolOrig{#1}}}
-\newcommand*\CJKmovepunctsymbol[1]{\raise.35em\hbox{\CJKpunctsymbolOrig{#1}}}
-\newcommand*\CJKmove{\punctstyle{plain}
-	\let\CJKsymbol\CJKmovesymbol
-	\let\CJKpunctsymbol\CJKmovepunctsymbol}	
-%在\begin{document}後添加\CJKmove
-\begin{document}
-\CJKmove
-</code></pre>
-
-<h2 id="目錄中的章節樣式">目錄中的章節樣式</h2>
-
-<pre><code class="language-Latex">\titlecontents{chapter}[0em]{\addvspace{5pt}\fontsizec{0.7cm}\it}     % for  Chinese table of contents
-{\rotatebox[origin=cc]{-270}{\ncircbs{\thecontentslabel}}~}
-{\rotatebox[origin=cc]{-270}{\Alphcircwcu{21}}~\thecontentslabel\helfont}{\fontsizec{0.7cm}\color{black}\;\titlerule*[.5pc]{.}\;\zhnumsetup{style={Traditional,Financial}}\zhdigits{\thecontentspage}}
-
-\titlecontents{section}[0cm]{\it}
-{第{\thecontentslabel}節~~~}
-{\rotatebox[origin=cc]{-270}{\Alphcircwcu{21}}~\thecontentslabel\helfont}{\titlerule*[.5pc]{.}\;\color{black}\zhnumsetup{style={Traditional,Financial}}\zhdigits{\thecontentspage}}
-</code></pre>
-
-<p><a href="https://i.loli.net/2018/12/20/5c1b692106fe9.png"><img src="https://i.loli.net/2018/12/20/5c1b692106fe9.png" alt="目錄版式效果" /></a></p>
-
-<h2 id="正文中的章節樣式">正文中的章節樣式</h2>
-
-<pre><code class="language-Latex">%%竖排章样式
-\assignpagestyle{\chapter}{empty}%去掉章页面页码
-\assignpagestyle{\chapter*}{empty}%去掉章页面页码
-\newcommand{\mychapter}[1]{%
-	\color{myred}\HGBM\fontsize{37}{37}第~\rotatebox[x=0.715cm,origin=c]{-270}{\ncircbs{\thechapter}}~章{{\ZSKS·}#1}
+<span style="color:#66d9ef">\titlecontents</span>{section}[0cm]{<span style="color:#66d9ef">\it</span>}
+{第{<span style="color:#66d9ef">\thecontentslabel</span>}節~~~}
+{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\Alphcircwcu</span>{21}}~<span style="color:#66d9ef">\thecontentslabel</span><span style="color:#66d9ef">\helfont</span>}{<span style="color:#66d9ef">\titlerule</span><span style="color:#66d9ef">*</span><span style="color:#a6e22e">[.5pc]</span>{.}<span style="color:#66d9ef">\;</span><span style="color:#66d9ef">\color</span>{black}<span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thecontentspage</span>}}
+</code></pre></div><p><a href="https://i.loli.net/2018/12/20/5c1b692106fe9.png"><img src="https://i.loli.net/2018/12/20/5c1b692106fe9.png" alt="目錄版式效果"></a></p>
+<h2 id="heading4">正文中的章節樣式</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#75715e">%%竖排章样式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\assignpagestyle</span>{<span style="color:#66d9ef">\chapter</span>}{empty}<span style="color:#75715e">%去掉章页面页码
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\assignpagestyle</span>{<span style="color:#66d9ef">\chapter</span><span style="color:#66d9ef">*</span>}{empty}<span style="color:#75715e">%去掉章页面页码
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mychapter</span>}[1]{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\HGBM</span><span style="color:#66d9ef">\fontsize</span>{37}{37}第~<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[x=0.715cm,origin=c]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thechapter</span>}}~章{{<span style="color:#66d9ef">\ZSKS</span>·}#1}
 }
-\newcommand{\mychapterun}[1]{%
-	\color{myred}\fontsize{37}{37}\ding{109}~\akzfont\HGBM #1
+<span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mychapterun</span>}[1]{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\fontsize</span>{37}{37}<span style="color:#66d9ef">\ding</span>{109}~<span style="color:#66d9ef">\akzfont</span><span style="color:#66d9ef">\HGBM</span> #1
 }
-\titleformat{\chapter}{}{}{0em}{\mychapter}% code preceding the title body  (title body is taken as argument)
-\titleformat{name=\chapter,numberless}{}{}{0pt}{\mychapterun}
-\titlespacing{\chapter}
+<span style="color:#66d9ef">\titleformat</span>{<span style="color:#66d9ef">\chapter</span>}{}{}{0em}{<span style="color:#66d9ef">\mychapter</span>}<span style="color:#75715e">% code preceding the title body  (title body is taken as argument)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\titleformat</span>{name=<span style="color:#66d9ef">\chapter</span>,numberless}{}{}{0pt}{<span style="color:#66d9ef">\mychapterun</span>}
+<span style="color:#66d9ef">\titlespacing</span>{<span style="color:#66d9ef">\chapter</span>}
 {0pt}{0pt}{36pt}
-%%竖排節样式
-\newcommand{\mysection}[1]{%
-			\color{myred}\MLan \fontsize{21}{21}第~{\thesection}~節~~~~ #1
+<span style="color:#75715e">%%竖排節样式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mysection</span>}[1]{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\MLan</span> <span style="color:#66d9ef">\fontsize</span>{21}{21}第~{<span style="color:#66d9ef">\thesection</span>}~節~~~~ #1
 }
-\newcommand{\mysectionun}[1]{%
-			\color{myred}\fontsize{21}{21}\ding{109}~\akzfont\MLan #1
+<span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mysectionun</span>}[1]{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\fontsize</span>{21}{21}<span style="color:#66d9ef">\ding</span>{109}~<span style="color:#66d9ef">\akzfont</span><span style="color:#66d9ef">\MLan</span> #1
 }
-\titleformat{\section}{}{}{0mm}{\mysection}
-\titleformat{name=\section,numberless}{}{}{0pt}{\mysectionun}
-\titlespacing{\section}
+<span style="color:#66d9ef">\titleformat</span>{<span style="color:#66d9ef">\section</span>}{}{}{0mm}{<span style="color:#66d9ef">\mysection</span>}
+<span style="color:#66d9ef">\titleformat</span>{name=<span style="color:#66d9ef">\section</span>,numberless}{}{}{0pt}{<span style="color:#66d9ef">\mysectionun</span>}
+<span style="color:#66d9ef">\titlespacing</span>{<span style="color:#66d9ef">\section</span>}
 {0pt}{12pt}{6pt}
-</code></pre>
-
-<p><img src="https://i.loli.net/2018/12/20/5c1b678d460d3.png" alt="正文章節標題樣式" /></p>
-
-<h2 id="插圖樣式設定">插圖樣式設定</h2>
-
+</code></pre></div><p><img src="https://i.loli.net/2018/12/20/5c1b678d460d3.png" alt="正文章節標題樣式"></p>
+<h2 id="heading5">插圖樣式設定</h2>
 <p>直排時，插圖不易調整，尤其是插圖的標題樣式。本文方案暫且處理如下。</p>
-
-<pre><code class="language-Latex">\usepackage{wrapfig}
-\usepackage{caption}
-\captionsetup[wrapfigure]{font=small,labelfont=bf,textfont=it,aboveskip=6pt,belowskip=-1.02em,justification=raggedright,name={Fig.}}%,labelsep=period
-\newcommand{\mafig}[2]{
-	\begin{wrapfigure}{O}[0pt]{0.2\textwidth}%[10]
-		\vspace{-6pt}
-	{\tcbincludegraphics[size=fbox,colframe=myred!50!black,colback=red!60!black,center title,drop fuzzy shadow,colback=myred,boxsep=3pt,arc=0pt,graphics options={scale=.5,angle=-270},title={\large\HGBR\helfont #2}]{#1}}
-		\vspace{-6pt}
-\end{wrapfigure}
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#66d9ef">\usepackage</span>{wrapfig}
+<span style="color:#66d9ef">\usepackage</span>{caption}
+<span style="color:#66d9ef">\captionsetup</span><span style="color:#a6e22e">[wrapfigure]</span>{font=small,labelfont=bf,textfont=it,aboveskip=6pt,belowskip=-1.02em,justification=raggedright,name={Fig.}}<span style="color:#75715e">%,labelsep=period
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mafig</span>}[2]{
+	<span style="color:#66d9ef">\begin</span>{wrapfigure}{O}[0pt]{0.2<span style="color:#66d9ef">\textwidth</span>}<span style="color:#75715e">%[10]
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">\vspace</span>{-6pt}
+	{<span style="color:#66d9ef">\tcbincludegraphics</span><span style="color:#a6e22e">[size=fbox,colframe=myred!50!black,colback=red!60!black,center title,drop fuzzy shadow,colback=myred,boxsep=3pt,arc=0pt,graphics options={scale=.5,angle=-270},title={\large\HGBR\helfont #2}]</span>{#1}}
+		<span style="color:#66d9ef">\vspace</span>{-6pt}
+<span style="color:#66d9ef">\end</span>{wrapfigure}
 }
-</code></pre>
-
-<h2 id="參考文獻設定">參考文獻設定</h2>
-
-<pre><code class="language-Latex">%採用gb7714-2015格式
-\usepackage[backend = biber,bibstyle = gb7714-2015,citestyle=gb7714-2015ay,natbib=true,mcite=true,sorting=nyt,sortcites=true,autopunct=true,hyperref=true,abbreviate=false,backref=true]{biblatex}%國標2015文獻引用格式 %bibstyle = gb7714-2015,citestyle=gb7714-2015ay,bibstyle=alphabetic,%=gb7714-2015ay为（作者年份页码）样式引用
-\addbibresource{bibliography.bib} % BibTeX bibliography file bibliography.bib
-\defbibheading{bibempty}{}
-\DefineBibliographyStrings{english}{%
-	backrefpage = {引用頁：},
+</code></pre></div><h2 id="heading6">參考文獻設定</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#75715e">%採用gb7714-2015格式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[backend = biber,bibstyle = gb7714-2015,citestyle=gb7714-2015ay,natbib=true,mcite=true,sorting=nyt,sortcites=true,autopunct=true,hyperref=true,abbreviate=false,backref=true]</span>{biblatex}<span style="color:#75715e">%國標2015文獻引用格式 %bibstyle = gb7714-2015,citestyle=gb7714-2015ay,bibstyle=alphabetic,%=gb7714-2015ay为（作者年份页码）样式引用
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\addbibresource</span>{bibliography.bib} <span style="color:#75715e">% BibTeX bibliography file bibliography.bib
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\defbibheading</span>{bibempty}{}
+<span style="color:#66d9ef">\DefineBibliographyStrings</span>{english}{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>	backrefpage = {引用頁：},
 	backrefpages= {引用頁：},
 }
 
-%正文行文示例
-……\cite[P178]{adornoRethinkingArchitectureReader1997}。
-\textcite[P352]{haidegeerHeErDeLinShiDeChanShi2000}認爲……
+<span style="color:#75715e">%正文行文示例
+</span><span style="color:#75715e"></span>……<span style="color:#66d9ef">\cite</span><span style="color:#a6e22e">[P178]</span>{adornoRethinkingArchitectureReader1997}。
+<span style="color:#66d9ef">\textcite</span><span style="color:#a6e22e">[P352]</span>{haidegeerHeErDeLinShiDeChanShi2000}認爲……
 
-%正文列印參考文獻
-\printbibliography[heading=bibempty]
-</code></pre>
-
-<p><img src="https://i.loli.net/2018/12/20/5c1b688b4f3c5.png" alt="參考文獻直排樣式" /></p>
-
-<h2 id="夾註樣式設置">夾註樣式設置</h2>
-
-<pre><code class="language-Latex">%%%gezhu environment
-\usepackage{zhulem}
-\usepackage{gezhu}
-\setgezhuraise{-3.5pt}
-\setgezhulines{2}
-\everygezhu{\linespread{1.2}\fontsize{9}{9}\HMOP\selectfont}
-\newcommand{\gz}[1]{{\gezhu{#1}}}
-%\newcommand{\gz}[1]{\disablepinyin\gezhu{\HMOP #1}\enablepinyin}
-</code></pre>
-
-<p><a href="https://i.loli.net/2018/12/20/5c1b6a9f161e3.png"><img src="https://i.loli.net/2018/12/20/5c1b6a9f161e3.png" alt="行間夾批樣式效果" /></a></p>
-
-<h2 id="頁眉頁腳樣式">頁眉頁腳樣式</h2>
-
-<pre><code class="language-Latex">\usepackage{titleps} %詳細參見說明文檔
-
-\newpagestyle{mapage}{%   %numbered chapter
-	\sethead[\MLan\color{myred}\bottitlemarks{第{\thesection}節}~~~\sectiontitle]
+<span style="color:#75715e">%正文列印參考文獻
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\printbibliography</span><span style="color:#a6e22e">[heading=bibempty]</span>
+</code></pre></div><p><img src="https://i.loli.net/2018/12/20/5c1b688b4f3c5.png" alt="參考文獻直排樣式"></p>
+<h2 id="heading7">夾註樣式設置</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#75715e">%%%gezhu environment
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span>{zhulem}
+<span style="color:#66d9ef">\usepackage</span>{gezhu}
+<span style="color:#66d9ef">\setgezhuraise</span>{-3.5pt}
+<span style="color:#66d9ef">\setgezhulines</span>{2}
+<span style="color:#66d9ef">\everygezhu</span>{<span style="color:#66d9ef">\linespread</span>{1.2}<span style="color:#66d9ef">\fontsize</span>{9}{9}<span style="color:#66d9ef">\HMOP</span><span style="color:#66d9ef">\selectfont</span>}
+<span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\gz</span>}[1]{{<span style="color:#66d9ef">\gezhu</span>{#1}}}
+<span style="color:#75715e">%\newcommand{\gz}[1]{\disablepinyin\gezhu{\HMOP #1}\enablepinyin}
+</span></code></pre></div><p><a href="https://i.loli.net/2018/12/20/5c1b6a9f161e3.png"><img src="https://i.loli.net/2018/12/20/5c1b6a9f161e3.png" alt="行間夾批樣式效果"></a></p>
+<h2 id="heading8">頁眉頁腳樣式</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#66d9ef">\usepackage</span>{titleps} <span style="color:#75715e">%詳細參見說明文檔
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">\newpagestyle</span>{mapage}{<span style="color:#75715e">%   %numbered chapter
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">\sethead</span><span style="color:#a6e22e">[\MLan\color{myred}\bottitlemarks{第{\thesection}節}~~~\sectiontitle]</span>
 	 []
-	 [{\MLan\color{myred}\rotatebox[x=0.225cm,origin=c]{-270}{\ncircbs{\thechapter}}~\chaptertitle《~\parttitle 編《~\thebooktitle《~第{\HGBM\color{black}\zhnumsetup{style={Traditional,Financial}}\zhdigits{\thepage}}頁}] %even head
+	 [{<span style="color:#66d9ef">\MLan</span><span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[x=0.225cm,origin=c]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thechapter</span>}}~<span style="color:#66d9ef">\chaptertitle</span>《~<span style="color:#66d9ef">\parttitle</span> 編《~<span style="color:#66d9ef">\thebooktitle</span>《~第{<span style="color:#66d9ef">\HGBM</span><span style="color:#66d9ef">\color</span>{black}<span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thepage</span>}}頁}] <span style="color:#75715e">%even head
+</span><span style="color:#75715e"></span>	 {}
 	 {}
-	 {}
-	 {} %odd head
-	 \setfoot[]
+	 {} <span style="color:#75715e">%odd head
+</span><span style="color:#75715e"></span>	 <span style="color:#66d9ef">\setfoot</span><span style="color:#a6e22e">[]</span>
 	 []
-	 [] %even foot
-	 {\MLan\color{myred}\bottitlemarks{第{\thesection}節}~~~\sectiontitle}
+	 [] <span style="color:#75715e">%even foot
+</span><span style="color:#75715e"></span>	 {<span style="color:#66d9ef">\MLan</span><span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\bottitlemarks</span>{第{<span style="color:#66d9ef">\thesection</span>}節}~~~<span style="color:#66d9ef">\sectiontitle</span>}
 	 {}
-	 {{\MLan\color{myred}\rotatebox[x=0.225cm,origin=c]{-270}{\ncircbs{\thechapter}}~\chaptertitle《~\parttitle 編《~\thebooktitle《~第{\HGBM\color{black}\zhnumsetup{style={Traditional,Financial}}\zhdigits{\thepage}}頁}} %odd foot
-				}
-	\settitlemarks{part,chapter,section,subsection,subsubsection}
+	 {{<span style="color:#66d9ef">\MLan</span><span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[x=0.225cm,origin=c]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thechapter</span>}}~<span style="color:#66d9ef">\chaptertitle</span>《~<span style="color:#66d9ef">\parttitle</span> 編《~<span style="color:#66d9ef">\thebooktitle</span>《~第{<span style="color:#66d9ef">\HGBM</span><span style="color:#66d9ef">\color</span>{black}<span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thepage</span>}}頁}} <span style="color:#75715e">%odd foot
+</span><span style="color:#75715e"></span>				}
+	<span style="color:#66d9ef">\settitlemarks</span>{part,chapter,section,subsection,subsubsection}
 
-</code></pre>
+</code></pre></div><p><a href="https://i.loli.net/2018/12/20/5c1b6b2b43a2f.png"><img src="https://i.loli.net/2018/12/20/5c1b6b2b43a2f.png" alt="頁眉頁腳直排樣式"></a></p>
+<h2 id="heading9">章節尾註樣式</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[page]</span>{pagenote}<span style="color:#75715e">%[page] Because of how TeX writes information to files, when the page option is used there must be no notes on the page where \printnotes or \printnotes* closes the ent file. If necessary, a \clearpage or similar must be used before the \print （標記注釋所在頁碼必須讓printnotes另起一頁，否則可能吃掉與\printnotes同頁的注釋^_^）
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">% 正文中的注释编号样式调整：圓圈數字
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\renewcommand</span><span style="color:#66d9ef">\notenumintext</span><span style="color:#a6e22e">[1]</span>{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\textsuperscript</span>{<span style="color:#66d9ef">\footnotesize</span><span style="color:#66d9ef">\ncircrds</span>{#1}}}}
+<span style="color:#75715e">% 章节末尾的注释编号样式调整：方形黑底數字
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\renewcommand</span><span style="color:#66d9ef">\notenuminnotes</span><span style="color:#a6e22e">[1]</span>{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{#1}}}
+<span style="color:#75715e">%尾註標記該註釋在正文出現的頁碼
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\pagename</span>}{{P.}}
 
-<p><a href="https://i.loli.net/2018/12/20/5c1b6b2b43a2f.png"><img src="https://i.loli.net/2018/12/20/5c1b6b2b43a2f.png" alt="頁眉頁腳直排樣式" /></a></p>
-
-<h2 id="章節尾註樣式">章節尾註樣式</h2>
-
-<pre><code class="language-Latex">\usepackage[page]{pagenote}%[page] Because of how TeX writes information to files, when the page option is used there must be no notes on the page where \printnotes or \printnotes* closes the ent file. If necessary, a \clearpage or similar must be used before the \print （標記注釋所在頁碼必須讓printnotes另起一頁，否則可能吃掉與\printnotes同頁的注釋^_^）
-
-% 正文中的注释编号样式调整：圓圈數字
-\renewcommand\notenumintext[1]{\rotatebox[origin=cc]{-270}{\textsuperscript{\footnotesize\ncircrds{#1}}}}
-% 章节末尾的注释编号样式调整：方形黑底數字
-\renewcommand\notenuminnotes[1]{\rotatebox[origin=cc]{-270}{\ncircbs{#1}}}
-%尾註標記該註釋在正文出現的頁碼
-\renewcommand{\pagename}{{P.}}
-
-\makepagenote	
-</code></pre>
-
-<p><a href="https://i.loli.net/2018/12/20/5c1b6b9601691.png"><img src="https://i.loli.net/2018/12/20/5c1b6b9601691.png" alt="註釋採用章末尾註" /></a></p>
-
-<h2 id="索引样式設定">索引样式設定</h2>
-
+<span style="color:#66d9ef">\makepagenote</span>	
+</code></pre></div><p><a href="https://i.loli.net/2018/12/20/5c1b6b9601691.png"><img src="https://i.loli.net/2018/12/20/5c1b6b9601691.png" alt="註釋採用章末尾註"></a></p>
+<h2 id="heading10">索引样式設定</h2>
 <p>直排模式的索引與橫排並無多少區別，參考本站 <em><a href="https://mengxianjun.org/2016/10/15/zhmakeindex/">Zhmakeindex and the Indices Creating of Chinese Books</a></em> 一文即可。效果見下圖：</p>
-
-<p><img src="https://i.loli.net/2018/12/20/5c1b5ed90a733.png" alt="直排索引樣式" /></p>
-
-<h1 id="復原古籍印版樣式">復原古籍印版樣式</h1>
-
-<div class="mnotices minfo"><p>這類字體近年來越來越多，許多沈睡在古籍中的字形得以重見天日。尤以<z>日本</z>[<zl>欣喜堂</zl>](http://www.kinkido.net/)的工作最爲出色。</p></div>
-
+<p><img src="https://i.loli.net/2018/12/20/5c1b5ed90a733.png" alt="直排索引樣式"></p>
+<h1 id="heading11">復原古籍印版樣式</h1>
+<!-- raw HTML omitted -->
 <p>使用一些電子化的古籍印刷字體，如<a href="https://wytype.com/typeface/earlier">康熙字典體</a>（《康熙字典》印刷所用字型）、<a href="https://wytype.com/typeface/WyueGutiFangsong">聚珍仿宋</a>（北宋刊本中的字型）、<a href="https://www.justfont.com/fontdetail/145">浙江民間書刻體</a>之類，可以復原古籍原典部分印刷效果。下面兩副圖即大致以<a href="https://wytype.com/typeface/WyueGutiFangsong">聚珍仿宋</a>排版的圖書與電子化重排效果示意。</p>
-
-<p><img src="https://i.loli.net/2018/12/20/5c1b4a0148e76.png" alt="世界書局《駢體文鈔》版式" />
-<img src="https://i.loli.net/2018/12/20/5c1b4a148fdcb.png" alt="仿世界書局版" /></p>
-
-<h1 id="結語">結語</h1>
-
+<p><img src="https://i.loli.net/2018/12/20/5c1b4a0148e76.png" alt="世界書局《駢體文鈔》版式">
+<img src="https://i.loli.net/2018/12/20/5c1b4a148fdcb.png" alt="仿世界書局版"></p>
+<h1 id="heading12">結語</h1>
 <p>上文簡單展示了以 XeCJK 與 XeLaTeX 製作中文直排版式的方案。此外，尚有基於 <a href="https://texwiki.texjp.org/?upTeX%2CupLaTeX">upLaTeX</a> 以及較新的 <a href="https://github.com/clerkma/ptex-ng">Asiatic pTeX</a> 的直排方案，可資參考。</p>
-
-<div style="font-family:SYHei Bold;text-align:center">
-
-
-
-  
-
-<a  href="/Books/ZXS/CH02/"   class="book-btn">
-  &#9664;上章
-</a>
-&nbsp;&nbsp;&nbsp; 
-
-
-
-  
-
-<a  href="/Books/ZXS/"   class="book-btn">
-  &#9673;總目
-</a>
-&nbsp;&nbsp;&nbsp; 
-
-
-
-  
-
-<a  href="/Books/ZXS/CH04/"   class="book-btn">
-  下章&#9654;
-</a>
-</div>
+<!-- raw HTML omitted -->
 <p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, November 24, 2019, 19:59:30 by .</p>
 </article>
 
@@ -374,24 +269,18 @@ https://github.com/alex-shpak/hugo-book
 
 <aside class="book-toc level-true fixed">
 <nav id="TableOfContents">
-<ul>
-<li><a href="#直排與現代排版需求">直排與現代排版需求</a></li>
-<li><a href="#xecjk-直書設置">XeCJK 直書設置</a>
-<ul>
-<li><a href="#總設置">總設置</a></li>
-<li><a href="#調正漢字基線">調正漢字基線</a></li>
-<li><a href="#目錄中的章節樣式">目錄中的章節樣式</a></li>
-<li><a href="#正文中的章節樣式">正文中的章節樣式</a></li>
-<li><a href="#插圖樣式設定">插圖樣式設定</a></li>
-<li><a href="#參考文獻設定">參考文獻設定</a></li>
-<li><a href="#夾註樣式設置">夾註樣式設置</a></li>
-<li><a href="#頁眉頁腳樣式">頁眉頁腳樣式</a></li>
-<li><a href="#章節尾註樣式">章節尾註樣式</a></li>
-<li><a href="#索引样式設定">索引样式設定</a></li>
-</ul></li>
-<li><a href="#復原古籍印版樣式">復原古籍印版樣式</a></li>
-<li><a href="#結語">結語</a></li>
-</ul>
+  <ul>
+    <li><a href="#heading1">總設置</a></li>
+    <li><a href="#heading2">調正漢字基線</a></li>
+    <li><a href="#heading3">目錄中的章節樣式</a></li>
+    <li><a href="#heading4">正文中的章節樣式</a></li>
+    <li><a href="#heading5">插圖樣式設定</a></li>
+    <li><a href="#heading6">參考文獻設定</a></li>
+    <li><a href="#heading7">夾註樣式設置</a></li>
+    <li><a href="#heading8">頁眉頁腳樣式</a></li>
+    <li><a href="#heading9">章節尾註樣式</a></li>
+    <li><a href="#heading10">索引样式設定</a></li>
+  </ul>
 </nav>
 </aside>
 
