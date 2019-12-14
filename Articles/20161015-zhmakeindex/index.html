@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zhmakeindex and the Indices Creating of Chinese Books | 桃林筆記</title>
+
+
+<link rel="stylesheet" href="/book.min.8558940475d1699903c990cfc4455733cc31384f93defe9a87a26517ec4407a6.css" integrity="sha256-hViUBHXRaZkDyZDPxEVXM8wxOE&#43;T3v6ah6JlF&#43;xEB6Y=">
+
+
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  <span id="top"></span>
+ <script>
+    (function(){
+        if(''){
+            if (prompt('請輸入本文密碼') !== ''){
+                alert('密碼錯誤！');
+                history.back();
+            }
+        }
+    })();
+</script>
+</head>
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<p style="font-family:SYHei Heavy;text-align:center" class="book-brand">
+  <a href="https://mengxianjun.org/"><img src="https://i.loli.net/2019/10/13/NemCId6lUzVWR92.png" alt="" style="width:217px;height:79px;"/></a>
+</p>
+
+<div class="book-search">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="Google This Site">
+                <input type="hidden" name="sitesearch" value="https://mengxianjun.org/">
+            </div>
+        </form>
+</div>
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f Articles\2f 20161015-zhmakeindex\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li><a href="/Articles/"><span class="wenxuan"></span> <font face="SYHei Bold">文選</font></a></li>
+<li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">藝術學概論</font></a></li>
+<li><a href="/Books/Movie/"><span class="tushu"></span> <font face="SYHei Bold">攝影與剪輯</font></a></li>
+<li><a href="/Books/XZX/"><span class="tushu"></span> <font face="SYHei Bold">基礎寫作學</font></a></li>
+<li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">中國文學史</font></a></li>
+<li><a href="/Books/ZXS/"><span class="tushu"></span> <font face="SYHei Bold">中國哲學史</font></a></li>
+<li><a href="/Books/alinks/"><span class="lianjie"></span> <font face="SYHei Bold">鏈接</font></a></li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>Zhmakeindex and the Indices Creating of Chinese Books</strong>
+</header>
+
+      
+<header class="markdown">
+<a href="https://mengxianjun.org/"><img class="circular--portrait" src="https://mengxianjun.org/img/gaosongnian.jpeg" alt="Author" /></a>
+    <p class="listpagetitle">
+      Zhmakeindex and the Indices Creating of Chinese Books
+    </p>
+<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>李二狗 <a href="https://mengxianjun.org/"><span class="zuozheat"></span>國立三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Saturday, October 15, 2016 10:01&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;2254&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;5 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+</header>
+<article class="markdown"><div style="font-family:SYHei Bold;text-align:center">
+
+
+
+  
+
+<a  href="/Articles/"   class="book-btn">
+  &#9673;返回文選列表
+</a>
+</div>
+<p>In some big documents, for example <a href="https://mengxianjun.org/2016/04/30/cedic/"><em>The Cangjie Chinese-English Dictionary</em></a>, it is necessary both for authors and readers to create one or two keywords lists in the book appendices. These lists can help to find information quite efficiently. In this article, I introduce the <a href="https://github.com/leo-liu/zhmakeindex">zhmakeindex</a> program that aims to sort Chinese index entries.</p>
+<h1 id="generating-latex-indices-separately">Gen­er­a­ting LaTeX Indices Separately</h1>
+<p>With the LaTeX in­dex gen­er­a­tor <a href="https://www.ctan.org/pkg/makeindex?lang=en">makeindex</a>, an index can be produced. If you want to create multiple indices in a book, you should use the <a href="https://www.ctan.org/pkg/imakeidx">imakeidx</a> package.</p>
+<p>In <a href="https://mengxianjun.org/2016/04/30/cedic/"><em>The Cangjie Chinese-English Dictionary</em></a>, there are six or seven indices in appendices, and the LaTeX package <a href="https://www.ctan.org/pkg/imakeidx">imakeidx</a> was used. &ldquo;The pack­age en­ables the user to pro­duce and type­set one or more in­dexes si­mul­ta­ne­ously with a doc­u­ment.&rdquo;</p>
+<p>This package is invoked as usual by means of a <strong>\usepackage</strong> command in preamble.tex:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[noautomatic]</span>{imakeidx}
+</code></pre></div><p>The package option <strong><em>noautomatic</em></strong> disables the automatic splitting of the raw index files and running of the system programs. And then We can use the LaTeX index processor <a href="https://www.ctan.org/pkg/xindy?lang=en">texindy</a> and <a href="https://github.com/leo-liu/zhmakeindex">zhmakeindex</a> simultaneously to make Chinese indices and Other Indices <strong>separately</strong>.</p>
+<h1 id="how-to-install-zhmakeindex-in-mainland-china">How to Install Zhmakeindex in Mainland China</h1>
+<p><a href="https://github.com/leo-liu/zhmakeindex">Zhmakeindex</a> is a program for making Chinese indices in a document generated with LaTeX. It is written by <a href="https://github.com/leo-liu">Leo Liu</a> in Google <a href="https://golang.org/">Go language</a>, and released with statically linked binary code. To run <a href="https://github.com/leo-liu/zhmakeindex">zhmakeindex</a>, we should first install Google <a href="https://golang.org/">Go language</a>, and then compile <a href="https://github.com/leo-liu/zhmakeindex">zhmakeindex</a> from the source code.</p>
+<h2 id="installing-google-go-language">Installing Google Go Language</h2>
+<p>In Manjaro, <a href="https://github.com/golang/go/wiki/Ubuntu">golang</a> can be installed easily.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sudo pacman -S go
+$ go version
+  go version go1.6.2 linux/amd64
+$ mkdir ~/go
+$ emacs ~/.zshrc
+  export GOPATH<span style="color:#f92672">=</span>$HOME/go
+  export PATH<span style="color:#f92672">=</span>$HOME/bin:$PATH:$GOPATH/bin
+  export PATH<span style="color:#f92672">=</span>$PATH:/usr/local/go/bin
+$ exit
+</code></pre></div><h2 id="installing-golang-packages">Installing Golang Packages</h2>
+<p>To compile zhmakeindex, these Go packages should be installed:</p>
+<ul>
+<li><a href="https://godoc.org/golang.org/x/text">golang.org/x/text</a></li>
+<li><a href="https://github.com/yasushi-saito/rbtree">github.com/yasushi-saito/rbtree</a></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go get golang.org/x/text
+$ go get github.com/yasushi-saito/rbtree
+</code></pre></div><p>I do love our Great Country undoubtedly. But there is a wall named <em>The Great Firewall of China</em>, if you can't <strong>climb over the GFW</strong>, to install these packages will make you go insane. You can build a door to reach the source pages, for exemple <a href="https://github.com/shadowsocks">shadowsocks</a> and <a href="https://github.com/search?utf8=%E2%9C%93&amp;q=goagent">goagent</a>.</p>
+<p>If you can't climb over the Wall, <a href="http://www.ituring.com.cn/article/207412">here</a> is a way to install these packages:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ go get github.com/golang/text
+$ mkdir -p ~/go/src/golang.org/x
+$ cd ~/go/src/golang.org/x
+$ ln -s ~/go/src/github.com/golang/text .
+</code></pre></div><h2 id="installing-zhmakeindex">Installing Zhmakeindex</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ mkdir -p ~/go/src/github.com/leo-liu
+$ cd ~/go/src/github.com/leo-liu
+$ git clone https://github.com/leo-liu/zhmakeindex.git
+$ cd zhmakeindex
+$ ./install.sh
+</code></pre></div><h1 id="how-to-use-zhmakeindex">How to Use Zhmakeindex</h1>
+<p>Run <em>zhmakeindex</em> in your terminal and will see:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ zhmakeindex
+  用法：
+  zhmakeindex <span style="color:#f92672">[</span>-c<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-i<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-o &lt;ind&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-q<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-r<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-s &lt;sty&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-t &lt;log&gt;<span style="color:#f92672">]</span>
+              <span style="color:#f92672">[</span>-enc &lt;enc&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-senc &lt;senc&gt;<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-strict<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-z &lt;sort&gt;<span style="color:#f92672">]</span>
+              <span style="color:#f92672">[</span>&lt;输入文件1&gt; &lt;输入文件2&gt; ...<span style="color:#f92672">]</span>
+  中文索引处理程序
+    选项    默认值   说明
+    -c      false    忽略条目首尾空格
+    -enc    utf-8    读写索引文件的编码
+    -i      false    从标准输入读取
+    -o      无       输出文件
+    -q      false    静默模式，不输出错误信息
+    -r      false    禁用自动生成页码区间
+    -s      无       格式文件名
+    -senc   utf-8    格式文件的编码
+    -strict false    严格区分不同 encapsulated 命令的页码
+    -t      无       日志文件名
+    -z      pinyin   中文分组排序方式，可以使用 pinyin <span style="color:#f92672">(</span>reading<span style="color:#f92672">)</span>、bihua <span style="color:#f92672">(</span>stroke<span style="color:#f92672">)</span> 或 bushou <span style="color:#f92672">(</span>radical<span style="color:#f92672">)</span>
+  版本：devel-1f89f3a<span style="color:#f92672">(</span>2016-07-29<span style="color:#f92672">)</span>	作者：刘海洋&lt;leoliu.pku@gmail.com&gt;
+</code></pre></div><p>Usage of zhmakeindex is similar to makeindex. Just cd your file path and run command in terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ zhmakeindex youridxfile.idx %%using default .ist file
+$ zhmakeindex -s youistfile.ist youridxfile.idx %%using your personal style file
+$ zhmakeindex -s youistfile.ist -z bushou youridxfile.idx %%sorting index entries by chinese characters stroke order
+</code></pre></div><h1 id="the-layout-of-index-entries">The Layout of Index Entries</h1>
+<p>Package <a href="https://www.ctan.org/pkg/imakeidx">imakeidx</a> can produce multiple indices and defines some others. For instance, the following commands may be used in preamble.tex file. For detailed information see the <a href="https://www.ctan.org/pkg/imakeidx">imakeidx</a> package documentation.</p>
+<h2 id="specific-package-commands">Specific Package Commands</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[noautomatic]</span>{imakeidx}
+<span style="color:#66d9ef">\makeindex</span><span style="color:#a6e22e">[name=ec,title=英漢索引,intoc,columns=5,columnseprule=true,columnsep=5pt,options={-s ec.ist}]</span>
+<span style="color:#66d9ef">\makeindex</span><span style="color:#a6e22e">[name=th,title=類詞索引,intoc,columns=5,columnseprule=true,columnsep=5pt,options={-s th.ist}]</span>
+<span style="color:#66d9ef">\makeindex</span><span style="color:#a6e22e">[name=zb,title=字辨索引,intoc,columns=5,columnseprule=true,columnsep=5pt,options={-s zb.ist}]</span>
+<span style="color:#66d9ef">\makeindex</span><span style="color:#a6e22e">[name=gy,title=國音索引,intoc,columns=5,columnseprule=true,columnsep=5pt,options={-s gy.ist}]</span>
+<span style="color:#66d9ef">\makeindex</span><span style="color:#a6e22e">[name=yy,title=粵音索引,intoc,columns=5,columnseprule=true,columnsep=5pt,options={-s yy.ist}]</span>
+<span style="color:#66d9ef">\makeindex</span><span style="color:#a6e22e">[name=bh,title=總畫索引,intoc,columns=6,columnseprule=true,columnsep=5pt,options={-M bh.xdy}]</span>
+<span style="color:#66d9ef">\makeindex</span><span style="color:#a6e22e">[name=cj,title=倉頡索引,intoc,columns=6,columnseprule=true,columnsep=5pt,options={-M cj.xdy}]</span>
+</code></pre></div><p>And then adjust vertical space and hangindent sapce of index entries in preamble.tex.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\makeatletter</span>
+<span style="color:#75715e">%%define index items layout
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\def</span><span style="color:#66d9ef">\@</span>idxitem{<span style="color:#66d9ef">\par</span><span style="color:#66d9ef">\addvspace</span>{7<span style="color:#66d9ef">\p</span>@ <span style="color:#66d9ef">\@</span>plus 3<span style="color:#66d9ef">\p</span>@ <span style="color:#66d9ef">\@</span>minus 3<span style="color:#66d9ef">\p</span>@}<span style="color:#66d9ef">\hangindent</span> 17<span style="color:#66d9ef">\p</span>@}
+<span style="color:#75715e">%%define index subitems layout
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\def</span><span style="color:#66d9ef">\subitem</span>{<span style="color:#66d9ef">\par</span><span style="color:#66d9ef">\hangindent</span> 0<span style="color:#66d9ef">\p</span>@ <span style="color:#66d9ef">\hspace</span><span style="color:#66d9ef">*</span>{0<span style="color:#66d9ef">\p</span>@}}
+<span style="color:#75715e">%%define index subsubitems layout
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\def</span><span style="color:#66d9ef">\subsubitem</span>{<span style="color:#66d9ef">\par</span><span style="color:#66d9ef">\hangindent</span> 0<span style="color:#66d9ef">\p</span>@ <span style="color:#66d9ef">\hspace</span><span style="color:#66d9ef">*</span>{0<span style="color:#66d9ef">\p</span>@}}
+<span style="color:#75715e">%%define vspace above lettergroup name
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\def</span><span style="color:#66d9ef">\indexspace</span>{<span style="color:#66d9ef">\par</span><span style="color:#66d9ef">\addvspace</span>{12<span style="color:#66d9ef">\p</span>@ <span style="color:#66d9ef">\@</span>plus 2<span style="color:#66d9ef">\p</span>@ <span style="color:#66d9ef">\@</span>minus 2<span style="color:#66d9ef">\p</span>@}} 
+<span style="color:#66d9ef">\patchcmd</span><span style="color:#66d9ef">\theindex</span>{<span style="color:#66d9ef">\indexname</span>}{<span style="color:#66d9ef">\indexname</span><span style="color:#66d9ef">\vspace</span>{5pt}}{}{}
+<span style="color:#66d9ef">\makeatother</span>
+</code></pre></div><p>We can type below commands into our .tex file bottom:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX">......
+<span style="color:#66d9ef">\phantomsection</span>
+<span style="color:#66d9ef">\addcontentsline</span>{toc}{part}{辭典檢索}
+<span style="color:#66d9ef">\backmatter</span>
+<span style="color:#66d9ef">\onecolumn</span>
+<span style="color:#66d9ef">\pagestyle</span>{mipage}
+<span style="color:#66d9ef">\printindex</span><span style="color:#a6e22e">[zb]</span> <span style="color:#75715e">% zhmakeindex -s zb.ist -z pinyin ec.idx
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\printindex</span><span style="color:#a6e22e">[ec]</span> <span style="color:#75715e">% zhmakeindex -s ec.ist -z pinyin ec.idx 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\printindex</span><span style="color:#a6e22e">[th]</span> <span style="color:#75715e">% zhmakeindex -s th.ist -z pinyin th.idx 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\printindex</span><span style="color:#a6e22e">[bh]</span> <span style="color:#75715e">% texindy -M bh.xdy bh.idx
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\printindex</span><span style="color:#a6e22e">[cj]</span> <span style="color:#75715e">% texindy -M cj.xdy cj.idx 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\printindex</span><span style="color:#a6e22e">[yy]</span> <span style="color:#75715e">% zhmakeindex -s yy.ist -z bihua yy.idx
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\printindex</span><span style="color:#a6e22e">[gy]</span> <span style="color:#75715e">% zhmakeindex -s gy.ist -z bihua gy.idx 
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\end</span>{document}
+</code></pre></div><h2 id="editing-and-using-xdy-style-files">Editing and Using .xdy style files</h2>
+<p>Some indices need to generate with <a href="https://www.ctan.org/pkg/xindy?lang=en">texindy</a> and in some cases we should edit personal .xdy files. Below is an example of a .xdy file. <a href="https://www.ctan.org/pkg/xindy?lang=en">Here</a> can find more detailed information about the usage of texindy.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX">(markup-index :open  &#34;<span style="color:#66d9ef">\begin</span>{theindex} ~n
+ <span style="color:#66d9ef">\providecommand</span><span style="color:#66d9ef">*</span><span style="color:#66d9ef">\lettergroupDefault</span><span style="color:#a6e22e">[1]</span>{}
+ <span style="color:#66d9ef">\providecommand</span><span style="color:#66d9ef">*</span><span style="color:#66d9ef">\lettergroup</span><span style="color:#a6e22e">[1]</span>{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span> <span style="color:#66d9ef">\par</span>{<span style="color:#66d9ef">\color</span>{black}<span style="color:#66d9ef">\HGBM</span><span style="color:#66d9ef">\centering</span>~——{<span style="color:#66d9ef">\fontsizec</span>{1.2cm}<span style="color:#66d9ef">\ABCFONTU</span>{#1}}——}<span style="color:#66d9ef">\par</span><span style="color:#66d9ef">\vspace</span>{-0.5em}
+   <span style="color:#66d9ef">\nopagebreak</span>
+  }&#34;
+          :close &#34;~n~n<span style="color:#66d9ef">\end</span>{theindex}~n&#34;
+          :tree)
+;; The indexentries (item_&lt;..&gt; specifiers)
+(markup-indexentry :open &#34;~n  <span style="color:#66d9ef">\item</span> <span style="color:#66d9ef">\indexmark</span> &#34;           :depth 0)
+(markup-indexentry :open &#34;~n    <span style="color:#66d9ef">\linfont</span><span style="color:#66d9ef">\subitem</span> &#34;     :depth 1)
+(markup-indexentry :open &#34;~n      <span style="color:#66d9ef">\linfont</span><span style="color:#66d9ef">\subsubitem</span> &#34; :depth 2)
+;; Location-references
+;; delim_0 &lt;string&gt;         &#34;, &#34;
+;; delim_1 &lt;string&gt;         &#34;, &#34;
+;; delim_2 &lt;string&gt;         &#34;, &#34;
+(markup-locclass-list :open &#34;<span style="color:#66d9ef">\hfill</span><span style="color:#66d9ef">\linfont</span> &#34; :sep &#34;, &#34;)
+;; delim_n &lt;string&gt;         &#34;, &#34;
+(markup-locref-list   :sep &#34;, &#34;)
+;; delim_r &lt;string&gt;         &#34;-&#34;
+(markup-range :sep &#34;-&#34;)
+</code></pre></div><p>Then we can run texindy in terminal with this style file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">texindy -M cj.xdy cj.idx
+</code></pre></div><p>The output file will be like below:</p>
+<p><img src="https://ooo.0o0.ooo/2016/10/15/5802233c6c202.png" alt="xdy style output" /></p>
+<h2 id="editing-and-using-ist-style-files">Editing and Using .ist style files</h2>
+<p>For sorting Chinese characters in .idx file, we can run command zhmakeindex in terminal and in some cases we should edit personal .ist files. Below is an example of a .ist file. <a href="http://www.latexstudio.net/archives/6363">Here</a> can find more detailed information about the usage of zhmkeindex.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX">delim_0 &#34;<span style="color:#66d9ef">\\</span>hfill &#34;
+delim_1 &#34;<span style="color:#66d9ef">\\</span>hfill &#34;
+delim_r &#34;-&#34;
+headings_flag 1
+heading_prefix &#34;<span style="color:#66d9ef">\\</span>nopagebreak<span style="color:#66d9ef">\\</span>par<span style="color:#66d9ef">\n</span>{<span style="color:#66d9ef">\\</span>abcfontu<span style="color:#66d9ef">\\</span>fontsizec{1.1cm}<span style="color:#66d9ef">\\</span>centering——{&#34; heading_suffix &#34;}——}<span style="color:#66d9ef">\\</span>vspace*{0em}<span style="color:#66d9ef">\\</span>nopagebreak<span style="color:#66d9ef">\n</span>&#34;
+item_x1 &#34;} <span style="color:#66d9ef">\n</span>  <span style="color:#66d9ef">\\</span>linfont<span style="color:#66d9ef">\\</span>subitem &#34; <span style="color:#75715e">% Provide the right brace for level_0 items when they have no page number:
+</span><span style="color:#75715e"></span>item_0 &#34;<span style="color:#66d9ef">\n</span> <span style="color:#66d9ef">\\</span>ubufont<span style="color:#66d9ef">\\</span>centering<span style="color:#66d9ef">\\</span>item <span style="color:#66d9ef">\\</span>indexmark{&#34;<span style="color:#75715e">%added this with its usual default to mark it up
+</span></code></pre></div><p>Then run zhmakeindex in terminal with this style file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zhmakeindex -s gy.ist -z bihua gy.idx
+</code></pre></div><p>The output file will be like below:</p>
+<p><img src="https://ooo.0o0.ooo/2016/10/15/580225f78baf4.png" alt="ist style output" /></p>
+<h1 id="another-example-on-index-page-layout">Another Example on Index Page Layout</h1>
+<p>With LaTaX package <a href="https://www.ctan.org/pkg/titleps?lang=en">titleps</a> we can set \sectionmark to the index entry. Below is an example that index entries are marked to page header.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\indexmark</span>}[1]{<span style="color:#66d9ef">\sectionmark</span>{#1}#1}
+<span style="color:#66d9ef">\newpagestyle</span>{mipage}{ <span style="color:#75715e">%%index chapter
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">\setheadrule</span>{0.7pt}
+	<span style="color:#66d9ef">\sethead</span><span style="color:#a6e22e">[{\toptitlemarks\sectiontitle}---{\bottitlemarks\sectiontitle}]</span>
+                [<span style="color:#66d9ef">\linfontb</span><span style="color:#66d9ef">\thepage</span>]
+                [{<span style="color:#66d9ef">\profonta</span> Appendices—<span style="color:#66d9ef">\chaptertitle</span>}]<span style="color:#75715e">%even head
+</span><span style="color:#75715e"></span>	        {{<span style="color:#66d9ef">\profonta</span> Appendices—<span style="color:#66d9ef">\chaptertitle</span>}}
+                {<span style="color:#66d9ef">\linfontb</span><span style="color:#66d9ef">\thepage</span>}
+                {{<span style="color:#66d9ef">\toptitlemarks</span><span style="color:#66d9ef">\sectiontitle</span>}---{<span style="color:#66d9ef">\bottitlemarks</span><span style="color:#66d9ef">\sectiontitle</span>}}<span style="color:#75715e">%odd head
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">\setfoot</span><span style="color:#a6e22e">[]</span><span style="color:#a6e22e">[]</span><span style="color:#a6e22e">[]</span> <span style="color:#75715e">%even foot
+</span><span style="color:#75715e"></span>	        {}{}{} <span style="color:#75715e">%odd foot
+</span><span style="color:#75715e"></span>}
+</code></pre></div><p>Then add \indexmark to .ist file or .xdy file as above .ist or .xdy example. Finally the output file will be like below:</p>
+<p><img src="https://ooo.0o0.ooo/2016/10/15/58022a9ca574f.jpg" alt="indexmark style output" /></p>
+<div style="font-family:SYHei Bold;text-align:center">
+
+
+
+  
+
+<a  href="/Articles/"   class="book-btn">
+  &#9673;返回文選列表
+</a>
+</div>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, December 15, 2019, 00:48:05 by 李二狗.</p>
+</article>
+
+     
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+    </div>
+
+    
+  
+
+<aside class="book-toc level-4 fixed">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#installing-google-go-language">Installing Google Go Language</a></li>
+    <li><a href="#installing-golang-packages">Installing Golang Packages</a></li>
+    <li><a href="#installing-zhmakeindex">Installing Zhmakeindex</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#specific-package-commands">Specific Package Commands</a></li>
+    <li><a href="#editing-and-using-xdy-style-files">Editing and Using .xdy style files</a></li>
+    <li><a href="#editing-and-using-ist-style-files">Editing and Using .ist style files</a></li>
+  </ul>
+</nav>
+</aside>
+
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-83708465-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<div class="post-comment">
+      
+             
+      
+      
+      
+<div class="post bg-white">
+    <script src="https://utteranc.es/client.js"
+          repo="superfluous-man/superfluous-man.github.io"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+</div>
+
+</div>
+<a href="#top" class="backtop"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-up" class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z">
+    </path>
+</svg>
+
+</a>
+</body>
+</html>
