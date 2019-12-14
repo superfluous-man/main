@@ -247,7 +247,7 @@ $ zhmakeindex -s youistfile.ist -z bushou youridxfile.idx %%sorting index entrie
 </code></pre></div><p>Then we can run texindy in terminal with this style file:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">texindy -M cj.xdy cj.idx
 </code></pre></div><p>The output file will be like below:</p>
-<p><img src="https://ooo.0o0.ooo/2016/10/15/5802233c6c202.png" alt="xdy style output" /></p>
+<p><img src="https://ooo.0o0.ooo/2016/10/15/5802233c6c202.png" alt="xdy style output"></p>
 <h2 id="editing-and-using-ist-style-files">Editing and Using .ist style files</h2>
 <p>For sorting Chinese characters in .idx file, we can run command zhmakeindex in terminal and in some cases we should edit personal .ist files. Below is an example of a .ist file. <a href="http://www.latexstudio.net/archives/6363">Here</a> can find more detailed information about the usage of zhmkeindex.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX">delim_0 &#34;<span style="color:#66d9ef">\\</span>hfill &#34;
@@ -260,7 +260,7 @@ item_x1 &#34;} <span style="color:#66d9ef">\n</span>  <span style="color:#66d9ef
 </span></code></pre></div><p>Then run zhmakeindex in terminal with this style file:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">zhmakeindex -s gy.ist -z bihua gy.idx
 </code></pre></div><p>The output file will be like below:</p>
-<p><img src="https://ooo.0o0.ooo/2016/10/15/580225f78baf4.png" alt="ist style output" /></p>
+<p><img src="https://ooo.0o0.ooo/2016/10/15/580225f78baf4.png" alt="ist style output"></p>
 <h1 id="another-example-on-index-page-layout">Another Example on Index Page Layout</h1>
 <p>With LaTaX package <a href="https://www.ctan.org/pkg/titleps?lang=en">titleps</a> we can set \sectionmark to the index entry. Below is an example that index entries are marked to page header.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-LaTeX" data-lang="LaTeX"><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\indexmark</span>}[1]{<span style="color:#66d9ef">\sectionmark</span>{#1}#1}
@@ -276,7 +276,7 @@ item_x1 &#34;} <span style="color:#66d9ef">\n</span>  <span style="color:#66d9ef
 </span><span style="color:#75715e"></span>	        {}{}{} <span style="color:#75715e">%odd foot
 </span><span style="color:#75715e"></span>}
 </code></pre></div><p>Then add \indexmark to .ist file or .xdy file as above .ist or .xdy example. Finally the output file will be like below:</p>
-<p><img src="https://ooo.0o0.ooo/2016/10/15/58022a9ca574f.jpg" alt="indexmark style output" /></p>
+<p><img src="https://ooo.0o0.ooo/2016/10/15/58022a9ca574f.jpg" alt="indexmark style output"></p>
 <div style="font-family:SYHei Bold;text-align:center">
 
 
@@ -306,15 +306,23 @@ item_x1 &#34;} <span style="color:#66d9ef">\n</span>  <span style="color:#66d9ef
 <aside class="book-toc level-4 fixed">
 <nav id="TableOfContents">
   <ul>
-    <li><a href="#installing-google-go-language">Installing Google Go Language</a></li>
-    <li><a href="#installing-golang-packages">Installing Golang Packages</a></li>
-    <li><a href="#installing-zhmakeindex">Installing Zhmakeindex</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#specific-package-commands">Specific Package Commands</a></li>
-    <li><a href="#editing-and-using-xdy-style-files">Editing and Using .xdy style files</a></li>
-    <li><a href="#editing-and-using-ist-style-files">Editing and Using .ist style files</a></li>
+    <li><a href="#generating-latex-indices-separately">Gen­er­a­ting LaTeX Indices Separately</a></li>
+    <li><a href="#how-to-install-zhmakeindex-in-mainland-china">How to Install Zhmakeindex in Mainland China</a>
+      <ul>
+        <li><a href="#installing-google-go-language">Installing Google Go Language</a></li>
+        <li><a href="#installing-golang-packages">Installing Golang Packages</a></li>
+        <li><a href="#installing-zhmakeindex">Installing Zhmakeindex</a></li>
+      </ul>
+    </li>
+    <li><a href="#how-to-use-zhmakeindex">How to Use Zhmakeindex</a></li>
+    <li><a href="#the-layout-of-index-entries">The Layout of Index Entries</a>
+      <ul>
+        <li><a href="#specific-package-commands">Specific Package Commands</a></li>
+        <li><a href="#editing-and-using-xdy-style-files">Editing and Using .xdy style files</a></li>
+        <li><a href="#editing-and-using-ist-style-files">Editing and Using .ist style files</a></li>
+      </ul>
+    </li>
+    <li><a href="#another-example-on-index-page-layout">Another Example on Index Page Layout</a></li>
   </ul>
 </nav>
 </aside>
