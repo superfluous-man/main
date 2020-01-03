@@ -64,12 +64,12 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li><a href="/Articles/"><span class="wenxuan"></span> <font face="SYHei Bold">文選</font></a></li>
-<li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">藝術學概論</font></a></li>
 <li><a href="/Books/Movie/"><span class="tushu"></span> <font face="SYHei Bold">攝影與剪輯</font></a></li>
 <li><a href="/Books/XZX/"><span class="tushu"></span> <font face="SYHei Bold">基礎寫作學</font></a></li>
 <li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">中國文學史</font></a></li>
+<li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">藝術學概論</font></a></li>
 <li><a href="/Books/ZXS/"><span class="tushu"></span> <font face="SYHei Bold">中國哲學史</font></a></li>
-<li><a href="/Books/alinks/"><span class="lianjie"></span> <font face="SYHei Bold">鏈接</font></a></li>
+<li><a href="/Friends/"><span class="lianjie"></span> <font face="SYHei Bold">鏈接</font></a></li>
 </ul>
 
 
@@ -144,7 +144,7 @@ https://github.com/alex-shpak/hugo-book
 <p>爲了更好吸納西學現代科學，方便排版公式、符號、插圖等頁面元素，變「直書」爲「橫書」實乃大勢所趨。一百年來，經過時間與實踐檢驗，這個問題早已有了的明確答案。</p>
 <h1 id="xecjk-">XeCJK 直書設置</h1>
 <p>在 XeCJK 中直書需要旋轉 PDF，並且原橫排環境中的樣式皆需調整以適應直排版式。以下爲需要調整的若干樣式。</p>
-<h2 id="heading1">總設置</h2>
+<h2 id="heading-1">總設置</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#75715e">%文檔類型加入landscape選項
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[a4paper,12pt,openany,landscape]</span>{book}
 <span style="color:#75715e">%導入XeCJK Package
@@ -152,7 +152,7 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#75715e">%設定直排字體
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\setCJKmainfont</span><span style="color:#a6e22e">[Script=CJK,Vertical=RotatedGlyphs,RawFeature={vertical:+vert},BoldFont=H-SiuNiu-Bold,ItalicFont=HGBLight-H]</span>{I.MingCP}
 <span style="color:#66d9ef">\defaultCJKfontfeatures</span>{RawFeature={vertical:+vert}}
-</code></pre></div><h2 id="heading2">調正漢字基線</h2>
+</code></pre></div><h2 id="heading-2">調正漢字基線</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#75715e">%漢字基線調整適應中英文混排
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\let</span><span style="color:#66d9ef">\CJKsymbolOrig</span><span style="color:#66d9ef">\CJKsymbol</span>
 <span style="color:#66d9ef">\let</span><span style="color:#66d9ef">\CJKpunctsymbolOrig</span><span style="color:#66d9ef">\CJKpunctsymbol</span>
@@ -164,7 +164,7 @@ https://github.com/alex-shpak/hugo-book
 <span style="color:#75715e">%在\begin{document}後添加\CJKmove
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">\begin</span>{document}
 <span style="color:#66d9ef">\CJKmove</span>
-</code></pre></div><h2 id="heading3">目錄中的章節樣式</h2>
+</code></pre></div><h2 id="heading-3">目錄中的章節樣式</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Latex" data-lang="Latex"><span style="color:#66d9ef">\titlecontents</span>{chapter}[0em]{<span style="color:#66d9ef">\addvspace</span>{5pt}<span style="color:#66d9ef">\fontsizec</span>{0.7cm}<span style="color:#66d9ef">\it</span>}     <span style="color:#75715e">% for  Chinese table of contents
 </span><span style="color:#75715e"></span>{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thecontentslabel</span>}}~}
 {<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\Alphcircwcu</span>{21}}~<span style="color:#66d9ef">\thecontentslabel</span><span style="color:#66d9ef">\helfont</span>}{<span style="color:#66d9ef">\fontsizec</span>{0.7cm}<span style="color:#66d9ef">\color</span>{black}<span style="color:#66d9ef">\;</span><span style="color:#66d9ef">\titlerule</span><span style="color:#66d9ef">*</span><span style="color:#a6e22e">[.5pc]</span>{.}<span style="color:#66d9ef">\;</span><span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thecontentspage</span>}}
@@ -173,7 +173,7 @@ https://github.com/alex-shpak/hugo-book
 {第{<span style="color:#66d9ef">\thecontentslabel</span>}節~~~}
 {<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\Alphcircwcu</span>{21}}~<span style="color:#66d9ef">\thecontentslabel</span><span style="color:#66d9ef">\helfont</span>}{<span style="color:#66d9ef">\titlerule</span><span style="color:#66d9ef">*</span><span style="color:#a6e22e">[.5pc]</span>{.}<span style="color:#66d9ef">\;</span><span style="color:#66d9ef">\color</span>{black}<span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thecontentspage</span>}}
 </code></pre></div><p><a href="https://i.loli.net/2018/12/20/5c1b692106fe9.png"><img src="https://i.loli.net/2018/12/20/5c1b692106fe9.png" alt="目錄版式效果"></a></p>
-<h2 id="heading4">正文中的章節樣式</h2>
+<h2 id="heading-4">正文中的章節樣式</h2>
 <div style="font-family:SYHei Bold;text-align:center">
 
 
@@ -224,10 +224,10 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#heading">直排與現代排版需求</a></li>
     <li><a href="#xecjk-">XeCJK 直書設置</a>
       <ul>
-        <li><a href="#heading1">總設置</a></li>
-        <li><a href="#heading2">調正漢字基線</a></li>
-        <li><a href="#heading3">目錄中的章節樣式</a></li>
-        <li><a href="#heading4">正文中的章節樣式</a></li>
+        <li><a href="#heading-1">總設置</a></li>
+        <li><a href="#heading-2">調正漢字基線</a></li>
+        <li><a href="#heading-3">目錄中的章節樣式</a></li>
+        <li><a href="#heading-4">正文中的章節樣式</a></li>
       </ul>
     </li>
   </ul>

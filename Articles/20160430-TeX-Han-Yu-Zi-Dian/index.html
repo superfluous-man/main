@@ -63,12 +63,12 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li><a href="/Articles/"><span class="wenxuan"></span> <font face="SYHei Bold">文選</font></a></li>
-<li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">藝術學概論</font></a></li>
 <li><a href="/Books/Movie/"><span class="tushu"></span> <font face="SYHei Bold">攝影與剪輯</font></a></li>
 <li><a href="/Books/XZX/"><span class="tushu"></span> <font face="SYHei Bold">基礎寫作學</font></a></li>
 <li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">中國文學史</font></a></li>
+<li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">藝術學概論</font></a></li>
 <li><a href="/Books/ZXS/"><span class="tushu"></span> <font face="SYHei Bold">中國哲學史</font></a></li>
-<li><a href="/Books/alinks/"><span class="lianjie"></span> <font face="SYHei Bold">鏈接</font></a></li>
+<li><a href="/Friends/"><span class="lianjie"></span> <font face="SYHei Bold">鏈接</font></a></li>
 </ul>
 
 
@@ -131,7 +131,7 @@ https://github.com/alex-shpak/hugo-book
 <p>經過一系列「手工」運作，源碼設定樣式後，便只需按既定樣式往裏面填充文字內容。下圖是以「字」的解釋爲例的一頁，文字內容抄自<a href="https://book.douban.com/subject/3353364/">《漢語大詞典》</a>。</p>
 <h2 id="heading">一頁樣例</h2>
 <p><img src="https://i.loli.net/2018/04/24/5aded1aec2921.jpg" alt=""></p>
-<h2 id="heading1">頁面簡說</h2>
+<h2 id="heading-1">頁面簡說</h2>
 <blockquote>
 <ul>
 <li>字頭排序依據漢字「<a href="https://github.com/LEOYoon-Tsaw/Cangjie6">第六代倉頡碼</a>」，實現漢字<strong>檢字</strong>與<strong>輸入</strong>的統一。如漢字「寥」的倉頡碼是 <strong>JSSH</strong>（十尸尸的），它排在「字」（倉頡碼爲 <strong>JND</strong>（十弓木））之後，爲英文字典序。</li>
@@ -142,9 +142,9 @@ https://github.com/alex-shpak/hugo-book
 </ul>
 </blockquote>
 <h1 id="dic-entry-style">Dic Entry Style</h1>
-<h2 id="heading2">字頭樣例</h2>
+<h2 id="heading-2">字頭樣例</h2>
 <p><img src="https://i.loli.net/2018/04/24/5aded1aeccf13.png" alt=""></p>
-<h2 id="heading3">字頭信息簡說</h2>
+<h2 id="heading-3">字頭信息簡說</h2>
 <blockquote>
 <ul>
 <li>字頭左上角總筆畫（stroke）信息，可製作全書總畫檢索。難點卻在總畫之確定，涉及新舊字形筆畫不一，<z>中</z><zr>日</zr><z>韓</z><zr>臺</zr><z>港</z>「標準」各有差異，莫衷一是，字典正文極少使用總畫爲漢字排序依據。</li>
@@ -158,7 +158,7 @@ https://github.com/alex-shpak/hugo-book
 <li>本模板標記<z>粵</z>音純粹爲試驗，又因在<z>粵</z>斷斷續續寫完這個模板。<z>粵</z>拼似乎也存在好幾種方案，市面上的<a href="http://humanum.arts.cuhk.edu.hk/Lexis/lexi-can/"><z>粵</z>音辭書</a>使用的<z>粵</z>拼方案也不一致。不過標記此信息，可以製作國<z>粵</z>讀音對照表與索引。同理<z>粵</z>音換成字頭的上古音、中古音、客家話讀音、<z>吳</z>語讀音都可以，同理也可以製作國語<z>吳</z>語讀音對照之類的索引。</li>
 </ul>
 </blockquote>
-<h2 id="heading4">字頭源碼</h2>
+<h2 id="heading-4">字頭源碼</h2>
 
 
 
@@ -199,7 +199,7 @@ https://github.com/alex-shpak/hugo-book
   </div>
 </figure>
 
-<h2 id="heading5">編寫示例</h2>
+<h2 id="heading-5">編寫示例</h2>
 
 
 
@@ -253,10 +253,10 @@ https://github.com/alex-shpak/hugo-book
 </figure>
 
 <h1 id="dic-index-style">Dic Index Style</h1>
-<h2 id="heading6">索引程序</h2>
+<h2 id="heading-6">索引程序</h2>
 <p>對讀者而言，無論辭書或一般圖書，索引都是極其實用的工具。索引能讓讀者知曉某一字、概念、人物、地名之類在全書的哪些地方、哪些主題之下出現過。</p>
 <p>本模板自去年暑假開始折騰出草稿樣式，遲遲未能解決漢字索引項的排序問題，字母或數字排序則沒什麼難點。漢字 index entry 的順序，必須有一定依據，好在有了 <a href="https://github.com/leo-liu/zhmakeindex">zhmakeindex</a> 工具，使得索引漢字可選「拼音」、「總畫」、「部首」三種方式排序，極便於查檢。索引製作詳參<a href="https://mengxianjun.org/2016/10/15/zhmakeindex/">這篇博文</a>。<del>下圖便是按照漢語拼音方案排序的索引項：</del></p>
-<h2 id="heading7">索引簡說</h2>
+<h2 id="heading-7">索引簡說</h2>
 <blockquote>
 <ul>
 <li><strong>英漢索引</strong>（English-Chinese Index）。釋義時可附帶釋以英文（其他語文索引同理），以生成「極其簡易」的英漢辭典。</li>
@@ -304,21 +304,21 @@ https://github.com/alex-shpak/hugo-book
     <li><a href="#dic-page-style">Dic Page Style</a>
       <ul>
         <li><a href="#heading">一頁樣例</a></li>
-        <li><a href="#heading1">頁面簡說</a></li>
+        <li><a href="#heading-1">頁面簡說</a></li>
       </ul>
     </li>
     <li><a href="#dic-entry-style">Dic Entry Style</a>
       <ul>
-        <li><a href="#heading2">字頭樣例</a></li>
-        <li><a href="#heading3">字頭信息簡說</a></li>
-        <li><a href="#heading4">字頭源碼</a></li>
-        <li><a href="#heading5">編寫示例</a></li>
+        <li><a href="#heading-2">字頭樣例</a></li>
+        <li><a href="#heading-3">字頭信息簡說</a></li>
+        <li><a href="#heading-4">字頭源碼</a></li>
+        <li><a href="#heading-5">編寫示例</a></li>
       </ul>
     </li>
     <li><a href="#dic-index-style">Dic Index Style</a>
       <ul>
-        <li><a href="#heading6">索引程序</a></li>
-        <li><a href="#heading7">索引簡說</a></li>
+        <li><a href="#heading-6">索引程序</a></li>
+        <li><a href="#heading-7">索引簡說</a></li>
       </ul>
     </li>
     <li><a href="#conclusion">Conclusion</a></li>

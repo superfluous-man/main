@@ -63,12 +63,12 @@ https://github.com/alex-shpak/hugo-book
 
 <ul>
 <li><a href="/Articles/"><span class="wenxuan"></span> <font face="SYHei Bold">文選</font></a></li>
-<li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">藝術學概論</font></a></li>
 <li><a href="/Books/Movie/"><span class="tushu"></span> <font face="SYHei Bold">攝影與剪輯</font></a></li>
 <li><a href="/Books/XZX/"><span class="tushu"></span> <font face="SYHei Bold">基礎寫作學</font></a></li>
 <li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">中國文學史</font></a></li>
+<li><a href="/Books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">藝術學概論</font></a></li>
 <li><a href="/Books/ZXS/"><span class="tushu"></span> <font face="SYHei Bold">中國哲學史</font></a></li>
-<li><a href="/Books/alinks/"><span class="lianjie"></span> <font face="SYHei Bold">鏈接</font></a></li>
+<li><a href="/Friends/"><span class="lianjie"></span> <font face="SYHei Bold">鏈接</font></a></li>
 </ul>
 
 
@@ -130,7 +130,7 @@ $$</p>
 $$</p>
 <h1 id="heading">測試結論</h1>
 <p>簡單測試，發覺 MathJax 貌似勉強可滿足公式輸入需求。複雜些的需求，還得乖乖回到 $\LaTeX$ Book 或 Beamer 本身。電工王師傅畢竟只是電工而已，有高級職稱也沒啥用呢，各人幹各人擅長之事吧。</p>
-<h1 id="heading1">定積分的定義</h1>
+<h1 id="heading-1">定積分的定義</h1>
 <p>……從上面所舉的這些例子來考察，儘管問題來自不同的領域，但解決它們的方法卻完全一樣，卽歸結到計算一個特殊構造的極限</p>
 <p>$$\lim\limits_{\lambda \to 0} \sum_{i=1}^{n} f(\xi_{i})(x_{i}-x_{i-1})~~~~(\xi_{i} \in [x_{i-1},x_{i}])$$</p>
 <p>以後我們還會看到，不僅求曲邊梯形的面積、變力所做的功、變速運動的路程等問題，都可歸結到這樣一個極限，還有很廣泛的一類實際問題的求解最後也歸結到計算這樣一個極限。爲此，有必要將它們的共同特點抽象出來，闡明概念，進行深入的討論。</p>
@@ -166,7 +166,7 @@ $$</p>
 <p>事實上，由不等式 $-|f(x)|\leqslant f(x) \leqslant |f(x)|$, 得到</p>
 <p>$$-\int_{a}^{b}|f(x)|,\mathrm{d}x \leqslant \int_{a}^{b}f(x),\mathrm{d}x \leqslant\int_{a}^{b}|f(x)|,\mathrm{d}x$$</p>
 <p>此即 $| \int_{a}^{b}f(x),\mathrm{d}x | \leqslant \int_{a}^{b}|f(x)|,\mathrm{d}x.$ 這個性質和不等式 $|a+b|\leqslant |a|+|b|$ 相當，也可以從定積分定義直接證明。</p>
-<h1 id="heading2">積分中值定理</h1>
+<h1 id="heading-2">積分中值定理</h1>
 <p>$6^{\circ}$ 對區間 $[a,b]$ 上的任一連續函數 $f(x)$，在 $[a,b]$ 上一定有一點 $\xi$ 使得</p>
 <p>$$\int_{a}^{b}f(x),\mathrm{d}x=f(\xi)(b-a).$$</p>
 <p>事實上，若 $m,M$ 分別爲 $f(x)$ 在 $[a,b]$ 上的最小值和最大值，則 $m \leqslant f(x) \leqslant M (x \in [a,b])$ 由性質 4 得 $m(b-a) \leqslant \int_{a}^{b}f(x),\mathrm{d}x \leqslant M(b-a),$ 即</p>
@@ -228,8 +228,8 @@ MathJax.Hub.Config({
 <nav id="TableOfContents">
   <ul>
     <li><a href="#heading">測試結論</a></li>
-    <li><a href="#heading1">定積分的定義</a></li>
-    <li><a href="#heading2">積分中值定理</a></li>
+    <li><a href="#heading-1">定積分的定義</a></li>
+    <li><a href="#heading-2">積分中值定理</a></li>
   </ul>
 </nav>
 </aside>
