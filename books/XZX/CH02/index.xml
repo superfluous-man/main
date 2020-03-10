@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>第 02 章 運鏡與三角形原理 on 桃林筆記</title>
+    <link>https://mengxianjun.org/books/XZX/CH02/</link>
+    <description>Recent content in 第 02 章 運鏡與三角形原理 on 桃林筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sun, 06 Oct 2019 18:33:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://mengxianjun.org/books/XZX/CH02/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>第 1 節</title>
+      <link>https://mengxianjun.org/books/XZX/CH02/sec01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxianjun.org/books/XZX/CH02/sec01/</guid>
+      <description>測試章節</description>
+    </item>
+    
+    <item>
+      <title>第 2 節</title>
+      <link>https://mengxianjun.org/books/XZX/CH02/sec02/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxianjun.org/books/XZX/CH02/sec02/</guid>
+      <description>測試章節</description>
+    </item>
+    
+    <item>
+      <title>第 3 節</title>
+      <link>https://mengxianjun.org/books/XZX/CH02/sec03/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mengxianjun.org/books/XZX/CH02/sec03/</guid>
+      <description>測試章節</description>
+    </item>
+    
+  </channel>
+</rss>

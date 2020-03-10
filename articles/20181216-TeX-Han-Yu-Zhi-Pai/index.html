@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>基於 XeLaTeX 的中文直書方案 | 桃林筆記</title>
+
+
+<link rel="stylesheet" href="/book.min.b2ad8092fd35f18f4c80d54b168b441a59a99d2280fb31f8df1492002c036ab5.css" integrity="sha256-sq2Akv018Y9MgNVLFotEGlmpnSKA&#43;zH43xSSACwDarU=">
+
+
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  <span id="top"></span>
+ <script>
+    (function(){
+        if(''){
+            if (prompt('請輸入本文密碼') !== ''){
+                alert('密碼錯誤！');
+                history.back();
+            }
+        }
+    })();
+</script>
+</head>
+<body>
+  <input type="checkbox" class="hidden" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<p style="font-family:SYHei Heavy;text-align:center" class="book-brand">
+  <a href="https://mengxianjun.org/"><img src="https://i.loli.net/2019/10/13/NemCId6lUzVWR92.png" alt="" style="width:217px;height:79px;"/></a>
+</p>
+
+<div class="book-search">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" role="search">
+            <div class="input-group">
+                <input type="search" name="q" class="form-control" placeholder="Google This Site">
+                <input type="hidden" name="sitesearch" value="https://mengxianjun.org/">
+            </div>
+        </form>
+</div>
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f articles\2f 20181216-TeX-Han-Yu-Zhi-Pai\2f "] {
+      color: #004ed0;
+  }
+  </style>
+
+<ul>
+<li>
+  <a href="/articles/"><span class="wenxuan"></span> <font face="SYHei Bold">文選</font></a>
+</li>
+<li>
+  <a href="/books/Movie/"><span class="tushu"></span> <font face="SYHei Bold">攝影與剪輯</font></a>
+</li>
+<li>
+  <a href="/books/XZX/"><span class="tushu"></span> <font face="SYHei Bold">基礎寫作學</font></a>
+</li>
+<li>
+  <a href="/books/WXS/"><span class="tushu"></span> <font face="SYHei Bold">中國文學史</font></a>
+</li>
+<li>
+  <a href="/books/Art/"><span class="tushu"></span> <font face="SYHei Bold">藝術學概論</font></a>
+</li>
+<li>
+  <a href="/books/ZXS/"><span class="tushu"></span> <font face="SYHei Bold">中國哲學史</font></a>
+</li>
+<li>
+  <a href="/friends/"><span class="lianjie"></span> <font face="SYHei Bold">鏈接</font></a>
+</li>
+</ul>
+
+
+
+
+
+
+
+</nav>
+
+
+<script>
+(function() {
+  var menu = document.querySelector("aside.book-menu nav");
+  addEventListener("beforeunload", function(event) {
+    localStorage.setItem("menu.scrollTop", menu.scrollTop);
+  });
+  menu.scrollTop = localStorage.getItem("menu.scrollTop");
+})();
+</script>
+
+    </aside>
+
+    <div class="book-page">
+      <header class="flex align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>基於 XeLaTeX 的中文直書方案</strong>
+</header>
+
+      
+<header class="markdown">
+<a href="https://mengxianjun.org/"><img class="circular--portrait" src="https://mengxianjun.org/img/gaosongnian.jpeg" alt="Author" /></a>
+    <p class="listpagetitle">
+      基於 XeLaTeX 的中文直書方案
+    </p>
+<p style="font-family:SYHei Medium;text-align:left"><span class="zuozhe"></span>李二狗 <a href="https://mengxianjun.org/"><span class="zuozheat"></span>三閭大學高松年紀念館館長</a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="riqi"></span>&nbsp;Sunday, December 16, 2018 18:03&nbsp;&nbsp;&nbsp;&nbsp;<span class="zishu"></span>&nbsp;3397&nbsp;&nbsp;&nbsp;&nbsp;<span class="yuedushichang"></span>&nbsp;7 min&nbsp;&nbsp;&nbsp;&nbsp;<span class="yueduliang"></span>&nbsp;<span id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv"></span></span></p>
+</header>
+<article class="markdown"><div style="font-family:SYHei Bold;text-align:center">
+
+
+
+  
+
+<a  href="/articles/"   class="book-btn">
+  &#9673;返回文選列表
+</a>
+</div>
+<p>半個世紀以來，「橫排」逐漸成爲出版物排版的主流。十年前，境內還能偶爾看到一些出版社以「直排」方式出版一些古籍圖書。目下，僅有境外幾家出版社偶爾還以「直排」方式出版一些文史讀物。前幾日瀏覽素材，看到過去十年間網絡上零零散散的基於 LaTeX 的中文直排方案，逐一分析下來，發覺大都需要完善需求、更新源碼。自己久不讀書，讀「直排」書的機會就更少了。近來因飲酒吹風而感冒閉門，趁着這般光景，嘗試整理出一份基於 XeLaTeX 與 XeCJK 的中文直書方案。</p>
+<h1 id="直排與現代排版需求">直排與現代排版需求</h1>
+<p>爲了更好吸納西學現代科學，方便排版公式、符號、插圖等頁面元素，變「直書」爲「橫書」實乃大勢所趨。一百年來，經過時間與實踐檢驗，這個問題早已有了的明確答案。</p>
+<div class="notices warning"><p>本文並不爭論漢字「直書」與「橫書」之間的優劣問題。</p></div>
+<p>大多數傳統直排古籍出版物並無繁複的章節目錄、插圖、註釋、頁眉頁腳、索引項目、文獻徵引等現代排版需求（或者即使有，迫於當時的排版手段，難以實現，便放棄了）。現在，我們開歷史的倒車，以「直書」方式排版一些出版物，便不可避免地要回應以上現代排版需求。</p>
+<blockquote>
+<ul>
+<li>**章節目錄信息：**傳統直排書籍皆可滿足此類需求，但詳細的目錄排版顯得較爲吃力，可從若干直排書籍的目錄處理感知到這一問題（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的目錄排版）。</li>
+<li>**頁眉頁腳信息：**這個需求的處理並不複雜，傳統直排書籍亦大都能簡單呈現，但大都只顯示到卷（編）目，個別圖書可以顯示到章目層次，對更深層次的節、子節信息則難以呈現（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的頁眉頁腳信息排版）。</li>
+<li>**章節註釋信息：**鑑於直排頁面的特徵，橫排頁面的腳註方式並不適宜用於直排頁面（只能放一些簡短的註釋，如《十三經注疏》整理本系列之
+  <a href="https://books.google.co.jp/books?id=fqtZwx51nd8C&amp;pg=PA120&amp;lpg=PA120&amp;dq=%E5%89%B2%E8%A8%BB&amp;source=bl&amp;ots=f1UXtSWvZK&amp;sig=0SGsw_iwpe13W6rtTxVC1AXbEaA&amp;hl=zh-CN&amp;sa=X&amp;ved=2ahUKEwipq7Kexa3fAhWbHXAKHeoZAMAQ6AEwCHoECAAQAQ#v=onepage&amp;q=%E5%89%B2%E8%A8%BB&amp;f=false">《儀禮注疏》</a>
+第一〇二七頁的腳註），宜變腳註爲夾註（割註）或章節末註（如民 70 年<z>聯經出版事業公司</z>印行<z>劉若愚</z>所著
+  <a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>
+一書，原註與譯註皆排在章節之後）。</li>
+<li>**索引項目信息：**傳統直排書籍附帶索引的不多，即便製作了索引，排版起來亦頗顯繁瑣（如
+  <a href="http://ap6.pccu.edu.tw/dictionary/index.asp">《中文大辭典》</a>
+附錄所示，不難推測其附錄製作、排版工程之浩大）；有些直排的學術著作，如<z>劉若愚</z>
+  <a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>
+一書的索引部分則乾脆改爲橫排版。</li>
+<li>**文獻徵引信息：**現代圖書常常附有翔實的 Bibliography 信息，對圖書正文參考、引用的各類文獻予以呈現，這是當代直排方案不可回避的需求；有些直排的學術著作，如<z>劉若愚</z>
+  <a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>
+一書的參考文獻部分則直接改爲橫排版。</li>
+<li>**正文插圖與中英文混排信息：**雖然一些直排的日文漢和辭典或國語辭典也能大量處理插圖與拉丁字母，但這方面總歸是直排方式的欠缺之處，若有大量拉丁文字的篇幅或大量的插圖，則全書不宜直排；如<z>劉若愚</z>
+  <a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>
+一書正文穿插大量的英文引文，與直排的漢文排在一起，除了可以協助治療讀者的頸椎病，版式讀起來並不友好，所以此後的版本大都改爲橫排版。</li>
+</ul>
+</blockquote>
+<h1 id="xecjk-直書設置">XeCJK 直書設置</h1>
+<p>在 XeCJK 中直書需要旋轉 PDF，並且原橫排環境中的樣式皆需調整以適應直排版式。以下爲需要調整的若干樣式。</p>
+<h2 id="總設置">總設置</h2>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ TeX 漢文直排總設定 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%文檔類型加入landscape選項
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\documentclass</span><span style="color:#a6e22e">[a4paper,12pt,openany,landscape]</span>{book}
+<span style="color:#75715e">%導入XeCJK Package
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[CJKchecksingle,AutoFallBack=true]</span>{xeCJK}
+<span style="color:#75715e">%設定直排字體
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\setCJKmainfont</span><span style="color:#a6e22e">[Script=CJK,Vertical=RotatedGlyphs,RawFeature={vertical:+vert},BoldFont=H-SiuNiu-Bold,ItalicFont=HGBLight-H]</span>{I.MingCP}
+<span style="color:#66d9ef">\defaultCJKfontfeatures</span>{RawFeature={vertical:+vert}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<h2 id="調正漢字基線">調正漢字基線</h2>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 調整漢字基線 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%漢字基線調整適應中英文混排
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\let\CJKsymbolOrig\CJKsymbol</span>
+<span style="color:#66d9ef">\let\CJKpunctsymbolOrig\CJKpunctsymbol</span>
+<span style="color:#66d9ef">\newcommand*\CJKmovesymbol</span><span style="color:#a6e22e">[1]</span>{<span style="color:#66d9ef">\raise</span>.35em<span style="color:#66d9ef">\hbox</span>{<span style="color:#66d9ef">\CJKsymbolOrig</span>{#1}}}
+<span style="color:#66d9ef">\newcommand*\CJKmovepunctsymbol</span><span style="color:#a6e22e">[1]</span>{<span style="color:#66d9ef">\raise</span>.35em<span style="color:#66d9ef">\hbox</span>{<span style="color:#66d9ef">\CJKpunctsymbolOrig</span>{#1}}}
+<span style="color:#66d9ef">\newcommand*\CJKmove</span>{<span style="color:#66d9ef">\punctstyle</span>{plain}
+	<span style="color:#66d9ef">\let\CJKsymbol\CJKmovesymbol</span>
+	<span style="color:#66d9ef">\let\CJKpunctsymbol\CJKmovepunctsymbol</span>}	
+<span style="color:#75715e">%在\begin{document}後添加\CJKmove
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\begin</span>{document}
+<span style="color:#66d9ef">\CJKmove</span></code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<h2 id="目錄中的章節樣式">目錄中的章節樣式</h2>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 直排版式中的目錄 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\titlecontents</span>{chapter}[0em]{<span style="color:#66d9ef">\addvspace</span>{5pt}<span style="color:#66d9ef">\fontsizec</span>{0.7cm}<span style="color:#66d9ef">\it</span>}     <span style="color:#75715e">% for  Chinese table of contents
+</span><span style="color:#75715e"></span>{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thecontentslabel</span>}}~}
+{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\Alphcircwcu</span>{21}}~<span style="color:#66d9ef">\thecontentslabel\helfont</span>}{<span style="color:#66d9ef">\fontsizec</span>{0.7cm}<span style="color:#66d9ef">\color</span>{black}<span style="color:#66d9ef">\;\titlerule*</span><span style="color:#a6e22e">[.5pc]</span>{.}<span style="color:#66d9ef">\;\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thecontentspage</span>}}
+
+<span style="color:#66d9ef">\titlecontents</span>{section}[0cm]{<span style="color:#66d9ef">\it</span>}
+{第{<span style="color:#66d9ef">\thecontentslabel</span>}節~~~}
+{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\Alphcircwcu</span>{21}}~<span style="color:#66d9ef">\thecontentslabel\helfont</span>}{<span style="color:#66d9ef">\titlerule*</span><span style="color:#a6e22e">[.5pc]</span>{.}<span style="color:#66d9ef">\;\color</span>{black}<span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thecontentspage</span>}}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<p>
+  <a href="https://i.loli.net/2018/12/20/5c1b692106fe9.png">
+  <img src="https://i.loli.net/2018/12/20/5c1b692106fe9.png" alt="目錄版式效果" />
+</a>
+</p>
+<h2 id="正文中的章節樣式">正文中的章節樣式</h2>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 正文中的章節樣式 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%%竖排章样式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\assignpagestyle</span>{<span style="color:#66d9ef">\chapter</span>}{empty}<span style="color:#75715e">%去掉章页面页码
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\assignpagestyle</span>{<span style="color:#66d9ef">\chapter*</span>}{empty}<span style="color:#75715e">%去掉章页面页码
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mychapter</span>}[1]{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\HGBM\fontsize</span>{37}{37}第~<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[x=0.715cm,origin=c]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thechapter</span>}}~章{{<span style="color:#66d9ef">\ZSKS</span>·}#1}
+}
+<span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mychapterun</span>}[1]{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\fontsize</span>{37}{37}<span style="color:#66d9ef">\ding</span>{109}~<span style="color:#66d9ef">\akzfont\HGBM</span> #1
+}
+<span style="color:#66d9ef">\titleformat</span>{<span style="color:#66d9ef">\chapter</span>}{}{}{0em}{<span style="color:#66d9ef">\mychapter</span>}<span style="color:#75715e">% code preceding the title body  (title body is taken as argument)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\titleformat</span>{name=<span style="color:#66d9ef">\chapter</span>,numberless}{}{}{0pt}{<span style="color:#66d9ef">\mychapterun</span>}
+<span style="color:#66d9ef">\titlespacing</span>{<span style="color:#66d9ef">\chapter</span>}
+{0pt}{0pt}{36pt}
+<span style="color:#75715e">%%竖排節样式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mysection</span>}[1]{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\MLan</span> <span style="color:#66d9ef">\fontsize</span>{21}{21}第~{<span style="color:#66d9ef">\thesection</span>}~節~~~~ #1
+}
+<span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mysectionun</span>}[1]{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">\color</span>{myred}<span style="color:#66d9ef">\fontsize</span>{21}{21}<span style="color:#66d9ef">\ding</span>{109}~<span style="color:#66d9ef">\akzfont\MLan</span> #1
+}
+<span style="color:#66d9ef">\titleformat</span>{<span style="color:#66d9ef">\section</span>}{}{}{0mm}{<span style="color:#66d9ef">\mysection</span>}
+<span style="color:#66d9ef">\titleformat</span>{name=<span style="color:#66d9ef">\section</span>,numberless}{}{}{0pt}{<span style="color:#66d9ef">\mysectionun</span>}
+<span style="color:#66d9ef">\titlespacing</span>{<span style="color:#66d9ef">\section</span>}
+{0pt}{12pt}{6pt}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<p>
+  <img src="https://i.loli.net/2018/12/20/5c1b678d460d3.png" alt="正文章節標題樣式" />
+</p>
+<h2 id="插圖樣式設定">插圖樣式設定</h2>
+<p>直排時，插圖不易調整，尤其是插圖的標題樣式。本文方案暫且處理如下。</p>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 直排版式中的插圖 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\usepackage</span>{wrapfig}
+<span style="color:#66d9ef">\usepackage</span>{caption}
+<span style="color:#66d9ef">\captionsetup</span><span style="color:#a6e22e">[wrapfigure]</span>{font=small,labelfont=bf,textfont=it,aboveskip=6pt,belowskip=-1.02em,justification=raggedright,name={Fig.}}<span style="color:#75715e">%,labelsep=period
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\mafig</span>}[2]{
+	<span style="color:#66d9ef">\begin</span>{wrapfigure}{O}[0pt]{0.2<span style="color:#66d9ef">\textwidth</span>}<span style="color:#75715e">%[10]
+</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">\vspace</span>{-6pt}
+	{<span style="color:#66d9ef">\tcbincludegraphics</span><span style="color:#a6e22e">[size=fbox,colframe=myred!50!black,colback=red!60!black,center title,drop fuzzy shadow,colback=myred,boxsep=3pt,arc=0pt,graphics options={scale=.5,angle=-270},title={\large\HGBR\helfont #2}]</span>{#1}}
+		<span style="color:#66d9ef">\vspace</span>{-6pt}
+<span style="color:#66d9ef">\end</span>{wrapfigure}
+}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<h2 id="參考文獻設定">參考文獻設定</h2>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 直排版式中的參考文獻 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%採用gb7714-2015格式
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[backend = biber,bibstyle = gb7714-2015,citestyle=gb7714-2015ay,natbib=true,mcite=true,sorting=nyt,sortcites=true,autopunct=true,hyperref=true,abbreviate=false,backref=true]</span>{biblatex}<span style="color:#75715e">%國標2015文獻引用格式 %bibstyle = gb7714-2015,citestyle=gb7714-2015ay,bibstyle=alphabetic,%=gb7714-2015ay为（作者年份页码）样式引用
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\addbibresource</span>{bibliography.bib} <span style="color:#75715e">% BibTeX bibliography file bibliography.bib
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\defbibheading</span>{bibempty}{}
+<span style="color:#66d9ef">\DefineBibliographyStrings</span>{english}{<span style="color:#75715e">%
+</span><span style="color:#75715e"></span>	backrefpage = {引用頁：},
+	backrefpages= {引用頁：},
+}
+
+<span style="color:#75715e">%正文行文示例
+</span><span style="color:#75715e"></span>……<span style="color:#66d9ef">\cite</span><span style="color:#a6e22e">[P178]</span>{adornoRethinkingArchitectureReader1997}。
+<span style="color:#66d9ef">\textcite</span><span style="color:#a6e22e">[P352]</span>{haidegeerHeErDeLinShiDeChanShi2000}認爲……
+
+<span style="color:#75715e">%正文列印參考文獻
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\printbibliography</span><span style="color:#a6e22e">[heading=bibempty]</span></code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<p>
+  <img src="https://i.loli.net/2018/12/20/5c1b688b4f3c5.png" alt="參考文獻直排樣式" />
+</p>
+<h2 id="割註樣式設置">割註樣式設置</h2>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 直排版式中的割註 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#75715e">%%%gezhu environment
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\usepackage</span>{zhulem}
+<span style="color:#66d9ef">\usepackage</span>{gezhu}
+<span style="color:#66d9ef">\setgezhuraise</span>{-3.5pt}
+<span style="color:#66d9ef">\setgezhulines</span>{2}
+<span style="color:#66d9ef">\everygezhu</span>{<span style="color:#66d9ef">\linespread</span>{1.2}<span style="color:#66d9ef">\fontsize</span>{9}{9}<span style="color:#66d9ef">\HMOP\selectfont</span>}
+<span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\gz</span>}[1]{{<span style="color:#66d9ef">\gezhu</span>{#1}}}
+<span style="color:#960050;background-color:#1e0010">%</span><span style="color:#66d9ef">\newcommand</span>{<span style="color:#66d9ef">\gz</span>}[1]{<span style="color:#66d9ef">\disablepinyin\gezhu</span>{<span style="color:#66d9ef">\HMOP</span> #1}<span style="color:#66d9ef">\enablepinyin</span>}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<p>
+  <a href="https://i.loli.net/2018/12/20/5c1b6a9f161e3.png">
+  <img src="https://i.loli.net/2018/12/20/5c1b6a9f161e3.png" alt="行間夾批樣式效果" />
+</a>
+</p>
+<h2 id="頁眉頁腳樣式">頁眉頁腳樣式</h2>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 頁眉頁腳樣式源碼 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\usepackage</span>{titleps} <span style="color:#75715e">%詳細參見說明文檔
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">\newpagestyle</span>{mapage}{<span style="color:#75715e">%   %numbered chapter
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">\sethead</span><span style="color:#a6e22e">[\MLan\color{myred}\bottitlemarks{第{\thesection}節}~~~\sectiontitle]</span>
+	 []
+	 [{<span style="color:#66d9ef">\MLan\color</span>{myred}<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[x=0.225cm,origin=c]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thechapter</span>}}~<span style="color:#66d9ef">\chaptertitle</span>《~<span style="color:#66d9ef">\parttitle</span> 編《~<span style="color:#66d9ef">\thebooktitle</span>《~第{<span style="color:#66d9ef">\HGBM\color</span>{black}<span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thepage</span>}}頁}] <span style="color:#75715e">%even head
+</span><span style="color:#75715e"></span>	 {}
+	 {}
+	 {} <span style="color:#75715e">%odd head
+</span><span style="color:#75715e"></span>	 <span style="color:#66d9ef">\setfoot</span><span style="color:#a6e22e">[]</span>
+	 []
+	 [] <span style="color:#75715e">%even foot
+</span><span style="color:#75715e"></span>	 {<span style="color:#66d9ef">\MLan\color</span>{myred}<span style="color:#66d9ef">\bottitlemarks</span>{第{<span style="color:#66d9ef">\thesection</span>}節}~~~<span style="color:#66d9ef">\sectiontitle</span>}
+	 {}
+	 {{<span style="color:#66d9ef">\MLan\color</span>{myred}<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[x=0.225cm,origin=c]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{<span style="color:#66d9ef">\thechapter</span>}}~<span style="color:#66d9ef">\chaptertitle</span>《~<span style="color:#66d9ef">\parttitle</span> 編《~<span style="color:#66d9ef">\thebooktitle</span>《~第{<span style="color:#66d9ef">\HGBM\color</span>{black}<span style="color:#66d9ef">\zhnumsetup</span>{style={Traditional,Financial}}<span style="color:#66d9ef">\zhdigits</span>{<span style="color:#66d9ef">\thepage</span>}}頁}} <span style="color:#75715e">%odd foot
+</span><span style="color:#75715e"></span>				}
+	<span style="color:#66d9ef">\settitlemarks</span>{part,chapter,section,subsection,subsubsection}</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<p>
+  <a href="https://i.loli.net/2018/12/20/5c1b6b2b43a2f.png">
+  <img src="https://i.loli.net/2018/12/20/5c1b6b2b43a2f.png" alt="頁眉頁腳直排樣式" />
+</a>
+</p>
+<h2 id="章節尾註樣式">章節尾註樣式</h2>
+
+
+
+
+<figure class="code">
+  <figcaption>
+  	<span>☀ 章節尾註設定 ☀</span>
+  </figcaption>
+  <div class="codewrapper">
+    <div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-latex" data-lang="latex"><span style="color:#66d9ef">\usepackage</span><span style="color:#a6e22e">[page]</span>{pagenote}<span style="color:#75715e">%[page] Because of how TeX writes information to files, when the page option is used there must be no notes on the page where \printnotes or \printnotes* closes the ent file. If necessary, a \clearpage or similar must be used before the \print （標記注釋所在頁碼必須讓printnotes另起一頁，否則可能吃掉與\printnotes同頁的注釋^_^）
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">% 正文中的注释编号样式调整：圓圈數字
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\renewcommand\notenumintext</span><span style="color:#a6e22e">[1]</span>{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\textsuperscript</span>{<span style="color:#66d9ef">\footnotesize\ncircrds</span>{#1}}}}
+<span style="color:#75715e">% 章节末尾的注释编号样式调整：方形黑底數字
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\renewcommand\notenuminnotes</span><span style="color:#a6e22e">[1]</span>{<span style="color:#66d9ef">\rotatebox</span><span style="color:#a6e22e">[origin=cc]</span>{-270}{<span style="color:#66d9ef">\ncircbs</span>{#1}}}
+<span style="color:#75715e">%尾註標記該註釋在正文出現的頁碼
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">\renewcommand</span>{<span style="color:#66d9ef">\pagename</span>}{{P.}}
+
+<span style="color:#66d9ef">\makepagenote</span>	</code></pre></td></tr></table>
+</div>
+</div>
+  </div>
+</figure>
+
+<p>
+  <a href="https://i.loli.net/2018/12/20/5c1b6b9601691.png">
+  <img src="https://i.loli.net/2018/12/20/5c1b6b9601691.png" alt="註釋採用章末尾註" />
+</a>
+</p>
+<h2 id="索引样式設定">索引样式設定</h2>
+<p>直排模式的索引與橫排並無多少區別，參考本站 <em>
+  <a href="https://mengxianjun.org/2016/10/15/zhmakeindex/">Zhmakeindex and the Indices Creating of Chinese Books</a>
+</em> 一文即可。效果見下圖：</p>
+<p>
+  <img src="https://i.loli.net/2018/12/20/5c1b5ed90a733.png" alt="直排索引樣式" />
+</p>
+<h1 id="復原古籍印版樣式">復原古籍印版樣式</h1>
+<p>使用一些電子化的古籍印刷字體，如
+  <a href="https://wytype.com/typeface/earlier">康熙字典體</a>
+（《康熙字典》印刷所用字型）、
+  <a href="https://wytype.com/typeface/WyueGutiFangsong">聚珍仿宋</a>
+（北宋刊本中的字型）、
+  <a href="https://www.justfont.com/fontdetail/145">浙江民間書刻體</a>
+之類，可以復原古籍原典部分印刷效果。下面兩副圖即大致以
+  <a href="https://wytype.com/typeface/WyueGutiFangsong">聚珍仿宋</a>
+排版的圖書與電子化重排效果示意。</p>
+<p>
+  <img src="https://i.loli.net/2018/12/20/5c1b4a0148e76.png" alt="世界書局《駢體文鈔》版式" />
+<br>
+
+  <img src="https://i.loli.net/2018/12/20/5c1b4a148fdcb.png" alt="仿世界書局版" />
+</p>
+
+<div class="notices info" ><p>這類字體近年來越來越多，許多沈睡在古籍中的字形得以重見天日。尤以<z>日本</z>
+  <a href="http://www.kinkido.net/"><zl>欣喜堂</zl></a>
+的工作最爲出色。</p>
+</div>
+
+<h1 id="結語">結語</h1>
+<p>上文簡單展示了以 XeCJK 與 XeLaTeX 製作中文直排版式的方案。此外，尚有基於 
+  <a href="https://texwiki.texjp.org/?upTeX%2CupLaTeX">upLaTeX</a>
+ 以及較新的 
+  <a href="https://github.com/clerkma/ptex-ng">Asiatic pTeX</a>
+ 的直排方案，可資參考。</p>
+<div style="font-family:SYHei Bold;text-align:center">
+
+
+
+  
+
+<a  href="/articles/"   class="book-btn">
+  &#9673;返回文選列表
+</a>
+</div>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, December 15, 2019, 00:48:52 by 李二狗.</p>
+</article>
+
+     
+      <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+    </div>
+
+    
+  
+
+<aside class="book-toc level-4 fixed">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#直排與現代排版需求">直排與現代排版需求</a></li>
+    <li><a href="#xecjk-直書設置">XeCJK 直書設置</a>
+      <ul>
+        <li><a href="#總設置">總設置</a></li>
+        <li><a href="#調正漢字基線">調正漢字基線</a></li>
+        <li><a href="#目錄中的章節樣式">目錄中的章節樣式</a></li>
+        <li><a href="#正文中的章節樣式">正文中的章節樣式</a></li>
+        <li><a href="#插圖樣式設定">插圖樣式設定</a></li>
+        <li><a href="#參考文獻設定">參考文獻設定</a></li>
+        <li><a href="#割註樣式設置">割註樣式設置</a></li>
+        <li><a href="#頁眉頁腳樣式">頁眉頁腳樣式</a></li>
+        <li><a href="#章節尾註樣式">章節尾註樣式</a></li>
+        <li><a href="#索引样式設定">索引样式設定</a></li>
+      </ul>
+    </li>
+    <li><a href="#復原古籍印版樣式">復原古籍印版樣式</a></li>
+    <li><a href="#結語">結語</a></li>
+  </ul>
+</nav>
+</aside>
+
+
+
+
+  </main>
+
+  
+  
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-83708465-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+<div class="post-comment">
+      
+             
+      
+      
+      
+<div class="post bg-white">
+    <script src="https://utteranc.es/client.js"
+          repo="superfluous-man/superfluous-man.github.io"
+          issue-term="pathname"
+          theme="github-light"
+          crossorigin="anonymous"
+          async>
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/utterance">comments powered by utterances.</a></noscript>
+</div>
+
+</div>
+<a href="#top" class="backtop"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-circle-up" class="svg-inline--fa fa-chevron-circle-up fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+    <path fill="currentColor" d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm231-113.9L103.5 277.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L256 226.9l101.6 101.6c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L273 142.1c-9.4-9.4-24.6-9.4-34 0z">
+    </path>
+</svg>
+
+</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>development on 桃林筆記</title>
+    <link>https://mengxianjun.org/categories/development/</link>
+    <description>Recent content in development on 桃林筆記</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Tue, 07 Jan 2020 22:41:40 +0800</lastBuildDate>
+    
+	<atom:link href="https://mengxianjun.org/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>「基础写作学」试题解答与评分标准说明</title>
+      <link>https://mengxianjun.org/articles/20200107-Fen-Shu-Shuo-Ming/</link>
+      <pubDate>Tue, 07 Jan 2020 22:41:40 +0800</pubDate>
+      
+      <guid>https://mengxianjun.org/articles/20200107-Fen-Shu-Shuo-Ming/</guid>
+      <description>看到「基礎寫作」課程的期末成績後，許多同學存在不少疑惑。特將試題解答與評分標準發佈於此，並就相關問題略加解釋，希望能夠取得大家的理解。</description>
+    </item>
+    
+  </channel>
+</rss>
