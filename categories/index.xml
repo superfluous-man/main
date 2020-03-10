@@ -6,46 +6,9 @@
     <description>Recent content in Categories on 桃林筆記</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Tue, 07 Jan 2020 22:41:40 +0800</lastBuildDate>
     
 	<atom:link href="https://mengxianjun.org/categories/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>development</title>
-      <link>https://mengxianjun.org/categories/development/</link>
-      <pubDate>Tue, 07 Jan 2020 22:41:40 +0800</pubDate>
-      
-      <guid>https://mengxianjun.org/categories/development/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>publishing</title>
-      <link>https://mengxianjun.org/categories/publishing/</link>
-      <pubDate>Tue, 07 Jan 2020 22:41:40 +0800</pubDate>
-      
-      <guid>https://mengxianjun.org/categories/publishing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Writing</title>
-      <link>https://mengxianjun.org/categories/Writing/</link>
-      <pubDate>Tue, 16 Jul 2019 18:33:42 -0400</pubDate>
-      
-      <guid>https://mengxianjun.org/categories/Writing/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>漢語</title>
-      <link>https://mengxianjun.org/categories/%E6%BC%A2%E8%AA%9E/</link>
-      <pubDate>Tue, 16 Jul 2019 18:33:42 -0400</pubDate>
-      
-      <guid>https://mengxianjun.org/categories/%E6%BC%A2%E8%AA%9E/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
