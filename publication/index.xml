@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Publications on Duō Yúrén</title>
+    <link>https://mengxianjun.org/publication/</link>
+    <description>Recent content in Publications on Duō Yúrén</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nous@mengxianjun.com (Duō Yúrén)</managingEditor>
+    <webMaster>nous@mengxianjun.com (Duō Yúrén)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
+    
+        <atom:link href="https://mengxianjun.org/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>article</title>
+        <link>https://mengxianjun.org/publication/article/</link>
+        <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        <atom:modified>Wed, 11 Mar 2020 09:50:07 +0800</atom:modified>
+        <guid>https://mengxianjun.org/publication/article/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>book</title>
+        <link>https://mengxianjun.org/publication/book/</link>
+        <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        <atom:modified>Wed, 11 Mar 2020 09:50:07 +0800</atom:modified>
+        <guid>https://mengxianjun.org/publication/book/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>misc</title>
+        <link>https://mengxianjun.org/publication/misc/</link>
+        <pubDate>Thu, 05 Mar 2020 14:08:48 +0000</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        <atom:modified>Wed, 11 Mar 2020 09:50:07 +0800</atom:modified>
+        <guid>https://mengxianjun.org/publication/misc/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

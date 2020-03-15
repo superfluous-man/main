@@ -1,14 +1,298 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Tags on 桃林筆記</title>
+    <title>Tags on Duō Yúrén</title>
     <link>https://mengxianjun.org/tags/</link>
-    <description>Recent content in Tags on 桃林筆記</description>
+    <description>Recent content in Tags on Duō Yúrén</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-CN</language>
+    <language>en</language>
+    <managingEditor>nous@mengxianjun.com (Duō Yúrén)</managingEditor>
+    <webMaster>nous@mengxianjun.com (Duō Yúrén)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Tue, 07 Jan 2020 22:41:40 +0800</lastBuildDate>
     
-	<atom:link href="https://mengxianjun.org/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mengxianjun.org/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    
+
+      
+      <item>
+        <title>barefoot</title>
+        <link>https://mengxianjun.org/tags/barefoot/</link>
+        <pubDate>Tue, 07 Jan 2020 22:41:40 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/barefoot/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>poem</title>
+        <link>https://mengxianjun.org/tags/poem/</link>
+        <pubDate>Mon, 16 Dec 2019 22:47:43 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/poem/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>thesis</title>
+        <link>https://mengxianjun.org/tags/thesis/</link>
+        <pubDate>Sat, 23 Nov 2019 14:50:28 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/thesis/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>science</title>
+        <link>https://mengxianjun.org/tags/science/</link>
+        <pubDate>Mon, 28 Oct 2019 23:53:54 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/science/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>novel</title>
+        <link>https://mengxianjun.org/tags/novel/</link>
+        <pubDate>Fri, 25 Oct 2019 23:28:58 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/novel/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>essay</title>
+        <link>https://mengxianjun.org/tags/essay/</link>
+        <pubDate>Fri, 25 Oct 2019 22:32:03 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/essay/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>layout</title>
+        <link>https://mengxianjun.org/tags/layout/</link>
+        <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/layout/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>shortcode</title>
+        <link>https://mengxianjun.org/tags/shortcode/</link>
+        <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/shortcode/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Chinese</title>
+        <link>https://mengxianjun.org/tags/chinese/</link>
+        <pubDate>Tue, 16 Jul 2019 18:33:42 -0400</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/chinese/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>diary</title>
+        <link>https://mengxianjun.org/tags/diary/</link>
+        <pubDate>Mon, 10 Sep 2018 15:25:25 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/diary/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>dictionary</title>
+        <link>https://mengxianjun.org/tags/dictionary/</link>
+        <pubDate>Fri, 20 Apr 2018 16:47:15 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/dictionary/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>CangJie</title>
+        <link>https://mengxianjun.org/tags/cangjie/</link>
+        <pubDate>Mon, 17 Jul 2017 21:47:22 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/cangjie/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>TeX</title>
+        <link>https://mengxianjun.org/tags/tex/</link>
+        <pubDate>Sat, 13 May 2017 09:29:32 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/tex/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Confucius</title>
+        <link>https://mengxianjun.org/tags/confucius/</link>
+        <pubDate>Sun, 05 Jun 2016 21:39:35 +0000</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/confucius/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>index</title>
+        <link>https://mengxianjun.org/tags/index/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        
+        <guid>https://mengxianjun.org/tags/index/</guid>
+        <description></description>
+        
+        <dc:creator>Duō Yúrén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+
     
   </channel>
 </rss>

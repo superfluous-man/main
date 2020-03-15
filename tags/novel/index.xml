@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>novel on Duō Yúrén</title>
+    <link>https://mengxianjun.org/tags/novel/</link>
+    <description>Recent content in novel on Duō Yúrén</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>nous@mengxianjun.com (Duō Yúrén)</managingEditor>
+    <webMaster>nous@mengxianjun.com (Duō Yúrén)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Fri, 25 Oct 2019 23:28:58 +0800</lastBuildDate>
+    
+        <atom:link href="https://mengxianjun.org/tags/novel/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>偷桃术</title>
+        <link>https://mengxianjun.org/articles/20191025-tou-tao-shu/</link>
+        <pubDate>Fri, 25 Oct 2019 23:28:58 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        <atom:modified>Sun, 15 Mar 2020 19:06:58 +0800</atom:modified>
+        <guid>https://mengxianjun.org/articles/20191025-tou-tao-shu/</guid>
+        <description>⦿ 作者的話 ⦿ 本文主要情节完全改编自《故事会》某期某篇作品。所以，若非编者威逼利诱，作者是不愿意将此文公开登载在这儿的。特此声明。 民间自古流传</description>
+        
+        <dc:creator>康师傅冰红茶</dc:creator>
+        <media:content url="https://mengxianjun.org//images/author/hmq.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>novel</category>
+            
+          
+        
+        
+          
+            
+              <category>作業</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
+        <title>窥  荷</title>
+        <link>https://mengxianjun.org/articles/20191025-kui-he/</link>
+        <pubDate>Fri, 25 Oct 2019 21:10:21 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        <atom:modified>Sun, 15 Mar 2020 19:05:50 +0800</atom:modified>
+        <guid>https://mengxianjun.org/articles/20191025-kui-he/</guid>
+        <description>⦿ 作者的話 ⦿ 写这篇东西不仅是为了完成作业，更有把高中挖的几个坑多少填一点的打算。 我最初的构思里，何先生与现版本相比没什么变化，小连则天差地别</description>
+        
+        <dc:creator>陆成江</dc:creator>
+        <media:content url="https://mengxianjun.org//images/author/nezha.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>novel</category>
+            
+          
+        
+        
+          
+            
+              <category>作業</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
