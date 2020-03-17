@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="layout">
 
 <meta name="created" content="2018-12-16T18:03:24&#43;0800">
-<meta name="modified" content="2020-03-15T18:49:47&#43;0800">
+<meta name="modified" content="2020-03-17T11:09:47&#43;0800">
 <meta property="article:published_time" content="2018-12-16T18:03:24&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "基於 XeLaTeX 的中文直書方案",
     "datePublished": "2018-12-16T18:03:24+08:00",
-    "dateModified": "2020-03-15T18:49:47+08:00",
+    "dateModified": "2020-03-17T11:09:47+08:00",
     "url" : "https://mengxianjun.org/articles/20181216-tex-han-yu-zhi-pai/",
     "description": "TeX 排版漢語文獻的直排版式。",
     "keywords": ["layout"],
@@ -1320,7 +1320,7 @@ if (!doNotTrack) {
 
 </head>
 
-<body id="root" class="theme__dark">
+<body id="root" class="theme__solarized">
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1357,7 +1357,7 @@ if (!doNotTrack) {
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          dark
+          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1365,11 +1365,11 @@ if (!doNotTrack) {
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          hacker
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          solarized
+          hacker
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1550,7 +1550,7 @@ if (!doNotTrack) {
       
         
         <a href="#" class="dropdown-item select-theme__item is-active">
-          dark
+          solarized
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1558,11 +1558,11 @@ if (!doNotTrack) {
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          hacker
+          dark
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
-          solarized
+          hacker
         </a>
         
         <a href="#" class="dropdown-item select-theme__item ">
@@ -1708,9 +1708,9 @@ if (!doNotTrack) {
 
 &middot; <time class="single__info" title="Written At">📅&nbsp;Dec 16, 2018 </time>
   
-&middot; <time class="single__info" title="Modified At"> 📝&nbsp;Mar 15, 2020 </time>
+&middot; <time class="single__info" title="Modified At"> 📝&nbsp;Mar 17, 2020 </time>
   
-&middot; 🔢 3283 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 7 min read</span>
+&middot; 🔢 3259 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 7 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1795,12 +1795,12 @@ if (!doNotTrack) {
 <p>大多數傳統直排古籍出版物並無繁複的章節目錄、插圖、註釋、頁眉頁腳、索引項目、文獻徵引等現代排版需求（或者即使有，迫於當時的排版手段，難以實現，便放棄了）。現在，我們開歷史的倒車，以「直書」方式排版一些出版物，便不可避免地要回應以上現代排版需求。</p>
 <blockquote>
 <ul>
-<li>**章節目錄信息：**傳統直排書籍皆可滿足此類需求，但詳細的目錄排版顯得較爲吃力，可從若干直排書籍的目錄處理感知到這一問題（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的目錄排版）。</li>
-<li>**頁眉頁腳信息：**這個需求的處理並不複雜，傳統直排書籍亦大都能簡單呈現，但大都只顯示到卷（編）目，個別圖書可以顯示到章目層次，對更深層次的節、子節信息則難以呈現（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的頁眉頁腳信息排版）。</li>
-<li>**章節註釋信息：**鑑於直排頁面的特徵，橫排頁面的腳註方式並不適宜用於直排頁面（只能放一些簡短的註釋，如《十三經注疏》整理本系列之<a href="https://books.google.co.jp/books?id=fqtZwx51nd8C&amp;pg=PA120&amp;lpg=PA120&amp;dq=%E5%89%B2%E8%A8%BB&amp;source=bl&amp;ots=f1UXtSWvZK&amp;sig=0SGsw_iwpe13W6rtTxVC1AXbEaA&amp;hl=zh-CN&amp;sa=X&amp;ved=2ahUKEwipq7Kexa3fAhWbHXAKHeoZAMAQ6AEwCHoECAAQAQ#v=onepage&amp;q=%E5%89%B2%E8%A8%BB&amp;f=false">《儀禮注疏》</a>第一〇二七頁的腳註），宜變腳註爲夾註（割註）或章節末註（如民 70 年<z>聯經出版事業公司</z>印行<z>劉若愚</z>所著<a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書，原註與譯註皆排在章節之後）。</li>
-<li>**索引項目信息：**傳統直排書籍附帶索引的不多，即便製作了索引，排版起來亦頗顯繁瑣（如<a href="http://ap6.pccu.edu.tw/dictionary/index.asp">《中文大辭典》</a>附錄所示，不難推測其附錄製作、排版工程之浩大）；有些直排的學術著作，如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的索引部分則乾脆改爲橫排版。</li>
-<li>**文獻徵引信息：**現代圖書常常附有翔實的 Bibliography 信息，對圖書正文參考、引用的各類文獻予以呈現，這是當代直排方案不可回避的需求；有些直排的學術著作，如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的參考文獻部分則直接改爲橫排版。</li>
-<li>**正文插圖與中英文混排信息：**雖然一些直排的日文漢和辭典或國語辭典也能大量處理插圖與拉丁字母，但這方面總歸是直排方式的欠缺之處，若有大量拉丁文字的篇幅或大量的插圖，則全書不宜直排；如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書正文穿插大量的英文引文，與直排的漢文排在一起，除了可以協助治療讀者的頸椎病，版式讀起來並不友好，所以此後的版本大都改爲橫排版。</li>
+<li><strong>章節目錄信息</strong>：傳統直排書籍皆可滿足此類需求，但詳細的目錄排版顯得較爲吃力，可從若干直排書籍的目錄處理感知到這一問題（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的目錄排版）。</li>
+<li><strong>頁眉頁腳信息</strong>：這個需求的處理並不複雜，傳統直排書籍亦大都能簡單呈現，但大都只顯示到卷（編）目，個別圖書可以顯示到章目層次，對更深層次的節、子節信息則難以呈現（如<z>中華書局</z> 1993 年 4 月所出<z>錢基博</z>《中國文學史》一書的頁眉頁腳信息排版）。</li>
+<li><strong>章節註釋信息</strong>：鑑於直排頁面的特徵，橫排頁面的腳註方式並不適宜用於直排頁面（只能放一些簡短的註釋，如《十三經注疏》整理本系列之<a href="https://books.google.co.jp/books?id=fqtZwx51nd8C&amp;pg=PA120&amp;lpg=PA120&amp;dq=%E5%89%B2%E8%A8%BB&amp;source=bl&amp;ots=f1UXtSWvZK&amp;sig=0SGsw_iwpe13W6rtTxVC1AXbEaA&amp;hl=zh-CN&amp;sa=X&amp;ved=2ahUKEwipq7Kexa3fAhWbHXAKHeoZAMAQ6AEwCHoECAAQAQ#v=onepage&amp;q=%E5%89%B2%E8%A8%BB&amp;f=false">《儀禮注疏》</a>第一〇二七頁的腳註），宜變腳註爲夾註（割註）或章節末註（如民 70 年<z>聯經出版事業公司</z>印行<z>劉若愚</z>所著<a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書，原註與譯註皆排在章節之後）。</li>
+<li><strong>索引項目信息</strong>：傳統直排書籍附帶索引的不多，即便製作了索引，排版起來亦頗顯繁瑣（如<a href="http://ap6.pccu.edu.tw/dictionary/index.asp">《中文大辭典》</a>附錄所示，不難推測其附錄製作、排版工程之浩大）；有些直排的學術著作，如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的索引部分則乾脆改爲橫排版。</li>
+<li><strong>文獻徵引信息</strong>：現代圖書常常附有翔實的 Bibliography 信息，對圖書正文參考、引用的各類文獻予以呈現，這是當代直排方案不可回避的需求；有些直排的學術著作，如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書的參考文獻部分則直接改爲橫排版。</li>
+<li><strong>正文插圖與中英文混排信息</strong>：雖然一些直排的日文漢和辭典或國語辭典也能大量處理插圖與拉丁字母，但這方面總歸是直排方式的欠缺之處，若有大量拉丁文字的篇幅或大量的插圖，則全書不宜直排；如<z>劉若愚</z><a href="https://www.linkingbooks.com.tw/LNB/book/Book.aspx?ID=81021">《中國文學理論》</a>一書正文穿插大量的英文引文，與直排的漢文排在一起，除了可以協助治療讀者的頸椎病，版式讀起來並不友好，所以此後的版本大都改爲橫排版。</li>
 </ul>
 </blockquote>
 <h1 id="xecjk-直書設置">XeCJK 直書設置</h1>
@@ -2107,7 +2107,7 @@ if (!doNotTrack) {
 <h1 id="結語">結語</h1>
 <p>上文簡單展示了以 XeCJK 與 XeLaTeX 製作中文直排版式的方案。此外，尚有基於 <a href="https://texwiki.texjp.org/?upTeX%2CupLaTeX">upLaTeX</a> 以及較新的 <a href="https://github.com/clerkma/ptex-ng">Asiatic pTeX</a> 的直排方案，可資參考。</p>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, March 15, 2020, 18:49:47 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Tuesday, March 17, 2020, 11:09:47 by 王小花.</p>
     </article>
     
     <script>
@@ -3123,7 +3123,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (lib && lib.includes('mermaid')) {
       
-      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"dark\"");
+      var themeVariant = localStorage.getItem('theme') || JSON.parse("\"solarized\"");
 
       if (themeVariant === "dark" || themeVariant === "hacker") {
         mermaid.initialize({ theme: 'dark' });

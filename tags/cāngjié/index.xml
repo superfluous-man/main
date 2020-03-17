@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>CangJie on Duō Yúrén</title>
-    <link>https://mengxianjun.org/tags/cangjie/</link>
-    <description>Recent content in CangJie on Duō Yúrén</description>
+    <title>Cāngjié on Duō Yúrén</title>
+    <link>https://mengxianjun.org/tags/c%C4%81ngji%C3%A9/</link>
+    <description>Recent content in Cāngjié on Duō Yúrén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>nous@mengxianjun.com (Duō Yúrén)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 17 Jul 2017 21:47:22 +0800</lastBuildDate>
     
-        <atom:link href="https://mengxianjun.org/tags/cangjie/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mengxianjun.org/tags/c%C4%81ngji%C3%A9/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -27,7 +27,7 @@
         <link>https://mengxianjun.org/articles/20170717-cang-jie-zi-ma/</link>
         <pubDate>Mon, 17 Jul 2017 21:47:22 +0800</pubDate>
         <author>nous@mengxianjun.com (Duō Yúrén)</author>
-        <atom:modified>Sun, 15 Mar 2020 19:29:05 +0800</atom:modified>
+        <atom:modified>Tue, 17 Mar 2020 10:15:24 +0800</atom:modified>
         <guid>https://mengxianjun.org/articles/20170717-cang-jie-zi-ma/</guid>
         <description>僕在工廠務工，偶然需要使用 CorelDraw 排版些圖文。遂突發奇想，以此物採笨辦法打散漢字，拆筆畫手動着色，製作蒼頡檢字法五頁簡易入門文檔，僅供習者參考。全</description>
         
@@ -38,7 +38,7 @@
         
           
             
-              <category>CangJie</category>
+              <category>Cāngjié</category>
             
           
         
@@ -63,7 +63,7 @@
         <link>https://mengxianjun.org/articles/20160920-cang-jie-li-zi/</link>
         <pubDate>Tue, 20 Sep 2016 17:56:18 +0800</pubDate>
         <author>nous@mengxianjun.com (Duō Yúrén)</author>
-        <atom:modified>Sun, 15 Mar 2020 19:28:29 +0800</atom:modified>
+        <atom:modified>Tue, 17 Mar 2020 10:14:46 +0800</atom:modified>
         <guid>https://mengxianjun.org/articles/20160920-cang-jie-li-zi/</guid>
         <description>導言 蒼頡檢字法，坊間亦稱「六代倉頡」，但其與通常所謂「三代倉頡」、「五代倉頡」差異較大，目的非僅供漢字輸入，而在完整解決漢字檢索及應用問題。</description>
         
@@ -74,7 +74,7 @@
         
           
             
-              <category>CangJie</category>
+              <category>Cāngjié</category>
             
           
         
