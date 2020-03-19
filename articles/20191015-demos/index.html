@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="layout,shortcode">
 
 <meta name="created" content="2019-10-15T00:57:29&#43;0800">
-<meta name="modified" content="2020-03-17T17:08:57&#43;0800">
+<meta name="modified" content="2020-03-19T19:35:18&#43;0800">
 <meta property="article:published_time" content="2019-10-15T00:57:29&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "內容版式 Demos",
     "datePublished": "2019-10-15T00:57:29+08:00",
-    "dateModified": "2020-03-17T17:08:57+08:00",
+    "dateModified": "2020-03-19T19:35:18+08:00",
     "url" : "https://mengxianjun.org/articles/20191015-demos/",
     "description": "本站爲便於整理、排版圖文內容，結合 Hugo 的 shortcode 功能，製作若干便捷樣式，以提高 markdown 書寫的效率。本文爲這些設計的備份。",
     "keywords": ["layout","shortcode"],
@@ -1708,9 +1708,9 @@ if (!doNotTrack) {
 
 &middot; <time class="single__info" title="Written At">📅&nbsp;Oct 15, 2019 </time>
   
-&middot; <time class="single__info" title="Modified At"> 📝&nbsp;Mar 17, 2020 </time>
+&middot; <time class="single__info" title="Modified At"> 📝&nbsp;Mar 19, 2020 </time>
   
-&middot; 🔢 3951 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 8 min read</span>
+&middot; 🔢 4131 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 9 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1747,7 +1747,7 @@ if (!doNotTrack) {
     <div class="grow"></div>
     
       <a href="https://mengxianjun.org/articles/20191025-kui-he/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">窥  荷</div>
+        <div class="pagination-single__right-title">窥荷</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -1774,7 +1774,8 @@ if (!doNotTrack) {
         <li><a href="#漢語拼音標註">漢語拼音標註</a></li>
         <li><a href="#備註及定義框">備註及定義框</a>
           <ul>
-            <li><a href="#備註無標題">備註無標題</a></li>
+            <li><a href="#原有樣式">原有樣式</a></li>
+            <li><a href="#漢化樣式">漢化樣式</a></li>
             <li><a href="#自定義標題">自定義標題</a></li>
           </ul>
         </li>
@@ -1792,6 +1793,7 @@ if (!doNotTrack) {
           <ul>
             <li><a href="#默認名稱爲-expand">默認名稱爲 expand</a></li>
             <li><a href="#自定義名稱與樣式">自定義名稱與樣式</a></li>
+            <li><a href="#code-tabs">Code tabs</a></li>
           </ul>
         </li>
       </ul>
@@ -1893,32 +1895,50 @@ I’m happy for that. <rp> (</rp><rt>My heart is broken.</rt><rp>) </rp>
 </ul>
 <h2 id="備註及定義框">備註及定義框</h2>
 <p>文字框內分段、換行、列表的渲染，不同瀏覽器的支持情況未盡相同，大體皆可用。行文時根據內容需要選取，以下爲兩類文字框版式的示例效果。</p>
-<h3 id="備註無標題">備註無標題</h3>
-<p>共計 info、warning、tip、note 四色四種，並分別漢化爲「編者按語」「特別警示」「官方吐槽」「思考題目」。</p>
+<h3 id="原有樣式">原有樣式</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html">{{<span class="p">&lt;</span> <span class="nt">notice</span> <span class="err">[</span><span class="na">info</span><span class="err">|</span><span class="na">warning</span><span class="err">|</span><span class="na">tip</span><span class="err">|</span><span class="na">note</span><span class="err">]</span> <span class="p">&gt;</span>}}備註框內容{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">notice</span> <span class="p">&gt;</span>}}
+<pre class="chroma"><code class="language-html" data-lang="html">{{<span class="p">&lt;</span> <span class="nt">notice</span> <span class="err">[</span><span class="na">success</span><span class="err">|</span><span class="na">info</span><span class="err">|</span><span class="na">warning</span><span class="err">|</span><span class="na">error</span><span class="err">]</span> <span class="p">&gt;</span>}}備註框內容{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">noticem</span> <span class="p">&gt;</span>}}
+</code></pre></td></tr></table>
+</div>
+</div><div class="notices success" >
+  success <a href="duoyu.ren">text</a>
+</div>
+<div class="notices info" >
+  info text
+</div>
+<div class="notices warning" >
+  warning text
+</div>
+<div class="notices error" >
+  error text
+</div>
+<h3 id="漢化樣式">漢化樣式</h3>
+<p>計 info、warning、tip、note 四色四種，並分別漢化爲「編者按語」「特別警示」「官方吐槽」「思考題目」。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">{{<span class="p">&lt;</span> <span class="nt">noticem</span> <span class="err">[</span><span class="na">info</span><span class="err">|</span><span class="na">warning</span><span class="err">|</span><span class="na">tip</span><span class="err">|</span><span class="na">note</span><span class="err">]</span> <span class="p">&gt;</span>}}備註框內容{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">noticem</span> <span class="p">&gt;</span>}}
 </code></pre></td></tr></table>
 </div>
 </div>
-<div class="noticesm info" ><p>这一天，韩学愈特来拜访。通名之后，方鸿渐倒窘起来，同时快意地失望。理想中的韩学愈不知怎样的嚣张浮滑，不料是个沉默寡言的人。他想陆子潇也许记错，孙小姐准是过信流言。</p>
-</div>
+<div class="noticesm info" >这一天，韩学愈特来拜访。通名之后，方鸿渐倒窘起来，同时快意地失望。理想中的韩学愈不知怎样的嚣张浮滑，不料是个沉默寡言的人。他想陆子潇也许记错，孙小姐准是过信流言。</div>
 
 
-<div class="noticesm warning" ><p><strong>本站是 18 禁網站，未成年人不宜瀏覽。否則，後果自負。</strong></p>
-</div>
+<div class="noticesm warning" ><strong>本站是 18 禁網站，未成年人不宜瀏覽。否則，後果自負。</strong></div>
 
 
-<div class="noticesm tip" ><p>木讷朴实是韩学愈的看家本领——不，养家本钱，现代人有两个流行的信仰。<br />
-第一：女子无貌便是德，所以漂亮的女人准比不上丑女人那样有思想，有品节；第二：男子无口才，就是表示有道德，所以哑巴是天下最诚朴的人。</p>
-</div>
+<div class="noticesm tip" >木讷朴实是韩学愈的看家本领——不，养家本钱，现代人有两个流行的信仰。<br />
+第一：女子无貌便是德，所以漂亮的女人准比不上丑女人那样有思想，有品节；第二：男子无口才，就是表示有道德，所以哑巴是天下最诚朴的人。</div>
 
 
-<div class="noticesm note" ><p>再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。<br />
-最后他听说韩太太是美国人，他简直改容相敬了，能娶外国老婆的非精通西学不可，自己年轻时不是想娶个比国女人没有成功么？这人做得系主任。他当时也没想到这外国老婆是在中国娶的白俄。</p>
+<div class="noticesm note" ><p>再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。</p>
+<p>最后他听说韩太太是美国人，他简直改容相敬了，能娶外国老婆的非精通西学不可，自己年轻时不是想娶个比国女人没有成功么？这人做得系主任。他当时也没想到这外国老婆是在中国娶的白俄。</p>
 </div>
 
 <h3 id="自定義標題">自定義標題</h3>
@@ -1943,10 +1963,9 @@ When meeting with senior officers stationed in Hubei, Xi extended sincere greeti
   	<span style="font-family:SYHei Heavy;"><span class="qmarkl"></span> 學位</span>之定義 <span class="qmarkr"></span>
   </div>
   <div class="definition">
-  <span style="font-family:SYHei Medium;">
-再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。
-<p>When meeting with senior officers stationed in Hubei, Xi extended sincere greetings to all officers and soldiers of the armed forces stationed in the province.<br />
-</span></p>
+  <span style="font-family:SYHei Medium;"><p>再一看他开的学历，除掉博士学位以外，还有一条：“著作散见美国‘史学杂志’‘星期六文学评论’等大刊物中”，不由自主地另眼相看。好几个拿了介绍信来见的人，履历上写在外国“讲学”多次。</p>
+<p>When meeting with senior officers stationed in Hubei, Xi extended sincere greetings to all officers and soldiers of the armed forces stationed in the province.</p>
+</span>
   </div>
   </div>
 <p>稍加變換色彩樣式與標題風格，新增 freebox shortcode。效果如下。</p>
@@ -1968,38 +1987,56 @@ When meeting with senior officers stationed in Hubei, Xi extended sincere greeti
   	<span style="font-family:SYHei Heavy;">⦿ 這真是名場面 ⦿</span>
   </div>
   <div class="freebox">
-  <span style="font-family:SYHei Regular;">
-在导师制讨论会上，部视学先讲了十分钟冠冕堂皇的话，平均每分钟一句半“兄弟在英国的时候”。他讲完看一看手表，就退席了。听众喉咙里忍住的大小咳嗽声全放出来，此作彼继，Ehem，KeKeKe，——在中国集会上，静默三分钟后，主席报告后，照例有这么一阵咳嗽。
-</span>
+  <span style="font-family:SYHei Regular;">在导师制讨论会上，部视学先讲了十分钟冠冕堂皇的话，平均每分钟一句半“兄弟在英国的时候”。他讲完看一看手表，就退席了。听众喉咙里忍住的大小咳嗽声全放出来，此作彼继，Ehem，KeKeKe，——在中国集会上，静默三分钟后，主席报告后，照例有这么一阵咳嗽。</span>
   </div>
   </div>
 <h2 id="五七言詩歌排版">五七言詩歌排版</h2>
 <p>此樣式在桌面電腦的各類瀏覽器中，皆可正常渲染顯示。手機移動端的顯示效果，則視各手機屏幕尺寸與瀏覽器型號二不同，經簡單測試，大體皆勉強可用。</p>
-<wuyan>
-<bb>古詩十九首</bb><br>
-生年不満百，常懐千歳憂。 <br>
-昼短苦夜長，何不秉燭遊。 <br>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-tpl" data-lang="tpl"><span class="cp">{{</span><span class="o">/*%</span> <span class="na">poem</span> <span class="na">title</span><span class="o">=</span><span class="s2">&#34;古詩十九首&#34;</span><span class="o">%*/</span><span class="cp">}}</span><span class="x">
+</span><span class="x">生年不満百，常懐千歳憂。
+</span><span class="x">昼短苦夜長，何不秉燭遊。
+</span><span class="x">為楽当及時，何能待来茲。
+</span><span class="x"></span><span class="cp">{{</span><span class="o">/*%</span> <span class="o">/</span><span class="na">poem</span> <span class="o">%*/</span><span class="cp">}}</span><span class="x">
+</span></code></pre></td></tr></table>
+</div>
+</div><div class="poem">
+<div>
+<span style="font-family:SYHei Bold;">古詩十九首</span>
+</div>
+  生年不満百，常懐千歳憂。<br />
+昼短苦夜長，何不秉燭遊。<br />
 為楽当及時，何能待来茲。
-<chcite>佚名</chcite>
-</wuyan>
-<qiyan>
-<bb>春夜洛城闻笛</bb><br>
-谁家玉笛暗飞声，散入春风满洛城。<br>
+</div>
+<div class="poem">
+<div>
+<span style="font-family:SYHei Bold;">春夜洛城闻笛</span>
+</div>
+  谁家玉笛暗飞声，散入春风满洛城。<br />
 此夜曲中闻折柳，何人不起故园情。
-<chcite>李白</chcite>
-</qiyan>
-<bayan>
-<bb>短歌行</bb><br>
-對酒當歌。人生幾何。譬如朝露。去日苦多。<br>
-慨當以慷。憂思難忘。何以解憂。唯有杜康。<br>
-青青子衿。悠悠我心。但為君故。沈吟至今。<br>
-呦呦鹿鳴。食野之苹。我有嘉賓。鼓瑟吹笙。<br>
-明明如月。何時可輟。憂従中来。不可断絶。<br>
-越陌度阡。枉用相存。契闊談讌。心念舊恩。<br>
-月明星稀。烏鵲南飛。繞樹三匝。何枝可依。<br>
+</div>
+<div class="poem">
+<div>
+<span style="font-family:SYHei Bold;">曹孟德詩</span>
+</div>
+  對酒當歌。人生幾何。譬如朝露。去日苦多。<br />
+慨當以慷。憂思難忘。何以解憂。唯有杜康。<br />
+青青子衿。悠悠我心。但為君故。沈吟至今。<br />
+呦呦鹿鳴。食野之苹。我有嘉賓。鼓瑟吹笙。<br />
+明明如月。何時可輟。憂従中来。不可断絶。<br />
+越陌度阡。枉用相存。契闊談讌。心念舊恩。<br />
+月明星稀。烏鵲南飛。繞樹三匝。何枝可依。<br />
 山不厭高。海不厭深。周公吐哺。天下歸心。
-<chcite>曹孟德</chcite>
-</bayan>
+</div>
+<p>樣式大致居中對齊，適用於傳統對仗詩歌。</p>
 <h2 id="父子目錄樣式">父子目錄樣式</h2>
 <p>本站圖書採父子列表樣式羅列章節目錄。在每本書文件夾內的 <code>_index.md</code> 中使用，<a href="https://learn.netlify.com/en/shortcodes/children/">用法</a>如下，效果見相應頁面的目錄樣式。</p>
 <table>
@@ -2207,7 +2244,7 @@ When meeting with senior officers stationed in Hubei, Xi extended sincere greeti
 
 
 <div>
-<blockquote><p>鸿渐记得自己老师里的名教授从不点名，从不报告学生缺课。这才是堂堂大学者的风度：“你们要听就听，我可不在乎。”他企羡之余，不免模仿。</p>
+<blockquote class="alert alert-success"><p>鸿渐记得自己老师里的名教授从不点名，从不报告学生缺课。这才是堂堂大学者的风度：“你们要听就听，我可不在乎。”他企羡之余，不免模仿。</p>
 <p>上第一课，他像创世纪里原人阿大（Adam）唱新生禽兽的名字，以后他连点名簿子也不带了。到第二星期，他发现五十多学生里有七八个缺席，这些空座位像一嘴牙齿忽然吊了几枚，留下的空穴，看了心里不舒服。下一次，他注意女学生还固守着第一排原来的座位，男学生像从最后一排坐起的，空着第二排，第三排孤另另地坐一个男生。</p>
 
       
@@ -2259,7 +2296,7 @@ Such was the case with the new edition of Tanyilu (1948; “Reflections in Appre
 
 
 <div>
-<blockquote><p>Qian’s scholarly works were greeted with critical acclaim as soon as they came off the press.</p>
+<blockquote  class="alert alert-success"><p>Qian’s scholarly works were greeted with critical acclaim as soon as they came off the press.</p>
 <p>Such was the case with the new edition of Tanyilu (1948; “Reflections in Appreciation”; revised and enlarged in 1983), Songshi xuanzhu (1958; “Selected and Annotated Poems of the Song Dynasty”), and the four-volume Guanzhuibian (1979; Limited Views, a partial translation)&hellip;Selected and Annotated),</p>
 
       
@@ -2277,14 +2314,12 @@ Such was the case with the new edition of Tanyilu (1948; “Reflections in Appre
   	<span style="font-family:SYHei Heavy;">⦿ 這真是名場面 ⦿</span>
   </div>
   <div class="freebox">
-  <span style="font-family:SYHei Regular;">
-<ol class="bhhy">
+  <span style="font-family:SYHei Regular;"><ol class="bhhy">
   <li>Looks</li>
   <li>Like</li>
   <li>The</li>
   <li>Same</li>
-</ol>
-</span>
+</ol></span>
   </div>
   </div>
   <div>
@@ -2292,14 +2327,12 @@ Such was the case with the new edition of Tanyilu (1948; “Reflections in Appre
   	<span style="font-family:SYHei Heavy;">⦿ 這真是名場面 ⦿</span>
   </div>
   <div class="freebox">
-  <span style="font-family:SYHei Regular;">
-<ol class="hzbh">
+  <span style="font-family:SYHei Regular;"><ol class="hzbh">
   <li>Looks</li>
   <li>Like</li>
   <li>The</li>
   <li>Same</li>
-</ol>
-</span>
+</ol></span>
   </div>
   </div>
 <h1 id="模板原有-shortcode-樣式">模板原有 shortcode 樣式</h1>
@@ -2399,8 +2432,85 @@ Lorem markdownum insigne...
 
   </div>
 </div>
+<h3 id="code-tabs">Code tabs</h3>
+<p>Make it easy to switch between different code</p>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Tuesday, March 17, 2020, 17:08:57 by 王小花.</p>
+<div id="d96f892eb0443615" class="codetab">
+  <div class="codetab__links">
+    
+      <button class="codetab__link" aria-label="Tab link">java</button>
+    
+      <button class="codetab__link" aria-label="Tab link">javascript</button>
+    
+  </div>
+  
+  
+<div id="f5245009c64b2310" class="codetab__content">
+  <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="err">&#39;</span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span><span class="err">&#39;</span><span class="o">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+
+  
+<div id="0cda49cb3895f102" class="codetab__content">
+  <div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">);</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+</div>
+
+</div>
+
+<script>
+  'use strict';
+
+  var containerId = JSON.parse("\"d96f892eb0443615\"");
+  var containerElem = document.getElementById(containerId);
+  var codetabLinks = null;
+  var codetabContents = null;
+  var ids = [];
+
+  if (containerElem) {
+    codetabLinks = containerElem.querySelectorAll('.codetab__link');
+    codetabContents = containerElem.querySelectorAll('.codetab__content');
+  }
+
+  for (var i = 0; i < codetabContents.length; i++) {
+    ids = ids.concat(codetabContents[i].getAttribute('id'));
+    codetabContents[i].style.display = 'none';
+
+    if (0 === parseInt(i, 10) && !codetabContents[i].classList.contains('active')) {
+      codetabContents[i].classList.add('active');
+    }
+  }
+
+  for (var i = 0; i < codetabLinks.length; i++) {
+    codetabLinks[i].setAttribute('id', ids[i]);
+
+    if (0 === parseInt(i, 10) && !codetabLinks[i].classList.contains('active')) {
+      codetabLinks[i].classList.add('active');
+    } else {
+      codetabLinks[i].classList.remove('active');
+    }
+  }
+
+  if (codetabContents.length > 0) {
+    codetabContents[0].style.display = 'block';
+  }
+</script>
+
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Thursday, March 19, 2020, 19:35:18 by 王小花.</p>
     </article>
     
     <script>
@@ -2465,7 +2575,7 @@ Lorem markdownum insigne...
     <div class="grow"></div>
     
       <a href="https://mengxianjun.org/articles/20191025-kui-he/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">窥  荷</div>
+        <div class="pagination-single__right-title">窥荷</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2967,7 +3077,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#漢語拼音標註">漢語拼音標註</a></li>
         <li><a href="#備註及定義框">備註及定義框</a>
           <ul>
-            <li><a href="#備註無標題">備註無標題</a></li>
+            <li><a href="#原有樣式">原有樣式</a></li>
+            <li><a href="#漢化樣式">漢化樣式</a></li>
             <li><a href="#自定義標題">自定義標題</a></li>
           </ul>
         </li>
@@ -2985,6 +3096,7 @@ document.addEventListener('DOMContentLoaded', function () {
           <ul>
             <li><a href="#默認名稱爲-expand">默認名稱爲 expand</a></li>
             <li><a href="#自定義名稱與樣式">自定義名稱與樣式</a></li>
+            <li><a href="#code-tabs">Code tabs</a></li>
           </ul>
         </li>
       </ul>

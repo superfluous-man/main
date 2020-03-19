@@ -843,7 +843,7 @@
         <link>https://mengxianjun.org/articles/20191015-demos/</link>
         <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
         <author>nous@mengxianjun.com (Duō Yúrén)</author>
-        <atom:modified>Tue, 17 Mar 2020 17:08:57 +0800</atom:modified>
+        <atom:modified>Thu, 19 Mar 2020 19:35:18 +0800</atom:modified>
         <guid>https://mengxianjun.org/articles/20191015-demos/</guid>
         <description>本站新增樣式 參考衆多 Hugo shortcode 樣式案例，爲提高效率，本站新增以下幾種樣式。模板原有 shortcode 樣式在本文第二部分列出備查。 源代碼展示框 1 2 3 4 5 6 7 8 9 10 11</description>
         
@@ -883,9 +883,9 @@
         <link>https://mengxianjun.org/books/art/</link>
         <pubDate>Tue, 17 Sep 2019 22:27:42 +0800</pubDate>
         <author>nous@mengxianjun.com (Duō Yúrén)</author>
-        <atom:modified>Mon, 16 Mar 2020 22:17:11 +0800</atom:modified>
+        <atom:modified>Thu, 19 Mar 2020 20:29:50 +0800</atom:modified>
         <guid>https://mengxianjun.org/books/art/</guid>
-        <description>第 01 章 第 02 章 第 03 章 第 04 章 第 05 章 第 06 章 本筆記主要基於以下課本整理： 袁行霈. 中国文学史（四卷本）[M]. 北京:高等敎育出版社, 2013 王國瓔. 中國文學</description>
+        <description>第 01 章 第 02 章 第 03 章 第 04 章 第 05 章 第 06 章 本筆記主要參考（chāoxí ）以下課本整理： 勞思光. 新編中國哲學史[M]. 臺北: 三民書局, 2001 葛兆光. 中国</description>
         
         <dc:creator>李二狗</dc:creator>
         <media:content url="https://mengxianjun.org/images/art/xiezuo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
