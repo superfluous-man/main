@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "Hugo Zzo theme",
-  "short_name": "Hugo Zzo theme",
+  "name": "DuōYú Rén",
+  "short_name": "DuōYú Rén",
   "version": "1.0.0",
   "default_locale": "en",
-  "description": "Hugo blog theme with rich features",
-  "start_url": "https://themes.gohugo.io/theme/hugo-theme-zzo/",
+  "description": "Duō Yúrén's Weblog",
+  "start_url": "https://mengxianjun.org/",
   "icons": [
     {
       "src": "favicon/android-icon-36x36.png",

@@ -6,13 +6,13 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Galleries on Duō Yúrén</title>
+    <title>Galleries on Duōyú Rén</title>
     <link>https://mengxianjun.org/gallery/</link>
-    <description>Recent content in Galleries on Duō Yúrén</description>
+    <description>Recent content in Galleries on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>nous@mengxianjun.com (Duō Yúrén)</managingEditor>
-    <webMaster>nous@mengxianjun.com (Duō Yúrén)</webMaster>
+    <managingEditor>nous@mengxianjun.com (Duōyú Rén)</managingEditor>
+    <webMaster>nous@mengxianjun.com (Duōyú Rén)</webMaster>
     <copyright>&amp;copy;2016-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
@@ -26,12 +26,12 @@
         <title>Cartoon</title>
         <link>https://mengxianjun.org/gallery/cartoon/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
-        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        <author>nous@mengxianjun.com (Duōyú Rén)</author>
         <atom:modified>Sun, 15 Mar 2020 20:23:44 +0800</atom:modified>
         <guid>https://mengxianjun.org/gallery/cartoon/</guid>
         <description>Sample images from Pixabay</description>
         
-        <dc:creator>Duō Yúrén</dc:creator>
+        <dc:creator>Duōyú Rén</dc:creator>
         <media:content url="https://mengxianjun.org/images/feature/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
@@ -44,12 +44,12 @@
         <title>Photo</title>
         <link>https://mengxianjun.org/gallery/photo/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
-        <author>nous@mengxianjun.com (Duō Yúrén)</author>
+        <author>nous@mengxianjun.com (Duōyú Rén)</author>
         <atom:modified>Sun, 15 Mar 2020 20:23:39 +0800</atom:modified>
         <guid>https://mengxianjun.org/gallery/photo/</guid>
         <description>Sample images from Pixabay</description>
         
-        <dc:creator>Duō Yúrén</dc:creator>
+        <dc:creator>Duōyú Rén</dc:creator>
         <media:content url="https://mengxianjun.org/images/feature/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
