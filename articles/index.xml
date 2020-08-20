@@ -22,6 +22,40 @@
 
       
       <item>
+        <title>赴粵務工道中謁靖節先生墓</title>
+        <link>https://mengxianjun.org/articles/20200816-visit-tym-poem/</link>
+        <pubDate>Sun, 16 Aug 2020 13:42:30 +0800</pubDate>
+        <author>nous@mengxianjun.com (Duōyú Rén)</author>
+        <atom:modified>Thu, 20 Aug 2020 15:20:58 +0800</atom:modified>
+        <guid>https://mengxianjun.org/articles/20200816-visit-tym-poem/</guid>
+        <description>盛夏孟秋之日，余自遠方赴粵中務工。時過九江，隨前前前同儕付君小芳謁靖節祠、太白煙、愛蓮池、點將臺、浸水亭。亦談及潯陽三隱、江州司馬、白鹿書院</description>
+        
+        <dc:creator>李二狗</dc:creator>
+        <media:content url="https://mengxianjun.org/images/articles/visittym.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        
+        
+        
+          
+            
+              <category>poem</category>
+            
+          
+        
+        
+          
+            
+              <category>詩歌</category>
+            
+          
+        
+        
+          
+            
+          
+        
+      </item>
+      
+      <item>
         <title>編不如抄，抄不如竊：徒手攢一本字典</title>
         <link>https://mengxianjun.org/articles/20200521-diy-your-dictionary/</link>
         <pubDate>Thu, 21 May 2020 12:35:09 +0800</pubDate>
@@ -618,7 +652,7 @@
         <link>https://mengxianjun.org/articles/20170513-mathjax-test/</link>
         <pubDate>Sat, 13 May 2017 09:29:32 +0800</pubDate>
         <author>nous@mengxianjun.com (Duōyú Rén)</author>
-        <atom:modified>Tue, 17 Mar 2020 17:08:21 +0800</atom:modified>
+        <atom:modified>Mon, 03 Aug 2020 12:02:51 +0800</atom:modified>
         <guid>https://mengxianjun.org/articles/20170513-mathjax-test/</guid>
         <description>本頁面測試 MathJax 渲染網頁上的 $\LaTeX$ 公式。MathJax 與 Hugo 匹配使用時，因與 emph 等標籤衝突，$\LaTeX$ 源碼中的下標和閉區間符號等可能有時需要稍加調</description>
         
