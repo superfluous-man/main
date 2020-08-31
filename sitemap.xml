@@ -3,23 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mengxianjun.org/books/logic/ch00/</loc>
+    <lastmod>2020-09-01T06:10:08+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mengxianjun.org/books/art/ch01/</loc>
     <lastmod>2020-03-16T22:23:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/movie/ch01/</loc>
+    <loc>https://mengxianjun.org/books/zgwx/ch01/</loc>
     <lastmod>2020-03-16T22:23:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/wxs/ch01/</loc>
+    <loc>https://mengxianjun.org/books/zgzx/ch01/</loc>
     <lastmod>2020-03-16T22:23:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/zxs/ch01/</loc>
-    <lastmod>2020-03-16T22:23:19+08:00</lastmod>
+    <loc>https://mengxianjun.org/books/logic/ch01/</loc>
+    <lastmod>2020-09-01T06:10:16+08:00</lastmod>
   </url>
   
   <url>
@@ -28,18 +33,18 @@
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/movie/ch02/</loc>
+    <loc>https://mengxianjun.org/books/zgwx/ch02/</loc>
     <lastmod>2020-03-16T22:20:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/wxs/ch02/</loc>
+    <loc>https://mengxianjun.org/books/zgzx/ch02/</loc>
     <lastmod>2020-03-16T22:20:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/zxs/ch02/</loc>
-    <lastmod>2020-03-16T22:20:59+08:00</lastmod>
+    <loc>https://mengxianjun.org/books/logic/ch02/</loc>
+    <lastmod>2020-09-01T06:10:24+08:00</lastmod>
   </url>
   
   <url>
@@ -48,18 +53,18 @@
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/movie/ch03/</loc>
+    <loc>https://mengxianjun.org/books/zgwx/ch03/</loc>
     <lastmod>2020-03-16T22:20:53+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/wxs/ch03/</loc>
+    <loc>https://mengxianjun.org/books/zgzx/ch03/</loc>
     <lastmod>2020-03-16T22:20:53+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/zxs/ch03/</loc>
-    <lastmod>2020-03-16T22:20:53+08:00</lastmod>
+    <loc>https://mengxianjun.org/books/logic/ch03/</loc>
+    <lastmod>2020-09-01T06:10:31+08:00</lastmod>
   </url>
   
   <url>
@@ -68,18 +73,18 @@
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/movie/ch04/</loc>
+    <loc>https://mengxianjun.org/books/zgwx/ch04/</loc>
     <lastmod>2020-03-16T22:21:55+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/wxs/ch04/</loc>
+    <loc>https://mengxianjun.org/books/zgzx/ch04/</loc>
     <lastmod>2020-03-16T22:21:55+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/zxs/ch04/</loc>
-    <lastmod>2020-03-16T22:21:55+08:00</lastmod>
+    <loc>https://mengxianjun.org/books/logic/ch04/</loc>
+    <lastmod>2020-09-01T06:10:41+08:00</lastmod>
   </url>
   
   <url>
@@ -88,18 +93,18 @@
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/movie/ch05/</loc>
+    <loc>https://mengxianjun.org/books/zgwx/ch05/</loc>
     <lastmod>2020-03-16T22:22:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/wxs/ch05/</loc>
+    <loc>https://mengxianjun.org/books/zgzx/ch05/</loc>
     <lastmod>2020-03-16T22:22:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/zxs/ch05/</loc>
-    <lastmod>2020-03-16T22:22:06+08:00</lastmod>
+    <loc>https://mengxianjun.org/books/logic/ch05/</loc>
+    <lastmod>2020-09-01T06:11:04+08:00</lastmod>
   </url>
   
   <url>
@@ -108,33 +113,193 @@
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/movie/ch06/</loc>
+    <loc>https://mengxianjun.org/books/zgwx/ch06/</loc>
     <lastmod>2020-03-16T22:22:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/wxs/ch06/</loc>
+    <loc>https://mengxianjun.org/books/zgzx/ch06/</loc>
     <lastmod>2020-03-16T22:22:17+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/zxs/ch06/</loc>
-    <lastmod>2020-03-16T22:22:17+08:00</lastmod>
+    <loc>https://mengxianjun.org/books/logic/ch06/</loc>
+    <lastmod>2020-09-01T06:11:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch07/</loc>
+    <lastmod>2020-09-01T06:17:27+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch08/</loc>
+    <lastmod>2020-09-01T06:17:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch09/</loc>
+    <lastmod>2020-09-01T06:17:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch10/</loc>
+    <lastmod>2020-09-01T06:18:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch11/</loc>
+    <lastmod>2020-09-01T06:18:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch12/</loc>
+    <lastmod>2020-09-01T06:21:12+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch13/</loc>
+    <lastmod>2020-09-01T06:22:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch14/</loc>
+    <lastmod>2020-09-01T06:29:17+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch15/</loc>
+    <lastmod>2020-09-01T06:29:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch16/</loc>
+    <lastmod>2020-09-01T06:24:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch17/</loc>
+    <lastmod>2020-09-01T06:24:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch18/</loc>
+    <lastmod>2020-09-01T06:25:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch19/</loc>
+    <lastmod>2020-09-01T06:26:14+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch20/</loc>
+    <lastmod>2020-09-01T06:26:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch21/</loc>
+    <lastmod>2020-09-01T06:27:39+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch22/</loc>
+    <lastmod>2020-09-01T06:28:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch23/</loc>
+    <lastmod>2020-09-01T06:28:40+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch24/</loc>
+    <lastmod>2020-09-01T06:31:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch25/</loc>
+    <lastmod>2020-09-01T06:31:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch26/</loc>
+    <lastmod>2020-09-01T06:33:34+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch27/</loc>
+    <lastmod>2020-09-01T06:33:52+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch28/</loc>
+    <lastmod>2020-09-01T06:34:26+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch29/</loc>
+    <lastmod>2020-09-01T06:34:45+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch30/</loc>
+    <lastmod>2020-09-01T06:35:55+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch31/</loc>
+    <lastmod>2020-09-01T06:36:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch32/</loc>
+    <lastmod>2020-09-01T06:37:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/books/logic/ch33/</loc>
+    <lastmod>2020-09-01T06:37:20+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mengxianjun.org/categories/</loc>
-    <lastmod>2020-08-30T00:18:50+08:00</lastmod>
+    <lastmod>2020-09-01T06:37:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/tags/lecture/</loc>
+    <lastmod>2020-09-01T06:37:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/tags/logic/</loc>
+    <lastmod>2020-09-01T06:37:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/series/logic/</loc>
+    <lastmod>2020-09-01T06:37:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/categories/logic/</loc>
+    <lastmod>2020-09-01T06:37:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/series/</loc>
+    <lastmod>2020-09-01T06:37:20+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/tags/</loc>
+    <lastmod>2020-09-01T06:37:20+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mengxianjun.org/tags/poem/</loc>
     <lastmod>2020-08-22T00:39:53+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mengxianjun.org/tags/</loc>
-    <lastmod>2020-08-30T00:18:50+08:00</lastmod>
   </url>
   
   <url>
@@ -169,7 +334,7 @@
   
   <url>
     <loc>https://mengxianjun.org/about/</loc>
-    <lastmod>2020-04-06T15:44:53+08:00</lastmod>
+    <lastmod>2020-09-01T05:37:08+08:00</lastmod>
   </url>
   
   <url>
@@ -219,7 +384,7 @@
   
   <url>
     <loc>https://mengxianjun.org/categories/%E5%AF%AB%E4%BD%9C/</loc>
-    <lastmod>2020-08-30T00:18:50+08:00</lastmod>
+    <lastmod>2020-09-01T03:09:58+08:00</lastmod>
   </url>
   
   <url>
@@ -323,11 +488,6 @@
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/series/</loc>
-    <lastmod>2020-08-03T12:02:51+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mengxianjun.org/tags/shortcode/</loc>
     <lastmod>2020-03-19T20:29:50+08:00</lastmod>
   </url>
@@ -343,13 +503,8 @@
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/wxs/</loc>
+    <loc>https://mengxianjun.org/books/zgwx/</loc>
     <lastmod>2020-03-19T20:27:55+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mengxianjun.org/books/movie/</loc>
-    <lastmod>2020-03-19T20:07:12+08:00</lastmod>
   </url>
   
   <url>
@@ -358,13 +513,18 @@
   </url>
   
   <url>
+    <loc>https://mengxianjun.org/books/logic/</loc>
+    <lastmod>2020-09-01T06:08:47+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mengxianjun.org/tags/chinese/</loc>
-    <lastmod>2020-03-17T17:08:53+08:00</lastmod>
+    <lastmod>2020-09-01T03:09:58+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mengxianjun.org/articles/20190716-han-yu-ou-hua-yu-fan-yi-qiang/</loc>
-    <lastmod>2020-03-17T17:08:53+08:00</lastmod>
+    <lastmod>2020-09-01T03:09:58+08:00</lastmod>
   </url>
   
   <url>
@@ -514,7 +674,7 @@
   
   <url>
     <loc>https://mengxianjun.org/books/</loc>
-    <lastmod>2020-03-17T10:51:43+08:00</lastmod>
+    <lastmod>2020-09-01T00:19:32+08:00</lastmod>
   </url>
   
   <url>
@@ -528,7 +688,7 @@
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/books/zxs/</loc>
+    <loc>https://mengxianjun.org/books/zgzx/</loc>
     <lastmod>2020-03-19T20:03:07+08:00</lastmod>
   </url>
   
