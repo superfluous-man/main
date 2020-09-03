@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-03T18:40:35&#43;0800">
+<meta name="modified" content="2020-09-03T23:57:35&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 01 章 預備：素樸集合論",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-03T18:40:35+08:00",
+    "dateModified": "2020-09-03T23:57:35+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch01/",
     "description": "The material in this chapter is an introduction to basic naïve set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 3, 2020 </time>
   
-&middot; 🔢 27778 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 56 min read</span>
+&middot; 🔢 23915 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 48 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -2117,7 +2117,7 @@ The set $\mathbb{N}^{2}$ of pairs of natural numbers can be listed in a<br />
 <img src="https://i.loli.net/2020/09/03/ybmdfP14eY2VnLD.png" alt="zzzz.png" /><br />
 We have put the diagonal, here, in bold, since the subset of $\mathbb{N}^2$ consisting of the pairs lying on the diagonal, i.e.,<br />
 $$\lbrace ⟨0,0 ⟩, ⟨ 1,1 ⟩, ⟨ 2,2 ⟩, \cdots\rbrace ,$$<br />
-is the <bb>identity relation on</bb> $\mathbb{N}$. (Since the identity relation is popular, let&rsquo;s define $\Id{A}=\lbrace ⟨ x,x ⟩: x \in X\rbrace $ for any set $A$.) The subset of all pairs lying above the diagonal, i.e.,<br />
+is the <bb>identity relation on</bb> $\mathbb{N}$. (Since the identity relation is popular, let&rsquo;s define $Id_A=\lbrace ⟨ x,x ⟩: x \in X\rbrace $ for any set $A$.) The subset of all pairs lying above the diagonal, i.e.,<br />
 $$L = \lbrace ⟨0,1⟩,⟨0,2⟩,\cdots,⟨1,2⟩,⟨1,3⟩, \cdots, ⟨2,3 ⟩, ⟨2,4⟩,\cdots\rbrace ,$$<br />
 is the <bb>less than</bb> relation, i.e., $Lnm$ iff $n &lt; m$. The subset of pairs below the diagonal, i.e.,<br />
 $$G=\lbrace ⟨1,0⟩,⟨2,0⟩, ⟨2,1⟩, ⟨3,0⟩,⟨3,1 ⟩,⟨3,2 ⟩, \cdots\rbrace ,$$<br />
@@ -2224,238 +2224,154 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
 </blockquote>
 <h2 id="orders">Orders</h2>
 <p>Many of our comparisons involve describing some objects as being &ldquo;less than&rsquo;&rsquo;, &ldquo;equal to&rsquo;&rsquo;, or &ldquo;greater than&rsquo;&rsquo; other objects, in a certain respect. These involve <bb>order</bb> relations. But there are different kinds of order relations. For instance, some require that any two objects be comparable, others don&rsquo;t. Some include identity (like $\leqslant$) and some exclude it (like $&lt;$). It will help us to have a taxonomy here.</p>
-<p>\begin{defn}[Preorder]<br />
-A relation which is both reflexive and transitive is called a<br />
-<bb>preorder.</bb><br />
-\end{defn}</p>
-<p>\begin{defn}[Partial order]<br />
-A preorder which is also anti-symmetric is called a<br />
-<bb>partial order</bb>.<br />
-\end{defn}</p>
-<p>\begin{defn}[Linear order]<br />
-A partial order which is also connected is called a<br />
-<bb>total order</bb> or <bb>linear order.</bb><br />
-\end{defn}</p>
-<p>Every linear order is also a partial order, and every partial order is<br />
-also a preorder, but the converses don&rsquo;t hold.</p>
-<p>\begin{examplep}{}<br />
-Every linear order is also a partial order, and every partial order is<br />
-also a preorder, but the converses don&rsquo;t hold. The universal relation<br />
-on $A$ is a preorder, since it is reflexive and transitive. But, if<br />
-$A$ has more than one <bb>element</bb>, the universal relation is not<br />
-anti-symmetric, and so not a partial order.<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-Consider the <bb>no longer than</bb> relation $\preccurlyeq$<br />
-on $\mathbb{B}^*$: $x \preccurlyeq y$ iff $\text{len } {x} \le \text{len } {y}$. This is a<br />
-preorder (reflexive and transitive), and even connected, but not a<br />
-partial order, since it is not anti-symmetric. For instance, $01<br />
-\preccurlyeq 10$ and $10 \preccurlyeq 01$, but $01 \neq 10$.<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-An important partial order is the relation $\subseteq$ on a set of<br />
-sets. This is not in general a linear order, since if $a \neq b$ and<br />
-we consider $\mathscr{P}({\lbrace a, b\rbrace }) = \lbrace \varnothing, \lbrace a\rbrace , \lbrace b\rbrace , \lbrace a,b\rbrace \rbrace $,<br />
-we see that $\lbrace a\rbrace  \nsubseteq \lbrace b\rbrace $ and $\lbrace a\rbrace  \neq \lbrace b\rbrace $ and $\lbrace b\rbrace<br />
-\nsubseteq \lbrace a\rbrace $.<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-The relation of <bb>divisibility without remainder</bb> gives us a<br />
-partial order which isn&rsquo;t a linear order. For integers $n$, $m$, we<br />
-write $n\mid m$ to mean $n$ (evenly) divides $m$, i.e., iff there is<br />
-some integer $k$ so that $m=kn$. On $\mathbb{N}$, this is a partial order, but not a<br />
-linear order: for instance, $2\nmid3$ and also $3\nmid2$. Considered<br />
-as a relation on $\mathbb{Z}$, divisibility is only a preorder since<br />
-it is not anti-symmetric: $1\mid-1$ and $-1\mid1$ but $1\neq-1$.<br />
-\end{examplep}</p>
-<p>\begin{defn}[Strict order]<br />
-A <bb>strict order</bb> is a relation which is irreflexive, asymmetric,<br />
-and transitive.<br />
-\end{defn}</p>
-<p>\begin{defn}[Strict linear order]<br />
-A strict order which is also connected is called a<br />
-<bb>strict linear order.</bb><br />
-\end{defn}</p>
-<p>\begin{examplep}{}<br />
-$\leqslant$ is the linear order corresponding to the strict linear<br />
-order $&lt;$. $\subseteq$ is the partial order corresponding to the<br />
-strict order $\subsetneq$.<br />
-\end{examplep}</p>
-<p>\begin{defn}[Total order]<br />
-A strict order which is also connected is called a <bb>total order</bb>.<br />
-This is also sometimes called a <bb>strict linear order</bb>.<br />
-\end{defn}</p>
-<p>Any strict order $R$ on $A$ can be turned into a partial order by<br />
-adding the diagonal $\Id{A}$, i.e., adding all the pairs $\tuple{x,<br />
-x}$.  (This is called the <bb>reflexive closure</bb> of $R$.)<br />
-Conversely, starting from a partial order, one can get a strict order<br />
-by removing $\Id{A}$. These next two results make this precise.</p>
-<p>\begin{prop}{}<br />
-If $R$ is a strict order on $A$, then $R^+ = R \cup \Id{A}$ is a<br />
-partial order. Moreover, if $R$ is total, then $R^+$ is a linear<br />
-order.<br />
-\end{prop}</p>
-<p>\begin{proof}<br />
-Suppose $R$ is a strict order, i.e., $R \subseteq A^2$ and $R$ is<br />
-irreflexive, asymmetric, and transitive. Let $R^+ = R \cup \Id{A}$. We<br />
-have to show that $R^+$ is reflexive, antisymmetric, and transitive.</p>
-<p>$R^+$ is clearly reflexive, since $⟨x, x⟩ \in \Id{A} \subseteq<br />
-R^+$ for all $x \in A$.</p>
-<p>To show $R^+$ is antisymmetric, suppose for reductio that $R^+xy$ and<br />
-$R^+yx$ but $x \neq y$. Since $⟨x,y⟩ \in R \cup \Id{X}$, but<br />
-$⟨x, y⟩ \notin \Id{X}$, we must have $⟨x, y⟩ \in R$, i.e.,<br />
-$Rxy$. Similarly, $Ryx$. But this contradicts the assumption<br />
-that $R$ is asymmetric.</p>
-<p>To establish transitivity, suppose that $R^+xy$ and $R^+yz$. If both<br />
-$⟨x, y⟩ \in R$ and $⟨y,z⟩ \in R$, then $⟨x, z⟩ \in<br />
-R$ since $R$ is transitive. Otherwise, either $⟨x, y⟩ \in<br />
-\Id{X}$, i.e., $x = y$, or $⟨y, z⟩ \in \Id{X}$, i.e., $y = z$.<br />
-In the first case, we have that $R^+yz$ by assumption, $x = y$, hence<br />
-$R^+xz$. Similarly in the second case. In either case, $R^+xz$, thus,<br />
-$R^+$ is also transitive.</p>
-<p>Concerning the &ldquo;moreover&rsquo;&rsquo; clause, suppose $R$ is a total order,<br />
-i.e., that $R$ is connected. So for all $x \neq y$, either $Rxy$<br />
-or $Ryx$, i.e., either $⟨x, y⟩ \in R$ or $⟨y, x⟩ \in R$.<br />
-Since $R \subseteq R^+$, this remains true of $R^+$, so $R^+$ is<br />
-connected as well.<br />
-\end{proof}</p>
-<p>\begin{prop}{}<br />
-If $R$ is a partial order on $X$, then $R^- = R \setminus \Id{X}$ is a<br />
-strict order. Moreover, if $R$ is linear, then $R^-$ is total.<br />
-\end{prop}</p>
-<p>\begin{proof}<br />
-This is left as an exercise.<br />
-\end{proof}</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Give a proof of Proposition \olref{prop:partialtostrict}.<br />
-\end{prob}</p>
+<p><bb>定義 1.21【Preorder】</bb><br />
+A relation which is both reflexive and transitive is called a <bb>preorder.</bb></p>
 </blockquote>
-<p>\begin{examplep}{}<br />
-$\leqslant$ is the linear order corresponding to the total<br />
-order $&lt;$. $\subseteq$ is the partial order corresponding to<br />
-the strict order $\subsetneq$.<br />
-\end{examplep}</p>
-<p>The following simple result which establishes that total orders<br />
-satisfy an extensionality-like property:</p>
-<p>\begin{prop}{}<br />
-If $&lt;$ totally orders $A$, then:<br />
-$$<br />
-(\forall a, b \in A)((\forall x \in A)(x &lt; a \liff x &lt; b) \lif a = b)<br />
-$$<br />
-\end{prop}</p>
-<p>\begin{proof}<br />
-Suppose $(\forall x \in A)(x &lt; a \liff x &lt; b)$. If $a &lt; b$, then $a &lt;<br />
-a$, contradicting the fact that $&lt;$ is irreflexive; so $a \nless b$.<br />
-Exactly similarly, $b \nless a$. So $a = b$, as $&lt;$ is connected.<br />
-\end{proof}</p>
-<h2 id="graphs">Graphs</h2>
-<p>A <bb>graph</bb> is a diagram in which points&mdash;called &ldquo;nodes&rsquo;&rsquo; or<br />
-&ldquo;vertices&rsquo;&rsquo; (plural of &ldquo;vertex&rsquo;')&mdash;are connected by edges.  Graphs<br />
-are a ubiquitous tool in discrete mathematics and in computer science.<br />
-They are incredibly useful for representing, and visualizing,<br />
-relationships and structures, from concrete things like networks of<br />
-various kinds to abstract structures such as the possible outcomes of<br />
-decisions.  There are many different kinds of graphs in the literature<br />
-which differ, e.g., according to whether the edges are directed or<br />
-not, have labels or not, whether there can be edges from a node to the<br />
-same node, multiple edges between the same nodes, etc.  \emph{Directed<br />
-graphs} have a special connection to relations.</p>
-<p>\begin{defn}[Directed graph]<br />
-A <bb>directed graph</bb> $G = ⟨V, E⟩$ is a set of<br />
-<bb>vertices</bb> $V$ and a set of <bb>edges</bb> $E \subseteq V^2$.<br />
-\end{defn}</p>
-<p>According to our definition, a graph just is a set together with a<br />
-relation on that set.  Of course, when talking about graphs, it&rsquo;s only<br />
-natural to expect that they are graphically represented: we can draw a<br />
-graph by connecting two vertices $v_1$ and $v_2$ by an arrow iff<br />
-$⟨v_1, v_2⟩ \in E$.  The only difference between a relation by<br />
-itself and a graph is that a graph specifies the set of vertices,<br />
-i.e., a graph may have isolated vertices. The important point,<br />
-however, is that every relation $R$ on a set $X$ can be seen as a<br />
-directed graph $⟨X, R⟩$, and conversely, a directed<br />
-graph $⟨V, E⟩$ can be seen as a relation $E \subseteq V^2$ with<br />
-the set $V$ explicitly specified.</p>
-<p>\begin{examplep}{}<br />
-The graph $⟨V, E⟩$ with $V = \lbrace 1, 2, 3, 4\rbrace $ and $E =<br />
-\lbrace ⟨1,1⟩, \allowbreak ⟨1, 2⟩, \allowbreak ⟨1, 3⟩,<br />
-\allowbreak ⟨2, 3⟩\rbrace $ looks like this:<br />
-\begin{align*}<br />
-&amp; \begin{tikzpicture}[-&gt;,node distance=2cm]<br />
-\node[draw,circle] (A) {$1$};<br />
-\node[draw,circle] (B) [right of=A] {$2$};<br />
-\node[draw,circle] (C) [below of=B] {$3$};<br />
-\node[draw,circle] (D) [right of=B] {$4$};<br />
-\draw (A) to [loop above]  (A);<br />
-\draw (A) to  (B);<br />
-\draw (A) to  (C);<br />
-\draw (B) to  (C);<br />
-\end{tikzpicture}<br />
-\mathbb{Z}ertext{This is a different graph than $⟨V&rsquo;, E⟩$ with $V&rsquo; =<br />
-\lbrace 1, 2, 3\rbrace $, which looks like this:}<br />
-&amp; \begin{tikzpicture}[-&gt;,node distance=2cm]<br />
-\node[draw,circle] (A) {$1$};<br />
-\node[draw,circle] (B) [right of=A] {$2$};<br />
-\node[draw,circle] (C) [below of=B] {$3$};<br />
-\draw (A) to [loop above]  (A);<br />
-\draw (A) to  (B);<br />
-\draw (A) to  (C);<br />
-\draw (B) to  (C);<br />
-\end{tikzpicture}<br />
-\end{align*}<br />
-\end{examplep}</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Consider the less-than-or-equal-to relation $\leqslant$ on the set $\lbrace 1,<br />
-2, 3, 4\rbrace $ as a graph and draw the corresponding diagram.<br />
-\end{prob}</p>
+<p><bb>定義 1.22【Partial order】</bb><br />
+A preorder which is also anti-symmetric is called a <bb>partial order</bb>.</p>
+</blockquote>
+<blockquote>
+<p><bb>定義 1.23【Linear order】</bb><br />
+A partial order which is also connected is called a <bb>total order</bb> or <bb>linear order.</bb></p>
+</blockquote>
+<p>Every linear order is also a partial order, and every partial order is also a preorder, but the converses don&rsquo;t hold.</p>
+<blockquote>
+<p><bb>示例 1.17</bb><br />
+Every linear order is also a partial order, and every partial order is also a preorder, but the converses don&rsquo;t hold. The universal relation on $A$ is a preorder, since it is reflexive and transitive. But, if $A$ has more than one <bb>element</bb>, the universal relation is not anti-symmetric, and so not a partial order.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.18</bb><br />
+Consider the <bb>no longer than</bb> relation $\preccurlyeq$ on $\mathbb{B}^*$: $x \preccurlyeq y$ iff $\text{len } {x} \le \text{len } {y}$. This is a preorder (reflexive and transitive), and even connected, but not a partial order, since it is not anti-symmetric. For instance, $01 \preccurlyeq 10$ and $10 \preccurlyeq 01$, but $01 \neq 10$.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.19</bb><br />
+An important partial order is the relation $\subseteq$ on a set of sets. This is not in general a linear order, since if $a \neq b$ and we consider $\mathscr{P}(\lbrace a, b\rbrace ) = \lbrace \varnothing, \lbrace a\rbrace , \lbrace b\rbrace , \lbrace a,b\rbrace \rbrace $, we see that $\lbrace a\rbrace  \nsubseteq \lbrace b\rbrace $ and $\lbrace a\rbrace  \neq \lbrace b\rbrace $ and $\lbrace b\rbrace \nsubseteq \lbrace a\rbrace $.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.20</bb><br />
+The relation of <bb>divisibility without remainder</bb> gives us a partial order which isn&rsquo;t a linear order. For integers $n$, $m$, we write $n\mid m$ to mean $n$ (evenly) divides $m$, i.e., iff there is some integer $k$ so that $m=kn$. On $\mathbb{N}$, this is a partial order, but not a linear order: for instance, $2\nmid3$ and also $3\nmid2$. Considered as a relation on $\mathbb{Z}$, divisibility is only a preorder since it is not anti-symmetric: $1\mid-1$ and $-1\mid1$ but $1\neq-1$.</p>
+</blockquote>
+<blockquote>
+<p><bb>定義 1.24【Strict order】</bb><br />
+A <bb>strict order</bb> is a relation which is irreflexive, asymmetric, and transitive.</p>
+</blockquote>
+<blockquote>
+<p><bb>定義 1.25【Strict linear order】</bb><br />
+A strict order which is also connected is called a <bb>strict linear order.</bb></p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.21</bb><br />
+$\leqslant$ is the linear order corresponding to the strict linear order $&lt;$. $\subseteq$ is the partial order corresponding to the strict order $\subsetneq$.</p>
+</blockquote>
+<blockquote>
+<p><bb>定義 1.26【Total order】</bb><br />
+A strict order which is also connected is called a <bb>total order</bb>. This is also sometimes called a <bb>strict linear order</bb>.</p>
+</blockquote>
+<p>Any strict order $R$ on $A$ can be turned into a partial order by adding the diagonal Id$_{A}$, i.e., adding all the pairs $⟨x, x⟩$.  (This is called the <bb>reflexive closure</bb> of $R$.) Conversely, starting from a partial order, one can get a strict order by removing Id$_A$. These next two results make this precise.</p>
+<blockquote>
+<p><bb>命題 1.3</bb><br />
+If $R$ is a strict order on $A$, then $R^+ = R \cup Id_A$ is a partial order. Moreover, if $R$ is total, then $R^+$ is a linear order.</p>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.3 之證明</bb></p>
+<ol>
+<li>Suppose $R$ is a strict order, i.e., $R \subseteq A^2$ and $R$ is irreflexive, asymmetric, and transitive. Let $R^+ = R \cup Id_A$. We have to show that $R^+$ is reflexive, antisymmetric, and transitive.</li>
+<li>$R^+$ is clearly reflexive, since $⟨x, x⟩ \in Id_A \subseteq R^+$ for all $x \in A.$</li>
+<li>To show $R^+$ is antisymmetric, suppose for reductio that $R^+xy$ and $R^+yx$ but $x \neq y$. Since $⟨x,y⟩ \in R \cup Id_X$, but $⟨x, y⟩ \notin  Id_X$, we must have $⟨x, y⟩ \in R$, i.e., $Rxy$. Similarly, $Ryx$. But this contradicts the assumption that $R$ is asymmetric.</li>
+<li>To establish transitivity, suppose that $R^+xy$ and $R^+yz$. If both $⟨x, y⟩ \in R$ and $⟨y,z⟩ \in R$, then $⟨x, z⟩ \in R$ since $R$ is transitive. Otherwise, either $⟨x, y⟩ \in Id_X$, i.e., $x = y$, or $⟨y, z⟩ \in Id_X$, i.e., $y = z$. In the first case, we have that $R^+yz$ by assumption, $x = y$, hence $R^+xz$. Similarly in the second case. In either case, $R^+xz$, thus, $R^+$ is also transitive.</li>
+<li>Concerning the &ldquo;moreover&rsquo;&rsquo; clause, suppose $R$ is a total order, i.e., that $R$ is connected. So for all $x \neq y$, either $Rxy$ or $Ryx$, i.e., either $⟨x, y⟩ \in R$ or $⟨y, x⟩ \in R$. Since $R \subseteq R^+$, this remains true of $R^+$, so $R^+$ is connected as well.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.4</bb><br />
+If $R$ is a partial order on $X$, then $R^- = R \setminus Id_X$ is a strict order. Moreover, if $R$ is linear, then $R^-$ is total.</p>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.4 之證明</bb><br />
+This is left as an exercise.</p>
+</blockquote>
+<blockquote>
+<p><bb>Problem 1.4</bb><br />
+Give a proof of Proposition 1.4.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.22</bb><br />
+$\leqslant$ is the linear order corresponding to the total order $&lt;$. $\subseteq$ is the partial order corresponding to the strict order $\subsetneq$.</p>
+</blockquote>
+<p>The following simple result which establishes that total orders satisfy an extensionality-like property:</p>
+<blockquote>
+<p><bb>命題 1.5</bb><br />
+If $&lt;$ totally orders $A$, then:<br />
+$$(\forall a, b \in A)((\forall x \in A)(x &lt; a \leftrightarrow x &lt; b) \rightarrow a = b)$$</p>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.5 之證明</bb><br />
+Suppose $(\forall x \in A)(x &lt; a \leftrightarrow x &lt; b)$. If $a &lt; b$, then $a &lt; a$, contradicting the fact that $&lt;$ is irreflexive; so $a \nless b$. Exactly similarly, $b \nless a$. So $a = b$, as $&lt;$ is connected.</p>
+</blockquote>
+<h2 id="graphs">Graphs</h2>
+<p>A <bb>graph</bb> is a diagram in which points&mdash;called &ldquo;nodes&rsquo;&rsquo; or &ldquo;vertices&rsquo;&rsquo; (plural of &ldquo;vertex&rsquo;')&mdash;are connected by edges.  Graphs are a ubiquitous tool in discrete mathematics and in computer science. They are incredibly useful for representing, and visualizing, relationships and structures, from concrete things like networks of various kinds to abstract structures such as the possible outcomes of decisions.  There are many different kinds of graphs in the literature which differ, e.g., according to whether the edges are directed or not, have labels or not, whether there can be edges from a node to the same node, multiple edges between the same nodes, etc. <strong>Directed graphs</strong> have a special connection to relations.</p>
+<blockquote>
+<p><bb>定義 1.26【Directed graph】</bb><br />
+A <bb>directed graph</bb> $G = ⟨V, E⟩$ is a set of <bb>vertices</bb> $V$ and a set of <bb>edges</bb> $E \subseteq V^2$.</p>
+</blockquote>
+<p>According to our definition, a graph just is a set together with a relation on that set.  Of course, when talking about graphs, it&rsquo;s only natural to expect that they are graphically represented: we can draw a graph by connecting two vertices $v_1$ and $v_2$ by an arrow iff $⟨v_1, v_2⟩ \in E$.  The only difference between a relation by itself and a graph is that a graph specifies the set of vertices, i.e., a graph may have isolated vertices. The important point, however, is that every relation $R$ on a set $X$ can be seen as a directed graph $⟨X, R⟩$, and conversely, a directed graph $⟨V, E⟩$ can be seen as a relation $E \subseteq V^2$ with the set $V$ explicitly specified.</p>
+<blockquote>
+<p><bb>示例 1.23</bb><br />
+The graph $⟨V, E⟩$ with $V = \lbrace 1, 2, 3, 4\rbrace $ and $E = \lbrace ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩\rbrace $ looks like this:</p>
+</blockquote>
+<p><img src="https://i.loli.net/2020/09/03/Eg9Ium37BZiHy62.png" alt="zzzz.png" /></p>
+<p>This is a different graph than $⟨V&rsquo;, E⟩$ with $V&rsquo; =<br />
+\lbrace 1, 2, 3\rbrace $, which looks like this:</p>
+<p><img src="https://i.loli.net/2020/09/03/xyr1JsVlTAhNX2O.png" alt="zzzz.png" /></p>
+<blockquote>
+<p><bb>Problem 1.14</bb><br />
+Consider the less-than-or-equal-to relation $\leqslant$ on the set $\lbrace 1, 2, 3, 4\rbrace $ as a graph and draw the corresponding diagram.</p>
 </blockquote>
 <h2 id="operations-on-relations">Operations on Relations</h2>
 <p>It is often useful to modify or combine relations. In<br />
-Proposition<br />
-\pref{prop:stricttopartial}, we considered the <bb>union</bb><br />
+Proposition1.3（P.32）, we considered the <bb>union</bb><br />
 of relations, which is just the union of two relations considered as<br />
-sets of pairs. Similarly, in Proposition \pref{prop:partialtostrict},<br />
+sets of pairs. Similarly, in Proposition1.4（P.33）,<br />
 we considered the relative difference of relations. Here are some<br />
 other operations we can perform on relations.</p>
-<p>\begin{defn}[Operations on Relations]<br />
-Let $R$, $S$ be relations, and $A$ be any set.</p>
-<p>The <bb>inverse</bb> of $R$ is $R^{-1} = \Setabs{⟨y, x⟩}{\tuple{x,<br />
-y} \in R}$.</p>
-<p>The <bb>relative product</bb> of $R$ and $S$ is $(R \mid S) =<br />
-\lbrace ⟨x, z⟩ : \exists y(Rxy \land Syz)\rbrace $.</p>
-<p>The <bb>restriction</bb> of $R$ to $A$ is $\funrestrictionto{R}{A}= R<br />
-\cap A^2$.</p>
-<p>The <bb>application</bb> of $R$ to $A$ is $\funimage{R}{A} = \lbrace y :<br />
-(\exists x \in A)Rxy\rbrace $<br />
-\end{defn}</p>
-<p>\begin{examplep}{}<br />
-Let $S \subseteq \mathbb{Z}^2$ be the successor relation on $\mathbb{Z}$, i.e.,<br />
-$S = \Setabs{⟨x, y⟩ \in \mathbb{Z}^2}{x + 1 = y}$, so that $Sxy$ iff $x + 1 = y$.</p>
-<p>$S^{-1}$ is the predecessor relation on $\mathbb{Z}$, i.e.,<br />
-$\Setabs{⟨x,y⟩\in\mathbb{Z}^2}{x -1 =y}$.</p>
-<p>$S\mid S$ is<br />
-$ \Setabs{⟨x,y⟩\in\mathbb{Z}^2}{x + 2 =y}$</p>
-<p>$\funrestrictionto{S}{\mathbb{N}}$ is the successor relation on $\mathbb{N}$.</p>
-<p>$\funimage{S}{\lbrace 1,2,3\rbrace }$ is $\lbrace 2, 3, 4\rbrace $.<br />
-\end{examplep}</p>
-<p>\begin{defn}[Transitive closure]Let $R \subseteq A^2$ be a binary relation.</p>
-<p>The <bb>transitive closure</bb> of $R$ is $R^+ = \bigcup_{0 &lt; n \in<br />
-\mathbb{N}} R^n$, where we recursively define $R^1 = R$ and $R^{n+1} = R^n<br />
-\mid R$.</p>
-<p>The <bb>reflexive transitive closure</bb> of $R$ is $R^* = R^+ \cup<br />
-\Id{X}$.<br />
-\end{defn}</p>
-<p>\begin{examplep}{}<br />
-Take the successor relation $S \subseteq \mathbb{Z}^2$. $S^2xy$ iff $x + 2 =<br />
-y$, $S^3xy$ iff $x + 3 = y$, etc. So $S^+xy$ iff $x + n = y$ for some<br />
-$n &gt; 1$. In other words, $S^+xy$ iff $x &lt; y$, and $S^*xy$ iff $x \le<br />
-y$.<br />
-\end{examplep}</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the transitive closure of $R$ is in fact transitive.<br />
-\end{prob}</p>
+<p><bb>定義 1.28【Operations on Relations】</bb><br />
+Let $R$, $S$ be relations, and $A$ be any set.</p>
+<ol>
+<li>The <bb>inverse</bb> of $R$ is $R^{-1} = \lbrace ⟨y, x⟩: ⟨x, y⟩ \in R\rbrace$.</li>
+<li>The <bb>relative product</bb> of $R$ and $S$ is $(R \mid S) = \lbrace ⟨x, z⟩ : \exists y(Rxy \land Syz)\rbrace $.</li>
+<li>The <bb>restriction</bb> of $R$ to $A$ is $R\upharpoonright_{A}= R \cap A^2$.</li>
+<li>The <bb>application</bb> of $R$ to $A$ is $R[A] = \lbrace y : (\exists x \in A)Rxy\rbrace $</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.24</bb><br />
+Let $S \subseteq \mathbb{Z}^2$ be the successor relation on $\mathbb{Z}$, i.e., $S = \lbrace⟨x, y⟩ \in \mathbb{Z}^2: x + 1 = y\rbrace$, so that $Sxy$ iff $x + 1 = y$.</p>
+<ol>
+<li>$S^{-1}$ is the predecessor relation on $\mathbb{Z}$, i.e., $\lbrace ⟨x,y⟩\in\mathbb{Z}^2: x -1 =y\rbrace$.</li>
+<li>$S\mid S$ is $\lbrace ⟨x,y⟩\in\mathbb{Z}^2: x + 2 =y\rbrace$</li>
+<li>$S\upharpoonright_{\mathbb{N}}$ is the successor relation on $\mathbb{N}$.</li>
+<li>$S[\lbrace 1,2,3\rbrace ]$ is $\lbrace 2, 3, 4\rbrace$.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>定義 1.28【Transitive closure】</bb><br />
+Let $R \subseteq A^2$ be a binary relation.</p>
+<ol>
+<li>The <bb>transitive closure</bb> of $R$ is $R^+ = \bigcup_{0 &lt; n \in<br />
+\mathbb{N}} R^n$, where we recursively define $R^1 = R$ and $R^{n+1} = R^n \mid R$.</li>
+<li>The <bb>reflexive transitive closure</bb> of $R$ is $R^* = R^+ \cup Id_X$.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.25</bb><br />
+Take the successor relation $S \subseteq \mathbb{Z}^2$. $S^2xy$ iff $x + 2 = y$, $S^3xy$ iff $x + 3 = y$, etc. So $S^+xy$ iff $x + n = y$ for some $n &gt; 1$. In other words, $S^+xy$ iff $x &lt; y$, and $S^*xy$ iff $x \le y$.</p>
+</blockquote>
+<blockquote>
+<p><bb>Problem 1.15</bb><br />
+Show that the transitive closure of $R$ is in fact transitive.</p>
 </blockquote>
 <h1 id="函数关系之特例">函数：关系之特例</h1>
 <h2 id="basics">Basics</h2>
@@ -2487,166 +2403,7 @@ on the left represents the function&rsquo;s <bb>domain</bb>; the ellipse on<br /
 the right represents the function&rsquo;s <bb>codomain</bb>; and an arrow<br />
 points from an <bb>argument</bb> in the domain to the corresponding<br />
 <bb>value</bb> in the codomain.</p>
-<p>\begin{figure}<br />
-\begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-1.000000, xscale=1.000000, inner sep=0pt, outer sep=0pt]<br />
-\begin{scope}[shift={(1159.8262,388.50513)}]% layer1<br />
-% path923<br />
-\path[draw=huise,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=3.600pt] (-1151.4362,-242.1952) .. controls (-1149.4049,-232.8514) and<br />
-(-1146.1081,-223.3709) .. (-1139.3229,-216.6288) .. controls<br />
-(-1135.7213,-213.0506) and (-1131.3034,-210.4178) .. (-1126.8229,-208.0389) ..<br />
-controls (-1122.6588,-205.8319) and (-1118.3463,-203.7967) ..<br />
-(-1113.7370,-202.8163) .. controls (-1098.1862,-199.5194) and<br />
-(-1082.4167,-209.0038) .. (-1072.3659,-221.3241) .. controls<br />
-(-1062.3151,-233.6444) and (-1056.3073,-248.6952) .. (-1047.9792,-262.2420) ..<br />
-controls (-1041.2253,-273.2303) and (-1032.9128,-283.2616) ..<br />
-(-1023.3659,-291.9373) .. controls (-1017.1940,-297.5467) and<br />
-(-1010.4362,-302.6717) .. (-1005.5807,-309.4530) .. controls<br />
-(-1000.7253,-316.2342) and (-998.0143,-325.2655) .. (-1001.1042,-333.0116) ..<br />
-controls (-1003.0143,-337.7967) and (-1006.9089,-341.5545) ..<br />
-(-1011.2331,-344.3475) .. controls (-1021.7917,-351.1639) and<br />
-(-1034.8463,-352.8084) .. (-1047.4128,-353.0623) .. controls<br />
-(-1067.5300,-353.4647) and (-1087.7096,-350.7303) .. (-1106.9987,-344.9881) ..<br />
-controls (-1113.4518,-343.0662) and (-1119.8112,-340.8084) ..<br />
-(-1125.9088,-337.9530) .. controls (-1132.0651,-335.0662) and<br />
-(-1137.9909,-331.5350) .. (-1142.9128,-326.8436) .. controls<br />
-(-1152.7292,-317.4881) and (-1157.7292,-303.5155) .. (-1156.6901,-290.0545) ..<br />
-controls (-1156.1237,-282.7303) and (-1153.3659,-251.0584) ..<br />
-(-1151.4362,-242.1952) &ndash; cycle(-1151.4362,-242.1952);</p>
-<p>% path925<br />
-\path[draw=hongse,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=3.600pt] (-864.1706,-376.2030) .. controls (-872.5417,-380.8280) and<br />
-(-881.8503,-384.5858) .. (-891.3893,-383.9178) .. controls<br />
-(-896.4518,-383.5623) and (-901.3464,-381.9764) .. (-906.0846,-380.1678) ..<br />
-controls (-910.4870,-378.4881) and (-914.8581,-376.5858) ..<br />
-(-918.6315,-373.7576) .. controls (-931.3542,-364.2225) and<br />
-(-934.5964,-346.1131) .. (-931.9401,-330.4334) .. controls<br />
-(-929.2878,-314.7577) and (-921.9167,-300.3241) .. (-917.2018,-285.1405) ..<br />
-controls (-913.3776,-272.8202) and (-911.3034,-259.9569) ..<br />
-(-911.0612,-247.0623) .. controls (-910.9049,-238.7225) and<br />
-(-911.4987,-230.2616) .. (-909.5885,-222.1405) .. controls<br />
-(-907.6823,-214.0194) and (-902.6706,-206.0350) .. (-894.8034,-203.2616) ..<br />
-controls (-889.9479,-201.5467) and (-884.5573,-202.0038) ..<br />
-(-879.6042,-203.4217) .. controls (-867.5221,-206.8788) and<br />
-(-857.6901,-215.6209) .. (-849.2253,-224.9100) .. controls<br />
-(-835.6745,-239.7889) and (-824.4440,-256.7772) .. (-816.0651,-275.0741) ..<br />
-controls (-813.2643,-281.1952) and (-810.7721,-287.4686) ..<br />
-(-808.9088,-293.9373) .. controls (-807.0260,-300.4725) and<br />
-(-805.7838,-307.2577) .. (-806.0729,-314.0506) .. controls<br />
-(-806.6549,-327.5975) and (-813.8737,-340.5623) .. (-824.6901,-348.6444) ..<br />
-controls (-830.5729,-353.0389) and (-856.2292,-371.8162) ..<br />
-(-864.1706,-376.2030) &ndash; cycle(-864.1706,-376.2030);</p>
-<p>% path927<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (-1082.3776,-310.4920) ..<br />
-controls (-1082.5260,-314.0467) and (-1079.7370,-317.0741) ..<br />
-(-1076.1862,-317.2186) .. controls (-1072.6315,-317.3670) and<br />
-(-1069.6081,-314.5780) .. (-1069.4596,-311.0233) .. controls<br />
-(-1069.3151,-307.4725) and (-1072.1003,-304.4452) .. (-1075.6510,-304.2967) ..<br />
-controls (-1079.2057,-304.1522) and (-1082.2331,-306.9373) ..<br />
-(-1082.3776,-310.4920);</p>
-<p>% path929<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (-1113.4128,-230.1717) ..<br />
-controls (-1113.5573,-233.7225) and (-1110.7721,-236.7499) ..<br />
-(-1107.2174,-236.8983) .. controls (-1103.6667,-237.0428) and<br />
-(-1100.6393,-234.2577) .. (-1100.4909,-230.7030) .. controls<br />
-(-1100.3463,-227.1483) and (-1103.1354,-224.1249) .. (-1106.6862,-223.9764) ..<br />
-controls (-1110.2409,-223.8319) and (-1113.2682,-226.6170) ..<br />
-(-1113.4128,-230.1717);</p>
-<p>% path931<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (-1067.6823,-278.8436) ..<br />
-controls (-1068.1862,-282.3631) and (-1065.7175,-285.6561) ..<br />
-(-1062.1979,-286.1600) .. controls (-1058.6784,-286.6639) and<br />
-(-1055.3854,-284.1952) .. (-1054.8815,-280.6756) .. controls<br />
-(-1054.3776,-277.1561) and (-1056.8464,-273.8631) .. (-1060.3659,-273.3592) ..<br />
-controls (-1063.8854,-272.8553) and (-1067.1784,-275.3202) ..<br />
-(-1067.6823,-278.8436);</p>
-<p>% path933<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (-898.6081,-348.0428) ..<br />
-controls (-898.7526,-351.5975) and (-895.9674,-354.6248) ..<br />
-(-892.4167,-354.7733) .. controls (-888.8620,-354.9178) and<br />
-(-885.8346,-352.1288) .. (-885.6862,-348.5780) .. controls<br />
-(-885.5417,-345.0233) and (-888.3307,-341.9959) .. (-891.8815,-341.8514) ..<br />
-controls (-895.4323,-341.7030) and (-898.4635,-344.4920) ..<br />
-(-898.6081,-348.0428);</p>
-<p>% path935<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (-880.1589,-288.4647) ..<br />
-controls (-880.3034,-292.0194) and (-877.5182,-295.0467) ..<br />
-(-873.9636,-295.1913) .. controls (-870.4128,-295.3397) and<br />
-(-867.3854,-292.5506) .. (-867.2370,-288.9998) .. controls<br />
-(-867.0924,-285.4452) and (-869.8776,-282.4178) .. (-873.4323,-282.2733) ..<br />
-controls (-876.9831,-282.1248) and (-880.0104,-284.9139) ..<br />
-(-880.1588,-288.4647);</p>
-<p>% path937<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (-848.3854,-320.1405) ..<br />
-controls (-848.5300,-323.6952) and (-845.7448,-326.7225) ..<br />
-(-842.1901,-326.8670) .. controls (-838.6393,-327.0155) and<br />
-(-835.6120,-324.2264) .. (-835.4635,-320.6756) .. controls<br />
-(-835.3190,-317.1209) and (-838.1042,-314.0936) .. (-841.6589,-313.9491) ..<br />
-controls (-845.2096,-313.8006) and (-848.2409,-316.5897) ..<br />
-(-848.3854,-320.1405);</p>
-<p>% path939<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (-883.4948,-239.6522) ..<br />
-controls (-883.6393,-243.2030) and (-880.8542,-246.2303) ..<br />
-(-877.2995,-246.3788) .. controls (-873.7487,-246.5233) and<br />
-(-870.7214,-243.7381) .. (-870.5729,-240.1834) .. controls<br />
-(-870.4284,-236.6288) and (-873.2135,-233.6053) .. (-876.7682,-233.4569) ..<br />
-controls (-880.3190,-233.3123) and (-883.3503,-236.0975) ..<br />
-(-883.4948,-239.6522);</p>
-<p>% path941<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (-1064.5456,-315.9256) .. controls (-1046.1667,-324.4295) and<br />
-(-1025.2839,-324.9412) .. (-1005.1940,-327.5037) .. controls<br />
-(-994.0299,-328.9295) and (-982.9635,-331.0272) .. (-971.9010,-333.1209) ..<br />
-controls (-962.9674,-334.8162) and (-954.0299,-336.5077) ..<br />
-(-945.0963,-338.1991) .. controls (-939.1237,-339.3319) and<br />
-(-933.1471,-340.4647) .. (-927.2878,-342.0819) .. controls<br />
-(-921.0417,-343.8045) and (-913.6628,-344.8280) .. (-906.8229,-345.6717);</p>
-<p>% path943<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (-907.4167,-345.5545) ..<br />
-controls (-909.1745,-346.9061) and (-910.3112,-349.8866) ..<br />
-(-910.6432,-352.0116) .. controls (-908.1471,-349.4217) and<br />
-(-905.0534,-347.2811) .. (-901.5221,-346.3123) .. controls<br />
-(-904.7018,-344.5389) and (-907.0104,-341.5506) .. (-908.9049,-338.4881) ..<br />
-controls (-909.0182,-340.7967) and (-908.8150,-343.6405) ..<br />
-(-907.4167,-345.5545);</p>
-<p>% path945<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (-1049.5690,-279.7577) .. controls (-1023.7370,-279.0233) and<br />
-(-999.9674,-278.8788) .. (-974.4167,-282.7655) .. controls<br />
-(-966.3307,-283.9959) and (-958.2760,-285.6952) .. (-950.6042,-288.5389) ..<br />
-controls (-944.8073,-290.6834) and (-939.2682,-293.4686) ..<br />
-(-933.7799,-296.3123) .. controls (-925.2018,-300.7498) and<br />
-(-916.6237,-305.4022) .. (-909.3385,-311.7420) .. controls<br />
-(-903.4049,-316.9061) and (-898.3346,-323.3241) .. (-895.5612,-330.6327);</p>
-<p>% path947<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (-895.8151,-330.0819) ..<br />
-controls (-897.7839,-329.0545) and (-900.9635,-329.2694) ..<br />
-(-903.0339,-329.8514) .. controls (-899.6354,-331.0389) and<br />
-(-896.3971,-332.9530) .. (-894.0417,-335.7537) .. controls<br />
-(-893.7604,-332.1248) and (-892.0104,-328.7811) .. (-890.0221,-325.7772) ..<br />
-controls (-892.1667,-326.6405) and (-894.6628,-328.0116) ..<br />
-(-895.8151,-330.0819);</p>
-<p>% path949<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (-1109.9831,-243.4022) .. controls (-1111.6549,-256.6327) and<br />
-(-1112.5026,-266.0702) .. (-1113.7057,-279.3475) .. controls<br />
-(-1115.6315,-300.6444) and (-1110.2174,-322.5350) .. (-1098.5846,-340.4725) ..<br />
-controls (-1086.9479,-358.4139) and (-1069.1706,-372.2889) ..<br />
-(-1048.9440,-379.2147) .. controls (-1038.2409,-382.8787) and<br />
-(-1026.9792,-384.6326) .. (-1015.7253,-385.7459) .. controls<br />
-(-988.9401,-388.3983) and (-961.2018,-387.3905) .. (-936.1706,-377.4920) ..<br />
-controls (-925.5964,-373.3123) and (-915.7057,-367.6287) ..<br />
-(-905.9479,-361.7616);</p>
-<p>% path951<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (-906.4987,-362.0077) ..<br />
-controls (-907.0612,-364.1522) and (-906.1354,-367.2030) ..<br />
-(-905.1003,-369.0897) .. controls (-904.7096,-365.5116) and<br />
-(-903.5729,-361.9256) .. (-901.3737,-358.9998) .. controls<br />
-(-904.9714,-359.5428) and (-908.6237,-358.5897) .. (-911.9987,-357.3280) ..<br />
-controls (-910.6745,-359.2225) and (-908.7760,-361.3475) ..<br />
-(-906.4987,-362.0077);</p>
-<p>\end{scope}</p>
-<p>\end{tikzpicture}</p>
+<p>\begin{figure}</p>
 <p>\caption{A function is a mapping of each <bb>element</bb> of one set to<br />
 an <bb>element</bb> of another. An arrow points from an argument in the<br />
 domain to the corresponding value in the codomain.}</p>
@@ -2735,114 +2492,7 @@ that every member of the codomain is a value of the function. Such<br />
 functions are called <bb>surjective</bb>, and can be pictured as in<br />
 Figure<br />
 \olref{fig:surjective}.</p>
-<p>\begin{figure}<br />
-\begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-1.000000, xscale=1.000000, inner sep=0pt, outer sep=0pt]<br />
-% path989<br />
-\path[draw=huise,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=3.600pt] (53.1648,55.4860) .. controls (55.4578,46.1969) and<br />
-(56.6726,36.2360) .. (53.5476,27.1930) .. controls (51.8914,22.4001) and<br />
-(49.0867,18.0876) .. (46.1101,13.9782) .. controls (43.3484,10.1618) and<br />
-(40.3719,6.4352) .. (36.6648,3.5290) .. controls (24.1531,-6.2835) and<br />
-(5.8211,-4.7132) .. (-8.6281,1.9235) .. controls (-23.0774,8.5563) and<br />
-(-35.1047,19.4235) .. (-48.5461,27.9196) .. controls (-59.4485,34.8102) and<br />
-(-71.3313,40.1540) .. (-83.7219,43.7360) .. controls (-91.7336,46.0524) and<br />
-(-100.0578,47.6774) .. (-107.4055,51.6305) .. controls (-114.7492,55.5798) and<br />
-(-121.1594,62.4938) .. (-121.8000,70.8102) .. controls (-122.1906,75.9430) and<br />
-(-120.3508,81.0329) .. (-117.6945,85.4469) .. controls (-111.2219,96.2165) and<br />
-(-100.2258,103.4430) .. (-89.0539,109.2048) .. controls (-71.1672,118.4274)<br />
-and (-51.8469,124.8610) .. (-32.0031,128.2009) .. controls (-25.3625,129.3180)<br />
-and (-18.6555,130.0915) .. (-11.9250,130.2126) .. controls (-5.1281,130.3337)<br />
-and (1.7469,129.7712) .. (8.2312,127.7282) .. controls (21.1648,123.6501) and<br />
-(31.8094,113.3102) .. (36.8055,100.7672) .. controls (39.5203,93.9430) and<br />
-(50.9930,64.2907) .. (53.1648,55.4860) &ndash; cycle(53.1648,55.4860);</p>
-<p>% path991<br />
-\path[draw=hongse,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=3.600pt] (97.8680,104.0173) .. controls (99.2898,113.4782) and<br />
-(101.9617,123.1501) .. (108.2937,130.3219) .. controls (111.6531,134.1227) and<br />
-(115.8914,137.0407) .. (120.2078,139.7048) .. controls (124.2195,142.1813) and<br />
-(128.3875,144.4938) .. (132.9226,145.7673) .. controls (148.2312,150.0720) and<br />
-(164.5828,141.6345) .. (175.4109,129.9938) .. controls (186.2430,118.3532) and<br />
-(193.2234,103.7282) .. (202.4109,90.7516) .. controls (209.8680,80.2243) and<br />
-(218.8172,70.7555) .. (228.9070,62.7243) .. controls (235.4305,57.5290) and<br />
-(242.5125,52.8532) .. (247.7976,46.4001) .. controls (253.0828,39.9509) and<br />
-(256.3758,31.1149) .. (253.7976,23.1813) .. controls (252.2039,18.2868) and<br />
-(248.5593,14.2829) .. (244.4265,11.2126) .. controls (234.3367,3.7243) and<br />
-(221.4148,1.2321) .. (208.8914,0.1618) .. controls (188.8406,-1.5491) and<br />
-(168.5281,-0.1351) .. (148.9070,4.3376) .. controls (142.3445,5.8337) and<br />
-(135.8484,7.6735) .. (129.5789,10.1266) .. controls (123.2469,12.6071) and<br />
-(117.1023,15.7438) .. (111.8875,20.1071) .. controls (101.4812,28.8024) and<br />
-(95.5828,42.4196) .. (95.7430,55.9196) .. controls (95.8328,63.2634) and<br />
-(96.5242,95.0485) .. (97.8680,104.0173) &ndash; cycle(97.8680,104.0173);</p>
-<p>% path993<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (-45.4836,48.1110) ..<br />
-controls (-45.6281,44.5563) and (-42.8430,41.5290) .. (-39.2883,41.3844) ..<br />
-controls (-35.7375,41.2360) and (-32.7102,44.0251) .. (-32.5617,47.5759) ..<br />
-controls (-32.4172,51.1305) and (-35.2063,54.1579) .. (-38.7570,54.3024) ..<br />
-controls (-42.3117,54.4509) and (-45.3391,51.6618) .. (-45.4836,48.1110);</p>
-<p>% path995<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (-71.7805,95.9587) ..<br />
-controls (-71.9250,92.4040) and (-69.1399,89.3766) .. (-65.5852,89.2321) ..<br />
-controls (-62.0344,89.0837) and (-59.0070,91.8727) .. (-58.8586,95.4235) ..<br />
-controls (-58.7141,98.9782) and (-61.5031,102.0055) .. (-65.0539,102.1501) ..<br />
-controls (-68.6086,102.2985) and (-71.6359,99.5094) .. (-71.7805,95.9587);</p>
-<p>% path997<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (-1.8195,69.1266) ..<br />
-controls (-2.3235,65.6032) and (0.1453,62.3141) .. (3.6648,61.8102) ..<br />
-controls (7.1844,61.3063) and (10.4773,63.7712) .. (10.9812,67.2946) ..<br />
-controls (11.4851,70.8141) and (9.0164,74.1071) .. (5.4969,74.6110) ..<br />
-controls (1.9773,75.1149) and (-1.3156,72.6462) .. (-1.8195,69.1266);</p>
-<p>% path999<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (138.1140,47.0094) ..<br />
-controls (137.9695,43.4548) and (140.7547,40.4313) .. (144.3094,40.2829) ..<br />
-controls (147.8601,40.1384) and (150.8875,42.9235) .. (151.0359,46.4782) ..<br />
-controls (151.1805,50.0290) and (148.3953,53.0563) .. (144.8406,53.2048) ..<br />
-controls (141.2898,53.3493) and (138.2625,50.5641) .. (138.1140,47.0094);</p>
-<p>% path1001<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (155.0086,86.6071) ..<br />
-controls (154.8640,83.0524) and (157.6492,80.0251) .. (161.2039,79.8805) ..<br />
-controls (164.7547,79.7321) and (167.7820,82.5212) .. (167.9305,86.0719) ..<br />
-controls (168.0750,89.6266) and (165.2898,92.6540) .. (161.7351,92.7985) ..<br />
-controls (158.1844,92.9469) and (155.1570,90.1579) .. (155.0086,86.6071);</p>
-<p>% path1003<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (9.4109,56.3337) .. controls (12.8172,40.2868) and<br />
-(16.2234,22.1266) .. (19.6297,6.0798) .. controls (21.5906,-3.1546) and<br />
-(23.6101,-12.5452) .. (28.1883,-20.8031) .. controls (36.1765,-35.2132) and<br />
-(41.9812,-43.5452) .. (58.0008,-47.3890) .. controls (74.0203,-51.2366) and<br />
-(100.2508,-51.1312) .. (116.4578,-48.1898) .. controls (125.5672,-46.5374) and<br />
-(135.5320,-43.6898) .. (140.3250,-35.7718) .. controls (143.5203,-30.4866) and<br />
-(143.7195,-23.9827) .. (143.8289,-17.8070) .. controls (144.0476,-5.4788) and<br />
-(142.7195,9.3766) .. (142.5554,22.3298);</p>
-<p>% path1005<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (142.6336,21.7243) ..<br />
-controls (144.2195,20.1774) and (147.3250,19.4665) .. (149.4773,19.4274) ..<br />
-controls (146.5633,21.5446) and (144.0164,24.3063) .. (142.5633,27.6696) ..<br />
-controls (141.2508,24.2751) and (138.6101,21.5759) .. (135.8445,19.2712) ..<br />
-controls (138.1453,19.4821) and (140.9305,20.0759) .. (142.6336,21.7243);</p>
-<p>% path1007<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (-26.4367,46.7438) .. controls (19.4578,43.1462) and<br />
-(57.4656,28.9899) .. (103.3328,32.9274) .. controls (109.4891,33.4548) and<br />
-(120.9266,34.7907) .. (128.3680,37.7477);</p>
-<p>% path1009<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (127.7820,37.5641) ..<br />
-controls (127.1101,35.4548) and (127.8679,32.3571) .. (128.8015,30.4196) ..<br />
-controls (129.3875,33.9704) and (130.7117,37.4899) .. (133.0633,40.2946) ..<br />
-controls (129.4422,39.9430) and (125.8445,41.0915) .. (122.5437,42.5290) ..<br />
-controls (123.7625,40.5680) and (125.5476,38.3454) .. (127.7820,37.5641);</p>
-<p>% path1027<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (-51.3664,98.8415) .. controls (-22.1008,96.9665) and<br />
-(7.1648,95.0915) .. (36.4305,93.2204) .. controls (57.2664,91.8844) and<br />
-(78.1453,90.5446) .. (98.7390,87.0993) .. controls (114.2547,84.5016) and<br />
-(130.3211,80.7399) .. (145.5555,83.7438);</p>
-<p>% path1029<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (144.9617,83.6462) ..<br />
-controls (143.8094,81.7516) and (143.8133,78.5641) .. (144.2625,76.4587) ..<br />
-controls (145.6687,79.7712) and (147.7859,82.8766) .. (150.7351,85.0485) ..<br />
-controls (147.1336,85.5641) and (143.9070,87.5290) .. (141.0398,89.7087) ..<br />
-controls (141.7664,87.5133) and (142.9734,84.9313) .. (144.9617,83.6462);</p>
-<p>\end{tikzpicture}</p>
+<p>\begin{figure}</p>
 <p>\caption{A <bb>surjective</bb> function has every <bb>element</bb> of the<br />
 codomain as a value.}</p>
 <p>\end{figure}</p>
@@ -2867,146 +2517,7 @@ a <bb>surjection</bb></p>
 there are also functions which never map different inputs to the same<br />
 outputs. Such functions are called <bb>injective</bb>, and can be pictured<br />
 as in Figure \olref{fig:injective}.</p>
-<p>\begin{figure}<br />
-\begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-1.000000, xscale=1.000000, inner sep=0pt, outer sep=0pt]<br />
-% path953<br />
-\path[draw=huise,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=3.600pt] (4.5795,129.0518) .. controls (1.1537,137.9854) and<br />
-(-1.2877,147.7198) .. (0.6888,157.0752) .. controls (1.7396,162.0401) and<br />
-(3.9857,166.6690) .. (6.4310,171.1143) .. controls (8.7006,175.2432) and<br />
-(11.1888,179.3096) .. (14.5091,182.6573) .. controls (25.7045,193.9424) and<br />
-(44.0912,194.6573) .. (59.2513,189.8643) .. controls (74.4115,185.0752) and<br />
-(87.6927,175.7862) .. (102.0834,169.0244) .. controls (113.7592,163.5362) and<br />
-(126.2123,159.7080) .. (138.9505,157.6924) .. controls (147.1888,156.3838) and<br />
-(155.6537,155.8057) .. (163.4310,152.7979) .. controls (171.2084,149.7862) and<br />
-(178.4271,143.7237) .. (180.0912,135.5479) .. controls (181.1185,130.5049) and<br />
-(179.9232,125.2237) .. (177.8373,120.5166) .. controls (172.7474,109.0244) and<br />
-(162.7318,100.4893) .. (152.3646,93.3916) .. controls (135.7592,82.0205) and<br />
-(117.3842,73.2393) .. (98.1107,67.4659) .. controls (91.6615,65.5323) and<br />
-(85.1029,63.9307) .. (78.4388,62.9776) .. controls (71.7045,62.0127) and<br />
-(64.8138,61.7198) .. (58.1263,62.9424) .. controls (44.7865,65.3838) and<br />
-(32.9427,74.3252) .. (26.4310,86.1494) .. controls (22.8881,92.5830) and<br />
-(7.8256,120.5830) .. (4.5795,129.0517) &ndash; cycle(4.5795,129.0518);</p>
-<p>% path955<br />
-\path[draw=hongse,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=3.600pt] (254.8138,32.5987) .. controls (245.2592,32.1690) and<br />
-(235.2513,32.9268) .. (226.9974,37.7588) .. controls (222.6185,40.3213) and<br />
-(218.9388,43.9190) .. (215.4935,47.6416) .. controls (212.2904,51.0987) and<br />
-(209.2162,54.7471) .. (207.0912,58.9502) .. controls (199.9193,73.1416) and<br />
-(205.0521,90.8096) .. (214.3841,103.6846) .. controls (223.7201,116.5557) and<br />
-(236.7279,126.2198) .. (247.6927,137.7354) .. controls (256.5873,147.0791) and<br />
-(264.1498,157.6846) .. (270.0912,169.1338) .. controls (273.9310,176.5401) and<br />
-(277.1576,184.3877) .. (282.4662,190.8174) .. controls (287.7826,197.2432) and<br />
-(295.8138,202.1768) .. (304.0951,201.1768) .. controls (309.2084,200.5557) and<br />
-(313.8373,197.7549) .. (317.6459,194.2862) .. controls (326.9388,185.8252) and<br />
-(331.8724,173.6299) .. (335.3373,161.5479) .. controls (340.8763,142.2041) and<br />
-(343.4037,121.9971) .. (342.7943,101.8838) .. controls (342.5912,95.1534) and<br />
-(342.0365,88.4268) .. (340.8373,81.8018) .. controls (339.6263,75.1104) and<br />
-(337.7279,68.4776) .. (334.4545,62.5166) .. controls (327.9232,50.6338) and<br />
-(315.7005,42.2198) .. (302.4193,39.7784) .. controls (295.2005,38.4463) and<br />
-(263.8763,33.0049) .. (254.8138,32.5987) &ndash; cycle(254.8138,32.5987);</p>
-<p>% path957<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (30.9545,108.7315) ..<br />
-controls (30.8060,105.1768) and (33.5951,102.1494) .. (37.1459,102.0010) ..<br />
-controls (40.7006,101.8565) and (43.7279,104.6455) .. (43.8724,108.1963) ..<br />
-controls (44.0209,111.7510) and (41.2318,114.7784) .. (37.6810,114.9229) ..<br />
-controls (34.1263,115.0713) and (31.0990,112.2823) .. (30.9545,108.7315);</p>
-<p>% path959<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (50.0560,155.6104) ..<br />
-controls (49.9115,152.0557) and (52.6966,149.0323) .. (56.2513,148.8838) ..<br />
-controls (59.8021,148.7393) and (62.8295,151.5244) .. (62.9779,155.0791) ..<br />
-controls (63.1224,158.6299) and (60.3334,161.6573) .. (56.7826,161.8018) ..<br />
-controls (53.2279,161.9502) and (50.2006,159.1651) .. (50.0560,155.6104);</p>
-<p>% path961<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (102.2513,107.3135) ..<br />
-controls (101.7474,103.7901) and (104.2162,100.5010) .. (107.7357,99.9971) ..<br />
-controls (111.2553,99.4932) and (114.5482,101.9580) .. (115.0521,105.4815) ..<br />
-controls (115.5560,109.0010) and (113.0873,112.2901) .. (109.5678,112.7940) ..<br />
-controls (106.0482,113.3018) and (102.7553,110.8330) .. (102.2513,107.3135);</p>
-<p>% path963<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (294.0560,69.4541) ..<br />
-controls (293.9115,65.9034) and (296.7005,62.8760) .. (300.2513,62.7276) ..<br />
-controls (303.8021,62.5830) and (306.8295,65.3682) .. (306.9779,68.9229) ..<br />
-controls (307.1224,72.4776) and (304.3373,75.5010) .. (300.7865,75.6494) ..<br />
-controls (297.2318,75.7940) and (294.2045,73.0088) .. (294.0560,69.4541);</p>
-<p>% path965<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (302.5834,170.9580) ..<br />
-controls (302.4349,167.4034) and (305.2240,164.3760) .. (308.7748,164.2276) ..<br />
-controls (312.3295,164.0830) and (315.3568,166.8721) .. (315.5013,170.4229) ..<br />
-controls (315.6498,173.9776) and (312.8607,177.0049) .. (309.3099,177.1494) ..<br />
-controls (305.7552,177.2979) and (302.7279,174.5088) .. (302.5834,170.9580);</p>
-<p>% path967<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (255.6341,60.2393) ..<br />
-controls (255.4896,56.6846) and (258.2748,53.6573) .. (261.8295,53.5127) ..<br />
-controls (265.3802,53.3643) and (268.4076,56.1534) .. (268.5560,59.7080) ..<br />
-controls (268.7005,63.2588) and (265.9154,66.2862) .. (262.3607,66.4307) ..<br />
-controls (258.8099,66.5791) and (255.7826,63.7940) .. (255.6341,60.2393);</p>
-<p>% path969<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (219.9232,86.0205) ..<br />
-controls (219.7787,82.4659) and (222.5638,79.4385) .. (226.1185,79.2940) ..<br />
-controls (229.6693,79.1455) and (232.6967,81.9346) .. (232.8451,85.4854) ..<br />
-controls (232.9896,89.0401) and (230.2045,92.0674) .. (226.6498,92.2119) ..<br />
-controls (223.0990,92.3604) and (220.0716,89.5713) .. (219.9232,86.0205);</p>
-<p>% path971<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (259.9506,106.6612) ..<br />
-controls (259.8060,103.1104) and (262.5912,100.0830) .. (266.1459,99.9346) ..<br />
-controls (269.6966,99.7901) and (272.7240,102.5752) .. (272.8724,106.1299) ..<br />
-controls (273.0170,109.6807) and (270.2318,112.7080) .. (266.6771,112.8565) ..<br />
-controls (263.1263,113.0010) and (260.0990,110.2159) .. (259.9506,106.6612);</p>
-<p>% path973<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (276.8451,146.2588) ..<br />
-controls (276.7006,142.7041) and (279.4857,139.6768) .. (283.0404,139.5322) ..<br />
-controls (286.5912,139.3838) and (289.6185,142.1729) .. (289.7670,145.7237) ..<br />
-controls (289.9115,149.2783) and (287.1263,152.3057) .. (283.5716,152.4502) ..<br />
-controls (280.0209,152.5987) and (276.9935,149.8096) .. (276.8451,146.2588);</p>
-<p>% path975<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (308.6185,109.6534) ..<br />
-controls (308.4740,106.1026) and (311.2591,103.0752) .. (314.8099,102.9268) ..<br />
-controls (318.3646,102.7823) and (321.3920,105.5674) .. (321.5404,109.1221) ..<br />
-controls (321.6849,112.6729) and (318.8959,115.7002) .. (315.3451,115.8448) ..<br />
-controls (311.7904,115.9932) and (308.7631,113.2080) .. (308.6185,109.6534);</p>
-<p>% path977<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (65.8646,159.4776) .. controls (121.5209,166.6182) and<br />
-(174.4310,186.8447) .. (229.8802,178.2549) .. controls (239.7279,176.7315) and<br />
-(249.6849,175.3252) .. (259.0170,171.8330) .. controls (266.6693,168.9698) and<br />
-(273.9623,164.5323) .. (279.1693,158.3213);</p>
-<p>% path979<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (278.7435,158.7549) ..<br />
-controls (276.5521,159.0830) and (273.6146,157.8369) .. (271.8490,156.6065) ..<br />
-controls (275.4466,156.5985) and (279.1341,155.8526) .. (282.2787,153.9737) ..<br />
-controls (281.3568,157.4932) and (281.9154,161.2276) .. (282.8099,164.7158) ..<br />
-controls (281.0677,163.2002) and (279.1576,161.0869) .. (278.7435,158.7549);</p>
-<p>% path981<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (40.3998,96.4776) .. controls (45.3256,82.4659) and<br />
-(50.5365,69.5049) .. (62.1654,60.2705) .. controls (74.7943,50.2432) and<br />
-(90.7865,45.2823) .. (106.7552,43.0557) .. controls (122.7279,40.8291) and<br />
-(138.9232,41.1299) .. (155.0365,40.4698) .. controls (168.7787,39.9034) and<br />
-(182.6576,38.6494) .. (196.1966,41.0674) .. controls (224.4623,46.1221) and<br />
-(248.2240,67.5166) .. (259.9232,93.8018);</p>
-<p>% path983<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (259.6732,93.2549) ..<br />
-controls (260.5170,91.2041) and (263.0912,89.3213) .. (265.0521,88.4385) ..<br />
-controls (263.2123,91.5323) and (261.9623,95.0791) .. (261.9584,98.7432) ..<br />
-controls (259.4115,96.1416) and (255.9193,94.7080) .. (252.4662,93.6846) ..<br />
-controls (254.6615,92.9698) and (257.4584,92.4112) .. (259.6732,93.2549);</p>
-<p>% path985<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (111.6693,93.9424) .. controls (125.2357,55.5830) and<br />
-(151.6771,23.4502) .. (188.9974,7.2432) .. controls (205.4896,0.0791) and<br />
-(223.1342,-4.0341) .. (240.8060,-7.3701) .. controls (257.6342,-10.5498) and<br />
-(275.7435,-12.9170) .. (291.3060,-5.7685) .. controls (304.1029,0.1065) and<br />
-(313.4974,11.8721) .. (319.0482,24.8135) .. controls (324.6029,37.7510) and<br />
-(326.6966,51.8877) .. (328.0951,65.8994) .. controls (329.0248,75.1963) and<br />
-(320.7591,84.2041) .. (318.2787,93.4424);</p>
-<p>% path987<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (318.4545,92.8604) ..<br />
-controls (320.2318,91.5362) and (323.4076,91.2471) .. (325.5443,91.5010) ..<br />
-controls (322.3763,93.2080) and (319.4779,95.6026) .. (317.5912,98.7432) ..<br />
-controls (316.7435,95.2041) and (314.4896,92.1729) .. (312.0560,89.5205) ..<br />
-controls (314.3060,90.0362) and (316.9896,90.9971) .. (318.4545,92.8604);</p>
-<p>\end{tikzpicture}</p>
+<p>\begin{figure}</p>
 <p>\caption{A <bb>injective</bb> function never maps two different<br />
 arguments to the same value.}</p>
 <p>\end{figure}</p>
@@ -3042,122 +2553,7 @@ Figure<br />
 \olref{fig:bijective}. <bb>bijection</bb>s are also sometimes called<br />
 <bb>one-to-one correspondences</bb>, since they uniquely pair elements<br />
 of the codomain with elements of the domain.</p>
-<p>\begin{figure}<br />
-\begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-1.000000, xscale=1.000000, inner sep=0pt, outer sep=0pt]<br />
-% path1011<br />
-\path[draw=huise,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=3.600pt] (153.3396,53.8364) .. controls (151.1599,44.5239) and<br />
-(147.7146,35.0981) .. (140.8240,28.4614) .. controls (137.1677,24.9419) and<br />
-(132.7107,22.3794) .. (128.1912,20.0708) .. controls (123.9959,17.9263) and<br />
-(119.6521,15.9575) .. (115.0271,15.0552) .. controls (99.4256,12.0005) and<br />
-(83.8084,21.7309) .. (73.9529,34.2075) .. controls (64.0974,46.6841) and<br />
-(58.3201,61.8286) .. (50.2107,75.5044) .. controls (43.6287,86.5981) and<br />
-(35.4763,96.7583) .. (26.0662,105.5786) .. controls (19.9802,111.2856) and<br />
-(13.3045,116.5160) .. (8.5545,123.3755) .. controls (3.8084,130.2310) and<br />
-(1.2381,139.3013) .. (4.4490,147.0005) .. controls (6.4334,151.7543) and<br />
-(10.3865,155.4496) .. (14.7576,158.1723) .. controls (25.4216,164.8246) and<br />
-(38.4998,166.2661) .. (51.0662,166.3208) .. controls (71.1912,166.4068) and<br />
-(91.3240,163.3560) .. (110.5193,157.3130) .. controls (116.9412,155.2935) and<br />
-(123.2654,152.9341) .. (129.3162,149.9810) .. controls (135.4295,147.0005) and<br />
-(141.2967,143.3755) .. (146.1443,138.6098) .. controls (155.8123,129.0982) and<br />
-(160.5935,115.0512) .. (159.3435,101.6059) .. controls (158.6638,94.2934) and<br />
-(155.4060,62.6684) .. (153.3396,53.8364) &ndash; cycle(153.3396,53.8364);</p>
-<p>% path1013<br />
-\path[draw=hongse,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=3.600pt] (228.5505,50.6606) .. controls (219.5974,54.0278) and<br />
-(210.6990,58.6645) .. (205.0115,66.3598) .. controls (201.9959,70.4380) and<br />
-(200.0310,75.1919) .. (198.3279,79.9692) .. controls (196.7459,84.4106) and<br />
-(195.3591,88.9731) .. (195.0623,93.6723) .. controls (194.0584,109.5434) and<br />
-(205.7302,123.7661) .. (219.3787,131.9223) .. controls (233.0271,140.0786) and<br />
-(248.7927,143.8404) .. (263.4021,150.1098) .. controls (275.2576,155.1958) and<br />
-(286.3865,161.9654) .. (296.3552,170.1529) .. controls (302.8005,175.4458) and<br />
-(308.8552,181.3912) .. (316.2693,185.2075) .. controls (323.6834,189.0279) and<br />
-(333.0115,190.3989) .. (340.2302,186.2154) .. controls (344.6834,183.6333) and<br />
-(347.8357,179.2348) .. (349.9724,174.5473) .. controls (355.1834,163.1137) and<br />
-(354.9177,149.9575) .. (353.3396,137.4887) .. controls (350.8201,117.5239) and<br />
-(345.1873,97.9536) .. (336.7029,79.7036) .. controls (333.8669,73.6020) and<br />
-(330.7107,67.6333) .. (326.9998,62.0161) .. controls (323.2498,56.3442) and<br />
-(318.8982,50.9927) .. (313.5388,46.8052) .. controls (302.8552,38.4536) and<br />
-(288.3084,35.5317) .. (275.1404,38.5122) .. controls (267.9763,40.1372) and<br />
-(237.0388,47.4653) .. (228.5505,50.6606) &ndash; cycle(228.5505,50.6606);</p>
-<p>% path1015<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (96.5779,60.8520) ..<br />
-controls (96.4295,57.2973) and (99.2146,54.2700) .. (102.7693,54.1255) ..<br />
-controls (106.3240,53.9770) and (109.3513,56.7661) .. (109.4959,60.3169) ..<br />
-controls (109.6443,63.8716) and (106.8552,66.8989) .. (103.3006,67.0434) ..<br />
-controls (99.7498,67.1919) and (96.7224,64.4028) .. (96.5779,60.8520);</p>
-<p>% path1017<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (62.8006,100.7544) ..<br />
-controls (62.6560,97.1997) and (65.4451,94.1763) .. (68.9959,94.0278) ..<br />
-controls (72.5506,93.8833) and (75.5740,96.6684) .. (75.7224,100.2231) ..<br />
-controls (75.8670,103.7739) and (73.0818,106.8013) .. (69.5310,106.9497) ..<br />
-controls (65.9763,107.0942) and (62.9490,104.3091) .. (62.8006,100.7544);</p>
-<p>% path1019<br />
-\path[fill=huise,nonzero rule,line width=0.600pt] (74.8201,121.1060) ..<br />
-controls (74.6756,117.5552) and (77.4607,114.5279) .. (81.0154,114.3794) ..<br />
-controls (84.5701,114.2349) and (87.5935,117.0200) .. (87.7420,120.5747) ..<br />
-controls (87.8865,124.1294) and (85.1013,127.1568) .. (81.5466,127.3013) ..<br />
-controls (77.9959,127.4497) and (74.9685,124.6607) .. (74.8201,121.1060);</p>
-<p>% path1021<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (301.3630,73.7505) ..<br />
-controls (301.2185,70.1997) and (304.0037,67.1723) .. (307.5584,67.0239) ..<br />
-controls (311.1091,66.8794) and (314.1365,69.6645) .. (314.2849,73.2192) ..<br />
-controls (314.4294,76.7739) and (311.6443,79.8013) .. (308.0896,79.9458) ..<br />
-controls (304.5388,80.0942) and (301.5115,77.3052) .. (301.3630,73.7505);</p>
-<p>% path1023<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (257.4802,84.9692) ..<br />
-controls (257.3318,81.4145) and (260.1209,78.3872) .. (263.6716,78.2427) ..<br />
-controls (267.2263,78.0942) and (270.2498,80.8833) .. (270.3982,84.4341) ..<br />
-controls (270.5427,87.9888) and (267.7576,91.0161) .. (264.2068,91.1606) ..<br />
-controls (260.6521,91.3091) and (257.6248,88.5200) .. (257.4802,84.9692);</p>
-<p>% path1025<br />
-\path[fill=hongse,nonzero rule,line width=0.600pt] (268.2107,123.3482) ..<br />
-controls (268.0662,119.7935) and (270.8513,116.7661) .. (274.4060,116.6215) ..<br />
-controls (277.9568,116.4732) and (280.9841,119.2622) .. (281.1326,122.8130) ..<br />
-controls (281.2771,126.3676) and (278.4919,129.3950) .. (274.9373,129.5395) ..<br />
-controls (271.3865,129.6880) and (268.3591,126.8989) .. (268.2107,123.3481);</p>
-<p>% path1031<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (84.0662,131.2583) .. controls (91.3006,144.3520) and<br />
-(102.8748,154.3598) .. (115.6912,161.1646) .. controls (128.5076,167.9654) and<br />
-(142.5701,171.7505) .. (156.6951,174.3833) .. controls (167.6912,176.4341) and<br />
-(178.9373,177.8169) .. (190.0115,176.3169) .. controls (200.3748,174.9107) and<br />
-(210.2771,171.0318) .. (220.0701,167.1802) .. controls (237.3630,160.3794) and<br />
-(255.4998,152.9419) .. (267.9216,138.8169);</p>
-<p>% path1033<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (267.4959,139.2466) ..<br />
-controls (265.2927,139.4654) and (262.4216,138.0787) .. (260.7185,136.7622) ..<br />
-controls (264.3123,136.9302) and (268.0310,136.3677) .. (271.2654,134.6490) ..<br />
-controls (270.1716,138.1177) and (270.5427,141.8755) .. (271.2654,145.4068) ..<br />
-controls (269.6013,143.8013) and (267.7966,141.5943) .. (267.4959,139.2466);</p>
-<p>% path1035<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (111.7654,50.4888) .. controls (126.2771,36.8013) and<br />
-(131.1599,22.3403) .. (148.8787,13.1802) .. controls (160.7107,7.0669) and<br />
-(173.4099,1.8403) .. (186.7185,1.5161) .. controls (202.5740,1.1333) and<br />
-(217.6716,7.6919) .. (232.1677,14.1255) .. controls (246.6482,20.5513) and<br />
-(261.1287,26.9770) .. (275.6091,33.4028) .. controls (281.9060,36.1958) and<br />
-(288.2810,39.0395) .. (293.6482,43.3638) .. controls (297.6091,46.5552) and<br />
-(301.0037,50.6919) .. (302.8162,55.3989);</p>
-<p>% path1037<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (302.5584,54.8403) ..<br />
-controls (303.6677,52.9223) and (306.4685,51.4028) .. (308.5310,50.7856) ..<br />
-controls (306.2966,53.6098) and (304.5857,56.9575) .. (304.0935,60.5864) ..<br />
-controls (301.9138,57.6684) and (298.6443,55.7778) .. (295.3591,54.3052) ..<br />
-controls (297.6287,53.8911) and (300.4763,53.7114) .. (302.5584,54.8403);</p>
-<p>% path1133<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.800pt] (73.7146,91.1684) .. controls (87.1248,77.6255) and<br />
-(106.0154,71.2348) .. (124.4177,66.2778) .. controls (146.2224,60.4028) and<br />
-(168.6326,55.8911) .. (191.2068,56.5044) .. controls (211.9959,57.0708) and<br />
-(233.0623,62.2583) .. (250.3552,73.6763);</p>
-<p>% path1135<br />
-\path[fill=black,nonzero rule,line width=0.600pt] (249.8396,73.3677) ..<br />
-controls (249.4451,71.1880) and (250.5974,68.2153) .. (251.7732,66.4106) ..<br />
-controls (251.8943,70.0083) and (252.7498,73.6684) .. (254.7224,76.7544) ..<br />
-controls (251.1756,75.9419) and (247.4607,76.6138) .. (243.9998,77.6138) ..<br />
-controls (245.4646,75.8286) and (247.5193,73.8520) .. (249.8396,73.3677);</p>
-<p>\end{tikzpicture}</p>
+<p>\begin{figure}</p>
 <p>\caption{A <bb>bijective</bb> function uniquely pairs the elements of the<br />
 codomain with those of the domain.}</p>
 <p>\end{figure}</p>
@@ -3217,16 +2613,16 @@ functions, but an observation that it is convenient to <bb>treat</bb> functions 
 <p>\begin{defn}[]<br />
 Let $f \colon A \to B$ be a function with $C\subseteq A$.</p>
 <p>The <bb>restriction</bb> of $f$ to $C$ is the<br />
-function $\funrestrictionto{f}{C}\colon C \to B$ defined by<br />
-$(\funrestrictionto{f}{C})(x) = f(x)$ for all $x \in C$. In other<br />
-words, $\funrestrictionto{f}{C} = \Setabs{⟨x, y⟩ \in R_f}{x \in<br />
+function $f\upharpoonright_{C}\colon C \to B$ defined by<br />
+$(f\upharpoonright_{C})(x) = f(x)$ for all $x \in C$. In other<br />
+words, $f\upharpoonright_{C} = \Setabs{⟨x, y⟩ \in R_f}{x \in<br />
 C}$.</p>
-<p>The <bb>application</bb> of $f$ to $C$ is $\funimage{f}{C} =<br />
+<p>The <bb>application</bb> of $f$ to $C$ is $f[C] =<br />
 \Setabs{f(x)}{x \in C}$. We also call this the <bb>image</bb> of $C$<br />
 under $f$.<br />
 \end{defn}</p>
 <p>It follows from these definition that $\ran{f} =<br />
-\funimage{f}{\dom{f}}$, for any function $f$. These notions are exactly as one would<br />
+f[\dom{f]}$, for any function $f$. These notions are exactly as one would<br />
 expect, given the definitions in \jieref{subsec:Operations-on-Relations} and our<br />
 identification of functions with relations. But two other<br />
 operations&mdash;inverses and relative products&mdash;require a little more<br />
@@ -3327,216 +2723,7 @@ a <bb>element</bb> of $A$ is paired with as follows: given an input $x \in<br />
 A$, first apply the function $f$ to $x$, which will output some $f(x)<br />
 = y \in B$, then apply the function $g$ to $y$, which will output some<br />
 $g(f(x)) = g(y) = z \in C$.</p>
-<p>\begin{figure}<br />
-\begin{tikzpicture}[y=0.80pt, x=0.80pt, yscale=-1.000000, xscale=1.000000, inner sep=0pt, outer sep=0pt]<br />
-% path2996<br />
-\path[draw=huise,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=2.160pt] (106.8109,75.3598) .. controls (108.1867,69.7887) and<br />
-(108.9156,63.8098) .. (107.0406,58.3864) .. controls (106.0468,55.5082) and<br />
-(104.3640,52.9207) .. (102.5781,50.4551) .. controls (100.9187,48.1676) and<br />
-(99.1351,45.9293) .. (96.9109,44.1856) .. controls (89.4039,38.2981) and<br />
-(78.4046,39.2426) .. (69.7351,43.2223) .. controls (61.0632,47.2020) and<br />
-(53.8492,53.7223) .. (45.7843,58.8200) .. controls (39.2429,62.9543) and<br />
-(32.1132,66.1606) .. (24.6789,68.3098) .. controls (19.8718,69.6997) and<br />
-(14.8773,70.6747) .. (10.4687,73.0465) .. controls (6.0625,75.4161) and<br />
-(2.2164,79.5645) .. (1.8320,84.5543) .. controls (1.5976,87.6364) and<br />
-(2.7015,90.6879) .. (4.2953,93.3364) .. controls (8.1812,99.7981) and<br />
-(14.7765,104.1340) .. (21.4796,107.5911) .. controls (32.2117,113.1247) and<br />
-(43.8039,116.9848) .. (55.7101,118.9887) .. controls (59.6945,119.6590) and<br />
-(63.7164,120.1231) .. (67.7570,120.1957) .. controls (71.8351,120.2684) and<br />
-(75.9601,119.9309) .. (79.8507,118.7051) .. controls (87.6109,116.2582) and<br />
-(93.9976,110.0543) .. (96.9953,102.5286) .. controls (98.6265,98.4340) and<br />
-(105.5078,80.6426) .. (106.8109,75.3598) &ndash; cycle(106.8109,75.3598);</p>
-<p>% path2998<br />
-\path[draw=hongse,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=2.160pt] (133.6351,104.4786) .. controls (134.4859,110.1551) and<br />
-(136.0890,115.9606) .. (139.8882,120.2614) .. controls (141.9039,122.5418) and<br />
-(144.4468,124.2926) .. (147.0367,125.8911) .. controls (149.4414,127.3770) and<br />
-(151.9445,128.7645) .. (154.6656,129.5286) .. controls (163.8507,132.1114) and<br />
-(173.6593,127.0489) .. (180.1585,120.0645) .. controls (186.6578,113.0825) and<br />
-(190.8460,104.3051) .. (196.3585,96.5192) .. controls (200.8328,90.2028) and<br />
-(206.2023,84.5239) .. (212.2562,79.7028) .. controls (216.1703,76.5856) and<br />
-(220.4195,73.7801) .. (223.5906,69.9082) .. controls (226.7617,66.0387) and<br />
-(228.7375,60.7372) .. (227.1906,55.9793) .. controls (226.2343,53.0403) and<br />
-(224.0476,50.6379) .. (221.5679,48.7981) .. controls (215.5117,44.3028) and<br />
-(207.7609,42.8075) .. (200.2468,42.1653) .. controls (188.2164,41.1387) and<br />
-(176.0289,41.9872) .. (164.2562,44.6707) .. controls (160.3187,45.5684) and<br />
-(156.4210,46.6723) .. (152.6593,48.1442) .. controls (148.8601,49.6325) and<br />
-(145.1734,51.5145) .. (142.0445,54.1325) .. controls (135.8007,59.3520) and<br />
-(132.2617,67.5200) .. (132.3578,75.6200) .. controls (132.4093,80.0262) and<br />
-(132.8265,99.0973) .. (133.6351,104.4786) &ndash; cycle(133.6351,104.4786);</p>
-<p>% path3000<br />
-\path[fill=huise,nonzero rule,line width=0.360pt] (47.6218,70.9348) ..<br />
-controls (47.5351,68.8020) and (49.2062,66.9856) .. (51.3367,66.8989) ..<br />
-controls (53.4695,66.8098) and (55.2859,68.4832) .. (55.3750,70.6137) ..<br />
-controls (55.4617,72.7465) and (53.7882,74.5629) .. (51.6578,74.6497) ..<br />
-controls (49.5250,74.7388) and (47.7085,73.0653) .. (47.6218,70.9348);</p>
-<p>% path3002<br />
-\path[fill=huise,nonzero rule,line width=0.360pt] (33.7750,101.5348) ..<br />
-controls (33.6883,99.4020) and (35.3593,97.5856) .. (37.4921,97.4965) ..<br />
-controls (39.6226,97.4098) and (41.4390,99.0832) .. (41.5281,101.2137) ..<br />
-controls (41.6148,103.3465) and (39.9437,105.1629) .. (37.8109,105.2497) ..<br />
-controls (35.6781,105.3388) and (33.8640,103.6653) .. (33.7750,101.5348);</p>
-<p>% path3004<br />
-\path[fill=huise,nonzero rule,line width=0.360pt] (65.6312,86.5278) ..<br />
-controls (65.3289,84.4161) and (66.8101,82.4403) .. (68.9218,82.1379) ..<br />
-controls (71.0335,81.8356) and (73.0093,83.3168) .. (73.3117,85.4286) ..<br />
-controls (73.6140,87.5403) and (72.1328,89.5161) .. (70.0210,89.8184) ..<br />
-controls (67.9093,90.1207) and (65.9336,88.6395) .. (65.6312,86.5278);</p>
-<p>% path3006<br />
-\path[fill=hongse,nonzero rule,line width=0.360pt] (158.5679,70.9348) ..<br />
-controls (158.4788,68.8020) and (160.1523,66.9856) .. (162.2828,66.8989) ..<br />
-controls (164.4156,66.8098) and (166.2320,68.4832) .. (166.3187,70.6137) ..<br />
-controls (166.4078,72.7465) and (164.7343,74.5629) .. (162.6039,74.6497) ..<br />
-controls (160.4710,74.7388) and (158.6546,73.0653) .. (158.5679,70.9348);</p>
-<p>% path3008<br />
-\path[fill=hongse,nonzero rule,line width=0.360pt] (167.9171,94.0325) ..<br />
-controls (167.8304,91.8997) and (169.5015,90.0832) .. (171.6343,89.9965) ..<br />
-controls (173.7648,89.9074) and (175.5812,91.5809) .. (175.6703,93.7114) ..<br />
-controls (175.7570,95.8442) and (174.0859,97.6606) .. (171.9531,97.7473) ..<br />
-controls (169.8203,97.8364) and (168.0062,96.1629) .. (167.9171,94.0325);</p>
-<p>% path3010<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.080pt] (59.0500,70.1145) .. controls (86.5867,67.9559) and<br />
-(109.3914,59.4622) .. (136.9117,61.8247) .. controls (140.6054,62.1434) and<br />
-(147.4679,62.9426) .. (151.9328,64.7168);</p>
-<p>% path3012<br />
-\path[fill=black,nonzero rule,line width=0.360pt] (151.5812,64.6067) ..<br />
-controls (151.1781,63.3411) and (151.6327,61.4825) .. (152.1929,60.3200) ..<br />
-controls (152.5445,62.4504) and (153.3367,64.5622) .. (154.7499,66.2450) ..<br />
-controls (152.5773,66.0340) and (150.4187,66.7231) .. (148.4359,67.5879) ..<br />
-controls (149.1695,66.4114) and (150.2382,65.0754) .. (151.5812,64.6067);</p>
-<p>% path3014<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.080pt] (44.0921,101.3731) .. controls (61.6515,100.2481) and<br />
-(79.2109,99.1254) .. (96.7703,98.0004) .. controls (109.2718,97.1989) and<br />
-(121.8015,96.3950) .. (134.1554,94.3278) .. controls (143.4648,92.7692) and<br />
-(153.1046,90.5122) .. (162.2453,92.3145);</p>
-<p>% path3016<br />
-\path[fill=black,nonzero rule,line width=0.360pt] (161.8890,92.2559) ..<br />
-controls (161.1976,91.1192) and (161.2000,89.2067) .. (161.4695,87.9434) ..<br />
-controls (162.3132,89.9309) and (163.5836,91.7942) .. (165.3531,93.0973) ..<br />
-controls (163.1921,93.4067) and (161.2585,94.5856) .. (159.5359,95.8934) ..<br />
-controls (159.9695,94.5762) and (160.6937,93.0270) .. (161.8890,92.2559);</p>
-<p>% path3018<br />
-\path[draw=qingse,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=2.160pt] (266.6851,35.5536) .. controls (261.3156,37.5762) and<br />
-(255.9742,40.3582) .. (252.5617,44.9731) .. controls (250.7546,47.4223) and<br />
-(249.5734,50.2747) .. (248.5515,53.1411) .. controls (247.6046,55.8059) and<br />
-(246.7703,58.5411) .. (246.5921,61.3629) .. controls (245.9898,70.8856) and<br />
-(252.9929,79.4168) .. (261.1820,84.3106) .. controls (269.3711,89.2043) and<br />
-(278.8304,91.4637) .. (287.5984,95.2254) .. controls (294.7093,98.2770) and<br />
-(301.3867,102.3387) .. (307.3679,107.2512) .. controls (311.2351,110.4270) and<br />
-(314.8679,113.9918) .. (319.3164,116.2840) .. controls (323.7648,118.5762) and<br />
-(329.3617,119.3965) .. (333.6929,116.8887) .. controls (336.3648,115.3395) and<br />
-(338.2562,112.6981) .. (339.5382,109.8879) .. controls (342.6671,103.0254) and<br />
-(342.5054,95.1340) .. (341.5609,87.6528) .. controls (340.0468,75.6739) and<br />
-(336.6671,63.9317) .. (331.5789,52.9817) .. controls (329.8773,49.3184) and<br />
-(327.9812,45.7395) .. (325.7546,42.3692) .. controls (323.5046,38.9661) and<br />
-(320.8937,35.7551) .. (317.6781,33.2426) .. controls (311.2703,28.2293) and<br />
-(302.5398,26.4786) .. (294.6390,28.2668) .. controls (290.3406,29.2395) and<br />
-(271.7804,33.6387) .. (266.6851,35.5536) &ndash; cycle(266.6851,35.5536);</p>
-<p>% path3020<br />
-\path[fill=qingse,nonzero rule,line width=0.360pt] (300.2781,48.8661) ..<br />
-controls (300.1914,46.7356) and (301.8625,44.9192) .. (303.9953,44.8301) ..<br />
-controls (306.1257,44.7434) and (307.9422,46.4145) .. (308.0289,48.5473) ..<br />
-controls (308.1180,50.6778) and (306.4445,52.4942) .. (304.3140,52.5832) ..<br />
-controls (302.1812,52.6699) and (300.3648,50.9989) .. (300.2781,48.8661);</p>
-<p>% path3022<br />
-\path[fill=qingse,nonzero rule,line width=0.360pt] (317.5984,91.8082) ..<br />
-controls (317.5117,89.6778) and (319.1828,87.8614) .. (321.3156,87.7723) ..<br />
-controls (323.4461,87.6856) and (325.2625,89.3567) .. (325.3515,91.4895) ..<br />
-controls (325.4382,93.6200) and (323.7672,95.4364) .. (321.6343,95.5254) ..<br />
-controls (319.5015,95.6121) and (317.6875,93.9411) .. (317.5984,91.8082);</p>
-<p>% path3024<br />
-\path[fill=qingse,nonzero rule,line width=0.360pt] (263.2773,65.9239) ..<br />
-controls (263.1882,63.7934) and (264.8617,61.9770) .. (266.9921,61.8879) ..<br />
-controls (269.1250,61.8012) and (270.9414,63.4723) .. (271.0281,65.6051) ..<br />
-controls (271.1172,67.7356) and (269.4437,69.5520) .. (267.3132,69.6387) ..<br />
-controls (265.1804,69.7278) and (263.3640,68.0567) .. (263.2773,65.9239);</p>
-<p>% path3026<br />
-\path[fill=qingse,nonzero rule,line width=0.360pt] (290.4812,71.5536) ..<br />
-controls (290.3945,69.4231) and (292.0679,67.6067) .. (294.1984,67.5176) ..<br />
-controls (296.3312,67.4309) and (298.1453,69.1020) .. (298.2343,71.2348) ..<br />
-controls (298.3210,73.3653) and (296.6500,75.1817) .. (294.5195,75.2707) ..<br />
-controls (292.3867,75.3574) and (290.5703,73.6864) .. (290.4812,71.5536);</p>
-<p>% path3028<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.080pt] (168.4257,65.7645) .. controls (170.3734,55.9067) and<br />
-(268.2015,35.3754) .. (293.7929,47.3637);</p>
-<p>% path3030<br />
-\path[fill=black,nonzero rule,line width=0.360pt] (293.4578,47.2184) ..<br />
-controls (293.1086,45.9340) and (293.6453,44.0989) .. (294.2570,42.9622) ..<br />
-controls (294.5125,45.1067) and (295.2132,47.2512) .. (296.5515,48.9950) ..<br />
-controls (294.3882,48.6879) and (292.2015,49.2809) .. (290.1859,50.0567) ..<br />
-controls (290.9687,48.9153) and (292.0961,47.6286) .. (293.4578,47.2184);</p>
-<p>% path3032<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.080pt] (180.0414,99.4840) .. controls (194.4273,107.8114) and<br />
-(209.7250,105.6668) .. (226.3234,106.5247) .. controls (251.0593,107.8043) and<br />
-(275.9336,106.4075) .. (300.3718,102.3692) .. controls (304.9187,101.6168) and<br />
-(309.5945,100.7122) .. (313.6234,98.5747);</p>
-<p>% path3034<br />
-\path[fill=black,nonzero rule,line width=0.360pt] (313.2906,98.7247) ..<br />
-controls (311.9968,98.4153) and (310.6422,97.0629) .. (309.9367,95.9825) ..<br />
-controls (311.9429,96.7864) and (314.1601,97.1989) .. (316.3304,96.8614) ..<br />
-controls (315.0273,98.6122) and (314.5000,100.8153) .. (314.2140,102.9575) ..<br />
-controls (313.5859,101.7223) and (312.9976,100.1145) .. (313.2906,98.7247);</p>
-<p>% path3036<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.080pt] (54.9859,63.3950) .. controls (54.9859,63.3950) and<br />
-(55.3492,62.8700) .. (56.0125,61.9184);</p>
-<p>% path3038<br />
-\path[draw=black,dash pattern=on 2.14pt off 2.14pt,line join=miter,line<br />
-cap=butt,miter limit=10.00,line width=1.080pt] (58.0539,58.9981) .. controls<br />
-(67.8812,44.9754) and (98.2023,2.2582) .. (102.5499,2.5934) .. controls<br />
-(107.7507,2.9942) and (289.7664,-1.4097) .. (294.3578,2.5934) .. controls<br />
-(297.7187,5.5207) and (303.3320,24.1606) .. (305.7882,33.9762);</p>
-<p>% path3040<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.080pt] (306.2101,35.7082) .. controls (306.3648,36.3551) and<br />
-(306.4984,36.9434) .. (306.6086,37.4614);</p>
-<p>% path3042<br />
-\path[fill=black,nonzero rule,line width=0.360pt] (306.5242,37.1825) ..<br />
-controls (307.1547,36.3270) and (308.5726,35.7481) .. (309.5875,35.5653) ..<br />
-controls (308.3734,36.7934) and (307.3773,38.2981) .. (306.9507,40.0043) ..<br />
-controls (306.0671,38.4973) and (304.6070,37.4215) .. (303.1164,36.5450) ..<br />
-controls (304.2226,36.4676) and (305.5914,36.5332) .. (306.5242,37.1825);</p>
-<p>% path3044<br />
-\path[draw=black,dash pattern=on 2.16pt off 2.16pt,line join=miter,line<br />
-cap=butt,miter limit=10.00,line width=1.080pt] (73.3515,75.8684) .. controls<br />
-(73.3515,75.8684) and (120.1515,12.9950) .. (124.5507,13.7942) .. controls<br />
-(128.9500,14.5934) and (283.7500,13.7872) .. (283.7500,13.7872) &ndash;<br />
-(298.9000,38.9966);</p>
-<p>% path3046<br />
-\path[fill=black,nonzero rule,line width=0.360pt] (298.7125,38.6872) ..<br />
-controls (299.0359,37.3957) and (300.4000,36.0528) .. (301.4851,35.3567) ..<br />
-controls (300.6648,37.3536) and (300.2336,39.5684) .. (300.5523,41.7434) ..<br />
-controls (298.8109,40.4239) and (296.6125,39.8754) .. (294.4726,39.5707) ..<br />
-controls (295.7148,38.9543) and (297.3250,38.3801) .. (298.7125,38.6872);</p>
-<p>% path3048<br />
-\path[draw=black,line join=miter,line cap=butt,miter limit=10.00,line<br />
-width=1.080pt] (77.3171,85.1825) .. controls (100.7148,81.3598) and<br />
-(129.1539,79.9793) .. (152.9851,76.3653);</p>
-<p>% path3050<br />
-\path[fill=black,nonzero rule,line width=0.360pt] (152.6218,76.3864) ..<br />
-controls (151.5554,75.5942) and (150.8406,73.8176) .. (150.6156,72.5473) ..<br />
-controls (152.1437,74.0731) and (154.0211,75.3247) .. (156.1515,75.8684) ..<br />
-controls (154.2625,76.9653) and (152.9101,78.7840) .. (151.8062,80.6403) ..<br />
-controls (151.7148,79.2575) and (151.8062,77.5489) .. (152.6218,76.3864);</p>
-<p>% path3052<br />
-\path[draw=black,dash pattern=on 2.16pt off 2.16pt,line join=miter,line<br />
-cap=butt,miter limit=10.00,line width=1.080pt] (41.3500,108.9950) .. controls<br />
-(41.3500,108.9950) and (110.1156,144.1934) .. (116.7343,144.9950) .. controls<br />
-(123.3507,145.7942) and (309.3507,139.3934) .. (312.5500,138.1934) .. controls<br />
-(315.1797,137.2067) and (319.5156,111.6387) .. (320.9758,102.5567);</p>
-<p>% path3054<br />
-\path[fill=black,nonzero rule,line width=0.360pt] (320.9101,102.9153) ..<br />
-controls (319.8320,103.6958) and (317.9265,103.8434) .. (316.6468,103.6770) ..<br />
-controls (318.5593,102.6762) and (320.3171,101.2629) .. (321.4750,99.3950) ..<br />
-controls (321.9554,101.5231) and (323.2843,103.3582) .. (324.7234,104.9707) ..<br />
-controls (323.3781,104.6426) and (321.7750,104.0450) .. (320.9101,102.9153);</p>
-<p>\end{tikzpicture}</p>
+<p>\begin{figure}</p>
 <p>\caption{The composition $g \circ f$ of two functions $f$ and $g$.}</p>
 <p>\end{figure}</p>
 <p>\begin{defn}[Composition]<br />
@@ -4493,8 +3680,8 @@ Equinumerosity is an equivalence relation.<br />
 <p>\begin{proof}<br />
 We must show that equinumerosity is reflexive, symmetric, and<br />
 transitive. Let $A, B$, and $C$ be sets.</p>
-<p><bb>Reflexivity.</bb> The identity map $\Id{A} \colon A \to A$, where<br />
-$\Id{A} (x) = x$ for all $x \in A$, is a <bb>bijection</bb>. So<br />
+<p><bb>Reflexivity.</bb> The identity map $Id_A \colon A \to A$, where<br />
+$Id_A (x) = x$ for all $x \in A$, is a <bb>bijection</bb>. So<br />
 $\cardeq{A}{A}$.</p>
 <p><bb>Symmetry.</bb> Suppose $\cardeq{A}{B}$, i.e., there is<br />
 a <bb>bijection</bb> $f\colon A \to B$. Since $f$ is <bb>bijective</bb>, its<br />
@@ -4753,7 +3940,7 @@ is not <bb>enumerable</bb>.<br />
 enumeration to count out its <bb>element</bb>s.</p>
 <p>\begin{examplep}{}<br />
 A function enumerating the natural numbers is simply the identity<br />
-function $\Id{\mathbb{N}} \colon \mathbb{N} \to \mathbb{N}$ given by $\Id{\mathbb{N}}(n) = n$. A<br />
+function $\text{Id}<em>{\mathbb{N}} \colon \mathbb{N} \to \mathbb{N}$ given by $\text{Id}</em>{\mathbb{N}}(n) = n$. A<br />
 function enumerating the <bb>positive</bb> natural numbers, $\mathbb{N}^+ =<br />
 \mathbb{N} \setminus \lbrace 0\rbrace $, is the function $g(n) = n + 1$, i.e., the<br />
 successor function.<br />
@@ -5062,7 +4249,7 @@ Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.<br
 \end{prob}</p>
 </blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Thursday, September 3, 2020, 18:40:35 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Thursday, September 3, 2020, 23:57:35 by 王小花.</p>
     </article>
     
     <script>
