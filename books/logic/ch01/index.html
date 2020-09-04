@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-03T23:57:35&#43;0800">
+<meta name="modified" content="2020-09-04T23:03:45&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 01 章 預備：素樸集合論",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-03T23:57:35+08:00",
+    "dateModified": "2020-09-04T23:03:45+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch01/",
     "description": "The material in this chapter is an introduction to basic naïve set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1717,9 +1717,9 @@ if (!doNotTrack) {
 
 &middot; <time class="single__info" title="Written At">📅&nbsp;Sep 1, 2020 </time>
   
-&middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 3, 2020 </time>
+&middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 4, 2020 </time>
   
-&middot; 🔢 23915 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 48 min read</span>
+&middot; 🔢 23970 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 48 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -2357,7 +2357,7 @@ Let $S \subseteq \mathbb{Z}^2$ be the successor relation on $\mathbb{Z}$, i.e., 
 </ol>
 </blockquote>
 <blockquote>
-<p><bb>定義 1.28【Transitive closure】</bb><br />
+<p><bb>定義 1.29【Transitive closure】</bb><br />
 Let $R \subseteq A^2$ be a binary relation.</p>
 <ol>
 <li>The <bb>transitive closure</bb> of $R$ is $R^+ = \bigcup_{0 &lt; n \in<br />
@@ -2375,258 +2375,116 @@ Show that the transitive closure of $R$ is in fact transitive.</p>
 </blockquote>
 <h1 id="函数关系之特例">函数：关系之特例</h1>
 <h2 id="basics">Basics</h2>
-<p>A <bb>function</bb> is a map which sends each <bb>element</bb> of a given set<br />
-to a specific <bb>element</bb> in some (other) given set. For instance, the<br />
-operation of adding $1$ defines a function: each number $n$ is mapped<br />
-to a unique number $n+1$.</p>
-<p>More generally, functions may take pairs, triples, etc., as inputs and<br />
-returns some kind of output. Many functions are familiar to us from<br />
-basic arithmetic. For instance, addition and multiplication are<br />
-functions. They take in two numbers and return a third.</p>
-<p>In this mathematical, abstract sense, a function is a \emph{black<br />
-box}: what matters is only what output is paired with what input, not<br />
-the method for calculating the output.</p>
-<p>\begin{defn}[Function]<br />
-A <bb>function</bb> $f \colon A \to B$ is a mapping of each <bb>element</bb><br />
-of $A$ to an <bb>element</bb> of $B$.</p>
-<p>We call $A$ the <bb>domain</bb> of $f$ and $B$ the <bb>codomain</bb><br />
-of $f$.  The <bb>element</bb>s of $A$ are called inputs or <bb>arguments</bb><br />
-of $f$, and the <bb>element</bb> of $B$ that is paired with an argument $x$<br />
-by $f$ is called the <bb>value of $f$</bb> for argument $x$,<br />
-written $f(x)$.</p>
-<p>The <bb>range</bb> $\ran{f}$ of $f$ is the subset of the codomain<br />
-consisting of the values of $f$ for some argument; $\ran{f} =<br />
-\Setabs{f(x)}{x \in A}$.<br />
-\end{defn}</p>
-<p>The diagram in Figure \ref{fig:function} may help to think about functions. The ellipse<br />
-on the left represents the function&rsquo;s <bb>domain</bb>; the ellipse on<br />
-the right represents the function&rsquo;s <bb>codomain</bb>; and an arrow<br />
-points from an <bb>argument</bb> in the domain to the corresponding<br />
-<bb>value</bb> in the codomain.</p>
-<p>\begin{figure}</p>
-<p>\caption{A function is a mapping of each <bb>element</bb> of one set to<br />
-an <bb>element</bb> of another. An arrow points from an argument in the<br />
-domain to the corresponding value in the codomain.}</p>
-<p>\end{figure}</p>
-<p>\begin{examplep}{}<br />
-Multiplication takes pairs of natural numbers as inputs and maps them<br />
-to natural numbers as outputs, so goes from $\mathbb{N} \times \mathbb{N}$ (the<br />
-domain) to $\mathbb{N}$ (the codomain). As it turns out, the range is also<br />
-$\mathbb{N}$, since every $n \in \mathbb{N}$ is $n \times 1$.<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-Multiplication is a function because it pairs each input&mdash;each pair<br />
-of natural numbers&mdash;with a single output: $\times \colon \mathbb{N}^2 \to<br />
-\mathbb{N}$. By contrast, the square root operation applied to the domain<br />
-$\mathbb{N}$ is not functional, since each positive integer $n$ has two<br />
-square roots: $\sqrt{n}$ and $-\sqrt{n}$. We can make it functional by<br />
-only returning the positive square root: $\sqrt{\phantom{X}} \colon<br />
-\mathbb{N} \to \mathbb{R}$.<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-The relation that pairs each student in a class with their final grade<br />
-is a function&mdash;no student can get two different final grades in the<br />
-same class. The relation that pairs each student in a class with their<br />
-parents is not a function: students can have zero, or two, or more<br />
-parents.<br />
-\end{examplep}</p>
+<p>A <bb>function</bb> is a map which sends each <bb>element</bb> of a given set to a specific <bb>element</bb> in some (other) given set. For instance, the operation of adding $1$ defines a function: each number $n$ is mapped to a unique number $n+1$.</p>
+<p>More generally, functions may take pairs, triples, etc., as inputs and returns some kind of output. Many functions are familiar to us from basic arithmetic. For instance, addition and multiplication are functions. They take in two numbers and return a third.</p>
+<p>In this mathematical, abstract sense, a function is a <bb>black box</bb>: what matters is only what output is paired with what input, not the method for calculating the output.</p>
+<blockquote>
+<p><bb>定義 1.30【Function】</bb><br />
+A <bb>function</bb> $f \colon A \to B$ is a mapping of each <bb>element</bb> of $A$ to an <bb>element</bb> of $B$.<br />
+We call $A$ the <bb>domain</bb> of $f$ and $B$ the <bb>codomain</bb> of $f$.  The <bb>element</bb>s of $A$ are called inputs or <bb>arguments</bb> of $f$, and the <bb>element</bb> of $B$ that is paired with an argument $x$ by $f$ is called the <bb>value of $f$</bb> for argument $x$, written $f(x)$.<br />
+The <bb>range</bb> $\text{ran}(f)$ of $f$ is the subset of the codomain consisting of the values of $f$ for some argument; $\text{ran}(f) = \lbrace f(x): x \in A\rbrace$.</p>
+</blockquote>
+<p>The diagram in Figure 1.3 may help to think about functions. The ellipse on the left represents the function&rsquo;s <bb>domain</bb>; the ellipse on the right represents the function&rsquo;s <bb>codomain</bb>; and an arrow points from an <bb>argument</bb> in the domain to the corresponding <bb>value</bb> in the codomain.</p>
+<p><img src="https://i.loli.net/2020/09/04/Ajr4cVnlOqgduWo.png" alt="defnoffunction" /></p>
+<blockquote>
+<p><bb>示例 1.26</bb><br />
+Multiplication takes pairs of natural numbers as inputs and maps them to natural numbers as outputs, so goes from $\mathbb{N} \times \mathbb{N}$ (the domain) to $\mathbb{N}$ (the codomain). As it turns out, the range is also $\mathbb{N}$, since every $n \in \mathbb{N}$ is $n \times 1$.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.27</bb><br />
+Multiplication is a function because it pairs each input&mdash;each pair of natural numbers&mdash;with a single output: $\times \colon \mathbb{N}^2 \to \mathbb{N}$. By contrast, the square root operation applied to the domain $\mathbb{N}$ is not functional, since each positive integer $n$ has two square roots: $\sqrt{n}$ and $-\sqrt{n}$. We can make it functional by only returning the positive square root: $\sqrt{\phantom{X}} \colon \mathbb{N} \to \mathbb{R}$.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.28</bb><br />
+The relation that pairs each student in a class with their final grade is a function&mdash;no student can get two different final grades in the same class. The relation that pairs each student in a class with their parents is not a function: students can have zero, or two, or more parents.</p>
+</blockquote>
 <p>We can define functions by specifying in some precise way what the<br />
 value of the function is for every possible argment. Different ways of<br />
 doing this are by giving a formula, describing a method for computing<br />
 the value, or listing the values for each argument. However functions<br />
 are defined, we must make sure that for each argment we specify one,<br />
 and only one, value.</p>
-<p>\begin{examplep}{}<br />
-Let $f \colon \mathbb{N} \to \mathbb{N}$ be defined such that $f(x) = x+1$. This<br />
-is a definition that specifies $f$ as a function which takes in<br />
-natural numbers and outputs natural numbers. It tells us that, given a<br />
-natural number $x$, $f$ will output its successor $x+1$.<br />
-In this case, the codomain $\mathbb{N}$ is not the range of $f$, since the<br />
-natural number $0$ is not the successor of any natural number. The<br />
-range of $f$ is the set of all positive integers, $\mathbb{Z}^{+}$.<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-Let $g \colon \mathbb{N} \to \mathbb{N}$ be defined such that $g(x) = x+2-1$. This<br />
-tells us that $g$ is a function which takes in natural numbers and<br />
-outputs natural numbers. Given a natural number $n$, $g$ will output<br />
-the predecessor of the successor of the successor of $x$, i.e.,<br />
-$x+1$.<br />
-\end{examplep}</p>
-<p>We just considered two functions, $f$ and $g$, with different<br />
-<bb>definitions</bb>. However, these are the <bb>same function</bb>. After<br />
-all, for any natural number $n$, we have that $f(n) = n+1 = n+2-1 =<br />
-g(n)$. Otherwise put: our  definitions for $f$ and $g$ specify the<br />
-same mapping by means of different equations. Implicitly, then, we are<br />
-relying upon a principle of extensionality for functions,<br />
-$$<br />
-\text{if }\forall x, f(x) = g(x)\text{, then }f = g<br />
-$$<br />
-provided that $f$ and $g$ share the same domain and codomain.</p>
-<p>\begin{examplep}{}<br />
-We can also define functions by cases. For instance, we could define<br />
-$h \colon \mathbb{N} \to \mathbb{N}$  by<br />
-$$<br />
-h(x) =<br />
-\begin{cases}<br />
-\frac{x}{2} &amp; \text{if $x$ is even} \<br />
-\frac{x+1}{2} &amp; \text{if $x$ is odd.}<br />
-\end{cases}<br />
-$$<br />
-%$$<br />
-%h(x)=\left\lbrace \begin{array}{ll}<br />
-%\frac{x}{2} &amp; \text { if } x \text { is even } \<br />
-%\frac{x+1}{2} &amp; \text { if } x \text { is odd }<br />
-%\end{array}\right.<br />
-%$$<br />
-Since every natural number is either even or odd, the output of this<br />
-function will always be a natural number. Just remember that if you<br />
-define a function by cases, every possible input must fall into<br />
-exactly one case.  In some cases, this will require a proof that the<br />
-cases are exhaustive and exclusive.<br />
-\end{examplep}</p>
+<blockquote>
+<p><bb>示例 1.29</bb><br />
+Let $f \colon \mathbb{N} \to \mathbb{N}$ be defined such that $f(x) = x+1$. This is a definition that specifies $f$ as a function which takes in natural numbers and outputs natural numbers. It tells us that, given a natural number $x$, $f$ will output its successor $x+1$. In this case, the codomain $\mathbb{N}$ is not the range of $f$, since the natural number $0$ is not the successor of any natural number. The range of $f$ is the set of all positive integers, $\mathbb{Z}^{+}$.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.30</bb><br />
+Let $g \colon \mathbb{N} \to \mathbb{N}$ be defined such that $g(x) = x+2-1$. This tells us that $g$ is a function which takes in natural numbers and outputs natural numbers. Given a natural number $n$, $g$ will output the predecessor of the successor of the successor of $x$, i.e., $x+1$.</p>
+</blockquote>
+<p>We just considered two functions, $f$ and $g$, with different <bb>definitions</bb>. However, these are the <bb>same function</bb>. After all, for any natural number $n$, we have that $f(n) = n+1 = n+2-1 = g(n)$. Otherwise put: our  definitions for $f$ and $g$ specify the same mapping by means of different equations. Implicitly, then, we are relying upon a principle of extensionality for functions, $$\text{if }\forall x, f(x) = g(x)\text{, then }f = g$$ provided that $f$ and $g$ share the same domain and codomain.</p>
+<blockquote>
+<p><bb>示例 1.31</bb><br />
+We can also define functions by cases. For instance, we could define $h \colon \mathbb{N} \to \mathbb{N}$  by<br />
+$$h(x) =\begin{cases}<br />
+\displaystyle\frac{x}{2} &amp; \text{if $x$ is even},<br />
+\displaystyle\frac{x+1}{2} &amp; \text{if $x$ is odd.}<br />
+\end{cases}$$<br />
+Since every natural number is either even or odd, the output of this function will always be a natural number. Just remember that if you define a function by cases, every possible input must fall into exactly one case.  In some cases, this will require a proof that the cases are exhaustive and exclusive.</p>
+</blockquote>
 <h2 id="kinds-of-functions">Kinds of Functions</h2>
-<p>It will be useful to introduce a kind of taxonomy for some of the<br />
-kinds of functions which we encounter most frequently.</p>
-<p>To start, we might want to consider functions which have the property<br />
-that every member of the codomain is a value of the function. Such<br />
-functions are called <bb>surjective</bb>, and can be pictured as in<br />
-Figure<br />
-\olref{fig:surjective}.</p>
-<p>\begin{figure}</p>
-<p>\caption{A <bb>surjective</bb> function has every <bb>element</bb> of the<br />
-codomain as a value.}</p>
-<p>\end{figure}</p>
-<p>\begin{defn}[surjective function]<br />
-A function $f \colon A \rightarrow B$ is <bb>surjective</bb> iff $B$<br />
-is also the range of $f$, i.e., for every $y \in B$ there is at least<br />
-one $x \in A$ such that $f(x) = y$, or in symbols:<br />
-$$<br />
-(\forall y \in B)(\exists x \in A)f(x) = y.<br />
-$$<br />
-We call such a function a <bb>surjection</bb> from $A$ to $B$.<br />
-\end{defn}</p>
-<p>If you want to show that $f$ is a <bb>surjection</bb>, then you need to show<br />
-that every object in $f$'s codomain is the value of $f(x)$ for some<br />
-input $x$.</p>
-<p>Note that any function <bb>induces</bb> a <bb>surjection</bb>. After all,<br />
-given a function $f \colon A \to B$, let $f&rsquo; \colon A \to \ran{f}$ be<br />
-defined by $f&rsquo;(x) = f(x)$. Since $\ran{f}$ is <bb>defined</bb> as<br />
-$\Setabs{f(x) \in B}{x \in A}$, this function $f'$ is guaranteed to be<br />
-a <bb>surjection</bb></p>
-<p>Now, any function maps each possible input to a unique output. But<br />
-there are also functions which never map different inputs to the same<br />
-outputs. Such functions are called <bb>injective</bb>, and can be pictured<br />
-as in Figure \olref{fig:injective}.</p>
-<p>\begin{figure}</p>
-<p>\caption{A <bb>injective</bb> function never maps two different<br />
-arguments to the same value.}</p>
-<p>\end{figure}</p>
-<p>\begin{defn}[injective function]<br />
-A function $f \colon A \rightarrow B$ is <bb>injective</bb> iff for<br />
-each $y \in B$ there is at most one $x \in A$ such that $f(x) = y$. We<br />
-call such a function an <bb>injection</bb> from $A$ to $B$.<br />
-\end{defn}</p>
-<p>If you want to show that $f$ is an <bb>injection</bb>, you need to show that<br />
-for any <bb>element</bb>s $x$ and $y$ of $f$'s domain, if $f(x)=f(y)$, then<br />
-$x=y$.</p>
-<p>\begin{examplep}{}<br />
-The constant function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = 1$ is<br />
-neither <bb>injective</bb>, nor <bb>surjective</bb>.</p>
-<p>The identity function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x$ is<br />
-both <bb>injective</bb> and <bb>surjective</bb>.</p>
-<p>The successor function $f \colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x+1$<br />
-is <bb>injective</bb> but not <bb>surjective</bb>.</p>
-<p>The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:<br />
-$$<br />
-f(x) =<br />
-\begin{cases}<br />
-\frac{x}{2} &amp; \text{if $x$ is even} \<br />
-\frac{x+1}{2} &amp; \text{if $x$ is odd.}<br />
-\end{cases}<br />
-$$<br />
-is <bb>surjective</bb>, but not <bb>injective</bb>.<br />
-\end{examplep}</p>
-<p>Often enough, we want to consider functions which are both<br />
-<bb>injective</bb> and <bb>surjective</bb>. We call such functions<br />
-<bb>bijective</bb>. They look like the function pictured in<br />
-Figure<br />
-\olref{fig:bijective}. <bb>bijection</bb>s are also sometimes called<br />
-<bb>one-to-one correspondences</bb>, since they uniquely pair elements<br />
-of the codomain with elements of the domain.</p>
-<p>\begin{figure}</p>
-<p>\caption{A <bb>bijective</bb> function uniquely pairs the elements of the<br />
-codomain with those of the domain.}</p>
-<p>\end{figure}</p>
-<p>\begin{defn}[bijection]<br />
-A function $f \colon A \to B$ is <bb>bijective</bb> iff it is both<br />
-<bb>surjective</bb> and <bb>injective</bb>. We call such a function<br />
-a <bb>bijection</bb> from $A$ to $B$ (or between $A$ and $B$).<br />
-\end{defn}</p>
+<p>It will be useful to introduce a kind of taxonomy for some of the kinds of functions which we encounter most frequently.</p>
+<p>To start, we might want to consider functions which have the property that every member of the codomain is a value of the function. Such functions are called <bb>surjective</bb>, and can be pictured as in Figure 1.4.</p>
+<p><img src="https://i.loli.net/2020/09/04/5nBmbKUJP2aeDc9.png" alt="surjectivefunction.png" /></p>
+<blockquote>
+<p><bb>定義 1.31【Surjective function】</bb><br />
+A function $f \colon A \rightarrow B$ is <bb>surjective</bb> iff $B$ is also the range of $f$, i.e., for every $y \in B$ there is at least one $x \in A$ such that $f(x) = y$, or in symbols: $$(\forall y \in B)(\exists x \in A)f(x) = y.$$ We call such a function a <bb>surjection</bb> from $A$ to $B$.</p>
+</blockquote>
+<p>If you want to show that $f$ is a <bb>surjection</bb>, then you need to show that every object in $f$'s codomain is the value of $f(x)$ for some input $x$.</p>
+<p>Note that any function <bb>induces</bb> a <bb>surjection</bb>. After all, given a function $f \colon A \to B$, let $f&rsquo; \colon A \to \text{ran}(f)$ be defined by $f&rsquo;(x) = f(x)$. Since $\text{ran}(f)$ is <bb>defined</bb> as $\lbrace f(x) \in B: x \in A\rbrace$, this function $f'$ is guaranteed to be a <bb>surjection</bb>.</p>
+<p>Now, any function maps each possible input to a unique output. But there are also functions which never map different inputs to the same outputs. Such functions are called <bb>injective</bb>, and can be pictured as in Figure 1.5.</p>
+<p><img src="https://i.loli.net/2020/09/04/gVLDQzdtlKMwjpN.png" alt="222.png" /></p>
+<blockquote>
+<p><bb>定義 1.32【Injective function】</bb><br />
+A function $f \colon A \rightarrow B$ is <bb>injective</bb> iff for each $y \in B$ there is at most one $x \in A$ such that $f(x) = y$. We call such a function an <bb>injection</bb> from $A$ to $B$.</p>
+</blockquote>
+<p>If you want to show that $f$ is an <bb>injection</bb>, you need to show that for any <bb>element</bb>s $x$ and $y$ of $f$'s domain, if $f(x)=f(y)$, then $x=y$.</p>
+<blockquote>
+<p><bb>示例 1.32</bb><br />
+The constant function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = 1$ is neither <bb>injective</bb>, nor <bb>surjective</bb>. The identity function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x$ is both <bb>injective</bb> and <bb>surjective</bb>.<br />
+The successor function $f \colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x+1$ is <bb>injective</bb> but not <bb>surjective</bb>.<br />
+The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:<br />
+$$f(x) =\begin{cases}<br />
+\displaystyle\frac{x}{2} &amp; \text{if $x$ is even} \<br />
+\displaystyle\frac{x+1}{2} &amp; \text{if $x$ is odd.}<br />
+\end{cases}$$<br />
+is <bb>surjective</bb>, but not <bb>injective</bb>.</p>
+</blockquote>
+<p>Often enough, we want to consider functions which are both <bb>injective</bb> and <bb>surjective</bb>. We call such functions <bb>bijective</bb>. They look like the function pictured in Figure 1.6. <bb>bijection</bb>s are also sometimes called <bb>one-to-one correspondences</bb>, since they uniquely pair elements of the codomain with elements of the domain.</p>
+<p><img src="https://i.loli.net/2020/09/04/PpOsUwucAmM3qhv.png" alt="333.png" /></p>
+<blockquote>
+<p><bb>定義 1.33【bijection】</bb><br />
+A function $f \colon A \to B$ is <bb>bijective</bb> iff it is both <bb>surjective</bb> and <bb>injective</bb>. We call such a function a <bb>bijection</bb> from $A$ to $B$ (or between $A$ and $B$).</p>
+</blockquote>
 <h2 id="functions-as-relations">Functions as Relations</h2>
-<p>A function which maps <bb>element</bb>s of $A$ to <bb>element</bb>s of $B$<br />
-obviously defines a relation between $A$ and $B$, namely the relation<br />
-which holds between $x$ and $y$ iff $f(x) = y$.  In fact, we might<br />
-even&mdash;if we are interested in reducing the building blocks of<br />
-mathematics for instance&mdash;<bb>identify</bb> the function $f$ with this<br />
-relation, i.e., with a set of pairs.  This then raises the question:<br />
-which relations define functions in this way?</p>
-<p>\begin{defn}[Graph of a function] Let $f\colon A \to B$ be a function.<br />
-The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$<br />
-defined by<br />
-$$<br />
-R_f = \Setabs{⟨x,y⟩}{f(x) = y}.<br />
-$$<br />
-\end{defn}</p>
-<p>The graph of a function is uniquely determined, by extensionality.<br />
-Moreover, extensionality (on sets) will immediate vindicate the<br />
-implicit principle of extensionality for functions,<br />
-whereby if $f$ and $g$ share a domain and codomain then they are<br />
-identical if they agree on all values.</p>
+<p>A function which maps <bb>element</bb>s of $A$ to <bb>element</bb>s of $B$ obviously defines a relation between $A$ and $B$, namely the relation which holds between $x$ and $y$ iff $f(x) = y$.  In fact, we might even&mdash;if we are interested in reducing the building blocks of mathematics for instance&mdash;<bb>identify</bb> the function $f$ with this relation, i.e., with a set of pairs.  This then raises the question: which relations define functions in this way?</p>
+<blockquote>
+<p><bb>定義 1.34【Graph of a function】</bb><br />
+Let $f\colon A \to B$ be a function. The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$ defined by $$R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.$$</p>
+</blockquote>
+<p>The graph of a function is uniquely determined, by extensionality. Moreover, extensionality (on sets) will immediate vindicate the implicit principle of extensionality for functions, whereby if $f$ and $g$ share a domain and codomain then they are identical if they agree on all values.</p>
 <p>Similarly, if a relation is &ldquo;functional&rsquo;&rsquo;, then it is the graph of a function.</p>
-<p>\begin{prop}{}<br />
-Let $R \subseteq A \times B$ be such that:<br />
-\begin{quofbe}<br />
-\item If $Rxy$ and $Rxz$ then $y = z$; and<br />
-\item for every $x \in A$ there is some $y \in B$ such that $\tuple{x,<br />
-y} \in R$.<br />
-\end{quofbe}<br />
-Then $R$ is the graph of the function $f\colon A \to B$ defined by<br />
-$f(x) = y$ iff $Rxy$.<br />
-\end{prop}</p>
-<p>\begin{proof}<br />
-Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq<br />
-y$ such that $Rxz$, the condition on $R$ would be violated. Hence, if<br />
-there is a $y$ such that $Rxy$, this $y$ is unique, and so $f$ is<br />
-well-defined.  Obviously, $R_f = R$.<br />
-\end{proof}</p>
-<p>Every function $f\colon A \to B$ has a graph, i.e., a relation on $A<br />
-\times B$ defined by $f(x) = y$. On the other hand, every relation $R<br />
-\subseteq A \times B$ with the properties given in<br />
-Proposition<br />
-\ref{prop:graph-function} is the graph of a function $f \colon A \to<br />
-B$. Because of this close connection between functions and their<br />
-graphs, we can think of a function simply as its graph. In other<br />
-words, functions can be identified with certain relations, i.e., with<br />
-certain sets of tuples. Note, though, that the spirit of this &ldquo;identification&rsquo;&rsquo; is as in \jieref{subsec:Philosophical-Reflections}: it is not a claim about the metaphysics of<br />
-functions, but an observation that it is convenient to <bb>treat</bb> functions as certain sets. One reason that this is so convenient, is that We can now consider performing similar operations on functions as we performed on relations (see<br />
-\jieref{subsec:Operations-on-Relations}). In particular:</p>
-<p>\begin{defn}[]<br />
-Let $f \colon A \to B$ be a function with $C\subseteq A$.</p>
-<p>The <bb>restriction</bb> of $f$ to $C$ is the<br />
-function $f\upharpoonright_{C}\colon C \to B$ defined by<br />
-$(f\upharpoonright_{C})(x) = f(x)$ for all $x \in C$. In other<br />
-words, $f\upharpoonright_{C} = \Setabs{⟨x, y⟩ \in R_f}{x \in<br />
-C}$.</p>
-<p>The <bb>application</bb> of $f$ to $C$ is $f[C] =<br />
-\Setabs{f(x)}{x \in C}$. We also call this the <bb>image</bb> of $C$<br />
-under $f$.<br />
-\end{defn}</p>
-<p>It follows from these definition that $\ran{f} =<br />
-f[\dom{f]}$, for any function $f$. These notions are exactly as one would<br />
-expect, given the definitions in \jieref{subsec:Operations-on-Relations} and our<br />
-identification of functions with relations. But two other<br />
-operations&mdash;inverses and relative products&mdash;require a little more<br />
-detail. We will provide that in the \jieref{subsec:Inverses-of-Functions} and \jieref{subsec:Composition-of-Functions}.</p>
+<blockquote>
+<p><bb>命題 1.6</bb><br />
+Let $R \subseteq A \times B$ be such that:</p>
+<ol>
+<li>If $Rxy$ and $Rxz$ then $y = z$; and</li>
+<li>for every $x \in A$ there is some $y \in B$ such that $⟨x,y⟩ \in R$.<br />
+Then $R$ is the graph of the function $f\colon A \to B$ defined by $f(x) = y$ iff $Rxy$.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.6 之證明</bb><br />
+Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq y$ such that $Rxz$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, this $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$.</p>
+</blockquote>
+<p>Every function $f\colon A \to B$ has a graph, i.e., a relation on $A \times B$ defined by $f(x) = y$. On the other hand, every relation $R \subseteq A \times B$ with the properties given in Proposition 1.6 is the graph of a function $f \colon A \to B$. Because of this close connection between functions and their graphs, we can think of a function simply as its graph. In other words, functions can be identified with certain relations, i.e., with certain sets of tuples. Note, though, that the spirit of this &ldquo;identification&rsquo;&rsquo; is as in §1.1.1（P.28）: it is not a claim about the metaphysics of functions, but an observation that it is convenient to <bb>treat</bb> functions as certain sets. One reason that this is so convenient, is that We can now consider performing similar operations on functions as we performed on relations (see §1.1.6（P.34）). In particular:</p>
+<blockquote>
+<p><bb>定義 1.35</bb><br />
+Let $f \colon A \to B$ be a function with $C\subseteq A$.<br />
+The <bb>restriction</bb> of $f$ to $C$ is the function $f\upharpoonright_{C}\colon C \to B$ defined by $(f\upharpoonright_{C})(x) = f(x)$ for all $x \in C$. In other words, $f\upharpoonright_{C} = \lbrace ⟨x, y⟩ \in R_f: x \in C\rbrace$.<br />
+The <bb>application</bb> of $f$ to $C$ is $f[C] = \lbrace f(x): x \in C\rbrace$. We also call this the <bb>image</bb> of $C$ under $f$.</p>
+</blockquote>
+<p>It follows from these definition that $\text{ran}(f) = f[\text{dom}(f)]$, for any function $f$. These notions are exactly as one would expect, given the definitions in §1.1.6（P.34）and our identification of functions with relations. But two other operations&mdash;inverses and relative products&mdash;require a little more detail. We will provide that in the §1.2.3（P.41）and §1.2.4（P.42）.</p>
 <h2 id="inverses-of-functions">Inverses of Functions</h2>
 <p>We think of functions as maps. An obvious question to ask about<br />
 functions, then, is whether the mapping can be &ldquo;reversed.&rsquo;&rsquo; For<br />
@@ -2661,9 +2519,11 @@ uniquely specified for $y = f(x_1) = f(x_2)$. And if there is no $x$<br />
 at all such that $f(x) = y$, then $g(y)$ is not specified at all.  In<br />
 other words, for $g$ to be defined, $f$ must be both <bb>injective</bb> and<br />
 <bb>surjective</bb>.</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 Every <bb>bijection</bb> has a unique inverse.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{proof}<br />
 Exercise.<br />
 \end{proof}</p>
@@ -2678,7 +2538,7 @@ $x \in A$ and $y \in B$.<br />
 </blockquote>
 <p>However, there is a slightly more general way to extract inverses. We<br />
 saw in \jieref{subsec:Kinds-of-Functions} that every function $f$ induces<br />
-a <bb>surjection</bb> $f&rsquo; \colon A \to \ran{f}$ by letting $f&rsquo;(x) = f(x)$<br />
+a <bb>surjection</bb> $f&rsquo; \colon A \to \text{ran}(f)$ by letting $f&rsquo;(x) = f(x)$<br />
 for all $x \in A$. Clearly, if $f$ is an <bb>injection</bb>, then $f'$ is<br />
 a <bb>bijection</bb>, so that it has a unique inverse by<br />
 Proposition<br />
@@ -2690,9 +2550,11 @@ Show that if $f\colon A \to B$ has an inverse $g$, then $f$ is<br />
 <bb>bijective</bb>.<br />
 \end{prob}</p>
 </blockquote>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 Every function $f$ has at most one inverse.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{proof}<br />
 Exercise.<br />
 \end{proof}</p>
@@ -2784,7 +2646,7 @@ Given $f\colon A \pto B$, define the partial function $g\colon B \pto<br />
 A$ by: for any $y \in B$, if there is a unique $x \in A$ such that<br />
 $f(x) = y$, then $g(y) = x$; otherwise $g(y) \fundefined$.  Show that<br />
 if $f$ is injective, then $g(f(x)) = x$ for all $x \in \dom{f}$, and<br />
-$f(g(y)) = y$ for all $y \in \ran{f}$.<br />
+$f(g(y)) = y$ for all $y \in \text{ran}(f)$.<br />
 \end{prob}</p>
 </blockquote>
 <p>\begin{defn}[Graph of a partial function]<br />
@@ -2794,7 +2656,8 @@ $$<br />
 R_f = \Setabs{⟨x,y⟩}{f(x) = y}.<br />
 $$<br />
 \end{defn}</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 Suppose $R \subseteq A \times B$ has the property that whenever $Rxy$<br />
 and $Rxy'$ then $y = y'$.  Then $R$ is the graph of the partial<br />
 function $f\colon X \pto Y$ defined by: if there is a $y$ such that<br />
@@ -2802,6 +2665,7 @@ $Rxy$, then $f(x) = y$, otherwise $f(x) \fundefined$.  If $R$ is also<br />
 <bb>serial</bb>, i.e., for each $x \in X$ there is a $y \in Y$ such that<br />
 $Rxy$, then $f$ is total.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{proof}<br />
 Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo;<br />
 \neq y$ such that $Rxy'$, the condition on $R$ would be<br />
@@ -2873,10 +2737,12 @@ even numbers occur at places $\infty + 1$, $\infty + 2$, $\infty +<br />
 3$, rather than at finite positions.<br />
 \item The empty set is enumerable: it is enumerated by the empty list!<br />
 \end{quofbe}</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 If $A$ has an enumeration, it has an enumeration without<br />
 repetitions.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{proof}<br />
 Suppose $A$ has an enumeration $x_1$, $x_2$, \dots{} in which each<br />
 $x_i$ is an <bb>element</bb> of $A$.  We can remove repetitions from an<br />
@@ -2991,10 +2857,12 @@ talk about the $0$th, $1$st, $2$nd, and so on, <bb>element</bb>s of a list.<br /
 Correspondingly, we can define an enumeration as a <bb>surjective</bb><br />
 function from $\mathbb{N}$ to $A$. Of course, the two definitions are<br />
 equivalent.</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 There is a <bb>surjection</bb> $f\colon \mathbb{Z}^{+} \to A$ iff there is<br />
 a <bb>surjection</bb> $g\colon \mathbb{N} \to A$.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{proof}<br />
 Given a <bb>surjection</bb> $f\colon \mathbb{Z}^{+} \to A$, we can define $g(n) =<br />
 f(n+1)$ for all $n \in \mathbb{N}$. It is easy to see that $g\colon \mathbb{N}<br />
@@ -3019,11 +2887,13 @@ a different domain for $f$, one with only finitely many <bb>element</bb>s.<br />
 Not having repetitions means that $f$ must be <bb>injective</bb>. Since it<br />
 is also <bb>surjective</bb>, we are looking for a <bb>bijection</bb> between some<br />
 finite set $\lbrace 1, \dots, n\rbrace $ or $\mathbb{Z}^{+}$ and $A$.</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 If $f\colon \mathbb{Z}^{+} \to A$ is <bb>surjective</bb> (i.e., an enumeration<br />
 of $A$), there is a <bb>bijection</bb> $g\colon Z \to A$ where $Z$ is<br />
 either $\mathbb{Z}^{+}$ or $\lbrace 1, \dots, n\rbrace $ for some $n \in \mathbb{Z}^{+}$.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{proof}<br />
 We define the function $g$ recursively: Let $g(1) = f(1)$. If $g(i)$<br />
 has already been defined, let $g(i+1)$ be the first value of $f(1)$,<br />
@@ -3119,9 +2989,11 @@ $$<br />
 ⟨2,0⟩, ⟨0,3⟩, ⟨1,2⟩, ⟨2,1⟩, ⟨3,0⟩, \dots<br />
 $$<br />
 And this establishes the following:</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 $\mathbb{N} \times \mathbb{N}$ is <bb>enumerable</bb>.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{proof}<br />
 Let $f \colon \mathbb{N} \to \mathbb{N}\times\mathbb{N}$ take each $k \in \mathbb{N}$ to the<br />
 tuple $⟨n,m⟩ \in \mathbb{N} \times \mathbb{N}$ such that $k$ is the value of<br />
@@ -3160,9 +3032,11 @@ $$<br />
 Thus, by using a method like Cantor&rsquo;s zig-zag method, we may similarly<br />
 obtain an enumeration of $\mathbb{N}^3$. And we can keep going, obtaining<br />
 enumerations of $\mathbb{N}^n$ for any natural number $n$. So, we have:</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 $\mathbb{N}^n$ is <bb>enumerable</bb>, for every $n \in \mathbb{N}$.<br />
 \end{prop}</p>
+</blockquote>
 <h2 id="pairing-functions-and-codes">Pairing Functions and Codes</h2>
 <p>Cantor&rsquo;s zig-zag method makes the enumerability of $\mathbb{N}^n$ visually<br />
 evident. But let us focus on our array depicting $\mathbb{N}^2$. Following<br />
@@ -3674,9 +3548,11 @@ definition:</p>
 $A$ is <bb>equinumerous</bb> with $B$, written $\cardeq{A}{B}$, iff<br />
 there is a <bb>bijection</bb> $f \colon A \to B$.<br />
 \end{defn}</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 Equinumerosity is an equivalence relation.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{proof}<br />
 We must show that equinumerosity is reflexive, symmetric, and<br />
 transitive. Let $A, B$, and $C$ be sets.</p>
@@ -3692,10 +3568,12 @@ i.e., there are <bb>bijection</bb>s $f\colon A \to B$ and $g\colon B \to<br />
 C$. Then the composition $\comp{f}{g}\colon A \to C$ is <bb>bijective</bb>,<br />
 so that $\cardeq{A}{C}$.<br />
 \end{proof}</p>
-<p>\begin{prop}{}<br />
+<blockquote>
+<p><bb>命題 1.5</bb><br />
 If $\cardeq{A}{B}$, then $A$ is <bb>enumerable</bb> if<br />
 and only if $B$ is.<br />
 \end{prop}</p>
+</blockquote>
 <p>\begin{editorial}<br />
 The following proof uses Definition \pref{defn:enumerable} if<br />
 \jieref{subsec:Enumerations-and-enumerable-Sets-1} is included and Definition \pref{defn:enumerable}<br />
@@ -4249,7 +4127,7 @@ Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.<br
 \end{prob}</p>
 </blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Thursday, September 3, 2020, 23:57:35 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Friday, September 4, 2020, 23:03:45 by 王小花.</p>
     </article>
     
     <script>
