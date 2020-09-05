@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-05T17:57:00&#43;0800">
+<meta name="modified" content="2020-09-05T18:22:36&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 01 章 預備：素樸集合論",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-05T17:57:00+08:00",
+    "dateModified": "2020-09-05T18:22:36+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch01/",
     "description": "The material in this chapter is an introduction to basic naïve set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 5, 2020 </time>
   
-&middot; 🔢 24859 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 50 min read</span>
+&middot; 🔢 25008 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 50 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -2108,9 +2108,7 @@ Prove that if $A \subsetneq B$, then $B \setminus A \neq \varnothing$.</p>
 </blockquote>
 <h2 id="pairs-tuples-cartesian-products">Pairs, Tuples, Cartesian Products</h2>
 <p>It follows from extensionality that sets have no order to their elements. So if we want to represent order, we use <bb>ordered pairs</bb> $⟨x, y⟩$. In an unordered pair $\lbrace x, y\rbrace $, the order does not matter: $\lbrace x, y\rbrace  = \lbrace y, x\rbrace $. In an ordered pair, it does: if $x \neq y$, then $⟨x, y⟩ \neq ⟨y, x⟩$.</p>
-<p>How should we think about ordered pairs in set theory? Crucially, we want to preserve the idea that ordered pairs are identical iff they share the same first element and share the same second element, i.e.:<br />
-$$⟨a, b⟩= ⟨c, d⟩\text{ iff both }a = c \text{ and }b=d.$$<br />
-We can define ordered pairs in set theory using the Wiener-Kuratowski definition.</p>
+<p>How should we think about ordered pairs in set theory? Crucially, we want to preserve the idea that ordered pairs are identical iff they share the same first element and share the same second element, i.e.: $$⟨a, b⟩= ⟨c, d⟩\text{ iff both }a = c \text{ and }b=d.$$ We can define ordered pairs in set theory using the Wiener-Kuratowski definition.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">◉Definition 1.9【Ordered pair】</span>
@@ -2140,10 +2138,7 @@ defined by $$A \times B = \lbrace ⟨x, y⟩: x \in A \text{ and } y \in B\rbrac
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">If $A = \lbrace 0, 1\rbrace $, and $B = \lbrace 1, a, b\rbrace $, then their product is<br />
-$$<br />
-A \times B = \lbrace  ⟨0, 1⟩, ⟨0, a⟩, ⟨0, b⟩,<br />
-⟨1, 1⟩, ⟨1, a⟩, ⟨1, b⟩ \rbrace.<br />
-$$</span>
+$$A \times B = \lbrace  ⟨0, 1⟩, ⟨0, a⟩, ⟨0, b⟩, ⟨1, 1⟩, ⟨1, a⟩, ⟨1, b⟩ \rbrace.$$</span>
   </div>
   </div>
   <div>
@@ -2151,9 +2146,14 @@ $$</span>
   	<span style="font-family:SYHei Heavy;">⦿Example 1.13</span>
   </div>
   <div class="dtpcexbox">
-  <span style="font-family:SYHei Regular;">If $A$ is a set, the product of $A$ with itself, $A \times A$, is also written $A^2$. It is the set of <bb>all</bb> pairs $⟨x, y⟩$ with $x, y \in A$. The set of all triples $⟨x, y, z⟩$ is $A^3$, and so on. We can give a recursive definition:<br />
-$A^1 = A$<br />
-$A^{k+1} = A^k \times A$</span>
+  <span style="font-family:SYHei Regular;"><p>If $A$ is a set, the product of $A$ with itself, $A \times A$, is also written $A^2$. It is the set of <bb>all</bb> pairs $⟨x, y⟩$ with $x, y \in A$. The set of all triples $⟨x, y, z⟩$ is $A^3$, and so on. We can give a recursive definition:</p>
+<p>
+	\begin{align*}
+	A^1 & = A\\
+	A^{k+1} & = A^k \times A
+	\end{align*}
+</p>
+</span>
   </div>
   </div>
 <blockquote>
@@ -2171,12 +2171,20 @@ List all <bb>element</bb>s of $\lbrace 1, 2, 3\rbrace ^3$.</p>
 <blockquote>
 <p><bb>Proposition 1.1 之證明</bb><br />
 For every <bb>element</bb> $x$ in $A$, there are $m$ <bb>element</bb>s of the form $⟨x, y⟩ \in A \times B$. Let $B_x = \lbrace ⟨x, y⟩: y \in B\rbrace $. Since whenever $x_1 \neq x_2$, $⟨x_1, y⟩ \neq ⟨x_2, y⟩$, $B_{x_1} \cap B_{x_2} = \varnothing$. But if $A = \lbrace x_1, \cdots, x_n\rbrace $, then $A \times B = B_{x_1} \cup \dots \cup B_{x_n}$, and so has $n\cdot m$ <bb>element</bb>s.<br />
-To visualize this, arrange the <bb>element</bb>s of $A \times B$ in a grid:<br />
-$B_{x_1} = \lbrace ⟨x_1, y_1⟩  ⟨x_1, y_2⟩ \dots ⟨x_1, y_m⟩\rbrace$<br />
-$B_{x_2} = \lbrace ⟨x_2, y_1⟩   ⟨x_2, y_2⟩  \dots  ⟨x_2, y_m⟩\rbrace$<br />
-$\vdots$<br />
-$B_{x_n} = \lbrace ⟨x_n, y_1⟩  ⟨x_n, y_2⟩ \dots ⟨x_n, y_m⟩\rbrace$<br />
-Since the $x_i$ are all different, and the $y_j$ are all different, no two of the pairs in this grid are the same, and there are $n\cdot m$ of them.</p>
+To visualize this, arrange the <bb>element</bb>s of $A \times B$ in a grid:</p>
+</blockquote>
+<p>
+	\[
+	\begin{array}{rcccc}
+	B_{x_1} = & \{⟨x_1, y_1⟩ & ⟨x_1, y_2⟩ & \cdots & ⟨x_1, y_m⟩\}\\
+	B_{x_2} = & \{⟨x_2, y_1⟩ & ⟨x_2, y_2⟩ & \cdots & ⟨x_2, y_m⟩\}\\
+	\vdots & & \vdots\\
+	B_{x_n} = & \{⟨x_n, y_1⟩ & ⟨x_n, y_2⟩ & \cdots & ⟨x_n, y_m⟩\}
+	\end{array}
+	\]
+</p>
+<blockquote>
+<p>Since the $x_i$ are all different, and the $y_j$ are all different, no two of the pairs in this grid are the same, and there are $n\cdot m$ of them.</p>
 </blockquote>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
@@ -2196,12 +2204,16 @@ $$A^* = \lbrace \varnothing\rbrace  \cup A \cup A^2 \cup A^3 \cup \cdots$$</span
 <p>But this conditional is important! Crucially, not every property lends itself to <bb>comprehension</bb>. That is, some  properties do <bb>not</bb> define sets. If they all did, then we would run into outright contradictions. The most famous example of this is Russell&rsquo;s Paradox.</p>
 <p>Sets may be <bb>element</bb>s of other sets&mdash;for instance, the power set of a set $A$ is made up of sets. And so it makes sense to ask or investigate whether a set is an <bb>element</bb> of another set. Can a set be a member of itself?  Nothing about the idea of a set seems to rule this out. For instance, if <bb>all</bb> sets form a collection of objects, one might think that they can be collected into a single set&mdash;the set of all sets. And it, being a set, would be an <bb>element</bb> of the set of all sets.</p>
 <p>Russell&rsquo;s Paradox arises when we consider the property of not having itself as an <bb>element</bb>, of being <bb>non-self-membered</bb>. What if we suppose that there is a set of all sets that do not have themselves as an <bb>element</bb>? Does $$R = \lbrace x: x \notin x\rbrace$$ exist? It turns out that we can prove that it does not.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯Theorem 1.0【Russell&#39;s Paradox】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">There is no set $R = \lbrace x: x \notin x\rbrace $.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>定理 1.0【Russell&rsquo;s Paradox】</bb><br />
-There is no set $R = \lbrace x: x \notin x\rbrace $.</p>
-</blockquote>
-<blockquote>
-<p><bb>定理 1.0 之證明</bb><br />
+<p><bb>Theorem 1.0 之證明</bb><br />
 For reductio, suppose that $R = \lbrace x: x \notin x\rbrace $ exists. Then $R \in R$ iff $R \notin R$, since sets are extensional. But this is a contradicion.</p>
 </blockquote>
 <p>Let&rsquo;s run through the proof that no set $R$ of non-self-membered sets can exist more slowly. If $R$ exists, it makes sense to ask if $R \in R$ or not&mdash;it must be either $\in R$ or $\notin R$. Suppose the former is true, i.e., $R \in R$. $R$ was defined as the set of all sets that are not <bb>element</bb>s of themselves, and so if $R \in R$, then $R$ does not have this defining property of $R$. But only sets that have this property are in $R$, hence, $R$ cannot be an <bb>element</bb> of $R$, i.e., $R \notin R$. But $R$ can&rsquo;t both be and not be an <bb>element</bb> of $R$, so we have a contradiction.</p>
@@ -2212,11 +2224,7 @@ For reductio, suppose that $R = \lbrace x: x \notin x\rbrace $ exists. Then $R \
 <h2 id="relations-as-sets">Relations as Sets</h2>
 <p>In §1.0.2（P.19）, we mentioned some important sets: $\mathbb{N}$, $\mathbb{Z}$, $\mathbb{Q}$, $\mathbb{R}$. You will no doubt remember some interesting relations between the <bb>element</bb>s of some of these sets. For instance, each of these sets has a completely standard <bb>order relation</bb> on it.  There is also the relation <bb>is identical with</bb> that every object bears to itself and to no other thing. There are many more interesting relations that we&rsquo;ll encounter, and even more possible relations. Before we review them, though, we will start by pointing out that we can look at relations as a special sort of set.</p>
 <p>For this, recall two things from §1.0.4（P.22）. First, recall the notion of a <bb>ordered pair</bb>: given $a$ and $b$, we can form $⟨a, b⟩$. Importantly, the order of elements <bb>does</bb> matter here. So if $a \neq b$ then $⟨a, b⟩ \neq ⟨b, a⟩$. (Contrast this with unordered pairs, i.e., $2$-element sets, where $\lbrace a, b\rbrace =\lbrace b, a\rbrace $.) Second, recall the notion of a <strong>Cartesian product</strong>: if $A$ and $B$ are sets, then we can form $A \times B$, the set of all pairs $⟨x, y⟩$ with $x \in A$ and $y \in B$. In particular, $A^{2}= A \times A$ is the set of all ordered pairs from $A$.</p>
-<p>Now we will consider a particular relation on a set: the $&lt;$-relation on the set $\mathbb{N}$ of natural numbers. Consider the set of all pairs of numbers $⟨n, m⟩$ where $n &lt; m$, i.e.,<br />
-$$R= \lbrace ⟨n, m⟩: n, m \in \mathbb{N} \text{ and } n &lt; m \rbrace.$$<br />
-There is a close connection between $n$ being less than $m$, and the pair $⟨n, m⟩$ being a member of $R$, namely:<br />
-$$n &lt; m \text{ iff }⟨n, m⟩ \in R.$$<br />
-Indeed, without any loss of information, we can consider the set $R$ to <bb>be</bb> the $&lt;$-relation on $\mathbb{N}$.</p>
+<p>Now we will consider a particular relation on a set: the $&lt;$-relation on the set $\mathbb{N}$ of natural numbers. Consider the set of all pairs of numbers $⟨n, m⟩$ where $n &lt; m$, i.e., $$R= \lbrace ⟨n, m⟩: n, m \in \mathbb{N} \text{ and } n &lt; m \rbrace.$$ There is a close connection between $n$ being less than $m$, and the pair $⟨n, m⟩$ being a member of $R$, namely: $$n &lt; m \text{ iff }⟨n, m⟩ \in R.$$ Indeed, without any loss of information, we can consider the set $R$ to <bb>be</bb> the $&lt;$-relation on $\mathbb{N}$.</p>
 <p>In the same way we can construct a subset of $\mathbb{N}^{2}$ for any relation between numbers. Conversely, given any set of pairs of numbers $S \subseteq \mathbb{N}^{2}$, there is a corresponding relation between numbers, namely, the relationship $n$ bears to $m$ if and only if $⟨n, m⟩ \in S$. This justifies the following definition:</p>
   <div>
   <div class="dtpcboxtitle">
@@ -2231,16 +2239,25 @@ Indeed, without any loss of information, we can consider the set $R$ to <bb>be</
   	<span style="font-family:SYHei Heavy;">⦿Example 1.15</span>
   </div>
   <div class="dtpcexbox">
-  <span style="font-family:SYHei Regular;">The set $\mathbb{N}^{2}$ of pairs of natural numbers can be listed in a<br />
-2-dimensional matrix like this:<br />
-<img src="https://i.loli.net/2020/09/03/ybmdfP14eY2VnLD.png" alt="zzzz.png" /><br />
-We have put the diagonal, here, in bold, since the subset of $\mathbb{N}^2$ consisting of the pairs lying on the diagonal, i.e.,<br />
-$$\lbrace ⟨0,0 ⟩, ⟨ 1,1 ⟩, ⟨ 2,2 ⟩, \cdots\rbrace ,$$<br />
-is the <bb>identity relation on</bb> $\mathbb{N}$. (Since the identity relation is popular, let&rsquo;s define $Id_A=\lbrace ⟨ x,x ⟩: x \in X\rbrace $ for any set $A$.) The subset of all pairs lying above the diagonal, i.e.,<br />
-$$L = \lbrace ⟨0,1⟩,⟨0,2⟩,\cdots,⟨1,2⟩,⟨1,3⟩, \cdots, ⟨2,3 ⟩, ⟨2,4⟩,\cdots\rbrace ,$$<br />
-is the <bb>less than</bb> relation, i.e., $Lnm$ iff $n &lt; m$. The subset of pairs below the diagonal, i.e.,<br />
-$$G=\lbrace ⟨1,0⟩,⟨2,0⟩, ⟨2,1⟩, ⟨3,0⟩,⟨3,1 ⟩,⟨3,2 ⟩, \cdots\rbrace ,$$<br />
-is the <bb>greater than</bb> relation, i.e., $Gnm$ iff $n&gt;m$. The union of $L$ with $I$, which we might call $K=L\cup I$, is the <strong>less than or equal to</strong> relation: $Knm$ iff $n \le m$. Similarly, $H=G \cup I$ is the <bb>greater than or equal to relation.</bb> These relations $L$, $G$, $K$, and $H$ are special kinds of relations called <bb>orders</bb>. $L$ and $G$ have the property that no number bears $L$ or $G$ to itself (i.e., for all $n$, neither $Lnn$ nor $Gnn$). Relations with this property are called <bb>irreflexive</bb>, and, if they also happen to be orders, they are called <bb>strict orders.</bb></span>
+  <span style="font-family:SYHei Regular;"><p>The set $\mathbb{N}^{2}$ of pairs of natural numbers can be listed in a<br />
+2-dimensional matrix like this:</p>
+<p>
+	\[
+	\begin{array}{ccccc}
+	\mathbf{⟨0,0⟩} & ⟨0,1⟩ &
+	⟨0,2⟩ & ⟨0,3⟩ & \cdots\\
+	⟨1,0⟩ & \mathbf{⟨1,1⟩} &
+	⟨1,2⟩ & ⟨1,3⟩ & \cdots\\
+	⟨2,0⟩ & ⟨2,1⟩ &
+	\mathbf{⟨2,2⟩} & ⟨2,3⟩ & \cdots\\
+	⟨3,0⟩ & ⟨3,1⟩ & ⟨3,2⟩ &
+	\mathbf{⟨3,3⟩} & \cdots\\
+	\vdots & \vdots & \vdots & \vdots & \mathbf{\ddots}
+	\end{array}
+	\]
+</p>
+<p>We have put the diagonal, here, in bold, since the subset of $\mathbb{N}^2$ consisting of the pairs lying on the diagonal, i.e., $$\lbrace ⟨0,0 ⟩, ⟨ 1,1 ⟩, ⟨ 2,2 ⟩, \cdots\rbrace ,$$ is the <bb>identity relation on</bb> $\mathbb{N}$. (Since the identity relation is popular, let&rsquo;s define $Id_A=\lbrace ⟨ x,x ⟩: x \in X\rbrace $ for any set $A$.) The subset of all pairs lying above the diagonal, i.e., $$L = \lbrace ⟨0,1⟩,⟨0,2⟩,\cdots,⟨1,2⟩,⟨1,3⟩, \cdots, ⟨2,3 ⟩, ⟨2,4⟩,\cdots\rbrace ,$$ is the <bb>less than</bb> relation, i.e., $Lnm$ iff $n &lt; m$. The subset of pairs below the diagonal, i.e., $$G=\lbrace ⟨1,0⟩,⟨2,0⟩, ⟨2,1⟩, ⟨3,0⟩,⟨3,1 ⟩,⟨3,2 ⟩, \cdots\rbrace ,$$ is the <bb>greater than</bb> relation, i.e., $Gnm$ iff $n&gt;m$. The union of $L$ with $I$, which we might call $K=L\cup I$, is the <strong>less than or equal to</strong> relation: $Knm$ iff $n \le m$. Similarly, $H=G \cup I$ is the <bb>greater than or equal to relation.</bb> These relations $L$, $G$, $K$, and $H$ are special kinds of relations called <bb>orders</bb>. $L$ and $G$ have the property that no number bears $L$ or $G$ to itself (i.e., for all $n$, neither $Lnn$ nor $Gnn$). Relations with this property are called <bb>irreflexive</bb>, and, if they also happen to be orders, they are called <bb>strict orders.</bb></p>
+</span>
   </div>
   </div>
 <p>Although orders and identity are important and natural relations, it should be emphasized that according to our definition <bb>any</bb> subset of $A^{2}$ is a relation on $A$, regardless of how unnatural or contrived it seems. In particular, $\varnothing$ is a relation on any set (the <bb>empty relation</bb>, which no pair of elements bears), and $A^{2}$ itself is a relation on $A$ as well (one which every pair bears), called the <bb>universal relation</bb>. But also something like $E=\lbrace ⟨n, m⟩: n&gt;5 \text{ or } m \times n \ge 34\rbrace $ counts as a relation.</p>
@@ -2250,10 +2267,16 @@ List the <bb>element</bb>s of the relation $\subseteq$ on the set $\mathscr{P}({
 </blockquote>
 <h2 id="philosophical-reflections">Philosophical Reflections</h2>
 <p>In §1.1.0（P.26）, we defined relations as certain sets. We should pause and ask a quick philosophical question: what is such a definition <bb>doing</bb>? It is extremely doubtful that we should want to say that we have <bb>discovered</bb> some metaphysical identity facts; that, for example, the order relation on $\mathbb{N}$ <strong>turned out</strong> to be the set $R=  \lbrace ⟨n,m⟩: n, m \in \mathbb{N}\text{ and } n &lt; m\rbrace $ we defined in §1.1.0（P.26）. Here are three reasons why.</p>
-<p>First: in Definition 1.9, we defined $⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace $. Consider instead the definition $\lVert a, b\rVert = \lbrace \lbrace b\rbrace , \lbrace a, b\rbrace \rbrace  = ⟨b,a⟩$. When $a \neq b$, we have that $⟨a, b⟩ \neq \lVert a,b\rVert$. But we could equally have regarded $\lVert a,b\rVert$ as our definition of an ordered pair, rather than $⟨a,b⟩$. Both definitions would have worked equally well. So now we have two equally good candidates to &ldquo;be&rsquo;&rsquo; the order relation on the natural numbers, namely:<br />
-$R = \lbrace ⟨n,m⟩: n, m \in \mathbb{N} \text{ and }n &lt; m\rbrace$<br />
-$S = \lbrace \lVert n,m\rVert: n, m \in \mathbb{N} \text{ and }n &lt; m\rbrace.$<br />
-Since $R \neq S$, by extensionality, it is clear that they cannot <bb>both</bb> be identical to the order relation on $\mathbb{N}$. But it would just be arbitrary, and hence a bit embarrassing, to claim that $R$ rather than $S$ (or vice versa) <bb>is</bb> the ordering relation, as a matter of fact. (This is a very simple instance of an argument against set-theoretic reductionism which Benacerraf made famous in 1965. We will revisit it several times.)</p>
+<p>First: in Definition 1.9, we defined $⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace $. Consider instead the definition $\lVert a, b\rVert = \lbrace \lbrace b\rbrace , \lbrace a, b\rbrace \rbrace  = ⟨b,a⟩$. When $a \neq b$, we have that $⟨a, b⟩ \neq \lVert a,b\rVert$. But we could equally have regarded $\lVert a,b\rVert$ as our definition of an ordered pair, rather than $⟨a,b⟩$. Both definitions would have worked equally well. So now we have two equally good candidates to &ldquo;be&rsquo;&rsquo; the order relation on the natural numbers, namely:</p>
+<p>
+$$
+\begin{aligned}
+R &= \{⟨n,m⟩: n, m \in \mathbb{N} \text{ and }n < m\}\\
+S &= \{\lVert n,m\rVert: n, m \in \mathbb{N} \text{ and }n < m\}.
+\end{aligned}
+$$
+</p>
+<p>Since $R \neq S$, by extensionality, it is clear that they cannot <bb>both</bb> be identical to the order relation on $\mathbb{N}$. But it would just be arbitrary, and hence a bit embarrassing, to claim that $R$ rather than $S$ (or vice versa) <bb>is</bb> the ordering relation, as a matter of fact. (This is a very simple instance of an argument against set-theoretic reductionism which Benacerraf made famous in 1965. We will revisit it several times.)</p>
 <p>Second: if we think that <bb>every</bb> relation should be identified with a set, then the relation of set-membership itself, $\in$, should be a particular set. Indeed, it would have to be the set $\lbrace ⟨x,y⟩: x \in y\rbrace $. But does this set exist? Given Russell&rsquo;s Paradox, it is a non-trivial claim that such a set exists. In fact, it is possible to develop set theory in a rigorous way as an axiomatic theory. In this theory, it will be provable that there is no set of all sets. So, even if some relations can be treated as sets, the relation of set-membership will have to be a special case.</p>
 <p>Third: when we &ldquo;identify&rsquo;&rsquo; relations with sets, we said that we would allow ourselves to write $Rxy$ for $⟨x,y⟩ \in R$. This is fine, provided that the membership relation, &ldquo;$\in$&rsquo;&rsquo;, is treated <bb>as</bb> a predicate. But if we think that &ldquo;$\in$&rsquo;&rsquo; stands for a certain kind of set, then the expression &ldquo;$⟨x,y⟩ \in R$&rsquo;&rsquo; just consists of three singular terms which stand for sets: &ldquo;$⟨x,y⟩$&rsquo;&rsquo;, &ldquo;$\in$&rsquo;&rsquo;, and &ldquo;$R$&rsquo;&rsquo;. And such a list of names is no more capable of expressing a proposition than the nonsense string: &ldquo;the cup penholder the table&rsquo;&rsquo;. Again, even if some relations can be treated as sets, the relation of set-membership must be a special case. (This rolls together a simple version of Frege&rsquo;s concept <bb>horse</bb> paradox, and a famous objection that Wittgenstein once raised against Russell.)</p>
 <p>So where does this leave us? Well, there is nothing <bb>wrong</bb> with our saying that the relations on the numbers are sets. We just have to understand the spirit in which that remark is made. We are not stating a metaphysical identity fact. We are simply noting that, in certain contexts, we can (and will) <bb>treat</bb> (certain) relations as certain sets.</p>
@@ -2568,14 +2591,12 @@ other operations we can perform on relations.</p>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;"><p>Let $R$, $S$ be relations, and $A$ be any set.</p>
-<blockquote>
 <ol>
 <li>The <bb>inverse</bb> of $R$ is $R^{-1} = \lbrace ⟨y, x⟩: ⟨x, y⟩ \in R\rbrace$.</li>
 <li>The <bb>relative product</bb> of $R$ and $S$ is $(R \mid S) = \lbrace ⟨x, z⟩ : \exists y(Rxy \land Syz)\rbrace $.</li>
 <li>The <bb>restriction</bb> of $R$ to $A$ is $R\upharpoonright_{A}= R \cap A^2$.</li>
 <li>The <bb>application</bb> of $R$ to $A$ is $R[A] = \lbrace y : (\exists x \in A)Rxy\rbrace $</li>
 </ol>
-</blockquote>
 </span>
   </div>
   </div>
@@ -4330,7 +4351,7 @@ Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.<br
 \end{prob}</p>
 </blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 17:57:00 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 18:22:36 by 王小花.</p>
     </article>
     
     <script>
