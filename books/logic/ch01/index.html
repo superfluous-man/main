@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-05T13:19:21&#43;0800">
+<meta name="modified" content="2020-09-05T16:27:38&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 01 章 預備：素樸集合論",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-05T13:19:21+08:00",
+    "dateModified": "2020-09-05T16:27:38+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch01/",
     "description": "The material in this chapter is an introduction to basic naïve set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 5, 2020 </time>
   
-&middot; 🔢 24085 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 49 min read</span>
+&middot; 🔢 24155 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 49 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1850,27 +1850,43 @@ if (!doNotTrack) {
 <h2 id="extensionality">Extensionality</h2>
 <p>A <bb>set</bb> is a collection of objects, considered {as} a single object. The objects making up the set are called <bb>elements</bb> or <bb>members</bb> of the set. If $x$ is an <bb>element</bb> of a set $a$, we write $x \in a$; if not, we write $x \notin a$. The set which has no <bb>element</bb>s is called the <bb>empty</bb> set and denoted &ldquo;$\varnothing$&rsquo;&rsquo;.</p>
 <p>It does not matter how we <bb>specify</bb> the set, or how we <bb>order</bb> its <bb>element</bb>s, or indeed how <bb>many times</bb> we count its <bb>element</bb>s. All that matters are what its <bb>element</bb>s are. We codify this in the following principle.</p>
-<blockquote>
-<p><bb>定義 1.0【Extensionality】</bb><br />
-If $A$ and $B$ are sets, then $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$, and vice versa.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉定義 1.0【Extensionality】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $A$ and $B$ are sets, then $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$, and vice versa.</span>
+  </div>
+  </div>
 <p>Extensionality licenses some notation. In general, when we have some objects $a_{1}, \cdots, a_{n}$, then $\lbrace a_{1}, \cdots, a_{n}\rbrace$ is <bb>the</bb> set whose <bb>element</bb>s are $a_1, \ldots, a_n$. We emphasise the word &ldquo;<bb>the</bb>&rsquo;&rsquo;, since extensionality tells us that there can be only <bb>one</bb> such set. Indeed, extensionality also licenses the following:</p>
 <p>$$\lbrace a, a, b \rbrace = \lbrace a, b \rbrace = \lbrace b,a \rbrace. $$</p>
 <p>This delivers on the point that, when we consider sets, we don&rsquo;t care about the order of their <bb>element</bb>s, or how many times they are specified.</p>
-<blockquote>
-<p><bb>示例 1.0</bb><br />
-Whenever you have a bunch of objects, you can collect them together in a set. The set of Richard&rsquo;s siblings, for instance, is a set that contains one person, and we could write it as $S =\lbrace \text{Ruth}\rbrace$. The set of positive integers less than $4$ is $\lbrace 1, 2, 3 \rbrace$, but it can also be written as $\lbrace 3, 2, 1\rbrace$ or even as $\lbrace 1, 2, 1, 2, 3\rbrace$. These are all the same set, by extensionality. For every <bb>element</bb> of $\lbrace 1, 2, 3 \rbrace$ is also an <bb>element</bb> of $\lbrace3, 2, 1 \rbrace$ (and of $\lbrace 1, 2, 1, 2, 3\rbrace$), and vice versa.</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.0</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Whenever you have a bunch of objects, you can collect them together in a set. The set of Richard&rsquo;s siblings, for instance, is a set that contains one person, and we could write it as $S =\lbrace \text{Ruth}\rbrace$. The set of positive integers less than $4$ is $\lbrace 1, 2, 3 \rbrace$, but it can also be written as $\lbrace 3, 2, 1\rbrace$ or even as $\lbrace 1, 2, 1, 2, 3\rbrace$. These are all the same set, by extensionality. For every <bb>element</bb> of $\lbrace 1, 2, 3 \rbrace$ is also an <bb>element</bb> of $\lbrace3, 2, 1 \rbrace$ (and of $\lbrace 1, 2, 1, 2, 3\rbrace$), and vice versa.</span>
+  </div>
+  </div>
 <p>Frequently we&rsquo;ll specify a set by some property that its <bb>element</bb>s share. We&rsquo;ll use the following shorthand notation for that: {$x: \varphi(x)$}, where the $\varphi(x)$ stands for the property that $x$ has to have in order to be counted among the <bb>element</bb>s of the set.</p>
-<blockquote>
-<p><bb>示例 1.1</bb><br />
-In our example, we could have specified $S$ also as $$S = \lbrace x: x  \text{ is a sibling of Richard}\rbrace.$$</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.2</bb><br />
-A number is called <bb>perfect</bb> iff it is equal to the sum of its proper divisors (i.e., numbers that evenly divide it but aren&rsquo;t identical to the number). For instance, $6$ is perfect because its proper divisors are $1$, $2$, and $3$, and $6 = 1 + 2 + 3$. In fact, $6$ is the only positive integer less than $10$ that is perfect. So, using extensionality, we can say:<br />
-$$\lbrace 6 \rbrace = \lbrace x:  \text{is perfect and } 0 \leqslant x \leqslant 10 \rbrace.$$</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.1</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">In our example, we could have specified $S$ also as $$S = \lbrace x: x  \text{ is a sibling of Richard}\rbrace.$$</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.2</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">A number is called <bb>perfect</bb> iff it is equal to the sum of its proper divisors (i.e., numbers that evenly divide it but aren&rsquo;t identical to the number). For instance, $6$ is perfect because its proper divisors are $1$, $2$, and $3$, and $6 = 1 + 2 + 3$. In fact, $6$ is the only positive integer less than $10$ that is perfect. So, using extensionality, we can say:<br />
+$$\lbrace 6 \rbrace = \lbrace x:  \text{is perfect and } 0 \leqslant x \leqslant 10 \rbrace.$$</span>
+  </div>
+  </div>
 <p>We read the notation on the right as &ldquo;the set of $x$'s such that $x$ is perfect and $0 \leqslant x \leqslant 10$&rsquo;&rsquo;. The identity here confirms that, when we consider sets, we don&rsquo;t care about how they are specified. And, more generally, extensionality guarantees that there is always only one set of $x$'s such that $\varphi(x)$. So, extensionality justifies calling $\lbrace x: \varphi(x)\rbrace$ <bb>the</bb> set of $x$'s such that $\varphi(x)$.</p>
 <p>Extensionality gives us a way for showing that sets are identical: to show that $A = B$, show that whenever $x \in A$ then also $x \in B$, and whenever $y \in B$ then also $y \in A$.</p>
 <blockquote>
@@ -1879,101 +1895,157 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 </blockquote>
 <h2 id="subsets-and-power-sets">Subsets and Power Sets</h2>
 <p>We will often want to compare sets. And one obvious kind of comparison one might make is as follows: <bb>everything in one set is in the other too</bb>. This situation is sufficiently important for us to introduce some new notation.</p>
-<blockquote>
-<p><bb>定義 1.1【Subset】</bb><br />
-If every <bb>element</bb> of a set $A$ is also an <bb>element</bb> of $B$, then we say that $A$ is a <bb>subset</bb> of $B$, and write $A \subseteq B$. If $A$ is not a subset of $B$ we write $A \not\subseteq B$. If $A \subseteq B$ but $A \neq B$, we write $A \subsetneq B$ and say that $A$ is a <bb>proper subset</bb> of $B$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.3</bb><br />
-Every set is a subset of itself, and $\varnothing$ is a subset of every set. The set of even numbers is a subset of the set of natural numbers. Also, $\lbrace a, b \rbrace \subseteq \lbrace a, b, c \rbrace$. But $\lbrace a, b, e\rbrace$ is not a subset of $\lbrace a, b, c \rbrace$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.4</bb><br />
-The number $2$ is an <bb>element</bb> of the set of integers, whereas the set of even numbers is a subset of the set of integers. However, a set may happen to <bb>both</bb> be an <bb>element</bb> and a subset of some other set, e.g., $\lbrace 0\rbrace  \in \lbrace 0, \lbrace 0 \rbrace\rbrace$ and also $\lbrace 0\rbrace \subseteq \lbrace 0, \lbrace 0\rbrace\rbrace$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉定義 1.1【Subset】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If every <bb>element</bb> of a set $A$ is also an <bb>element</bb> of $B$, then we say that $A$ is a <bb>subset</bb> of $B$, and write $A \subseteq B$. If $A$ is not a subset of $B$ we write $A \not\subseteq B$. If $A \subseteq B$ but $A \neq B$, we write $A \subsetneq B$ and say that $A$ is a <bb>proper subset</bb> of $B$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.3</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Every set is a subset of itself, and $\varnothing$ is a subset of every set. The set of even numbers is a subset of the set of natural numbers. Also, $\lbrace a, b \rbrace \subseteq \lbrace a, b, c \rbrace$. But $\lbrace a, b, e\rbrace$ is not a subset of $\lbrace a, b, c \rbrace$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.4</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">The number $2$ is an <bb>element</bb> of the set of integers, whereas the set of even numbers is a subset of the set of integers. However, a set may happen to <bb>both</bb> be an <bb>element</bb> and a subset of some other set, e.g., $\lbrace 0\rbrace  \in \lbrace 0, \lbrace 0 \rbrace\rbrace$ and also $\lbrace 0\rbrace \subseteq \lbrace 0, \lbrace 0\rbrace\rbrace$.</span>
+  </div>
+  </div>
 <p>Extensionality gives a criterion of identity for sets: $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$ and vice versa. The definition of &ldquo;subset&rsquo;&rsquo; defines $A \subseteq B$ precisely as the first half of this criterion: every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$. Of course the definition also applies if we switch $A$ and $B$: that is, $B \subseteq A$ iff every <bb>element</bb> of $B$ is also an <bb>element</bb> of $A$. And that, in turn, is exactly the &ldquo;vice versa&rsquo;&rsquo; part of extensionality. In other words, extensionality entails that sets are equal iff they are subsets of one another.</p>
-<blockquote>
-<p><bb>命題 1.0</bb><br />
-$A = B$ iff both $A \subseteq B$ and $B \subseteq A$.</p>
-</blockquote>
-<p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when $A$ is a subset of $B$ we said that &ldquo;every <bb>element</bb> of $A$ is \dots,&rsquo;&rsquo; and filled the &ldquo;$\cdots$&rsquo;&rsquo; with &ldquo;an <bb>element</bb> of $B$&rsquo;&rsquo;. But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
-<blockquote>
-<p><bb>定義 1.2</bb><br />
-$(\forall x \in A) \varphi$ abbreviates $\forall x(x \in A  \rightarrow \varphi)$. Similarly, $(\exists x \in A)\varphi$ abbreviates $\exists x(x \in A \land \varphi)$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎命題 1.0</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">$A = B$ iff both $A \subseteq B$ and $B \subseteq A$.</span>
+  </div>
+  </div>
+<p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when $A$ is a subset of $B$ we said that &ldquo;every <bb>element</bb> of $A$ is $\cdots$,&rsquo;&rsquo; and filled the &ldquo;$\cdots$&rsquo;&rsquo; with &ldquo;an <bb>element</bb> of $B$&rsquo;&rsquo;. But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉定義 1.2</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">$(\forall x \in A) \varphi$ abbreviates $\forall x(x \in A  \rightarrow \varphi)$. Similarly, $(\exists x \in A)\varphi$ abbreviates $\exists x(x \in A \land \varphi)$.</span>
+  </div>
+  </div>
 <p>Using this notation, we can say that $A \subseteq B$ iff $(\forall x \in A)x \in B$.</p>
 <p>Now we move on to considering a certain kind of set: the set of all subsets of a given set.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉定義 1.3【Power Set】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">The set consisting of all subsets of a set $A$ is called the <bb>power set of</bb> $A,$ written $\mathscr{P}(A)$. $$\mathscr{P}(A) =\lbrace B: B \subseteq A \rbrace$$</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.5</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">What are all the possible subsets of $\lbrace a, b, c \rbrace$? They are: $\varnothing$, $\lbrace a\rbrace$, $\lbrace b\rbrace$, $\lbrace c\rbrace$, $\lbrace a, b\rbrace$, $\lbrace a, c\rbrace$, $\lbrace b, c\rbrace$, $\lbrace a, b, c\rbrace$. The set of all these subsets is $\mathscr{P}(\lbrace a,b,c)\rbrace$:<br />
+$$\mathscr{P}(\lbrace a, b, c \rbrace) = \lbrace\varnothing, \lbrace a \rbrace, \lbrace b\rbrace, \lbrace c\rbrace, \lbrace a, b\rbrace, \lbrace b, c\rbrace, \lbrace a, c\rbrace, \lbrace a, b, c\rbrace\rbrace$$</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>定義 1.3【Power Set】</bb><br />
-The set consisting of all subsets of a set $A$ is called the <bb>power set of</bb> $A$, written $\mathscr{P}(A)$. $$\mathscr{P}(A) =\lbrace B: B \subseteq A \rbrace $$</p>
+<p><bb>Problem 1.1</bb> List all subsets of $\lbrace a, b, c, d\rbrace$.</p>
 </blockquote>
 <blockquote>
-<p><bb>示例 1.5</bb><br />
-What are all the possible subsets of $\lbrace a, b, c \rbrace$? They are: $\varnothing$, $\lbrace a\rbrace$, $\lbrace b\rbrace$, $\lbrace c\rbrace$, $\lbrace a, b\rbrace$, $\lbrace a, c\rbrace$, $\lbrace b, c\rbrace$, $\lbrace a, b, c\rbrace$. The set of all these subsets is $\mathscr{P}(\lbrace a,b,c)\rbrace$:<br />
-$$\mathscr{P}(\lbrace a, b, c \rbrace) = \lbrace\varnothing, \lbrace a \rbrace, \lbrace b\rbrace, \lbrace c\rbrace, \lbrace a, b\rbrace, \lbrace b, c\rbrace, \lbrace a, c\rbrace, \lbrace a, b, c\rbrace\rbrace$$</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.0</bb> List all subsets of $\lbrace a, b, c, d\rbrace$.</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.0</bb> Show that if $A$ has $n$ <bb>element</bb>s, then $\mathscr{P}(A)$ has $2^n$ <bb>element</bb>s.</p>
+<p><bb>Problem 1.2</bb> Show that if $A$ has $n$ <bb>element</bb>s, then $\mathscr{P}(A)$ has $2^n$ <bb>element</bb>s.</p>
 </blockquote>
 <h2 id="some-important-sets">Some Important Sets</h2>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.6</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>We will mostly be dealing with sets whose <bb>element</bb>s are mathematical objects. Four such sets are important enough to have specific names:</p>
 <blockquote>
-<p><bb>示例 1.6</bb><br />
-We will mostly be dealing with sets whose <bb>element</bb>s are mathematical objects. Four such sets are important enough to have specific names:</p>
 <ol>
 <li>$\mathbb{N} = \lbrace 0, 1, 2, 3, \cdots\rbrace$ ➠  the set of natural numbers</li>
 <li>$\mathbb{Z} = \lbrace \cdots, -2, -1, 0, 1, 2, \cdots\rbrace$ ➠  the set of integers</li>
 <li>$\mathbb{Q} = \lbrace \frac{m}{n}: m, n \in \mathbb{Z} \text{ and }n \neq 0\rbrace$ ➠  the set of rationals</li>
 <li>$\mathbb{R} = \lbrace (-\infty, \infty)\rbrace$ ➠  the set of real numbers (the continuum)<br />
-These are all <bb>infinite</bb> sets, that is, they each have infinitely many <bb>element</bb>s.<br />
-As we move through these sets, we are adding <bb>more</bb> numbers to our stock. Indeed, it should be clear that $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}$: after all, every natural number is an integer; every integer is a rational; and every rational is a real. Equally, it should be clear that $\mathbb{N} \subsetneq \mathbb{Z} \subsetneq \mathbb{Q}$, since $-1$ is an integer but not a natural number, and $\frac{1}{2}$ is rational but not integer. It is less obvious that $\mathbb{Q} \subsetneq \mathbb{R}$, i.e., that there are some real numbers which are not rational.<br />
-We&rsquo;ll sometimes also use the set of positive integers $\mathbb{Z}^{+} = \lbrace 1, 2, 3, \cdots\rbrace $ and the set containing just the first two natural numbers $\mathbb{B} = \lbrace 0, 1\rbrace $.</li>
+These are all <bb>infinite</bb> sets, that is, they each have infinitely many <bb>element</bb>s.</li>
 </ol>
 </blockquote>
-<blockquote>
-<p><bb>示例 1.7【Strings】</bb><br />
-Another interesting example  is the set ${A}^{*}$ of  <bb>finite strings</bb> over an alphabet $A$: any finite sequence of elements of $A$ is a string over $A$. We include the <bb>empty string $\Lambda$</bb> among the strings over $A$, for every alphabet $A$. For instance,</p>
-</blockquote>
-<blockquote>
+<p>As we move through these sets, we are adding <bb>more</bb> numbers to our stock. Indeed, it should be clear that $\mathbb{N} \subseteq \mathbb{Z} \subseteq \mathbb{Q} \subseteq \mathbb{R}$: after all, every natural number is an integer; every integer is a rational; and every rational is a real. Equally, it should be clear that $\mathbb{N} \subsetneq \mathbb{Z} \subsetneq \mathbb{Q}$, since $-1$ is an integer but not a natural number, and $\frac{1}{2}$ is rational but not integer. It is less obvious that $\mathbb{Q} \subsetneq \mathbb{R}$, i.e., that there are some real numbers which are not rational.</p>
+<p>We&rsquo;ll sometimes also use the set of positive integers $\mathbb{Z}^{+} = \lbrace 1, 2, 3, \cdots\rbrace $ and the set containing just the first two natural numbers $\mathbb{B} = \lbrace 0, 1\rbrace $.</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.7【Strings】</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>Another interesting example  is the set ${A}^{*}$ of  <bb>finite strings</bb> over an alphabet $A$: any finite sequence of elements of $A$ is a string over $A$. We include the <bb>empty string $\Lambda$</bb> among the strings over $A$, for every alphabet $A$. For instance,</p>
 <p>$$\mathbb{B}^*=\lbrace \Lambda,0,1,00,01,10,11,000,001,010,011,100,101,110,111,0000,\cdots\rbrace .$$</p>
-</blockquote>
-<blockquote>
 <p>If $x=x_{1}\ldots x_{n}\in A^{*}$ is a string consisting of $n$ &ldquo;letters&rsquo;&rsquo; from $A$, then we say <bb>length</bb> of the string is $n$ and write $\text{len } {x}=n$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.8【Infinite sequences】</bb><br />
-For any set $A$ we may also consider the set $A^\omega$ of infinite sequences of <bb>element</bb>s of $A$. An infinite sequence $a_1a_2a_3a_4\dots$ consists of a one-way infinite list of objects, each one of which is an <bb>element</bb> of $A$.</p>
-</blockquote>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.8【Infinite sequences】</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">For any set $A$ we may also consider the set $A^\omega$ of infinite sequences of <bb>element</bb>s of $A$. An infinite sequence $a_1a_2a_3a_4\dots$ consists of a one-way infinite list of objects, each one of which is an <bb>element</bb> of $A$.</span>
+  </div>
+  </div>
 <h2 id="unions-and-intersections">Unions and Intersections</h2>
 <p>We introduced definitions of sets by abstraction, i.e., definitions of the form $\lbrace x: \phi(x)\rbrace $. Here, we invoke some property $\phi$, and this property can mention sets we&rsquo;ve already defined. So for instance, if $A$ and $B$ are sets, the set $\lbrace x: x \in A \lor x \in B\rbrace $ consists of all those objects which are <bb>element</bb>s of either $A$ or $B$, i.e., it&rsquo;s the set that combines the <bb>element</bb>s of $A$ and $B$. We can visualize this as in Figure 1.0, where the highlighted area indicates the bb&gt;element</bb>s of the two sets $A$ and $B$ together.</p>
 <p><img src="https://i.loli.net/2020/09/03/P9lOKLIcT3GSix5.png" alt="unionofsets" /></p>
 <p>This operation on sets&mdash;combining them&mdash;is very useful and common, and so we give it a formal name and a symbol.</p>
-<blockquote>
-<p><bb>定義 1.4【Union】</bb><br />
-The <bb>union</bb> of two sets $A$ and $B$, written $A \cup B$, is the set of all things which are <bb>element</bb>s of $A$, $B$, or both.<br />
-$$A \cup B = \lbrace x: x \in A \lor x \in B\rbrace $$</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.9</bb><br />
-Since the multiplicity of <bb>element</bb>s doesn&rsquo;t matter, the union of two sets which have an element in common contains that <bb>element</bb> only once, e.g., $\lbrace  a, b, c\rbrace  \cup \lbrace  a, 0, 1\rbrace  = \lbrace a, b, c, 0, 1\rbrace $. The union of a set and one of its subsets is just the bigger set: $\lbrace a, b, c \rbrace  \cup \lbrace a \rbrace  = \lbrace a, b, c\rbrace $. The union of a set with the empty set is identical to the set: $\lbrace a, b, c \rbrace  \cup \varnothing = \lbrace a, b, c \rbrace $.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉定義 1.4【Union】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">The <bb>union</bb> of two sets $A$ and $B$, written $A \cup B$, is the set of all things which are <bb>element</bb>s of $A$, $B$, or both.<br />
+$$A \cup B = \lbrace x: x \in A \lor x \in B\rbrace $$</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.9</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Since the multiplicity of <bb>element</bb>s doesn&rsquo;t matter, the union of two sets which have an element in common contains that <bb>element</bb> only once, e.g., $\lbrace  a, b, c\rbrace  \cup \lbrace  a, 0, 1\rbrace  = \lbrace a, b, c, 0, 1\rbrace $. The union of a set and one of its subsets is just the bigger set: $\lbrace a, b, c \rbrace  \cup \lbrace a \rbrace  = \lbrace a, b, c\rbrace $. The union of a set with the empty set is identical to the set: $\lbrace a, b, c \rbrace  \cup \varnothing = \lbrace a, b, c \rbrace $.</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
 Prove that if $A \subseteq B$, then $A \cup B = B$.</p>
 </blockquote>
 <p>We can also consider a &ldquo;dual&rsquo;&rsquo; operation to union. This is the operation that forms the set of all <bb>element</bb>s that are <bb>element</bb>s of $A$ and are also <bb>element</bb>s of $B$. This operation is called <bb>intersection</bb>, and can be depicted as in Figure 1.1.</p>
 <p><img src="https://i.loli.net/2020/09/03/Fi7BoED2vNAHXkz.png" alt="intersectionofsets" /></p>
-<blockquote>
-<p><bb>定義 1.5【Intersection】</bb><br />
-The <bb>intersection</bb> of two sets $A$ and $B$, written $A \cap B$, is the set of all things which are <bb>element</bb>s of both $A$ and $B$.<br />
-$$A \cap B = \lbrace x: x \in A \land x \in B\rbrace $$ Two sets are called <bb>disjoint</bb> if their intersection is empty. This means they have no <bb>element</bb>s in common.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.10</bb><br />
-If two sets have no <bb>element</bb>s in common, their intersection is empty: $\lbrace  a, b, c\rbrace  \cap \lbrace  0, 1\rbrace  = \varnothing$. If two sets do have <bb>element</bb>s in common, their intersection is the set of all those: $\lbrace a, b, c \rbrace  \cap \lbrace a, b, d \rbrace  = \lbrace a, b\rbrace $. The intersection of a set with one of its subsets is just the smaller set: $\lbrace a, b, c\rbrace  \cap \lbrace a, b\rbrace  = \lbrace a, b\rbrace $. The intersection of any set with the empty set is empty: $\lbrace a, b, c \rbrace \cap \varnothing = \varnothing$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉定義 1.5【Intersection】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">The <bb>intersection</bb> of two sets $A$ and $B$, written $A \cap B$, is the set of all things which are <bb>element</bb>s of both $A$ and $B$.<br />
+$$A \cap B = \lbrace x: x \in A \land x \in B\rbrace $$ Two sets are called <bb>disjoint</bb> if their intersection is empty. This means they have no <bb>element</bb>s in common.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.10</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">If two sets have no <bb>element</bb>s in common, their intersection is empty: $\lbrace  a, b, c\rbrace  \cap \lbrace  0, 1\rbrace  = \varnothing$. If two sets do have <bb>element</bb>s in common, their intersection is the set of all those: $\lbrace a, b, c \rbrace  \cap \lbrace a, b, d \rbrace  = \lbrace a, b\rbrace $. The intersection of a set with one of its subsets is just the smaller set: $\lbrace a, b, c\rbrace  \cap \lbrace a, b\rbrace  = \lbrace a, b\rbrace $. The intersection of any set with the empty set is empty: $\lbrace a, b, c \rbrace \cap \varnothing = \varnothing$.</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.4</bb><br />
 Prove rigorously that if $A \subseteq B$, then $A \cap B = A$.</p>
@@ -2413,23 +2485,33 @@ Let $f \colon \mathbb{N} \to \mathbb{N}$ be defined such that $f(x) = x+1$. This
 Let $g \colon \mathbb{N} \to \mathbb{N}$ be defined such that $g(x) = x+2-1$. This tells us that $g$ is a function which takes in natural numbers and outputs natural numbers. Given a natural number $n$, $g$ will output the predecessor of the successor of the successor of $x$, i.e., $x+1$.</p>
 </blockquote>
 <p>We just considered two functions, $f$ and $g$, with different <bb>definitions</bb>. However, these are the <bb>same function</bb>. After all, for any natural number $n$, we have that $f(n) = n+1 = n+2-1 = g(n)$. Otherwise put: our  definitions for $f$ and $g$ specify the same mapping by means of different equations. Implicitly, then, we are relying upon a principle of extensionality for functions, $$\text{if }\forall x, f(x) = g(x)\text{, then }f = g$$ provided that $f$ and $g$ share the same domain and codomain.</p>
-<blockquote>
-<p><bb>示例 1.31</bb><br />
-We can also define functions by cases. For instance, we could define $h \colon \mathbb{N} \to \mathbb{N}$  by<br />
-$$h(x) =\begin{cases}<br />
-\displaystyle\frac{x}{2} &amp; \text{if $x$ is even},<br />
-\displaystyle\frac{x+1}{2} &amp; \text{if $x$ is odd.}<br />
-\end{cases}$$<br />
-Since every natural number is either even or odd, the output of this function will always be a natural number. Just remember that if you define a function by cases, every possible input must fall into exactly one case.  In some cases, this will require a proof that the cases are exhaustive and exclusive.</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿示例 1.31</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>We can also define functions by cases. For instance, we could define $h \colon \mathbb{N} \to \mathbb{N}$  by</p>
+<p>$$h(x) =
+	\begin{cases}
+	\displaystyle\frac{x}{2} & \text{if $x$ is even} \\
+	\displaystyle\frac{x+1}{2} & \text{if $x$ is odd.}
+	\end{cases}$$</p>
+Since every natural number is either even or odd, the output of this function will always be a natural number. Just remember that if you define a function by cases, every possible input must fall into exactly one case.  In some cases, this will require a proof that the cases are exhaustive and exclusive.
+</span>
+  </div>
+  </div>
 <h2 id="kinds-of-functions">Kinds of Functions</h2>
 <p>It will be useful to introduce a kind of taxonomy for some of the kinds of functions which we encounter most frequently.</p>
 <p>To start, we might want to consider functions which have the property that every member of the codomain is a value of the function. Such functions are called <bb>surjective</bb>, and can be pictured as in Figure 1.4.</p>
 <p><img src="https://i.loli.net/2020/09/04/5nBmbKUJP2aeDc9.png" alt="surjectivefunction.png" /></p>
-<blockquote>
-<p><bb>定義 1.31【Surjective function】</bb><br />
-A function $f \colon A \rightarrow B$ is <bb>surjective</bb> iff $B$ is also the range of $f$, i.e., for every $y \in B$ there is at least one $x \in A$ such that $f(x) = y$, or in symbols: $$(\forall y \in B)(\exists x \in A)f(x) = y.$$ We call such a function a <bb>surjection</bb> from $A$ to $B$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉定義 1.31【Surjective function】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A function $f \colon A \rightarrow B$ is <bb>surjective</bb> iff $B$ is also the range of $f$, i.e., for every $y \in B$ there is at least one $x \in A$ such that $f(x) = y$, or in symbols: $$(\forall y \in B)(\exists x \in A)f(x) = y.$$ We call such a function a <bb>surjection</bb> from $A$ to $B$.</span>
+  </div>
+  </div>
 <p>If you want to show that $f$ is a <bb>surjection</bb>, then you need to show that every object in $f$'s codomain is the value of $f(x)$ for some input $x$.</p>
 <p>Note that any function <bb>induces</bb> a <bb>surjection</bb>. After all, given a function $f \colon A \to B$, let $f&rsquo; \colon A \to \text{ran}(f)$ be defined by $f&rsquo;(x) = f(x)$. Since $\text{ran}(f)$ is <bb>defined</bb> as $\lbrace f(x) \in B: x \in A\rbrace$, this function $f'$ is guaranteed to be a <bb>surjection</bb>.</p>
 <p>Now, any function maps each possible input to a unique output. But there are also functions which never map different inputs to the same outputs. Such functions are called <bb>injective</bb>, and can be pictured as in Figure 1.5.</p>
@@ -2443,13 +2525,13 @@ A function $f \colon A \rightarrow B$ is <bb>injective</bb> iff for each $y \in 
 <p><bb>示例 1.32</bb><br />
 The constant function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = 1$ is neither <bb>injective</bb>, nor <bb>surjective</bb>. The identity function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x$ is both <bb>injective</bb> and <bb>surjective</bb>.<br />
 The successor function $f \colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x+1$ is <bb>injective</bb> but not <bb>surjective</bb>.<br />
-The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:<br />
-$$f(x) =\begin{cases}<br />
-\displaystyle\frac{x}{2} &amp; \text{if $x$ is even} \<br />
-\displaystyle\frac{x+1}{2} &amp; \text{if $x$ is odd.}<br />
-\end{cases}$$<br />
-is <bb>surjective</bb>, but not <bb>injective</bb>.</p>
+The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:</p>
 </blockquote>
+<p>$$f(x) =\begin{cases}
+\displaystyle\frac{x}{2} & \text{if $x$ is even} \\
+\displaystyle\frac{x+1}{2} & \text{if $x$ is odd.}
+\end{cases}$$</p>
+<p>is <bb>surjective</bb>, but not <bb>injective</bb>.</p>
 <p>Often enough, we want to consider functions which are both <bb>injective</bb> and <bb>surjective</bb>. We call such functions <bb>bijective</bb>. They look like the function pictured in Figure 1.6. <bb>bijection</bb>s are also sometimes called <bb>one-to-one correspondences</bb>, since they uniquely pair elements of the codomain with elements of the domain.</p>
 <p><img src="https://i.loli.net/2020/09/04/PpOsUwucAmM3qhv.png" alt="333.png" /></p>
 <blockquote>
@@ -2579,157 +2661,86 @@ Suppose $R \subseteq A \times B$ has the property that whenever $Rxy$ and $Rxy'$
 Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$ such that $Rxy'$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, that $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$ and $f$ is total if $R$ is serial.</p>
 </blockquote>
 <h1 id="基数集合大小的度量">基数：集合大小的度量</h1>
-<p>This section discusses enumerations, countability and uncountability.Several sections come in two versions:  a more elementary one, that takesenumerations to be lists, or surjections from $\mathbb{Z}^{+}$; and a more abstract onethat defines enumerations as bijections with $\mathbb{N}$.</p>
+<p>This section discusses enumerations, countability and uncountability. Several sections come in two versions:  a more elementary one, that takes enumerations to be lists, or surjections from $\mathbb{Z}^{+}$; and a more abstract onethat defines enumerations as bijections with $\mathbb{N}$.</p>
 <h2 id="introduction">Introduction</h2>
-<p>When Georg Cantor developed set theory in the 1870s, one of his aims<br />
-was to make palatable the idea of an infinite collection&mdash;an actual<br />
-infinity, as the medievals would say.  A key part of this was his<br />
-treatment of the <bb>size</bb> of different sets. If $a$, $b$ and $c$ are<br />
-all distinct, then the set $\lbrace a, b, c\rbrace $ is intuitively <bb>larger</bb><br />
-than $\lbrace a, b\rbrace $. But what about infinite sets? Are they all as large<br />
-as each other? It turns out that they are not.</p>
-<p>The first important idea here is that of an enumeration.  We can<br />
-list every finite set by listing all its <bb>element</bb>s.  For some<br />
-infinite sets, we can also list all their <bb>element</bb>s if we allow the<br />
-list itself to be infinite. Such sets are called <bb>enumerable</bb>.<br />
-Cantor&rsquo;s surprising result, which we will fully understand by the end<br />
-of this chapter, was that some infinite sets are not <bb>enumerable</bb>.</p>
+<p>When Georg Cantor developed set theory in the 1870s, one of his aims was to make palatable the idea of an infinite collection&mdash;an actual infinity, as the medievals would say.  A key part of this was his treatment of the <bb>size</bb> of different sets. If $a$, $b$ and $c$ are all distinct, then the set $\lbrace a, b, c\rbrace $ is intuitively <bb>larger</bb> than $\lbrace a, b\rbrace$. But what about infinite sets? Are they all as large as each other? It turns out that they are not.</p>
+<p>The first important idea here is that of an enumeration.  We can list every finite set by listing all its <bb>element</bb>s.  For some infinite sets, we can also list all their <bb>element</bb>s if we allow the list itself to be infinite. Such sets are called <bb>enumerable</bb>. Cantor&rsquo;s surprising result, which we will fully understand by the end of this section, was that some infinite sets are not <bb>enumerable</bb>.</p>
 <h2 id="enumerations-and-enumerable-sets">Enumerations and enumerable Sets</h2>
-<p>\begin{editorial}<br />
-This section discusses enumerations of sets, defining them as<br />
-surjections from $\mathbb{Z}^{+}$. It does things slowly, for readers with<br />
-little mathematical background. An alternative, terser<br />
-version is given in \jieref{subsec:Enumerations-and-enumerable-Sets-2}, which defines enumerations<br />
-differently: as bijections with $\mathbb{N}$ (or an initial segment).<br />
-\end{editorial}</p>
-<p>We&rsquo;ve already given examples of sets by listing their <bb>element</bb>s.<br />
-Let&rsquo;s discuss in more general terms how and when we can list the<br />
-<bb>element</bb>s of a set, even if that set is infinite.</p>
-<p>\begin{defn}[Enumeration, informally]<br />
-Informally, an <bb>enumeration</bb> of a set $A$ is a list (possibly<br />
-infinite) of <bb>element</bb>s of $A$ such that every <bb>element</bb> of $A$<br />
-appears on the list at some finite position. If $A$ has an<br />
-enumeration, then $A$ is said to be <bb>enumerable</bb>.<br />
-\end{defn}</p>
-<p>A couple of points about enumerations:<br />
-\begin{quofbe}<br />
-\item We count as enumerations only lists which have a beginning and<br />
-in which every <bb>element</bb> other than the first has a single<br />
-<bb>element</bb> immediately preceding it.  In other words, there are<br />
-only finitely many elements between the first <bb>element</bb> of the<br />
-list and any other <bb>element</bb>. In particular, this means that every<br />
-<bb>element</bb> of an enumeration has a finite position: the first<br />
-<bb>element</bb> has position $1$, the second position $2$, etc.<br />
-\item We can have different enumerations of the same set $A$ which<br />
-differ by the order in which the <bb>element</bb>s appear: $4$, $1$,<br />
-$25$, $16$, $9$ enumerates the (set of the) first five square<br />
-numbers just as well as $1$, $4$, $9$, $16$, $25$ does.<br />
-\item Redundant enumerations are still enumerations: $1$, $1$, $2$,<br />
-$2$, $3$, $3$, \dots{} enumerates the same set as $1$, $2$,<br />
-$3$, \dots{} does.<br />
-\item Order and redundancy <bb>do</bb> matter when we specify an<br />
-enumeration: we can enumerate the positive integers beginning with<br />
-$1$, $2$, $3$, $1$, \dots{}, but the pattern is easier to see when<br />
-enumerated in the standard way as $1$, $2$, $3$, $4$, \dots<br />
-\item Enumerations must have a beginning: \dots, $3$, $2$, $1$ is not<br />
-an enumeration of the positive integers because it has no first<br />
-<bb>element</bb>. To see how this follows from the informal definition,<br />
-ask yourself, &ldquo;at what position in the list does the number 76<br />
-appear?&rsquo;&rsquo;<br />
-\item The following is not an enumeration of the positive integers:<br />
-$1$, $3$, $5$, \dots, $2$, $4$, $6$, \dots@ The problem is that the<br />
-even numbers occur at places $\infty + 1$, $\infty + 2$, $\infty +<br />
-3$, rather than at finite positions.<br />
-\item The empty set is enumerable: it is enumerated by the empty list!<br />
-\end{quofbe}</p>
+<p>This section discusses enumerations of sets, defining them as surjections from $\mathbb{Z}^{+}$. It does things slowly, for readers with little mathematical background. An alternative, terser version is given in §1.3.10（P.62）, which defines enumerations differently: as bijections with $\mathbb{N}$ (or an initial segment).</p>
+<p>We&rsquo;ve already given examples of sets by listing their <bb>element</bb>s. Let&rsquo;s discuss in more general terms how and when we can list the <bb>element</bb>s of a set, even if that set is infinite.</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
-If $A$ has an enumeration, it has an enumeration without<br />
-repetitions.<br />
-\end{prop}</p>
+<p><bb>定義 1.40【Enumeration, informally】</bb><br />
+Informally, an <bb>enumeration</bb> of a set $A$ is a list (possibly infinite) of <bb>element</bb>s of $A$ such that every <bb>element</bb> of $A$ appears on the list at some finite position. If $A$ has an enumeration, then $A$ is said to be <bb>enumerable</bb>.</p>
 </blockquote>
-<p>\begin{proof}<br />
-Suppose $A$ has an enumeration $x_1$, $x_2$, \dots{} in which each<br />
-$x_i$ is an <bb>element</bb> of $A$.  We can remove repetitions from an<br />
-enumeration by removing repeated <bb>element</bb>s. For instance, we can<br />
-turn the enumeration into a new one in which we list $x_i$ if<br />
-it is an <bb>element</bb> of $A$ that is not among $x_1$, \dots,<br />
-$x_{i-1}$ or remove $x_i$ from the list if it already appears among<br />
-$x_1$, \dots, $x_{i-1}$.<br />
-\end{proof}</p>
-<p>The last argument shows that in order to get a good handle on<br />
-enumerations and <bb>enumerable</bb> sets and to prove things about them,<br />
-we need a more precise definition.  The following provides it.</p>
-<p>\begin{defn}[Enumeration, formally]<br />
-An <bb>enumeration</bb> of a set $A \neq \varnothing$ is any<br />
-<bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.<br />
-\end{defn}</p>
-<p>Let&rsquo;s convince ourselves that the formal definition and the informal<br />
-definition using a possibly infinite list are equivalent. First, any<br />
-<bb>surjective</bb> function from $\mathbb{Z}^{+}$ to a set $A$ enumerates $A$.<br />
-Such a function determines an enumeration as defined informally above:<br />
-the list $f(1)$, $f(2)$, $f(3)$, \dots. Since $f$ is <bb>surjective</bb>,<br />
-every <bb>element</bb> of $A$ is guaranteed to be the value of $f(n)$ for<br />
-some $n \in \mathbb{Z}^{+}$. Hence, every <bb>element</bb> of $A$ appears at some<br />
-finite position in the list. Since the function may not be<br />
-<bb>injective</bb>, the list may be redundant, but that is acceptable (as<br />
-noted above).</p>
-<p>On the other hand, given a list that enumerates all <bb>element</bb>s<br />
-of $A$, we can define a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$<br />
-by letting $f(n)$ be the $n$th <bb>element</bb> of the list, or the final<br />
-<bb>element</bb> of the list if there is no $n$th <bb>element</bb>. The only<br />
-case where this does not produce a <bb>surjective</bb> function is when $A$ is<br />
-empty, and hence the list is empty. So, every non-empty list<br />
-determines a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$.</p>
-<p>\begin{defn}[]</p>
-<p>A set $A$ is <bb>enumerable</bb> iff it is empty or has an enumeration.<br />
-\end{defn}</p>
-<p>\begin{examplep}{}<br />
-A function enumerating the positive integers ($\mathbb{Z}^{+}$) is simply the<br />
-identity function given by $f(n) = n$. A function enumerating the<br />
-natural numbers $\mathbb{N}$ is the function $g(n) = n - 1$.<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-The functions $f\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ and $g \colon \mathbb{Z}^{+} \to<br />
-\mathbb{Z}^{+}$ given by<br />
-\begin{align*}<br />
-f(n) &amp; = 2n \text{ and}\<br />
-g(n) &amp; = 2n+1<br />
-\end{align*}<br />
-enumerate the even positive integers and the odd positive integers,<br />
-respectively. However, neither function is an enumeration of<br />
-$\mathbb{Z}^{+}$, since neither is <bb>surjective</bb>.<br />
-\end{examplep}</p>
+<p>A couple of points about enumerations:</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Define an enumeration of the positive squares $1$, $4$, $9$, $16$, \dots<br />
+<ol>
+<li>We count as enumerations only lists which have a beginning and in which every <bb>element</bb> other than the first has a single <bb>element</bb> immediately preceding it.  In other words, there are only finitely many elements between the first <bb>element</bb> of the list and any other <bb>element</bb>. In particular, this means that every <bb>element</bb> of an enumeration has a finite position: the first <bb>element</bb> has position $1$, the second position $2$, etc.</li>
+<li>We can have different enumerations of the same set $A$ which differ by the order in which the <bb>element</bb>s appear: $4$, $1$, $25$, $16$, $9$ enumerates the (set of the) first five square numbers just as well as $1$, $4$, $9$, $16$, $25$ does.</li>
+<li>Redundant enumerations are still enumerations: $1$, $1$, $2$, $2$, $3$, $3, \cdots$, enumerates the same set as $1$, $2$, $3, \cdots$, does.</li>
+<li>Order and redundancy <bb>do</bb> matter when we specify an enumeration: we can enumerate the positive integers beginning with $1$, $2$, $3$, $1, \cdots$, but the pattern is easier to see when enumerated in the standard way as $1$, $2$, $3$, $4, \cdots$.</li>
+<li>Enumerations must have a beginning: \dots, $3$, $2$, $1$ is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, &ldquo;at what position in the list does the number 76 appear?&rsquo;&rsquo;</li>
+<li>The following is not an enumeration of the positive integers: $1$, $3$, $5, \cdots, 2$, $4$, $6, \cdots$. The problem is that the even numbers occur at places $\infty + 1$, $\infty + 2$, $\infty + 3$, rather than at finite positions.</li>
+<li>The empty set is enumerable: it is enumerated by the empty list!</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.10</bb><br />
+If $A$ has an enumeration, it has an enumeration without repetitions.</p>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.10 之證明</bb><br />
+Suppose $A$ has an enumeration $x_1$, $x_2, \cdots$, in which each $x_i$ is an <bb>element</bb> of $A$.  We can remove repetitions from an enumeration by removing repeated <bb>element</bb>s. For instance, we can turn the enumeration into a new one in which we list $x_i$ if it is an <bb>element</bb> of $A$ that is not among $x_1, \cdots, x_{i-1}$ or remove $x_i$ from the list if it already appears among $x_1, \cdots, x_{i-1}$.</p>
+</blockquote>
+<p>The last argument shows that in order to get a good handle on enumerations and <bb>enumerable</bb> sets and to prove things about them, we need a more precise definition.  The following provides it.</p>
+<blockquote>
+<p><bb>定義 1.41【Enumeration, formally】</bb><br />
+An <bb>enumeration</bb> of a set $A \neq \varnothing$ is any <bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.</p>
+</blockquote>
+<p>Let&rsquo;s convince ourselves that the formal definition and the informal definition using a possibly infinite list are equivalent. First, any <bb>surjective</bb> function from $\mathbb{Z}^{+}$ to a set $A$ enumerates $A$. Such a function determines an enumeration as defined informally above: the list $f(1)$, $f(2)$, $f(3)$, \dots. Since $f$ is <bb>surjective</bb>, every <bb>element</bb> of $A$ is guaranteed to be the value of $f(n)$ for some $n \in \mathbb{Z}^{+}$. Hence, every <bb>element</bb> of $A$ appears at some finite position in the list. Since the function may not be <bb>injective</bb>, the list may be redundant, but that is acceptable (as noted above).</p>
+<p>On the other hand, given a list that enumerates all <bb>element</bb>s of $A$, we can define a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$ by letting $f(n)$ be the $n$th <bb>element</bb> of the list, or the final <bb>element</bb> of the list if there is no $n$th <bb>element</bb>. The only case where this does not produce a <bb>surjective</bb> function is when $A$ is empty, and hence the list is empty. So, every non-empty list determines a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$.</p>
+<blockquote>
+<p><bb>定義 1.42</bb><br />
+A set $A$ is <bb>enumerable</bb> iff it is empty or has an enumeration.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.36</bb><br />
+A function enumerating the positive integers ($\mathbb{Z}^{+}$) is simply the identity function given by $f(n) = n$. A function enumerating the natural numbers $\mathbb{N}$ is the function $g(n) = n - 1$.</p>
+</blockquote>
+<blockquote>
+<p><bb>示例 1.37</bb><br />
+The functions $f\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ and $g \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ given by</p>
+</blockquote>
+<p>\begin{align*}
+&  f(n) = 2n \text{ and}\\
+& g(n) = 2n+1
+\end{align*}</p>
+<p>enumerate the even positive integers and the odd positive integers, respectively. However, neither function is an enumeration of $\mathbb{Z}^{+}$, since neither is <bb>surjective</bb>.</p>
+<blockquote>
+<p><bb>Problem 1.23</bb><br />
+Define an enumeration of the positive squares $1$, $4$, $9$, $16, \dots$<br />
 \end{prob}</p>
 </blockquote>
-<p>\begin{examplep}{}<br />
-The function $f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil$ (where<br />
-$\lceil x \rceil$ denotes the <bb>ceiling</bb> function, which rounds<br />
-$x$ up to the nearest integer) enumerates the set of<br />
-integers $\mathbb{Z}$. Notice how $f$ generates the values of $\mathbb{Z}$ by<br />
-&ldquo;hopping&rsquo;&rsquo; back and forth between positive and negative integers:<br />
-$$<br />
-\begin{array}{c c c c c c c c}<br />
-f(1) &amp; f(2) &amp; f(3) &amp; f(4) &amp; f(5) &amp; f(6) &amp; f(7) &amp; \dots \ \</p>
-<ul>
-<li>\lceil \tfrac{0}{2} \rceil &amp; \lceil \tfrac{1}{2}\rceil &amp; - \lceil \tfrac{2}{2} \rceil &amp; \lceil \tfrac{3}{2} \rceil &amp; - \lceil \tfrac{4}{2} \rceil  &amp; \lceil \tfrac{5}{2}<br />
-\rceil &amp; - \lceil \tfrac{6}{2} \rceil &amp; \dots \ \<br />
-0 &amp; 1 &amp; -1 &amp; 2 &amp; -2 &amp; 3 &amp; \dots<br />
-\end{array}<br />
-$$<br />
-You can also think of $f$ as defined by cases as follows:<br />
-$$<br />
-f(n) = \begin{cases}<br />
-0 &amp; \text{if $n = 1$}\<br />
-n/2 &amp; \text{if $n$ is even}\<br />
--(n-1)/2 &amp; \text{if $n$ is odd and $&gt;1$}<br />
-\end{cases}<br />
-$$<br />
-\end{examplep}</li>
-</ul>
+<blockquote>
+<p><bb>示例 1.38</bb><br />
+The function $f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil$ (where $\lceil x \rceil$ denotes the <bb>ceiling</bb> function, which rounds $x$ up to the nearest integer) enumerates the set of integers $\mathbb{Z}$. Notice how $f$ generates the values of $\mathbb{Z}$ by &ldquo;hopping&rsquo;&rsquo; back and forth between positive and negative integers:</p>
+</blockquote>
+<p>$$
+\begin{array}{c c c c c c c c}
+f(1) & f(2) & f(3) & f(4) & f(5) & f(6) & f(7) & \dots \\ \\
+- \lceil \tfrac{0}{2} \rceil & \lceil \tfrac{1}{2}\rceil & - \lceil \tfrac{2}{2} \rceil & \lceil \tfrac{3}{2} \rceil & - \lceil \tfrac{4}{2} \rceil  & \lceil \tfrac{5}{2}
+\rceil & - \lceil \tfrac{6}{2} \rceil & \dots \\ \\
+0 & 1 & -1 & 2 & -2 & 3 & \dots
+\end{array}
+$$</p>
+<p>You can also think of $f$ as defined by cases as follows:</p>
+<p>$$
+f(n) = \begin{cases}
+0 & \text{if $n = 1$}\\
+n/2 & \text{if $n$ is even}\\
+-(n-1)/2 & \text{if $n$ is odd and $>1$}
+\end{cases}
+$$</p>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
 Show that if $A$ and $B$ are <bb>enumerable</bb>, so is $A \cup B$. To do<br />
@@ -3140,12 +3151,10 @@ $$<br />
 is a <bb>injective</bb> function $\mathbb{N}^2 \to \mathbb{N}$.<br />
 \end{examplep}</p>
 <h2 id="nonenumerable-sets">Nonenumerable Sets</h2>
-<p>\begin{editorial}<br />
-This section proves the non-enumerability of $\mathbb{B}^\omega$ and<br />
+<p>This section proves the non-enumerability of $\mathbb{B}^\omega$ and<br />
 $\mathscr{P}({\mathbb{Z})^{+}}$ using the definition in \jieref{subsec:Enumerations-and-enumerable-Sets-1}. It is<br />
 designed to be a little more elementary and a little more detailed<br />
-than the version in \jieref{subsec:Enumerations-and-enumerable-Sets-2}.<br />
-\end{editorial}</p>
+than the version in \jieref{subsec:Enumerations-and-enumerable-Sets-2}.</p>
 <p>Some sets, such as the set $\mathbb{Z}^{+}$ of positive integers, are<br />
 infinite. So far we&rsquo;ve seen examples of infinite sets which were all<br />
 <bb>enumerable</bb>. However, there are also infinite sets which do not<br />
@@ -3319,12 +3328,10 @@ if $f_1$, $f_2$, \dots, is a list of functions and each $f_i\colon<br />
 \end{prob}</p>
 </blockquote>
 <h2 id="reduction">Reduction</h2>
-<p>\begin{editorial}<br />
-This section proves non-enumerability by reduction, matching the<br />
+<p>This section proves non-enumerability by reduction, matching the<br />
 results in \jieref{subsec:Nonenumerable-Sets-1}. An alternative, slightly more condensed<br />
 version matching the results in \jieref{subsec:Nonenumerable-Sets-2} is provided in<br />
-\jieref{subsec:Nonenumerable-Sets-2-reduction}.<br />
-\end{editorial}</p>
+\jieref{subsec:Nonenumerable-Sets-2-reduction}.</p>
 <p>We showed $\mathscr{P}({\mathbb{Z})^{+}}$ to be <bb>nonenumerable</bb> by a diagonalization<br />
 argument. We already had a proof that $\mathbb{B}^\omega$, the set of all<br />
 infinite sequences of $0$s and $1$s, is <bb>nonenumerable</bb>.  Here&rsquo;s<br />
@@ -3479,11 +3486,9 @@ If $\cardeq{A}{B}$, then $A$ is <bb>enumerable</bb> if<br />
 and only if $B$ is.<br />
 \end{prop}</p>
 </blockquote>
-<p>\begin{editorial}<br />
-The following proof uses Definition \pref{defn:enumerable} if<br />
+<p>The following proof uses Definition \pref{defn:enumerable} if<br />
 \jieref{subsec:Enumerations-and-enumerable-Sets-1} is included and Definition \pref{defn:enumerable}<br />
-otherwise.<br />
-\end{editorial}</p>
+otherwise.</p>
 <p>\begin{proof}<br />
 Suppose $\cardeq{A}{B}$, so there is some <bb>bijection</bb> $f \colon A<br />
 \to B$, and suppose that $A$ is <bb>enumerable</bb>.<br />
@@ -3564,10 +3569,8 @@ $\cardless{A}{\mathscr{P}({A})}$, for any set $A$.<br />
 The map $f(x) = \lbrace x\rbrace $ is an <bb>injection</bb> $f \colon A \to \mathscr{P}({A})$,<br />
 since if $x \neq y$, then also $\lbrace x\rbrace  \neq \lbrace y\rbrace $ by extensionality,<br />
 and so $f(x) \neq f(y)$. So we have that $\cardle{A}{\mathscr{P}({A})}$.</p>
-<p>\begin{editorial}<br />
-We present the slow proof if \jieref{subsec:Nonenumerable-Sets-1} is<br />
-present, otherwise a faster proof matching \jieref{subsec:Nonenumerable-Sets-2}.<br />
-\end{editorial}</p>
+<p>We present the slow proof if \jieref{subsec:Nonenumerable-Sets-1} is<br />
+present, otherwise a faster proof matching \jieref{subsec:Nonenumerable-Sets-2}.</p>
 <p>We show that there cannot be a <bb>surjective</bb> function $g\colon A \to<br />
 \mathscr{P}({A})$, let alone a <bb>bijective</bb> one, and hence that<br />
 $\cardneq{A}{\mathscr{P}({A})}$. For suppose that $g\colon A \to \mathscr{P}({A})$.<br />
@@ -3677,13 +3680,11 @@ down into cases so we only have to think of a <bb>injection</bb> from the<br />
 first to the second, and vice-versa.</p>
 <p>The  following \jieref{subsec:Enumerations-and-enumerable-Sets-2}, \jieref{subsec:Nonenumerable-Sets-2}, \jieref{subsec:Nonenumerable-Sets-2-reduction} are  alternativeversions of \jieref{subsec:Enumerations-and-enumerable-Sets-1}, \jieref{subsec:Nonenumerable-Sets-1}, \jieref{subsec:Nonenumerable-Sets-1-reduction} due to Tim Button for usein his Open Set Theory text.  They are slightly more advanced and use adifference definition of enumerability more suitable in a set theory context(i.e., bijection withNor an initial segment, rather than being listable orbeing the range of a surjective function from $\mathbb{Z}^{+}$).</p>
 <h2 id="enumerations-and-enumerable-sets-1">Enumerations and enumerable Sets</h2>
-<p>\begin{editorial}<br />
-This section defines enumerations as bijections with (initial<br />
+<p>This section defines enumerations as bijections with (initial<br />
 segments) of $\mathbb{N}$, the way it&rsquo;s done in set theory. So it<br />
 conflicts slightly with the definitions in \jieref{subsec:Enumerations-and-enumerable-Sets-1}, and<br />
 repeats all the examples there. It is also a bit more terse than<br />
-that section.<br />
-\end{editorial}</p>
+that section.</p>
 <p>We can specify finite set is by simply enumerating its<br />
 <bb>element</bb>s. We do this when we define a set like so:<br />
 $$<br />
@@ -3789,12 +3790,10 @@ Show by induction on $n$ that if $A_1$, $A_2$, \dots, $A_n$ are all<br />
 \end{prob}</p>
 </blockquote>
 <h2 id="nonenumerable-sets-1">Nonenumerable Sets</h2>
-<p>\begin{editorial}<br />
-This section proves the non-enumerability of $\mathbb{B}^\omega$ and<br />
+<p>This section proves the non-enumerability of $\mathbb{B}^\omega$ and<br />
 $\mathscr{P}({\mathbb{N})}$ using the definitions in \jieref{subsec:Enumerations-and-enumerable-Sets-2}, i.e.,<br />
 requiring a bijection with $\mathbb{N}$ instead of a surjection from<br />
-$\mathbb{Z}^{+}$.<br />
-\end{editorial}</p>
+$\mathbb{Z}^{+}$.</p>
 <p>The set $\mathbb{N}$ of natural numbers is infinite. It is also trivially<br />
 <bb>enumerable</bb>. But the remarkable fact is that there are<br />
 <bb>\emph{nonenumerable</bb>} sets, i.e., sets which are not <bb>enumerable</bb><br />
@@ -3917,12 +3916,10 @@ if $f_1$, $f_2$, \dots, is a list of functions and each $f_i\colon<br />
 \end{prob}</p>
 </blockquote>
 <h2 id="reduction-1">Reduction</h2>
-<p>\begin{editorial}<br />
-This section proves non-enumerability by reduction, matching the<br />
+<p>This section proves non-enumerability by reduction, matching the<br />
 results in \jieref{subsec:Nonenumerable-Sets-2}. An alternative, slightly more<br />
 elaborate version matching the results in \jieref{subsec:Nonenumerable-Sets-1} is<br />
-provided in \jieref{subsec:Nonenumerable-Sets-1-reduction}.<br />
-\end{editorial}</p>
+provided in \jieref{subsec:Nonenumerable-Sets-1-reduction}.</p>
 <p>We proved that $\mathbb{B}^\omega$ is <bb>nonenumerable</bb> by a diagonalization<br />
 argument. We used a similar diagonalization argument to show that<br />
 $\mathscr{P}({\mathbb{N})}$ is <bb>nonenumerable</bb>. But here&rsquo;s another way we can prove<br />
@@ -4032,7 +4029,7 @@ Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.<br
 \end{prob}</p>
 </blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 13:19:21 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 16:27:38 by 王小花.</p>
     </article>
     
     <script>
