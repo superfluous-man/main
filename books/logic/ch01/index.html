@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-04T23:03:45&#43;0800">
+<meta name="modified" content="2020-09-05T13:19:21&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 01 章 預備：素樸集合論",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-04T23:03:45+08:00",
+    "dateModified": "2020-09-05T13:19:21+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch01/",
     "description": "The material in this chapter is an introduction to basic naïve set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1717,9 +1717,9 @@ if (!doNotTrack) {
 
 &middot; <time class="single__info" title="Written At">📅&nbsp;Sep 1, 2020 </time>
   
-&middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 4, 2020 </time>
+&middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 5, 2020 </time>
   
-&middot; 🔢 23970 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 48 min read</span>
+&middot; 🔢 24085 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 49 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -2486,193 +2486,98 @@ The <bb>application</bb> of $f$ to $C$ is $f[C] = \lbrace f(x): x \in C\rbrace$.
 </blockquote>
 <p>It follows from these definition that $\text{ran}(f) = f[\text{dom}(f)]$, for any function $f$. These notions are exactly as one would expect, given the definitions in §1.1.6（P.34）and our identification of functions with relations. But two other operations&mdash;inverses and relative products&mdash;require a little more detail. We will provide that in the §1.2.3（P.41）and §1.2.4（P.42）.</p>
 <h2 id="inverses-of-functions">Inverses of Functions</h2>
-<p>We think of functions as maps. An obvious question to ask about<br />
-functions, then, is whether the mapping can be &ldquo;reversed.&rsquo;&rsquo; For<br />
-instance, the successor function $f(x) = x + 1$ can be reversed, in<br />
-the sense that the function $g(y) = y - 1$ &ldquo;undoes&rsquo;&rsquo; what $f$ does.</p>
-<p>But we must be careful. Although the definition of $g$ defines a<br />
-function $\mathbb{Z} \to \mathbb{Z}$, it does not define a <bb>function</bb> $\mathbb{N}<br />
-\to \mathbb{N}$, since $g(0) \notin \mathbb{N}$.  So even in simple cases, it is<br />
-not quite obvious whether a function can be reversed; it may depend on<br />
-the domain and codomain.</p>
+<p>We think of functions as maps. An obvious question to ask about functions, then, is whether the mapping can be &ldquo;reversed.&rsquo;&rsquo; For instance, the successor function $f(x) = x + 1$ can be reversed, in the sense that the function $g(y) = y - 1$ &ldquo;undoes&rsquo;&rsquo; what $f$ does.</p>
+<p>But we must be careful. Although the definition of $g$ defines a function $\mathbb{Z} \to \mathbb{Z}$, it does not define a <bb>function</bb> $\mathbb{N} \to \mathbb{N}$, since $g(0) \notin \mathbb{N}$.  So even in simple cases, it is not quite obvious whether a function can be reversed; it may depend on the domain and codomain.</p>
 <p>This is made more precise by the notion of an inverse of a function.</p>
-<p>\begin{defn}[Inverses of Functions]<br />
-A function $g \colon B \to A$ is an <bb>inverse</bb> of a function $f<br />
-\colon A \to B$ if $f(g(y)) = y$ and $g(f(x)) = x$ for all $x \in A$<br />
-and $y \in B$.<br />
-\end{defn}</p>
+<blockquote>
+<p><bb>定義 1.36【Inverses of Functions】</bb><br />
+A function $g \colon B \to A$ is an <bb>inverse</bb> of a function $f \colon A \to B$ if $f(g(y)) = y$ and $g(f(x)) = x$ for all $x \in A$ and $y \in B$.</p>
+</blockquote>
 <p>If $f$ has an inverse $g$, we often write $f^{-1}$ instead of $g$.</p>
-<p>Now we will determine when functions have inverses. A good candidate<br />
-for an inverse of $f\colon A \to B$ is $g\colon B \to A$ &ldquo;defined<br />
-by&rsquo;&rsquo;<br />
-$$<br />
-g(y) = \text{&ldquo;the&rsquo;&rsquo; $x$ such that $f(x) = y$.}<br />
-$$<br />
-But the scare quotes around &ldquo;defined by&rsquo;&rsquo; (and &ldquo;the&rsquo;') suggest that<br />
-this is not a definition.  At least, it will not always work, with<br />
-complete generality. For, in order for this definition to specify a<br />
-function, there has to be one and only one $x$ such that $f(x) =<br />
-y$&mdash;the output of $g$ has to be uniquely specified. Moreover, it has<br />
-to be specified for every $y \in B$.  If there are $x_1$ and $x_2 \in<br />
-A$ with $x_1 \neq x_2$ but $f(x_1) = f(x_2)$, then $g(y)$ would not be<br />
-uniquely specified for $y = f(x_1) = f(x_2)$. And if there is no $x$<br />
-at all such that $f(x) = y$, then $g(y)$ is not specified at all.  In<br />
-other words, for $g$ to be defined, $f$ must be both <bb>injective</bb> and<br />
-<bb>surjective</bb>.</p>
+<p>Now we will determine when functions have inverses. A good candidate for an inverse of $f\colon A \to B$ is $g\colon B \to A$ &ldquo;defined by&rsquo;&rsquo; $$g(y) = \text{&ldquo;the&rsquo;&rsquo; $x$ such that $f(x) = y$.}$$ But the scare quotes around &ldquo;defined by&rsquo;&rsquo; (and &ldquo;the&rsquo;') suggest that this is not a definition.  At least, it will not always work, with complete generality. For, in order for this definition to specify a function, there has to be one and only one $x$ such that $f(x) = y$&mdash;the output of $g$ has to be uniquely specified. Moreover, it has to be specified for every $y \in B$.  If there are $x_1$ and $x_2 \in A$ with $x_1 \neq x_2$ but $f(x_1) = f(x_2)$, then $g(y)$ would not be uniquely specified for $y = f(x_1) = f(x_2)$. And if there is no $x$ at all such that $f(x) = y$, then $g(y)$ is not specified at all. In other words, for $g$ to be defined, $f$ must be both <bb>injective</bb> and <bb>surjective</bb>.</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
-Every <bb>bijection</bb> has a unique inverse.<br />
-\end{prop}</p>
-</blockquote>
-<p>\begin{proof}<br />
-Exercise.<br />
-\end{proof}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Prove Proposition \ref{prop:bijection-inverse}. That is, show that if<br />
-$f\colon A \to B$ is <bb>bijective</bb>, an inverse $g$ of $f$ exists. You<br />
-have to define such a $g$, show that it is a function, and show that<br />
-it is an inverse of $f$, i.e., $f(g(y)) = y$ and $g(f(x)) = x$ for all<br />
-$x \in A$ and $y \in B$.<br />
-\end{prob}</p>
-</blockquote>
-<p>However, there is a slightly more general way to extract inverses. We<br />
-saw in \jieref{subsec:Kinds-of-Functions} that every function $f$ induces<br />
-a <bb>surjection</bb> $f&rsquo; \colon A \to \text{ran}(f)$ by letting $f&rsquo;(x) = f(x)$<br />
-for all $x \in A$. Clearly, if $f$ is an <bb>injection</bb>, then $f'$ is<br />
-a <bb>bijection</bb>, so that it has a unique inverse by<br />
-Proposition<br />
-\olref{prop:bijection-inverse}. By a very minor abuse of notation, we<br />
-sometimes call the inverse of $f'$ simply &ldquo;the inverse of $f$.&rsquo;&rsquo;</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if $f\colon A \to B$ has an inverse $g$, then $f$ is<br />
-<bb>bijective</bb>.<br />
-\end{prob}</p>
+<p><bb>命題 1.7</bb><br />
+Every <bb>bijection</bb> has a unique inverse.</p>
 </blockquote>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
-Every function $f$ has at most one inverse.<br />
-\end{prop}</p>
+<p><bb>命題 1.7 之證明</bb><br />
+Exercise.</p>
 </blockquote>
-<p>\begin{proof}<br />
-Exercise.<br />
-\end{proof}</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Prove Proposition \ref{prop:inverse-unique}. That is, show that<br />
-if $g\colon B \to A$ and $g&rsquo;\colon B \to A$ are inverses of $f\colon A<br />
-\to B$, then $g = g'$, i.e., for all $y \in B$, $g(y) = g&rsquo;(y)$.<br />
-\end{prob}</p>
+<p><bb>Problem 1.16</bb><br />
+Prove Proposition 1.7. That is, show that if $f\colon A \to B$ is <bb>bijective</bb>, an inverse $g$ of $f$ exists. You have to define such a $g$, show that it is a function, and show that it is an inverse of $f$, i.e., $f(g(y)) = y$ and $g(f(x)) = x$ for all $x \in A$ and $y \in B$.</p>
+</blockquote>
+<p>However, there is a slightly more general way to extract inverses. We saw in §1.2.1（P.37）that every function $f$ induces a <bb>surjection</bb> $f&rsquo; \colon A \to \text{ran}(f)$ by letting $f&rsquo;(x) = f(x)$ for all $x \in A$. Clearly, if $f$ is an <bb>injection</bb>, then $f'$ is a <bb>bijection</bb>, so that it has a unique inverse by Proposition 1.7. By a very minor abuse of notation, we sometimes call the inverse of $f'$ simply &ldquo;the inverse of $f$.&rsquo;&rsquo;</p>
+<blockquote>
+<p><bb>Problem 1.17</bb><br />
+Show that if $f\colon A \to B$ has an inverse $g$, then $f$ is <bb>bijective</bb>.</p>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.8</bb><br />
+Every function $f$ has at most one inverse.</p>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.8 之證明</bb><br />
+Exercise.</p>
+</blockquote>
+<blockquote>
+<p><bb>Problem 1.18</bb><br />
+Prove Proposition 1.8. That is, show that if $g\colon B \to A$ and $g&rsquo;\colon B \to A$ are inverses of $f\colon A \to B$, then $g = g'$, i.e., for all $y \in B$, $g(y) = g&rsquo;(y)$.</p>
 </blockquote>
 <h2 id="composition-of-functions">Composition of Functions</h2>
-<p>We saw in \jieref{subsec:Inverses-of-Functions} that the<br />
-inverse $f^{-1}$ of a <bb>bijection</bb> $f$ is itself a function. Another<br />
-operation on functions is composition: We can define a new<br />
-function by composing two functions, $f$ and $g$, i.e., by first<br />
-applying $f$ and then $g$. Of course, this is only possible if the<br />
-ranges and domains match, i.e., the range of $f$ must be a subset of<br />
-the domain of $g$. This operation on<br />
-functions is the analogue of the operation of relative product on<br />
-relations from \jieref{subsec:Operations-on-Relations}.</p>
-<p>A diagram might help to explain the idea of composition. In<br />
-Figure<br />
-\olref{fig:composition}, we depict two functions $f \colon A \to B$<br />
-and $g \colon B \to C$ and their composition $(\comp{f}{g})$. The<br />
-function $(\comp{f}{g}) \colon A \to C$ pairs each <bb>element</bb> of $A$<br />
-with a <bb>element</bb> of $C$. We specify which <bb>element</bb> of $C$<br />
-a <bb>element</bb> of $A$ is paired with as follows: given an input $x \in<br />
-A$, first apply the function $f$ to $x$, which will output some $f(x)<br />
-= y \in B$, then apply the function $g$ to $y$, which will output some<br />
-$g(f(x)) = g(y) = z \in C$.</p>
-<p>\begin{figure}</p>
-<p>\caption{The composition $g \circ f$ of two functions $f$ and $g$.}</p>
-<p>\end{figure}</p>
-<p>\begin{defn}[Composition]<br />
-Let $f\colon A \to B$ and $g\colon B \to C$ be functions. The<br />
-<bb>composition</bb> of $f$ with $g$ is $\comp{f}{g} \colon A \to C$,<br />
-where $(\comp{f}{g})(x) = g(f(x))$.<br />
-\end{defn}</p>
-<p>\begin{examplep}{}<br />
-Consider the functions $f(x) = x + 1$, and $g(x) = 2x$. Since<br />
-$(\comp{f}{g})(x) = g(f(x))$, for each input $x$ you must first take<br />
-its successor, then multiply the result by two. So their composition<br />
-is given by $(\comp{f}{g})(x) = 2(x+1)$.<br />
-\end{examplep}</p>
+<p>We saw in§1.2.3（P.41）that the inverse $f^{-1}$ of a <bb>bijection</bb> $f$ is itself a function. Another operation on functions is composition: We can define a new function by composing two functions, $f$ and $g$, i.e., by first applying $f$ and then $g$. Of course, this is only possible if the ranges and domains match, i.e., the range of $f$ must be a subset of the domain of $g$. This operation on functions is the analogue of the operation of relative product on relations from§1.1.6（P.34）.</p>
+<p>A diagram might help to explain the idea of composition. In Figure 1.7, we depict two functions $f \colon A \to B$ and $g \colon B \to C$ and their composition $(g\circ f)$. The function $(g\circ f) \colon A \to C$ pairs each <bb>element</bb> of $A$ with a <bb>element</bb> of $C$. We specify which <bb>element</bb> of $C$ a <bb>element</bb> of $A$ is paired with as follows: given an input $x \in A$, first apply the function $f$ to $x$, which will output some $f(x) = y \in B$, then apply the function $g$ to $y$, which will output some $g(f(x)) = g(y) = z \in C$.</p>
+<p><img src="https://i.loli.net/2020/09/05/YjaWscoL5tTVUB3.png" alt="compositionoffunction" /></p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if $f \colon A \to B$ and $g \colon B \to C$ are both<br />
-<bb>injective</bb>, then $\comp{f}{g}\colon A \to C$ is <bb>injective</bb>.<br />
-\end{prob}</p>
+<p><bb>定義 1.37【Composition】</bb><br />
+Let $f\colon A \to B$ and $g\colon B \to C$ be functions. The <bb>composition</bb> of $f$ with $g$ is $g\circ f \colon A \to C$, where $(g\circ f)(x) = g(f(x))$.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if $f \colon A \to B$ and $g \colon B \to C$ are both<br />
-<bb>surjective</bb>, then $\comp{f}{g}\colon A \to C$ is <bb>surjective</bb>.<br />
-\end{prob}</p>
+<p><bb>示例 1.33</bb><br />
+Consider the functions $f(x) = x + 1$, and $g(x) = 2x$. Since $(g\circ f)(x) = g(f(x))$, for each input $x$ you must first take its successor, then multiply the result by two. So their composition is given by $(g\circ f)(x) = 2(x+1)$.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Suppose $f \colon A \to B$ and $g \colon B \to C$. Show that the graph<br />
-of $\comp{f}{g}$ is $R_f \mid R_g$.<br />
-\end{prob}</p>
+<p><bb>Problem 1.19</bb><br />
+Show that if $f \colon A \to B$ and $g \colon B \to C$ are both <bb>injective</bb>, then $g\circ f\colon A \to C$ is <bb>injective</bb>.</p>
+</blockquote>
+<blockquote>
+<p><bb>Problem 1.20</bb><br />
+Show that if $f \colon A \to B$ and $g \colon B \to C$ are both <bb>surjective</bb>, then $g\circ f\colon A \to C$ is <bb>surjective</bb>.</p>
+</blockquote>
+<blockquote>
+<p><bb>Problem 1.21</bb><br />
+Suppose $f \colon A \to B$ and $g \colon B \to C$. Show that the graph of $g\circ f$ is $R_f \mid R_g$.</p>
 </blockquote>
 <h2 id="partial-functions">Partial Functions</h2>
-<p>It is sometimes useful to relax the definition of function so that it<br />
-is not required that the output of the function is defined for all<br />
-possible inputs. Such mappings are called <bb>partial functions</bb>.</p>
-<p>\begin{defn}[Partial function]<br />
-A <bb>partial function</bb> $f \colon A \pto B$ is a mapping which<br />
-assigns to every <bb>element</bb> of $A$ at most one <bb>element</bb> of $B$.<br />
-If $f$ assigns an element of $B$ to $x \in A$, we say $f(x)$ is<br />
-<bb>defined</bb>, and otherwise <bb>undefined</bb>. If $f(x)$ is defined,<br />
-we write $f(x) \fdefined$, otherwise $f(x) \fundefined$. The<br />
-<bb>domain</bb> of a partial function $f$ is the subset of $A$ where it<br />
-is defined, i.e., $\dom{f} = \Setabs{x \in A}{f(x) \fdefined}$.<br />
-\end{defn}</p>
-<p>\begin{examplep}{}<br />
-Every function $f\colon A \to B$ is also a partial function. Partial<br />
-functions that are defined everywhere on $A$&mdash;i.e., what we so far<br />
-have simply called a function&mdash;are also called <bb>total</bb><br />
-functions.<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-The partial function $f \colon \mathbb{R} \pto \mathbb{R}$ given by $f(x) = 1/x$<br />
-is undefined for $x = 0$, and defined everywhere else.<br />
-\end{examplep}</p>
+<p>It is sometimes useful to relax the definition of function so that it is not required that the output of the function is defined for all possible inputs. Such mappings are called <bb>partial functions</bb>.</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Given $f\colon A \pto B$, define the partial function $g\colon B \pto<br />
-A$ by: for any $y \in B$, if there is a unique $x \in A$ such that<br />
-$f(x) = y$, then $g(y) = x$; otherwise $g(y) \fundefined$.  Show that<br />
-if $f$ is injective, then $g(f(x)) = x$ for all $x \in \dom{f}$, and<br />
-$f(g(y)) = y$ for all $y \in \text{ran}(f)$.<br />
-\end{prob}</p>
+<p><bb>定義 1.38【Partial function】</bb><br />
+A <bb>partial function</bb> $f \colon A \nrightarrow B$ is a mapping which assigns to every <bb>element</bb> of $A$ at most one <bb>element</bb> of $B$. If $f$ assigns an element of $B$ to $x \in A$, we say $f(x)$ is <bb>defined</bb>, and otherwise <bb>undefined</bb>. If $f(x)$ is defined, we write $f(x) \downarrow$, otherwise $f(x) \uparrow$. The <bb>domain</bb> of a partial function $f$ is the subset of $A$ where it is defined, i.e., $\text{dom}(f) = \lbrace x \in A: f(x) \downarrow\rbrace$.</p>
 </blockquote>
-<p>\begin{defn}[Graph of a partial function]<br />
-Let $f\colon A \pto B$ be a partial function. The <bb>graph</bb> of $f$<br />
-is the relation $R_f \subseteq A \times B$ defined by<br />
-$$<br />
-R_f = \Setabs{⟨x,y⟩}{f(x) = y}.<br />
-$$<br />
-\end{defn}</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
-Suppose $R \subseteq A \times B$ has the property that whenever $Rxy$<br />
-and $Rxy'$ then $y = y'$.  Then $R$ is the graph of the partial<br />
-function $f\colon X \pto Y$ defined by: if there is a $y$ such that<br />
-$Rxy$, then $f(x) = y$, otherwise $f(x) \fundefined$.  If $R$ is also<br />
-<bb>serial</bb>, i.e., for each $x \in X$ there is a $y \in Y$ such that<br />
-$Rxy$, then $f$ is total.<br />
-\end{prop}</p>
+<p><bb>示例 1.34</bb><br />
+Every function $f\colon A \to B$ is also a partial function. Partial functions that are defined everywhere on $A$&mdash;i.e., what we so far have simply called a function&mdash;are also called <bb>total</bb> functions.</p>
 </blockquote>
-<p>\begin{proof}<br />
-Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo;<br />
-\neq y$ such that $Rxy'$, the condition on $R$ would be<br />
-violated. Hence, if there is a $y$ such that $Rxy$, that $y$ is<br />
-unique, and so $f$ is well-defined.  Obviously, $R_f = R$ and $f$ is<br />
-total if $R$ is serial.<br />
-\end{proof}</p>
+<blockquote>
+<p><bb>示例 1.35</bb><br />
+The partial function $f \colon \mathbb{R} \nrightarrow \mathbb{R}$ given by $f(x) = 1/x$ is undefined for $x = 0$, and defined everywhere else.</p>
+</blockquote>
+<blockquote>
+<p><bb>Problem 1.22</bb><br />
+Given $f\colon A \nrightarrow B$, define the partial function $g\colon B \nrightarrow A$ by: for any $y \in B$, if there is a unique $x \in A$ such that $f(x) = y$, then $g(y) = x$; otherwise $g(y) \uparrow$.  Show that if $f$ is injective, then $g(f(x)) = x$ for all $x \in \text{dom}(f)$, and $f(g(y)) = y$ for all $y \in \text{ran}(f)$.</p>
+</blockquote>
+<blockquote>
+<p><bb>定義 1.39【Graph of a partial function】</bb><br />
+Let $f\colon A \nrightarrow B$ be a partial function. The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$ defined by $$R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.$$</p>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.9</bb><br />
+Suppose $R \subseteq A \times B$ has the property that whenever $Rxy$ and $Rxy'$ then $y = y'$.  Then $R$ is the graph of the partial function $f\colon X \nrightarrow Y$ defined by: if there is a $y$ such that $Rxy$, then $f(x) = y$, otherwise $f(x) \uparrow$.  If $R$ is also <bb>serial</bb>, i.e., for each $x \in X$ there is a $y \in Y$ such that $Rxy$, then $f$ is total.</p>
+</blockquote>
+<blockquote>
+<p><bb>命題 1.9 之證明</bb><br />
+Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$ such that $Rxy'$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, that $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$ and $f$ is total if $R$ is serial.</p>
+</blockquote>
 <h1 id="基数集合大小的度量">基数：集合大小的度量</h1>
 <p>This section discusses enumerations, countability and uncountability.Several sections come in two versions:  a more elementary one, that takesenumerations to be lists, or surjections from $\mathbb{Z}^{+}$; and a more abstract onethat defines enumerations as bijections with $\mathbb{N}$.</p>
 <h2 id="introduction">Introduction</h2>
@@ -3565,7 +3470,7 @@ inverse $f^{-1}$ exists and is also <bb>bijective</bb>. Hence,<br />
 $f^{-1}\colon B \to A$ is a <bb>bijection</bb>, so $\cardeq{B}{A}$.</p>
 <p><bb>Transitivity.</bb> Suppose that $\cardeq{A}{B}$ and $\cardeq{B}{C}$,<br />
 i.e., there are <bb>bijection</bb>s $f\colon A \to B$ and $g\colon B \to<br />
-C$. Then the composition $\comp{f}{g}\colon A \to C$ is <bb>bijective</bb>,<br />
+C$. Then the composition $g\circ f\colon A \to C$ is <bb>bijective</bb>,<br />
 so that $\cardeq{A}{C}$.<br />
 \end{proof}</p>
 <blockquote>
@@ -3586,22 +3491,22 @@ Then either $A = \varnothing$ or there is a <bb>surjective</bb> function<br />
 $g\colon \mathbb{Z}^{+} \to A$. If $A = \varnothing$, then $B = \varnothing$<br />
 also (otherwise there would be an <bb>element</bb> $y \in B$ but no $x \in<br />
 A$ with $g(x) = y$). If, on the other hand, $g\colon \mathbb{Z}^{+} \to A$<br />
-is <bb>surjective</bb>, then $\comp{f}{g} \colon \mathbb{Z}^{+} \to B$ is<br />
+is <bb>surjective</bb>, then $g\circ f \colon \mathbb{Z}^{+} \to B$ is<br />
 <bb>surjective</bb>. To see this, let $y \in B$. Since $g$ is<br />
 <bb>surjective</bb>, there is an $x \in A$ such that $g(x) = y$. Since<br />
 $f$ is <bb>surjective</bb>, there is an $n \in \mathbb{Z}^{+}$ such that $f(n) =<br />
 x$. Hence,<br />
 $$<br />
-(\comp{f}{g})(n) = g(f(n)) = g(x) = y<br />
+(g\circ f)(n) = g(f(n)) = g(x) = y<br />
 $$<br />
-and thus $\comp{f}{g}$ is <bb>surjective</bb>. We have that $\comp{f}{g}$<br />
+and thus $g\circ f$ is <bb>surjective</bb>. We have that $g\circ f$<br />
 is an enumeration of $B$, and so $B$ is <bb>enumerable</bb>.</p>
 <p>Then either $A  = \varnothing$ or there is a <bb>bijection</bb> $g$ whose<br />
 range is $A$ and whose domain is either $\mathbb{N}$ or an initial<br />
 sequence of natural numbers. If $A = \varnothing$, then $B =<br />
 \varnothing$ also (otherwise there would be some $y \in B$ with no $x<br />
 \in A$ such that $g(x) = y$). So suppose we have our<br />
-<bb>bijection</bb> $g$. Then $\comp{g}{f}$ is a <bb>bijection</bb> with<br />
+<bb>bijection</bb> $g$. Then $f\circ g$ is a <bb>bijection</bb> with<br />
 range $B$ and domain the same as that of $g$ (i.e., either $\mathbb{N}$ or<br />
 an initial segment of it), so that $B$ is <bb>enumerable</bb>.</p>
 <p>If $B$ is <bb>enumerable</bb>, we obtain that $A$ is <bb>enumerable</bb> by<br />
@@ -4127,7 +4032,7 @@ Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.<br
 \end{prob}</p>
 </blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Friday, September 4, 2020, 23:03:45 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 13:19:21 by 王小花.</p>
     </article>
     
     <script>
