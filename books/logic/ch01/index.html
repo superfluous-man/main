@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-05T16:27:38&#43;0800">
+<meta name="modified" content="2020-09-05T17:57:00&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 01 章 預備：素樸集合論",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-05T16:27:38+08:00",
+    "dateModified": "2020-09-05T17:57:00+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch01/",
     "description": "The material in this chapter is an introduction to basic naïve set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 5, 2020 </time>
   
-&middot; 🔢 24155 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 49 min read</span>
+&middot; 🔢 24859 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 50 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1839,7 +1839,7 @@ if (!doNotTrack) {
 <li><a href="https://builds.openlogicproject.org/"><bb>Zach, Richard.</bb> <em>Open Logic Project.</em></a><br />
 （這個龐大的開源項目，囊括了非哲學、數學專業的邏輯學習所需的大部分材料。本章內容卽基於其 $\TeX$ 源碼整理而成）</li>
 <li><bb>安德鲁·辛普森, 2005. 离散数学导学[M].冯速,译. 北京: 机械工业出版社.</bb><br />
-（這本書雖是計算機科學領域的基礎課本，但其第三、四、五、六、七、八、九、十章以豐富的實例友好而簡約地講解了集合論、命題邏輯、謂詞邏輯的基礎知識。)</li>
+（這本書雖是計算機科學領域的基礎課本，但其第三、四、五、六、七、八、九、十章以豐富的實例友好而簡約地講解了集合論、Proposition邏輯、謂詞邏輯的基礎知識。)</li>
 <li><bb>邢滔滔, 2008. 数理逻辑[M].北京: 北京大学出版社.</bb><br />
 （這本教材的第二章節簡要講述了邏輯學基礎學習階段可能需要的集合論知識。）</li>
 </ol>
@@ -1852,7 +1852,7 @@ if (!doNotTrack) {
 <p>It does not matter how we <bb>specify</bb> the set, or how we <bb>order</bb> its <bb>element</bb>s, or indeed how <bb>many times</bb> we count its <bb>element</bb>s. All that matters are what its <bb>element</bb>s are. We codify this in the following principle.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉定義 1.0【Extensionality】</span>
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.0【Extensionality】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If $A$ and $B$ are sets, then $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$, and vice versa.</span>
@@ -1863,7 +1863,7 @@ if (!doNotTrack) {
 <p>This delivers on the point that, when we consider sets, we don&rsquo;t care about the order of their <bb>element</bb>s, or how many times they are specified.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.0</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.0</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Whenever you have a bunch of objects, you can collect them together in a set. The set of Richard&rsquo;s siblings, for instance, is a set that contains one person, and we could write it as $S =\lbrace \text{Ruth}\rbrace$. The set of positive integers less than $4$ is $\lbrace 1, 2, 3 \rbrace$, but it can also be written as $\lbrace 3, 2, 1\rbrace$ or even as $\lbrace 1, 2, 1, 2, 3\rbrace$. These are all the same set, by extensionality. For every <bb>element</bb> of $\lbrace 1, 2, 3 \rbrace$ is also an <bb>element</bb> of $\lbrace3, 2, 1 \rbrace$ (and of $\lbrace 1, 2, 1, 2, 3\rbrace$), and vice versa.</span>
@@ -1872,7 +1872,7 @@ if (!doNotTrack) {
 <p>Frequently we&rsquo;ll specify a set by some property that its <bb>element</bb>s share. We&rsquo;ll use the following shorthand notation for that: {$x: \varphi(x)$}, where the $\varphi(x)$ stands for the property that $x$ has to have in order to be counted among the <bb>element</bb>s of the set.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.1</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.1</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">In our example, we could have specified $S$ also as $$S = \lbrace x: x  \text{ is a sibling of Richard}\rbrace.$$</span>
@@ -1880,7 +1880,7 @@ if (!doNotTrack) {
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.2</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.2</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">A number is called <bb>perfect</bb> iff it is equal to the sum of its proper divisors (i.e., numbers that evenly divide it but aren&rsquo;t identical to the number). For instance, $6$ is perfect because its proper divisors are $1$, $2$, and $3$, and $6 = 1 + 2 + 3$. In fact, $6$ is the only positive integer less than $10$ that is perfect. So, using extensionality, we can say:<br />
@@ -1897,7 +1897,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 <p>We will often want to compare sets. And one obvious kind of comparison one might make is as follows: <bb>everything in one set is in the other too</bb>. This situation is sufficiently important for us to introduce some new notation.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉定義 1.1【Subset】</span>
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.1【Subset】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If every <bb>element</bb> of a set $A$ is also an <bb>element</bb> of $B$, then we say that $A$ is a <bb>subset</bb> of $B$, and write $A \subseteq B$. If $A$ is not a subset of $B$ we write $A \not\subseteq B$. If $A \subseteq B$ but $A \neq B$, we write $A \subsetneq B$ and say that $A$ is a <bb>proper subset</bb> of $B$.</span>
@@ -1905,7 +1905,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.3</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.3</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Every set is a subset of itself, and $\varnothing$ is a subset of every set. The set of even numbers is a subset of the set of natural numbers. Also, $\lbrace a, b \rbrace \subseteq \lbrace a, b, c \rbrace$. But $\lbrace a, b, e\rbrace$ is not a subset of $\lbrace a, b, c \rbrace$.</span>
@@ -1913,7 +1913,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.4</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.4</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">The number $2$ is an <bb>element</bb> of the set of integers, whereas the set of even numbers is a subset of the set of integers. However, a set may happen to <bb>both</bb> be an <bb>element</bb> and a subset of some other set, e.g., $\lbrace 0\rbrace  \in \lbrace 0, \lbrace 0 \rbrace\rbrace$ and also $\lbrace 0\rbrace \subseteq \lbrace 0, \lbrace 0\rbrace\rbrace$.</span>
@@ -1922,7 +1922,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 <p>Extensionality gives a criterion of identity for sets: $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$ and vice versa. The definition of &ldquo;subset&rsquo;&rsquo; defines $A \subseteq B$ precisely as the first half of this criterion: every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$. Of course the definition also applies if we switch $A$ and $B$: that is, $B \subseteq A$ iff every <bb>element</bb> of $B$ is also an <bb>element</bb> of $A$. And that, in turn, is exactly the &ldquo;vice versa&rsquo;&rsquo; part of extensionality. In other words, extensionality entails that sets are equal iff they are subsets of one another.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎命題 1.0</span>
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.0</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">$A = B$ iff both $A \subseteq B$ and $B \subseteq A$.</span>
@@ -1931,7 +1931,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 <p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when $A$ is a subset of $B$ we said that &ldquo;every <bb>element</bb> of $A$ is $\cdots$,&rsquo;&rsquo; and filled the &ldquo;$\cdots$&rsquo;&rsquo; with &ldquo;an <bb>element</bb> of $B$&rsquo;&rsquo;. But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉定義 1.2</span>
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.2</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">$(\forall x \in A) \varphi$ abbreviates $\forall x(x \in A  \rightarrow \varphi)$. Similarly, $(\exists x \in A)\varphi$ abbreviates $\exists x(x \in A \land \varphi)$.</span>
@@ -1941,7 +1941,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 <p>Now we move on to considering a certain kind of set: the set of all subsets of a given set.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉定義 1.3【Power Set】</span>
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.3【Power Set】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">The set consisting of all subsets of a set $A$ is called the <bb>power set of</bb> $A,$ written $\mathscr{P}(A)$. $$\mathscr{P}(A) =\lbrace B: B \subseteq A \rbrace$$</span>
@@ -1949,7 +1949,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.5</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.5</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">What are all the possible subsets of $\lbrace a, b, c \rbrace$? They are: $\varnothing$, $\lbrace a\rbrace$, $\lbrace b\rbrace$, $\lbrace c\rbrace$, $\lbrace a, b\rbrace$, $\lbrace a, c\rbrace$, $\lbrace b, c\rbrace$, $\lbrace a, b, c\rbrace$. The set of all these subsets is $\mathscr{P}(\lbrace a,b,c)\rbrace$:<br />
@@ -1965,7 +1965,7 @@ $$\mathscr{P}(\lbrace a, b, c \rbrace) = \lbrace\varnothing, \lbrace a \rbrace, 
 <h2 id="some-important-sets">Some Important Sets</h2>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.6</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.6</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>We will mostly be dealing with sets whose <bb>element</bb>s are mathematical objects. Four such sets are important enough to have specific names:</p>
@@ -1985,7 +1985,7 @@ These are all <bb>infinite</bb> sets, that is, they each have infinitely many <b
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.7【Strings】</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.7【Strings】</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>Another interesting example  is the set ${A}^{*}$ of  <bb>finite strings</bb> over an alphabet $A$: any finite sequence of elements of $A$ is a string over $A$. We include the <bb>empty string $\Lambda$</bb> among the strings over $A$, for every alphabet $A$. For instance,</p>
@@ -1996,7 +1996,7 @@ These are all <bb>infinite</bb> sets, that is, they each have infinitely many <b
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.8【Infinite sequences】</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.8【Infinite sequences】</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">For any set $A$ we may also consider the set $A^\omega$ of infinite sequences of <bb>element</bb>s of $A$. An infinite sequence $a_1a_2a_3a_4\dots$ consists of a one-way infinite list of objects, each one of which is an <bb>element</bb> of $A$.</span>
@@ -2008,7 +2008,7 @@ These are all <bb>infinite</bb> sets, that is, they each have infinitely many <b
 <p>This operation on sets&mdash;combining them&mdash;is very useful and common, and so we give it a formal name and a symbol.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉定義 1.4【Union】</span>
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.4【Union】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">The <bb>union</bb> of two sets $A$ and $B$, written $A \cup B$, is the set of all things which are <bb>element</bb>s of $A$, $B$, or both.<br />
@@ -2017,7 +2017,7 @@ $$A \cup B = \lbrace x: x \in A \lor x \in B\rbrace $$</span>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.9</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.9</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Since the multiplicity of <bb>element</bb>s doesn&rsquo;t matter, the union of two sets which have an element in common contains that <bb>element</bb> only once, e.g., $\lbrace  a, b, c\rbrace  \cup \lbrace  a, 0, 1\rbrace  = \lbrace a, b, c, 0, 1\rbrace $. The union of a set and one of its subsets is just the bigger set: $\lbrace a, b, c \rbrace  \cup \lbrace a \rbrace  = \lbrace a, b, c\rbrace $. The union of a set with the empty set is identical to the set: $\lbrace a, b, c \rbrace  \cup \varnothing = \lbrace a, b, c \rbrace $.</span>
@@ -2031,7 +2031,7 @@ Prove that if $A \subseteq B$, then $A \cup B = B$.</p>
 <p><img src="https://i.loli.net/2020/09/03/Fi7BoED2vNAHXkz.png" alt="intersectionofsets" /></p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉定義 1.5【Intersection】</span>
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.5【Intersection】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">The <bb>intersection</bb> of two sets $A$ and $B$, written $A \cap B$, is the set of all things which are <bb>element</bb>s of both $A$ and $B$.<br />
@@ -2040,7 +2040,7 @@ $$A \cap B = \lbrace x: x \in A \land x \in B\rbrace $$ Two sets are called <bb>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.10</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.10</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">If two sets have no <bb>element</bb>s in common, their intersection is empty: $\lbrace  a, b, c\rbrace  \cap \lbrace  0, 1\rbrace  = \varnothing$. If two sets do have <bb>element</bb>s in common, their intersection is the set of all those: $\lbrace a, b, c \rbrace  \cap \lbrace a, b, d \rbrace  = \lbrace a, b\rbrace $. The intersection of a set with one of its subsets is just the smaller set: $\lbrace a, b, c\rbrace  \cap \lbrace a, b\rbrace  = \lbrace a, b\rbrace $. The intersection of any set with the empty set is empty: $\lbrace a, b, c \rbrace \cap \varnothing = \varnothing$.</span>
@@ -2051,22 +2051,34 @@ $$A \cap B = \lbrace x: x \in A \land x \in B\rbrace $$ Two sets are called <bb>
 Prove rigorously that if $A \subseteq B$, then $A \cap B = A$.</p>
 </blockquote>
 <p>We can also form the union or intersection of more than two sets. An elegant way of dealing with this in general is the following: suppose you collect all the sets you want to form the union (or intersection) of into a single set. Then we can define the union of all our original sets as the set of all objects which belong to at least one <bb>element</bb> of the set, and the intersection as the set of all objects which belong to every <bb>element</bb> of the set.</p>
-<blockquote>
-<p><bb>定義 1.6</bb><br />
-If $A$ is a set of sets, then $\bigcup A$ is the set of <bb>element</bb>s of <bb>element</bb>s of $A$:<br />
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.6</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $A$ is a set of sets, then $\bigcup A$ is the set of <bb>element</bb>s of <bb>element</bb>s of $A$:<br />
 $\bigcup A  = \lbrace x: x \text{ belongs to an element of } A \rbrace$, i.e.,<br />
-$\bigcup A  = \lbrace x: \text{there is a } B \in A \text{ so that } x \in B\rbrace$</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.7</bb><br />
-If $A$ is a set of sets, then $\bigcap A$ is the set of objects which all elements of $A$ have in common:<br />
+$\bigcup A  = \lbrace x: \text{there is a } B \in A \text{ so that } x \in B\rbrace$</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.7</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $A$ is a set of sets, then $\bigcap A$ is the set of objects which all elements of $A$ have in common:<br />
 $\bigcap A = \lbrace x: x \text{ belongs to every element of } A \rbrace$, i.e.,<br />
-$\bigcap A = \lbrace x: \text{for all } B \in A, x \in B\rbrace.$</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.11</bb><br />
-Suppose $A = \lbrace  \lbrace  a, b \rbrace , \lbrace  a, d, e \rbrace , \lbrace  a, d \rbrace  \rbrace $. Then $\bigcup A = \lbrace  a, b, d, e \rbrace $ and $\bigcap A = \lbrace  a \rbrace.$</p>
-</blockquote>
+$\bigcap A = \lbrace x: \text{for all } B \in A, x \in B\rbrace.$</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.11</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Suppose $A = \lbrace  \lbrace  a, b \rbrace , \lbrace  a, d, e \rbrace , \lbrace  a, d \rbrace  \rbrace $. Then $\bigcup A = \lbrace  a, b, d, e \rbrace $ and $\bigcap A = \lbrace  a \rbrace.$</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
 Show that if $A$ is a set and $A \in B$, then $A \subseteq \bigcup B$.</p>
@@ -2082,10 +2094,14 @@ $\bigcap_{i \in I} A_i = \bigcap\lbrace A_i: i \in I\rbrace.$</p>
 <p>Finally, we may want to think about the set of all <bb>element</bb>s in $A$<br />
 which are not in $B$. We can depict this as in Figure 1.2.</p>
 <p><img src="https://i.loli.net/2020/09/03/96izN5GuPJ7DFVs.png" alt="DifferenceofSets" /></p>
-<blockquote>
-<p><bb>定義 1.8【Difference】</bb><br />
-The <bb>set difference</bb> $A \setminus B$ is the set of all <bb>element</bb>s of $A$ which are not also <bb>element</bb>s of $B$, i.e., $$A\setminus B = \lbrace x: x\in A \text{ and } x \notin B\rbrace .$$</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.8【Difference】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">The <bb>set difference</bb> $A \setminus B$ is the set of all <bb>element</bb>s of $A$ which are not also <bb>element</bb>s of $B$, i.e., $$A\setminus B = \lbrace x: x\in A \text{ and } x \notin B\rbrace .$$</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
 Prove that if $A \subsetneq B$, then $B \setminus A \neq \varnothing$.</p>
@@ -2095,45 +2111,65 @@ Prove that if $A \subsetneq B$, then $B \setminus A \neq \varnothing$.</p>
 <p>How should we think about ordered pairs in set theory? Crucially, we want to preserve the idea that ordered pairs are identical iff they share the same first element and share the same second element, i.e.:<br />
 $$⟨a, b⟩= ⟨c, d⟩\text{ iff both }a = c \text{ and }b=d.$$<br />
 We can define ordered pairs in set theory using the Wiener-Kuratowski definition.</p>
-<blockquote>
-<p><bb>定義 1.9【Ordered pair】</bb><br />
-$⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace $.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.9【Ordered pair】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">$⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace $.</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
 Using Definition 1.9, prove that $⟨a, b⟩= ⟨c, d⟩$ iff both $a = c$ and $b=d$.</p>
 </blockquote>
 <p>Having fixed a definition of an ordered pair, we can use it to define further sets. For example, sometimes we also want ordered sequences of more than two objects, e.g., <bb>triples</bb> $⟨x, y, z⟩$, <bb>quadruples</bb> $⟨x, y, z, u⟩$, and so on.  We can think of triples as special ordered pairs, where the first element is itself an ordered pair: $⟨x, y, z⟩$ is $⟨⟨x, y⟩,z⟩$. The same is true for quadruples: $⟨x,y,z,u⟩$ is $⟨⟨⟨x,y⟩,z⟩,u⟩$, and so on. In general, we talk of <bb>ordered $n$-tuples</bb> $⟨x_1, \cdots, x_n⟩$.</p>
 <p>Certain sets of ordered pairs, or other ordered $n$-tuples, will be useful.</p>
-<blockquote>
-<p><bb>定義 1.10【Cartesian product】</bb><br />
-Given sets $A$ and $B$, their <bb>Cartesian product</bb> $A \times B$ is<br />
-defined by $$A \times B = \lbrace ⟨x, y⟩: x \in A \text{ and } y \in B\rbrace.$$</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.12</bb><br />
-If $A = \lbrace 0, 1\rbrace $, and $B = \lbrace 1, a, b\rbrace $, then their product is<br />
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.10【Cartesian product】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Given sets $A$ and $B$, their <bb>Cartesian product</bb> $A \times B$ is<br />
+defined by $$A \times B = \lbrace ⟨x, y⟩: x \in A \text{ and } y \in B\rbrace.$$</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.12</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">If $A = \lbrace 0, 1\rbrace $, and $B = \lbrace 1, a, b\rbrace $, then their product is<br />
 $$<br />
 A \times B = \lbrace  ⟨0, 1⟩, ⟨0, a⟩, ⟨0, b⟩,<br />
 ⟨1, 1⟩, ⟨1, a⟩, ⟨1, b⟩ \rbrace.<br />
-$$</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.13</bb><br />
-If $A$ is a set, the product of $A$ with itself, $A \times A$, is also written $A^2$. It is the set of <bb>all</bb> pairs $⟨x, y⟩$ with $x, y \in A$. The set of all triples $⟨x, y, z⟩$ is $A^3$, and so on. We can give a recursive definition:<br />
+$$</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.13</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">If $A$ is a set, the product of $A$ with itself, $A \times A$, is also written $A^2$. It is the set of <bb>all</bb> pairs $⟨x, y⟩$ with $x, y \in A$. The set of all triples $⟨x, y, z⟩$ is $A^3$, and so on. We can give a recursive definition:<br />
 $A^1 = A$<br />
-$A^{k+1} = A^k \times A$</p>
-</blockquote>
+$A^{k+1} = A^k \times A$</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
 List all <bb>element</bb>s of $\lbrace 1, 2, 3\rbrace ^3$.</p>
 </blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.1</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $A$ has $n$ <bb>element</bb>s and $B$ has $m$ <bb>element</bb>s, then $A \times B$ has $n\cdot m$ elements.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.1</bb><br />
-If $A$ has $n$ <bb>element</bb>s and $B$ has $m$ <bb>element</bb>s, then $A \times B$ has $n\cdot m$ elements.</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.1 之證明</bb><br />
+<p><bb>Proposition 1.1 之證明</bb><br />
 For every <bb>element</bb> $x$ in $A$, there are $m$ <bb>element</bb>s of the form $⟨x, y⟩ \in A \times B$. Let $B_x = \lbrace ⟨x, y⟩: y \in B\rbrace $. Since whenever $x_1 \neq x_2$, $⟨x_1, y⟩ \neq ⟨x_2, y⟩$, $B_{x_1} \cap B_{x_2} = \varnothing$. But if $A = \lbrace x_1, \cdots, x_n\rbrace $, then $A \times B = B_{x_1} \cup \dots \cup B_{x_n}$, and so has $n\cdot m$ <bb>element</bb>s.<br />
 To visualize this, arrange the <bb>element</bb>s of $A \times B$ in a grid:<br />
 $B_{x_1} = \lbrace ⟨x_1, y_1⟩  ⟨x_1, y_2⟩ \dots ⟨x_1, y_m⟩\rbrace$<br />
@@ -2146,11 +2182,15 @@ Since the $x_i$ are all different, and the $y_j$ are all different, no two of th
 <p><bb>Problem 1.3</bb><br />
 Show, by induction on $k$, that for all $k \ge 1$, if $A$ has $n$ <bb>element</bb>s, then $A^k$ has $n^k$ <bb>element</bb>s.</p>
 </blockquote>
-<blockquote>
-<p><bb>示例 1.14</bb><br />
-If $A$ is a set, a <bb>word</bb> over $A$ is any sequence of <bb>element</bb>s of $A$. A sequence can be thought of as an $n$-tuple of <bb>element</bb>s of $A$. For instance, if $A = \lbrace a, b, c\rbrace $, then the sequence &ldquo;$bac$&rsquo;&rsquo; can be thought of as the triple $⟨b, a, c⟩$. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of $A$ as sequences of length $1$, and $\varnothing$ as the sequence of length $0$. The set of <bb>all</bb> words over $A$ then is<br />
-$$A^* = \lbrace \varnothing\rbrace  \cup A \cup A^2 \cup A^3 \cup \cdots$$</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.14</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">If $A$ is a set, a <bb>word</bb> over $A$ is any sequence of <bb>element</bb>s of $A$. A sequence can be thought of as an $n$-tuple of <bb>element</bb>s of $A$. For instance, if $A = \lbrace a, b, c\rbrace $, then the sequence &ldquo;$bac$&rsquo;&rsquo; can be thought of as the triple $⟨b, a, c⟩$. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of $A$ as sequences of length $1$, and $\varnothing$ as the sequence of length $0$. The set of <bb>all</bb> words over $A$ then is<br />
+$$A^* = \lbrace \varnothing\rbrace  \cup A \cup A^2 \cup A^3 \cup \cdots$$</span>
+  </div>
+  </div>
 <h2 id="russells-paradox">Russell&rsquo;s Paradox</h2>
 <p>Extensionality licenses the notation $\lbrace x: \phi(x)\rbrace $, for <bb>the</bb> set of $x$'s such that $\phi(x)$. However, all that extensionality <bb>really</bb> licenses is the following thought. <bb>If</bb> there is a set whose members are all and only the $\phi$'s, <bb>then</bb> there is only one such set. Otherwise put: having fixed some $\phi$, the set $\lbrace x: \phi(x)\rbrace $ is unique, <strong>if it exists</strong>.</p>
 <p>But this conditional is important! Crucially, not every property lends itself to <bb>comprehension</bb>. That is, some  properties do <bb>not</bb> define sets. If they all did, then we would run into outright contradictions. The most famous example of this is Russell&rsquo;s Paradox.</p>
@@ -2178,13 +2218,20 @@ There is a close connection between $n$ being less than $m$, and the pair $⟨n,
 $$n &lt; m \text{ iff }⟨n, m⟩ \in R.$$<br />
 Indeed, without any loss of information, we can consider the set $R$ to <bb>be</bb> the $&lt;$-relation on $\mathbb{N}$.</p>
 <p>In the same way we can construct a subset of $\mathbb{N}^{2}$ for any relation between numbers. Conversely, given any set of pairs of numbers $S \subseteq \mathbb{N}^{2}$, there is a corresponding relation between numbers, namely, the relationship $n$ bears to $m$ if and only if $⟨n, m⟩ \in S$. This justifies the following definition:</p>
-<blockquote>
-<p><bb>定義 1.11【Binary relation】</bb><br />
-A <bb>binary relation</bb> on a set $A$ is a subset of $A^{2}$. If $R \subseteq A^{2}$ is a binary relation on $A$ and $x, y \in A$, we sometimes write $Rxy$ (or $xRy$) for $⟨x, y⟩ \in R$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.15</bb><br />
-The set $\mathbb{N}^{2}$ of pairs of natural numbers can be listed in a<br />
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.11【Binary relation】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A <bb>binary relation</bb> on a set $A$ is a subset of $A^{2}$. If $R \subseteq A^{2}$ is a binary relation on $A$ and $x, y \in A$, we sometimes write $Rxy$ (or $xRy$) for $⟨x, y⟩ \in R$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.15</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">The set $\mathbb{N}^{2}$ of pairs of natural numbers can be listed in a<br />
 2-dimensional matrix like this:<br />
 <img src="https://i.loli.net/2020/09/03/ybmdfP14eY2VnLD.png" alt="zzzz.png" /><br />
 We have put the diagonal, here, in bold, since the subset of $\mathbb{N}^2$ consisting of the pairs lying on the diagonal, i.e.,<br />
@@ -2193,8 +2240,9 @@ is the <bb>identity relation on</bb> $\mathbb{N}$. (Since the identity relation 
 $$L = \lbrace ⟨0,1⟩,⟨0,2⟩,\cdots,⟨1,2⟩,⟨1,3⟩, \cdots, ⟨2,3 ⟩, ⟨2,4⟩,\cdots\rbrace ,$$<br />
 is the <bb>less than</bb> relation, i.e., $Lnm$ iff $n &lt; m$. The subset of pairs below the diagonal, i.e.,<br />
 $$G=\lbrace ⟨1,0⟩,⟨2,0⟩, ⟨2,1⟩, ⟨3,0⟩,⟨3,1 ⟩,⟨3,2 ⟩, \cdots\rbrace ,$$<br />
-is the <bb>greater than</bb> relation, i.e., $Gnm$ iff $n&gt;m$. The union of $L$ with $I$, which we might call $K=L\cup I$, is the <strong>less than or equal to</strong> relation: $Knm$ iff $n \le m$. Similarly, $H=G \cup I$ is the <bb>greater than or equal to relation.</bb> These relations $L$, $G$, $K$, and $H$ are special kinds of relations called <bb>orders</bb>. $L$ and $G$ have the property that no number bears $L$ or $G$ to itself (i.e., for all $n$, neither $Lnn$ nor $Gnn$). Relations with this property are called <bb>irreflexive</bb>, and, if they also happen to be orders, they are called <bb>strict orders.</bb></p>
-</blockquote>
+is the <bb>greater than</bb> relation, i.e., $Gnm$ iff $n&gt;m$. The union of $L$ with $I$, which we might call $K=L\cup I$, is the <strong>less than or equal to</strong> relation: $Knm$ iff $n \le m$. Similarly, $H=G \cup I$ is the <bb>greater than or equal to relation.</bb> These relations $L$, $G$, $K$, and $H$ are special kinds of relations called <bb>orders</bb>. $L$ and $G$ have the property that no number bears $L$ or $G$ to itself (i.e., for all $n$, neither $Lnn$ nor $Gnn$). Relations with this property are called <bb>irreflexive</bb>, and, if they also happen to be orders, they are called <bb>strict orders.</bb></span>
+  </div>
+  </div>
 <p>Although orders and identity are important and natural relations, it should be emphasized that according to our definition <bb>any</bb> subset of $A^{2}$ is a relation on $A$, regardless of how unnatural or contrived it seems. In particular, $\varnothing$ is a relation on any set (the <bb>empty relation</bb>, which no pair of elements bears), and $A^{2}$ itself is a relation on $A$ as well (one which every pair bears), called the <bb>universal relation</bb>. But also something like $E=\lbrace ⟨n, m⟩: n&gt;5 \text{ or } m \times n \ge 34\rbrace $ counts as a relation.</p>
 <blockquote>
 <p><bb>Problem 1.10</bb><br />
@@ -2211,143 +2259,229 @@ Since $R \neq S$, by extensionality, it is clear that they cannot <bb>both</bb> 
 <p>So where does this leave us? Well, there is nothing <bb>wrong</bb> with our saying that the relations on the numbers are sets. We just have to understand the spirit in which that remark is made. We are not stating a metaphysical identity fact. We are simply noting that, in certain contexts, we can (and will) <bb>treat</bb> (certain) relations as certain sets.</p>
 <h2 id="special-properties-of-relations">Special Properties of Relations</h2>
 <p>Some kinds of relations turn out to be so common that they have been given special names.  For instance, $\leqslant$ and $\subseteq$ both relate their respective domains (say, $\mathbb{N}$ in the case of $\leqslant$ and $\mathscr{P}({A})$ in the case of $\subseteq$) in similar ways.  To get at exactly how these relations are similar, and how they differ, we categorize them according to some special properties that relations can have.  It turns out that (combinations of) some of these special properties are especially important: orders and equivalence relations.</p>
-<blockquote>
-<p><bb>定義 1.12【Reflexivity】</bb><br />
-A relation $R \subseteq A^2$ is <bb>reflexive</bb> iff, for every $x \in A$, $Rxx$.</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.13【Transitivity】</bb><br />
-A relation $R \subseteq A^2$ is <bb>transitive</bb> iff, whenever $Rxy$ and $Ryz$, then also $Rxz$.</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.14【Symmetry】</bb><br />
-A relation $R \subseteq A^2$ is <bb>symmetric</bb> iff, whenever $Rxy$, then also $Ryx$.</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.15【Anti-symmetry】</bb><br />
-A relation $R \subseteq A^2$ is <bb>anti-symmetric</bb> iff, whenever both $Rxy$ and $Ryx$, then $x=y$ (or, in other words: if $x\neq y$ then either $\lnot Rxy$ or $\lnot Ryx$).</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.12【Reflexivity】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>reflexive</bb> iff, for every $x \in A$, $Rxx$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.13【Transitivity】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>transitive</bb> iff, whenever $Rxy$ and $Ryz$, then also $Rxz$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.14【Symmetry】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>symmetric</bb> iff, whenever $Rxy$, then also $Ryx$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.15【Anti-symmetry】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>anti-symmetric</bb> iff, whenever both $Rxy$ and $Ryx$, then $x=y$ (or, in other words: if $x\neq y$ then either $\lnot Rxy$ or $\lnot Ryx$).</span>
+  </div>
+  </div>
 <p>In a symmetric relation, $Rxy$ and $Ryx$ always hold together, or neither holds.  In an anti-symmetric relation, the only way for $Rxy$ and $Ryx$ to hold together is if $x = y$.  Note that this does not <bb>require</bb> that $Rxy$ and $Ryx$ holds when $x = y$, only that it isn&rsquo;t ruled out.  So an anti-symmetric relation can be reflexive, but it is not the case that every anti-symmetric relation is reflexive.  Also note that being anti-symmetric and merely not being symmetric are different conditions.  In fact, a relation can be both symmetric and anti-symmetric at the same time (e.g., the identity relation is).</p>
-<blockquote>
-<p><bb>定義 1.16【Connectivity】</bb><br />
-A relation $R \subseteq A^2$ is <bb>connected</bb> if for all $x,y\in X$, if $x \neq y$, then either $Rxy$ or $Ryx$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.16【Connectivity】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>connected</bb> if for all $x,y\in X$, if $x \neq y$, then either $Rxy$ or $Ryx$.</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.11</bb><br />
 Give examples of relations that are (a) reflexive and symmetric but not transitive, (b) reflexive and anti-symmetric, (c) anti-symmetric, transitive, but not reflexive, and (d) reflexive, symmetric, and transitive.  Do not use relations on numbers or sets.</p>
 </blockquote>
-<blockquote>
-<p><bb>定義 1.17【Irreflexivity】</bb><br />
-A relation $R \subseteq A^2$ is called <bb>irreflexive</bb> if, for all $x \in A$, not $Rxx$.</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.18【Asymmetry】</bb><br />
-A relation $R \subseteq A^2$ is called <bb>asymmetric</bb> if for no pair $x,y\in A$ we have both $Rxy$ and $Ryx$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.17【Irreflexivity】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is called <bb>irreflexive</bb> if, for all $x \in A$, not $Rxx$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.18【Asymmetry】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is called <bb>asymmetric</bb> if for no pair $x,y\in A$ we have both $Rxy$ and $Ryx$.</span>
+  </div>
+  </div>
 <p>Note that if $A \neq \varnothing$, then no irreflexive relation on $A$ is reflexive and every asymmetric relation on $A$ is also anti-symmetric. However, there are $R \subseteq A^2$ that are not reflexive and also not irreflexive, and there are anti-symmetric relations that are not asymmetric.</p>
 <h2 id="equivalence-relations">Equivalence Relations</h2>
 <p>The identity relation on a set is reflexive, symmetric, and<br />
 transitive. Relations $R$ that have all three of these properties are very<br />
 common.</p>
-<blockquote>
-<p><bb>定義 1.19【Equivalence relation】</bb><br />
-A relation $R \subseteq A^2$ that is reflexive, symmetric, and transitive is called an <bb>equivalence relation</bb>. <bb>element</bb>s $x$ and $y$ of $A$ are said to be <bb>$R$-equivalent</bb> if $Rxy$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.19【Equivalence relation】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ that is reflexive, symmetric, and transitive is called an <bb>equivalence relation</bb>. <bb>element</bb>s $x$ and $y$ of $A$ are said to be <bb>$R$-equivalent</bb> if $Rxy$.</span>
+  </div>
+  </div>
 <p>Equivalence relations give rise to the notion of an <bb>equivalence class</bb>. An equivalence relation &ldquo;chunks up&rsquo;&rsquo; the domain into different partitions. Within each partition, all the objects are related to one another; and no objects from different partitions relate to one another. Sometimes, it&rsquo;s helpful just to talk about these partitions <bb>directly</bb>. To that end, we introduce a definition:</p>
-<blockquote>
-<p><bb>定義 1.20【Equivalence class】</bb><br />
-Let $R \subseteq A^2$ be an equivalence relation. For each $x \in A$, the <bb>equivalence class</bb> of $x$ in $A$ is the set $[x]_R = \lbrace y \in A: Rxy\rbrace $. The <bb>quotient</bb> of $A$ under $R$ is $A/_R = \lbrace [x]_R: x \in A\rbrace $, i.e., the set of these equivalence classes.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.20【Equivalence class】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Let $R \subseteq A^2$ be an equivalence relation. For each $x \in A$, the <bb>equivalence class</bb> of $x$ in $A$ is the set $[x]_R = \lbrace y \in A: Rxy\rbrace $. The <bb>quotient</bb> of $A$ under $R$ is $A/_R = \lbrace [x]_R: x \in A\rbrace $, i.e., the set of these equivalence classes.</span>
+  </div>
+  </div>
 <p>The next result vindicates the definition of an equivalence class, in proving that the equivalence classes are indeed the partitions of $A$:</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.2</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $R \subseteq A^2$ is an equivalence relation, then $Rxy$ iff $[x]_R = [y]_R$.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.2</bb><br />
-If $R \subseteq A^2$ is an equivalence relation, then $Rxy$ iff $[x]_R = [y]_R$.</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.2 之證明</bb><br />
+<p><bb>Proposition 1.2 之證明</bb><br />
 For the left-to-right direction, suppose $Rxy$, and let $z \in [x]_R$. By definition, then, $Rxz$. Since $R$ is an equivalence relation, $Ryz$. (Spelling this out: as $Rxy$ and $R$ is symmetric we have $Ryx$, and as $Rxz$ and $R$ is transitive we have $Ryz$.) So $z \in [y]_R$. Generalising, $[x]_R \subseteq [y]_R$. But exactly similarly, $[y]_R \subseteq [x]_R$. So $[x]_R = [y]_R$, by extensionality.<br />
 For the right-to-left direction, suppose $[x]_R = [y]_R$. Since $R$ is reflexive, $Ryy$, so $y \in [y]_R$. Thus also $y \in [x]_R$ by the assumption that $[x]_R = [y]_R$. So $Rxy$.</p>
 </blockquote>
-<blockquote>
-<p><bb>示例 1.16</bb><br />
-A nice example of equivalence relations comes from modular arithmetic. For any $a$, $b$, and $n \in \mathbb{N}$, say that $a \equiv_n b$ iff dividing $a$ by $n$ gives remainder $b$. (Somewhat more symbolically: $a \equiv_n b$ iff $(\exists k \in \mathbb{N})a - b = kn$.) Now, $\equiv_n$ is an equivalence relation, for any $n$. And there are exactly $n$ distinct equivalence classes generated by $\equiv_n$; that is,</p>
-</blockquote>
-<blockquote>
-<p>${\mathbb{N}/}_{{\equiv}_n}$</p>
-</blockquote>
-<blockquote>
-<p>has  $n$  elements. These are: the set of numbers divisible by $n$ without remainder, i.e.,</p>
-</blockquote>
-<blockquote>
-<p>$[0]_{{\equiv}_n}$;</p>
-</blockquote>
-<blockquote>
-<p>the set of numbers divisible by $n$ with remainder $1$, i.e.,</p>
-</blockquote>
-<blockquote>
-<p>$[1]_{{\equiv}_n}; \cdots$; and the set of numbers divisible by $n$ with remainder $n-1$, i.e.,</p>
-</blockquote>
-<blockquote>
-<p>$[n-1]_{{\equiv}_n}$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.16</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>A nice example of equivalence relations comes from modular arithmetic. For any $a$, $b$, and $n \in \mathbb{N}$, say that $a \equiv_n b$ iff dividing $a$ by $n$ gives remainder $b$. (Somewhat more symbolically: $a \equiv_n b$ iff $(\exists k \in \mathbb{N})a - b = kn$.) Now, $\equiv_n$ is an equivalence relation, for any $n$. And there are exactly $n$ distinct equivalence classes generated by $\equiv_n$; that is, ${\mathbb{N}/}_{{\equiv}_n}$ has  $n$  elements. These are:</p>
+<ol>
+<li>
+<p>the set of numbers divisible by $n$ without remainder, i.e., $[0]_{{\equiv}_n}$;</p>
+</li>
+<li>
+<p>the set of numbers divisible by $n$ with remainder $1$, i.e., $[1]_{{\equiv}_n}; \cdots$;</p>
+</li>
+<li>
+<p>and the set of numbers divisible by $n$ with remainder $n-1$, i.e., $[n-1]_{{\equiv}_n}$.</p>
+</li>
+</ol>
+</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.12</bb><br />
 Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and that ${\mathbb{N}/}_{{\equiv}_n}$ has exactly $n$ members.</p>
 </blockquote>
 <h2 id="orders">Orders</h2>
 <p>Many of our comparisons involve describing some objects as being &ldquo;less than&rsquo;&rsquo;, &ldquo;equal to&rsquo;&rsquo;, or &ldquo;greater than&rsquo;&rsquo; other objects, in a certain respect. These involve <bb>order</bb> relations. But there are different kinds of order relations. For instance, some require that any two objects be comparable, others don&rsquo;t. Some include identity (like $\leqslant$) and some exclude it (like $&lt;$). It will help us to have a taxonomy here.</p>
-<blockquote>
-<p><bb>定義 1.21【Preorder】</bb><br />
-A relation which is both reflexive and transitive is called a <bb>preorder.</bb></p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.22【Partial order】</bb><br />
-A preorder which is also anti-symmetric is called a <bb>partial order</bb>.</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.23【Linear order】</bb><br />
-A partial order which is also connected is called a <bb>total order</bb> or <bb>linear order.</bb></p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.21【Preorder】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A relation which is both reflexive and transitive is called a <bb>preorder.</bb></span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.22【Partial order】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A preorder which is also anti-symmetric is called a <bb>partial order</bb>.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.23【Linear order】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A partial order which is also connected is called a <bb>total order</bb> or <bb>linear order.</bb></span>
+  </div>
+  </div>
 <p>Every linear order is also a partial order, and every partial order is also a preorder, but the converses don&rsquo;t hold.</p>
-<blockquote>
-<p><bb>示例 1.17</bb><br />
-Every linear order is also a partial order, and every partial order is also a preorder, but the converses don&rsquo;t hold. The universal relation on $A$ is a preorder, since it is reflexive and transitive. But, if $A$ has more than one <bb>element</bb>, the universal relation is not anti-symmetric, and so not a partial order.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.18</bb><br />
-Consider the <bb>no longer than</bb> relation $\preccurlyeq$ on $\mathbb{B}^*$: $x \preccurlyeq y$ iff $\text{len } {x} \le \text{len } {y}$. This is a preorder (reflexive and transitive), and even connected, but not a partial order, since it is not anti-symmetric. For instance, $01 \preccurlyeq 10$ and $10 \preccurlyeq 01$, but $01 \neq 10$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.19</bb><br />
-An important partial order is the relation $\subseteq$ on a set of sets. This is not in general a linear order, since if $a \neq b$ and we consider $\mathscr{P}(\lbrace a, b\rbrace ) = \lbrace \varnothing, \lbrace a\rbrace , \lbrace b\rbrace , \lbrace a,b\rbrace \rbrace $, we see that $\lbrace a\rbrace  \nsubseteq \lbrace b\rbrace $ and $\lbrace a\rbrace  \neq \lbrace b\rbrace $ and $\lbrace b\rbrace \nsubseteq \lbrace a\rbrace $.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.20</bb><br />
-The relation of <bb>divisibility without remainder</bb> gives us a partial order which isn&rsquo;t a linear order. For integers $n$, $m$, we write $n\mid m$ to mean $n$ (evenly) divides $m$, i.e., iff there is some integer $k$ so that $m=kn$. On $\mathbb{N}$, this is a partial order, but not a linear order: for instance, $2\nmid3$ and also $3\nmid2$. Considered as a relation on $\mathbb{Z}$, divisibility is only a preorder since it is not anti-symmetric: $1\mid-1$ and $-1\mid1$ but $1\neq-1$.</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.24【Strict order】</bb><br />
-A <bb>strict order</bb> is a relation which is irreflexive, asymmetric, and transitive.</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.25【Strict linear order】</bb><br />
-A strict order which is also connected is called a <bb>strict linear order.</bb></p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.21</bb><br />
-$\leqslant$ is the linear order corresponding to the strict linear order $&lt;$. $\subseteq$ is the partial order corresponding to the strict order $\subsetneq$.</p>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.26【Total order】</bb><br />
-A strict order which is also connected is called a <bb>total order</bb>. This is also sometimes called a <bb>strict linear order</bb>.</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.17</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Every linear order is also a partial order, and every partial order is also a preorder, but the converses don&rsquo;t hold. The universal relation on $A$ is a preorder, since it is reflexive and transitive. But, if $A$ has more than one <bb>element</bb>, the universal relation is not anti-symmetric, and so not a partial order.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.18</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Consider the <bb>no longer than</bb> relation $\preccurlyeq$ on $\mathbb{B}^*$: $x \preccurlyeq y$ iff $\text{len } {x} \le \text{len } {y}$. This is a preorder (reflexive and transitive), and even connected, but not a partial order, since it is not anti-symmetric. For instance, $01 \preccurlyeq 10$ and $10 \preccurlyeq 01$, but $01 \neq 10$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.19</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">An important partial order is the relation $\subseteq$ on a set of sets. This is not in general a linear order, since if $a \neq b$ and we consider $\mathscr{P}(\lbrace a, b\rbrace ) = \lbrace \varnothing, \lbrace a\rbrace , \lbrace b\rbrace , \lbrace a,b\rbrace \rbrace $, we see that $\lbrace a\rbrace  \nsubseteq \lbrace b\rbrace $ and $\lbrace a\rbrace  \neq \lbrace b\rbrace $ and $\lbrace b\rbrace \nsubseteq \lbrace a\rbrace $.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.20</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">The relation of <bb>divisibility without remainder</bb> gives us a partial order which isn&rsquo;t a linear order. For integers $n$, $m$, we write $n\mid m$ to mean $n$ (evenly) divides $m$, i.e., iff there is some integer $k$ so that $m=kn$. On $\mathbb{N}$, this is a partial order, but not a linear order: for instance, $2\nmid3$ and also $3\nmid2$. Considered as a relation on $\mathbb{Z}$, divisibility is only a preorder since it is not anti-symmetric: $1\mid-1$ and $-1\mid1$ but $1\neq-1$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.24【Strict order】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A <bb>strict order</bb> is a relation which is irreflexive, asymmetric, and transitive.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.25【Strict linear order】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A strict order which is also connected is called a <bb>strict linear order.</bb></span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.21</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">$\leqslant$ is the linear order corresponding to the strict linear order $&lt;$. $\subseteq$ is the partial order corresponding to the strict order $\subsetneq$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.26【Total order】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A strict order which is also connected is called a <bb>total order</bb>. This is also sometimes called a <bb>strict linear order</bb>.</span>
+  </div>
+  </div>
 <p>Any strict order $R$ on $A$ can be turned into a partial order by adding the diagonal Id$_{A}$, i.e., adding all the pairs $⟨x, x⟩$.  (This is called the <bb>reflexive closure</bb> of $R$.) Conversely, starting from a partial order, one can get a strict order by removing Id$_A$. These next two results make this precise.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.3</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $R$ is a strict order on $A$, then $R^+ = R \cup Id_A$ is a partial order. Moreover, if $R$ is total, then $R^+$ is a linear order.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.3</bb><br />
-If $R$ is a strict order on $A$, then $R^+ = R \cup Id_A$ is a partial order. Moreover, if $R$ is total, then $R^+$ is a linear order.</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.3 之證明</bb></p>
+<p><bb>Proposition 1.3 之證明</bb></p>
 <ol>
 <li>Suppose $R$ is a strict order, i.e., $R \subseteq A^2$ and $R$ is irreflexive, asymmetric, and transitive. Let $R^+ = R \cup Id_A$. We have to show that $R^+$ is reflexive, antisymmetric, and transitive.</li>
 <li>$R^+$ is clearly reflexive, since $⟨x, x⟩ \in Id_A \subseteq R^+$ for all $x \in A.$</li>
@@ -2356,47 +2490,67 @@ If $R$ is a strict order on $A$, then $R^+ = R \cup Id_A$ is a partial order. Mo
 <li>Concerning the &ldquo;moreover&rsquo;&rsquo; clause, suppose $R$ is a total order, i.e., that $R$ is connected. So for all $x \neq y$, either $Rxy$ or $Ryx$, i.e., either $⟨x, y⟩ \in R$ or $⟨y, x⟩ \in R$. Since $R \subseteq R^+$, this remains true of $R^+$, so $R^+$ is connected as well.</li>
 </ol>
 </blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.4</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $R$ is a partial order on $X$, then $R^- = R \setminus Id_X$ is a strict order. Moreover, if $R$ is linear, then $R^-$ is total.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.4</bb><br />
-If $R$ is a partial order on $X$, then $R^- = R \setminus Id_X$ is a strict order. Moreover, if $R$ is linear, then $R^-$ is total.</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.4 之證明</bb><br />
+<p><bb>Proposition 1.4 之證明</bb><br />
 This is left as an exercise.</p>
 </blockquote>
 <blockquote>
 <p><bb>Problem 1.4</bb><br />
 Give a proof of Proposition 1.4.</p>
 </blockquote>
-<blockquote>
-<p><bb>示例 1.22</bb><br />
-$\leqslant$ is the linear order corresponding to the total order $&lt;$. $\subseteq$ is the partial order corresponding to the strict order $\subsetneq$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.22</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">$\leqslant$ is the linear order corresponding to the total order $&lt;$. $\subseteq$ is the partial order corresponding to the strict order $\subsetneq$.</span>
+  </div>
+  </div>
 <p>The following simple result which establishes that total orders satisfy an extensionality-like property:</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.5</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $&lt;$ totally orders $A$, then: $$(\forall a, b \in A)((\forall x \in A)(x &lt; a \leftrightarrow x &lt; b) \rightarrow a = b)$$</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
-If $&lt;$ totally orders $A$, then:<br />
-$$(\forall a, b \in A)((\forall x \in A)(x &lt; a \leftrightarrow x &lt; b) \rightarrow a = b)$$</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.5 之證明</bb><br />
+<p><bb>Proposition 1.5 之證明</bb><br />
 Suppose $(\forall x \in A)(x &lt; a \leftrightarrow x &lt; b)$. If $a &lt; b$, then $a &lt; a$, contradicting the fact that $&lt;$ is irreflexive; so $a \nless b$. Exactly similarly, $b \nless a$. So $a = b$, as $&lt;$ is connected.</p>
 </blockquote>
 <h2 id="graphs">Graphs</h2>
 <p>A <bb>graph</bb> is a diagram in which points&mdash;called &ldquo;nodes&rsquo;&rsquo; or &ldquo;vertices&rsquo;&rsquo; (plural of &ldquo;vertex&rsquo;')&mdash;are connected by edges.  Graphs are a ubiquitous tool in discrete mathematics and in computer science. They are incredibly useful for representing, and visualizing, relationships and structures, from concrete things like networks of various kinds to abstract structures such as the possible outcomes of decisions.  There are many different kinds of graphs in the literature which differ, e.g., according to whether the edges are directed or not, have labels or not, whether there can be edges from a node to the same node, multiple edges between the same nodes, etc. <strong>Directed graphs</strong> have a special connection to relations.</p>
-<blockquote>
-<p><bb>定義 1.26【Directed graph】</bb><br />
-A <bb>directed graph</bb> $G = ⟨V, E⟩$ is a set of <bb>vertices</bb> $V$ and a set of <bb>edges</bb> $E \subseteq V^2$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.27【Directed graph】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A <bb>directed graph</bb> $G = ⟨V, E⟩$ is a set of <bb>vertices</bb> $V$ and a set of <bb>edges</bb> $E \subseteq V^2$.</span>
+  </div>
+  </div>
 <p>According to our definition, a graph just is a set together with a relation on that set.  Of course, when talking about graphs, it&rsquo;s only natural to expect that they are graphically represented: we can draw a graph by connecting two vertices $v_1$ and $v_2$ by an arrow iff $⟨v_1, v_2⟩ \in E$.  The only difference between a relation by itself and a graph is that a graph specifies the set of vertices, i.e., a graph may have isolated vertices. The important point, however, is that every relation $R$ on a set $X$ can be seen as a directed graph $⟨X, R⟩$, and conversely, a directed graph $⟨V, E⟩$ can be seen as a relation $E \subseteq V^2$ with the set $V$ explicitly specified.</p>
-<blockquote>
-<p><bb>示例 1.23</bb><br />
-The graph $⟨V, E⟩$ with $V = \lbrace 1, 2, 3, 4\rbrace $ and $E = \lbrace ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩\rbrace $ looks like this:</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.23</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>The graph $⟨V, E⟩$ with $V = \lbrace 1, 2, 3, 4\rbrace $ and $E = \lbrace ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩\rbrace $ looks like this:</p>
 <p><img src="https://i.loli.net/2020/09/03/Eg9Ium37BZiHy62.png" alt="zzzz.png" /></p>
 <p>This is a different graph than $⟨V&rsquo;, E⟩$ with $V&rsquo; =<br />
 \lbrace 1, 2, 3\rbrace $, which looks like this:</p>
 <p><img src="https://i.loli.net/2020/09/03/xyr1JsVlTAhNX2O.png" alt="zzzz.png" /></p>
+</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.14</bb><br />
 Consider the less-than-or-equal-to relation $\leqslant$ on the set $\lbrace 1, 2, 3, 4\rbrace $ as a graph and draw the corresponding diagram.</p>
@@ -2408,9 +2562,13 @@ of relations, which is just the union of two relations considered as<br />
 sets of pairs. Similarly, in Proposition1.4（P.33）,<br />
 we considered the relative difference of relations. Here are some<br />
 other operations we can perform on relations.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.28【Operations on Relations】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;"><p>Let $R$, $S$ be relations, and $A$ be any set.</p>
 <blockquote>
-<p><bb>定義 1.28【Operations on Relations】</bb><br />
-Let $R$, $S$ be relations, and $A$ be any set.</p>
 <ol>
 <li>The <bb>inverse</bb> of $R$ is $R^{-1} = \lbrace ⟨y, x⟩: ⟨x, y⟩ \in R\rbrace$.</li>
 <li>The <bb>relative product</bb> of $R$ and $S$ is $(R \mid S) = \lbrace ⟨x, z⟩ : \exists y(Rxy \land Syz)\rbrace $.</li>
@@ -2418,29 +2576,46 @@ Let $R$, $S$ be relations, and $A$ be any set.</p>
 <li>The <bb>application</bb> of $R$ to $A$ is $R[A] = \lbrace y : (\exists x \in A)Rxy\rbrace $</li>
 </ol>
 </blockquote>
-<blockquote>
-<p><bb>示例 1.24</bb><br />
-Let $S \subseteq \mathbb{Z}^2$ be the successor relation on $\mathbb{Z}$, i.e., $S = \lbrace⟨x, y⟩ \in \mathbb{Z}^2: x + 1 = y\rbrace$, so that $Sxy$ iff $x + 1 = y$.</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.24</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>Let $S \subseteq \mathbb{Z}^2$ be the successor relation on $\mathbb{Z}$, i.e., $S = \lbrace⟨x, y⟩ \in \mathbb{Z}^2: x + 1 = y\rbrace$, so that $Sxy$ iff $x + 1 = y$.</p>
 <ol>
 <li>$S^{-1}$ is the predecessor relation on $\mathbb{Z}$, i.e., $\lbrace ⟨x,y⟩\in\mathbb{Z}^2: x -1 =y\rbrace$.</li>
 <li>$S\mid S$ is $\lbrace ⟨x,y⟩\in\mathbb{Z}^2: x + 2 =y\rbrace$</li>
 <li>$S\upharpoonright_{\mathbb{N}}$ is the successor relation on $\mathbb{N}$.</li>
 <li>$S[\lbrace 1,2,3\rbrace ]$ is $\lbrace 2, 3, 4\rbrace$.</li>
 </ol>
-</blockquote>
-<blockquote>
-<p><bb>定義 1.29【Transitive closure】</bb><br />
-Let $R \subseteq A^2$ be a binary relation.</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.29【Transitive closure】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;"><p>Let $R \subseteq A^2$ be a binary relation.</p>
 <ol>
 <li>The <bb>transitive closure</bb> of $R$ is $R^+ = \bigcup_{0 &lt; n \in<br />
 \mathbb{N}} R^n$, where we recursively define $R^1 = R$ and $R^{n+1} = R^n \mid R$.</li>
 <li>The <bb>reflexive transitive closure</bb> of $R$ is $R^* = R^+ \cup Id_X$.</li>
 </ol>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.25</bb><br />
-Take the successor relation $S \subseteq \mathbb{Z}^2$. $S^2xy$ iff $x + 2 = y$, $S^3xy$ iff $x + 3 = y$, etc. So $S^+xy$ iff $x + n = y$ for some $n &gt; 1$. In other words, $S^+xy$ iff $x &lt; y$, and $S^*xy$ iff $x \le y$.</p>
-</blockquote>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.25</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Take the successor relation $S \subseteq \mathbb{Z}^2$. $S^2xy$ iff $x + 2 = y$, $S^3xy$ iff $x + 3 = y$, etc. So $S^+xy$ iff $x + n = y$ for some $n &gt; 1$. In other words, $S^+xy$ iff $x &lt; y$, and $S^*xy$ iff $x \le y$.</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.15</bb><br />
 Show that the transitive closure of $R$ is in fact transitive.</p>
@@ -2450,44 +2625,71 @@ Show that the transitive closure of $R$ is in fact transitive.</p>
 <p>A <bb>function</bb> is a map which sends each <bb>element</bb> of a given set to a specific <bb>element</bb> in some (other) given set. For instance, the operation of adding $1$ defines a function: each number $n$ is mapped to a unique number $n+1$.</p>
 <p>More generally, functions may take pairs, triples, etc., as inputs and returns some kind of output. Many functions are familiar to us from basic arithmetic. For instance, addition and multiplication are functions. They take in two numbers and return a third.</p>
 <p>In this mathematical, abstract sense, a function is a <bb>black box</bb>: what matters is only what output is paired with what input, not the method for calculating the output.</p>
-<blockquote>
-<p><bb>定義 1.30【Function】</bb><br />
-A <bb>function</bb> $f \colon A \to B$ is a mapping of each <bb>element</bb> of $A$ to an <bb>element</bb> of $B$.<br />
-We call $A$ the <bb>domain</bb> of $f$ and $B$ the <bb>codomain</bb> of $f$.  The <bb>element</bb>s of $A$ are called inputs or <bb>arguments</bb> of $f$, and the <bb>element</bb> of $B$ that is paired with an argument $x$ by $f$ is called the <bb>value of $f$</bb> for argument $x$, written $f(x)$.<br />
-The <bb>range</bb> $\text{ran}(f)$ of $f$ is the subset of the codomain consisting of the values of $f$ for some argument; $\text{ran}(f) = \lbrace f(x): x \in A\rbrace$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.30【Function】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;"><p>A <bb>function</bb> $f \colon A \to B$ is a mapping of each <bb>element</bb> of $A$ to an <bb>element</bb> of $B$.</p>
+<ol>
+<li>We call $A$ the <bb>domain</bb> of $f$ and $B$ the <bb>codomain</bb> of $f$.  The <bb>element</bb>s of $A$ are called inputs or <bb>arguments</bb> of $f$, and the <bb>element</bb> of $B$ that is paired with an argument $x$ by $f$ is called the <bb>value of $f$</bb> for argument $x$, written $f(x)$.</li>
+<li>The <bb>range</bb> $\text{ran}(f)$ of $f$ is the subset of the codomain consisting of the values of $f$ for some argument; $\text{ran}(f) = \lbrace f(x): x \in A\rbrace$.</li>
+</ol>
+</span>
+  </div>
+  </div>
 <p>The diagram in Figure 1.3 may help to think about functions. The ellipse on the left represents the function&rsquo;s <bb>domain</bb>; the ellipse on the right represents the function&rsquo;s <bb>codomain</bb>; and an arrow points from an <bb>argument</bb> in the domain to the corresponding <bb>value</bb> in the codomain.</p>
 <p><img src="https://i.loli.net/2020/09/04/Ajr4cVnlOqgduWo.png" alt="defnoffunction" /></p>
-<blockquote>
-<p><bb>示例 1.26</bb><br />
-Multiplication takes pairs of natural numbers as inputs and maps them to natural numbers as outputs, so goes from $\mathbb{N} \times \mathbb{N}$ (the domain) to $\mathbb{N}$ (the codomain). As it turns out, the range is also $\mathbb{N}$, since every $n \in \mathbb{N}$ is $n \times 1$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.27</bb><br />
-Multiplication is a function because it pairs each input&mdash;each pair of natural numbers&mdash;with a single output: $\times \colon \mathbb{N}^2 \to \mathbb{N}$. By contrast, the square root operation applied to the domain $\mathbb{N}$ is not functional, since each positive integer $n$ has two square roots: $\sqrt{n}$ and $-\sqrt{n}$. We can make it functional by only returning the positive square root: $\sqrt{\phantom{X}} \colon \mathbb{N} \to \mathbb{R}$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.28</bb><br />
-The relation that pairs each student in a class with their final grade is a function&mdash;no student can get two different final grades in the same class. The relation that pairs each student in a class with their parents is not a function: students can have zero, or two, or more parents.</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.26</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Multiplication takes pairs of natural numbers as inputs and maps them to natural numbers as outputs, so goes from $\mathbb{N} \times \mathbb{N}$ (the domain) to $\mathbb{N}$ (the codomain). As it turns out, the range is also $\mathbb{N}$, since every $n \in \mathbb{N}$ is $n \times 1$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.27</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Multiplication is a function because it pairs each input&mdash;each pair of natural numbers&mdash;with a single output: $\times \colon \mathbb{N}^2 \to \mathbb{N}$. By contrast, the square root operation applied to the domain $\mathbb{N}$ is not functional, since each positive integer $n$ has two square roots: $\sqrt{n}$ and $-\sqrt{n}$. We can make it functional by only returning the positive square root: $\sqrt{\phantom{X}} \colon \mathbb{N} \to \mathbb{R}$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.28</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">The relation that pairs each student in a class with their final grade is a function&mdash;no student can get two different final grades in the same class. The relation that pairs each student in a class with their parents is not a function: students can have zero, or two, or more parents.</span>
+  </div>
+  </div>
 <p>We can define functions by specifying in some precise way what the<br />
 value of the function is for every possible argment. Different ways of<br />
 doing this are by giving a formula, describing a method for computing<br />
 the value, or listing the values for each argument. However functions<br />
 are defined, we must make sure that for each argment we specify one,<br />
 and only one, value.</p>
-<blockquote>
-<p><bb>示例 1.29</bb><br />
-Let $f \colon \mathbb{N} \to \mathbb{N}$ be defined such that $f(x) = x+1$. This is a definition that specifies $f$ as a function which takes in natural numbers and outputs natural numbers. It tells us that, given a natural number $x$, $f$ will output its successor $x+1$. In this case, the codomain $\mathbb{N}$ is not the range of $f$, since the natural number $0$ is not the successor of any natural number. The range of $f$ is the set of all positive integers, $\mathbb{Z}^{+}$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.30</bb><br />
-Let $g \colon \mathbb{N} \to \mathbb{N}$ be defined such that $g(x) = x+2-1$. This tells us that $g$ is a function which takes in natural numbers and outputs natural numbers. Given a natural number $n$, $g$ will output the predecessor of the successor of the successor of $x$, i.e., $x+1$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.29</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Let $f \colon \mathbb{N} \to \mathbb{N}$ be defined such that $f(x) = x+1$. This is a definition that specifies $f$ as a function which takes in natural numbers and outputs natural numbers. It tells us that, given a natural number $x$, $f$ will output its successor $x+1$. In this case, the codomain $\mathbb{N}$ is not the range of $f$, since the natural number $0$ is not the successor of any natural number. The range of $f$ is the set of all positive integers, $\mathbb{Z}^{+}$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.30</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Let $g \colon \mathbb{N} \to \mathbb{N}$ be defined such that $g(x) = x+2-1$. This tells us that $g$ is a function which takes in natural numbers and outputs natural numbers. Given a natural number $n$, $g$ will output the predecessor of the successor of the successor of $x$, i.e., $x+1$.</span>
+  </div>
+  </div>
 <p>We just considered two functions, $f$ and $g$, with different <bb>definitions</bb>. However, these are the <bb>same function</bb>. After all, for any natural number $n$, we have that $f(n) = n+1 = n+2-1 = g(n)$. Otherwise put: our  definitions for $f$ and $g$ specify the same mapping by means of different equations. Implicitly, then, we are relying upon a principle of extensionality for functions, $$\text{if }\forall x, f(x) = g(x)\text{, then }f = g$$ provided that $f$ and $g$ share the same domain and codomain.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿示例 1.31</span>
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.31</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>We can also define functions by cases. For instance, we could define $h \colon \mathbb{N} \to \mathbb{N}$  by</p>
@@ -2506,7 +2708,7 @@ Since every natural number is either even or odd, the output of this function wi
 <p><img src="https://i.loli.net/2020/09/04/5nBmbKUJP2aeDc9.png" alt="surjectivefunction.png" /></p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉定義 1.31【Surjective function】</span>
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.31【Surjective function】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A function $f \colon A \rightarrow B$ is <bb>surjective</bb> iff $B$ is also the range of $f$, i.e., for every $y \in B$ there is at least one $x \in A$ such that $f(x) = y$, or in symbols: $$(\forall y \in B)(\exists x \in A)f(x) = y.$$ We call such a function a <bb>surjection</bb> from $A$ to $B$.</span>
@@ -2516,73 +2718,112 @@ Since every natural number is either even or odd, the output of this function wi
 <p>Note that any function <bb>induces</bb> a <bb>surjection</bb>. After all, given a function $f \colon A \to B$, let $f&rsquo; \colon A \to \text{ran}(f)$ be defined by $f&rsquo;(x) = f(x)$. Since $\text{ran}(f)$ is <bb>defined</bb> as $\lbrace f(x) \in B: x \in A\rbrace$, this function $f'$ is guaranteed to be a <bb>surjection</bb>.</p>
 <p>Now, any function maps each possible input to a unique output. But there are also functions which never map different inputs to the same outputs. Such functions are called <bb>injective</bb>, and can be pictured as in Figure 1.5.</p>
 <p><img src="https://i.loli.net/2020/09/04/gVLDQzdtlKMwjpN.png" alt="222.png" /></p>
-<blockquote>
-<p><bb>定義 1.32【Injective function】</bb><br />
-A function $f \colon A \rightarrow B$ is <bb>injective</bb> iff for each $y \in B$ there is at most one $x \in A$ such that $f(x) = y$. We call such a function an <bb>injection</bb> from $A$ to $B$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.32【Injective function】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A function $f \colon A \rightarrow B$ is <bb>injective</bb> iff for each $y \in B$ there is at most one $x \in A$ such that $f(x) = y$. We call such a function an <bb>injection</bb> from $A$ to $B$.</span>
+  </div>
+  </div>
 <p>If you want to show that $f$ is an <bb>injection</bb>, you need to show that for any <bb>element</bb>s $x$ and $y$ of $f$'s domain, if $f(x)=f(y)$, then $x=y$.</p>
-<blockquote>
-<p><bb>示例 1.32</bb><br />
-The constant function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = 1$ is neither <bb>injective</bb>, nor <bb>surjective</bb>. The identity function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x$ is both <bb>injective</bb> and <bb>surjective</bb>.<br />
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.32</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>The constant function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = 1$ is neither <bb>injective</bb>, nor <bb>surjective</bb>. The identity function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x$ is both <bb>injective</bb> and <bb>surjective</bb>.<br />
 The successor function $f \colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x+1$ is <bb>injective</bb> but not <bb>surjective</bb>.<br />
 The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:</p>
-</blockquote>
 <p>$$f(x) =\begin{cases}
 \displaystyle\frac{x}{2} & \text{if $x$ is even} \\
 \displaystyle\frac{x+1}{2} & \text{if $x$ is odd.}
 \end{cases}$$</p>
 <p>is <bb>surjective</bb>, but not <bb>injective</bb>.</p>
+</span>
+  </div>
+  </div>
 <p>Often enough, we want to consider functions which are both <bb>injective</bb> and <bb>surjective</bb>. We call such functions <bb>bijective</bb>. They look like the function pictured in Figure 1.6. <bb>bijection</bb>s are also sometimes called <bb>one-to-one correspondences</bb>, since they uniquely pair elements of the codomain with elements of the domain.</p>
 <p><img src="https://i.loli.net/2020/09/04/PpOsUwucAmM3qhv.png" alt="333.png" /></p>
-<blockquote>
-<p><bb>定義 1.33【bijection】</bb><br />
-A function $f \colon A \to B$ is <bb>bijective</bb> iff it is both <bb>surjective</bb> and <bb>injective</bb>. We call such a function a <bb>bijection</bb> from $A$ to $B$ (or between $A$ and $B$).</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.33【bijection】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A function $f \colon A \to B$ is <bb>bijective</bb> iff it is both <bb>surjective</bb> and <bb>injective</bb>. We call such a function a <bb>bijection</bb> from $A$ to $B$ (or between $A$ and $B$).</span>
+  </div>
+  </div>
 <h2 id="functions-as-relations">Functions as Relations</h2>
 <p>A function which maps <bb>element</bb>s of $A$ to <bb>element</bb>s of $B$ obviously defines a relation between $A$ and $B$, namely the relation which holds between $x$ and $y$ iff $f(x) = y$.  In fact, we might even&mdash;if we are interested in reducing the building blocks of mathematics for instance&mdash;<bb>identify</bb> the function $f$ with this relation, i.e., with a set of pairs.  This then raises the question: which relations define functions in this way?</p>
-<blockquote>
-<p><bb>定義 1.34【Graph of a function】</bb><br />
-Let $f\colon A \to B$ be a function. The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$ defined by $$R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.$$</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.34【Graph of a function】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Let $f\colon A \to B$ be a function. The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$ defined by $$R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.$$</span>
+  </div>
+  </div>
 <p>The graph of a function is uniquely determined, by extensionality. Moreover, extensionality (on sets) will immediate vindicate the implicit principle of extensionality for functions, whereby if $f$ and $g$ share a domain and codomain then they are identical if they agree on all values.</p>
 <p>Similarly, if a relation is &ldquo;functional&rsquo;&rsquo;, then it is the graph of a function.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.6</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;"><p>Let $R \subseteq A \times B$ be such that:</p>
 <blockquote>
-<p><bb>命題 1.6</bb><br />
-Let $R \subseteq A \times B$ be such that:</p>
 <ol>
 <li>If $Rxy$ and $Rxz$ then $y = z$; and</li>
-<li>for every $x \in A$ there is some $y \in B$ such that $⟨x,y⟩ \in R$.<br />
-Then $R$ is the graph of the function $f\colon A \to B$ defined by $f(x) = y$ iff $Rxy$.</li>
+<li>for every $x \in A$ there is some $y \in B$ such that $⟨x,y⟩ \in R$.</li>
 </ol>
 </blockquote>
+<p>Then $R$ is the graph of the function $f\colon A \to B$ defined by $f(x) = y$ iff $Rxy$.</p>
+</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.6 之證明</bb><br />
+<p><bb>Proposition 1.6 之證明</bb><br />
 Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq y$ such that $Rxz$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, this $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$.</p>
 </blockquote>
 <p>Every function $f\colon A \to B$ has a graph, i.e., a relation on $A \times B$ defined by $f(x) = y$. On the other hand, every relation $R \subseteq A \times B$ with the properties given in Proposition 1.6 is the graph of a function $f \colon A \to B$. Because of this close connection between functions and their graphs, we can think of a function simply as its graph. In other words, functions can be identified with certain relations, i.e., with certain sets of tuples. Note, though, that the spirit of this &ldquo;identification&rsquo;&rsquo; is as in §1.1.1（P.28）: it is not a claim about the metaphysics of functions, but an observation that it is convenient to <bb>treat</bb> functions as certain sets. One reason that this is so convenient, is that We can now consider performing similar operations on functions as we performed on relations (see §1.1.6（P.34）). In particular:</p>
-<blockquote>
-<p><bb>定義 1.35</bb><br />
-Let $f \colon A \to B$ be a function with $C\subseteq A$.<br />
-The <bb>restriction</bb> of $f$ to $C$ is the function $f\upharpoonright_{C}\colon C \to B$ defined by $(f\upharpoonright_{C})(x) = f(x)$ for all $x \in C$. In other words, $f\upharpoonright_{C} = \lbrace ⟨x, y⟩ \in R_f: x \in C\rbrace$.<br />
-The <bb>application</bb> of $f$ to $C$ is $f[C] = \lbrace f(x): x \in C\rbrace$. We also call this the <bb>image</bb> of $C$ under $f$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.35</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;"><p>Let $f \colon A \to B$ be a function with $C\subseteq A$.</p>
+<ol>
+<li>The <bb>restriction</bb> of $f$ to $C$ is the function $f\upharpoonright_{C}\colon C \to B$ defined by $(f\upharpoonright_{C})(x) = f(x)$ for all $x \in C$. In other words, $f\upharpoonright_{C} = \lbrace ⟨x, y⟩ \in R_f: x \in C\rbrace$.</li>
+<li>The <bb>application</bb> of $f$ to $C$ is $f[C] = \lbrace f(x): x \in C\rbrace$. We also call this the <bb>image</bb> of $C$ under $f$.</li>
+</ol>
+</span>
+  </div>
+  </div>
 <p>It follows from these definition that $\text{ran}(f) = f[\text{dom}(f)]$, for any function $f$. These notions are exactly as one would expect, given the definitions in §1.1.6（P.34）and our identification of functions with relations. But two other operations&mdash;inverses and relative products&mdash;require a little more detail. We will provide that in the §1.2.3（P.41）and §1.2.4（P.42）.</p>
 <h2 id="inverses-of-functions">Inverses of Functions</h2>
 <p>We think of functions as maps. An obvious question to ask about functions, then, is whether the mapping can be &ldquo;reversed.&rsquo;&rsquo; For instance, the successor function $f(x) = x + 1$ can be reversed, in the sense that the function $g(y) = y - 1$ &ldquo;undoes&rsquo;&rsquo; what $f$ does.</p>
 <p>But we must be careful. Although the definition of $g$ defines a function $\mathbb{Z} \to \mathbb{Z}$, it does not define a <bb>function</bb> $\mathbb{N} \to \mathbb{N}$, since $g(0) \notin \mathbb{N}$.  So even in simple cases, it is not quite obvious whether a function can be reversed; it may depend on the domain and codomain.</p>
 <p>This is made more precise by the notion of an inverse of a function.</p>
-<blockquote>
-<p><bb>定義 1.36【Inverses of Functions】</bb><br />
-A function $g \colon B \to A$ is an <bb>inverse</bb> of a function $f \colon A \to B$ if $f(g(y)) = y$ and $g(f(x)) = x$ for all $x \in A$ and $y \in B$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.36【Inverses of Functions】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A function $g \colon B \to A$ is an <bb>inverse</bb> of a function $f \colon A \to B$ if $f(g(y)) = y$ and $g(f(x)) = x$ for all $x \in A$ and $y \in B$.</span>
+  </div>
+  </div>
 <p>If $f$ has an inverse $g$, we often write $f^{-1}$ instead of $g$.</p>
 <p>Now we will determine when functions have inverses. A good candidate for an inverse of $f\colon A \to B$ is $g\colon B \to A$ &ldquo;defined by&rsquo;&rsquo; $$g(y) = \text{&ldquo;the&rsquo;&rsquo; $x$ such that $f(x) = y$.}$$ But the scare quotes around &ldquo;defined by&rsquo;&rsquo; (and &ldquo;the&rsquo;') suggest that this is not a definition.  At least, it will not always work, with complete generality. For, in order for this definition to specify a function, there has to be one and only one $x$ such that $f(x) = y$&mdash;the output of $g$ has to be uniquely specified. Moreover, it has to be specified for every $y \in B$.  If there are $x_1$ and $x_2 \in A$ with $x_1 \neq x_2$ but $f(x_1) = f(x_2)$, then $g(y)$ would not be uniquely specified for $y = f(x_1) = f(x_2)$. And if there is no $x$ at all such that $f(x) = y$, then $g(y)$ is not specified at all. In other words, for $g$ to be defined, $f$ must be both <bb>injective</bb> and <bb>surjective</bb>.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.7</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Every <bb>bijection</bb> has a unique inverse.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.7</bb><br />
-Every <bb>bijection</bb> has a unique inverse.</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.7 之證明</bb><br />
+<p><bb>Proposition 1.7 之證明</bb><br />
 Exercise.</p>
 </blockquote>
 <blockquote>
@@ -2594,12 +2835,16 @@ Prove Proposition 1.7. That is, show that if $f\colon A \to B$ is <bb>bijective<
 <p><bb>Problem 1.17</bb><br />
 Show that if $f\colon A \to B$ has an inverse $g$, then $f$ is <bb>bijective</bb>.</p>
 </blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.8</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Every function $f$ has at most one inverse.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.8</bb><br />
-Every function $f$ has at most one inverse.</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.8 之證明</bb><br />
+<p><bb>Proposition 1.8 之證明</bb><br />
 Exercise.</p>
 </blockquote>
 <blockquote>
@@ -2610,14 +2855,22 @@ Prove Proposition 1.8. That is, show that if $g\colon B \to A$ and $g&rsquo;\col
 <p>We saw in§1.2.3（P.41）that the inverse $f^{-1}$ of a <bb>bijection</bb> $f$ is itself a function. Another operation on functions is composition: We can define a new function by composing two functions, $f$ and $g$, i.e., by first applying $f$ and then $g$. Of course, this is only possible if the ranges and domains match, i.e., the range of $f$ must be a subset of the domain of $g$. This operation on functions is the analogue of the operation of relative product on relations from§1.1.6（P.34）.</p>
 <p>A diagram might help to explain the idea of composition. In Figure 1.7, we depict two functions $f \colon A \to B$ and $g \colon B \to C$ and their composition $(g\circ f)$. The function $(g\circ f) \colon A \to C$ pairs each <bb>element</bb> of $A$ with a <bb>element</bb> of $C$. We specify which <bb>element</bb> of $C$ a <bb>element</bb> of $A$ is paired with as follows: given an input $x \in A$, first apply the function $f$ to $x$, which will output some $f(x) = y \in B$, then apply the function $g$ to $y$, which will output some $g(f(x)) = g(y) = z \in C$.</p>
 <p><img src="https://i.loli.net/2020/09/05/YjaWscoL5tTVUB3.png" alt="compositionoffunction" /></p>
-<blockquote>
-<p><bb>定義 1.37【Composition】</bb><br />
-Let $f\colon A \to B$ and $g\colon B \to C$ be functions. The <bb>composition</bb> of $f$ with $g$ is $g\circ f \colon A \to C$, where $(g\circ f)(x) = g(f(x))$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.33</bb><br />
-Consider the functions $f(x) = x + 1$, and $g(x) = 2x$. Since $(g\circ f)(x) = g(f(x))$, for each input $x$ you must first take its successor, then multiply the result by two. So their composition is given by $(g\circ f)(x) = 2(x+1)$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.37【Composition】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Let $f\colon A \to B$ and $g\colon B \to C$ be functions. The <bb>composition</bb> of $f$ with $g$ is $g\circ f \colon A \to C$, where $(g\circ f)(x) = g(f(x))$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.33</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Consider the functions $f(x) = x + 1$, and $g(x) = 2x$. Since $(g\circ f)(x) = g(f(x))$, for each input $x$ you must first take its successor, then multiply the result by two. So their composition is given by $(g\circ f)(x) = 2(x+1)$.</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.19</bb><br />
 Show that if $f \colon A \to B$ and $g \colon B \to C$ are both <bb>injective</bb>, then $g\circ f\colon A \to C$ is <bb>injective</bb>.</p>
@@ -2632,32 +2885,52 @@ Suppose $f \colon A \to B$ and $g \colon B \to C$. Show that the graph of $g\cir
 </blockquote>
 <h2 id="partial-functions">Partial Functions</h2>
 <p>It is sometimes useful to relax the definition of function so that it is not required that the output of the function is defined for all possible inputs. Such mappings are called <bb>partial functions</bb>.</p>
-<blockquote>
-<p><bb>定義 1.38【Partial function】</bb><br />
-A <bb>partial function</bb> $f \colon A \nrightarrow B$ is a mapping which assigns to every <bb>element</bb> of $A$ at most one <bb>element</bb> of $B$. If $f$ assigns an element of $B$ to $x \in A$, we say $f(x)$ is <bb>defined</bb>, and otherwise <bb>undefined</bb>. If $f(x)$ is defined, we write $f(x) \downarrow$, otherwise $f(x) \uparrow$. The <bb>domain</bb> of a partial function $f$ is the subset of $A$ where it is defined, i.e., $\text{dom}(f) = \lbrace x \in A: f(x) \downarrow\rbrace$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.34</bb><br />
-Every function $f\colon A \to B$ is also a partial function. Partial functions that are defined everywhere on $A$&mdash;i.e., what we so far have simply called a function&mdash;are also called <bb>total</bb> functions.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.35</bb><br />
-The partial function $f \colon \mathbb{R} \nrightarrow \mathbb{R}$ given by $f(x) = 1/x$ is undefined for $x = 0$, and defined everywhere else.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.38【Partial function】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A <bb>partial function</bb> $f \colon A \nrightarrow B$ is a mapping which assigns to every <bb>element</bb> of $A$ at most one <bb>element</bb> of $B$. If $f$ assigns an element of $B$ to $x \in A$, we say $f(x)$ is <bb>defined</bb>, and otherwise <bb>undefined</bb>. If $f(x)$ is defined, we write $f(x) \downarrow$, otherwise $f(x) \uparrow$. The <bb>domain</bb> of a partial function $f$ is the subset of $A$ where it is defined, i.e., $\text{dom}(f) = \lbrace x \in A: f(x) \downarrow\rbrace$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.34</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">Every function $f\colon A \to B$ is also a partial function. Partial functions that are defined everywhere on $A$&mdash;i.e., what we so far have simply called a function&mdash;are also called <bb>total</bb> functions.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.35</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">The partial function $f \colon \mathbb{R} \nrightarrow \mathbb{R}$ given by $f(x) = 1/x$ is undefined for $x = 0$, and defined everywhere else.</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.22</bb><br />
 Given $f\colon A \nrightarrow B$, define the partial function $g\colon B \nrightarrow A$ by: for any $y \in B$, if there is a unique $x \in A$ such that $f(x) = y$, then $g(y) = x$; otherwise $g(y) \uparrow$.  Show that if $f$ is injective, then $g(f(x)) = x$ for all $x \in \text{dom}(f)$, and $f(g(y)) = y$ for all $y \in \text{ran}(f)$.</p>
 </blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.39【Graph of a partial function】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Let $f\colon A \nrightarrow B$ be a partial function. The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$ defined by $$R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.$$</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.9</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Suppose $R \subseteq A \times B$ has the property that whenever $Rxy$ and $Rxy'$ then $y = y'$.  Then $R$ is the graph of the partial function $f\colon X \nrightarrow Y$ defined by: if there is a $y$ such that $Rxy$, then $f(x) = y$, otherwise $f(x) \uparrow$.  If $R$ is also <bb>serial</bb>, i.e., for each $x \in X$ there is a $y \in Y$ such that $Rxy$, then $f$ is total.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>定義 1.39【Graph of a partial function】</bb><br />
-Let $f\colon A \nrightarrow B$ be a partial function. The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$ defined by $$R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.$$</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.9</bb><br />
-Suppose $R \subseteq A \times B$ has the property that whenever $Rxy$ and $Rxy'$ then $y = y'$.  Then $R$ is the graph of the partial function $f\colon X \nrightarrow Y$ defined by: if there is a $y$ such that $Rxy$, then $f(x) = y$, otherwise $f(x) \uparrow$.  If $R$ is also <bb>serial</bb>, i.e., for each $x \in X$ there is a $y \in Y$ such that $Rxy$, then $f$ is total.</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.9 之證明</bb><br />
+<p><bb>Proposition 1.9 之證明</bb><br />
 Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$ such that $Rxy'$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, that $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$ and $f$ is total if $R$ is serial.</p>
 </blockquote>
 <h1 id="基数集合大小的度量">基数：集合大小的度量</h1>
@@ -2668,12 +2941,15 @@ Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$
 <h2 id="enumerations-and-enumerable-sets">Enumerations and enumerable Sets</h2>
 <p>This section discusses enumerations of sets, defining them as surjections from $\mathbb{Z}^{+}$. It does things slowly, for readers with little mathematical background. An alternative, terser version is given in §1.3.10（P.62）, which defines enumerations differently: as bijections with $\mathbb{N}$ (or an initial segment).</p>
 <p>We&rsquo;ve already given examples of sets by listing their <bb>element</bb>s. Let&rsquo;s discuss in more general terms how and when we can list the <bb>element</bb>s of a set, even if that set is infinite.</p>
-<blockquote>
-<p><bb>定義 1.40【Enumeration, informally】</bb><br />
-Informally, an <bb>enumeration</bb> of a set $A$ is a list (possibly infinite) of <bb>element</bb>s of $A$ such that every <bb>element</bb> of $A$ appears on the list at some finite position. If $A$ has an enumeration, then $A$ is said to be <bb>enumerable</bb>.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.40【Enumeration, informally】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">Informally, an <bb>enumeration</bb> of a set $A$ is a list (possibly infinite) of <bb>element</bb>s of $A$ such that every <bb>element</bb> of $A$ appears on the list at some finite position. If $A$ has an enumeration, then $A$ is said to be <bb>enumerable</bb>.</span>
+  </div>
+  </div>
 <p>A couple of points about enumerations:</p>
-<blockquote>
 <ol>
 <li>We count as enumerations only lists which have a beginning and in which every <bb>element</bb> other than the first has a single <bb>element</bb> immediately preceding it.  In other words, there are only finitely many elements between the first <bb>element</bb> of the list and any other <bb>element</bb>. In particular, this means that every <bb>element</bb> of an enumeration has a finite position: the first <bb>element</bb> has position $1$, the second position $2$, etc.</li>
 <li>We can have different enumerations of the same set $A$ which differ by the order in which the <bb>element</bb>s appear: $4$, $1$, $25$, $16$, $9$ enumerates the (set of the) first five square numbers just as well as $1$, $4$, $9$, $16$, $25$ does.</li>
@@ -2683,48 +2959,70 @@ Informally, an <bb>enumeration</bb> of a set $A$ is a list (possibly infinite) o
 <li>The following is not an enumeration of the positive integers: $1$, $3$, $5, \cdots, 2$, $4$, $6, \cdots$. The problem is that the even numbers occur at places $\infty + 1$, $\infty + 2$, $\infty + 3$, rather than at finite positions.</li>
 <li>The empty set is enumerable: it is enumerated by the empty list!</li>
 </ol>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎Proposition 1.9</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $A$ has an enumeration, it has an enumeration without repetitions.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>命題 1.10</bb><br />
-If $A$ has an enumeration, it has an enumeration without repetitions.</p>
-</blockquote>
-<blockquote>
-<p><bb>命題 1.10 之證明</bb><br />
+<p><bb>Proposition 1.10 之證明</bb><br />
 Suppose $A$ has an enumeration $x_1$, $x_2, \cdots$, in which each $x_i$ is an <bb>element</bb> of $A$.  We can remove repetitions from an enumeration by removing repeated <bb>element</bb>s. For instance, we can turn the enumeration into a new one in which we list $x_i$ if it is an <bb>element</bb> of $A$ that is not among $x_1, \cdots, x_{i-1}$ or remove $x_i$ from the list if it already appears among $x_1, \cdots, x_{i-1}$.</p>
 </blockquote>
 <p>The last argument shows that in order to get a good handle on enumerations and <bb>enumerable</bb> sets and to prove things about them, we need a more precise definition.  The following provides it.</p>
-<blockquote>
-<p><bb>定義 1.41【Enumeration, formally】</bb><br />
-An <bb>enumeration</bb> of a set $A \neq \varnothing$ is any <bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.41【Enumeration, formally】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">An <bb>enumeration</bb> of a set $A \neq \varnothing$ is any <bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.</span>
+  </div>
+  </div>
 <p>Let&rsquo;s convince ourselves that the formal definition and the informal definition using a possibly infinite list are equivalent. First, any <bb>surjective</bb> function from $\mathbb{Z}^{+}$ to a set $A$ enumerates $A$. Such a function determines an enumeration as defined informally above: the list $f(1)$, $f(2)$, $f(3)$, \dots. Since $f$ is <bb>surjective</bb>, every <bb>element</bb> of $A$ is guaranteed to be the value of $f(n)$ for some $n \in \mathbb{Z}^{+}$. Hence, every <bb>element</bb> of $A$ appears at some finite position in the list. Since the function may not be <bb>injective</bb>, the list may be redundant, but that is acceptable (as noted above).</p>
 <p>On the other hand, given a list that enumerates all <bb>element</bb>s of $A$, we can define a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$ by letting $f(n)$ be the $n$th <bb>element</bb> of the list, or the final <bb>element</bb> of the list if there is no $n$th <bb>element</bb>. The only case where this does not produce a <bb>surjective</bb> function is when $A$ is empty, and hence the list is empty. So, every non-empty list determines a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$.</p>
-<blockquote>
-<p><bb>定義 1.42</bb><br />
-A set $A$ is <bb>enumerable</bb> iff it is empty or has an enumeration.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.36</bb><br />
-A function enumerating the positive integers ($\mathbb{Z}^{+}$) is simply the identity function given by $f(n) = n$. A function enumerating the natural numbers $\mathbb{N}$ is the function $g(n) = n - 1$.</p>
-</blockquote>
-<blockquote>
-<p><bb>示例 1.37</bb><br />
-The functions $f\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ and $g \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ given by</p>
-</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◉Definition 1.42</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A set $A$ is <bb>enumerable</bb> iff it is empty or has an enumeration.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.36</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">A function enumerating the positive integers ($\mathbb{Z}^{+}$) is simply the identity function given by $f(n) = n$. A function enumerating the natural numbers $\mathbb{N}$ is the function $g(n) = n - 1$.</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.37</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>The functions $f\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ and $g \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ given by</p>
 <p>\begin{align*}
 &  f(n) = 2n \text{ and}\\
 & g(n) = 2n+1
 \end{align*}</p>
 <p>enumerate the even positive integers and the odd positive integers, respectively. However, neither function is an enumeration of $\mathbb{Z}^{+}$, since neither is <bb>surjective</bb>.</p>
+</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.23</bb><br />
 Define an enumeration of the positive squares $1$, $4$, $9$, $16, \dots$<br />
 \end{prob}</p>
 </blockquote>
-<blockquote>
-<p><bb>示例 1.38</bb><br />
-The function $f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil$ (where $\lceil x \rceil$ denotes the <bb>ceiling</bb> function, which rounds $x$ up to the nearest integer) enumerates the set of integers $\mathbb{Z}$. Notice how $f$ generates the values of $\mathbb{Z}$ by &ldquo;hopping&rsquo;&rsquo; back and forth between positive and negative integers:</p>
-</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿Example 1.38</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>The function $f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil$ (where $\lceil x \rceil$ denotes the <bb>ceiling</bb> function, which rounds $x$ up to the nearest integer) enumerates the set of integers $\mathbb{Z}$. Notice how $f$ generates the values of $\mathbb{Z}$ by &ldquo;hopping&rsquo;&rsquo; back and forth between positive and negative integers:</p>
 <p>$$
 \begin{array}{c c c c c c c c}
 f(1) & f(2) & f(3) & f(4) & f(5) & f(6) & f(7) & \dots \\ \\
@@ -2741,6 +3039,9 @@ n/2 & \text{if $n$ is even}\\
 -(n-1)/2 & \text{if $n$ is odd and $>1$}
 \end{cases}
 $$</p>
+</span>
+  </div>
+  </div>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
 Show that if $A$ and $B$ are <bb>enumerable</bb>, so is $A \cup B$. To do<br />
@@ -2774,7 +3075,7 @@ Correspondingly, we can define an enumeration as a <bb>surjective</bb><br />
 function from $\mathbb{N}$ to $A$. Of course, the two definitions are<br />
 equivalent.</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
+<p><bb>Proposition 1.5</bb><br />
 There is a <bb>surjection</bb> $f\colon \mathbb{Z}^{+} \to A$ iff there is<br />
 a <bb>surjection</bb> $g\colon \mathbb{N} \to A$.<br />
 \end{prop}</p>
@@ -2804,7 +3105,7 @@ Not having repetitions means that $f$ must be <bb>injective</bb>. Since it<br />
 is also <bb>surjective</bb>, we are looking for a <bb>bijection</bb> between some<br />
 finite set $\lbrace 1, \dots, n\rbrace $ or $\mathbb{Z}^{+}$ and $A$.</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
+<p><bb>Proposition 1.5</bb><br />
 If $f\colon \mathbb{Z}^{+} \to A$ is <bb>surjective</bb> (i.e., an enumeration<br />
 of $A$), there is a <bb>bijection</bb> $g\colon Z \to A$ where $Z$ is<br />
 either $\mathbb{Z}^{+}$ or $\lbrace 1, \dots, n\rbrace $ for some $n \in \mathbb{Z}^{+}$.<br />
@@ -2906,7 +3207,7 @@ $$<br />
 $$<br />
 And this establishes the following:</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
+<p><bb>Proposition 1.5</bb><br />
 $\mathbb{N} \times \mathbb{N}$ is <bb>enumerable</bb>.<br />
 \end{prop}</p>
 </blockquote>
@@ -2949,7 +3250,7 @@ Thus, by using a method like Cantor&rsquo;s zig-zag method, we may similarly<br 
 obtain an enumeration of $\mathbb{N}^3$. And we can keep going, obtaining<br />
 enumerations of $\mathbb{N}^n$ for any natural number $n$. So, we have:</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
+<p><bb>Proposition 1.5</bb><br />
 $\mathbb{N}^n$ is <bb>enumerable</bb>, for every $n \in \mathbb{N}$.<br />
 \end{prop}</p>
 </blockquote>
@@ -3461,7 +3762,7 @@ $A$ is <bb>equinumerous</bb> with $B$, written $\cardeq{A}{B}$, iff<br />
 there is a <bb>bijection</bb> $f \colon A \to B$.<br />
 \end{defn}</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
+<p><bb>Proposition 1.5</bb><br />
 Equinumerosity is an equivalence relation.<br />
 \end{prop}</p>
 </blockquote>
@@ -3481,7 +3782,7 @@ C$. Then the composition $g\circ f\colon A \to C$ is <bb>bijective</bb>,<br />
 so that $\cardeq{A}{C}$.<br />
 \end{proof}</p>
 <blockquote>
-<p><bb>命題 1.5</bb><br />
+<p><bb>Proposition 1.5</bb><br />
 If $\cardeq{A}{B}$, then $A$ is <bb>enumerable</bb> if<br />
 and only if $B$ is.<br />
 \end{prop}</p>
@@ -4029,7 +4330,7 @@ Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.<br
 \end{prob}</p>
 </blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 16:27:38 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 17:57:00 by 王小花.</p>
     </article>
     
     <script>
