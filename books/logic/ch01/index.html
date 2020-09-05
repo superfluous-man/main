@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-05T18:28:11&#43;0800">
+<meta name="modified" content="2020-09-05T21:55:30&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 01 章 預備：素樸集合論",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-05T18:28:11+08:00",
+    "dateModified": "2020-09-05T21:55:30+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch01/",
     "description": "The material in this chapter is an introduction to basic naïve set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 5, 2020 </time>
   
-&middot; 🔢 24478 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 49 min read</span>
+&middot; 🔢 20014 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 40 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1817,12 +1817,6 @@ if (!doNotTrack) {
         <li><a href="#an-alternative-pairing-function">An Alternative Pairing Function</a></li>
         <li><a href="#nonenumerable-sets">Nonenumerable Sets</a></li>
         <li><a href="#reduction">Reduction</a></li>
-        <li><a href="#equinumerosity">Equinumerosity</a></li>
-        <li><a href="#sets-of-different-sizes-and-cantors-theorem">Sets of Different Sizes, and Cantor&rsquo;s Theorem</a></li>
-        <li><a href="#the-notion-of-size-and-schroder-bernstein">The Notion of Size, and Schr&quot;oder-Bernstein</a></li>
-        <li><a href="#enumerations-and-enumerable-sets-1">Enumerations and enumerable Sets</a></li>
-        <li><a href="#nonenumerable-sets-1">Nonenumerable Sets</a></li>
-        <li><a href="#reduction-1">Reduction</a></li>
       </ul>
     </li>
   </ul>
@@ -1839,7 +1833,7 @@ if (!doNotTrack) {
 <li><a href="https://builds.openlogicproject.org/"><bb>Zach, Richard.</bb> <em>Open Logic Project.</em></a><br />
 （這個龐大的開源項目，囊括了非哲學、數學專業的邏輯學習所需的大部分材料。本章內容卽基於其 $\TeX$ 源碼整理而成）</li>
 <li><bb>安德鲁·辛普森, 2005. 离散数学导学[M].冯速,译. 北京: 机械工业出版社.</bb><br />
-（這本書雖是計算機科學領域的基礎課本，但其第三、四、五、六、七、八、九、十章以豐富的實例友好而簡約地講解了集合論、Proposition邏輯、謂詞邏輯的基礎知識。)</li>
+（這本書雖是計算機科學領域的基礎課本，但其第三、四、五、六、七、八、九、十章以豐富的實例友好而簡約地講解了集合論、命題邏輯、謂詞邏輯的基礎知識。)</li>
 <li><bb>邢滔滔, 2008. 数理逻辑[M].北京: 北京大学出版社.</bb><br />
 （這本教材的第二章節簡要講述了邏輯學基礎學習階段可能需要的集合論知識。）</li>
 </ol>
@@ -1852,7 +1846,7 @@ if (!doNotTrack) {
 <p>It does not matter how we <bb>specify</bb> the set, or how we <bb>order</bb> its <bb>element</bb>s, or indeed how <bb>many times</bb> we count its <bb>element</bb>s. All that matters are what its <bb>element</bb>s are. We codify this in the following principle.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.0【Extensionality】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.0【Extensionality】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If $A$ and $B$ are sets, then $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$, and vice versa.</span>
@@ -1863,7 +1857,7 @@ if (!doNotTrack) {
 <p>This delivers on the point that, when we consider sets, we don&rsquo;t care about the order of their <bb>element</bb>s, or how many times they are specified.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.0</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.0</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Whenever you have a bunch of objects, you can collect them together in a set. The set of Richard&rsquo;s siblings, for instance, is a set that contains one person, and we could write it as $S =\lbrace \text{Ruth}\rbrace$. The set of positive integers less than $4$ is $\lbrace 1, 2, 3 \rbrace$, but it can also be written as $\lbrace 3, 2, 1\rbrace$ or even as $\lbrace 1, 2, 1, 2, 3\rbrace$. These are all the same set, by extensionality. For every <bb>element</bb> of $\lbrace 1, 2, 3 \rbrace$ is also an <bb>element</bb> of $\lbrace3, 2, 1 \rbrace$ (and of $\lbrace 1, 2, 1, 2, 3\rbrace$), and vice versa.</span>
@@ -1872,7 +1866,7 @@ if (!doNotTrack) {
 <p>Frequently we&rsquo;ll specify a set by some property that its <bb>element</bb>s share. We&rsquo;ll use the following shorthand notation for that: {$x: \varphi(x)$}, where the $\varphi(x)$ stands for the property that $x$ has to have in order to be counted among the <bb>element</bb>s of the set.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.1</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.1</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">In our example, we could have specified $S$ also as $$S = \lbrace x: x  \text{ is a sibling of Richard}\rbrace.$$</span>
@@ -1880,7 +1874,7 @@ if (!doNotTrack) {
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.2</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.2</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">A number is called <bb>perfect</bb> iff it is equal to the sum of its proper divisors (i.e., numbers that evenly divide it but aren&rsquo;t identical to the number). For instance, $6$ is perfect because its proper divisors are $1$, $2$, and $3$, and $6 = 1 + 2 + 3$. In fact, $6$ is the only positive integer less than $10$ that is perfect. So, using extensionality, we can say:<br />
@@ -1897,7 +1891,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 <p>We will often want to compare sets. And one obvious kind of comparison one might make is as follows: <bb>everything in one set is in the other too</bb>. This situation is sufficiently important for us to introduce some new notation.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.1【Subset】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.1【Subset】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If every <bb>element</bb> of a set $A$ is also an <bb>element</bb> of $B$, then we say that $A$ is a <bb>subset</bb> of $B$, and write $A \subseteq B$. If $A$ is not a subset of $B$ we write $A \not\subseteq B$. If $A \subseteq B$ but $A \neq B$, we write $A \subsetneq B$ and say that $A$ is a <bb>proper subset</bb> of $B$.</span>
@@ -1905,7 +1899,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.3</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.3</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Every set is a subset of itself, and $\varnothing$ is a subset of every set. The set of even numbers is a subset of the set of natural numbers. Also, $\lbrace a, b \rbrace \subseteq \lbrace a, b, c \rbrace$. But $\lbrace a, b, e\rbrace$ is not a subset of $\lbrace a, b, c \rbrace$.</span>
@@ -1913,7 +1907,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.4</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.4</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">The number $2$ is an <bb>element</bb> of the set of integers, whereas the set of even numbers is a subset of the set of integers. However, a set may happen to <bb>both</bb> be an <bb>element</bb> and a subset of some other set, e.g., $\lbrace 0\rbrace  \in \lbrace 0, \lbrace 0 \rbrace\rbrace$ and also $\lbrace 0\rbrace \subseteq \lbrace 0, \lbrace 0\rbrace\rbrace$.</span>
@@ -1922,7 +1916,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 <p>Extensionality gives a criterion of identity for sets: $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$ and vice versa. The definition of &ldquo;subset&rsquo;&rsquo; defines $A \subseteq B$ precisely as the first half of this criterion: every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$. Of course the definition also applies if we switch $A$ and $B$: that is, $B \subseteq A$ iff every <bb>element</bb> of $B$ is also an <bb>element</bb> of $A$. And that, in turn, is exactly the &ldquo;vice versa&rsquo;&rsquo; part of extensionality. In other words, extensionality entails that sets are equal iff they are subsets of one another.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.0</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.0</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">$A = B$ iff both $A \subseteq B$ and $B \subseteq A$.</span>
@@ -1931,7 +1925,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 <p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when $A$ is a subset of $B$ we said that &ldquo;every <bb>element</bb> of $A$ is $\cdots$,&rsquo;&rsquo; and filled the &ldquo;$\cdots$&rsquo;&rsquo; with &ldquo;an <bb>element</bb> of $B$&rsquo;&rsquo;. But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.2</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.2</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">$(\forall x \in A) \varphi$ abbreviates $\forall x(x \in A  \rightarrow \varphi)$. Similarly, $(\exists x \in A)\varphi$ abbreviates $\exists x(x \in A \land \varphi)$.</span>
@@ -1941,7 +1935,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
 <p>Now we move on to considering a certain kind of set: the set of all subsets of a given set.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.3【Power Set】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.3【Power Set】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">The set consisting of all subsets of a set $A$ is called the <bb>power set of</bb> $A,$ written $\mathscr{P}(A)$. $$\mathscr{P}(A) =\lbrace B: B \subseteq A \rbrace$$</span>
@@ -1949,7 +1943,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.5</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.5</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">What are all the possible subsets of $\lbrace a, b, c \rbrace$? They are: $\varnothing$, $\lbrace a\rbrace$, $\lbrace b\rbrace$, $\lbrace c\rbrace$, $\lbrace a, b\rbrace$, $\lbrace a, c\rbrace$, $\lbrace b, c\rbrace$, $\lbrace a, b, c\rbrace$. The set of all these subsets is $\mathscr{P}(\lbrace a,b,c)\rbrace$:<br />
@@ -1965,7 +1959,7 @@ $$\mathscr{P}(\lbrace a, b, c \rbrace) = \lbrace\varnothing, \lbrace a \rbrace, 
 <h2 id="some-important-sets">Some Important Sets</h2>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.6</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.6</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>We will mostly be dealing with sets whose <bb>element</bb>s are mathematical objects. Four such sets are important enough to have specific names:</p>
@@ -1985,7 +1979,7 @@ These are all <bb>infinite</bb> sets, that is, they each have infinitely many <b
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.7【Strings】</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.7【Strings】</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>Another interesting example  is the set ${A}^{*}$ of  <bb>finite strings</bb> over an alphabet $A$: any finite sequence of elements of $A$ is a string over $A$. We include the <bb>empty string $\Lambda$</bb> among the strings over $A$, for every alphabet $A$. For instance,</p>
@@ -1996,10 +1990,10 @@ These are all <bb>infinite</bb> sets, that is, they each have infinitely many <b
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.8【Infinite sequences】</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.8【Infinite sequences】</span>
   </div>
   <div class="dtpcexbox">
-  <span style="font-family:SYHei Regular;">For any set $A$ we may also consider the set $A^\omega$ of infinite sequences of <bb>element</bb>s of $A$. An infinite sequence $a_1a_2a_3a_4\dots$ consists of a one-way infinite list of objects, each one of which is an <bb>element</bb> of $A$.</span>
+  <span style="font-family:SYHei Regular;">For any set $A$ we may also consider the set $A^\omega$ of infinite sequences of <bb>element</bb>s of $A$. An infinite sequence $a_1a_2a_3a_4\cdots$ consists of a one-way infinite list of objects, each one of which is an <bb>element</bb> of $A$.</span>
   </div>
   </div>
 <h2 id="unions-and-intersections">Unions and Intersections</h2>
@@ -2008,7 +2002,7 @@ These are all <bb>infinite</bb> sets, that is, they each have infinitely many <b
 <p>This operation on sets&mdash;combining them&mdash;is very useful and common, and so we give it a formal name and a symbol.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.4【Union】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.4【Union】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">The <bb>union</bb> of two sets $A$ and $B$, written $A \cup B$, is the set of all things which are <bb>element</bb>s of $A$, $B$, or both.<br />
@@ -2017,7 +2011,7 @@ $$A \cup B = \lbrace x: x \in A \lor x \in B\rbrace $$</span>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.9</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.9</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Since the multiplicity of <bb>element</bb>s doesn&rsquo;t matter, the union of two sets which have an element in common contains that <bb>element</bb> only once, e.g., $\lbrace  a, b, c\rbrace  \cup \lbrace  a, 0, 1\rbrace  = \lbrace a, b, c, 0, 1\rbrace $. The union of a set and one of its subsets is just the bigger set: $\lbrace a, b, c \rbrace  \cup \lbrace a \rbrace  = \lbrace a, b, c\rbrace $. The union of a set with the empty set is identical to the set: $\lbrace a, b, c \rbrace  \cup \varnothing = \lbrace a, b, c \rbrace $.</span>
@@ -2031,7 +2025,7 @@ Prove that if $A \subseteq B$, then $A \cup B = B$.</p>
 <p><img src="https://i.loli.net/2020/09/03/Fi7BoED2vNAHXkz.png" alt="intersectionofsets" /></p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.5【Intersection】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.5【Intersection】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">The <bb>intersection</bb> of two sets $A$ and $B$, written $A \cap B$, is the set of all things which are <bb>element</bb>s of both $A$ and $B$.<br />
@@ -2040,7 +2034,7 @@ $$A \cap B = \lbrace x: x \in A \land x \in B\rbrace $$ Two sets are called <bb>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.10</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.10</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">If two sets have no <bb>element</bb>s in common, their intersection is empty: $\lbrace  a, b, c\rbrace  \cap \lbrace  0, 1\rbrace  = \varnothing$. If two sets do have <bb>element</bb>s in common, their intersection is the set of all those: $\lbrace a, b, c \rbrace  \cap \lbrace a, b, d \rbrace  = \lbrace a, b\rbrace $. The intersection of a set with one of its subsets is just the smaller set: $\lbrace a, b, c\rbrace  \cap \lbrace a, b\rbrace  = \lbrace a, b\rbrace $. The intersection of any set with the empty set is empty: $\lbrace a, b, c \rbrace \cap \varnothing = \varnothing$.</span>
@@ -2053,27 +2047,44 @@ Prove rigorously that if $A \subseteq B$, then $A \cap B = A$.</p>
 <p>We can also form the union or intersection of more than two sets. An elegant way of dealing with this in general is the following: suppose you collect all the sets you want to form the union (or intersection) of into a single set. Then we can define the union of all our original sets as the set of all objects which belong to at least one <bb>element</bb> of the set, and the intersection as the set of all objects which belong to every <bb>element</bb> of the set.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.6</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.6</span>
   </div>
   <div class="dtpcbox">
-  <span style="font-family:SYHei Regular;">If $A$ is a set of sets, then $\bigcup A$ is the set of <bb>element</bb>s of <bb>element</bb>s of $A$:<br />
-$\bigcup A  = \lbrace x: x \text{ belongs to an element of } A \rbrace$, i.e.,<br />
-$\bigcup A  = \lbrace x: \text{there is a } B \in A \text{ so that } x \in B\rbrace$</span>
+  <span style="font-family:SYHei Regular;"><p>If $A$ is a set of sets, then $\bigcup A$ is the set of <bb>element</bb>s of <bb>element</bb>s of $A$:</p>
+<p>
+	$$
+	\begin{aligned}
+	\bigcup A & = \{x: x \text{ belongs to an element of } A\},
+	\text{ i.e.,}\\
+	& = \{x: \text{there is a } B \in A
+		\text{ so that } x \in B\}
+	\end{aligned}
+	$$
+</p>
+</span>
   </div>
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.7</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.7</span>
   </div>
   <div class="dtpcbox">
-  <span style="font-family:SYHei Regular;">If $A$ is a set of sets, then $\bigcap A$ is the set of objects which all elements of $A$ have in common:<br />
-$\bigcap A = \lbrace x: x \text{ belongs to every element of } A \rbrace$, i.e.,<br />
-$\bigcap A = \lbrace x: \text{for all } B \in A, x \in B\rbrace.$</span>
+  <span style="font-family:SYHei Regular;"><p>If $A$ is a set of sets, then $\bigcap A$ is the set of objects which all elements of $A$ have in common:</p>
+<p>
+$$
+\begin{aligned}
+	\bigcap A & = \{x: x \text{ belongs to every element of } A\},
+	\text{ i.e.,}\\
+	& = \{x: \text{for all } B \in A, x \in B\}
+	\end{aligned}
+$$
+</p>
+</span>
   </div>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.11</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.11</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Suppose $A = \lbrace  \lbrace  a, b \rbrace , \lbrace  a, d, e \rbrace , \lbrace  a, d \rbrace  \rbrace $. Then $\bigcup A = \lbrace  a, b, d, e \rbrace $ and $\bigcap A = \lbrace  a \rbrace.$</span>
@@ -2083,20 +2094,31 @@ $\bigcap A = \lbrace x: \text{for all } B \in A, x \in B\rbrace.$</span>
 <p><bb>Problem 1.3</bb><br />
 Show that if $A$ is a set and $A \in B$, then $A \subseteq \bigcup B$.</p>
 </blockquote>
-<p>We could also do the same for a sequence of sets $A_1$, $A_2, \cdots$,<br />
-$\bigcup_i A_i = \lbrace x: x \text{ belongs to one of the } A_i\rbrace$<br />
-$\bigcap_i A_i  = \lbrace x: x \text{ belongs to every } A_i\rbrace.$</p>
+<p>We could also do the same for a sequence of sets $A_1$, $A_2, \cdots$,</p>
+<p>
+$$
+\begin{aligned}
+\bigcup_i A_i & = \{x: x \text{ belongs to one of the } A_i\}\\
+\bigcap_i A_i & = \{x: x \text{ belongs to every } A_i\}.
+\end{aligned}
+$$
+</p>
 <p>When we have an <bb>index</bb> of sets, i.e., some set $I$ such that we<br />
 are considering $A_i$ for each $i \in I$, we may also use these<br />
-abbreviations:<br />
-$\bigcup_{i \in I} A_i = \bigcup \lbrace A_i: i \in I\rbrace$<br />
-$\bigcap_{i \in I} A_i = \bigcap\lbrace A_i: i \in I\rbrace.$</p>
-<p>Finally, we may want to think about the set of all <bb>element</bb>s in $A$<br />
-which are not in $B$. We can depict this as in Figure 1.2.</p>
+abbreviations:</p>
+<p>
+$$
+\begin{aligned}
+\bigcup_{i \in I} A_i & = \bigcup \{A_i: i \in I\}\\
+\bigcap_{i \in I} A_i & = \bigcap\{A_i: i \in I\}
+\end{aligned}
+$$
+</p>
+<p>Finally, we may want to think about the set of all <bb>element</bb>s in $A$ which are not in $B$. We can depict this as in Figure 1.2.</p>
 <p><img src="https://i.loli.net/2020/09/03/96izN5GuPJ7DFVs.png" alt="DifferenceofSets" /></p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.8【Difference】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.8【Difference】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">The <bb>set difference</bb> $A \setminus B$ is the set of all <bb>element</bb>s of $A$ which are not also <bb>element</bb>s of $B$, i.e., $$A\setminus B = \lbrace x: x\in A \text{ and } x \notin B\rbrace .$$</span>
@@ -2111,7 +2133,7 @@ Prove that if $A \subsetneq B$, then $B \setminus A \neq \varnothing$.</p>
 <p>How should we think about ordered pairs in set theory? Crucially, we want to preserve the idea that ordered pairs are identical iff they share the same first element and share the same second element, i.e.: $$⟨a, b⟩= ⟨c, d⟩\text{ iff both }a = c \text{ and }b=d.$$ We can define ordered pairs in set theory using the Wiener-Kuratowski definition.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.9【Ordered pair】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.9【Ordered pair】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">$⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace $.</span>
@@ -2125,7 +2147,7 @@ Using Definition 1.9, prove that $⟨a, b⟩= ⟨c, d⟩$ iff both $a = c$ and $
 <p>Certain sets of ordered pairs, or other ordered $n$-tuples, will be useful.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.10【Cartesian product】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.10【Cartesian product】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Given sets $A$ and $B$, their <bb>Cartesian product</bb> $A \times B$ is<br />
@@ -2134,7 +2156,7 @@ defined by $$A \times B = \lbrace ⟨x, y⟩: x \in A \text{ and } y \in B\rbrac
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.12</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.12</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">If $A = \lbrace 0, 1\rbrace $, and $B = \lbrace 1, a, b\rbrace $, then their product is<br />
@@ -2143,7 +2165,7 @@ $$A \times B = \lbrace  ⟨0, 1⟩, ⟨0, a⟩, ⟨0, b⟩, ⟨1, 1⟩, ⟨1, a�
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.13</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.13</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>If $A$ is a set, the product of $A$ with itself, $A \times A$, is also written $A^2$. It is the set of <bb>all</bb> pairs $⟨x, y⟩$ with $x, y \in A$. The set of all triples $⟨x, y, z⟩$ is $A^3$, and so on. We can give a recursive definition:</p>
@@ -2162,15 +2184,15 @@ List all <bb>element</bb>s of $\lbrace 1, 2, 3\rbrace ^3$.</p>
 </blockquote>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.1</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.1</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If $A$ has $n$ <bb>element</bb>s and $B$ has $m$ <bb>element</bb>s, then $A \times B$ has $n\cdot m$ elements.</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.1 之證明</bb><br />
-For every <bb>element</bb> $x$ in $A$, there are $m$ <bb>element</bb>s of the form $⟨x, y⟩ \in A \times B$. Let $B_x = \lbrace ⟨x, y⟩: y \in B\rbrace $. Since whenever $x_1 \neq x_2$, $⟨x_1, y⟩ \neq ⟨x_2, y⟩$, $B_{x_1} \cap B_{x_2} = \varnothing$. But if $A = \lbrace x_1, \cdots, x_n\rbrace $, then $A \times B = B_{x_1} \cup \dots \cup B_{x_n}$, and so has $n\cdot m$ <bb>element</bb>s.<br />
+<p><bb>命題 1.1 之證明</bb><br />
+For every <bb>element</bb> $x$ in $A$, there are $m$ <bb>element</bb>s of the form $⟨x, y⟩ \in A \times B$. Let $B_x = \lbrace ⟨x, y⟩: y \in B\rbrace $. Since whenever $x_1 \neq x_2$, $⟨x_1, y⟩ \neq ⟨x_2, y⟩$, $B_{x_1} \cap B_{x_2} = \varnothing$. But if $A = \lbrace x_1, \cdots, x_n\rbrace $, then $A \times B = B_{x_1} \cup \cdots \cup B_{x_n}$, and so has $n\cdot m$ <bb>element</bb>s.<br />
 To visualize this, arrange the <bb>element</bb>s of $A \times B$ in a grid:</p>
 </blockquote>
 <p>
@@ -2192,7 +2214,7 @@ Show, by induction on $k$, that for all $k \ge 1$, if $A$ has $n$ <bb>element</b
 </blockquote>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.14</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.14</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">If $A$ is a set, a <bb>word</bb> over $A$ is any sequence of <bb>element</bb>s of $A$. A sequence can be thought of as an $n$-tuple of <bb>element</bb>s of $A$. For instance, if $A = \lbrace a, b, c\rbrace $, then the sequence &ldquo;$bac$&rsquo;&rsquo; can be thought of as the triple $⟨b, a, c⟩$. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of $A$ as sequences of length $1$, and $\varnothing$ as the sequence of length $0$. The set of <bb>all</bb> words over $A$ then is<br />
@@ -2228,7 +2250,7 @@ For reductio, suppose that $R = \lbrace x: x \notin x\rbrace $ exists. Then $R \
 <p>In the same way we can construct a subset of $\mathbb{N}^{2}$ for any relation between numbers. Conversely, given any set of pairs of numbers $S \subseteq \mathbb{N}^{2}$, there is a corresponding relation between numbers, namely, the relationship $n$ bears to $m$ if and only if $⟨n, m⟩ \in S$. This justifies the following definition:</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.11【Binary relation】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.11【Binary relation】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A <bb>binary relation</bb> on a set $A$ is a subset of $A^{2}$. If $R \subseteq A^{2}$ is a binary relation on $A$ and $x, y \in A$, we sometimes write $Rxy$ (or $xRy$) for $⟨x, y⟩ \in R$.</span>
@@ -2236,7 +2258,7 @@ For reductio, suppose that $R = \lbrace x: x \notin x\rbrace $ exists. Then $R \
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.15</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.15</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>The set $\mathbb{N}^{2}$ of pairs of natural numbers can be listed in a<br />
@@ -2284,7 +2306,7 @@ $$
 <p>Some kinds of relations turn out to be so common that they have been given special names.  For instance, $\leqslant$ and $\subseteq$ both relate their respective domains (say, $\mathbb{N}$ in the case of $\leqslant$ and $\mathscr{P}({A})$ in the case of $\subseteq$) in similar ways.  To get at exactly how these relations are similar, and how they differ, we categorize them according to some special properties that relations can have.  It turns out that (combinations of) some of these special properties are especially important: orders and equivalence relations.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.12【Reflexivity】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.12【Reflexivity】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>reflexive</bb> iff, for every $x \in A$, $Rxx$.</span>
@@ -2292,7 +2314,7 @@ $$
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.13【Transitivity】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.13【Transitivity】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>transitive</bb> iff, whenever $Rxy$ and $Ryz$, then also $Rxz$.</span>
@@ -2300,7 +2322,7 @@ $$
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.14【Symmetry】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.14【Symmetry】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>symmetric</bb> iff, whenever $Rxy$, then also $Ryx$.</span>
@@ -2308,7 +2330,7 @@ $$
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.15【Anti-symmetry】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.15【Anti-symmetry】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>anti-symmetric</bb> iff, whenever both $Rxy$ and $Ryx$, then $x=y$ (or, in other words: if $x\neq y$ then either $\lnot Rxy$ or $\lnot Ryx$).</span>
@@ -2317,7 +2339,7 @@ $$
 <p>In a symmetric relation, $Rxy$ and $Ryx$ always hold together, or neither holds.  In an anti-symmetric relation, the only way for $Rxy$ and $Ryx$ to hold together is if $x = y$.  Note that this does not <bb>require</bb> that $Rxy$ and $Ryx$ holds when $x = y$, only that it isn&rsquo;t ruled out.  So an anti-symmetric relation can be reflexive, but it is not the case that every anti-symmetric relation is reflexive.  Also note that being anti-symmetric and merely not being symmetric are different conditions.  In fact, a relation can be both symmetric and anti-symmetric at the same time (e.g., the identity relation is).</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.16【Connectivity】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.16【Connectivity】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is <bb>connected</bb> if for all $x,y\in X$, if $x \neq y$, then either $Rxy$ or $Ryx$.</span>
@@ -2329,7 +2351,7 @@ Give examples of relations that are (a) reflexive and symmetric but not transiti
 </blockquote>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.17【Irreflexivity】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.17【Irreflexivity】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is called <bb>irreflexive</bb> if, for all $x \in A$, not $Rxx$.</span>
@@ -2337,7 +2359,7 @@ Give examples of relations that are (a) reflexive and symmetric but not transiti
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.18【Asymmetry】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.18【Asymmetry】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ is called <bb>asymmetric</bb> if for no pair $x,y\in A$ we have both $Rxy$ and $Ryx$.</span>
@@ -2350,7 +2372,7 @@ transitive. Relations $R$ that have all three of these properties are very<br />
 common.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.19【Equivalence relation】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.19【Equivalence relation】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ that is reflexive, symmetric, and transitive is called an <bb>equivalence relation</bb>. <bb>element</bb>s $x$ and $y$ of $A$ are said to be <bb>$R$-equivalent</bb> if $Rxy$.</span>
@@ -2359,7 +2381,7 @@ common.</p>
 <p>Equivalence relations give rise to the notion of an <bb>equivalence class</bb>. An equivalence relation &ldquo;chunks up&rsquo;&rsquo; the domain into different partitions. Within each partition, all the objects are related to one another; and no objects from different partitions relate to one another. Sometimes, it&rsquo;s helpful just to talk about these partitions <bb>directly</bb>. To that end, we introduce a definition:</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.20【Equivalence class】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.20【Equivalence class】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Let $R \subseteq A^2$ be an equivalence relation. For each $x \in A$, the <bb>equivalence class</bb> of $x$ in $A$ is the set $[x]_R = \lbrace y \in A: Rxy\rbrace $. The <bb>quotient</bb> of $A$ under $R$ is $A/_R = \lbrace [x]_R: x \in A\rbrace $, i.e., the set of these equivalence classes.</span>
@@ -2368,20 +2390,20 @@ common.</p>
 <p>The next result vindicates the definition of an equivalence class, in proving that the equivalence classes are indeed the partitions of $A$:</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.2</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.2</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If $R \subseteq A^2$ is an equivalence relation, then $Rxy$ iff $[x]_R = [y]_R$.</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.2 之證明</bb><br />
+<p><bb>命題 1.2 之證明</bb><br />
 For the left-to-right direction, suppose $Rxy$, and let $z \in [x]_R$. By definition, then, $Rxz$. Since $R$ is an equivalence relation, $Ryz$. (Spelling this out: as $Rxy$ and $R$ is symmetric we have $Ryx$, and as $Rxz$ and $R$ is transitive we have $Ryz$.) So $z \in [y]_R$. Generalising, $[x]_R \subseteq [y]_R$. But exactly similarly, $[y]_R \subseteq [x]_R$. So $[x]_R = [y]_R$, by extensionality.<br />
 For the right-to-left direction, suppose $[x]_R = [y]_R$. Since $R$ is reflexive, $Ryy$, so $y \in [y]_R$. Thus also $y \in [x]_R$ by the assumption that $[x]_R = [y]_R$. So $Rxy$.</p>
 </blockquote>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.16</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.16</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>A nice example of equivalence relations comes from modular arithmetic. For any $a$, $b$, and $n \in \mathbb{N}$, say that $a \equiv_n b$ iff dividing $a$ by $n$ gives remainder $b$. (Somewhat more symbolically: $a \equiv_n b$ iff $(\exists k \in \mathbb{N})a - b = kn$.) Now, $\equiv_n$ is an equivalence relation, for any $n$. And there are exactly $n$ distinct equivalence classes generated by $\equiv_n$; that is, ${\mathbb{N}/}_{{\equiv}_n}$ has  $n$  elements. These are:</p>
@@ -2407,7 +2429,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
 <p>Many of our comparisons involve describing some objects as being &ldquo;less than&rsquo;&rsquo;, &ldquo;equal to&rsquo;&rsquo;, or &ldquo;greater than&rsquo;&rsquo; other objects, in a certain respect. These involve <bb>order</bb> relations. But there are different kinds of order relations. For instance, some require that any two objects be comparable, others don&rsquo;t. Some include identity (like $\leqslant$) and some exclude it (like $&lt;$). It will help us to have a taxonomy here.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.21【Preorder】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.21【Preorder】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A relation which is both reflexive and transitive is called a <bb>preorder.</bb></span>
@@ -2415,7 +2437,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.22【Partial order】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.22【Partial order】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A preorder which is also anti-symmetric is called a <bb>partial order</bb>.</span>
@@ -2423,7 +2445,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.23【Linear order】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.23【Linear order】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A partial order which is also connected is called a <bb>total order</bb> or <bb>linear order.</bb></span>
@@ -2432,7 +2454,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
 <p>Every linear order is also a partial order, and every partial order is also a preorder, but the converses don&rsquo;t hold.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.17</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.17</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Every linear order is also a partial order, and every partial order is also a preorder, but the converses don&rsquo;t hold. The universal relation on $A$ is a preorder, since it is reflexive and transitive. But, if $A$ has more than one <bb>element</bb>, the universal relation is not anti-symmetric, and so not a partial order.</span>
@@ -2440,7 +2462,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.18</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.18</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Consider the <bb>no longer than</bb> relation $\preccurlyeq$ on $\mathbb{B}^*$: $x \preccurlyeq y$ iff $\text{len } {x} \le \text{len } {y}$. This is a preorder (reflexive and transitive), and even connected, but not a partial order, since it is not anti-symmetric. For instance, $01 \preccurlyeq 10$ and $10 \preccurlyeq 01$, but $01 \neq 10$.</span>
@@ -2448,7 +2470,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.19</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.19</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">An important partial order is the relation $\subseteq$ on a set of sets. This is not in general a linear order, since if $a \neq b$ and we consider $\mathscr{P}(\lbrace a, b\rbrace ) = \lbrace \varnothing, \lbrace a\rbrace , \lbrace b\rbrace , \lbrace a,b\rbrace \rbrace $, we see that $\lbrace a\rbrace  \nsubseteq \lbrace b\rbrace $ and $\lbrace a\rbrace  \neq \lbrace b\rbrace $ and $\lbrace b\rbrace \nsubseteq \lbrace a\rbrace $.</span>
@@ -2456,7 +2478,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.20</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.20</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">The relation of <bb>divisibility without remainder</bb> gives us a partial order which isn&rsquo;t a linear order. For integers $n$, $m$, we write $n\mid m$ to mean $n$ (evenly) divides $m$, i.e., iff there is some integer $k$ so that $m=kn$. On $\mathbb{N}$, this is a partial order, but not a linear order: for instance, $2\nmid3$ and also $3\nmid2$. Considered as a relation on $\mathbb{Z}$, divisibility is only a preorder since it is not anti-symmetric: $1\mid-1$ and $-1\mid1$ but $1\neq-1$.</span>
@@ -2464,7 +2486,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.24【Strict order】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.24【Strict order】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A <bb>strict order</bb> is a relation which is irreflexive, asymmetric, and transitive.</span>
@@ -2472,7 +2494,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.25【Strict linear order】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.25【Strict linear order】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A strict order which is also connected is called a <bb>strict linear order.</bb></span>
@@ -2480,7 +2502,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.21</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.21</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">$\leqslant$ is the linear order corresponding to the strict linear order $&lt;$. $\subseteq$ is the partial order corresponding to the strict order $\subsetneq$.</span>
@@ -2488,7 +2510,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.26【Total order】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.26【Total order】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A strict order which is also connected is called a <bb>total order</bb>. This is also sometimes called a <bb>strict linear order</bb>.</span>
@@ -2497,14 +2519,14 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
 <p>Any strict order $R$ on $A$ can be turned into a partial order by adding the diagonal Id$_{A}$, i.e., adding all the pairs $⟨x, x⟩$.  (This is called the <bb>reflexive closure</bb> of $R$.) Conversely, starting from a partial order, one can get a strict order by removing Id$_A$. These next two results make this precise.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.3</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.3</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If $R$ is a strict order on $A$, then $R^+ = R \cup Id_A$ is a partial order. Moreover, if $R$ is total, then $R^+$ is a linear order.</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.3 之證明</bb></p>
+<p><bb>命題 1.3 之證明</bb></p>
 <ol>
 <li>Suppose $R$ is a strict order, i.e., $R \subseteq A^2$ and $R$ is irreflexive, asymmetric, and transitive. Let $R^+ = R \cup Id_A$. We have to show that $R^+$ is reflexive, antisymmetric, and transitive.</li>
 <li>$R^+$ is clearly reflexive, since $⟨x, x⟩ \in Id_A \subseteq R^+$ for all $x \in A.$</li>
@@ -2515,14 +2537,14 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
 </blockquote>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.4</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.4</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If $R$ is a partial order on $X$, then $R^- = R \setminus Id_X$ is a strict order. Moreover, if $R$ is linear, then $R^-$ is total.</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.4 之證明</bb><br />
+<p><bb>命題 1.4 之證明</bb><br />
 This is left as an exercise.</p>
 </blockquote>
 <blockquote>
@@ -2531,7 +2553,7 @@ Give a proof of Proposition 1.4.</p>
 </blockquote>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.22</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.22</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">$\leqslant$ is the linear order corresponding to the total order $&lt;$. $\subseteq$ is the partial order corresponding to the strict order $\subsetneq$.</span>
@@ -2540,21 +2562,21 @@ Give a proof of Proposition 1.4.</p>
 <p>The following simple result which establishes that total orders satisfy an extensionality-like property:</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.5</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.5</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If $&lt;$ totally orders $A$, then: $$(\forall a, b \in A)((\forall x \in A)(x &lt; a \leftrightarrow x &lt; b) \rightarrow a = b)$$</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.5 之證明</bb><br />
+<p><bb>命題 1.5 之證明</bb><br />
 Suppose $(\forall x \in A)(x &lt; a \leftrightarrow x &lt; b)$. If $a &lt; b$, then $a &lt; a$, contradicting the fact that $&lt;$ is irreflexive; so $a \nless b$. Exactly similarly, $b \nless a$. So $a = b$, as $&lt;$ is connected.</p>
 </blockquote>
 <h2 id="graphs">Graphs</h2>
 <p>A <bb>graph</bb> is a diagram in which points&mdash;called &ldquo;nodes&rsquo;&rsquo; or &ldquo;vertices&rsquo;&rsquo; (plural of &ldquo;vertex&rsquo;')&mdash;are connected by edges.  Graphs are a ubiquitous tool in discrete mathematics and in computer science. They are incredibly useful for representing, and visualizing, relationships and structures, from concrete things like networks of various kinds to abstract structures such as the possible outcomes of decisions.  There are many different kinds of graphs in the literature which differ, e.g., according to whether the edges are directed or not, have labels or not, whether there can be edges from a node to the same node, multiple edges between the same nodes, etc. <strong>Directed graphs</strong> have a special connection to relations.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.27【Directed graph】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.27【Directed graph】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A <bb>directed graph</bb> $G = ⟨V, E⟩$ is a set of <bb>vertices</bb> $V$ and a set of <bb>edges</bb> $E \subseteq V^2$.</span>
@@ -2563,7 +2585,7 @@ Suppose $(\forall x \in A)(x &lt; a \leftrightarrow x &lt; b)$. If $a &lt; b$, t
 <p>According to our definition, a graph just is a set together with a relation on that set.  Of course, when talking about graphs, it&rsquo;s only natural to expect that they are graphically represented: we can draw a graph by connecting two vertices $v_1$ and $v_2$ by an arrow iff $⟨v_1, v_2⟩ \in E$.  The only difference between a relation by itself and a graph is that a graph specifies the set of vertices, i.e., a graph may have isolated vertices. The important point, however, is that every relation $R$ on a set $X$ can be seen as a directed graph $⟨X, R⟩$, and conversely, a directed graph $⟨V, E⟩$ can be seen as a relation $E \subseteq V^2$ with the set $V$ explicitly specified.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.23</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.23</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>The graph $⟨V, E⟩$ with $V = \lbrace 1, 2, 3, 4\rbrace $ and $E = \lbrace ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩\rbrace $ looks like this:</p>
@@ -2587,7 +2609,7 @@ we considered the relative difference of relations. Here are some<br />
 other operations we can perform on relations.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.28【Operations on Relations】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.28【Operations on Relations】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;"><p>Let $R$, $S$ be relations, and $A$ be any set.</p>
@@ -2602,7 +2624,7 @@ other operations we can perform on relations.</p>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.24</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.24</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>Let $S \subseteq \mathbb{Z}^2$ be the successor relation on $\mathbb{Z}$, i.e., $S = \lbrace⟨x, y⟩ \in \mathbb{Z}^2: x + 1 = y\rbrace$, so that $Sxy$ iff $x + 1 = y$.</p>
@@ -2617,7 +2639,7 @@ other operations we can perform on relations.</p>
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.29【Transitive closure】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.29【Transitive closure】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;"><p>Let $R \subseteq A^2$ be a binary relation.</p>
@@ -2631,7 +2653,7 @@ other operations we can perform on relations.</p>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.25</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.25</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Take the successor relation $S \subseteq \mathbb{Z}^2$. $S^2xy$ iff $x + 2 = y$, $S^3xy$ iff $x + 3 = y$, etc. So $S^+xy$ iff $x + n = y$ for some $n &gt; 1$. In other words, $S^+xy$ iff $x &lt; y$, and $S^*xy$ iff $x \le y$.</span>
@@ -2648,7 +2670,7 @@ Show that the transitive closure of $R$ is in fact transitive.</p>
 <p>In this mathematical, abstract sense, a function is a <bb>black box</bb>: what matters is only what output is paired with what input, not the method for calculating the output.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.30【Function】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.30【Function】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;"><p>A <bb>function</bb> $f \colon A \to B$ is a mapping of each <bb>element</bb> of $A$ to an <bb>element</bb> of $B$.</p>
@@ -2663,7 +2685,7 @@ Show that the transitive closure of $R$ is in fact transitive.</p>
 <p><img src="https://i.loli.net/2020/09/04/Ajr4cVnlOqgduWo.png" alt="defnoffunction" /></p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.26</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.26</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Multiplication takes pairs of natural numbers as inputs and maps them to natural numbers as outputs, so goes from $\mathbb{N} \times \mathbb{N}$ (the domain) to $\mathbb{N}$ (the codomain). As it turns out, the range is also $\mathbb{N}$, since every $n \in \mathbb{N}$ is $n \times 1$.</span>
@@ -2671,7 +2693,7 @@ Show that the transitive closure of $R$ is in fact transitive.</p>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.27</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.27</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Multiplication is a function because it pairs each input&mdash;each pair of natural numbers&mdash;with a single output: $\times \colon \mathbb{N}^2 \to \mathbb{N}$. By contrast, the square root operation applied to the domain $\mathbb{N}$ is not functional, since each positive integer $n$ has two square roots: $\sqrt{n}$ and $-\sqrt{n}$. We can make it functional by only returning the positive square root: $\sqrt{\phantom{X}} \colon \mathbb{N} \to \mathbb{R}$.</span>
@@ -2679,7 +2701,7 @@ Show that the transitive closure of $R$ is in fact transitive.</p>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.28</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.28</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">The relation that pairs each student in a class with their final grade is a function&mdash;no student can get two different final grades in the same class. The relation that pairs each student in a class with their parents is not a function: students can have zero, or two, or more parents.</span>
@@ -2693,7 +2715,7 @@ are defined, we must make sure that for each argment we specify one,<br />
 and only one, value.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.29</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.29</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Let $f \colon \mathbb{N} \to \mathbb{N}$ be defined such that $f(x) = x+1$. This is a definition that specifies $f$ as a function which takes in natural numbers and outputs natural numbers. It tells us that, given a natural number $x$, $f$ will output its successor $x+1$. In this case, the codomain $\mathbb{N}$ is not the range of $f$, since the natural number $0$ is not the successor of any natural number. The range of $f$ is the set of all positive integers, $\mathbb{Z}^{+}$.</span>
@@ -2701,7 +2723,7 @@ and only one, value.</p>
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.30</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.30</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Let $g \colon \mathbb{N} \to \mathbb{N}$ be defined such that $g(x) = x+2-1$. This tells us that $g$ is a function which takes in natural numbers and outputs natural numbers. Given a natural number $n$, $g$ will output the predecessor of the successor of the successor of $x$, i.e., $x+1$.</span>
@@ -2710,7 +2732,7 @@ and only one, value.</p>
 <p>We just considered two functions, $f$ and $g$, with different <bb>definitions</bb>. However, these are the <bb>same function</bb>. After all, for any natural number $n$, we have that $f(n) = n+1 = n+2-1 = g(n)$. Otherwise put: our  definitions for $f$ and $g$ specify the same mapping by means of different equations. Implicitly, then, we are relying upon a principle of extensionality for functions, $$\text{if }\forall x, f(x) = g(x)\text{, then }f = g$$ provided that $f$ and $g$ share the same domain and codomain.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.31</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.31</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>We can also define functions by cases. For instance, we could define $h \colon \mathbb{N} \to \mathbb{N}$  by</p>
@@ -2729,7 +2751,7 @@ Since every natural number is either even or odd, the output of this function wi
 <p><img src="https://i.loli.net/2020/09/04/5nBmbKUJP2aeDc9.png" alt="surjectivefunction.png" /></p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.31【Surjective function】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.31【Surjective function】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A function $f \colon A \rightarrow B$ is <bb>surjective</bb> iff $B$ is also the range of $f$, i.e., for every $y \in B$ there is at least one $x \in A$ such that $f(x) = y$, or in symbols: $$(\forall y \in B)(\exists x \in A)f(x) = y.$$ We call such a function a <bb>surjection</bb> from $A$ to $B$.</span>
@@ -2741,7 +2763,7 @@ Since every natural number is either even or odd, the output of this function wi
 <p><img src="https://i.loli.net/2020/09/04/gVLDQzdtlKMwjpN.png" alt="222.png" /></p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.32【Injective function】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.32【Injective function】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A function $f \colon A \rightarrow B$ is <bb>injective</bb> iff for each $y \in B$ there is at most one $x \in A$ such that $f(x) = y$. We call such a function an <bb>injection</bb> from $A$ to $B$.</span>
@@ -2750,7 +2772,7 @@ Since every natural number is either even or odd, the output of this function wi
 <p>If you want to show that $f$ is an <bb>injection</bb>, you need to show that for any <bb>element</bb>s $x$ and $y$ of $f$'s domain, if $f(x)=f(y)$, then $x=y$.</p>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.32</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.32</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>The constant function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = 1$ is neither <bb>injective</bb>, nor <bb>surjective</bb>. The identity function $f\colon \mathbb{N} \to \mathbb{N}$ given by $f(x) = x$ is both <bb>injective</bb> and <bb>surjective</bb>.<br />
@@ -2768,7 +2790,7 @@ The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:</p>
 <p><img src="https://i.loli.net/2020/09/04/PpOsUwucAmM3qhv.png" alt="333.png" /></p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.33【bijection】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.33【bijection】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A function $f \colon A \to B$ is <bb>bijective</bb> iff it is both <bb>surjective</bb> and <bb>injective</bb>. We call such a function a <bb>bijection</bb> from $A$ to $B$ (or between $A$ and $B$).</span>
@@ -2778,7 +2800,7 @@ The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:</p>
 <p>A function which maps <bb>element</bb>s of $A$ to <bb>element</bb>s of $B$ obviously defines a relation between $A$ and $B$, namely the relation which holds between $x$ and $y$ iff $f(x) = y$.  In fact, we might even&mdash;if we are interested in reducing the building blocks of mathematics for instance&mdash;<bb>identify</bb> the function $f$ with this relation, i.e., with a set of pairs.  This then raises the question: which relations define functions in this way?</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.34【Graph of a function】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.34【Graph of a function】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Let $f\colon A \to B$ be a function. The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$ defined by $$R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.$$</span>
@@ -2788,7 +2810,7 @@ The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:</p>
 <p>Similarly, if a relation is &ldquo;functional&rsquo;&rsquo;, then it is the graph of a function.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.6</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.6</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;"><p>Let $R \subseteq A \times B$ be such that:</p>
@@ -2803,13 +2825,13 @@ The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:</p>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.6 之證明</bb><br />
+<p><bb>命題 1.6 之證明</bb><br />
 Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq y$ such that $Rxz$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, this $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$.</p>
 </blockquote>
 <p>Every function $f\colon A \to B$ has a graph, i.e., a relation on $A \times B$ defined by $f(x) = y$. On the other hand, every relation $R \subseteq A \times B$ with the properties given in Proposition 1.6 is the graph of a function $f \colon A \to B$. Because of this close connection between functions and their graphs, we can think of a function simply as its graph. In other words, functions can be identified with certain relations, i.e., with certain sets of tuples. Note, though, that the spirit of this &ldquo;identification&rsquo;&rsquo; is as in §1.1.1（P.28）: it is not a claim about the metaphysics of functions, but an observation that it is convenient to <bb>treat</bb> functions as certain sets. One reason that this is so convenient, is that We can now consider performing similar operations on functions as we performed on relations (see §1.1.6（P.34）). In particular:</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.35</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.35</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;"><p>Let $f \colon A \to B$ be a function with $C\subseteq A$.</p>
@@ -2827,7 +2849,7 @@ Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq y$ such t
 <p>This is made more precise by the notion of an inverse of a function.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.36【Inverses of Functions】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.36【Inverses of Functions】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A function $g \colon B \to A$ is an <bb>inverse</bb> of a function $f \colon A \to B$ if $f(g(y)) = y$ and $g(f(x)) = x$ for all $x \in A$ and $y \in B$.</span>
@@ -2837,14 +2859,14 @@ Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq y$ such t
 <p>Now we will determine when functions have inverses. A good candidate for an inverse of $f\colon A \to B$ is $g\colon B \to A$ &ldquo;defined by&rsquo;&rsquo; $$g(y) = \text{&ldquo;the&rsquo;&rsquo; $x$ such that $f(x) = y$.}$$ But the scare quotes around &ldquo;defined by&rsquo;&rsquo; (and &ldquo;the&rsquo;') suggest that this is not a definition.  At least, it will not always work, with complete generality. For, in order for this definition to specify a function, there has to be one and only one $x$ such that $f(x) = y$&mdash;the output of $g$ has to be uniquely specified. Moreover, it has to be specified for every $y \in B$.  If there are $x_1$ and $x_2 \in A$ with $x_1 \neq x_2$ but $f(x_1) = f(x_2)$, then $g(y)$ would not be uniquely specified for $y = f(x_1) = f(x_2)$. And if there is no $x$ at all such that $f(x) = y$, then $g(y)$ is not specified at all. In other words, for $g$ to be defined, $f$ must be both <bb>injective</bb> and <bb>surjective</bb>.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.7</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.7</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Every <bb>bijection</bb> has a unique inverse.</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.7 之證明</bb><br />
+<p><bb>命題 1.7 之證明</bb><br />
 Exercise.</p>
 </blockquote>
 <blockquote>
@@ -2858,14 +2880,14 @@ Show that if $f\colon A \to B$ has an inverse $g$, then $f$ is <bb>bijective</bb
 </blockquote>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.8</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.8</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Every function $f$ has at most one inverse.</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.8 之證明</bb><br />
+<p><bb>命題 1.8 之證明</bb><br />
 Exercise.</p>
 </blockquote>
 <blockquote>
@@ -2878,7 +2900,7 @@ Prove Proposition 1.8. That is, show that if $g\colon B \to A$ and $g&rsquo;\col
 <p><img src="https://i.loli.net/2020/09/05/YjaWscoL5tTVUB3.png" alt="compositionoffunction" /></p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.37【Composition】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.37【Composition】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Let $f\colon A \to B$ and $g\colon B \to C$ be functions. The <bb>composition</bb> of $f$ with $g$ is $g\circ f \colon A \to C$, where $(g\circ f)(x) = g(f(x))$.</span>
@@ -2886,7 +2908,7 @@ Prove Proposition 1.8. That is, show that if $g\colon B \to A$ and $g&rsquo;\col
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.33</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.33</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Consider the functions $f(x) = x + 1$, and $g(x) = 2x$. Since $(g\circ f)(x) = g(f(x))$, for each input $x$ you must first take its successor, then multiply the result by two. So their composition is given by $(g\circ f)(x) = 2(x+1)$.</span>
@@ -2908,7 +2930,7 @@ Suppose $f \colon A \to B$ and $g \colon B \to C$. Show that the graph of $g\cir
 <p>It is sometimes useful to relax the definition of function so that it is not required that the output of the function is defined for all possible inputs. Such mappings are called <bb>partial functions</bb>.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.38【Partial function】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.38【Partial function】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A <bb>partial function</bb> $f \colon A \nrightarrow B$ is a mapping which assigns to every <bb>element</bb> of $A$ at most one <bb>element</bb> of $B$. If $f$ assigns an element of $B$ to $x \in A$, we say $f(x)$ is <bb>defined</bb>, and otherwise <bb>undefined</bb>. If $f(x)$ is defined, we write $f(x) \downarrow$, otherwise $f(x) \uparrow$. The <bb>domain</bb> of a partial function $f$ is the subset of $A$ where it is defined, i.e., $\text{dom}(f) = \lbrace x \in A: f(x) \downarrow\rbrace$.</span>
@@ -2916,7 +2938,7 @@ Suppose $f \colon A \to B$ and $g \colon B \to C$. Show that the graph of $g\cir
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.34</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.34</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">Every function $f\colon A \to B$ is also a partial function. Partial functions that are defined everywhere on $A$&mdash;i.e., what we so far have simply called a function&mdash;are also called <bb>total</bb> functions.</span>
@@ -2924,7 +2946,7 @@ Suppose $f \colon A \to B$ and $g \colon B \to C$. Show that the graph of $g\cir
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.35</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.35</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">The partial function $f \colon \mathbb{R} \nrightarrow \mathbb{R}$ given by $f(x) = 1/x$ is undefined for $x = 0$, and defined everywhere else.</span>
@@ -2936,7 +2958,7 @@ Given $f\colon A \nrightarrow B$, define the partial function $g\colon B \nright
 </blockquote>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.39【Graph of a partial function】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.39【Graph of a partial function】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Let $f\colon A \nrightarrow B$ be a partial function. The <bb>graph</bb> of $f$ is the relation $R_f \subseteq A \times B$ defined by $$R_f = \lbrace ⟨x,y⟩: f(x) = y\rbrace.$$</span>
@@ -2944,14 +2966,14 @@ Given $f\colon A \nrightarrow B$, define the partial function $g\colon B \nright
   </div>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.9</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.9</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Suppose $R \subseteq A \times B$ has the property that whenever $Rxy$ and $Rxy'$ then $y = y'$.  Then $R$ is the graph of the partial function $f\colon X \nrightarrow Y$ defined by: if there is a $y$ such that $Rxy$, then $f(x) = y$, otherwise $f(x) \uparrow$.  If $R$ is also <bb>serial</bb>, i.e., for each $x \in X$ there is a $y \in Y$ such that $Rxy$, then $f$ is total.</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.9 之證明</bb><br />
+<p><bb>命題 1.9 之證明</bb><br />
 Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$ such that $Rxy'$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, that $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$ and $f$ is total if $R$ is serial.</p>
 </blockquote>
 <h1 id="基数集合大小的度量">基数：集合大小的度量</h1>
@@ -2964,7 +2986,7 @@ Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$
 <p>We&rsquo;ve already given examples of sets by listing their <bb>element</bb>s. Let&rsquo;s discuss in more general terms how and when we can list the <bb>element</bb>s of a set, even if that set is infinite.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.40【Enumeration, informally】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.40【Enumeration, informally】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">Informally, an <bb>enumeration</bb> of a set $A$ is a list (possibly infinite) of <bb>element</bb>s of $A$ such that every <bb>element</bb> of $A$ appears on the list at some finite position. If $A$ has an enumeration, then $A$ is said to be <bb>enumerable</bb>.</span>
@@ -2976,36 +2998,36 @@ Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$
 <li>We can have different enumerations of the same set $A$ which differ by the order in which the <bb>element</bb>s appear: $4$, $1$, $25$, $16$, $9$ enumerates the (set of the) first five square numbers just as well as $1$, $4$, $9$, $16$, $25$ does.</li>
 <li>Redundant enumerations are still enumerations: $1$, $1$, $2$, $2$, $3$, $3, \cdots$, enumerates the same set as $1$, $2$, $3, \cdots$, does.</li>
 <li>Order and redundancy <bb>do</bb> matter when we specify an enumeration: we can enumerate the positive integers beginning with $1$, $2$, $3$, $1, \cdots$, but the pattern is easier to see when enumerated in the standard way as $1$, $2$, $3$, $4, \cdots$.</li>
-<li>Enumerations must have a beginning: \dots, $3$, $2$, $1$ is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, &ldquo;at what position in the list does the number 76 appear?&rsquo;&rsquo;</li>
+<li>Enumerations must have a beginning: \cdots, $3$, $2$, $1$ is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, &ldquo;at what position in the list does the number 76 appear?&rsquo;&rsquo;</li>
 <li>The following is not an enumeration of the positive integers: $1$, $3$, $5, \cdots, 2$, $4$, $6, \cdots$. The problem is that the even numbers occur at places $\infty + 1$, $\infty + 2$, $\infty + 3$, rather than at finite positions.</li>
 <li>The empty set is enumerable: it is enumerated by the empty list!</li>
 </ol>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◎Prop 1.9</span>
+  	<span style="font-family:SYHei Heavy;">◎命題 1.10</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">If $A$ has an enumeration, it has an enumeration without repetitions.</span>
   </div>
   </div>
 <blockquote>
-<p><bb>Proposition 1.10 之證明</bb><br />
+<p><bb>命題 1.10 之證明</bb><br />
 Suppose $A$ has an enumeration $x_1$, $x_2, \cdots$, in which each $x_i$ is an <bb>element</bb> of $A$.  We can remove repetitions from an enumeration by removing repeated <bb>element</bb>s. For instance, we can turn the enumeration into a new one in which we list $x_i$ if it is an <bb>element</bb> of $A$ that is not among $x_1, \cdots, x_{i-1}$ or remove $x_i$ from the list if it already appears among $x_1, \cdots, x_{i-1}$.</p>
 </blockquote>
 <p>The last argument shows that in order to get a good handle on enumerations and <bb>enumerable</bb> sets and to prove things about them, we need a more precise definition.  The following provides it.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.41【Enumeration, formally】</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.41【Enumeration, formally】</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">An <bb>enumeration</bb> of a set $A \neq \varnothing$ is any <bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.</span>
   </div>
   </div>
-<p>Let&rsquo;s convince ourselves that the formal definition and the informal definition using a possibly infinite list are equivalent. First, any <bb>surjective</bb> function from $\mathbb{Z}^{+}$ to a set $A$ enumerates $A$. Such a function determines an enumeration as defined informally above: the list $f(1)$, $f(2)$, $f(3)$, \dots. Since $f$ is <bb>surjective</bb>, every <bb>element</bb> of $A$ is guaranteed to be the value of $f(n)$ for some $n \in \mathbb{Z}^{+}$. Hence, every <bb>element</bb> of $A$ appears at some finite position in the list. Since the function may not be <bb>injective</bb>, the list may be redundant, but that is acceptable (as noted above).</p>
+<p>Let&rsquo;s convince ourselves that the formal definition and the informal definition using a possibly infinite list are equivalent. First, any <bb>surjective</bb> function from $\mathbb{Z}^{+}$ to a set $A$ enumerates $A$. Such a function determines an enumeration as defined informally above: the list $f(1)$, $f(2)$, $f(3)$, \cdots. Since $f$ is <bb>surjective</bb>, every <bb>element</bb> of $A$ is guaranteed to be the value of $f(n)$ for some $n \in \mathbb{Z}^{+}$. Hence, every <bb>element</bb> of $A$ appears at some finite position in the list. Since the function may not be <bb>injective</bb>, the list may be redundant, but that is acceptable (as noted above).</p>
 <p>On the other hand, given a list that enumerates all <bb>element</bb>s of $A$, we can define a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$ by letting $f(n)$ be the $n$th <bb>element</bb> of the list, or the final <bb>element</bb> of the list if there is no $n$th <bb>element</bb>. The only case where this does not produce a <bb>surjective</bb> function is when $A$ is empty, and hence the list is empty. So, every non-empty list determines a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$.</p>
   <div>
   <div class="dtpcboxtitle">
-  	<span style="font-family:SYHei Heavy;">◉Defn 1.42</span>
+  	<span style="font-family:SYHei Heavy;">◎定義 1.42</span>
   </div>
   <div class="dtpcbox">
   <span style="font-family:SYHei Regular;">A set $A$ is <bb>enumerable</bb> iff it is empty or has an enumeration.</span>
@@ -3013,7 +3035,7 @@ Suppose $A$ has an enumeration $x_1$, $x_2, \cdots$, in which each $x_i$ is an <
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.36</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.36</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;">A function enumerating the positive integers ($\mathbb{Z}^{+}$) is simply the identity function given by $f(n) = n$. A function enumerating the natural numbers $\mathbb{N}$ is the function $g(n) = n - 1$.</span>
@@ -3021,7 +3043,7 @@ Suppose $A$ has an enumeration $x_1$, $x_2, \cdots$, in which each $x_i$ is an <
   </div>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.37</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.37</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>The functions $f\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ and $g \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ given by</p>
@@ -3035,21 +3057,20 @@ Suppose $A$ has an enumeration $x_1$, $x_2, \cdots$, in which each $x_i$ is an <
   </div>
 <blockquote>
 <p><bb>Problem 1.23</bb><br />
-Define an enumeration of the positive squares $1$, $4$, $9$, $16, \dots$<br />
-\end{prob}</p>
+Define an enumeration of the positive squares $1$, $4$, $9$, $16, \cdots$</p>
 </blockquote>
   <div>
   <div class="dtpcexboxtitle">
-  	<span style="font-family:SYHei Heavy;">⦿Ex 1.38</span>
+  	<span style="font-family:SYHei Heavy;">◎例 1.38</span>
   </div>
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>The function $f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil$ (where $\lceil x \rceil$ denotes the <bb>ceiling</bb> function, which rounds $x$ up to the nearest integer) enumerates the set of integers $\mathbb{Z}$. Notice how $f$ generates the values of $\mathbb{Z}$ by &ldquo;hopping&rsquo;&rsquo; back and forth between positive and negative integers:</p>
 <p>$$
 \begin{array}{c c c c c c c c}
-f(1) & f(2) & f(3) & f(4) & f(5) & f(6) & f(7) & \dots \\ \\
+f(1) & f(2) & f(3) & f(4) & f(5) & f(6) & f(7) & \cdots \\ \\
 - \lceil \tfrac{0}{2} \rceil & \lceil \tfrac{1}{2}\rceil & - \lceil \tfrac{2}{2} \rceil & \lceil \tfrac{3}{2} \rceil & - \lceil \tfrac{4}{2} \rceil  & \lceil \tfrac{5}{2}
-\rceil & - \lceil \tfrac{6}{2} \rceil & \dots \\ \\
-0 & 1 & -1 & 2 & -2 & 3 & \dots
+\rceil & - \lceil \tfrac{6}{2} \rceil & \cdots \\ \\
+0 & 1 & -1 & 2 & -2 & 3 & \cdots
 \end{array}
 $$</p>
 <p>You can also think of $f$ as defined by cases as follows:</p>
@@ -3064,1294 +3085,391 @@ $$</p>
   </div>
   </div>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if $A$ and $B$ are <bb>enumerable</bb>, so is $A \cup B$. To do<br />
-this, suppose there are <bb>surjective</bb> functions $f\colon \mathbb{Z}^{+} \to<br />
-A$ and $g\colon \mathbb{Z}^{+} \to B$, and define a <bb>surjective</bb><br />
-function $h\colon \mathbb{Z}^{+} \to A \cup B$ and prove that it is<br />
-<bb>surjective</bb>. Also consider the cases where $A$ or $B = \varnothing$.<br />
-\end{prob}</p>
+<p><bb>Problem 1.24</bb><br />
+Show that if $A$ and $B$ are <bb>enumerable</bb>, so is $A \cup B$. To do this, suppose there are <bb>surjective</bb> functions $f\colon \mathbb{Z}^{+} \to A$ and $g\colon \mathbb{Z}^{+} \to B$, and define a <bb>surjective</bb> function $h\colon \mathbb{Z}^{+} \to A \cup B$ and prove that it is <bb>surjective</bb>. Also consider the cases where $A$ or $B = \varnothing$.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if $B \subseteq A$ and $A$ is <bb>enumerable</bb>, so is $B$. To<br />
-do this, suppose there is a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to<br />
-A$. Define a <bb>surjective</bb> function $g\colon \mathbb{Z}^{+} \to B$ and prove<br />
-that it is <bb>surjective</bb>. What happens if $B = \varnothing$?<br />
-\end{prob}</p>
+<p><bb>Problem 1.25</bb><br />
+Show that if $B \subseteq A$ and $A$ is <bb>enumerable</bb>, so is $B$. To do this, suppose there is a <bb>surjective</bb> function $f\colon \mathbb{Z}^{+} \to A$. Define a <bb>surjective</bb> function $g\colon \mathbb{Z}^{+} \to B$ and prove that it is <bb>surjective</bb>. What happens if $B = \varnothing$?</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show by induction on $n$ that if $A_1$, $A_2$, \dots, $A_n$ are all<br />
-<bb>enumerable</bb>, so is $A_1 \cup \dots \cup A_n$. You may assume the<br />
-fact that if two sets $A$ and $B$ are <bb>enumerable</bb>, so is $A \cup<br />
-B$.<br />
-\end{prob}</p>
+<p><bb>Problem 1.26</bb><br />
+Show by induction on $n$ that if $A_1$, $A_2, \cdots, A_n$ are all <bb>enumerable</bb>, so is $A_1 \cup \cdots \cup A_n$. You may assume the fact that if two sets $A$ and $B$ are <bb>enumerable</bb>, so is $A \cup B$.</p>
 </blockquote>
-<p>Although it is perhaps more natural when listing the <bb>element</bb>s of a<br />
-set to start counting from the $1$st <bb>element</bb>, mathematicians like<br />
-to use the natural numbers $\mathbb{N}$ for counting things. They<br />
-talk about the $0$th, $1$st, $2$nd, and so on, <bb>element</bb>s of a list.<br />
-Correspondingly, we can define an enumeration as a <bb>surjective</bb><br />
-function from $\mathbb{N}$ to $A$. Of course, the two definitions are<br />
-equivalent.</p>
+<p>Although it is perhaps more natural when listing the <bb>element</bb>s of a set to start counting from the $1$st <bb>element</bb>, mathematicians like to use the natural numbers $\mathbb{N}$ for counting things. They talk about the $0$th, $1$st, $2$nd, and so on, <bb>element</bb>s of a list. Correspondingly, we can define an enumeration as a <bb>surjective</bb> function from $\mathbb{N}$ to $A$. Of course, the two definitions are equivalent.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎命題 1.11</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">There is a <bb>surjection</bb> $f\colon \mathbb{Z}^{+} \to A$ iff there is a <bb>surjection</bb> $g\colon \mathbb{N} \to A$.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>Proposition 1.5</bb><br />
-There is a <bb>surjection</bb> $f\colon \mathbb{Z}^{+} \to A$ iff there is<br />
-a <bb>surjection</bb> $g\colon \mathbb{N} \to A$.<br />
-\end{prop}</p>
+<p><bb>命題 1.11 之證明</bb><br />
+Given a <bb>surjection</bb> $f\colon \mathbb{Z}^{+} \to A$, we can define $g(n) = f(n+1)$ for all $n \in \mathbb{N}$. It is easy to see that $g\colon \mathbb{N} \to A$ is <bb>surjective</bb>. Conversely, given a <bb>surjection</bb> $g\colon \mathbb{N} \to A$, define $f(n) = g(n+1)$.</p>
 </blockquote>
-<p>\begin{proof}<br />
-Given a <bb>surjection</bb> $f\colon \mathbb{Z}^{+} \to A$, we can define $g(n) =<br />
-f(n+1)$ for all $n \in \mathbb{N}$. It is easy to see that $g\colon \mathbb{N}<br />
-\to A$ is <bb>surjective</bb>. Conversely, given a <bb>surjection</bb> $g\colon<br />
-\mathbb{N} \to A$, define $f(n) = g(n+1)$.<br />
-\end{proof}</p>
 <p>This gives us the following result:</p>
-<p>\begin{cor}<br />
-A set $A$ is <bb>enumerable</bb> iff it is empty or there is<br />
-a <bb>surjective</bb> function $f\colon \mathbb{N} \to A$.<br />
-\end{cor}</p>
-<p>We discussed above than an list of <bb>element</bb>s of a set $A$ can be<br />
-turned into a list without repetitions. This is also true for<br />
-enumerations, but a bit harder to formulate and prove rigorously. Any<br />
-function $f\colon \mathbb{Z}^{+} \to A$ must be defined for all $n \in<br />
-\mathbb{Z}^{+}$. If there are only finitely many <bb>element</bb>s in $A$ then we<br />
-clearly cannot have a function defined on the infinitely many<br />
-<bb>element</bb>s of $\mathbb{Z}^{+}$ that takes as values all the <bb>element</bb>s<br />
-of $A$ but never takes the same value twice. In that case, i.e., in<br />
-the case where the list without repetitions is finite, we must choose<br />
-a different domain for $f$, one with only finitely many <bb>element</bb>s.<br />
-Not having repetitions means that $f$ must be <bb>injective</bb>. Since it<br />
-is also <bb>surjective</bb>, we are looking for a <bb>bijection</bb> between some<br />
-finite set $\lbrace 1, \dots, n\rbrace $ or $\mathbb{Z}^{+}$ and $A$.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">〶推論 1.0</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A set $A$ is <bb>enumerable</bb> iff it is empty or there is a <bb>surjective</bb> function $f\colon \mathbb{N} \to A$.</span>
+  </div>
+  </div>
+<p>We discussed above than an list of <bb>element</bb>s of a set $A$ can be turned into a list without repetitions. This is also true for enumerations, but a bit harder to formulate and prove rigorously. Any function $f\colon \mathbb{Z}^{+} \to A$ must be defined for all $n \in \mathbb{Z}^{+}$. If there are only finitely many <bb>element</bb>s in $A$ then we clearly cannot have a function defined on the infinitely many <bb>element</bb>s of $\mathbb{Z}^{+}$ that takes as values all the <bb>element</bb>s of $A$ but never takes the same value twice. In that case, i.e., in the case where the list without repetitions is finite, we must choose a different domain for $f$, one with only finitely many <bb>element</bb>s. Not having repetitions means that $f$ must be <bb>injective</bb>. Since it is also <bb>surjective</bb>, we are looking for a <bb>bijection</bb> between some finite set $\lbrace 1, \cdots, n\rbrace $ or $\mathbb{Z}^{+}$ and $A$.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎命題 1.12</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">If $f\colon \mathbb{Z}^{+} \to A$ is <bb>surjective</bb> (i.e., an enumeration of $A$), there is a <bb>bijection</bb> $g\colon Z \to A$ where $Z$ is either $\mathbb{Z}^{+}$ or $\lbrace 1, \cdots, n\rbrace $ for some $n \in \mathbb{Z}^{+}$.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>Proposition 1.5</bb><br />
-If $f\colon \mathbb{Z}^{+} \to A$ is <bb>surjective</bb> (i.e., an enumeration<br />
-of $A$), there is a <bb>bijection</bb> $g\colon Z \to A$ where $Z$ is<br />
-either $\mathbb{Z}^{+}$ or $\lbrace 1, \dots, n\rbrace $ for some $n \in \mathbb{Z}^{+}$.<br />
-\end{prop}</p>
+<p><bb>命題 1.12 之證明</bb><br />
+We define the function $g$ recursively: Let $g(1) = f(1)$. If $g(i)$ has already been defined, let $g(i+1)$ be the first value of $f(1), f(2),\cdots$, not already among $g(1), \cdots, g(i)$, if there is one. If $A$ has just $n$ <bb>element</bb>s, then $g(1), \cdots, g(n)$ are all defined, and so we have defined a function $g\colon \lbrace 1, \cdots, n\rbrace \to A$. If $A$ has infinitely many <bb>element</bb>s, then for any $i$ there must be an <bb>element</bb> of $A$ in the enumeration $f(1)$, $f(2), \cdots$, which is not already among $g(1), \cdots, g(i)$. In this case we have defined a funtion $g\colon \mathbb{Z}^{+} \to A$.<br />
+The function $g$ is <bb>surjective</bb>, since any element of $A$ is among $f(1)$, $f(2)$, \cdots{} (since $f$ is <bb>surjective</bb>) and so will eventually be a value of $g(i)$ for some $i$. It is also <bb>injective</bb>, since if there were $j &lt; i$ such that $g(j) = g(i)$, then $g(i)$ would already be among $g(1), \cdots, g(i-1)$, contrary to how we defined $g$.</p>
 </blockquote>
-<p>\begin{proof}<br />
-We define the function $g$ recursively: Let $g(1) = f(1)$. If $g(i)$<br />
-has already been defined, let $g(i+1)$ be the first value of $f(1)$,<br />
-$f(2)$, \dots{} not already among $g(1)$, \dots, $g(i)$, if there is<br />
-one. If $A$ has just $n$ <bb>element</bb>s, then $g(1)$, \dots, $g(n)$ are all<br />
-defined, and so we have defined a function $g\colon \lbrace 1, \dots, n\rbrace<br />
-\to A$. If $A$ has infinitely many <bb>element</bb>s, then for any $i$<br />
-there must be an <bb>element</bb> of $A$ in the enumeration $f(1)$, $f(2)$,<br />
-\dots, which is not already among $g(1)$, \dots, $g(i)$. In this<br />
-case we have defined a funtion $g\colon \mathbb{Z}^{+} \to A$.</p>
-<p>The function $g$ is <bb>surjective</bb>, since any element of $A$ is<br />
-among $f(1)$, $f(2)$, \dots{} (since $f$ is <bb>surjective</bb>) and so<br />
-will eventually be a value of $g(i)$ for some $i$. It is also<br />
-<bb>injective</bb>, since if there were $j &lt; i$ such that $g(j) = g(i)$,<br />
-then $g(i)$ would already be among $g(1)$, \dots, $g(i-1)$, contrary<br />
-to how we defined $g$.<br />
-\end{proof}</p>
-<p>\begin{cor}<br />
-A set $A$ is <bb>enumerable</bb> iff it is empty or there is a <bb>bijection</bb><br />
-$f\colon N \to A$ where either $N = \mathbb{N}$ or $N = \lbrace 0, \dots, n\rbrace $ for<br />
-some $n \in \mathbb{N}$.<br />
-\end{cor}</p>
-<p>\begin{proof}<br />
-$A$ is <bb>enumerable</bb> iff $A$ is empty or there is a <bb>surjective</bb><br />
-$f\colon \mathbb{Z}^{+} \to A$. By Proposition \ref{prop:enum-bij}, the latter holds<br />
-iff there is a <bb>bijective</bb> function $f\colon Z \to A$ where $Z =<br />
-\mathbb{Z}^{+}$ or $Z = \lbrace 1, \dots, n\rbrace $ for some $n \in \mathbb{Z}^{+}$. By the<br />
-same argument as in the proof of Proposition \ref{prop:enum-shift}, that in turn<br />
-is the case iff there is a <bb>bijection</bb> $g\colon N \to A$ where either<br />
-$N = \mathbb{N}$ or $N = \lbrace 0, \dots, n-1\rbrace $.<br />
-\end{proof}</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">〶推論 1.1</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A set $A$ is <bb>enumerable</bb> iff it is empty or there is a <bb>bijection</bb> $f\colon N \to A$ where either $N = \mathbb{N}$ or $N = \lbrace 0, \cdots, n\rbrace $ for some $n \in \mathbb{N}$.</span>
+  </div>
+  </div>
+<blockquote>
+<p><bb>推論 1.1 之證明</bb><br />
+$A$ is <bb>enumerable</bb> iff $A$ is empty or there is a <bb>surjective</bb> $f\colon \mathbb{Z}^{+} \to A$. By Proposition 1.12, the latter holds iff there is a <bb>bijective</bb> function $f\colon Z \to A$ where $Z = \mathbb{Z}^{+}$ or $Z = \lbrace 1, \cdots, n\rbrace $ for some $n \in \mathbb{Z}^{+}$. By the same argument as in the proof of Proposition \ref{prop:enum-shift}, that in turn is the case iff there is a <bb>bijection</bb> $g\colon N \to A$ where either $N = \mathbb{N}$ or $N = \lbrace 0, \cdots, n-1\rbrace $.</p>
+</blockquote>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
-According to Definition \pref{defn:enumerable}, a set $A$ is<br />
-enumerable iff $A = \varnothing$ or there is a <bb>surjective</bb> $f\colon<br />
-\mathbb{Z}^{+} \to A$.  It is also possible to define &ldquo;<bb>enumerable</bb> set&rsquo;&rsquo;<br />
-precisely by: a set is enumerable iff there is a <bb>injective</bb><br />
-function $g\colon A \to \mathbb{Z}^{+}$.  Show that the definitions are<br />
-equivalent, i.e., show that there is a <bb>injective</bb> function<br />
-$g\colon A \to \mathbb{Z}^{+}$ iff either $A = \varnothing$ or there is<br />
-a <bb>surjective</bb> $f\colon \mathbb{Z}^{+} \to A$.<br />
-\end{prob}</p>
+According to Definition1.48（P.63）, a set $A$ is enumerable iff $A = \varnothing$ or there is a <bb>surjective</bb> $f\colon \mathbb{Z}^{+} \to A$.  It is also possible to define &ldquo;<bb>enumerable</bb> set&rdquo; precisely by: a set is enumerable iff there is a <bb>injective</bb> function $g\colon A \to \mathbb{Z}^{+}$.  Show that the definitions are equivalent, i.e., show that there is a <bb>injective</bb> function $g\colon A \to \mathbb{Z}^{+}$ iff either $A = \varnothing$ or there is a <bb>surjective</bb> $f\colon \mathbb{Z}^{+} \to A$.</p>
 </blockquote>
 <h2 id="cantors-zig-zag-method">Cantor&rsquo;s Zig-Zag Method</h2>
-<p>We&rsquo;ve already considered some &ldquo;easy&rsquo;&rsquo; enumerations. Now we will<br />
-consider something a bit harder. Consider the set of pairs of natural<br />
-numbers, which we defined in \jieref{subsec:Cartesian-Products} defined by:<br />
-$$<br />
-\mathbb{N} \times \mathbb{N} = \Setabs{⟨n,m⟩}{n,m \in \mathbb{N}}<br />
-$$<br />
-We can organize these ordered pairs into an <bb>array</bb>, like so:<br />
-$$<br />
-\begin{array}{ c | c | c | c | c | c}<br />
-&amp; \mathbf 0 &amp; \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \dots \<br />
-\hline<br />
-\mathbf 0 &amp; ⟨0,0⟩ &amp; ⟨0,1⟩ &amp; ⟨0,2⟩ &amp; ⟨0,3⟩ &amp; \dots \<br />
-\hline<br />
-\mathbf 1 &amp; ⟨1,0⟩ &amp; ⟨1,1⟩ &amp; ⟨1,2⟩ &amp; ⟨1,3⟩ &amp; \dots \<br />
-\hline<br />
-\mathbf 2 &amp; ⟨2,0⟩ &amp; ⟨2,1⟩ &amp; ⟨2,2⟩ &amp; ⟨2,3⟩ &amp; \dots \<br />
-\hline<br />
-\mathbf 3 &amp; ⟨3,0⟩ &amp; ⟨3,1⟩ &amp; ⟨3,2⟩ &amp; ⟨3,3⟩ &amp; \dots \<br />
-\hline<br />
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots\<br />
-\end{array}<br />
-$$<br />
-Clearly, every ordered pair in $\mathbb{N} \times \mathbb{N}$ will appear<br />
-exactly once in the array. In particular, $⟨n,m⟩$ will appear in<br />
-the $n$th row and $m$th column. But how do we organize the elements of<br />
-such an array into a &ldquo;one-dimensional&rsquo;&rsquo; list? The pattern in the array below<br />
-demonstrates one way to do this (although of course there are many other options):<br />
-$$<br />
-\begin{array}{ c | c | c | c | c | c | c}<br />
-&amp; \mathbf 0 &amp; \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp;\dots \<br />
-\hline<br />
-\mathbf 0 &amp; 0  &amp; 1&amp; 3 &amp; 6&amp; 10 &amp;\ldots \<br />
-\hline<br />
-\mathbf 1 &amp;2 &amp; 4&amp; 7 &amp; 11 &amp; \dots &amp;\ldots \<br />
-\hline<br />
-\mathbf 2 &amp; 5 &amp; 8 &amp; 12 &amp; \ldots &amp; \dots&amp;\ldots \<br />
-\hline<br />
-\mathbf 3 &amp; 9 &amp; 13 &amp; \ldots &amp; \ldots &amp; \dots &amp; \ldots \<br />
-\hline<br />
-\mathbf 4 &amp; 14 &amp; \ldots &amp; \ldots &amp; \ldots &amp; \dots &amp; \ldots \<br />
-\hline<br />
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots&amp;\ldots &amp; \ddots\<br />
-\end{array}<br />
-$$\noindent<br />
-This pattern is called <bb>Cantor&rsquo;s zig-zag method</bb>. It  enumerates<br />
-$\mathbb{N} \times \mathbb{N}$ as follows:<br />
-$$<br />
-⟨0,0⟩, ⟨0,1⟩, ⟨1,0⟩, ⟨0,2⟩, ⟨1,1⟩,<br />
-⟨2,0⟩, ⟨0,3⟩, ⟨1,2⟩, ⟨2,1⟩, ⟨3,0⟩, \dots<br />
-$$<br />
-And this establishes the following:</p>
+<p>We&rsquo;ve already considered some &ldquo;easy&rsquo;&rsquo; enumerations. Now we will consider something a bit harder. Consider the set of pairs of natural numbers, which we defined in \jieref{subsec:Cartesian-Products} defined by: $$\mathbb{N} \times \mathbb{N} = \Setabs{⟨n,m⟩}{n,m \in \mathbb{N}}$$ We can organize these ordered pairs into an <bb>array</bb>, like so:</p>
+<p>
+$$
+\begin{array}{ c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \cdots \\
+\hline
+\mathbf 0 & ⟨0,0⟩ & ⟨0,1⟩ & ⟨0,2⟩ & ⟨0,3⟩ & \cdots \\
+\hline
+\mathbf 1 & ⟨1,0⟩ & ⟨1,1⟩ & ⟨1,2⟩ & ⟨1,3⟩ & \cdots \\
+\hline
+\mathbf 2 & ⟨2,0⟩ & ⟨2,1⟩ & ⟨2,2⟩ & ⟨2,3⟩ & \cdots \\
+\hline
+\mathbf 3 & ⟨3,0⟩ & ⟨3,1⟩ & ⟨3,2⟩ & ⟨3,3⟩ & \cdots \\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+\end{array}
+$$
+</p>
+<p>Clearly, every ordered pair in $\mathbb{N} \times \mathbb{N}$ will appear exactly once in the array. In particular, $⟨n,m⟩$ will appear in the $n$th row and $m$th column. But how do we organize the elements of such an array into a &ldquo;one-dimensional&rsquo;&rsquo; list? The pattern in the array below demonstrates one way to do this (although of course there are many other options):</p>
+<p>
+$$
+\begin{array}{ c | c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \mathbf 4 &\cdots \\
+\hline
+\mathbf 0 & 0  & 1& 3 & 6& 10 &\cdots \\
+\hline
+\mathbf 1 &2 & 4& 7 & 11 & \cdots &\cdots \\
+\hline
+\mathbf 2 & 5 & 8 & 12 & \cdots & \cdots&\cdots \\
+\hline
+\mathbf 3 & 9 & 13 & \cdots & \cdots & \cdots & \cdots \\
+\hline
+\mathbf 4 & 14 & \cdots & \cdots & \cdots & \cdots & \cdots \\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots&\cdots & \ddots\\
+\end{array}
+$$
+</p>
+<p>This pattern is called <bb>Cantor&rsquo;s zig-zag method</bb>. It  enumerates $\mathbb{N} \times \mathbb{N}$ as follows: $$⟨0,0⟩, ⟨0,1⟩, ⟨1,0⟩, ⟨0,2⟩, ⟨1,1⟩, ⟨2,0⟩, ⟨0,3⟩, ⟨1,2⟩, ⟨2,1⟩, ⟨3,0⟩, \cdots$$</p>
+<p>And this establishes the following:</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎命題 1.13</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">$\mathbb{N} \times \mathbb{N}$ is <bb>enumerable</bb>.</span>
+  </div>
+  </div>
 <blockquote>
-<p><bb>Proposition 1.5</bb><br />
-$\mathbb{N} \times \mathbb{N}$ is <bb>enumerable</bb>.<br />
-\end{prop}</p>
+<p><bb>命題 1.13 之證明</bb><br />
+Let $f \colon \mathbb{N} \to \mathbb{N}\times\mathbb{N}$ take each $k \in \mathbb{N}$ to the tuple $⟨n,m⟩ \in \mathbb{N} \times \mathbb{N}$ such that $k$ is the value of the $n$th row and $m$th column in Cantor&rsquo;s zig-zag array.</p>
 </blockquote>
-<p>\begin{proof}<br />
-Let $f \colon \mathbb{N} \to \mathbb{N}\times\mathbb{N}$ take each $k \in \mathbb{N}$ to the<br />
-tuple $⟨n,m⟩ \in \mathbb{N} \times \mathbb{N}$ such that $k$ is the value of<br />
-the $n$th row and $m$th column in Cantor&rsquo;s zig-zag array.<br />
-\end{proof}</p>
-<p>This technique also generalises rather nicely. For example, we can use<br />
-it to enumerate the set of ordered triples of natural numbers, i.e.:<br />
-$$<br />
-\mathbb{N} \times \mathbb{N} \times \mathbb{N} = \Setabs{⟨n,m,k⟩}{n,m,k \in \mathbb{N}}<br />
-$$<br />
-We think of $\mathbb{N} \times \mathbb{N} \times \mathbb{N}$ as the Cartesian<br />
-product of $\mathbb{N} \times \mathbb{N}$ with $\mathbb{N}$, that is,<br />
-$$<br />
-\mathbb{N}^3 = (\mathbb{N} \times \mathbb{N}) \times \mathbb{N} =<br />
-\Setabs{⟨⟨n,m⟩,k⟩}{n, m, k<br />
-\in \mathbb{N} }<br />
-$$<br />
-and thus we can enumerate $\mathbb{N}^3$ with an array by labelling one<br />
-axis with the enumeration of $\mathbb{N}$, and the other axis with the<br />
-enumeration of $\mathbb{N}^2$:<br />
-$$<br />
-\begin{array}{ c | c | c | c | c | c}<br />
-&amp; \mathbf 0 &amp; \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \dots \<br />
-\hline<br />
-\mathbf{⟨0,0⟩} &amp; ⟨0,0,0⟩ &amp; ⟨0,0,1⟩ &amp; ⟨0,0,2⟩ &amp; ⟨0,0,3⟩ &amp; \dots \<br />
-\hline<br />
-\mathbf{⟨0,1⟩} &amp; ⟨0,1,0⟩ &amp; ⟨0,1,1⟩ &amp; ⟨0,1,2⟩ &amp; ⟨0,1,3⟩ &amp; \dots \<br />
-\hline<br />
-\mathbf{⟨1,0⟩} &amp; ⟨1,0,0⟩ &amp; ⟨1,0,1⟩ &amp; ⟨1,0,2⟩ &amp; ⟨1,0,3⟩ &amp; \dots \<br />
-\hline<br />
-\mathbf{⟨0,2⟩} &amp; ⟨0,2,0⟩ &amp; ⟨0,2,1⟩ &amp; ⟨0,2,2⟩ &amp; ⟨0,2,3⟩ &amp; \dots\<br />
-\hline<br />
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots \<br />
-\end{array}<br />
-$$<br />
-Thus, by using a method like Cantor&rsquo;s zig-zag method, we may similarly<br />
-obtain an enumeration of $\mathbb{N}^3$. And we can keep going, obtaining<br />
-enumerations of $\mathbb{N}^n$ for any natural number $n$. So, we have:</p>
-<blockquote>
-<p><bb>Proposition 1.5</bb><br />
-$\mathbb{N}^n$ is <bb>enumerable</bb>, for every $n \in \mathbb{N}$.<br />
-\end{prop}</p>
-</blockquote>
+<p>This technique also generalises rather nicely. For example, we can use it to enumerate the set of ordered triples of natural numbers, i.e.: $$\mathbb{N} \times \mathbb{N} \times \mathbb{N} = \Setabs{⟨n,m,k⟩}{n,m,k \in \mathbb{N}}$$ We think of $\mathbb{N} \times \mathbb{N} \times \mathbb{N}$ as the Cartesian product of $\mathbb{N} \times \mathbb{N}$ with $\mathbb{N}$, that is, $$\mathbb{N}^3 = (\mathbb{N} \times \mathbb{N}) \times \mathbb{N} =\lbrace ⟨⟨n,m⟩,k⟩: n, m, k<br />
+\in \mathbb{N}\rbrace $$ and thus we can enumerate $\mathbb{N}^3$ with an array by labelling one axis with the enumeration of $\mathbb{N}$, and the other axis with the enumeration of $\mathbb{N}^2$:</p>
+<p>
+$$
+\begin{array}{ c | c | c | c | c | c}
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \cdots \\
+\hline
+\mathbf{⟨0,0⟩} & ⟨0,0,0⟩ & ⟨0,0,1⟩ & ⟨0,0,2⟩ & ⟨0,0,3⟩ & \cdots \\
+\hline
+\mathbf{⟨0,1⟩} & ⟨0,1,0⟩ & ⟨0,1,1⟩ & ⟨0,1,2⟩ & ⟨0,1,3⟩ & \cdots \\
+\hline
+\mathbf{⟨1,0⟩} & ⟨1,0,0⟩ & ⟨1,0,1⟩ & ⟨1,0,2⟩ & ⟨1,0,3⟩ & \cdots \\
+\hline
+\mathbf{⟨0,2⟩} & ⟨0,2,0⟩ & ⟨0,2,1⟩ & ⟨0,2,2⟩ & ⟨0,2,3⟩ & \cdots\\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \ddots \\
+\end{array}
+$$
+</p>
+<p>Thus, by using a method like Cantor&rsquo;s zig-zag method, we may similarly obtain an enumeration of $\mathbb{N}^3$. And we can keep going, obtaining enumerations of $\mathbb{N}^n$ for any natural number $n$. So, we have:</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎命題 1.14</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">$\mathbb{N}^n$ is <bb>enumerable</bb>, for every $n \in \mathbb{N}$.</span>
+  </div>
+  </div>
 <h2 id="pairing-functions-and-codes">Pairing Functions and Codes</h2>
-<p>Cantor&rsquo;s zig-zag method makes the enumerability of $\mathbb{N}^n$ visually<br />
-evident. But let us focus on our array depicting $\mathbb{N}^2$. Following<br />
-the zig-zag line in the array and counting the places, we can check<br />
-that $⟨1,2⟩$ is associated with the number $7$. However, it would<br />
-be nice if we could compute this more directly. That is, it would be<br />
-nice to have to hand the <bb>inverse</bb> of the zig-zag enumeration,<br />
-$g\colon \mathbb{N}^2 \to \mathbb{N}$, such that<br />
-$$<br />
-g(⟨0,0⟩) = 0, ;<br />
-g(⟨0,1⟩) = 1, ;<br />
-g(⟨1,0⟩) = 2, ; \dots,<br />
-g(⟨1,2⟩) = 7, ; \dots<br />
-$$<br />
-This would enable to calculate exactly where $⟨n, m⟩$ will occur<br />
-in our enumeration.</p>
-<p>In fact, we can define $g$ directly by making two observations. First:<br />
-if the $n$th row and $m$th column contains value $v$, then the<br />
-$(n+1)$st row and $(m-1)$st column contains value $v + 1$. Second: the<br />
-first row of our enumeration consists of the triangular numbers,<br />
-starting with $0$, $1$, $3$, $5$, etc. The $k$th triangular number is<br />
-the sum of the natural numbers $&lt; k$, which can be computed as<br />
-$k(k+1)/2$. Putting these two observations together, consider this<br />
-function:<br />
-$$<br />
-g(n,m) = \frac{(n+m+1)(n+m)}{2} + n<br />
-$$<br />
-We often just write $g(n, m)$ rather that $g(⟨n, m⟩)$, since it<br />
-is easier on the eyes. This tells you first to determine the<br />
-$(n+m)^\text{th}$ triangle number, and then subtract $n$ from it. And<br />
-it populates the array in exactly the way we would like. So in<br />
-particular, the pair $⟨1, 2⟩$ is sent to $\frac{4 \times 3}{2} +<br />
-1 = 7$.</p>
-<p>This function $g$ is the <bb>inverse</bb> of an enumeration of a set of<br />
-pairs. Such functions are called <bb>pairing functions</bb>.</p>
-<p>\begin{defn}[Pairing function]<br />
-A function $f\colon A \times B \to \mathbb{N}$ is an arithmetical<br />
-<bb>pairing function</bb> if $f$ is injective. We also say that $f$<br />
-<bb>encodes</bb> $A \times B$, and that $f(x,y)$ is the<br />
-<bb>code</bb> for $⟨x,y⟩$.<br />
-\end{defn}</p>
-<p>We can use pairing functions encode, e.g., pairs of natural numbers;<br />
-or, in other words, we can represent each <bb>pair</bb> of elements<br />
-using a <bb>single</bb> number. Using the inverse of the pairing<br />
-function, we can <bb>decode</bb> the number, i.e., find out which<br />
-pair it represents.</p>
+<p>Cantor&rsquo;s zig-zag method makes the enumerability of $\mathbb{N}^n$ visually evident. But let us focus on our array depicting $\mathbb{N}^2$. Following the zig-zag line in the array and counting the places, we can check that $⟨1,2⟩$ is associated with the number $7$. However, it would be nice if we could compute this more directly. That is, it would be nice to have to hand the <bb>inverse</bb> of the zig-zag enumeration, $g\colon \mathbb{N}^2 \to \mathbb{N}$, such that</p>
+<p>\begin{align*}
+& g(⟨0,0⟩) = 0,\;\\
+& g(⟨0,1⟩) = 1,\;\\
+& g(⟨1,0⟩) = 2, \; \cdots,\\
+& g(⟨1,2⟩) = 7, \; \cdots
+\end{align*}</p>
+<p>This would enable to calculate exactly where $⟨n, m⟩$ will occur in our enumeration.</p>
+<p>In fact, we can define $g$ directly by making two observations. First: if the $n$th row and $m$th column contains value $v$, then the $(n+1)$st row and $(m-1)$st column contains value $v + 1$. Second: the first row of our enumeration consists of the triangular numbers, starting with $0$, $1$, $3$, $5$, etc. The $k$th triangular number is the sum of the natural numbers $&lt; k$, which can be computed as $k(k+1)/2$. Putting these two observations together, consider this function: $$g(n,m) = \frac{(n+m+1)(n+m)}{2} + n$$ We often just write $g(n, m)$ rather that $g(⟨n, m⟩)$, since it is easier on the eyes. This tells you first to determine the $(n+m)^\text{th}$ triangle number, and then subtract $n$ from it. And it populates the array in exactly the way we would like. So in particular, the pair $⟨1, 2⟩$ is sent to $\frac{4 \times 3}{2} + 1 = 7$.</p>
+<p>This function $g$ is the <bb>inverse</bb> of an enumeration of a set of pairs. Such functions are called <bb>pairing functions</bb>.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎定義 1.43【Pairing function】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">A function $f\colon A \times B \to \mathbb{N}$ is an arithmetical <bb>pairing function</bb> if $f$ is injective. We also say that $f$ <bb>encodes</bb> $A \times B$, and that $f(x,y)$ is the <bb>code</bb> for $⟨x,y⟩$.</span>
+  </div>
+  </div>
+<p>We can use pairing functions encode, e.g., pairs of natural numbers; or, in other words, we can represent each <bb>pair</bb> of elements using a <bb>single</bb> number. Using the inverse of the pairing function, we can <bb>decode</bb> the number, i.e., find out which pair it represents.</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Give an enumeration of the set of all non-negative rational numbers.<br />
-\end{prob}</p>
+<p><bb>Problem 1.28</bb><br />
+Give an enumeration of the set of all non-negative rational numbers.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that $\mathbb{Q}$ is <bb>enumerable</bb>. Recall that any rational number<br />
-can be written as a fraction $z/m$ with $z \in \mathbb{Z}$, $m \in \mathbb{N}^+$.<br />
-\end{prob}</p>
+<p><bb>Problem 1.29</bb><br />
+Show that $\mathbb{Q}$ is <bb>enumerable</bb>. Recall that any rational number can be written as a fraction $z/m$ with $z \in \mathbb{Z}$, $m \in \mathbb{N}^+$.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Define an enumeration of $\mathbb{B}^*$.<br />
-\end{prob}</p>
+<p><bb>Problem 1.30</bb><br />
+Define an enumeration of $\mathbb{B}^*$.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Recall from your introductory logic course that each possible truth<br />
-table expresses a truth function. In other words, the truth functions<br />
-are all functions from $\mathbb{B}^k \to \mathbb{B}$ for some $k$. Prove that the<br />
-set of all truth functions is enumerable.<br />
-\end{prob}</p>
+<p><bb>Problem 1.31</bb><br />
+Recall from your introductory logic course that each possible truth table expresses a truth function. In other words, the truth functions are all functions from $\mathbb{B}^k \to \mathbb{B}$ for some $k$. Prove that the set of all truth functions is enumerable.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the set of all finite subsets of an arbitrary infinite<br />
-<bb>enumerable</bb> set is <bb>enumerable</bb>.<br />
-\end{prob}</p>
+<p><bb>Problem 1.32</bb><br />
+Show that the set of all finite subsets of an arbitrary infinite <bb>enumerable</bb> set is <bb>enumerable</bb>.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-A subset of $\mathbb{N}$ is said to be <bb>cofinite</bb> iff it is the<br />
-complement of a finite set $\mathbb{N}$; that is, $A \subseteq \mathbb{N}$ is<br />
-cofinite iff $\mathbb{N}\setminus A$ is finite. Let $I$ be the set whose<br />
-<bb>element</bb>s are exactly the finite and cofinite subsets of $\mathbb{N}$.<br />
-Show that $I$ is <bb>enumerable</bb>.<br />
-\end{prob}</p>
+<p><bb>Problem 1.33</bb><br />
+A subset of $\mathbb{N}$ is said to be <bb>cofinite</bb> iff it is the complement of a finite set $\mathbb{N}$; that is, $A \subseteq \mathbb{N}$ is cofinite iff $\mathbb{N}\setminus A$ is finite. Let $I$ be the set whose <bb>element</bb>s are exactly the finite and cofinite subsets of $\mathbb{N}$. Show that $I$ is <bb>enumerable</bb>.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the <bb>enumerable</bb> union of <bb>enumerable</bb> sets is<br />
-<bb>enumerable</bb>. That is, whenever $A_1$, $A_2$, \dots{} are sets, and<br />
-each $A_i$ is <bb>enumerable</bb>, then the union $\bigcup_{i=1}^\infty<br />
-A_i$ of all of them is also <bb>enumerable</bb>. [NB: this is hard!]<br />
-\end{prob}</p>
+<p><bb>Problem 1.34</bb><br />
+Show that the <bb>enumerable</bb> union of <bb>enumerable</bb> sets is <bb>enumerable</bb>. That is, whenever $A_1$, $A_2$, \cdots{} are sets, and each $A_i$ is <bb>enumerable</bb>, then the union $\bigcup_{i=1}^\infty A_i$ of all of them is also <bb>enumerable</bb>. [NB: this is hard!]</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Let $f \colon A \times B \to \mathbb{N}$ be an arbitrary pairing function.<br />
-Show that the inverse of $f$ is an enumeration of $A \times B$.<br />
-\end{prob}</p>
+<p><bb>Problem 1.35</bb><br />
+Let $f \colon A \times B \to \mathbb{N}$ be an arbitrary pairing function. Show that the inverse of $f$ is an enumeration of $A \times B$.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Specify a function that encodes $\mathbb{N}^3$.<br />
-\end{prob}</p>
+<p><bb>Problem 1.36</bb><br />
+Specify a function that encodes $\mathbb{N}^3$.</p>
 </blockquote>
 <h2 id="an-alternative-pairing-function">An Alternative Pairing Function</h2>
-<p>There are other enumerations of $\mathbb{N}^2$ that make it easier to<br />
-figure out what their inverses are. Here is one. Instead of<br />
-visualizing the enumeration in an array, start with the list of<br />
-positive integers associated with (initially) empty spaces. Imagine<br />
-filling these spaces successively with pairs $⟨n,m⟩$ as follow.<br />
-Starting with the pairs that have $0$ in  the first place (i.e., pairs<br />
-$⟨0,m⟩$), put the first (i.e., $⟨0,0⟩$) in the first empty<br />
-place, then skip an empty space, put the second (i.e., $⟨0,2⟩$)<br />
-in the next empty place, skip one again, and so forth. The<br />
-(incomplete) beginning of our enumeration now looks like this<br />
-$$\small<br />
-\begin{array}{@{}c c c c c c c c c c c@{}}<br />
-\mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp; \mathbf 5 &amp; \mathbf 6 &amp; \mathbf 7 &amp; \mathbf 8 &amp; \mathbf 9 &amp; \mathbf{10} &amp; \dots \ \<br />
-⟨0,1⟩ &amp;  &amp; ⟨0,2⟩ &amp;  &amp; ⟨0,3⟩ &amp; &amp; ⟨0,4⟩ &amp;  &amp; ⟨0,5⟩ &amp;  &amp; \dots \<br />
-\end{array}<br />
-$$<br />
-Repeat this with pairs $⟨1,m⟩$ for the place that still remain<br />
-empty, again skipping every other empty place:<br />
-$$\small<br />
-\begin{array}{@{}c c c c c c c c c c c@{}}<br />
-\mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp; \mathbf 5 &amp; \mathbf 6 &amp; \mathbf 7 &amp; \mathbf 8 &amp; \mathbf 9 &amp; \mathbf{10} &amp; \dots \ \<br />
-⟨0,0⟩ &amp; ⟨1,0⟩ &amp; ⟨0,1⟩ &amp;  &amp; ⟨0,2⟩ &amp; ⟨1,1⟩ &amp;<br />
-⟨0,3⟩ &amp; &amp; ⟨0,4⟩ &amp;  ⟨1,2⟩ &amp; \dots \<br />
-\end{array}<br />
-$$<br />
-Enter pairs $⟨2,m⟩$, $⟨2,m⟩$, etc., in the same way. Our<br />
-completed enumeration thus starts like this:<br />
-$$\small<br />
-\begin{array}{@{}cc c c c c c c c c c@{}}<br />
-\mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp; \mathbf 5 &amp; \mathbf 6 &amp; \mathbf 7 &amp; \mathbf 8 &amp; \mathbf 9 &amp; \mathbf{10} &amp; \dots \ \<br />
-⟨0,0⟩ &amp; ⟨1,0⟩ &amp; ⟨0,1⟩ &amp; ⟨2,0⟩  &amp; ⟨0,2⟩ &amp;<br />
-⟨1,1⟩ &amp; ⟨0,3⟩ &amp; ⟨3,0⟩  &amp; ⟨0,4⟩ &amp;  ⟨1,2⟩ &amp; \dots \<br />
-\end{array}<br />
-$$<br />
-If we number the cells in the array above according to this<br />
-enumeration, we will not find a neat zig-zag line, but this<br />
-arrangement:<br />
-$$<br />
-\begin{array}{ c | c | c | c | c | c | c | c }<br />
-&amp; \mathbf 0 &amp; \mathbf 1 &amp; \mathbf 2 &amp; \mathbf 3 &amp; \mathbf 4 &amp; \mathbf 5 &amp; \dots \<br />
-\hline<br />
-\mathbf 0 &amp; 1 &amp; 3 &amp; 5 &amp; 7 &amp; 9 &amp; 11 &amp; \dots \<br />
-\hline<br />
-\mathbf 1 &amp; 2 &amp; 6 &amp; 10 &amp; 14 &amp; 18 &amp; \dots &amp; \dots \<br />
-\hline<br />
-\mathbf 2 &amp; 4 &amp; 12 &amp; 20 &amp; 28 &amp; \dots &amp; \dots &amp; \dots \<br />
-\hline<br />
-\mathbf 3 &amp; 8 &amp; 24 &amp; 40 &amp; \dots &amp; \dots &amp; \dots &amp; \dots \<br />
-\hline<br />
-\mathbf 4 &amp; 16 &amp; 48 &amp; \dots &amp; \dots &amp; \dots &amp; \dots &amp; \dots \<br />
-\hline<br />
-\mathbf 5 &amp; 32 &amp; \dots &amp; \dots &amp; \dots &amp; \dots &amp; \dots &amp; \dots \<br />
-\hline<br />
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \ddots\<br />
-\end{array}<br />
-$$<br />
-We can see that the pairs in row $0$ are in the odd numbered places of<br />
-our enumeration, i.e., pair $⟨0,m⟩$ is in place $2m+1$; pairs in<br />
-the second row, $⟨1,m⟩$, are in places whose number is the<br />
-double of an odd number, specifically,  $2 \cdot (2m+1)$; pairs in the<br />
-third row, $⟨2,m⟩$, are in places whose number is four times an<br />
-odd number, $4 \cdot (2m+1)$; and so on. The factors of $(2m+1)$ for<br />
-each row, $1$, $2$, $4$, $8$, \dots, are exactly the powers of $2$:<br />
-$1= 2^0$, $2 = 2^1$, $4 = 2^2$, $8 = 2^3$, \dots@ In fact, the<br />
-relevant exponent is always the first member of the pair in<br />
-question. Thus, for pair $⟨n,m⟩$ the factor is $2^n$.  This<br />
-gives us the general formula: $2^n \cdot (2m+1)$. However, this is a<br />
-mapping of pairs to <bb>positive</bb> integers, i.e., $⟨0,0⟩$ has<br />
-position $1$. If we want to begin at position $0$ we must subtract $1$<br />
-from the result. This gives us:</p>
-<p>\begin{examplep}{}<br />
-The function $h\colon \mathbb{N}^2 \to \mathbb{N}$ given by<br />
-$$<br />
-h(n,m) = 2^n (2m+1) - 1<br />
-$$<br />
-is a pairing function for the set of pairs of natural numbers $\mathbb{N}^2$.<br />
-\end{examplep}</p>
-<p>Accordingly, in our second enumeration of $\mathbb{N}^2$, the pair<br />
-$⟨0,0⟩$ has code $h(0,0) = 2^0(2\cdot 0+1) - 1 = 0$;<br />
-$⟨1,2⟩$ has code $2^{1} \cdot (2 \cdot 2 + 1) - 1 = 2<br />
-\cdot 5 - 1 = 9$; $⟨2,6⟩$ has code $2^{2} \cdot (2<br />
-\cdot 6 + 1) - 1 = 51$.</p>
-<p>Sometimes it is enough to encode pairs of natural numbers $\mathbb{N}^2$<br />
-without requiring that the encoding is surjective. Such encodings have<br />
-inverses that are only partial functions.</p>
-<p>\begin{examplep}{}<br />
-The function $j\colon \mathbb{N}^2 \to \mathbb{N}^+$ given by<br />
-$$<br />
-j(n,m) = 2^n3^m<br />
-$$<br />
-is a <bb>injective</bb> function $\mathbb{N}^2 \to \mathbb{N}$.<br />
-\end{examplep}</p>
+<p>There are other enumerations of $\mathbb{N}^2$ that make it easier to figure out what their inverses are. Here is one. Instead of visualizing the enumeration in an array, start with the list of positive integers associated with (initially) empty spaces. Imagine filling these spaces successively with pairs $⟨n,m⟩$ as follow. Starting with the pairs that have $0$ in  the first place (i.e., pairs $⟨0,m⟩$), put the first (i.e., $⟨0,0⟩$) in the first empty place, then skip an empty space, put the second (i.e., $⟨0,2⟩$) in the next empty place, skip one again, and so forth. The (incomplete) beginning of our enumeration now looks like this</p>
+<p>
+$$
+\begin{array}{@{}c c c c c c c c c c c@{}}
+\mathbf 1 & \mathbf 2 & \mathbf 3 & \mathbf 4 & \mathbf 5 & \mathbf 6 & \mathbf 7 & \mathbf 8 & \mathbf 9 & \mathbf{10} & \cdots \\ \\
+⟨0,1⟩ &  & ⟨0,2⟩ &  & ⟨0,3⟩ & & ⟨0,4⟩ &  & ⟨0,5⟩ &  & \cdots \\
+\end{array}
+$$
+</p>
+<p>Repeat this with pairs $⟨1,m⟩$ for the place that still remain empty, again skipping every other empty place:</p>
+<p>
+$$
+\begin{array}{@{}c c c c c c c c c c c@{}}
+\mathbf 1 & \mathbf 2 & \mathbf 3 & \mathbf 4 & \mathbf 5 & \mathbf 6 & \mathbf 7 & \mathbf 8 & \mathbf 9 & \mathbf{10} & \cdots \\ \\
+⟨0,0⟩ & ⟨1,0⟩ & ⟨0,1⟩ &  & ⟨0,2⟩ & ⟨1,1⟩ & 
+⟨0,3⟩ & & ⟨0,4⟩ &  ⟨1,2⟩ & \cdots \\
+\end{array}
+$$
+</p>
+<p>Enter pairs $⟨2,m⟩$, $⟨2,m⟩$, etc., in the same way. Our completed enumeration thus starts like this:</p>
+<p>
+$$
+\begin{array}{@{}cc c c c c c c c c c@{}}
+\mathbf 1 & \mathbf 2 & \mathbf 3 & \mathbf 4 & \mathbf 5 & \mathbf 6 & \mathbf 7 & \mathbf 8 & \mathbf 9 & \mathbf{10} & \cdots \\ \\
+⟨0,0⟩ & ⟨1,0⟩ & ⟨0,1⟩ & ⟨2,0⟩  & ⟨0,2⟩ & 
+⟨1,1⟩ & ⟨0,3⟩ & ⟨3,0⟩  & ⟨0,4⟩ &  ⟨1,2⟩ & \cdots \\
+\end{array}
+$$
+</p>
+<p>If we number the cells in the array above according to this enumeration, we will not find a neat zig-zag line, but this arrangement:</p>
+<p>$$
+\begin{array}{ c | c | c | c | c | c | c | c }
+& \mathbf 0 & \mathbf 1 & \mathbf 2 & \mathbf 3 & \mathbf 4 & \mathbf 5 & \cdots \\
+\hline
+\mathbf 0 & 1 & 3 & 5 & 7 & 9 & 11 & \cdots \\
+\hline
+\mathbf 1 & 2 & 6 & 10 & 14 & 18 & \cdots & \cdots \\
+\hline
+\mathbf 2 & 4 & 12 & 20 & 28 & \cdots & \cdots & \cdots \\
+\hline
+\mathbf 3 & 8 & 24 & 40 & \cdots & \cdots & \cdots & \cdots \\
+\hline
+\mathbf 4 & 16 & 48 & \cdots & \cdots & \cdots & \cdots & \cdots \\
+\hline
+\mathbf 5 & 32 & \cdots & \cdots & \cdots & \cdots & \cdots & \cdots \\
+\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \vdots & \ddots\\
+\end{array}
+$$
+</p>
+<p>We can see that the pairs in row $0$ are in the odd numbered places of our enumeration, i.e., pair $⟨0,m⟩$ is in place $2m+1$; pairs in the second row, $⟨1,m⟩$, are in places whose number is the double of an odd number, specifically,  $2 \cdot (2m+1)$; pairs in the third row, $⟨2,m⟩$, are in places whose number is four times an odd number, $4 \cdot (2m+1)$; and so on. The factors of $(2m+1)$ for each row, $1$, $2$, $4$, $8$, \cdots, are exactly the powers of $2$: $1= 2^0$, $2 = 2^1$, $4 = 2^2$, $8 = 2^3, \cdots$.In fact, the relevant exponent is always the first member of the pair in question. Thus, for pair $⟨n,m⟩$ the factor is $2^n$. This gives us the general formula: $2^n \cdot (2m+1)$. However, this is a mapping of pairs to <bb>positive</bb> integers, i.e., $⟨0,0⟩$ has position $1$. If we want to begin at position $0$ we must subtract $1$ from the result. This gives us:</p>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎例 1.39</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">The function $h\colon \mathbb{N}^2 \to \mathbb{N}$ given by $$h(n,m) = 2^n (2m+1) - 1$$ is a pairing function for the set of pairs of natural numbers $\mathbb{N}^2$.</span>
+  </div>
+  </div>
+<p>Accordingly, in our second enumeration of $\mathbb{N}^2$, the pair $⟨0,0⟩$ has code $h(0,0) = 2^0(2\cdot 0+1) - 1 = 0$; $⟨1,2⟩$ has code $2^{1} \cdot (2 \cdot 2 + 1) - 1 = 2 \cdot 5 - 1 = 9$; $⟨2,6⟩$ has code $2^{2} \cdot (2 \cdot 6 + 1) - 1 = 51$.</p>
+<p>Sometimes it is enough to encode pairs of natural numbers $\mathbb{N}^2$ without requiring that the encoding is surjective. Such encodings have inverses that are only partial functions.</p>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">◎例 1.39</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;">The function $j\colon \mathbb{N}^2 \to \mathbb{N}^+$ given by $$j(n,m) = 2^n3^m$$ is a <bb>injective</bb> function $\mathbb{N}^2 \to \mathbb{N}$.</span>
+  </div>
+  </div>
 <h2 id="nonenumerable-sets">Nonenumerable Sets</h2>
-<p>This section proves the non-enumerability of $\mathbb{B}^\omega$ and<br />
-$\mathscr{P}({\mathbb{Z})^{+}}$ using the definition in \jieref{subsec:Enumerations-and-enumerable-Sets-1}. It is<br />
-designed to be a little more elementary and a little more detailed<br />
-than the version in \jieref{subsec:Enumerations-and-enumerable-Sets-2}.</p>
-<p>Some sets, such as the set $\mathbb{Z}^{+}$ of positive integers, are<br />
-infinite. So far we&rsquo;ve seen examples of infinite sets which were all<br />
-<bb>enumerable</bb>. However, there are also infinite sets which do not<br />
-have this property. Such sets are called <bb>\emph{nonenumerable</bb>}.</p>
-<p>First of all, it is perhaps already surprising that there are<br />
-<bb>nonenumerable</bb> sets.  For any <bb>enumerable</bb> set $A$ there is<br />
-a <bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.  If a set is<br />
-<bb>nonenumerable</bb> there is no such function.  That is, no function<br />
-mapping the infinitely many <bb>element</bb>s of $\mathbb{Z}^{+}$ to $A$ can<br />
-exhaust all of $A$.  So there are &ldquo;more&rsquo;&rsquo; <bb>element</bb>s of $A$ than<br />
-the infinitely many positive integers.</p>
-<p>How would one prove that a set is <bb>nonenumerable</bb>? You have to show<br />
-that no such surjective function can exist. Equivalently, you have to<br />
-show that the elements of $A$ cannot be enumerated in a one way<br />
-infinite list.  The best way to do this is to show that every list of<br />
-<bb>element</bb>s of $A$ must leave at least one element out; or that no<br />
-function $f\colon \mathbb{Z}^{+} \to A$ can be <bb>surjective</bb>.  We can do this<br />
-using Cantor&rsquo;s <bb>diagonal method</bb>.  Given a list of <bb>element</bb>s<br />
-of $A$, say, $x_1$, $x_2$, \dots, we construct another element of $A$<br />
-which, by its construction, cannot possibly be on that list.</p>
-<p>Our first example is the set $\mathbb{B}^\omega$ of all infinite, non-gappy<br />
-sequences of $0$'s and $1$'s.</p>
-<p>\begin{thm}</p>
-<p>$\mathbb{B}^\omega$ is <bb>nonenumerable</bb>.<br />
-\end{thm}</p>
-<p>\begin{proof}<br />
-Suppose, by way of contradiction, that $\mathbb{B}^\omega$ is<br />
-<bb>enumerable</bb>, i.e., suppose that there is a list $s_{1}$, $s_{2}$,<br />
-$s_{3}$, $s_{4}$, \dots{} of all <bb>element</bb>s of $\mathbb{B}^\omega$.  Each<br />
-of these $s_i$ is itself an infinite sequence of $0$'s and $1$'s.<br />
-Let&rsquo;s call the $j$-th element of the $i$-th sequence in this list<br />
-$s_i(j)$. Then the $i$-th sequence $s_i$ is<br />
-$$<br />
-s_i(1), s_i(2), s_i(3), \dots<br />
-$$</p>
-<p>We may arrange this list, and the elements of each sequence $s_i$ in<br />
-it, in an array:<br />
-$$<br />
-\begin{array}{c|c|c|c|c|c}<br />
-&amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; \dots \\hline<br />
-1 &amp; \mathbf{s_{1}(1)} &amp; s_{1}(2) &amp; s_{1}(3) &amp; s_1(4) &amp; \dots \\hline<br />
-2 &amp; s_{2}(1)&amp; \mathbf{s_{2}(2)} &amp; s_2(3) &amp; s_2(4) &amp; \dots \\hline<br />
-3 &amp; s_{3}(1)&amp; s_{3}(2) &amp; \mathbf{s_3(3)} &amp; s_3(4) &amp; \dots \\hline<br />
-4 &amp; s_{4}(1)&amp; s_{4}(2) &amp; s_4(3) &amp; \mathbf{s_4(4)} &amp; \dots \\hline<br />
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \mathbf{\ddots}<br />
-\end{array}<br />
-$$<br />
-The labels down the side give the number of the sequence in the list<br />
-$s_1$, $s_2$, \dots; the numbers across the top label the <bb>element</bb>s<br />
-of the individual sequences. For instance, $s_{1}(1)$ is a name for<br />
-whatever number, a $0$ or a $1$, is the first <bb>element</bb> in the<br />
-sequence $s_{1}$, and so on.</p>
-<p>Now we construct an infinite sequence, $\overline{s}$, of $0$'s and<br />
-$1$'s which cannot possibly be on this list.  The definition of<br />
-$\overline{s}$ will depend on the list $s_1$, $s_2$, \dots.  Any<br />
-infinite list of infinite sequences of $0$'s and $1$'s gives rise to<br />
-an infinite sequence $\overline{s}$ which is guaranteed to not appear<br />
-on the list.</p>
-<p>To define $\overline{s}$, we specify what all its <bb>element</bb>s are,<br />
-i.e., we specify $\overline{s}(n)$ for all $n \in \mathbb{Z}^{+}$.  We do this<br />
-by reading down the diagonal of the array above (hence the name<br />
-&ldquo;diagonal method&rsquo;') and then changing every $1$ to a $0$ and every<br />
-$1$ to a $0$. More abstractly, we define $\overline{s}(n)$ to be $0$<br />
-or $1$ according to whether the $n$-th <bb>element</bb> of the diagonal,<br />
-$s_n(n)$, is $1$ or $0$.<br />
-$$<br />
-\overline{s}(n) =<br />
-\begin{cases}<br />
-1 &amp; \text{if $s_{n}(n) = 0$}\<br />
-0 &amp; \text{if $s_{n}(n) = 1$}.<br />
-\end{cases}<br />
-$$<br />
-If you like formulas better than definitions by cases, you could also<br />
-define $\overline{s}(n) = 1 - s_n(n)$.</p>
-<p>Clearly $\overline{s}$ is an infinite sequence of $0$'s and<br />
-$1$'s, since it is just the mirror sequence to the sequence of $0$'s<br />
-and $1$'s that appear on the diagonal of our array.  So $\overline{s}$<br />
-is an <bb>element</bb> of $\mathbb{B}^\omega$.  But it cannot be on the list $s_1$,<br />
-$s_2$, \dots{} Why not?</p>
-<p>It can&rsquo;t be the first sequence in the list, $s_1$, because it differs from<br />
-$s_1$ in the first <bb>element</bb>.  Whatever $s_1(1)$ is, we defined<br />
-$\overline{s}(1)$ to be the opposite.  It can&rsquo;t be the second<br />
-sequence in the list, because $\overline{s}$ differs from $s_2$ in the second<br />
-element: if $s_2(2)$ is $0$, $\overline{s}(2)$ is $1$, and vice<br />
-versa. And so on.</p>
-<p>More precisely: if $\overline{s}$ were on the list, there would be<br />
-some $k$ so that $\overline{s} = s_{k}$.  Two sequences are identical<br />
-iff they agree at every place, i.e., for any $n$, $\overline{s}(n) =<br />
-s_{k}(n)$.  So in particular, taking $n = k$ as a special case,<br />
-$\overline{s}(k) = s_{k}(k)$ would have to hold. $s_k(k)$ is either<br />
-$0$ or $1$. If it is $0$ then $\overline{s}(k)$ must be $1$&mdash;that&rsquo;s<br />
-how we defined $\overline{s}$. But if $s_k(k) = 1$ then, again because<br />
-of the way we defined $\overline{s}$, $\overline{s}(k) = 0$. In either<br />
-case $\overline{s}(k) \neq s_{k}(k)$.</p>
-<p>We started by assuming that there is a list of <bb>element</bb>s of<br />
-$\mathbb{B}^\omega$, $s_1$, $s_2$, \dots{} From this list we constructed a<br />
-sequence $\overline{s}$ which we proved cannot be on the list.  But it<br />
-definitely is a sequence of $0$'s and $1$'s if all the $s_i$ are<br />
-sequences of $0$'s and $1$'s, i.e., $\overline{s} \in<br />
-\mathbb{B}^\omega$. This shows in particular that there can be no list of<br />
-<bb>all</bb> <bb>element</bb>s of $\mathbb{B}^\omega$, since for any such list we<br />
-could also construct a sequence $\overline{s}$ guaranteed to not be on<br />
-the list, so the assumption that there is a list of all sequences<br />
-in $\mathbb{B}^\omega$ leads to a contradiction.<br />
-\end{proof}</p>
-<p>This proof method is called &ldquo;diagonalization&rsquo;&rsquo; because it uses the<br />
-diagonal of the array to define $\overline{s}$. Diagonalization need<br />
-not involve the presence of an array: we can show that sets are not<br />
-<bb>enumerable</bb> by using a similar idea even when no array and no<br />
-actual diagonal is involved.</p>
-<p>\begin{thm}</p>
-<p>$\mathscr{P}({\mathbb{Z})^{+}}$ is not <bb>enumerable</bb>.<br />
-\end{thm}</p>
-<p>\begin{proof}<br />
-We proceed in the same way, by showing that for every list of subsets<br />
-of $\mathbb{Z}^{+}$ there is a subset of $\mathbb{Z}^{+}$ which cannot be on the list.<br />
-Suppose the following is a given list of subsets of $\mathbb{Z}^{+}$:<br />
-$$<br />
-Z_{1}, Z_{2}, Z_{3}, \dots<br />
-$$<br />
-We now define a set $\overline{Z}$ such that for any $n \in \mathbb{Z}^{+}$,<br />
-$n \in \overline{Z}$ iff $n \notin Z_{n}$:<br />
-$$<br />
-\overline{Z} = \Setabs{n \in \mathbb{Z}^{+}}{n \notin Z_n}<br />
-$$<br />
-$\overline{Z}$ is clearly a set of positive integers, since by<br />
-assumption each $Z_n$ is, and thus $\overline{Z} \in<br />
-\mathscr{P}({\mathbb{Z})^{+}}$. But $\overline{Z}$ cannot be on the list.  To show<br />
-this, we&rsquo;ll establish that for each $k \in \mathbb{Z}^{+}$, $\overline{Z} \neq<br />
-Z_k$.</p>
-<p>So let $k \in \mathbb{Z}^{+}$ be arbitrary. We&rsquo;ve defined $\overline{Z}$ so<br />
-that for any $n \in \mathbb{Z}^{+}$, $n \in \overline{Z}$ iff $n \notin Z_n$.<br />
-In particular, taking $n=k$, $k \in \overline{Z}$ iff $k \notin Z_k$.<br />
-But this shows that $\overline{Z} \neq Z_k$, since $k$ is an <bb>element</bb><br />
-of one but not the other, and so $\overline{Z}$ and $Z_k$ have<br />
-different <bb>element</bb>s. Since $k$ was arbitrary, $\overline{Z}$ is not<br />
-on the list $Z_1$, $Z_2$, \dots<br />
-\end{proof}</p>
-<p>The preceding proof did not mention a diagonal, but you can think of<br />
-it as involving a diagonal if you picture it this way: Imagine the<br />
-sets $Z_1$, $Z_2$, \dots, written in an array, where each<br />
-<bb>element</bb> $j \in Z_i$ is listed in the $j$-th column. Say the first<br />
-four sets on that list are $\lbrace 1,2,3,\dots\rbrace $, $\lbrace 2, 4, 6, \dots\rbrace $,<br />
-$\lbrace 1,2,5\rbrace $, and $\lbrace 3,4,5,\dots\rbrace $. Then the array would begin with<br />
-$$<br />
-\begin{array}{r@{}rrrrrrr}<br />
-Z_1 = \lbrace  &amp; \mathbf{1}, &amp; 2, &amp; 3, &amp; 4, &amp; 5, &amp; 6, &amp; \dots\rbrace \<br />
-Z_2 = \lbrace  &amp;  &amp; \mathbf{2}, &amp;  &amp; 4, &amp;  &amp; 6, &amp; \dots\rbrace \<br />
-Z_3 = \lbrace  &amp; 1, &amp; 2, &amp;  &amp;  &amp; 5\phantom{,} &amp;  &amp; \rbrace \<br />
-Z_4 = \lbrace  &amp;  &amp;  &amp; 3, &amp; \mathbf{4}, &amp; 5, &amp; 6, &amp; \dots\rbrace \<br />
-\vdots &amp; &amp; &amp; &amp; &amp; \ddots<br />
-\end{array}<br />
-$$<br />
-Then $\overline{Z}$ is the set obtained by going down the diagonal,<br />
-leaving out any numbers that appear along the diagonal and include<br />
-those $j$ where the array has a gap in the $j$-th row/column. In the<br />
-above case, we would leave out $1$ and $2$, include $3$, leave<br />
-out $4$, etc.</p>
+<p>This section proves the non-enumerability of $\mathbb{B}^\omega$ and $\mathscr{P}({\mathbb{Z})^{+}}$ using the definition in§1.3.1（P.45）. It is designed to be a little more elementary and a little more detailed than the version in §1.3.10（P.62）.</p>
+<p>Some sets, such as the set $\mathbb{Z}^{+}$ of positive integers, are infinite. So far we&rsquo;ve seen examples of infinite sets which were all <bb>enumerable</bb>. However, there are also infinite sets which do not have this property. Such sets are called <bb>nonenumerable</bb>.</p>
+<p>First of all, it is perhaps already surprising that there are <bb>nonenumerable</bb> sets.  For any <bb>enumerable</bb> set $A$ there is a <bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.  If a set is <bb>nonenumerable</bb> there is no such function.  That is, no function mapping the infinitely many <bb>element</bb>s of $\mathbb{Z}^{+}$ to $A$ can exhaust all of $A$.  So there are &ldquo;more&rsquo;&rsquo; <bb>element</bb>s of $A$ than the infinitely many positive integers.</p>
+<p>How would one prove that a set is <bb>nonenumerable</bb>? You have to show that no such surjective function can exist. Equivalently, you have to show that the elements of $A$ cannot be enumerated in a one way infinite list.  The best way to do this is to show that every list of <bb>element</bb>s of $A$ must leave at least one element out; or that no function $f\colon \mathbb{Z}^{+} \to A$ can be <bb>surjective</bb>.  We can do this using Cantor&rsquo;s <bb>diagonal method</bb>.  Given a list of <bb>element</bb>s of $A$, say, $x_1$, $x_2, \cdots$, we construct another element of $A$ which, by its construction, cannot possibly be on that list.</p>
+<p>Our first example is the set $\mathbb{B}^\omega$ of all infinite, non-gappy sequences of $0$'s and $1$'s.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯Theorem 1.1</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">$\mathbb{B}^\omega$ is <bb>nonenumerable</bb>.</span>
+  </div>
+  </div>
+<p><bb>Theorem 1.1 之證明</bb><br />
+Suppose, by way of contradiction, that $\mathbb{B}^\omega$ is <bb>enumerable</bb>, i.e., suppose that there is a list $s_{1}$, $s_{2}$, $s_{3}$, $s_{4}, \cdots$, of all <bb>element</bb>s of $\mathbb{B}^\omega$.  Each of these $s_i$ is itself an infinite sequence of $0$'s and $1$'s. Let&rsquo;s call the $j$-th element of the $i$-th sequence in this list $s_i(j)$. Then the $i$-th sequence $s_i$ is $$s_i(1), s_i(2), s_i(3), \cdots$$</p>
+<p>We may arrange this list, and the elements of each sequence $s_i$ in it, in an array:</p>
+<p>$$
+\begin{array}{c|c|c|c|c|c}
+& 1 & 2 & 3 & 4 & \cdots \\\hline
+1 & \mathbf{s_{1}(1)} & s_{1}(2) & s_{1}(3) & s_1(4) & \cdots \\\hline
+2 & s_{2}(1)& \mathbf{s_{2}(2)} & s_2(3) & s_2(4) & \cdots \\\hline
+3 & s_{3}(1)& s_{3}(2) & \mathbf{s_3(3)} & s_3(4) & \cdots \\\hline
+4 & s_{4}(1)& s_{4}(2) & s_4(3) & \mathbf{s_4(4)} & \cdots \\\hline
+\vdots & \vdots & \vdots & \vdots & \vdots & \mathbf{\ddots}
+\end{array}
+$$
+</p>
+<p>The labels down the side give the number of the sequence in the list $s_1$, $s_2$, \cdots; the numbers across the top label the <bb>element</bb>s of the individual sequences. For instance, $s_{1}(1)$ is a name for whatever number, a $0$ or a $1$, is the first <bb>element</bb> in the sequence $s_{1}$, and so on.</p>
+<p>Now we construct an infinite sequence, $\overline{s}$, of $0$'s and $1$'s which cannot possibly be on this list. The definition of $\overline{s}$ will depend on the list $s_1$, $s_2, \cdots$. Any infinite list of infinite sequences of $0$'s and $1$'s gives rise to an infinite sequence $\overline{s}$ which is guaranteed to not appear on the list.</p>
+<p>To define $\overline{s}$, we specify what all its <bb>element</bb>s are, i.e., we specify $\overline{s}(n)$ for all $n \in \mathbb{Z}^{+}$. We do this by reading down the diagonal of the array above (hence the name &ldquo;diagonal method&rsquo;') and then changing every $1$ to a $0$ and every $1$ to a $0$. More abstractly, we define $\overline{s}(n)$ to be $0$ or $1$ according to whether the $n$-th <bb>element</bb> of the diagonal, $s_n(n)$, is $1$ or $0$.</p>
+<p>
+$$
+\overline{s}(n) =
+\begin{cases}
+1 & \text{if $s_{n}(n) = 0$}\\
+0 & \text{if $s_{n}(n) = 1$}.
+\end{cases}
+$$
+</p>
+<p>If you like formulas better than definitions by cases, you could also define $\overline{s}(n) = 1 - s_n(n)$.</p>
+<p>Clearly $\overline{s}$ is an infinite sequence of $0$'s and $1$'s, since it is just the mirror sequence to the sequence of $0$'s and $1$'s that appear on the diagonal of our array. So $\overline{s}$ is an <bb>element</bb> of $\mathbb{B}^\omega$. But it cannot be on the list $s_1$, $s_2, \cdots$, Why not?</p>
+<p>It can&rsquo;t be the first sequence in the list, $s_1$, because it differs from $s_1$ in the first <bb>element</bb>.  Whatever $s_1(1)$ is, we defined $\overline{s}(1)$ to be the opposite.  It can&rsquo;t be the second sequence in the list, because $\overline{s}$ differs from $s_2$ in the second element: if $s_2(2)$ is $0$, $\overline{s}(2)$ is $1$, and vice versa. And so on.</p>
+<p>More precisely: if $\overline{s}$ were on the list, there would be some $k$ so that $\overline{s} = s_{k}$.  Two sequences are identical iff they agree at every place, i.e., for any $n$, $\overline{s}(n) = s_{k}(n)$.  So in particular, taking $n = k$ as a special case, $\overline{s}(k) = s_{k}(k)$ would have to hold. $s_k(k)$ is either $0$ or $1$. If it is $0$ then $\overline{s}(k)$ must be $1$&mdash;that&rsquo;s how we defined $\overline{s}$. But if $s_k(k) = 1$ then, again because of the way we defined $\overline{s}$, $\overline{s}(k) = 0$. In either case $\overline{s}(k) \neq s_{k}(k)$.</p>
+<p>We started by assuming that there is a list of <bb>element</bb>s of $\mathbb{B}^\omega$, $s_1$, $s_2, \cdots$, From this list we constructed a sequence $\overline{s}$ which we proved cannot be on the list.  But it definitely is a sequence of $0$'s and $1$'s if all the $s_i$ are sequences of $0$'s and $1$'s, i.e., $\overline{s} \in \mathbb{B}^\omega$. This shows in particular that there can be no list of <bb>all</bb> <bb>element</bb>s of $\mathbb{B}^\omega$, since for any such list we could also construct a sequence $\overline{s}$ guaranteed to not be on the list, so the assumption that there is a list of all sequences in $\mathbb{B}^\omega$ leads to a contradiction. $\blacksquare$</p>
+<p>This proof method is called &ldquo;diagonalization&rsquo;&rsquo; because it uses the diagonal of the array to define $\overline{s}$. Diagonalization need not involve the presence of an array: we can show that sets are not <bb>enumerable</bb> by using a similar idea even when no array and no actual diagonal is involved.</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯Theorem 1.2</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">$\mathscr{P}({\mathbb{Z})^{+}}$ is not <bb>enumerable</bb>.</span>
+  </div>
+  </div>
+<p><bb>Theorem 1.2 之證明</bb><br />
+We proceed in the same way, by showing that for every list of subsets of $\mathbb{Z}^{+}$ there is a subset of $\mathbb{Z}^{+}$ which cannot be on the list. Suppose the following is a given list of subsets of $\mathbb{Z}^{+}$: $$ Z_{1}, Z_{2}, Z_{3}, \cdots $$ We now define a set $\overline{Z}$ such that for any $n \in \mathbb{Z}^{+}$, $n \in \overline{Z}$ iff $n \notin Z_{n}$: $$ \overline{Z} = \lbrace n \in \mathbb{Z}^{+}: n \notin Z_n\rbrace$$ $\overline{Z}$ is clearly a set of positive integers, since by assumption each $Z_n$ is, and thus $\overline{Z} \in \mathscr{P}({\mathbb{Z})^{+}}$. But $\overline{Z}$ cannot be on the list.  To show this, we&rsquo;ll establish that for each $k \in \mathbb{Z}^{+}$, $\overline{Z} \neq Z_k$.</p>
+<p>So let $k \in \mathbb{Z}^{+}$ be arbitrary. We&rsquo;ve defined $\overline{Z}$ so that for any $n \in \mathbb{Z}^{+}$, $n \in \overline{Z}$ iff $n \notin Z_n$. In particular, taking $n=k$, $k \in \overline{Z}$ iff $k \notin Z_k$. But this shows that $\overline{Z} \neq Z_k$, since $k$ is an <bb>element</bb> of one but not the other, and so $\overline{Z}$ and $Z_k$ have different <bb>element</bb>s. Since $k$ was arbitrary, $\overline{Z}$ is not on the list $Z_1$, $Z_2, \cdots$ $blacksquare$</p>
+<p>The preceding proof did not mention a diagonal, but you can think of it as involving a diagonal if you picture it this way: Imagine the sets $Z_1$, $Z_2, \cdots$, written in an array, where each <bb>element</bb> $j \in Z_i$ is listed in the $j$-th column. Say the first four sets on that list are $\lbrace 1,2,3,\cdots\rbrace $, $\lbrace 2, 4, 6, \cdots\rbrace $, $\lbrace 1,2,5\rbrace $, and $\lbrace 3,4,5,\cdots\rbrace $. Then the array would begin with</p>
+<p>
+$$
+\begin{array}{r@{}rrrrrrr}
+Z_1 = \lbrace  & \mathbf{1}, & 2, & 3, & 4, & 5, & 6, & \cdots\rbrace \\
+Z_2 = \lbrace  &  & \mathbf{2}, &  & 4, &  & 6, & \cdots\rbrace \\
+Z_3 = \lbrace  & 1, & 2, &  &  & 5\phantom{,} &  & \rbrace \\
+Z_4 = \lbrace  &  &  & 3, & \mathbf{4}, & 5, & 6, & \cdots\rbrace \\
+\vdots & & & & & \ddots
+\end{array}
+$$
+</p>
+<p>Then $\overline{Z}$ is the set obtained by going down the diagonal, leaving out any numbers that appear along the diagonal and include those $j$ where the array has a gap in the $j$-th row/column. In the above case, we would leave out $1$ and $2$, include $3$, leave out $4$, etc.</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that $\mathscr{P}({\mathbb{N})}$ is <bb>nonenumerable</bb> by a diagonal argument.<br />
-\end{prob}</p>
+<p><bb>Problem 1.37</bb><br />
+Show that $\mathscr{P}({\mathbb{N})}$ is <bb>nonenumerable</bb> by a diagonal argument.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the set of functions $f \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ is<br />
-<bb>nonenumerable</bb> by an explicit diagonal argument. That is, show that<br />
-if $f_1$, $f_2$, \dots, is a list of functions and each $f_i\colon<br />
-\mathbb{Z}^{+} \to \mathbb{Z}^{+}$, then there is some $\overline{f}\colon \mathbb{Z}^{+} \to<br />
-\mathbb{Z}^{+}$ not on this list.<br />
-\end{prob}</p>
+<p><bb>Problem 1.38</bb><br />
+Show that the set of functions $f \colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ is <bb>nonenumerable</bb> by an explicit diagonal argument. That is, show that if $f_1$, $f_2$, \cdots, is a list of functions and each $f_i\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$, then there is some $\overline{f}\colon \mathbb{Z}^{+} \to \mathbb{Z}^{+}$ not on this list.</p>
 </blockquote>
 <h2 id="reduction">Reduction</h2>
-<p>This section proves non-enumerability by reduction, matching the<br />
-results in \jieref{subsec:Nonenumerable-Sets-1}. An alternative, slightly more condensed<br />
-version matching the results in \jieref{subsec:Nonenumerable-Sets-2} is provided in<br />
-\jieref{subsec:Nonenumerable-Sets-2-reduction}.</p>
-<p>We showed $\mathscr{P}({\mathbb{Z})^{+}}$ to be <bb>nonenumerable</bb> by a diagonalization<br />
-argument. We already had a proof that $\mathbb{B}^\omega$, the set of all<br />
-infinite sequences of $0$s and $1$s, is <bb>nonenumerable</bb>.  Here&rsquo;s<br />
-another way we can prove that $\mathscr{P}({\mathbb{Z})^{+}}$ is <bb>nonenumerable</bb>:<br />
-Show that if $\mathscr{P}({\mathbb{Z})^{+}}$ is <bb>enumerable</bb> then $\mathbb{B}^\omega$<br />
-is also <bb>enumerable</bb>.  Since we know $\mathbb{B}^\omega$ is not<br />
-<bb>enumerable</bb>, $\mathscr{P}({\mathbb{Z})^{+}}$ can&rsquo;t be either.  This is called<br />
-<bb>reducing</bb> one problem to another&mdash;in this case, we reduce the<br />
-problem of enumerating $\mathbb{B}^\omega$ to the problem of enumerating<br />
-$\mathscr{P}({\mathbb{Z})^{+}}$.  A solution to the latter&mdash;an enumeration of<br />
-$\mathscr{P}({\mathbb{Z})^{+}}$&mdash;would yield a solution to the former&mdash;an enumeration<br />
-of $\mathbb{B}^\omega$.</p>
-<p>How do we reduce the problem of enumerating a set $B$ to that of<br />
-enumerating a set $A$?  We provide a way of turning an enumeration<br />
-of $A$ into an enumeration of $B$.  The easiest way to do that is to<br />
-define a <bb>surjective</bb> function $f\colon A \to B$.  If $x_1$, $x_2$,<br />
-\dots{} enumerates $A$, then $f(x_1)$, $f(x_2)$, \dots{} would<br />
-enumerate $B$.  In our case, we are looking for a surjective<br />
-function $f\colon \mathscr{P}({\mathbb{Z})^{+}} \to \mathbb{B}^\omega$.</p>
+<p>This section proves non-enumerability by reduction, matching the results in §1.3.5（P.53）. An alternative, slightly more condensed version matching the results in §1.3.11（P.64）is provided in§1.3.12（P.66）.</p>
+<p>We showed $\mathscr{P}({\mathbb{Z})^{+}}$ to be <bb>nonenumerable</bb> by a diagonalization argument. We already had a proof that $\mathbb{B}^\omega$, the set of all infinite sequences of $0$s and $1$s, is <bb>nonenumerable</bb>.  Here&rsquo;s another way we can prove that $\mathscr{P}({\mathbb{Z})^{+}}$ is <bb>nonenumerable</bb>: Show that if $\mathscr{P}({\mathbb{Z})^{+}}$ is <bb>enumerable</bb> then $\mathbb{B}^\omega$ is also <bb>enumerable</bb>.  Since we know $\mathbb{B}^\omega$ is not <bb>enumerable</bb>, $\mathscr{P}({\mathbb{Z})^{+}}$ can&rsquo;t be either.  This is called <bb>reducing</bb> one problem to another&mdash;in this case, we reduce the problem of enumerating $\mathbb{B}^\omega$ to the problem of enumerating $\mathscr{P}({\mathbb{Z})^{+}}$.  A solution to the latter&mdash;an enumeration of $\mathscr{P}({\mathbb{Z})^{+}}$&mdash;would yield a solution to the former&mdash;an enumeration of $\mathbb{B}^\omega$.</p>
+<p>How do we reduce the problem of enumerating a set $B$ to that of enumerating a set $A$?  We provide a way of turning an enumeration of $A$ into an enumeration of $B$.  The easiest way to do that is to define a <bb>surjective</bb> function $f\colon A \to B$.  If $x_1$, $x_2, \cdots$, enumerates $A$, then $f(x_1)$, $f(x_2), \cdots$, would enumerate $B$.  In our case, we are looking for a surjective function $f\colon \mathscr{P}({\mathbb{Z})^{+}} \to \mathbb{B}^\omega$.</p>
 <blockquote>
 <p><bb>Problem 1.3</bb><br />
-Show that if there is an <bb>injective</bb> function $g\colon B \to A$, and<br />
-$B$ is <bb>nonenumerable</bb>, then so is $A$. Do this by showing how you<br />
-can use $g$ to turn an enumeration of $A$ into one of $B$.<br />
-\end{prob}</p>
+Show that if there is an <bb>injective</bb> function $g\colon B \to A$, and $B$ is <bb>nonenumerable</bb>, then so is $A$. Do this by showing how you can use $g$ to turn an enumeration of $A$ into one of $B$.</p>
 </blockquote>
-<p>\begin{proof}[Proof of Theorem \pref{thm:nonenum-pownat} by reduction]<br />
-Suppose that $\mathscr{P}({\mathbb{Z})^{+}}$ were <bb>enumerable</bb>, and thus that<br />
-there is an enumeration of it, $Z_{1}$, $Z_{2}$, $Z_{3}$, \dots</p>
-<p>Define the function $f \colon \mathscr{P}({\mathbb{Z})^{+}} \to \mathbb{B}^\omega$ by letting<br />
-$f(Z)$ be the sequence $s_{k}$ such that $s_{k}(n) = 1$ iff $n \in Z$,<br />
-and $s_k(n) = 0$ otherwise.  This clearly defines a function, since<br />
-whenever $Z \subseteq \mathbb{Z}^{+}$, any $n \in \mathbb{Z}^{+}$ either is<br />
-an <bb>element</bb> of $Z$ or isn&rsquo;t.  For instance, the set $2\mathbb{Z}^{+} = \lbrace 2,<br />
-4, 6, \dots\rbrace $ of positive even numbers gets mapped to the sequence<br />
-$010101\dots$, the empty set gets mapped to $0000\dots$ and the set<br />
-$\mathbb{Z}^{+}$ itself to $1111\dots$.</p>
-<p>It also is <bb>surjective</bb>: Every sequence of $0$s and $1$s corresponds<br />
-to some set of positive integers, namely the one which has as its<br />
-members those integers corresponding to the places where the sequence<br />
-has $1$s. More precisely, suppose $s \in \mathbb{B}^\omega$.  Define $Z<br />
-\subseteq \mathbb{Z}^{+}$ by:<br />
-$$<br />
-Z = \Setabs{n \in \mathbb{Z}^{+}}{s(n) = 1}<br />
-$$<br />
-Then $f(Z) = s$, as can be verified by consulting the definition<br />
-of $f$.</p>
-<p>Now consider the list<br />
-$$<br />
-f(Z_1), f(Z_2), f(Z_3), \dots<br />
-$$<br />
-Since $f$ is <bb>surjective</bb>, every member of $\mathbb{B}^\omega$ must<br />
-appear as a value of $f$ for some argument, and so must appear on the<br />
-list. This list must therefore enumerate all of $\mathbb{B}^\omega$.</p>
-<p>So if $\mathscr{P}({\mathbb{Z})^{+}}$ were <bb>enumerable</bb>, $\mathbb{B}^\omega$ would be<br />
-<bb>enumerable</bb>.  But $\mathbb{B}^\omega$ is <bb>nonenumerable</bb><br />
-(Theorem \pref{thm:nonenum-bin-omega}). Hence $\mathscr{P}({\mathbb{Z})^{+}}$ is<br />
-<bb>nonenumerable</bb>.<br />
-\end{proof}</p>
-<p>It is easy to be confused about the direction the reduction goes in.<br />
-For instance, a <bb>surjective</bb> function $g \colon \mathbb{B}^\omega \to B$<br />
-does <bb>not</bb> establish that $B$ is <bb>nonenumerable</bb>.  (Consider $g<br />
-\colon \mathbb{B}^\omega \to \mathbb{B}$ defined by $g(s) = s(1)$, the function<br />
-that maps a sequence of $0$'s and $1$'s to its first <bb>element</bb>.  It<br />
-is <bb>surjective</bb>, because some sequences start with $0$ and some start<br />
-with $1$. But $\mathbb{B}$ is finite.)  Note also that the function $f$ must<br />
-be <bb>surjective</bb>, or otherwise the argument does not go through:<br />
-$f(x_1)$, $f(x_2)$, \dots{} would then not be guaranteed to include<br />
-all the <bb>element</bb>s of $B$. For instance,<br />
-$$<br />
-h(n) = \underbrace{000\cdots0}_{\text{$n$ $0$'s}}<br />
-$$<br />
-defines a function $h\colon \mathbb{Z}^{+} \to<br />
-\mathbb{B}^\omega$, but $\mathbb{Z}^{+}$ is <bb>enumerable</bb>.</p>
+<p><bb>Proof of Theorem 1.6（P.65）by reduction</bb><br />
+Suppose that $\mathscr{P}({\mathbb{Z})^{+}}$ were <bb>enumerable</bb>, and thus that there is an enumeration of it, $Z_{1}$, $Z_{2}$, $Z_{3}, \cdots$</p>
+<p>Define the function $f \colon \mathscr{P}({\mathbb{Z})^{+}} \to \mathbb{B}^\omega$ by letting $f(Z)$ be the sequence $s_{k}$ such that $s_{k}(n) = 1$ iff $n \in Z$, and $s_k(n) = 0$ otherwise.  This clearly defines a function, since whenever $Z \subseteq \mathbb{Z}^{+}$, any $n \in \mathbb{Z}^{+}$ either is an <bb>element</bb> of $Z$ or isn&rsquo;t.  For instance, the set $2\mathbb{Z}^{+} = \lbrace 2, 4, 6, \cdots\rbrace $ of positive even numbers gets mapped to the sequence $010101\cdots$, the empty set gets mapped to $0000\cdots$ and the set $\mathbb{Z}^{+}$ itself to $1111\cdots$.</p>
+<p>It also is <bb>surjective</bb>: Every sequence of $0$s and $1$s corresponds to some set of positive integers, namely the one which has as its members those integers corresponding to the places where the sequence has $1$s. More precisely, suppose $s \in \mathbb{B}^\omega$.  Define $Z \subseteq \mathbb{Z}^{+}$ by: $$Z = \lbrace n \in \mathbb{Z}^{+}: s(n) = 1\rbrace$$ Then $f(Z) = s$, as can be verified by consulting the definition of $f$.</p>
+<p>Now consider the list $$f(Z_1), f(Z_2), f(Z_3), \cdots$$ Since $f$ is <bb>surjective</bb>, every member of $\mathbb{B}^\omega$ must appear as a value of $f$ for some argument, and so must appear on the list. This list must therefore enumerate all of $\mathbb{B}^\omega$.</p>
+<p>So if $\mathscr{P}({\mathbb{Z})^{+}}$ were <bb>enumerable</bb>, $\mathbb{B}^\omega$ would be <bb>enumerable</bb>.  But $\mathbb{B}^\omega$ is <bb>nonenumerable</bb> (Theorem 1.5（P.64）). Hence $\mathscr{P}({\mathbb{Z})^{+}}$ is <bb>nonenumerable</bb>. $\blacksquare$</p>
+<p>It is easy to be confused about the direction the reduction goes in. For instance, a <bb>surjective</bb> function $g \colon \mathbb{B}^\omega \to B$ does <bb>not</bb> establish that $B$ is <bb>nonenumerable</bb>.  (Consider $g \colon \mathbb{B}^\omega \to \mathbb{B}$ defined by $g(s) = s(1)$, the function that maps a sequence of $0$'s and $1$'s to its first <bb>element</bb>.  It is <bb>surjective</bb>, because some sequences start with $0$ and some start with $1$. But $\mathbb{B}$ is finite.)  Note also that the function $f$ must be <bb>surjective</bb>, or otherwise the argument does not go through: $f(x_1)$, $f(x_2), \cdots$, would then not be guaranteed to include all the <bb>element</bb>s of $B$. For instance,  $$ h(n) = \underbrace{000\cdots0}_{\text{$n$ $0$'s}} $$ defines a function $h\colon \mathbb{Z}^{+} \to \mathbb{B}^\omega$, but $\mathbb{Z}^{+}$ is <bb>enumerable</bb>.</p>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the set of all <bb>sets of</bb> pairs of positive integers is<br />
-<bb>nonenumerable</bb> by a reduction argument.<br />
-\end{prob}</p>
+<p><bb>Problem 1.40</bb><br />
+Show that the set of all <bb>sets of</bb> pairs of positive integers is <bb>nonenumerable</bb> by a reduction argument.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that $\mathbb{N}^\omega$, the set of infinite sequences of<br />
-natural numbers, is <bb>nonenumerable</bb> by a reduction argument.<br />
-\end{prob}</p>
+<p><bb>Problem 1.41</bb><br />
+Show that $\mathbb{N}^\omega$, the set of infinite sequences of natural numbers, is <bb>nonenumerable</bb> by a reduction argument.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Let $P$ be the set of functions from the set of positive<br />
-integers to the set $\lbrace 0\rbrace $, and let $Q$ be the set of <bb>partial</bb><br />
-functions from the set of positive integers to the set $\lbrace 0\rbrace $. Show<br />
-that $P$ is <bb>enumerable</bb> and $Q$ is not. (Hint: reduce the problem<br />
-of enumerating $\mathbb{B}^\omega$ to enumerating $Q$).<br />
-\end{prob}</p>
+<p><bb>Problem 1.42</bb><br />
+Let $P$ be the set of functions from the set of positive integers to the set $\lbrace 0\rbrace $, and let $Q$ be the set of <bb>partial</bb> functions from the set of positive integers to the set $\lbrace 0\rbrace $. Show that $P$ is <bb>enumerable</bb> and $Q$ is not. (Hint: reduce the problem of enumerating $\mathbb{B}^\omega$ to enumerating $Q$).</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Let $S$ be the set of all <bb>surjective</bb> functions from the set of<br />
-positive integers to the set \lbrace 0,1\rbrace , i.e., $S$ consists of all<br />
-<bb>surjective</bb> $f\colon \mathbb{Z}^{+} \to \mathbb{B}$.  Show that $S$ is<br />
-<bb>nonenumerable</bb>.<br />
-\end{prob}</p>
+<p><bb>Problem 1.43</bb><br />
+Let $S$ be the set of all <bb>surjective</bb> functions from the set of positive integers to the set \lbrace 0,1\rbrace , i.e., $S$ consists of all <bb>surjective</bb> $f\colon \mathbb{Z}^{+} \to \mathbb{B}$.  Show that $S$ is <bb>nonenumerable</bb>.</p>
 </blockquote>
 <blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.<br />
-\end{prob}</p>
-</blockquote>
-<h2 id="equinumerosity">Equinumerosity</h2>
-<p>We have an intuitive notion of &ldquo;size&rsquo;&rsquo; of sets, which works fine for<br />
-finite sets. But what about infinite sets? If we want to come up with<br />
-a formal way of comparing the sizes of two sets of <bb>any</bb> size, it<br />
-is a good idea to start by defining when sets are the same size. Here<br />
-is Frege:<br />
-\begin{quof}<br />
-If a waiter wants to be sure that he has laid exactly as many knives<br />
-as plates on the table, he does not need to count either of them, if<br />
-he simply lays a knife to the right of each plate, so that every<br />
-knife on the table lies to the right of some plate. The plates and<br />
-knives are thus uniquely correlated to each other, and indeed<br />
-through that same spatial relationship. \citep[\S70]{Frege1884}<br />
-\end{quof}<br />
-The insight of this passage can be brought out through a formal<br />
-definition:</p>
-<p>\begin{defn}[]<br />
-$A$ is <bb>equinumerous</bb> with $B$, written $\cardeq{A}{B}$, iff<br />
-there is a <bb>bijection</bb> $f \colon A \to B$.<br />
-\end{defn}</p>
-<blockquote>
-<p><bb>Proposition 1.5</bb><br />
-Equinumerosity is an equivalence relation.<br />
-\end{prop}</p>
-</blockquote>
-<p>\begin{proof}<br />
-We must show that equinumerosity is reflexive, symmetric, and<br />
-transitive. Let $A, B$, and $C$ be sets.</p>
-<p><bb>Reflexivity.</bb> The identity map $Id_A \colon A \to A$, where<br />
-$Id_A (x) = x$ for all $x \in A$, is a <bb>bijection</bb>. So<br />
-$\cardeq{A}{A}$.</p>
-<p><bb>Symmetry.</bb> Suppose $\cardeq{A}{B}$, i.e., there is<br />
-a <bb>bijection</bb> $f\colon A \to B$. Since $f$ is <bb>bijective</bb>, its<br />
-inverse $f^{-1}$ exists and is also <bb>bijective</bb>. Hence,<br />
-$f^{-1}\colon B \to A$ is a <bb>bijection</bb>, so $\cardeq{B}{A}$.</p>
-<p><bb>Transitivity.</bb> Suppose that $\cardeq{A}{B}$ and $\cardeq{B}{C}$,<br />
-i.e., there are <bb>bijection</bb>s $f\colon A \to B$ and $g\colon B \to<br />
-C$. Then the composition $g\circ f\colon A \to C$ is <bb>bijective</bb>,<br />
-so that $\cardeq{A}{C}$.<br />
-\end{proof}</p>
-<blockquote>
-<p><bb>Proposition 1.5</bb><br />
-If $\cardeq{A}{B}$, then $A$ is <bb>enumerable</bb> if<br />
-and only if $B$ is.<br />
-\end{prop}</p>
-</blockquote>
-<p>The following proof uses Definition \pref{defn:enumerable} if<br />
-\jieref{subsec:Enumerations-and-enumerable-Sets-1} is included and Definition \pref{defn:enumerable}<br />
-otherwise.</p>
-<p>\begin{proof}<br />
-Suppose $\cardeq{A}{B}$, so there is some <bb>bijection</bb> $f \colon A<br />
-\to B$, and suppose that $A$ is <bb>enumerable</bb>.<br />
-Then either $A = \varnothing$ or there is a <bb>surjective</bb> function<br />
-$g\colon \mathbb{Z}^{+} \to A$. If $A = \varnothing$, then $B = \varnothing$<br />
-also (otherwise there would be an <bb>element</bb> $y \in B$ but no $x \in<br />
-A$ with $g(x) = y$). If, on the other hand, $g\colon \mathbb{Z}^{+} \to A$<br />
-is <bb>surjective</bb>, then $g\circ f \colon \mathbb{Z}^{+} \to B$ is<br />
-<bb>surjective</bb>. To see this, let $y \in B$. Since $g$ is<br />
-<bb>surjective</bb>, there is an $x \in A$ such that $g(x) = y$. Since<br />
-$f$ is <bb>surjective</bb>, there is an $n \in \mathbb{Z}^{+}$ such that $f(n) =<br />
-x$. Hence,<br />
-$$<br />
-(g\circ f)(n) = g(f(n)) = g(x) = y<br />
-$$<br />
-and thus $g\circ f$ is <bb>surjective</bb>. We have that $g\circ f$<br />
-is an enumeration of $B$, and so $B$ is <bb>enumerable</bb>.</p>
-<p>Then either $A  = \varnothing$ or there is a <bb>bijection</bb> $g$ whose<br />
-range is $A$ and whose domain is either $\mathbb{N}$ or an initial<br />
-sequence of natural numbers. If $A = \varnothing$, then $B =<br />
-\varnothing$ also (otherwise there would be some $y \in B$ with no $x<br />
-\in A$ such that $g(x) = y$). So suppose we have our<br />
-<bb>bijection</bb> $g$. Then $f\circ g$ is a <bb>bijection</bb> with<br />
-range $B$ and domain the same as that of $g$ (i.e., either $\mathbb{N}$ or<br />
-an initial segment of it), so that $B$ is <bb>enumerable</bb>.</p>
-<p>If $B$ is <bb>enumerable</bb>, we obtain that $A$ is <bb>enumerable</bb> by<br />
-repeating the argument with the <bb>bijection</bb> $f^{-1}\colon B \to A$<br />
-instead of $f$.<br />
-\end{proof}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if $\cardeq{A}{C}$ and $\cardeq{B}{D}$, and $A \cap B =<br />
-C \cap D = \varnothing$, then $\cardeq{A \cup B}{C \cup D}$.<br />
-\end{prob}</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if $A$ is infinite and <bb>enumerable</bb>, then<br />
-$\cardeq{A}{\mathbb{N}}$.<br />
-\end{prob}</p>
-</blockquote>
-<h2 id="sets-of-different-sizes-and-cantors-theorem">Sets of Different Sizes, and Cantor&rsquo;s Theorem</h2>
-<p>We have offered a precise statement of the idea that two sets have the<br />
-same size. We can also offer a precise statement of the idea that one<br />
-set is smaller than another. Our definition of &ldquo;is smaller than (or<br />
-equinumerous)&rsquo;&rsquo; will require, instead of a <bb>bijection</bb> between the<br />
-sets, an <bb>injection</bb> from the first set to the second. If such a<br />
-function exists, the size of the first set is less than or equal to<br />
-the size of the second. Intuitively, an <bb>injection</bb> from one set to<br />
-another guarantees that the range of the function has at least as many<br />
-<bb>element</bb>s as the domain, since no two <bb>element</bb>s of the domain<br />
-map to the same <bb>element</bb> of the range.</p>
-<p>\begin{defn}[]<br />
-$A$ is <bb>no larger than</bb> $B$, written $\cardle{A}{B}$, iff there<br />
-is an <bb>injection</bb> $f \colon A \to B$.<br />
-\end{defn}</p>
-<p>It is clear that this is a reflexive and transitive relation, but that<br />
-it is not symmetric (this is left as an exercise). We can also<br />
-introduce a notion, which states that one set is (strictly) smaller<br />
-than another.</p>
-<p>\begin{defn}[]<br />
-$A$ is <bb>smaller than</bb> $B$, written $\cardless{A}{B}$, iff there<br />
-is an <bb>injection</bb> $f\colon A \to B$ but no <bb>bijection</bb> $g\colon A<br />
-\to B$, i.e., $\cardle{A}{B}$ and $\cardneq{A}{B}$.<br />
-\end{defn}</p>
-<p>It is clear that this is relation is anti-reflexive<br />
-and transitive. (This is left as an exercise.) Using this notation, we<br />
-can say that a set $A$ is <bb>enumerable</bb> iff $\cardle{A}{\mathbb{N}}$, and<br />
-that $A$ is <bb>nonenumerable</bb> iff $\cardless{\mathbb{N}}{A}$. This allows us<br />
-to restate \pref{thm:nonenum-pownat}<br />
-as the observation that<br />
-$\cardless{\mathbb{N}}{\mathscr{P}({\mathbb{N})}}$. In fact,<br />
-\citet{Cantor1892} proved that this last point is <bb>perfectly general</bb>:</p>
-<p>\begin{thm}[Cantor]<br />
-$\cardless{A}{\mathscr{P}({A})}$, for any set $A$.<br />
-\end{thm}</p>
-<p>\begin{proof}<br />
-The map $f(x) = \lbrace x\rbrace $ is an <bb>injection</bb> $f \colon A \to \mathscr{P}({A})$,<br />
-since if $x \neq y$, then also $\lbrace x\rbrace  \neq \lbrace y\rbrace $ by extensionality,<br />
-and so $f(x) \neq f(y)$. So we have that $\cardle{A}{\mathscr{P}({A})}$.</p>
-<p>We present the slow proof if \jieref{subsec:Nonenumerable-Sets-1} is<br />
-present, otherwise a faster proof matching \jieref{subsec:Nonenumerable-Sets-2}.</p>
-<p>We show that there cannot be a <bb>surjective</bb> function $g\colon A \to<br />
-\mathscr{P}({A})$, let alone a <bb>bijective</bb> one, and hence that<br />
-$\cardneq{A}{\mathscr{P}({A})}$. For suppose that $g\colon A \to \mathscr{P}({A})$.<br />
-Since $g$ is total, every $x \in A$ is mapped to a subset $g(x)<br />
-\subseteq A$. We show that $g$ cannot be surjective. To do this, we<br />
-define a subset $\overline{A} \subseteq A$ which by definition cannot be in the<br />
-range of $g$. Let<br />
-$$<br />
-\overline{A} = \Setabs{x \in A}{x \notin g(x)}.<br />
-$$<br />
-Since $g(x)$ is defined for all $x \in A$, $\overline{A}$ is clearly<br />
-a well-defined subset of $A$.  But, it cannot be in the range<br />
-of $g$. Let $x \in A$ be arbitrary, we show that $\overline{A} \neq<br />
-g(x)$.  If $x \in g(x)$, then it does not satisfy $x \notin g(x)$,<br />
-and so by the definition of $\overline{A}$, we have $x \notin<br />
-\overline{A}$.  If $x \in \overline{A}$, it must satisfy the<br />
-defining property of $\overline{A}$, i.e., $x \in A$ and $x \notin<br />
-g(x)$. Since $x$ was arbitrary, this shows that for each $x \in<br />
-\overline{A}$, $x \in g(x)$ iff $x \notin \overline{A}$, and so<br />
-$g(x) \neq \overline{A}$.  In other words, $\overline{A}$ cannot be<br />
-in the range of $g$, contradicting the assumption that $g$ is<br />
-surjective.</p>
-<p>It remains to show that $\cardneq{A}{\mathscr{P}({A})}$. For<br />
-reduction, suppose $\cardeq{A}{\mathscr{P}({A})}$, i.e., there is some<br />
-<bb>bijection</bb> $g \colon A \to \mathscr{P}({A})$. Now consider:<br />
-$$<br />
-D = \Setabs{x \in A}{x \notin g(x)}<br />
-$$<br />
-Note that $D \subseteq A$, so that $D \in \mathscr{P}({A})$. Since $g$ is<br />
-a <bb>bijection</bb>, there is some $y \in A$ such that $g(y) = D$. But<br />
-now we have:<br />
-$$<br />
-y \in g(y) \text{ iff } y \in D \text{ iff } y \notin g(y).<br />
-$$<br />
-This is a contradiction; so $\cardneq{A}{\mathscr{P}({A})}$.<br />
-\end{proof}</p>
-<p>It&rsquo;s instructive to<br />
-compare the proof of Theorem \ref{thm:cantor} to that of<br />
-Theorem \pref{thm:nonenum-pownat}. There we showed that for any list<br />
-$Z_1$, $Z_2$, \dots, of subsets of $\mathbb{Z}^{+}$ one can construct a<br />
-set $\overline{Z}$ of numbers guaranteed not to be on the list. It<br />
-was guaranteed not to be on the list because, for every $n \in<br />
-\mathbb{Z}^{+}$, $n \in Z_n$ iff $n \notin \overline{Z}$. This way, there<br />
-is always some number that is an <bb>element</bb> of one of $Z_n$ or<br />
-$\overline{Z}$ but not the other. We follow the same idea here,<br />
-except the indices $n$ are now <bb>element</bb>s of $A$ instead<br />
-of $\mathbb{Z}^{+}$. The set $\overline{B}$ is defined so that it is<br />
-different from $g(x)$ for each $x \in A$, because $x \in g(x)$ iff<br />
-$x \notin \overline{B}$. Again, there is always an <bb>element</bb> of $A$<br />
-which is an <bb>element</bb> of one of $g(x)$ and $\overline{B}$ but not<br />
-the other. And just as $\overline{Z}$ therefore cannot be on the<br />
-list $Z_1$, $Z_2$, \dots, $\overline{B}$ cannot be in the range<br />
-of $g$.</p>
-<p>It&rsquo;s instructive to<br />
-compare the proof of Theorem \ref{thm:cantor} to that of<br />
-Theorem \pref{thm:nonenum-pownat}. There we showed that for any<br />
-list $N_0$, $N_1$, $N_2$, \dots, of subsets of $\mathbb{N}$ we can construct a<br />
-set $D$ of numbers guaranteed not to be on the list. It was<br />
-guaranteed not to be on the list because $n \in N_n$ iff $n \notin<br />
-D$, for every $n \in \mathbb{N}$. We follow the same idea here, except the<br />
-indices $n$ are now <bb>element</bb>s of $A$ rather than of $\mathbb{N}$. The<br />
-set $D$ is defined so that it is different from $g(x)$ for each $x<br />
-\in A$, because $x \in g(x)$ iff $x \notin D$.</p>
-<p>The proof is also worth comparing with the proof of Russell&rsquo;s Paradox,<br />
-Theorem \pref{thm:russells-paradox}. Indeed, Cantor&rsquo;s Theorem was<br />
-the inspiration for Russell&rsquo;s own paradox.</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that there cannot be an <bb>injection</bb> $g\colon \mathscr{P}({A}) \to<br />
-A$, for any set $A$. Hint: Suppose $g\colon \mathscr{P}({A}) \to A$ is<br />
-<bb>injective</bb>. Consider $D = \Setabs{g(B)}{B \subseteq A \text{ and<br />
-} g(B) \notin B}$. Let $x = g(D)$. Use the fact that $g$ is<br />
-<bb>injective</bb> to derive a contradiction.<br />
-\end{prob}</p>
-</blockquote>
-<h2 id="the-notion-of-size-and-schroder-bernstein">The Notion of Size, and Schr&quot;oder-Bernstein</h2>
-<p>Here is an intuitive thought: if $A$ is no larger than $B$ and $B$ is<br />
-no larger than $A$, then $A$ and $B$ are equinumerous. To be honest,<br />
-if this thought were <bb>wrong</bb>, then we could scarcely justify the<br />
-thought that our defined notion of equinumerosity has anything to do<br />
-with comparisons of &ldquo;sizes&rsquo;&rsquo; between sets! Fortunately, though,<br />
-the intuitive thought is correct. This is justified by the<br />
-Schr&quot;oder-Bernstein Theorem.</p>
-<p>\begin{thm}[Schr&quot;oder-Bernstein]</p>
-<p>If $\cardle{A}{B}$ and $\cardle{B}{A}$,<br />
-then $\cardeq{A}{B}$.<br />
-\end{thm}</p>
-<p>In other words, if there is a <bb>injection</bb> from $A$ to $B$, and<br />
-a <bb>injection</bb> from $B$ to $A$, then there is a <bb>bijection</bb> from $A$<br />
-to $B$.</p>
-<p>This result, however, is really rather <bb>difficult</bb> to prove.<br />
-Indeed, although Cantor stated the result, others proved<br />
-it.\footnote{For more on the history, see e.g.,<br />
-\citet[pp. 165&ndash;6]{Potter2004}.}<br />
-% We will only be in<br />
-a position to <bb>prove</bb> Schr&quot;oder-Bernstein in<br />
-\olref[sfr][cardinals][card-sb]{sec}<br />
-For now, you can (and must)<br />
-take it on trust.</p>
-<p>Fortunately, Schr&quot;oder-Bernstein is <bb>correct</bb>, and it<br />
-vindicates our thinking of the relations we defined, i.e.,<br />
-$\cardeq{A}{B}$ and $\cardle{A}{B}$, as having something to do with<br />
-&ldquo;size&rsquo;&rsquo;. Moreover, Schr&quot;oder-Bernstein is very <bb>useful</bb>. It<br />
-can be difficult to think of a <bb>bijection</bb> between two equinumerous<br />
-sets. The Schr&quot;oder-Bernstein Theorem allows us to break the comparison<br />
-down into cases so we only have to think of a <bb>injection</bb> from the<br />
-first to the second, and vice-versa.</p>
-<p>The  following \jieref{subsec:Enumerations-and-enumerable-Sets-2}, \jieref{subsec:Nonenumerable-Sets-2}, \jieref{subsec:Nonenumerable-Sets-2-reduction} are  alternativeversions of \jieref{subsec:Enumerations-and-enumerable-Sets-1}, \jieref{subsec:Nonenumerable-Sets-1}, \jieref{subsec:Nonenumerable-Sets-1-reduction} due to Tim Button for usein his Open Set Theory text.  They are slightly more advanced and use adifference definition of enumerability more suitable in a set theory context(i.e., bijection withNor an initial segment, rather than being listable orbeing the range of a surjective function from $\mathbb{Z}^{+}$).</p>
-<h2 id="enumerations-and-enumerable-sets-1">Enumerations and enumerable Sets</h2>
-<p>This section defines enumerations as bijections with (initial<br />
-segments) of $\mathbb{N}$, the way it&rsquo;s done in set theory. So it<br />
-conflicts slightly with the definitions in \jieref{subsec:Enumerations-and-enumerable-Sets-1}, and<br />
-repeats all the examples there. It is also a bit more terse than<br />
-that section.</p>
-<p>We can specify finite set is by simply enumerating its<br />
-<bb>element</bb>s. We do this when we define a set like so:<br />
-$$<br />
-A = \lbrace a_1, a_2, \ldots, a_n\rbrace .<br />
-$$<br />
-Assuming that the <bb>element</bb>s $a_1$, \dots, $a_n$ are all distinct,<br />
-this gives us a <bb>bijection</bb> between $A$ and the first $n$ natural<br />
-numbers $0$, \dots, $n-1$. Conversely, since every finite set has only<br />
-finitely many <bb>element</bb>s, every finite set can be put into such a<br />
-correspondence. In other words, if $A$ is finite, there is<br />
-a <bb>bijection</bb> between $A$ and $\lbrace 0, \dots, n-1\rbrace $, where $n$ is the<br />
-number of <bb>element</bb>s of $A$.</p>
-<p>If we allow for certain kinds of infinite sets, then we will also<br />
-allow some infinite sets to be enumerated. We can make this precise by<br />
-saying that an infinite set is enumerated by a <bb>bijection</bb> between it<br />
-and all of $\mathbb{N}$.</p>
-<p>\begin{defn}[Enumeration, set-theoretic]<br />
-An <bb>enumeration</bb> of a set $A$ is a <bb>bijection</bb> whose range is<br />
-$A$ and whose domain is either an initial set of natural numbers $\lbrace 0,<br />
-1, \ldots, n\rbrace $ {or} the entire set of natural numbers $\mathbb{N}$.<br />
-\end{defn}</p>
-<p>There is an intuitive underpinning to this use of the word<br />
-<bb>enumeration</bb>. For to say that we have enumerated a set $A$ is to<br />
-say that there is a <bb>bijection</bb> $f$ which allows us to count out the<br />
-elements of the set $A$. The $0$th element is $f(0)$, the 1st is<br />
-$f(1)$, \ldots the $n$th is $f(n)$\ldots.\footnote{Yes, we count<br />
-from $0$. Of course we could also start with $1$. This would<br />
-make no big difference. We would just have to replace $\mathbb{N}$<br />
-by $\mathbb{Z}^{+}$.} The rationale for this may be made even clearer by<br />
-adding the following:</p>
-<p>\begin{defn}[]</p>
-<p>A set $A$ is <bb>enumerable</bb> iff either $A = \varnothing$ or there is<br />
-an enumeration of $A$. We say that $A$ is <bb>nonenumerable</bb> iff $A$<br />
-is not <bb>enumerable</bb>.<br />
-\end{defn}</p>
-<p>So a set is <bb>enumerable</bb> iff it is empty or you can use an<br />
-enumeration to count out its <bb>element</bb>s.</p>
-<p>\begin{examplep}{}<br />
-A function enumerating the natural numbers is simply the identity<br />
-function $\text{Id}<em>{\mathbb{N}} \colon \mathbb{N} \to \mathbb{N}$ given by $\text{Id}</em>{\mathbb{N}}(n) = n$. A<br />
-function enumerating the <bb>positive</bb> natural numbers, $\mathbb{N}^+ =<br />
-\mathbb{N} \setminus \lbrace 0\rbrace $, is the function $g(n) = n + 1$, i.e., the<br />
-successor function.<br />
-\end{examplep}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that a set $A$ is <bb>enumerable</bb> iff either $A = \varnothing$ or<br />
-there is a <bb>surjection</bb> $f\colon \mathbb{N} \to A$. Show that $A$ is<br />
-<bb>enumerable</bb> iff there is a <bb>injection</bb> $g\colon A \to \mathbb{N}$.<br />
-\end{prob}</p>
-</blockquote>
-<p>\begin{examplep}{}<br />
-The functions $f\colon \mathbb{N} \to \mathbb{N}$ and $g \colon \mathbb{N} \to \mathbb{N}$<br />
-given by<br />
-\begin{align*}<br />
-f(n) &amp; = 2n \text{ and}\<br />
-g(n) &amp; = 2n+1<br />
-\end{align*}<br />
-respectively enumerate the even natural numbers and the odd natural<br />
-numbers. But neither is <bb>surjective</bb>, so neither is an enumeration<br />
-of $\mathbb{N}$.<br />
-\end{examplep}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Define an enumeration of the square numbers $1$, $4$, $9$, $16$, \dots<br />
-\end{prob}</p>
-</blockquote>
-<p>\begin{examplep}{}<br />
-Let $\lceil x \rceil$ be the <bb>ceiling</bb> function, which rounds $x$<br />
-up to the nearest integer. Then the function $f \colon \mathbb{N} \to \mathbb{Z}$<br />
-given by:<br />
-$$<br />
-f(n) = (-1)^{n} \left\lceil\tfrac{n}{2}\right\rceil<br />
-$$<br />
-enumerates the set of<br />
-integers $\mathbb{Z}$ as follows:<br />
-$$<br />
-\begin{array}{c c c c c c c c}<br />
-f(0) &amp; f(1) &amp; f(2) &amp; f(3) &amp; f(4) &amp; f(5) &amp; f(6) &amp; \dots \ \<br />
-\big\lceil \tfrac{0}{2} \big\rceil &amp; -\big\lceil \tfrac{1}{2}\big\rceil &amp;  \big\lceil \tfrac{2}{2} \big\rceil &amp; -\big\lceil \tfrac{3}{2} \big\rceil &amp; \big\lceil \tfrac{4}{2} \big\rceil  &amp; -\big\lceil \tfrac{5}{2}\big\rceil &amp; \big\lceil \tfrac{6}{2} \big\rceil &amp; \dots \ \<br />
-0 &amp; -1 &amp; 1 &amp; -2 &amp; 2 &amp; -3 &amp; 3&amp; \dots<br />
-\end{array}<br />
-$$<br />
-Notice how $f$ generates the values of $\mathbb{Z}$ by &ldquo;hopping&rsquo;&rsquo; back and<br />
-forth between positive and negative integers. You can also think of<br />
-$f$ as defined by cases as follows:<br />
-$$<br />
-f(n) = \begin{cases}<br />
-\frac{n}{2} &amp; \text{if $n$ is even}\<br />
--\frac{n+1}{2} &amp; \text{if $n$ is odd}<br />
-\end{cases}<br />
-$$<br />
-\end{examplep}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if $A$ and $B$ are <bb>enumerable</bb>, so is $A \cup B$.<br />
-\end{prob}</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show by induction on $n$ that if $A_1$, $A_2$, \dots, $A_n$ are all<br />
-<bb>enumerable</bb>, so is $A_1 \cup \dots \cup A_n$.<br />
-\end{prob}</p>
-</blockquote>
-<h2 id="nonenumerable-sets-1">Nonenumerable Sets</h2>
-<p>This section proves the non-enumerability of $\mathbb{B}^\omega$ and<br />
-$\mathscr{P}({\mathbb{N})}$ using the definitions in \jieref{subsec:Enumerations-and-enumerable-Sets-2}, i.e.,<br />
-requiring a bijection with $\mathbb{N}$ instead of a surjection from<br />
-$\mathbb{Z}^{+}$.</p>
-<p>The set $\mathbb{N}$ of natural numbers is infinite. It is also trivially<br />
-<bb>enumerable</bb>. But the remarkable fact is that there are<br />
-<bb>\emph{nonenumerable</bb>} sets, i.e., sets which are not <bb>enumerable</bb><br />
-(see Definition \pref{defn:enumerable}).</p>
-<p>This might be surprising. After all, to say that $A$ is<br />
-<bb>nonenumerable</bb> is to say that there is <bb>no</bb> <bb>bijection</bb> $f<br />
-\colon \mathbb{N} \to A$; that is, no function mapping the infinitely many<br />
-<bb>element</bb>s of $\mathbb{N}$ to $A$ exhausts all of $A$.  So if $A$ is<br />
-<bb>nonenumerable</bb>, there are &ldquo;more&rsquo;&rsquo; <bb>element</bb>s of $A$ than there<br />
-are natural numbers.</p>
-<p>To prove that a set is <bb>nonenumerable</bb>, you have to show that no<br />
-appropriate <bb>bijection</bb> can exist. The best way to do this is to<br />
-show that every attempt to enumerate <bb>element</bb>s of $A$ must leave at<br />
-least one <bb>element</bb> out; this shows that no function $f\colon \mathbb{N}<br />
-\to A$ is <bb>surjective</bb>. And a general strategy for establishing this<br />
-is to use Cantor&rsquo;s <bb>diagonal method</bb>. Given a list of<br />
-<bb>element</bb>s of $A$, say, $x_1$, $x_2$, \dots, we construct another<br />
-<bb>element</bb> of $A$ which, by its construction, cannot possibly be on<br />
-that list.</p>
-<p>But all of this is best understood by example. So, our first example<br />
-is the set $\mathbb{B}^\omega$ of all infinite strings of $0$'s and $1$'s.<br />
-(The `$\mathbb{B}$&rsquo; stands for binary, and we can just think of it as the<br />
-two-element set<br />
-$\lbrace 0,1\rbrace $.)  This<br />
-slightly loose formulation should not cause any confusions<br />
-for now, however.<br />
-%\footnote{More accurately, we should stipulate that $\mathbb{B}^\omega$ is the set of all \omega$-sequences of $0$'s and $1$s, i.e., the set $\funfromto{\omega}{\lbrace 0,1\rbrace }$. But the meaning of this will only become clear in \olref[sfr][card-arithmetic][card-opps]{sec}.}</p>
-<p>\begin{thm}</p>
-<p>$\mathbb{B}^\omega$ is <bb>nonenumerable</bb>.<br />
-\end{thm}</p>
-<p>\begin{proof}<br />
-Consider any enumeration of a subset of $\mathbb{B}^\omega$. So we have some<br />
-list $s_{0}$, $s_{1}$, $s_{2}$, \dots{} where every $s_n$ is an<br />
-infinite string of $0$'s and $1$'s. Let $s_n(m)$ be the $n$th digit of<br />
-the $m$th string in this list. So we can now think of our list as an<br />
-array, where $s_n(m)$ is placed at the $n$th row and $m$th column:<br />
-$$<br />
-\begin{array}{c|c|c|c|c|c}<br />
-&amp; 0 &amp; 1 &amp; 2 &amp; 3 &amp; \dots \\hline<br />
-0 &amp; \mathbf{s_{0}(0)} &amp; s_{0}(1) &amp; s_{0}(2) &amp; s_0(3) &amp; \dots \\hline<br />
-1 &amp; s_{1}(0)&amp; \mathbf{s_{1}(1)} &amp; s_1(2) &amp; s_1(3) &amp; \dots \\hline<br />
-2 &amp; s_{2}(0)&amp; s_{2}(1) &amp; \mathbf{s_2(2)} &amp; s_2(3) &amp; \dots \\hline<br />
-3 &amp; s_{3}(0)&amp; s_{3}(1) &amp; s_3(2) &amp; \mathbf{s_3(3)} &amp; \dots \\hline<br />
-\vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \vdots &amp; \mathbf{\ddots}<br />
-\end{array}<br />
-$$<br />
-We will now construct an infinite string, $d$, of $0$'s and $1$'s<br />
-which is not on this list.  We will do this by specifying each of its<br />
-entries, i.e., we specify $d(n)$ for all $n \in \mathbb{N}$.  Intuitively,<br />
-we do this by reading down the diagonal of the array above (hence the<br />
-name &ldquo;diagonal method&rsquo;') and then changing every $1$ to a $0$ and<br />
-every $1$ to a $0$. More abstractly, we define $d(n)$ to be $0$ or $1$<br />
-according to whether the $n$-th <bb>element</bb> of the diagonal, $s_n(n)$,<br />
-is $1$ or $0$, that is:<br />
-$$<br />
-d(n) =<br />
-\begin{cases}<br />
-1 &amp; \text{if $s_{n}(n) = 0$}\<br />
-0 &amp; \text{if $s_{n}(n) = 1$}<br />
-\end{cases}<br />
-$$<br />
-Clearly $d \in \mathbb{B}^\omega$, since it is an infinite string of $0$'s<br />
-and $1$'s. But we have constructed $d$ so that $d(n) \neq s_n(n)$ for<br />
-any $n \in \mathbb{N}$. That is, $d$ differs from $s_n$ in its $n$th entry.<br />
-So $d \neq s_n$ for any $n\in \mathbb{N}$. So $d$ cannot be on the list<br />
-$s_0$, $s_1$, $s_2$,<br />
-\dots</p>
-<p>We have shown, given an arbitrary enumeration of some subset of<br />
-$\mathbb{B}^\omega$, that it will omit some <bb>element</bb> of $\mathbb{B}^\omega$. So<br />
-there is no enumeration of the set $\mathbb{B}^\omega$, i.e., $\mathbb{B}^\omega$<br />
-is <bb>nonenumerable</bb>.<br />
-\end{proof}</p>
-<p>This proof method is called &ldquo;diagonalization&rsquo;&rsquo; because it uses the<br />
-diagonal of the array to define $d$. However, diagonalization need<br />
-not involve the presence of an array. Indeed, we can show that some set is<br />
-<bb>nonenumerable</bb> by using a similar idea, even when no array and no<br />
-actual diagonal is involved. The following result illustrates how.</p>
-<p>\begin{thm}</p>
-<p>$\mathscr{P}({\mathbb{N})}$ is not <bb>enumerable</bb>.<br />
-\end{thm}</p>
-<p>\begin{proof}<br />
-We proceed in the same way, by showing that every list of subsets<br />
-of $\mathbb{N}$ omits some subset of $\mathbb{N}$. So, suppose that we have some<br />
-list $N_0, N_1, N_2, \ldots$ of subsets of $\mathbb{N}$. We define a set $D$<br />
-as follows: $n \in D$ iff $n \notin N_{n}$:<br />
-$$<br />
-D = \Setabs{n \in \mathbb{N}}{n \notin N_n}<br />
-$$<br />
-Clearly $D\subseteq \mathbb{N}$. But $D$ cannot be on the list. After all,<br />
-by construction $n \in D$ iff $n\notin N_n$, so that $D \neq N_n$ for<br />
-any $n \in \mathbb{N}$.<br />
-\end{proof}</p>
-<p>The preceding proof did not mention a diagonal. Still, you can think<br />
-of it as involving a diagonal if you picture it this way: Imagine the<br />
-sets $N_0$, $N_1$, \dots, written in an array, where we write $N_n$ on<br />
-the $n$th row by writing $m$ in the $m$th column iff if $m \in N_n$.<br />
-For example, say the first four sets on that list are<br />
-$\lbrace 0,1,2,\dots\rbrace $, $\lbrace 1, 3, 5, \dots\rbrace $, $\lbrace 0,1,4\rbrace $, and<br />
-$\lbrace 2,3,4,\dots\rbrace $; then our array would begin with<br />
-$$<br />
-\begin{array}{r@{}rrrrrrr}<br />
-N_0 = \lbrace  &amp; \mathbf{0}, &amp; 1, &amp; 2, &amp; &amp; &amp; &amp; \dots\rbrace \<br />
-N_1 = \lbrace  &amp;  &amp; \mathbf{1}, &amp;  &amp; 3, &amp;  &amp; 5, &amp; \dots\rbrace \<br />
-N_2 = \lbrace  &amp; 0, &amp; 1, &amp;  &amp;  &amp; 4\phantom{,} &amp;  &amp; \rbrace \<br />
-N_3 = \lbrace  &amp;  &amp;  &amp; 2, &amp; \mathbf{3}, &amp; 4, &amp; &amp; \dots\rbrace \<br />
-&amp;\vdots &amp; &amp; &amp; &amp; &amp; &amp; \ddots\phantom{\rbrace }<br />
-\end{array}<br />
-$$<br />
-Then $D$ is the set obtained by going down the diagonal, placing $n<br />
-\in D$ iff $n$ is <bb>not</bb> on the diagonal. So in the above case, we<br />
-would leave out $0$ and $1$, we would include $2$, we would leave<br />
-out $3$, etc.</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the set of all functions $f \colon \mathbb{N} \to \mathbb{N}$ is<br />
-<bb>nonenumerable</bb> by an explicit diagonal argument. That is, show that<br />
-if $f_1$, $f_2$, \dots, is a list of functions and each $f_i\colon<br />
-\mathbb{N} \to \mathbb{N}$, then there is some $g \colon \mathbb{N} \to<br />
-\mathbb{N}$ not on this list.<br />
-\end{prob}</p>
-</blockquote>
-<h2 id="reduction-1">Reduction</h2>
-<p>This section proves non-enumerability by reduction, matching the<br />
-results in \jieref{subsec:Nonenumerable-Sets-2}. An alternative, slightly more<br />
-elaborate version matching the results in \jieref{subsec:Nonenumerable-Sets-1} is<br />
-provided in \jieref{subsec:Nonenumerable-Sets-1-reduction}.</p>
-<p>We proved that $\mathbb{B}^\omega$ is <bb>nonenumerable</bb> by a diagonalization<br />
-argument. We used a similar diagonalization argument to show that<br />
-$\mathscr{P}({\mathbb{N})}$ is <bb>nonenumerable</bb>. But here&rsquo;s another way we can prove<br />
-that $\mathscr{P}({\mathbb{N})}$ is <bb>nonenumerable</bb>: show that \emph{if<br />
-$\mathscr{P}({\mathbb{N})}$ is <bb>enumerable</bb> then $\mathbb{B}^\omega$ is also<br />
-<bb>enumerable</bb>}.  Since we know $\mathbb{B}^\omega$ is <bb>nonenumerable</bb>, it<br />
-will follow that $\mathscr{P}({\mathbb{N})}$ is too.</p>
-<p>This is called <bb>reducing</bb> one problem to another. In this case,<br />
-we reduce the problem of enumerating $\mathbb{B}^\omega$ to the problem of<br />
-enumerating $\mathscr{P}({\mathbb{N})}$.  A solution to the latter&mdash;an enumeration<br />
-of $\mathscr{P}({\mathbb{N})}$&mdash;would yield a solution to the former&mdash;an<br />
-enumeration of $\mathbb{B}^\omega$.</p>
-<p>To reduce the problem of enumerating a set $B$ to that of enumerating<br />
-a set $A$, we provide a way of turning an enumeration of $A$ into an<br />
-enumeration of $B$.  The easiest way to do that is to define<br />
-a <bb>surjection</bb> $f\colon A \to B$.  If $x_1$, $x_2$, \dots{}<br />
-enumerates $A$, then $f(x_1)$, $f(x_2)$, \dots{} would enumerate $B$.<br />
-In our case, we are looking for a <bb>surjection</bb> $f\colon \mathscr{P}({\mathbb{N})}<br />
-\to \mathbb{B}^\omega$.</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that if there is an <bb>injective</bb> function $g\colon B \to A$, and<br />
-$B$ is <bb>nonenumerable</bb>, then so is $A$. Do this by showing how you<br />
-can use $g$ to turn an enumeration of $A$ into one of $B$.<br />
-\end{prob}</p>
-</blockquote>
-<p>\begin{proof}[Proof of Theorem \pref{thm:nonenum-pownat} by reduction]<br />
-For reductio, suppose that $\mathscr{P}({\mathbb{N})}$ is <bb>enumerable</bb>, and thus that<br />
-there is an enumeration of it, $N_{1}$, $N_{2}$, $N_{3}$, \dots</p>
-<p>Define the function $f \colon \mathscr{P}({\mathbb{N})} \to \mathbb{B}^\omega$ by letting<br />
-$f(N)$ be the string $s_{k}$ such that $s_{k}(n) = 1$ iff $n \in N$,<br />
-and $s_k(n) = 0$ otherwise.</p>
-<p>This clearly defines a function, since whenever $N \subseteq \mathbb{N}$,<br />
-any $n \in \mathbb{N}$ either is an <bb>element</bb> of $N$ or isn&rsquo;t.  For<br />
-instance, the set $2\mathbb{N} = \Setabs{2n}{n \in \mathbb{N}} = \lbrace 0,2, 4, 6,<br />
-\dots\rbrace $ of even naturals gets mapped to the string $1010101\dots$;<br />
-$\varnothing$ gets mapped to $0000\dots$; $\mathbb{N}$ gets mapped to<br />
-$1111\dots$.</p>
-<p>It is also <bb>surjective</bb>: every string of $0$s and $1$s corresponds<br />
-to some set of natural numbers, namely the one which has as its<br />
-members those natural numbers  corresponding to the places where the string<br />
-has $1$s. More precisely, if $s \in \mathbb{B}^\omega$, then define $N<br />
-\subseteq \mathbb{N}$ by:<br />
-$$<br />
-N = \Setabs{n \in \mathbb{N}}{s(n) = 1}<br />
-$$<br />
-Then $f(N) = s$, as can be verified by consulting the definition<br />
-of $f$.</p>
-<p>Now consider the list<br />
-$$<br />
-f(N_1), f(N_2), f(N_3), \dots<br />
-$$<br />
-Since $f$ is <bb>surjective</bb>, every member of $\mathbb{B}^\omega$ must<br />
-appear as a value of $f$ for some argument, and so must appear on the<br />
-list. This list must therefore enumerate all of $\mathbb{B}^\omega$.</p>
-<p>So if $\mathscr{P}({\mathbb{N})}$ were <bb>enumerable</bb>, $\mathbb{B}^\omega$ would be<br />
-<bb>enumerable</bb>.  But $\mathbb{B}^\omega$ is <bb>nonenumerable</bb><br />
-(Theorem \pref{thm:nonenum-bin-omega}). Hence $\mathscr{P}({\mathbb{N})}$ is<br />
-<bb>nonenumerable</bb>.<br />
-\end{proof}</p>
-<p>%<br />
-%It is easy to be confused about the direction the reduction goes in.<br />
-%For instance, a <bb>surjective</bb> function $g \colon \mathbb{B}^\omega \to X$<br />
-%does <bb>not</bb> establish that $X$ is <bb>nonenumerable</bb>.  (Consider $g<br />
-%\colon \mathbb{B}^\omega \to \mathbb{B}$ defined by $g(s) = s(1)$, the function<br />
-%that maps a sequence of $0$'s and $1$'s to its first <bb>element</bb>.  It<br />
-%is surjective, because some sequences start with $0$ and some start<br />
-%with $1$. But $\mathbb{B}$ is finite.)  Note also that the function $f$ must<br />
-%be surjective, or otherwise the argument does not go through:<br />
-%$f(x_1)$, $f(x_2)$, \dots{} would then not be guaranteed to include<br />
-%all the <bb>element</bb>s of $Y$. For instance, $h\colon \mathbb{N} \to<br />
-%\mathbb{B}^\omega$ defined by<br />
-%$$<br />
-%h(n) = \underbrace{000\dots0}_{\text{$n$ $0$'s}}<br />
-%$$<br />
-%is a function, but $\mathbb{N}$ is <bb>enumerable</bb>.<br />
-%</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the set of all <bb>sets of</bb> pairs of natural numbers,<br />
-i.e., $\mathscr{P}({\mathbb{N}) \times \mathbb{N}}$, is <bb>nonenumerable</bb> by a reduction<br />
-argument.<br />
-\end{prob}</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that $\mathbb{N}^\omega$, the set of infinite sequences of natural<br />
-numbers, is <bb>nonenumerable</bb> by a reduction argument.<br />
-\end{prob}</p>
-</blockquote>
-<p>%&gt; <bb>Problem 1.3</bb><br />
-%Let $P$ be the set of functions from $\mathbb{N}$ to the set $\lbrace 0\rbrace $, and let $Q$ be the set of <bb>partial</bb><br />
-%functions from the set of positive integers to the set $\lbrace 0\rbrace $. Show<br />
-%that $P$ is <bb>enumerable</bb> and $Q$ is not. (Hint: reduce the problem<br />
-%of enumerating $\mathbb{B}^\omega$ to enumerating $Q$).<br />
-%\end{prob}</p>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Let $S$ be the set of all <bb>surjection</bb>s from $\mathbb{N}$ to the set<br />
-$\lbrace 0,1\rbrace $, i.e., $S$ consists of all <bb>surjection</bb>s $f \colon \mathbb{N}<br />
-\to \mathbb{B}$.  Show that $S$ is <bb>nonenumerable</bb>.<br />
-\end{prob}</p>
-</blockquote>
-<blockquote>
-<p><bb>Problem 1.3</bb><br />
-Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.<br />
-\end{prob}</p>
+<p><bb>Problem 1.44</bb><br />
+Show that the set $\mathbb{R}$ of all real numbers is <bb>nonenumerable</bb>.</p>
 </blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 18:28:11 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Saturday, September 5, 2020, 21:55:30 by 王小花.</p>
     </article>
     
     <script>
@@ -4879,12 +3997,6 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#an-alternative-pairing-function">An Alternative Pairing Function</a></li>
         <li><a href="#nonenumerable-sets">Nonenumerable Sets</a></li>
         <li><a href="#reduction">Reduction</a></li>
-        <li><a href="#equinumerosity">Equinumerosity</a></li>
-        <li><a href="#sets-of-different-sizes-and-cantors-theorem">Sets of Different Sizes, and Cantor&rsquo;s Theorem</a></li>
-        <li><a href="#the-notion-of-size-and-schroder-bernstein">The Notion of Size, and Schr&quot;oder-Bernstein</a></li>
-        <li><a href="#enumerations-and-enumerable-sets-1">Enumerations and enumerable Sets</a></li>
-        <li><a href="#nonenumerable-sets-1">Nonenumerable Sets</a></li>
-        <li><a href="#reduction-1">Reduction</a></li>
       </ul>
     </li>
   </ul>
