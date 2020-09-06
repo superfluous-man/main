@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-06T13:23:07&#43;0800">
+<meta name="modified" content="2020-09-06T17:33:07&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 02 章 PL 聯結詞與真值表",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-06T13:23:07+08:00",
+    "dateModified": "2020-09-06T17:33:07+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch02/",
     "description": "The material in this chapter is an introduction to basic naive set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 6, 2020 </time>
   
-&middot; 🔢 36000 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 72 min read</span>
+&middot; 🔢 34655 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 70 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1837,6 +1837,7 @@ if (!doNotTrack) {
         <li><a href="#簡化眞值表方法">簡化眞值表方法</a></li>
       </ul>
     </li>
+    <li><a href="#本章習題">本章習題</a></li>
   </ul>
 </nav>
   </div>
@@ -2455,480 +2456,427 @@ $$
 <bb>解：</bb>與例 2.25 解法相同，易知其眞值爲 0.</p>
 </blockquote>
 <p>例 2.25, 2.26 使我們明白：要計算出一個公式的眞值，我們只需知道它的所有直接子公式的眞值，而不一定要知道它的所有原子子公式的眞值。其實，要計算出一個公式的眞值，也未必要事先知道它的<strong>所有</strong>直接子公式的眞值。</p>
-<p>\begin{examplep}{}<br />
-設 $\varphi$ 的眞值爲 1 且 $\psi$ 的眞值爲 0. 那麼對任意公式 $\chi$，<br />
-\begin{quofbcolitem}<br />
-1. $\varphi \lor \chi$ 的眞值爲 1，<br />
-1.  $\chi \rightarrow \varphi$ 的眞值爲 1，<br />
-1. $\chi \land \psi$ 的眞值爲 0，<br />
-1. $\psi \rightarrow \chi$ 的眞值爲 1.<br />
-\end{quofbcolitem}<br />
-根據（眞值）表 2.1，以上結論是顯然的。<br />
-\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-設 $\varphi$ 的眞值爲 1 且 $\psi$ 的眞值爲 0. 計算公式 $\varphi \rightarrow(\varphi \rightarrow(\varphi \rightarrow(\varphi \vee(\chi \wedge \xi) \rightarrow \psi)))$ 的眞值。</p>
-<pre><code>**解：**與前幾例並無區別。易知其眞值爲 0.
-
-\begin{center}
-    $	 
-    \underbrace{\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{\underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{1}{\big\uparrow}}}{\lor}}}\underbrace{(\underset{?}{\chi}\mathpunct{\smash{\underset{\mathbf{\underset{?}{\uparrow}}}{\land}}} \underset{?}{\xi})}_{?}}_{1} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underset{0}{\psi})}_{0})}_{0})}_{0}}_{0}
-    $
-\end{center}
-
-%	
-%	\footnote{$	 
-%	 	\underbrace{\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{\underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{1}{\big\uparrow}}}{\lor}}}\underbrace{(\underset{?}{\chi}\mathpunct{\smash{\underset{\mathbf{\underset{?}{\uparrow}}}{\land}}} \underset{?}{\xi})}_{?}}_{1} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underset{0}{\psi})}_{0})}_{0})}_{0}}_{0}
-%	$ }
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-設 $\varphi$ 眞值爲 0. 計算公式 $\psi_{0} \rightarrow\left(\psi_{1} \rightarrow\left(\psi_{2} \rightarrow(\chi \wedge \psi \rightarrow \xi)\right)\right)$ 的眞值。</p>
-<pre><code>**解：**原理與方法與前幾例並無區別。易知 $\chi \wedge \psi$ 眞值爲 0，則 $\chi \wedge \psi \rightarrow \xi$ 眞值爲 1，那麼無論前件眞值爲 1 或 0，公式眞值始終爲 1.
-</code></pre>
-<p>\end{examplep}</p>
+<blockquote>
+<p><bb>☯例 2.27</bb><br />
+設 $\varphi$ 的眞值爲 1 且 $\psi$ 的眞值爲 0. 那麼對任意公式 $\chi$，根據（眞值）表 2.1，以下結論是顯然的：</p>
+<ol>
+<li>$\varphi \lor \chi$ 的眞值爲 1，</li>
+<li>$\chi \rightarrow \varphi$ 的眞值爲 1，</li>
+<li>$\chi \land \psi$ 的眞值爲 0，</li>
+<li>$\psi \rightarrow \chi$ 的眞值爲 1.</li>
+</ol>
+</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.28</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>設 $\varphi$ 的眞值爲 1 且 $\psi$ 的眞值爲 0. 計算公式 $\varphi \rightarrow(\varphi \rightarrow(\varphi \rightarrow(\varphi \vee(\chi \wedge \xi) \rightarrow \psi)))$ 的眞值。</p>
+<p><bb>解：</bb>與前幾例並無區別。易知其眞值爲 0.</p>
+<p>
+$$	
+\underbrace{\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underbrace{\underbrace{(\underset{1}{\varphi} \mathpunct{\smash{\underset{\mathbf{\underset{1}{\big\uparrow}}}{\lor}}}\underbrace{(\underset{?}{\chi}\mathpunct{\smash{\underset{\mathbf{\underset{?}{\uparrow}}}{\land}}} \underset{?}{\xi})}_{?}}_{1} \mathpunct{\smash{\underset{\mathbf{\underset{0}{\big\uparrow}}}{\rightarrow}}} \underset{0}{\psi})}_{0})}_{0})}_{0}}_{0}
+$$
+</p>
+</span>
+  </div>
+  </div>
+<blockquote>
+<p><bb>☯例 2.29</bb><br />
+設 $\varphi$ 眞值爲 0. 計算公式 $\psi_{0} \rightarrow\left(\psi_{1} \rightarrow\left(\psi_{2} \rightarrow(\chi \wedge \psi \rightarrow \xi)\right)\right)$ 的眞值。<br />
+<bb>解：</bb>原理與方法與前幾例並無區別。易知 $\chi \wedge \psi$ 眞值爲 0，則 $\chi \wedge \psi \rightarrow \xi$ 眞值爲 1，那麼無論前件眞值爲 1 或 0，公式眞值始終爲 1.</p>
+</blockquote>
 <h3 id="以公式的眞值表計算">以公式的眞值表計算</h3>
 <p>一旦會用子公式的眞值來計算公式的眞值，構造<tt>公式的眞值表</tt>是件很簡單的事——它不過是列出給定公式中的全部命題變號的所有「可能取值組合」，並根據它們計算和列出該公式在每一種可能情況下的眞值。</p>
 <p>對給定公式中的每個命題變號指定一個固定的眞值，這樣指定的結果稱爲這些命題變號的一個「可能取值組合」。若干命題變號的一個<tt>可能取值組合</tt>是從這些命題變號到 $\lbrace 1,0\rbrace $ 的一個函數。因爲每個命題變號的眞值或爲 1 或爲 0，則 $n$ 個命題變號的可能取值組合爲 $2^n$ 個。一個公式的眞值表一定要包含該公式中命題變號的所有可能取值組合。在構造公式 $\varphi$ 的眞值表時，按慣例先在表的左側排出 $\varphi$ 中出現的所有命題變號，然後排列出它們的全部可能取值組合（的值），再把 $\varphi$ 的各個子公式的眞值從簡單到複雜一步步計算出來。</p>
-<p>%\wtable{0.7}{<br />
-%%\begin{table}%[htb]<br />
-%%	\begin{center}<br />
-%		$<br />
-%		\begin{array}{cc|l|c|l|c|c}<br />
-%		\hline\hline<br />
-%		p &amp; q &amp; \neg q &amp; p \wedge \neg q &amp; \neg p &amp; \neg p \vee q &amp; p \wedge \neg q \rightarrow \neg p \vee q\<br />
-%		\hline 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; <strong>T</strong> \[.7ex]<br />
-%		1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; <strong>F</strong> \[.7ex]<br />
-%		0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; <strong>T</strong> \[.7ex]<br />
-%		0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; <strong>T</strong><br />
-%		\<br />
-%		\hline\hline<br />
-%		\end{array}<br />
-%		$<br />
-%		\caption{公式眞值計算例一}<br />
-%%	\end{center}<br />
-%%\end{table}<br />
-%}<br />
-公式的眞值表通常有兩種畫法，第一種是在表的上方排出該公式的所有子公式，通過計算將這些子公式的眞值列在它們的下方。</p>
-<p>\begin{examplep}{}<br />
-計算公式 $p \wedge \neg q \rightarrow \neg p \vee q$ 在各種情況下的眞值。<br />
-%\begin{table}[htb]<br />
-\begin{center}<br />
-$<br />
-\begin{array}{cc||l|l|l|c||c}<br />
-\hline\hline<br />
-p &amp; q &amp; \neg q &amp; p \wedge \neg q &amp; \neg p &amp; \neg p \vee q &amp; p \wedge \neg q \rightarrow \neg p \vee q\<br />
-\hline 1 &amp; 1 &amp; 0 &amp; ~~~~0 &amp; 0 &amp; ~~~1 &amp; \mathbf{1} \[.7ex]<br />
-1 &amp; 0 &amp; 1 &amp; ~~~~1 &amp; 0 &amp; ~~~0 &amp; \mathbf{0} \[.7ex]<br />
-0 &amp; 1 &amp; 0 &amp; ~~~~0 &amp; 1 &amp; ~~~1 &amp; \mathbf{1} \[.7ex]<br />
-0 &amp; 0 &amp; 1 &amp; ~~~~0 &amp; 1 &amp; ~~~1 &amp; \mathbf{1}<br />
-\<br />
-\hline\hline<br />
-\end{array}<br />
-$	<br />
-%$<br />
-%	\begin{array}{cc|l|c|l|c|c}<br />
-%\hline\hline<br />
-%p &amp; q &amp; \neg q &amp; p \wedge \neg q &amp; \neg p &amp; \neg p \vee q &amp; p \wedge \neg q \rightarrow \neg p \vee q\<br />
-%\hline 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; \mathbf{T} \[.7ex]<br />
-%1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; \mathbf{F} \[.7ex]<br />
-%0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; \mathbf{T} \[.7ex]<br />
-%0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; \mathbf{T}<br />
-%\<br />
-%\hline\hline<br />
-%\end{array}<br />
-%$<br />
-%\caption{公式眞值計算例一}<br />
-\end{center}<br />
-%\end{table}<br />
-\end{examplep}</p>
+<p>公式的眞值表通常有兩種畫法，第一種是在表的上方排出該公式的所有子公式，通過計算將這些子公式的眞值列在它們的下方。</p>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.30</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>計算公式 $p \wedge \neg q \rightarrow \neg p \vee q$ 在各種情況下的眞值。</p>
+<p>
+$$
+\begin{array}{cc||l|l|l|c||c}
+		\hline\hline
+		p & q & \neg q & p \wedge \neg q & \neg p & \neg p \vee q & p \wedge \neg q \rightarrow \neg p \vee q\\
+		\hline 1 & 1 & 0 & ~~~0 & 0 & ~~~1 & \mathbf{1} \\[.7ex]
+		1 & 0 & 1 & ~~~1 & 0 & ~~~0 & \mathbf{0} \\[.7ex]
+		0 & 1 & 0 & ~~~0 & 1 & ~~~1 & \mathbf{1} \\[.7ex]
+		0 & 0 & 1 & ~~~0 & 1 & ~~~1 & \mathbf{1}
+		\\
+		\hline\hline
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
 <p>公式的眞值表的第二種畫法是在表上方只列出該公式（及其原子子公式），而把它的（非原子）子公式的值列在該子公式的<tt>主聯結詞</tt>之下。</p>
-<p>\begin{examplep}{}<br />
-計算公式 $(p \vee q) \wedge \neg r  \rightarrow p \wedge (\neg q \vee r)$ 在各種情況下的眞值。</p>
-<pre><code>%\begin{table}[htb]
-\begin{center}
-    $
-    \begin{array}{ccc|ccl|c|ccccccc}
-    \hline\hline
-    p &amp; q &amp; r &amp; (p \vee q) &amp; \wedge &amp; \neg r &amp; \rightarrow &amp; p &amp; \wedge &amp; (\neg q &amp; \vee &amp; r) \\
-    \hline
-    1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; \mathbf{1} &amp; &amp; 1 &amp; 0 &amp; 1 &amp; \\[.7ex]
-    1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; \mathbf{0} &amp; &amp; 0 &amp; 0 &amp; 0 &amp; \\[.7ex] 
-    1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; \mathbf{1} &amp; &amp; 1 &amp; 1 &amp; 1 &amp; \\[.7ex]
-    1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; \mathbf{1} &amp; &amp; 1 &amp; 1 &amp; 1 &amp; \\[.7ex]
-    0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; \mathbf{1} &amp; &amp; 0 &amp; 0 &amp; 1 &amp; \\[.7ex]
-    0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; \mathbf{0} &amp; &amp; 0 &amp; 0 &amp; 0 &amp; \\[.7ex]
-    0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{1} &amp; &amp; 0 &amp; 1 &amp; 1 &amp; \\[.7ex]
-    0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; \mathbf{1} &amp; &amp; 0 &amp; 1 &amp; 1
-    &amp; \\
-    \hline\hline
-    \end{array}
-    $
-	
-    %$
-    %\begin{array}{ccc|ccl|c|ccccccc}
-    %\hline\hline
-    %p &amp; q &amp; r &amp; (p \vee q) &amp; \wedge &amp; \neg r &amp; \rightarrow &amp; p &amp; \wedge &amp; (\neg q &amp; \vee &amp; r) \\
-    %\hline
-    %1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; \mathbf{T} &amp; &amp; 1 &amp; 0 &amp; 1 &amp; \\[.7ex]
-    %1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; \mathbf{F} &amp; &amp; 0 &amp; 0 &amp; 0 &amp; \\[.7ex] 
-    %1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; \mathbf{T} &amp; &amp; 1 &amp; 1 &amp; 1 &amp; \\[.7ex]
-    %1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; \mathbf{T} &amp; &amp; 1 &amp; 1 &amp; 1 &amp; \\[.7ex]
-    %0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; \mathbf{T} &amp; &amp; 0 &amp; 0 &amp; 1 &amp; \\[.7ex]
-    %0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; \mathbf{F} &amp; &amp; 0 &amp; 0 &amp; 0 &amp; \\[.7ex]
-    %0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; \mathbf{T} &amp; &amp; 0 &amp; 1 &amp; 1 &amp; \\[.7ex]
-    %0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; \mathbf{T} &amp; &amp; 0 &amp; 1 &amp; 1
-    %&amp; \\
-    %\hline\hline
-    %\end{array}
-    %$
-    %\caption{公式眞值計算例二}
-\end{center}
-%\end{table}
-</code></pre>
-<p>\end{examplep}</p>
-<p>例 \ref{ex:truth-value-operation-7} 有意將公式中符號間的距離加大，以使讀者清楚地看出：每個子公式的眞值都列在該子公式的主聯結詞的下方。特別地，例 \ref{ex:truth-value-operation-7} 中「$\rightarrow$」之下那列眞值，是公式 $(p \vee q) \wedge \neg r  \rightarrow p \wedge (\neg q \vee r)$ 在各種情況下的眞值。我們將一貫地將子公式的眞值列於該子公式的<tt>主聯結詞</tt>之下，但不再加大公式中符號間的距離。從現在起，將只釆用公式眞值表的第二種畫法。</p>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.31</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>計算公式 $(p \vee q) \wedge \neg r  \rightarrow p \wedge (\neg q \vee r)$ 在各種情況下的眞值。</p>
+<p>
+$$
+\begin{array}{ccc|ccl|c|ccccccc}
+		\hline\hline
+		p & q & r & (p \vee q) & \wedge & \neg r & \rightarrow & p & \wedge & (\neg q & \vee & r) \\
+		\hline
+		1 & 1 & 1 & 1 & 0 & 0 & \mathbf{1} & & 1 & 0 & 1 & \\[.7ex]
+		1 & 1 & 0 & 1 & 1 & 1 & \mathbf{0} & & 0 & 0 & 0 & \\[.7ex] 
+		1 & 0 & 1 & 1 & 0 & 0 & \mathbf{1} & & 1 & 1 & 1 & \\[.7ex]
+		1 & 0 & 0 & 1 & 1 & 1 & \mathbf{1} & & 1 & 1 & 1 & \\[.7ex]
+		0 & 1 & 1 & 1 & 0 & 0 & \mathbf{1} & & 0 & 0 & 1 & \\[.7ex]
+		0 & 1 & 0 & 1 & 1 & 1 & \mathbf{0} & & 0 & 0 & 0 & \\[.7ex]
+		0 & 0 & 1 & 0 & 0 & 0 & \mathbf{1} & & 0 & 1 & 1 & \\[.7ex]
+		0 & 0 & 0 & 0 & 0 & 1 & \mathbf{1} & & 0 & 1 & 1
+		& \\
+		\hline\hline
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+<p>例 2.31 有意將公式中符號間的距離加大，以使讀者清楚地看出：每個子公式的眞值都列在該子公式的主聯結詞的下方。特別地，例 2.31 中「$\rightarrow$」之下那列眞值，是公式 $(p \vee q) \wedge \neg r  \rightarrow p \wedge (\neg q \vee r)$ 在各種情況下的眞值。我們將一貫地將子公式的眞值列於該子公式的<tt>主聯結詞</tt>之下，但不再加大公式中符號間的距離。從現在起，將只釆用公式眞值表的第二種畫法。</p>
 <p>我們約定：凡談到眞值表中的眞值時，我們用「行」表示該表中從左到右的眞值序列，用「列」表示該表中從上到下的眞值序列。</p>
 <h1 id="若干基本語義概念的眞值表刻畫">若干基本語義概念的眞值表刻畫</h1>
-<p>這一節裏，我們用眞值表方法介紹和討論一些基本語義概念：重言蘊涵（重言後承）、重言等值、可滿足性、重言式、矛盾式和或然式。我們對這些概念所做的眞值表刻畫，在某些敎科書中就稱爲這些概念的定義。之所以我們不稱這些刻畫爲定義，是因爲這裏的討論不夠嚴格。在下一章中，我們要用眞值指派給出這些概念的嚴格定義。\footnote{嚴格定義見\jieref{sec:taut-value-assign-defnition}。}</p>
+<p>這一節裏，我們用眞值表方法介紹和討論一些基本語義概念：重言蘊涵（重言後承）、重言等值、可滿足性、重言式、矛盾式和或然式。我們對這些概念所做的眞值表刻畫，在某些敎科書中就稱爲這些概念的定義。之所以我們不稱這些刻畫爲定義，是因爲這裏的討論不夠嚴格。在§3.1（P.101）中，我們要用眞值指派給出這些概念的嚴格定義。</p>
 <p>爲了比較和討論不同公式的眞值情況，我們可以把不同的公式放到同一個眞值表中。這樣的眞值表稱爲<tt>聯合眞值表</tt>。在公式 $\varphi_0,&hellip;\varphi_n$ 的聯合眞值表中，我們要列出這些公式的所有原子子公式和它們的可能取值組合（的值），並且根據這些組合計算 $\varphi_0,&hellip;\varphi_n$ 各自的眞值。</p>
-<p>%## 重言蘊涵與重言等值%重言蘊涵（重言後承）與重言等值</p>
 <h2 id="論說形式的有效性">論說形式的有效性</h2>
-<p>一個論說形式的前提和結論的聯合眞值表稱爲該論說形式的眞值表。有了論說形式的眞值表，引言中討論的論說形式的好壞可以有更清楚的定義（下面的「有效」對應於「好」，「無效」對應於「壞」）。\footnote{參見\jieref{sec:good-bad-argu} 和\jieref{sec:symbolization-argu} 中的有關形式好壞的討論。}</p>
-<p>\begin{quofh}</p>
+<p>一個論說形式的前提和結論的聯合眞值表稱爲該論說形式的眞值表。有了論說形式的眞值表，引言中討論的論說形式的好壞可以有更清楚的定義（下面的「有效」對應於「好」，「無效」對應於「壞」；參見§0.0（P.2）和§2.2（P.76）中的有關形式好壞的討論。）</p>
+<blockquote>
 <ol>
 <li>在一個論說形式的眞值表中，前提都眞而結論假的每一行，都稱爲該論說形式的<tt>反例</tt>。</li>
-<li>對任何一個論說形式，如果其眞值表的任何一行都不是該論說形式的反例，那麼這個論說形式是<bb>有效的（valid）</bb>；否則，這個論說形式是<bb>無效的（invalid）</bb>。<br />
-\end{quofh}</li>
+<li>對任何一個論說形式，如果其眞值表的任何一行都不是該論說形式的反例，那麼這個論說形式是<bb>有效的（valid）</bb>；否則，這個論說形式是<bb>無效的（invalid）</bb>。</li>
 </ol>
-<p>\begin{examplep}{}<br />
-用眞值表檢驗論說形式 $p \rightarrow q, \neg q ~/\therefore \neg p$ 的有效性。</p>
-<pre><code>**解：**這個論說形式的眞值表中結論 $\neg p$ 爲假的只有第一行和第二行，但這兩行中，前提裏也總有一個是假的。所以，上述論說形式沒有反例，是有效的論說形式。\footnote{
-    %\begin{center}
-    $
-    \begin{array}{cc|cl|l}
-    p &amp; q &amp; p \rightarrow q, &amp; \neg q &amp; \neg p \\
-    \hline 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
-    1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
-    0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 \\
-    0 &amp; 0 &amp; 1 &amp; 1 &amp; 1
-    \end{array}
-    $
-    %$
-    %\begin{array}{cc|cl|l}
-    %p &amp; q &amp; p \rightarrow q, &amp; \neg q &amp; \neg p \\
-    %\hline 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
-    %1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 \\
-    %0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 \\
-    %0 &amp; 0 &amp; 1 &amp; 1 &amp; 1
-    %\end{array}
-    %$
-    %\end{center}
-}
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-用眞值表檢驗論說形式 $p \rightarrow (q \rightarrow r), p \rightarrow q ~/\therefore p \rightarrow r$ 的有效性。</p>
-<pre><code>**解：**表中，前提都眞的每一行裏結論也眞；所以，上述論說形式是有效的。
-
-\begin{center}
-    $
-    \begin{array}{ccc|lc|c}
-    p &amp; q &amp; r &amp; p \rightarrow(q \rightarrow r), &amp; p \rightarrow q &amp; p \rightarrow r \\
-    \hline
-    1 &amp; 1 &amp; 1 &amp; ~~~~1 &amp; 1 &amp; 1 \\
-    1 &amp; 1 &amp; 0 &amp; ~~~~0 &amp; 1 &amp; 0 \\
-    1 &amp; 0 &amp; 1 &amp; ~~~~1 &amp; 0 &amp; 1 \\
-    1 &amp; 0 &amp; 0 &amp; ~~~~1 &amp; 0 &amp; 0\\
-    0 &amp; 1 &amp; 1 &amp; ~~~~1 &amp; 1 &amp; 1 \\
-    0 &amp; 1 &amp; 0 &amp; ~~~~1 &amp; 0 &amp; 1  \\
-    0 &amp; 0 &amp; 1 &amp; ~~~~1 &amp; 1 &amp; 1\\
-    0 &amp; 0 &amp; 0 &amp; ~~~~1 &amp; 1 &amp; 1 
-    \end{array}
-    $
-    %		$
-    %\begin{array}{ccc|lc|c}
-    %p &amp; q &amp; r &amp; p \rightarrow(q \rightarrow r), &amp; p \rightarrow q &amp; p \rightarrow r \\
-    %\hline
-    %1 &amp; 1 &amp; 1 &amp; ~~~~1 &amp; 1 &amp; 1 \\
-    %1 &amp; 1 &amp; 0 &amp; ~~~~0 &amp; 1 &amp; 0 \\
-    %1 &amp; 0 &amp; 1 &amp; ~~~~1 &amp; 0 &amp; 1 \\
-    %1 &amp; 0 &amp; 0 &amp; ~~~~1 &amp; 0 &amp; 0\\
-    %0 &amp; 1 &amp; 1 &amp; ~~~~1 &amp; 1 &amp; 1 \\
-    %0 &amp; 1 &amp; 0 &amp; ~~~~1 &amp; 0 &amp; 1  \\
-    %0 &amp; 0 &amp; 1 &amp; ~~~~1 &amp; 1 &amp; 1\\
-    %0 &amp; 0 &amp; 0 &amp; ~~~~1 &amp; 1 &amp; 1 
-    %\end{array}
-    %		$
-\end{center}
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-用眞值表檢驗論說形式 $p \rightarrow q \lor \neg r, r \land q \rightarrow p ~/\therefore r \rightarrow \neg q$ 的有效性。</p>
-<pre><code>**解：**這個論說形式眞值表的第一行中，論說的前提都眞而結論假，是該論說形式的反例；所以該論說形式是無效的。
-
-\begin{center}
-    $
-    \begin{array}{ccc|lr|c}
-    p &amp; q &amp; r &amp; p \rightarrow q \vee \neg r, &amp; r \wedge q \rightarrow p &amp; r \rightarrow \neg q \\
-    \hline 
-    1 &amp; 1 &amp; 1 &amp; ~~~~1 &amp; 1~~~~~ &amp; 0~~~ \\
-    1 &amp; 1 &amp; 0 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~ \\
-    1 &amp; 0 &amp; 1 &amp;  ~~~~0 &amp; 1~~~~~ &amp; 1~~~ \\
-    1 &amp; 0 &amp; 0 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~ \\
-    0 &amp; 1 &amp; 1 &amp;  ~~~~1 &amp; 0~~~~~ &amp; 0~~~ \\
-    0 &amp; 1 &amp; 0 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~ \\
-    0 &amp; 0 &amp; 1 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~ \\
-    0 &amp; 0 &amp; 0 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~
-    \end{array}
-    $
-    %		$
-    %\begin{array}{ccc|lr|c}
-    %p &amp; q &amp; r &amp; p \rightarrow q \vee \neg r, &amp; r \wedge q \rightarrow p &amp; r \rightarrow \neg q \\
-    %\hline 
-    %1 &amp; 1 &amp; 1 &amp; ~~~~1 &amp; 1~~~~~ &amp; 0~~~ \\
-    %1 &amp; 1 &amp; 0 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~ \\
-    %1 &amp; 0 &amp; 1 &amp;  ~~~~0 &amp; 1~~~~~ &amp; 1~~~ \\
-    %1 &amp; 0 &amp; 0 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~ \\
-    %0 &amp; 1 &amp; 1 &amp;  ~~~~1 &amp; 0~~~~~ &amp; 0~~~ \\
-    %0 &amp; 1 &amp; 0 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~ \\
-    %0 &amp; 0 &amp; 1 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~ \\
-    %0 &amp; 0 &amp; 0 &amp;  ~~~~1 &amp; 1~~~~~ &amp; 1~~~
-    %\end{array}
-    %		$
-\end{center}
-</code></pre>
-<p>\end{examplep}</p>
+</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.32</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>用眞值表檢驗論說形式 $p \rightarrow q, \neg q ~/\therefore \neg p$ 的有效性。</p>
+<p><bb>解：</bb>這個論說形式的眞值表中結論 $\neg p$ 爲假的只有第一行和第二行，但這兩行中，前提裏也總有一個是假的。所以，上述論說形式沒有反例，是有效的論說形式。此例爲最基本的蘊涵式否定後件推理，應用歸謬賦值或自然演繹法同理可證。（對比例 2.36）</p>
+<p>
+$$
+\begin{array}{cc|cl|l}
+		p & q & p \rightarrow q, & \neg q & \neg p \\
+		\hline 1 & 1 & 1 & 0 & 0 \\
+		1 & 0 & 0 & 1 & 0 \\
+		0 & 1 & 1 & 0 & 1 \\
+		0 & 0 & 1 & 1 & 1
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.33</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>用眞值表檢驗論說形式 $p \rightarrow (q \rightarrow r), p \rightarrow q ~/\therefore p \rightarrow r$ 的有效性。</p>
+<p><bb>解：</bb>根據下表，前提都眞的每一行裏結論也都眞；所以，上述論說形式是有效的。</p>
+<p>
+$$
+\begin{array}{ccc|lc|c}
+		p & q & r & p \rightarrow(q \rightarrow r), & p \rightarrow q & p \rightarrow r \\
+		\hline
+		1 & 1 & 1 & ~~~~1 & 1 & 1 \\
+		1 & 1 & 0 & ~~~~0 & 1 & 0 \\
+		1 & 0 & 1 & ~~~~1 & 0 & 1 \\
+		1 & 0 & 0 & ~~~~1 & 0 & 0\\
+		0 & 1 & 1 & ~~~~1 & 1 & 1 \\
+		0 & 1 & 0 & ~~~~1 & 0 & 1  \\
+		0 & 0 & 1 & ~~~~1 & 1 & 1\\
+		0 & 0 & 0 & ~~~~1 & 1 & 1 
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.34</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>用眞值表檢驗論說形式 $p \rightarrow q \lor \neg r, r \land q \rightarrow p ~/\therefore r \rightarrow \neg q$ 的有效性。</p>
+<p><bb>解：</bb>這個論說形式眞值表的第一行中，論說的前提都眞而結論假，是該論說形式的反例；所以該論說形式是無效的。</p>
+<p>
+$$
+\begin{array}{ccc|lr|c}
+		p & q & r & p \rightarrow q \vee \neg r, & r \wedge q \rightarrow p & r \rightarrow \neg q \\
+		\hline 
+		1 & 1 & 1 & ~~~~1 & 1~~~~~ & 0~~~ \\
+		1 & 1 & 0 &  ~~~~1 & 1~~~~~ & 1~~~ \\
+		1 & 0 & 1 &  ~~~~0 & 1~~~~~ & 1~~~ \\
+		1 & 0 & 0 &  ~~~~1 & 1~~~~~ & 1~~~ \\
+		0 & 1 & 1 &  ~~~~1 & 0~~~~~ & 0~~~ \\
+		0 & 1 & 0 &  ~~~~1 & 1~~~~~ & 1~~~ \\
+		0 & 0 & 1 &  ~~~~1 & 1~~~~~ & 1~~~ \\
+		0 & 0 & 0 &  ~~~~1 & 1~~~~~ & 1~~~
+		\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
 <p>讀者在這裏可能會有這樣一個問題：我們在引言裏曾說過，論說形式的好壞涉及該形式的所有特例，其數量顯然無上界；而這裏說的論說形式的有效性卻只涉及 $2^n$ 個可能的取值組合（假設其中只出現 $n$ 個命題變號）。這兩種說法如何能是「一回事」呢？</p>
-<p>可以這樣來理解這個問題：假定一個論說形式中出現 $n$ 個命題變號，進而該論說形式的眞值表有 $2^n$ 行。這個論說形式的每個特例，都可以看作是以具體命題替換那些命題變號而得到的。替換的都是具體命題，因而它們的眞值都是確定的，對應於 $2^n$ 個可能取值組合中的一個。\footnote{${\prod_{i=1}^{n}} (C_{2}^{1})_i = 2^{n}$.}這樣，我們就把該論說形式的所有特例分成了 $2^n$ 組，而每個特例的前提和結論的眞值情況，都在該論說形式眞值表的某一行中。當討論這個眞值表的任一行時，假如沿用引言中的術語，那麼我們就會說，討論涉及該論說形式的<tt>一組</tt>特例而非<tt>一個</tt>特例；當我們認定眞值表的某一行是給定論說形式的反例時，假如沿用引言中的術語，那麼我們就會說該論說形式有<tt>一組</tt>反例。%</p>
+<p>可以這樣來理解這個問題：假定一個論說形式中出現 $n$ 個命題變號，進而該論說形式的眞值表有 $2^n$ 行。這個論說形式的每個特例，都可以看作是以具體命題替換那些命題變號而得到的。替換的都是具體命題，因而它們的眞值都是確定的，對應於 $2^n$ 個可能取值組合中的一個。（${\prod_{i=1}^{n}} (C_{2}^{1})_i = 2^{n}.$）這樣，我們就把該論說形式的所有特例分成了 $2^n$ 組，而每個特例的前提和結論的眞值情況，都在該論說形式眞值表的某一行中。當討論這個眞值表的任一行時，假如沿用引言中的術語，那麼我們就會說，討論涉及該論說形式的<tt>一組</tt>特例而非<tt>一個</tt>特例；當我們認定眞值表的某一行是給定論說形式的反例時，假如沿用引言中的術語，那麼我們就會說該論說形式有<tt>一組</tt>反例。</p>
 <h2 id="重言蘊涵">重言蘊涵</h2>
-<p>設 $\varphi_0,&hellip;,\varphi_n$ 和 $\psi$ 爲任意公式。$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ <bb>重言蘊涵（tautologically implies）</bb> $\psi$ 當且僅當在 $\varphi_0,&hellip;,\varphi_n$ 與 $\psi$ 的聯合眞值表中，沒有一行是 $\varphi_0,&hellip;,\varphi_n$ 都眞而 $\psi$ 假，亦即在它們的聯合眞值表的每一行中，如果 $\varphi_0,&hellip;,\varphi_n$ 的眞值都是 1，那麼 $\psi$ 的眞值也一定是 1. $\psi$ 是$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ 的<bb>重言後承（tautological consequence）</bb>當且僅當 $\varphi_0,&hellip;,\varphi_n$ 重言蘊涵 $\psi$.%（或 $\varphi_0,&hellip;,\varphi_n$） \footnote{$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ tautologically implies $\psi$}</p>
-<p>%\begin{quofh}<br />
-%1. $\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ <bb>重言蘊涵（tautologically implies）</bb> $\psi$（$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ tautologically implies $\psi$）當且僅當在 $\varphi_0,&hellip;,\varphi_n$ 與 $\psi$ 的聯合眞值表中，沒有一行是 $\varphi_0,&hellip;,\varphi_n$ 都眞而 $\psi$ 假，亦即在它們的聯合眞值表的每一行中，如果 $\varphi_0,&hellip;,\varphi_n$ 的眞值都是 1，那麼 $\psi$ 的眞值也一定是 1. %（或 $\varphi_0,&hellip;,\varphi_n$）<br />
-%1. $\psi$ 是$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ 的<bb>重言後承（tautological consequence）</bb>當且僅當 $\varphi_0,&hellip;,\varphi_n$ 重言蘊涵 $\psi$。%（或 $\varphi_0,&hellip;,\varphi_n$）<br />
-%\end{quofh}</p>
+<p>設 $\varphi_0,&hellip;,\varphi_n$ 和 $\psi$ 爲任意公式。$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ <bb>重言蘊涵（tautologically implies）</bb> $\psi$ 當且僅當在 $\varphi_0,&hellip;,\varphi_n$ 與 $\psi$ 的聯合眞值表中，沒有一行是 $\varphi_0,&hellip;,\varphi_n$ 都眞而 $\psi$ 假，亦即在它們的聯合眞值表的每一行中，如果 $\varphi_0,&hellip;,\varphi_n$ 的眞值都是 1，那麼 $\psi$ 的眞值也一定是 1. $\psi$ 是$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ 的<bb>重言後承（tautological consequence）</bb>當且僅當 $\varphi_0,&hellip;,\varphi_n$ 重言蘊涵 $\psi$.（$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ tautologically implies $\psi$）</p>
 <p>易見，根據有效性和重言蘊涵的定義，下列兩個命題等價：</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
 <li>$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ 重言蘊涵 $\psi$，</li>
-<li>以 $\varphi_0,&hellip;,\varphi_n$ 爲前提並以 $\psi$ 爲結論的論說形式是有效的。<br />
-\end{quofh}</li>
+<li>以 $\varphi_0,&hellip;,\varphi_n$ 爲前提並以 $\psi$ 爲結論的論說形式是有效的。</li>
 </ol>
-<p>在理論討論中，「重言蘊涵」比「有效論說形式」使用得更多，儘管根據上述等價性，我們知道在命題邏輯部分，它們說的是一回事。\footnote{這裏談到的公式集合都是有窮集合，無窮集合的情況將在\jieref{} 3.3 中討論。在謂詞邏輯部分，垂言蘊涵關係將讓位於邏輯蘊涵關係（重言後承關係將讓位於邏輯後承關係）。}</p>
-<p>\begin{examplep}{}<br />
-$\lbrace p \rightarrow (q \rightarrow r), p \rightarrow q \rbrace $ 重言蘊涵 $p \rightarrow r$，而 $r \rightarrow \neg q$ 則不是 $\lbrace p \rightarrow q \lor \neg r, r \land q \rightarrow p \rbrace $ 的重言後承。</p>
-<pre><code>**解：**分別見例 \ref{ex:tautologically-1} 和例 \ref{ex:tautologically-2} 中的眞值表。
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-$p \rightarrow q$ 重言蘊涵 $\neg q \rightarrow \neg p$。<br />
-\footnote{<br />
-%	\begin{center}<br />
-$<br />
-\begin{array}{cc|c|ccc}<br />
-p &amp; q &amp; p \rightarrow q &amp; \neg q \rightarrow \neg p \<br />
-\hline<br />
-1 &amp; 1 &amp; 1 &amp; 1 \<br />
-1 &amp; 0 &amp; 0 &amp; 0 \<br />
-0 &amp; 1 &amp; 1 &amp; 1 \<br />
-0 &amp; 0 &amp; 1 &amp; 1<br />
-\end{array}<br />
-$<br />
-%	\end{center}<br />
-}</p>
-<pre><code>**解：**在 $p \rightarrow q$ 和 $\neg q \rightarrow \neg p$ 的聯合眞值表中，$\neg q \rightarrow \neg p$ 只在第二行是假的，而 $p \rightarrow q$ 在該行也是假的。這就是說，在該表的每一行中，如果 $p \rightarrow q$ 是眞的則 $\neg q \rightarrow \neg p$ 也是眞的。根據重言蘊涵的定義，$p \rightarrow q$ 重言蘊涵 $\neg q \rightarrow \neg p$。
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-$p \rightarrow q$ 不重言蘊涵 $\neg p \rightarrow \neg q$。<br />
-\footnote{<br />
-%\begin{center}<br />
-$<br />
-\begin{array}{cc|c|ccc}<br />
-p &amp; q &amp; p \rightarrow q &amp; \neg p \rightarrow \neg q \<br />
-\hline<br />
-1 &amp; 1 &amp; 1 &amp; 1 \<br />
-1 &amp; 0 &amp; 0 &amp; 1 \<br />
-0 &amp; 1 &amp; 1 &amp; 0 \<br />
-0 &amp; 0 &amp; 1 &amp; 1<br />
-\end{array}<br />
-$<br />
-}<br />
-%\end{center}</p>
-<pre><code>**解：**在 $p \rightarrow q$ 和 $\neg p \rightarrow \neg q$ 的聯合眞值表中，$p \rightarrow q$ 在第三行是眞的，但 $\neg p \rightarrow \neg q$ 在該行是假的。所以，根據重言蘊涵的定義 $p \rightarrow q$ 不重呂蘊涵 $\neg p \rightarrow \neg q$。
-</code></pre>
-<p>\end{examplep}</p>
+</blockquote>
+<p>在理論討論中，「重言蘊涵」比「有效論說形式」使用得更多，儘管根據上述等價性，我們知道在命題邏輯部分，它們說的是一回事。（這裏談到的公式集合都是<bb>有窮</bb>集合，無窮集合的情況將在§3.1（P.101）中討論。在謂詞邏輯部分，重言蘊涵關係將讓位於邏輯蘊涵關係，重言後承關係將讓位於邏輯後承關係。）</p>
+<blockquote>
+<p><bb>☯例 2.35</bb><br />
+$\lbrace p \rightarrow (q \rightarrow r), p \rightarrow q \rbrace $ 重言蘊涵 $p \rightarrow r$，而 $r \rightarrow \neg q$ 則不是 $\lbrace p \rightarrow q \lor \neg r, r \land q \rightarrow p \rbrace $ 的重言後承。<br />
+<bb>解：</bb>分別見例 2.33 和例 2.34 中的眞值表。</p>
+</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.36</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$p \rightarrow q$ 重言蘊涵 $\neg q \rightarrow \neg p.$</p>
+<p><bb>解：</bb>在 $p \rightarrow q$ 和 $\neg q \rightarrow \neg p$ 的聯合眞值表中，$\neg q \rightarrow \neg p$ 只在第二行是假的，而 $p \rightarrow q$ 在該行也是假的。這就是說，在該表的每一行中，如果 $p \rightarrow q$ 是眞的則 $\neg q \rightarrow \neg p$ 也是眞的。根據重言蘊涵的定義，$p \rightarrow q$ 重言蘊涵 $\neg q \rightarrow \neg p.$（對比例 2.32）</p>
+<p>
+$$
+\begin{array}{cc|c|ccc}
+		p & q & p \rightarrow q & \neg q \rightarrow \neg p \\
+		\hline 
+		1 & 1 & 1 & 1 \\
+		1 & 0 & 0 & 0 \\
+		0 & 1 & 1 & 1 \\
+		0 & 0 & 1 & 1 
+		\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.37</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$p \rightarrow q$ 不重言蘊涵 $\neg p \rightarrow \neg q.$</p>
+<p><bb>解：</bb>在 $p \rightarrow q$ 和 $\neg p \rightarrow \neg q$ 的聯合眞值表中，$p \rightarrow q$ 在第三行是眞的，但 $\neg p \rightarrow \neg q$ 在該行是假的。所以，根據重言蘊涵的定義 $p \rightarrow q$ 不重言蘊涵 $\neg p \rightarrow \neg q.$</p>
+<p>
+$$
+\begin{array}{cc|c|ccc}
+		p & q & p \rightarrow q & \neg p \rightarrow \neg q \\
+		\hline 
+		1 & 1 & 1 & 1 \\
+		1 & 0 & 0 & 1 \\
+		0 & 1 & 1 & 0 \\
+		0 & 0 & 1 & 1 
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
 <h2 id="重言等值">重言等值</h2>
 <p>設 $\varphi$ 和 $\psi$ 爲任意公式。$\varphi$ 與 $\psi$ <bb>重言等值（tautologically equivalent）</bb> 當且僅當在 $\varphi$ 與 $\psi$ 聯合眞值表的<tt>任意一行</tt>中，$\varphi$ 與 $\psi$ 有同樣的眞值，亦即在它們的聯合眞值表的每一行中，如果 $\varphi$ 的眞值是 1，則 $\psi$ 的眞值也是 1；並且如果 $\varphi$ 的眞值是 0，則 $\psi$ 的眞值也是 0.</p>
-<p>%\begin{quof}<br />
-%	$\varphi$ 與 $\psi$ <bb>重言等值（tautologically equivalent）</bb> 當且僅當在 $\varphi$ 與 $\psi$ 聯合眞值表的任意一行中，$\varphi$ 與 $\psi$ 有同樣的眞值，亦即在它們的聯合眞值表的每一行中，如果 $\varphi$ 的眞值是 1，則 $\psi$ 的眞值也是 1；並且如果 $\varphi$ 的眞值是 0，則 $\psi$ 的眞值也是 0.<br />
-%\end{quof}</p>
 <p>根據重言蘊涵和重言等值的定義，易見下列命題等價：</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
 <li>$\varphi$ 與 $\psi$ 重言等值，</li>
-<li>$\varphi$ 與 $\psi$ 相互重言蘊涵（$\varphi$ 與 $\psi$ 各是對方的重言後承）。<br />
-\end{quofh}</li>
+<li>$\varphi$ 與 $\psi$ 相互重言蘊涵（$\varphi$ 與 $\psi$ 各是對方的重言後承）。</li>
 </ol>
-<p>\begin{examplep}{}<br />
-$p \rightarrow q \land p$ 與 $\neg q \rightarrow \neg p$ 重言等值。<br />
-\footnote{<br />
-%\begin{center}<br />
-$<br />
-\begin{array}{cc|c|c}<br />
-p &amp; q &amp; p \rightarrow q \wedge p &amp; \neg q \rightarrow \neg p \<br />
-\hline 1 &amp; 1 &amp; 1~~~~~~~ &amp; 1 \<br />
-1 &amp; 0 &amp; 0~~~~~~~ &amp; 0 \<br />
-0 &amp; 1 &amp; 1~~~~~~~ &amp; 1 \<br />
-0 &amp; 0 &amp; 1~~~~~~~ &amp; 1<br />
-\end{array}<br />
-$<br />
-}<br />
-%\end{center}</p>
-<pre><code>**解：**$p \rightarrow q \land p$ 與 $\neg q \rightarrow \neg p$ 在它們的聯合眞值表的每一行中眞值都相同，因而由重言等值的定義得知兩公式重言等值。
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-$p \land \neg q$ 與 $\neg p \lor q$ 不重言等值。<br />
-\footnote{<br />
-%	\begin{center}<br />
-$<br />
-\begin{array}{cc|c|c}<br />
-p &amp; q &amp; p \wedge \neg q &amp; \neg p \vee q \<br />
-\hline<br />
-1 &amp; 1 &amp; 0~~ &amp; ~~~1 \<br />
-1 &amp; 0 &amp; 1~~ &amp; ~~~0 \<br />
-0 &amp; 1 &amp; 0~~ &amp; ~~~1 \<br />
-0 &amp; 0 &amp; 0~~ &amp; ~~~1<br />
-\end{array}<br />
-$<br />
-%	\end{center}<br />
-}</p>
-<pre><code>**解：**在 $p \land \neg q$ 與 $\neg p \lor q$ 的聯合眞值表中，$p \land \neg q$ 在第一行是假的，而 $\neg p \lor q$ 在同一行是眞的。所以，根據重言等值的定義，這兩個公式不是重言等值的。（事實上，在上述眞值表中，$p \land \neg q$ 與 $\neg p \lor q$ 在每一行的眞值都不同；但是，對「不重言等值」來說，兩公式在一行中眞值不同已經足夠了。）
-</code></pre>
-<p>\end{examplep}</p>
+</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.38</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$p \rightarrow q \land p$ 與 $\neg q \rightarrow \neg p$ 重言等值。</p>
+<p><bb>解：</bb>$p \rightarrow q \land p$ 與 $\neg q \rightarrow \neg p$ 在它們的聯合眞值表的每一行中眞值都相同，因而由重言等值的定義得知兩公式重言等值。</p>
+<p>
+$$
+\begin{array}{cc|c|c}
+		p & q & p \rightarrow q \wedge p & \neg q \rightarrow \neg p \\
+		\hline 1 & 1 & 1~~~~~~~ & 1 \\
+		1 & 0 & 0~~~~~~~ & 0 \\
+		0 & 1 & 1~~~~~~~ & 1 \\
+		0 & 0 & 1~~~~~~~ & 1
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.39</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$p \land \neg q$ 與 $\neg p \lor q$ 不重言等值。</p>
+<p><bb>解：</bb>在 $p \land \neg q$ 與 $\neg p \lor q$ 的聯合眞值表中，$p \land \neg q$ 在第一行是假的，而 $\neg p \lor q$ 在同一行是眞的。所以，根據重言等值的定義，這兩個公式不是重言等值的。（事實上，在上述眞值表中，$p \land \neg q$ 與 $\neg p \lor q$ 在每一行的眞值都不同；但是，對「不重言等值」來說，兩公式在一行中眞值不同已經足夠了。）</p>
+<p>
+$$
+\begin{array}{cc|c|c}
+		p & q & p \wedge \neg q & \neg p \vee q \\
+		\hline 
+		1 & 1 & 0~~ & ~~~1 \\
+		1 & 0 & 1~~ & ~~~0 \\
+		0 & 1 & 0~~ & ~~~1 \\
+		0 & 0 & 0~~ & ~~~1
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
 <h2 id="可滿足性">可滿足性</h2>
-<p>這裏說的<bb>可滿足性（satisfiability）</bb>，就是\jieref{sec:consistency} 中說的語義一致性。設 $\Gamma$ 爲任意有窮的公式集合。$\Gamma$ 是<tt>可滿足</tt>的（satisfiable）當且僅當 $\Gamma$ 中公式的聯合眞值表中<tt>存在某一行</tt>，在該行裏 $\Gamma$ 中的公式的眞值都是 1.  $\Gamma$ 是不可滿足的當且僅當它不是可滿足的。設 $\varphi$ 爲任意公式。$\varphi$ 是<tt>可滿足</tt>的當且僅當 $\lbrace \varphi\rbrace $ 是可滿足的。$\varphi$ 是不可滿足的當且僅當 $\lbrace \varphi\rbrace $ 不是可滿足的。</p>
-<p>%\begin{quofh}<br />
-%1. 設 $\Gamma$ 爲任意有窮的公式集合。$\Gamma$ 是<tt>可滿足</tt>的（satisfiable）當且僅當 $\Gamma$ 中公式的聯合眞值表中存在某一行，在該行裏 $\Gamma$ 中的公式的眞值都是 1.  $\Gamma$ 是不可滿足的當且僅當它不是可滿足的。<br />
-%1. 設 $\varphi$ 爲任意公式。$\varphi$ 是<tt>可滿足</tt>的當且僅當 $\lbrace \varphi\rbrace $ 是可滿足的。$\varphi$ 是不可滿足的當且僅當 $\lbrace \varphi\rbrace $ 不是可滿足的。<br />
-%\end{quofh}</p>
-<p>\begin{examplep}{}<br />
-$\Gamma = \lbrace p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, p \lor q \rbrace $ 是可滿足的。</p>
-<pre><code>\begin{center}
-    $
-    \begin{array}{cc|llc}
-    p &amp; q &amp; p \rightarrow p \wedge q, &amp; \neg p \rightarrow \neg p \wedge \neg q, &amp; p \vee q \\
-    \hline 
-    1 &amp; 1 &amp; ~~~~1 &amp; ~~~~~~~1 &amp; 1 \\
-    1 &amp; 0 &amp; ~~~~0 &amp; ~~~~~~~1 &amp; 1 \\
-    0 &amp; 1 &amp; ~~~~1 &amp; ~~~~~~~0 &amp; 1 \\
-    0 &amp; 0 &amp; ~~~~1 &amp; ~~~~~~~1 &amp; 0
-    \end{array}
-    $
-\end{center}
-
-上述眞值表的第一行中，$\Gamma$ 中每個公式都是眞的，所以由可滿足性的定義知 $\Gamma$ 是可滿足的。
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-$\Gamma = \lbrace p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, \neg (p \rightarrow q) \rbrace $ 不是可滿足的。</p>
-<pre><code>\begin{center}
-    $
-    \begin{array}{cc|lll}
-    p &amp; q &amp; p \rightarrow p \wedge q, &amp; \neg p \rightarrow \neg p \wedge \neg q, &amp; \neg(p \leftrightarrow q) \\
-    \hline 
-    1 &amp; 1 &amp; ~~~~1 &amp; ~~~~~~~1 &amp; 0 \\
-    1 &amp; 0 &amp; ~~~~0 &amp; ~~~~~~~1 &amp; 1 \\
-    0 &amp; 1 &amp; ~~~~1 &amp; ~~~~~~~0 &amp; 1 \\
-    0 &amp; 0 &amp; ~~~~1 &amp; ~~~~~~~1 &amp; 0
-    \end{array}
-    $
-\end{center}
-
-上面是 $\Gamma$ 中公式的聯合眞值表。在該表的第一行中 $\neg (p \rightarrow q)$ 是假的，第二行中 $p \rightarrow p \land q$ 是假的，第三行中 $\neg p \rightarrow \neg p \land \neg q$ 是假的，第四行中 $\neg (p \rightarrow q)$ 是假的。所以由定義知 $\Gamma$ 是不可滿足的。
-</code></pre>
-<p>\end{examplep}</p>
-<p>我們簡要地介紹一些關於可滿足性的命題，部分涉及可滿足性與重言蘊涵的關係。這些命題都有簡單的證明，其中一部分會在\jieref{} 3.3 中討論。請讀者思考這些命題成立的理由（見第 \pageref{exe:01-17} 頁習題 \ref{exe:01-17}）。%</p>
+<p>這裏說的<bb>可滿足性（satisfiability）</bb>，就是§0.2（P.8）中說的語義一致性。設 $\Gamma$ 爲任意有窮的公式集合。$\Gamma$ 是<tt>可滿足</tt>的（satisfiable）當且僅當 $\Gamma$ 中公式的聯合眞值表中<tt>存在某一行</tt>，在該行裏 $\Gamma$ 中的公式的眞值都是 1.  $\Gamma$ 是不可滿足的當且僅當它不是可滿足的。設 $\varphi$ 爲任意公式。$\varphi$ 是<tt>可滿足</tt>的當且僅當 $\lbrace \varphi\rbrace $ 是可滿足的。$\varphi$ 是不可滿足的當且僅當 $\lbrace \varphi\rbrace $ 不是可滿足的。</p>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.40</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$\Gamma = \lbrace p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, p \lor q \rbrace $ 是可滿足的。</p>
+<p><bb>解：</bb>下述眞值表的第一行中，$\Gamma$ 中每個公式都是眞的，所以由可滿足性的定義知 $\Gamma$ 是可滿足的。</p>
+<p>
+$$
+		\begin{array}{cc|llc}
+		p & q & p \rightarrow p \wedge q, & \neg p \rightarrow \neg p \wedge \neg q, & p \vee q \\
+		\hline 
+		1 & 1 & ~~~~1 & ~~~~~~~1 & 1 \\
+		1 & 0 & ~~~~0 & ~~~~~~~1 & 1 \\
+		0 & 1 & ~~~~1 & ~~~~~~~0 & 1 \\
+		0 & 0 & ~~~~1 & ~~~~~~~1 & 0
+		\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.41</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$\Gamma = \lbrace p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, \neg (p \rightarrow q) \rbrace $ 不是可滿足的。</p>
+<p><bb>解：</bb>下面是 $\Gamma$ 中公式的聯合眞值表。在該表的第一行中 $\neg (p \rightarrow q)$ 是假的，第二行中 $p \rightarrow p \land q$ 是假的，第三行中 $\neg p \rightarrow \neg p \land \neg q$ 是假的，第四行中 $\neg (p \rightarrow q)$ 是假的。所以由定義知 $\Gamma$ 是不可滿足的。</p>
+<p>
+$$
+		\begin{array}{cc|lll}
+		p & q & p \rightarrow p \wedge q, & \neg p \rightarrow \neg p \wedge \neg q, & \neg(p \leftrightarrow q) \\
+		\hline 
+		1 & 1 & ~~~~1 & ~~~~~~~1 & 0 \\
+		1 & 0 & ~~~~0 & ~~~~~~~1 & 1 \\
+		0 & 1 & ~~~~1 & ~~~~~~~0 & 1 \\
+		0 & 0 & ~~~~1 & ~~~~~~~1 & 0
+		\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+<p>我們簡要地介紹一些關於可滿足性的命題，部分涉及可滿足性與重言蘊涵的關係。這些命題都有簡單的證明，其中一部分會在§3.1（P.101）中討論。請讀者思考這些命題成立的理由（見習題 2.17）。</p>
 <p>設 $\Gamma = \lbrace \varphi_0,&hellip;,\varphi_n\rbrace $ 爲任意有窮的公式集，$\varphi$ 爲任意公式。我們有：</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
-<li>如果 $\Gamma$ 可滿足，那麼對任何公式集 $\Delta$，$\Gamma \cap \Delta$ 也可滿足。\footnote{對所有集合 $X$ 和 $Y$，$X \cap Y = \lbrace  x: x \in X ~\text{且}~ x \in Y \rbrace $，它是包含 $X$ 和 $Y$ 的所有公共元素的集合，稱爲 $X$ 和 $Y$ 的<strong>交（intersection）</strong>。}</li>
-<li>如果 $\Gamma$ 不可滿足，那麼對任何有窮公式集 $\Delta$，$\Gamma \cup \Delta$ 也不可滿足。\footnote{對所有集合 $X$ 和 $Y$，$X \cup Y = \lbrace  x: x \in X ~\text{或}~ x \in Y \rbrace $，它是包含 $X$ 的所有元素和 $Y$ 的所有元素的集合，稱爲 $X$ 和 $Y$ 的<strong>並集（union）</strong>。}</li>
-<li>設 $\Gamma \subseteq \Delta$，其中 $\Delta$ 是任意有窮公式集。如果 $\Delta$ 可滿足則 $\Gamma$ 可滿足（如果 $\Gamma$ 不可滿足則 $\Delta$ 不可滿足）。\footnote{對所有集合 $X$ 和 $Y$，$X \subseteq Y$ 當且僅當 $X$ 的所有元素都是 $Y$ 的元素，$X \subset Y$ 當且僅當 $X \subseteq Y$ 並且 $Y \nsubseteq X$（並非 $Y \subseteq X$）。當 $X \subseteq Y$，我們稱 $X$ 是 $Y$ 的<strong>子集（subset）</strong>，也稱 $Y$ 是 $X$ 的<strong>擴集（superset）<strong>或</strong>擴充（extension）</strong>。當 $X \subset Y$，我們稱 $X$ 是 $Y$ 的<strong>眞子集（proper subset）</strong>，也稱 $Y$ 是 $X$ 的眞擴集或眞擴充。注意：「$X \subseteq Y$」表達的是個命題，說的是 $X$ 和 $Y$ 之間的某種關係；而「$X \cap Y$」「$X \cup Y$」和下面的「$X - Y$」不表達命題，只表示 $X$ 和 $Y$ 在某些運算下的值——集合。}</li>
+<li>如果 $\Gamma$ 可滿足，那麼對任何公式集 $\Delta$，$\Gamma \cap \Delta$ 也可滿足。（<bb>注：</bb>對所有集合 $X$ 和 $Y$，$X \cap Y = \lbrace  x: x \in X ~\text{且}~ x \in Y \rbrace $，它是包含 $X$ 和 $Y$ 的所有公共元素的集合，稱爲 $X$ 和 $Y$ 的<strong>交（intersection）</strong>。）</li>
+<li>如果 $\Gamma$ 不可滿足，那麼對任何有窮公式集 $\Delta$，$\Gamma \cup \Delta$ 也不可滿足。（<bb>注：</bb>對所有集合 $X$ 和 $Y$，$X \cup Y = \lbrace  x: x \in X ~\text{或}~ x \in Y \rbrace $，它是包含 $X$ 的所有元素和 $Y$ 的所有元素的集合，稱爲 $X$ 和 $Y$ 的<strong>並集（union）</strong>。）</li>
+<li>設 $\Gamma \subseteq \Delta$，其中 $\Delta$ 是任意有窮公式集。如果 $\Delta$ 可滿足則 $\Gamma$ 可滿足（如果 $\Gamma$ 不可滿足則 $\Delta$ 不可滿足）。（<bb>注：</bb>對所有集合 $X$ 和 $Y$，$X \subseteq Y$ 當且僅當 $X$ 的所有元素都是 $Y$ 的元素，$X \subset Y$ 當且僅當 $X \subseteq Y$ 並且 $Y \nsubseteq X$（並非 $Y \subseteq X$）。當 $X \subseteq Y$，我們稱 $X$ 是 $Y$ 的<strong>子集（subset）</strong>，也稱 $Y$ 是 $X$ 的<strong>擴集（superset）<strong>或</strong>擴充（extension）</strong>。當 $X \subset Y$，我們稱 $X$ 是 $Y$ 的<strong>眞子集（proper subset）</strong>，也稱 $Y$ 是 $X$ 的眞擴集或眞擴充。注意：「$X \subseteq Y$」表達的是個命題，說的是 $X$ 和 $Y$ 之間的某種關係；而「$X \cap Y$」「$X \cup Y$」和下面的「$X - Y$」不表達命題，只表示 $X$ 和 $Y$ 在某些運算下的值——集合。）</li>
 <li>$\Gamma \cup \lbrace \neg \varphi\rbrace $不可滿足當且僅當 $\Gamma$ 重言蘊涵 $\varphi$。</li>
-<li>對任意 $i \leqslant n$，$\Gamma$ 不可滿足當且僅當 $\Gamma - \lbrace \psi_i\rbrace $ 重言蘊涵 $\neg \psi_i$。\footnote{對所有集合 $X$ 和 $Y$，$X - Y = \lbrace  x: x \in X ~\text{且}~ x \notin Y \rbrace $，它是包含 $X$ 的所有元素但不包含 $Y$ 的任何元素的集合，稱爲 $X$ 和 $Y$ 的<strong>差（difference）</strong>，也稱爲 $Y$ 在 $X$ 中的<strong>相對補（relative complement of  $Y$ in $X$）</strong>。}</li>
+<li>對任意 $i \leqslant n$，$\Gamma$ 不可滿足當且僅當 $\Gamma - \lbrace \psi_i\rbrace $ 重言蘊涵 $\neg \psi_i$。（<bb>注：</bb>對所有集合 $X$ 和 $Y$，$X - Y = \lbrace  x: x \in X ~\text{且}~ x \notin Y \rbrace $，它是包含 $X$ 的所有元素但不包含 $Y$ 的任何元素的集合，稱爲 $X$ 和 $Y$ 的<strong>差（difference）</strong>，也稱爲 $Y$ 在 $X$ 中的<strong>相對補（relative complement of  $Y$ in $X$）</strong>。）</li>
 <li>如果 $\Gamma$ 不可滿足，那麼 $\Gamma$ 重言蘊涵 $\varphi$。</li>
 <li>如果 $\neg \varphi$ 不可滿足，那麼 $\Gamma$ 重言蘊涵 $\varphi$。</li>
 <li>如果 $\Gamma$ 重言蘊涵 $\varphi$，並且 $\Gamma$ 可滿足，那麼 $\varphi$ 也可滿足。</li>
-<li>如果 $\Gamma$ 重言蘊涵 $\varphi$ 並且 $\Gamma$ 重言蘊涵 $\neg \varphi$，那麼 $\Gamma$ 不可滿足。<br />
-\end{quofh}</li>
+<li>如果 $\Gamma$ 重言蘊涵 $\varphi$ 並且 $\Gamma$ 重言蘊涵 $\neg \varphi$，那麼 $\Gamma$ 不可滿足。</li>
 </ol>
+</blockquote>
 <h2 id="重言式矛盾式與或然式">重言式、矛盾式與或然式</h2>
 <p>根據公式在其眞值表各行中的眞值情況，我們把公式分成三類：重言式（tautology）、矛盾式（contradiction）與或然式（偶然式，contingency）。</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
 <li>公式 $\varphi$ 是<bb>重言式（tautology）</bb>當且僅當在其眞值表的每一行中，$\varphi$ 的眞值都是 1，即 $\varphi$ 總是眞的。</li>
 <li>公式 $\varphi$ 是<bb>矛盾式（contradiction）</bb>當且僅當在其眞值表的每一行中，$\varphi$ 的眞值都是 0，即 $\varphi$ 總是假的。（矛盾式也稱不可滿足式。）</li>
-<li>公式 $\varphi$ 是<bb>或然式（contingency）</bb>當且僅當在其眞值表中，$\varphi$ 的眞值在某些行中是 1，而在另一些行中是 0，即 $\varphi$ 有時眞有時假。<br />
-\end{quofh}</li>
+<li>公式 $\varphi$ 是<bb>或然式（contingency）</bb>當且僅當在其眞值表中，$\varphi$ 的眞值在某些行中是 1，而在另一些行中是 0，即 $\varphi$ 有時眞有時假。</li>
 </ol>
-<p>\begin{examplep}{}<br />
-$p \rightarrow (q \rightarrow p)$ 是重言式。</p>
-<pre><code>**解：**主聯結詞下方一列眞值都是 1，所以 $p \rightarrow (q \rightarrow p)$ 是重言式。
-\footnote{
-    %	\begin{center}
-    $
-    \begin{array}{cc|l}
-    p &amp; q &amp; p \rightarrow(q \rightarrow p) \\
-    \hline 
-    1 &amp; 1 &amp; ~~~~1 \\
-    1 &amp; 0 &amp; ~~~~1 \\
-    0 &amp; 1 &amp; ~~~~1 \\
-    0 &amp; 0 &amp; ~~~~1
-    \end{array}
-    $
-    %	\end{center}
-}
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-$p \land (p \rightarrow \neg p)$ 是矛盾式。</p>
-<pre><code>**解：**主聯結詞下方一列眞值都是 0，所以 $p \land (p \rightarrow \neg p)$ 是矛盾式。
-\footnote{	
-    %	\begin{center}
-    $
-    \begin{array}{c|l}
-    p &amp; p \wedge(p \rightarrow \neg p) \\
-    \hline 
-    1 &amp; ~~~0 \\
-    0 &amp; ~~~0
-    \end{array}
-    $
-    %	\end{center}
-}
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-$p \rightarrow q \land p$ 是或然式。</p>
-<pre><code>**解：**主聯結詞下方一列眞值中有 1 也有 0，所以 $p \rightarrow q \land p$ 是或然式。
-\footnote{	
-    %	\begin{center}
-    $
-    \begin{array}{cc|l}
-    p &amp; q &amp; p \rightarrow q \wedge p \\
-    \hline 
-    1 &amp; 1 &amp; ~~~~1 \\
-    1 &amp; 0 &amp; ~~~~0 \\
-    0 &amp; 1 &amp; ~~~~1 \\
-    0 &amp; 0 &amp; ~~~~1
-    \end{array}
-    $
-    %	\end{center}
-}	
-</code></pre>
-<p>\end{examplep}</p>
-<p>類似於討論可滿足性與重言蘊涵時的情況，我們只簡要介紹些關於重言式、矛盾式與或然式之間的關係的命題，其中一部分會在\jieref{subsec:taut-contr-conti-value-assign} 中討論。請讀者思考下列命題成立的理由（另見習題 \ref{exe:01-06}-\ref{exe:01-09}）。%（另見習題 2.7-2.10）</p>
-<p>\begin{quofh}</p>
+</blockquote>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.42</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$p \rightarrow (q \rightarrow p)$ 是重言式。</p>
+<p><bb>解：</bb>主聯結詞下方一列眞值都是 1，所以 $p \rightarrow (q \rightarrow p)$ 是重言式。</p>
+<p>
+$$
+\begin{array}{cc|l}
+		p & q & p \rightarrow(q \rightarrow p) \\
+		\hline 
+		1 & 1 & ~~~~1 \\
+		1 & 0 & ~~~~1 \\
+		0 & 1 & ~~~~1 \\
+		0 & 0 & ~~~~1
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.43</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$p \land (p \rightarrow \neg p)$ 是矛盾式。</p>
+<p><bb>解：</bb>主聯結詞下方一列眞值都是 0，所以 $p \land (p \rightarrow \neg p)$ 是矛盾式。</p>
+<p>
+$$
+\begin{array}{c|l}
+		p & p \wedge(p \rightarrow \neg p) \\
+		\hline 
+		1 & ~~~0 \\
+		0 & ~~~0
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.44</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>$p \rightarrow q \land p$ 是或然式。</p>
+<p><bb>解：</bb>主聯結詞下方一列眞值中有 1 也有 0，所以 $p \rightarrow q \land p$ 是或然式。</p>
+<p>
+$$
+\begin{array}{cc|l}
+		p & q & p \rightarrow q \wedge p \\
+		\hline 
+		1 & 1 & ~~~~1 \\
+		1 & 0 & ~~~~0 \\
+		0 & 1 & ~~~~1 \\
+		0 & 0 & ~~~~1
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+<p>類似於討論可滿足性與重言蘊涵時的情況，我們只簡要介紹些關於重言式、矛盾式與或然式之間的關係的命題，其中一部分會在§3.1.3（P.104）中討論。請讀者思考下列命題成立的理由（另見習題 2.6-2.9）。</p>
+<blockquote>
 <ol>
 <li>重言式的否定是矛盾式。</li>
 <li>矛盾式的否定是重言式。</li>
@@ -2938,23 +2886,20 @@ $p \rightarrow q \land p$ 是或然式。</p>
 <li>重言式與或然式的合取是或然式。</li>
 <li>矛盾式與矛盾式的合取是矛盾式。</li>
 <li>矛盾式與或然式的合取是矛盾式。</li>
-<li>或然式與或然式的合取或者是或然式，或者是矛盾式。<br />
-\end{quofh}</li>
+<li>或然式與或然式的合取或者是或然式，或者是矛盾式。</li>
 </ol>
-<p>關於上面引入的各語義概念間的關係，我們同樣只簡單介紹而不做證明。另一些命題將在\jieref{} 3.4 中討論。</p>
+</blockquote>
+<p>關於上面引入的各語義概念間的關係，我們同樣只簡單介紹而不做證明。另一些命題將在§3.1（P.101）中討論。</p>
 <p>易見，對所有公式 $\varphi, \psi, \chi$，%公式  $\varphi \land (\psi \land \chi)$ 與 $(\varphi \land \psi) \land \chi$ 重言等值，公式 $\varphi \lor (\psi \lor \chi)$ 與 $(\varphi \lor \psi) \lor \chi$ 重言等值。</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
 <li>$\varphi \land (\psi \land \chi)$ 與 $(\varphi \land \psi) \land \chi$ 重言等值</li>
-<li>$\varphi \lor (\psi \lor \chi)$ 與 $(\varphi \lor \psi) \lor \chi$ 重言等值<br />
-\end{quofh}</li>
+<li>$\varphi \lor (\psi \lor \chi)$ 與 $(\varphi \lor \psi) \lor \chi$ 重言等值</li>
 </ol>
-<p>以下，我們省略一連串合取和一連串析取應有的括號，用  $\varphi_{0} \wedge \cdots \wedge \varphi_{n}$  表示  $\left(\cdots\left(\varphi_{0} \wedge \varphi_{1}\right) \wedge \cdots \wedge \varphi_{n-1}\right) \wedge \varphi_{n}$，用  $\varphi_{0} \vee \cdots \vee \varphi_{n}$  表示<br />
-$\left(\cdots\left(\varphi_{0} \vee \varphi_{1}\right) \vee \cdots \vee \varphi_{n-1}\right) \vee \varphi_{n}$。在極限情況  $n=0$  時，$\varphi_{0} \wedge \cdots \wedge \varphi_{n}=<br />
-\varphi_{0} \vee \cdots \vee \varphi_{n}=\varphi_{0}$。這就是說，當  $\varphi_{0} \wedge \cdots \wedge \varphi_{n}$  或  $\varphi_{0} \vee \cdots \vee \varphi_{n}$ 在討論中出<br />
-現而我們又要考慮主聯結詞時，我們可以按「左結合」的原則恢復括號。</p>
-<p>設 $\varphi, \psi, \varphi_{0},&hellip;,\varphi_{n}$ 爲任意公式且 $\Gamma = \lbrace \varphi_{0},&hellip;,\varphi_{n}\rbrace $。請思考下列命題成立的理由（見 \pageref{exe:01-18} 頁習題 \ref{exe:01-18}）：%</p>
-<p>\begin{quofh}</p>
+</blockquote>
+<p>以下，我們省略一連串合取和一連串析取應有的括號，用  $\varphi_{0} \wedge \cdots \wedge \varphi_{n}$  表示  $\left(\cdots\left(\varphi_{0} \wedge \varphi_{1}\right) \wedge \cdots \wedge \varphi_{n-1}\right) \wedge \varphi_{n}$，用  $\varphi_{0} \vee \cdots \vee \varphi_{n}$  表示 $\left(\cdots\left(\varphi_{0} \vee \varphi_{1}\right) \vee \cdots \vee \varphi_{n-1}\right) \vee \varphi_{n}$。在極限情況  $n=0$  時，$\varphi_{0} \wedge \cdots \wedge \varphi_{n}=  \varphi_{0} \vee \cdots \vee \varphi_{n}=\varphi_{0}$。這就是說，當  $\varphi_{0} \wedge \cdots \wedge \varphi_{n}$  或  $\varphi_{0} \vee \cdots \vee \varphi_{n}$ 在討論中出現而我們又要考慮主聯結詞時，我們可以按「左結合」的原則恢復括號。</p>
+<p>設 $\varphi, \psi, \varphi_{0},&hellip;,\varphi_{n}$ 爲任意公式且 $\Gamma = \lbrace \varphi_{0},&hellip;,\varphi_{n}\rbrace $。請思考下列命題成立的理由（見習題 2.18）：</p>
+<blockquote>
 <ol>
 <li>$\varphi$ 重言蘊涵 $\psi$ 當且僅當 $\varphi \rightarrow \psi$ 是重言式；</li>
 <li>$\varphi$ 重言等值於 $\psi$ 當且僅當 $\varphi \rightarrow \psi$ 是重言式，當且僅當 $\psi \rightarrow \varphi$ 與 $\varphi \rightarrow \varphi$ 都是重言式；</li>
@@ -2966,117 +2911,128 @@ $\left(\cdots\left(\varphi_{0} \vee \varphi_{1}\right) \vee \cdots \vee \varphi_
 <li>如果 $\varphi$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma \cup \lbrace \varphi\rbrace $ 是可滿足的；</li>
 <li>如果 $\varphi_i (i \leqslant n)$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma - \lbrace \varphi_i\rbrace $ 是可滿足的；</li>
 <li>如果 $\varphi$ 是矛盾式，那麼 $\Gamma \cup \lbrace \varphi\rbrace $ 是不可滿足的；</li>
-<li>如果 $\varphi_i (i \leqslant n)$ 是矛盾式，那麼 $\Gamma$ 是不可滿足的。<br />
-\end{quofh}</li>
+<li>如果 $\varphi_i (i \leqslant n)$ 是矛盾式，那麼 $\Gamma$ 是不可滿足的。</li>
 </ol>
+</blockquote>
 <h2 id="簡化眞值表方法">簡化眞值表方法</h2>
 <p>一旦公式（集）中出現 3 個或更多的命題變號，它們的眞值表就會比較大，畫起來常有困難，所以簡化眞值表方法受很多人的歡迎。簡化眞值表方法有多種，這裏只介紹其一。</p>
 <p>用簡化眞值表法判別一個論說形式是否有效，通常可按以下方式來做：首先假設該論說形式的前提都眞而結論假，然後根據它們的眞值算出它們的直接子公式的眞值，再進一步根據子公式的眞值算出這些子公式的直接子公式的眞值。（當遇到合取式爲假或析取式爲眞等情況時，不能直接算出它們的直接子公式的眞值而要分情況討論。）在這一過程中，若遇到某公式既眞又假，就可判定給出的論說形式是有效的；若沒有遇到這種情況，則可判定該論說形式是無效的。在後一種情況下，能找到該論說形式中命題變號的一個可能取值組合，使得根據這個組合，該論說形式的前提爲眞而結論爲假。</p>
-<p>\begin{examplep}{}<br />
-用簡化眞值表方法檢驗 $p \rightarrow (q \rightarrow r), p \rightarrow q ~/ \therefore p \rightarrow r$ 是否有效。</p>
-<pre><code>**解：**這個論證形式是有效的。假定這個論說形式不是有效的，我們得到一個矛盾：$q$ 既眞又假。$q$ 不可能同時既眞又假，所以給定的論說形式一定是有效的。見下表：
-
-\begin{center}
-    $
-    \begin{array}{c|ll|c|c}
-    \text{步驟} &amp; p \rightarrow(q \rightarrow r), &amp; p \rightarrow q &amp; /\therefore p \rightarrow r &amp; \text{步驟解說} \\
-    \hline
-    1 &amp; ~~~~1 &amp; ~~~~1 &amp; ~~\quad0 &amp; \text{假設論證形式無效}\\[0.4ex]
-    2 &amp; &amp; &amp; ~~~\quad1~\quad0 &amp; \text{推得結論中}~p, r~\text{眞值}\\[0.4ex]
-    3 &amp;1~~~~~~~~~~~~1~~0 &amp; 1&amp;  &amp; \text{推得前提中}~q \rightarrow r~\text{眞值}\\[0.4ex]
-    4 &amp;~~~~~~~~~~~\mathbf{0} &amp; ~~~~~~~~\mathbf{1}&amp;  &amp; \text{推得前提中}~q~\text{亦眞亦假}\\
-    \end{array}
-    $
-\end{center}
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-用用簡化眞值表方法檢驗 $p \rightarrow q \lor \neg r, r \land q \rightarrow p ~/ \therefore r \rightarrow \neg q$ 是否有效。</p>
-<pre><code>**解：**這個論證形式是無效的。易見我們的假設不導致任何矛盾，所以當 $p, q, r$ 都爲眞時，上述論說形式的前提爲眞而結論爲假。所以，該論說形式是無效的。\footnote{本例中，作爲蘊涵式後件的 $q \lor \neg r$ 爲眞，則蘊涵式 $p \rightarrow q \lor \neg r$ 一定爲眞，這與 $p$ 的眞值無關。}見下表：
-
-\begin{center}
-    $
-    \begin{array}{c|ll|c|c}
-    \text{步驟} &amp; p \rightarrow q \lor \neg r, &amp; r \land q \rightarrow p &amp; /\therefore r \rightarrow \neg q &amp;  \text{步驟解說}  \\
-    \hline
-    1 &amp; ~~~~~1 &amp; ~~~~~~~~~~~1 &amp; ~~~~0 &amp; \text{假設論證形式無效}\\[0.4ex]
-    2 &amp; &amp; &amp; ~~~~~~~~1~~~~~~~~1 &amp; \text{推得結論中} ~ r, q ~ \text{眞值}\\[0.4ex]
-    3 &amp;~~~~~~~~~~~~1 &amp;  &amp;  &amp; \text{推得前提中} ~q \lor \neg r~ \text{眞值}\\[0.4ex]
-    4 &amp; &amp; ~~~1~~~~~1~~1&amp;  &amp; \text{設} ~  p ~ \text{眞，則} ~r \land q \rightarrow p~ \text{眞}\\[0.4ex]
-    5 &amp;~~~~~1 &amp; ~~~~~~~~~~~1&amp; ~~~~0 &amp; \text{存在前提都眞而結論假}\\
-    \end{array}
-    $
-\end{center}
-</code></pre>
-<p>\end{examplep}</p>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.45</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>用簡化眞值表方法檢驗 $p \rightarrow (q \rightarrow r), p \rightarrow q ~/ \therefore p \rightarrow r$ 是否有效。</p>
+<p><bb>解：</bb>這個論證形式是有效的。假定這個論說形式不是有效的，我們得到一個矛盾：$q$ 既眞又假。$q$ 不可能同時既眞又假，所以給定的論說形式一定是有效的。見下表：</p>
+<p>
+$$
+\begin{array}{c|ll|c|c}
+		\text{步驟} & p \rightarrow(q \rightarrow r), & p \rightarrow q & /\therefore p \rightarrow r & \text{步驟解說} \\
+		\hline
+		1 & ~~~~1 & ~~~~1 & ~~\quad0 & \text{假設論證形式無效}\\[0.4ex]
+		2 & & & ~~~\quad1~\quad0 & \text{推得結論中}~p, r~\text{眞值}\\[0.4ex]
+		3 &1~~~~~~~~~~~~1~~0 & 1&  & \text{推得前提中}~q \rightarrow r~\text{眞值}\\[0.4ex]
+		4 &~~~~~~~~~~~\mathbf{0} & ~~~~~~~~\mathbf{1}&  & \text{推得前提中}~q~\text{亦眞亦假}\\
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.46</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>用用簡化眞值表方法檢驗 $p \rightarrow q \lor \neg r, r \land q \rightarrow p ~/ \therefore r \rightarrow \neg q$ 是否有效。</p>
+<p><bb>解：</bb>這個論證形式是無效的。易見我們的假設不導致任何矛盾，所以當 $p, q, r$ 都爲眞時，上述論說形式的前提爲眞而結論爲假。所以，該論說形式是無效的。（本例中，作爲蘊涵式後件的 $q \lor \neg r$ 爲眞，則蘊涵式 $p \rightarrow q \lor \neg r$ 一定爲眞，這與 $p$ 的眞值無關。）見下表：</p>
+<p>
+$$
+\begin{array}{c|ll|c|c}
+		\text{步驟} & p \rightarrow q \lor \neg r, & r \land q \rightarrow p & /\therefore r \rightarrow \neg q &  \text{步驟解說}  \\
+		\hline
+		1 & ~~~~1 & ~~~~~~~~~~1 & ~~~~0 & \text{假設論證形式無效}\\[0.4ex]
+		2 & & & ~~~~~~~~1~~~~~~~~1 & \text{推得結論中} ~ r, q ~ \text{眞值}\\[0.4ex]
+		3 &~~~~~~~~~~~1 &  &  & \text{推得前提中} ~q \lor \neg r~ \text{眞值}\\[0.4ex]
+		4 & & ~~~1~~~~~1~~1&  & \text{設} ~  p ~ \text{眞，則} ~r \land q \rightarrow p~ \text{眞}\\[0.4ex]
+		5 &~~~~1 & ~~~~~~~~~~1& ~~~~0 & \text{存在前提都眞而結論假}\\
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
 <p>由於重言蘊涵和有效論說形式是「一回事」，所以我們就不再單獨討論如何用簡化眞值表方法判定一個公式集是否重言蘊涵某個公式。</p>
 <p>要說明一個公式是重言式，我們可以假設它爲假，再試圖說明這不可能；而一旦這個假設沒有導致矛盾，那麼我們就會得到命題變號的一個可能取值組合，使得給定公式爲假。類似地，要說明一個公式是矛盾式，我們可以假定它是眞的，再試圖說明這不可能；而一旦這個假設沒有導致矛盾，那麼我們就會得到命題變號的一個可能取值組合，使得給定公式爲眞。如果假設一公式爲眞沒有導致矛盾，並且假設它爲假也沒有導致矛盾，那麼該公式就一定是或然式。</p>
-<p>\begin{examplep}{}<br />
-設 $\varphi, \psi, \chi$ 爲任意公式。用簡化眞值表方法說明公式 $(\varphi \rightarrow \psi \wedge \chi) \rightarrow(\varphi \rightarrow \psi) \wedge(\varphi \rightarrow \chi)$ 是重言式。</p>
-<pre><code>**解：**前幾個例子中，每個公式的眞值都足以確定它的直接子公式的眞值。本例則不同。見下表：
-
-\begin{center}
-    $
-    \begin{array}{c|l|c|c|c}
-    \text{步驟} &amp; (\varphi \rightarrow \psi \wedge \chi) &amp; \rightarrow &amp; (\varphi \rightarrow \psi) \wedge(\varphi \rightarrow \chi) &amp;  \text{步驟解說}  \\
-    \hline
-    1 &amp; ~~~~~~~\mathbf{\color{hongse}1}  &amp; 0 &amp; ~0 &amp; \text{假設重言式無效}\\[0.4ex]
-    2.1 &amp;~~1~~~~~~0 &amp; &amp; 1~~0~~0~~~~~~~~~~~~~~~~~~~~~ &amp; \text{若} ~\varphi \rightarrow \psi~ \text{爲假}\\[0.4ex]
-    2.2 &amp;~~~~~~~\mathbf{\color{hongse}0} &amp;  &amp;&amp; \text{前提} ~\varphi \rightarrow \psi \wedge \chi~ \text{假。}\\[0.4ex]
-    3.1 &amp;~~1~~~~~~~~~~~~~~~0 &amp; &amp; ~~~~~~~~~~~~~~~~~~~~1~~0~~0 &amp; \text{若} ~\varphi \rightarrow \chi~ \text{爲假}\\[0.4ex]
-    3.2 &amp;~~~~~~~\mathbf{\color{hongse}0} &amp;  &amp;  &amp; \text{前提} ~\varphi \rightarrow \psi \wedge \chi~ \text{假。}\\
-    \end{array}
-    $
-\end{center}
-
-如果上述蘊涵式是假的，它的前件一定是眞的而後件一定是假的；然而，該前件的眞不足以確定其直接子公式 $\varphi$ 和 $\psi \land \chi$ 的眞值，並且該後件的假也不足以確定其直接子公式 $\varphi \rightarrow \psi$ 和 $\varphi \rightarrow \chi$ 的眞值。所以，需要分兩種情況討論。後件是合取式，而合取式爲假的情況有兩種。兩種情形皆導致矛盾，所以，上述公式一定是重言式。
-</code></pre>
-<p>\end{examplep}</p>
-<p>\begin{examplep}{}<br />
-用簡化眞值表方法說明下列公式是矛盾式： $(\neg(p \rightarrow r) \land (q \rightarrow \neg p)) \land (\neg q \rightarrow \neg p)$ 。</p>
-<pre><code>有時，經驗可以幫助我們避免「分情況討論」的複雜局面。見下表：
-
-\begin{center}
-    $
-    \begin{array}{c|lcc|c|c}
-    \text{步驟} &amp;(\neg(p \rightarrow r)&amp; \land &amp;  (q \rightarrow \neg p)) &amp; \land &amp; (\neg q \rightarrow \neg p) \\
-    \hline
-    1 &amp; &amp;1 &amp; &amp; \mathbf{1}&amp; 1\\[0.4ex]
-    2 &amp;~1~~~~~~0 &amp; &amp;1~~~~ &amp; &amp; \\[0.4ex]
-    3 &amp; ~~~~~~1 &amp; &amp; ~~~~0 &amp; &amp;~~~~~~~~~0 \\[0.4ex]
-    4 &amp; &amp; &amp; \mathbf{0}~~~~~~~~~~~~ &amp; &amp;\mathbf{1}~~~~~~
-    \end{array}
-    $
-\end{center}
-
-假設上述合取式是眞的，最終推得 $q$ 既眞又假，但這是不可能的。所以，上述公式一定是矛盾式。
-</code></pre>
-<p>\end{examplep}</p>
-<p>在例 \ref{ex:simp-truth-table-4} 中，我們的思路是：在已確定 $\neg(p \rightarrow r), q \rightarrow \neg p, \neg q \rightarrow \neg p$ 都爲眞時，選擇蘊涵式的否定 $\neg(p \rightarrow r)$ 來進一步求得蘊涵式前件 $p$ 的眞值 1. 假如我們選擇的是蘊涵式 $q \rightarrow \neg p$ 或 $\neg q \rightarrow \neg p$，那麼我們就不得不分情況討論，因爲當時只能得到：或者其前件是假的或者其後件是眞的。顯然，選擇 $\neg(p \rightarrow r)$ 以求得 $p$ 的眞值 1，使我們避免了「分情況討論」的複雜局面。這裏運用了下述「經驗規則」：</p>
-<p>\begin{quof}<br />
-如果在某一步驟中得到 $\neg (\varphi \lor \psi)$ 或 $\neg (\varphi \rightarrow \psi)$ 的眞值爲 1（或得到 $\varphi \lor \psi$ 或 $\varphi \rightarrow \psi$ 的眞值爲 0），先用這一信息求得子公式 $\varphi$ 和 $\psi$ 的眞值。這樣做往往可以簡化確定其他子公式眞值的過程。<br />
-\end{quof}</p>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.47</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>設 $\varphi$, $\psi$, $\chi$ 爲任意公式。用簡化眞值表方法說明公式 $(\varphi \rightarrow \psi \wedge \chi) \rightarrow(\varphi \rightarrow \psi) \wedge(\varphi \rightarrow \chi)$ 是重言式。</p>
+<p><bb>解：</bb>前幾個例子中，每個公式的眞值都足以確定它的直接子公式的眞值。本例則不同。見下表：</p>
+<p>
+$$
+\begin{array}{c|l|c|c|c}
+		\text{步驟} & (\varphi \rightarrow \psi \wedge \chi) & \rightarrow & (\varphi \rightarrow \psi) \wedge(\varphi \rightarrow \chi) &  \text{步驟解說}  \\
+		\hline
+		1 & ~~~~~~\mathbf{\color{red}1}  & 0 & 0 & \text{假設重言式無效}\\[0.4ex]
+		2.1 &~1~~~~~~~0 & & ~1~~0~~0~~~~~~~~~~~~~~~~~~~~~ & \text{若} ~\varphi \rightarrow \psi~ \text{爲假}\\[0.4ex]
+		2.2 &~~~~~~\mathbf{\color{red}0} &  && \text{前提} ~\varphi \rightarrow \psi \wedge \chi~ \text{假}\\[0.4ex]
+		3.1 &~1~~~~~~~~~~~~~0 & & ~~~~~~~~~~~~~~~~~~~~1~~0~~0 & \text{若} ~\varphi \rightarrow \chi~ \text{爲假}\\[0.4ex]
+		3.2 &~~~~~~\mathbf{\color{red}0} &  &  & \text{前提} ~\varphi \rightarrow \psi \wedge \chi~ \text{假}\\
+\end{array}
+$$
+</p>
+<p>如果上述蘊涵式是假的，它的前件一定是眞的而後件一定是假的；然而，該前件的眞不足以確定其直接子公式 $\varphi$ 和 $\psi \land \chi$ 的眞值，並且該後件的假也不足以確定其直接子公式 $\varphi \rightarrow \psi$ 和 $\varphi \rightarrow \chi$ 的眞值。所以，需要分兩種情況討論。後件是合取式，而合取式爲假的情況有兩種。兩種情形皆導致矛盾，所以，上述公式一定是重言式。</p>
+</span>
+  </div>
+  </div>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.48</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>用簡化眞值表方法說明下列公式是矛盾式： $(\neg(p \rightarrow r) \land (q \rightarrow \neg p)) \land (\neg q \rightarrow \neg p).$</p>
+<p><bb>解：</bb>有時，經驗可以幫助我們避免「分情況討論」的複雜局面。見下表：</p>
+<p>
+$$
+\begin{array}{c|lcc|c|c}
+		\text{步驟} &(\neg(p \rightarrow r)& \land &  (q \rightarrow \neg p)) & \land & (\neg q \rightarrow \neg p) \\
+		\hline
+		1 & &1 & & \mathbf{1}& 1\\[0.4ex]
+		2 &~1~~~~~~0 & &1~~~~ & & \\[0.4ex]
+		3 & ~~~~~~1 & & ~~~~0 & &~~~~~~~~~0 \\[0.4ex]
+		4 & & & \mathbf{0}~~~~~~~~~~~~ & &\mathbf{1}~~~~~~
+\end{array}
+$$
+</p>
+<p>假設上述合取式是眞的，最終推得 $q$ 既眞又假，但這是不可能的。所以，上述公式一定是矛盾式。</p>
+</span>
+  </div>
+  </div>
+<p>在例 2.48 中，我們的思路是：在已確定 $\neg(p \rightarrow r), q \rightarrow \neg p, \neg q \rightarrow \neg p$ 都爲眞時，選擇蘊涵式的否定 $\neg(p \rightarrow r)$ 來進一步求得蘊涵式前件 $p$ 的眞值 1. 假如我們選擇的是蘊涵式 $q \rightarrow \neg p$ 或 $\neg q \rightarrow \neg p$，那麼我們就不得不分情況討論，因爲當時只能得到：或者其前件是假的或者其後件是眞的。顯然，選擇 $\neg(p \rightarrow r)$ 以求得 $p$ 的眞值 1，使我們避免了「分情況討論」的複雜局面。這裏運用了下述「經驗規則」：</p>
+<blockquote>
+<p>如果在某一步驟中得到 $\neg (\varphi \lor \psi)$ 或 $\neg (\varphi \rightarrow \psi)$ 的眞值爲 1（或得到 $\varphi \lor \psi$ 或 $\varphi \rightarrow \psi$ 的眞值爲 0），先用這一信息求得子公式 $\varphi$ 和 $\psi$ 的眞值。這樣做往往可以簡化確定其他子公式眞值的過程。</p>
+</blockquote>
 <p>運用簡化眞值表的方法，我們同樣可以說明一個公式是或然式、非重言式或者非矛盾式等。具體例子省略，請讀者去做練習。</p>
 <p>第三章開始學習寫證明。簡化眞值表方法雖然並不就是寫證明，但它們的思路有時是類似的。從現在起應注意與證明有關的問題。</p>
-<p>\clearpage<br />
-\pagestyle{maapage}<br />
-\phantomsection<br />
-\addcontentsline{toc}{section}{本章習題}<br />
-\section*{本章習題}<br />
-\sectionmark{本章習題}</p>
-<p>\begin{exercisecolitem}{說明下列聯結詞不是眞值函數聯結詞}</p>
+<h1 id="本章習題">本章習題</h1>
+<blockquote>
+<p><bb>習題 2.0：說明下列聯結詞不是眞值函數聯結詞</bb></p>
 <ol>
-<li>因爲\underspace{5em}，所以\underspace{5em}。</li>
-<li>可以想像\underspace{5em}。</li>
-<li>昨天\underspace{5em}。</li>
-<li>張三相信\underspace{5em}。</li>
-<li>李四認爲\underspace{5em}。</li>
-<li>王五知道\underspace{5em}。</li>
-<li>政客們喜歡說\underspace{5em}。</li>
-<li>從平民的角度看\underspace{5em}。	<br />
-\end{exercisecolitem}</li>
+<li>因爲$\underline{\hspace{3em}}$，所以$\underline{\hspace{3em}}$。</li>
+<li>可以想像$\underline{\hspace{3em}}$。</li>
+<li>昨天$\underline{\hspace{3em}}$。</li>
+<li>張三相信$\underline{\hspace{3em}}$。</li>
+<li>李四認爲$\underline{\hspace{3em}}$。</li>
+<li>王五知道$\underline{\hspace{3em}}$。</li>
+<li>政客們喜歡說$\underline{\hspace{3em}}$。</li>
+<li>從平民的角度看$\underline{\hspace{3em}}$。</li>
 </ol>
-<p>\begin{exercise}{給出「辭典」，並將下列語句符號化}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.1：給出「辭典」，並將下列語句符號化</bb></p>
 <ol>
 <li>不是所有的人都講道理。</li>
 <li>如果在選舉時你不去投票，那麼你就要忍受我選的白癡。</li>
@@ -3084,107 +3040,87 @@ $\left(\cdots\left(\varphi_{0} \vee \varphi_{1}\right) \vee \cdots \vee \varphi_
 <li>除非有奇蹟出現，<z>中國</z>足球隊 500 年內擠不進世界 16 強。</li>
 <li>張三只有堅持鍛鍊纔會有好身體；但並非只要他堅持鍛鍊就會有好身體。</li>
 <li>如果張三一進大學就知道自己想做什麼，那麼，他大學期間不會浪費太多時間，而他的學習成績也不會太差。</li>
-<li>要麼明天有海戰，要麼明天沒有海戰；但明天不必然有海戰，而且明天也不必然沒有海戰。<br />
-\end{exercise}</li>
+<li>要麼明天有海戰，要麼明天沒有海戰；但明天不必然有海戰，而且明天也不必然沒有海戰。</li>
 </ol>
-<p>\begin{exercise}{給出「辭典」，將下列論說符號化，判斷是否有效並給出理由}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.2：給出「辭典」，將下列論說符號化，判斷是否有效並給出理由</bb></p>
 <ol>
 <li>如果今天是星期三，那麼明天有邏輯課。因此，如果明天沒有邏輯課，則今天不是星期三。</li>
 <li>要麼士兵<z>拿破崙</z>想當將軍，要麼士兵<z>拿破崙</z>不想當將軍。如果士兵<z>拿破崙</z>想當將軍，那麼他不是一個好士兵。如果士兵<z>拿破崙</z>不想當將軍，那麼他也不是一個好士兵。所以，士兵<z>拿破崙</z>不是一個好士兵。</li>
-<li>或者邏輯難學，或者沒有多少學生喜歡它。如果數學容易學，<br />
-那麼邏輯不難學。因此，如果許多學生喜歡邏輯，那麼數學並<br />
-不容易學。</li>
+<li>或者邏輯難學，或者沒有多少學生喜歡它。如果數學容易學，那麼邏輯不難學。因此，如果許多學生喜歡邏輯，那麼數學並不容易學。</li>
 <li>如果上帝死了，那麼做什麼壞事情都是可以的。如果做什麼壞事情都是可以的，那麼我考試作弊也是可以的。所以，如果上帝死了，我考試作弊是可以的。</li>
 <li>花都是紅的當且僅當李四不是色盲。花不都是紅的。所以李四是色盲。</li>
 <li>如果 $a$ 是正整數，則 $a$ 有唯一的後繼，並且 $a$ 有唯一的前驅。$a$ 要麼並非有唯一的後繼，要麼並非有唯一的前驅。所以 $a$ 不是正整數。</li>
 <li>如果我相信上帝，則如果上帝是存在的，我就有所得；如果上帝不存在，我也無所失。另一方面，如果我不相信上帝，則如果上帝存在，我有所失；如果上帝不存在，我無所得。因此，我如果相信上帝，我或者有所得，或者無所失；而如果我不相信上帝，則我或者有所失，或者無所得。</li>
-<li>分析示例 \pref{ex:changshengbusi} 中荊王免去士兵死罪的推理過程，並加以符號化。<br />
-\end{exercise}</li>
+<li>分析示例例 32.1（P.427）中荊王免去士兵死罪的推理過程，並加以符號化。</li>
 </ol>
-<p>\begin{exercise}{填寫空格，使下列命題都成立}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.3：填寫空格，使下列命題都成立</bb></p>
 <ol>
-<li>
-<p>一個否定式是假的當且僅當\underspace{15em}；</p>
-</li>
-<li>
-<p>一個合取式是假的當且僅當\underspace{15em}；</p>
-</li>
-<li>
-<p>一個析取式是假的當且僅當\underspace{15em}；</p>
-</li>
-<li>
-<p>一個蘊涵式是假的當且僅當\underspace{15em}；</p>
-</li>
-<li>
-<p>一個等值式是假的當且僅當\underspace{15em}。<br />
-\end{exercise}</p>
-</li>
+<li>一個否定式是假的當且僅當$\underline{\hspace{5em}}$；</li>
+<li>一個合取式是假的當且僅當$\underline{\hspace{5em}}$；</li>
+<li>一個析取式是假的當且僅當$\underline{\hspace{5em}}$；</li>
+<li>一個蘊涵式是假的當且僅當$\underline{\hspace{5em}}$；</li>
+<li>一個等值式是假的當且僅當$\underline{\hspace{5em}}$。</li>
 </ol>
-<p>\begin{exercisecolitem}{給出下列公式的眞值表}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.4：給出下列公式的眞值表</bb></p>
 <ol>
 <li>$\neg \neg p \rightarrow p$</li>
 <li>$ p \rightarrow(\neg p \rightarrow q) $</li>
-<li>$p \rightarrow p \wedge q<br />
-$</li>
-<li>$ p \wedge q \rightarrow p \vee q<br />
-$</li>
-<li>$p \vee q \rightarrow p \wedge q<br />
-$</li>
-<li>$p \vee q \rightarrow \neg(p \rightarrow q)<br />
-$</li>
-<li>$p \wedge q \rightarrow \neg(p \rightarrow \neg q)<br />
-$</li>
+<li>$p \rightarrow p \wedge q$</li>
+<li>$ p \wedge q \rightarrow p \vee q$</li>
+<li>$p \vee q \rightarrow p \wedge q $</li>
+<li>$p \vee q \rightarrow \neg(p \rightarrow q$</li>
+<li>$p \wedge q \rightarrow \neg(p \rightarrow \neg q)$</li>
 <li>$(p \rightarrow q) \rightarrow \neg(\neg q \rightarrow \neg p)$</li>
-<li>$\neg(p \vee q) \rightarrow \neg p \wedge \neg q<br />
-$</li>
-<li>$\neg(p \wedge q) \rightarrow \neg p \vee \neg q<br />
-$</li>
+<li>$\neg(p \vee q) \rightarrow \neg p \wedge \neg q$</li>
+<li>$\neg(p \wedge q) \rightarrow \neg p \vee \neg q$</li>
 <li>$(p \rightarrow q) \vee(q \rightarrow p) $</li>
 <li>$(\neg p \rightarrow q) \rightarrow((\neg p \rightarrow \neg q) \rightarrow p) $</li>
 <li>$(p \rightarrow(q \rightarrow r)) \rightarrow((r \rightarrow q) \rightarrow(r \rightarrow p))$</li>
 <li>$(p \leftrightarrow q) \leftrightarrow \neg(p \wedge q) \vee \neg(\neg p \wedge \neg q)$</li>
-<li>$(p \vee q) \wedge(p \vee r) \rightarrow p \vee(q \wedge r)$<br />
-\end{exercisecolitem}</li>
+<li>$(p \vee q) \wedge(p \vee r) \rightarrow p \vee(q \wedge r)$</li>
 </ol>
-<p>\begin{exercise}{判斷下列說法的對錯，並給出理由}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.5：判斷下列說法的對錯，並說明理由</bb></p>
 <ol>
-<li>
-<p>任一公式都或者是重言式，或者是矛盾式，或者是或然式；並且只能是這三種公式中的一種。</p>
-</li>
-<li>
-<p>對任意公式集 $\Gamma$ 和任意公式 $\varphi$，$\Gamma$ 或者重言蘊涵 $\varphi$ 或者重言蘊涵 $\neg \varphi$。</p>
-</li>
-<li>
-<p>對任意公式 $\varphi$ 和 $\psi$，$\varphi$ 或者與 $\psi$ 重言等價或者與 $\neg \psi$ 重言等價。</p>
-</li>
-<li>
-<p>對任意公式 $\varphi$，或者 $\varphi$ 可滿足或者 $\neg \varphi$ 可滿足。<br />
-\end{exercise}</p>
-</li>
+<li>任一公式都或者是重言式，或者是矛盾式，或者是或然式；並且只能是這三種公式中的一種。</li>
+<li>對任意公式集 $\Gamma$ 和任意公式 $\varphi$，$\Gamma$ 或者重言蘊涵 $\varphi$ 或者重言蘊涵 $\neg \varphi$。</li>
+<li>對任意公式 $\varphi$ 和 $\psi$，$\varphi$ 或者與 $\psi$ 重言等價或者與 $\neg \psi$ 重言等價。</li>
+<li>對任意公式 $\varphi$，或者 $\varphi$ 可滿足或者 $\neg \varphi$ 可滿足。</li>
 </ol>
-<p>\begin{exercise}{在每個括號中畫 \ding{51} 或 \ding{55} 分別表明「可以是」和「一定不是」，並思考原因。如或然式與或然式的合取：（\ding{55}）重言式，（\ding{51}）矛盾式，（\ding{51}）或然式}%它相當於說：或然式與或然式的合取可以是矛盾式，也可以是或然式，但一定不是重言式。（當然，如果正確的畫法中有兩個x，那麼第三個一定是畫/，而且畫/的地方一定可以讀作「一定是」。想想爲什麼是這樣。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.6：判斷下列說法的對錯</bb><br />
+在每個括號中畫 $\checkmark$ 或 $\mathbf{\times}$ 分別表明「可以是」和「一定不是」，並思考原因。如或然式與或然式的合取：（$\mathbf{\times}$）重言式，（$\checkmark$）矛盾式，（$\checkmark$）或然式。它相當於說：或然式與或然式的合取可以是矛盾式，也可以是或然式，但一定不是重言式。（當然，如果正確的畫法中有兩個 $\mathbf{\times}$，那麼第三個一定是畫 $\checkmark$，而且畫 $\checkmark$ 的地方一定可以讀作「一定是」。想想爲什麼是這樣。</p>
 <ol>
-<li>重言式與重言式的析取：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>重言式與矛盾式的析取：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>重言式與或然式的析取：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以重言式爲前後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以重言式爲前件、矛盾式爲後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以重言式爲前件、或然式爲後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以矛盾式爲前、後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以矛盾式爲前件、重言式爲後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以矛盾式爲前件、或然式爲後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以或然式爲前後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以或然式爲前件、重言式爲後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>以或然式爲前件、矛盾式爲後件的蘊涵式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>兩端都是重言式的等值式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>兩端分別是重言式和矛盾式的等值式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>兩端分別是重言式和或然式的等值式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>兩端都是矛盾式的等值式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>兩端分別是矛盾式和或然式的等值式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。</li>
-<li>兩端都是或然式的等值式：（\underspace{1.5em}）重言式，（\underspace{1.5em}）矛盾式，（\underspace{1.5em}）或然式。<br />
-\end{exercise}</li>
+<li>重言式與重言式的析取：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>重言式與矛盾式的析取：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>重言式與或然式的析取：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以重言式爲前後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以重言式爲前件、矛盾式爲後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以重言式爲前件、或然式爲後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以矛盾式爲前、後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以矛盾式爲前件、重言式爲後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以矛盾式爲前件、或然式爲後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以或然式爲前後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以或然式爲前件、重言式爲後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>以或然式爲前件、矛盾式爲後件的蘊涵式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>兩端都是重言式的等值式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>兩端分別是重言式和矛盾式的等值式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>兩端分別是重言式和或然式的等值式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>兩端都是矛盾式的等值式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>兩端分別是矛盾式和或然式的等值式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
+<li>兩端都是或然式的等值式：（$\underline{\hspace{1em}}$）重言式，（$\underline{\hspace{1em}}$）矛盾式，（$\underline{\hspace{1em}}$）或然式。</li>
 </ol>
-<p>\begin{exercise}{設 $\varphi$ 和 $\psi$ 爲任意公式。判斷下列命題的眞假}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.7：設 $\varphi$ 和 $\psi$ 爲任意公式。判斷下列命題的眞假</bb></p>
 <ol>
 <li>$\varphi \land \psi$ 是重言式當且僅當 $\varphi$ 是重言式且 $\psi$ 是重言式。</li>
 <li>$\varphi \lor \psi$ 是重言式當且僅當或者 $\varphi$ 是重言式或者 $\psi$ 是重言式。</li>
@@ -3200,42 +3136,44 @@ $</li>
 <li>$\varphi \lor \psi$ 是或然式當且僅當或者 $\varphi$ 是或然式或者 $\psi$ 是或然式。</li>
 <li>$\varphi \rightarrow \psi$ 是或然式當且僅當如果 $\varphi$ 是或然式那麼 $\psi$ 是或然式。</li>
 <li>$\varphi \leftrightarrow \psi$ 是或然式當且僅當或者 $\varphi$ 和 $\psi$ 都是或然式或者 $\varphi$ 和 $\psi$ 都不是或然式。</li>
-<li>$\varphi$ 是或然式當且僅當 $\neg \varphi$ 不是或然式。<br />
-\end{exercise}</li>
+<li>$\varphi$ 是或然式當且僅當 $\neg \varphi$ 不是或然式。</li>
 </ol>
-<p>\begin{exercise}{設 $\varphi$ 和 $\psi$ 爲任意公式。在每個括號中畫 \ding{51} 或 \ding{55} 表明「對」和「錯」}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.8：設 $\varphi$ 和 $\psi$ 爲任意公式。在每個括號中畫 $\checkmark$ 或 $\mathbf{\times}$ 表明「對」和「錯」</bb></p>
 <ol>
-<li>如果 $\varphi \leftrightarrow \psi$ 是重言式，那麼 $\varphi$ 是重言式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \leftrightarrow \psi$ 是重言式，那麼 $\varphi$ 是矛盾式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \leftrightarrow \psi$ 是重言式，那麼 $\varphi$ 是或然式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \leftrightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是重言式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \leftrightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是矛盾式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \leftrightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是或然式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \leftrightarrow \psi$ 是或然式，那麼。$\varphi$ 是重言式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \leftrightarrow \psi$ 是或然式，那麼 $\varphi$ 是矛盾式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \leftrightarrow \psi$ 是或然式，那麼 $\varphi$ 是或然式當且僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。<br />
-\end{exercise}</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是重言式，那麼 $\varphi$ 是重言式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是重言式，那麼 $\varphi$ 是矛盾式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是重言式，那麼 $\varphi$ 是或然式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是重言式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是矛盾式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是或然式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是或然式，那麼。$\varphi$ 是重言式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是或然式，那麼 $\varphi$ 是矛盾式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \leftrightarrow \psi$ 是或然式，那麼 $\varphi$ 是或然式當且僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
 </ol>
-<p>\begin{exercise}{設 $\varphi$ 和 $\psi$ 爲任意公式。在每個括號中畫 \ding{51} 或 \ding{55} 表明「對」和「錯」}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.9：設 $\varphi$ 和 $\psi$ 爲任意公式。在每個括號中畫 $\checkmark$ 或 $\mathbf{\times}$ 表明「對」和「錯」</bb></p>
 <ol>
-<li>如果 $\varphi \rightarrow \psi$ 是重言式，那麼 $\varphi$ 是重言式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \rightarrow \psi$ 是重言式，那麼 $\varphi$ 是矛盾式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \rightarrow \psi$ 是重言式，那麼 $\varphi$ 是或然式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \rightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是重言式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \rightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是矛盾式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \rightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是或然式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \rightarrow \psi$ 是或然式，那麼。$\varphi$ 是重言式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \rightarrow \psi$ 是或然式，那麼 $\varphi$ 是矛盾式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。</li>
-<li>如果 $\varphi \rightarrow \psi$ 是或然式，那麼 $\varphi$ 是或然式僅當 $\psi$ 是重言式（\underspace{1.5em}），矛盾式（\underspace{1.5em}），或然式（\underspace{1.5em}）。<br />
-\end{exercise}</li>
+<li>如果 $\varphi \rightarrow \psi$ 是重言式，那麼 $\varphi$ 是重言式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \rightarrow \psi$ 是重言式，那麼 $\varphi$ 是矛盾式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \rightarrow \psi$ 是重言式，那麼 $\varphi$ 是或然式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \rightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是重言式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \rightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是矛盾式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \rightarrow \psi$ 是矛盾式，那麼 $\varphi$ 是或然式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \rightarrow \psi$ 是或然式，那麼。$\varphi$ 是重言式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \rightarrow \psi$ 是或然式，那麼 $\varphi$ 是矛盾式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
+<li>如果 $\varphi \rightarrow \psi$ 是或然式，那麼 $\varphi$ 是或然式僅當 $\psi$ 是重言式（$\underline{\hspace{1em}}$），矛盾式（$\underline{\hspace{1em}}$），或然式（$\underline{\hspace{1em}}$）。</li>
 </ol>
-<p>\begin{exercise}{}</p>
-<ol>
-<li>說明怎樣用簡化眞值表方法證明一個公式重言蘊涵另一個公式，或重言等值於另一個公式<br />
-\end{exercise}</li>
-</ol>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.10</bb><br />
+說明怎樣用簡化眞值表方法證明一個公式重言蘊涵另一個公式，或重言等值於另一個公式</p>
+</blockquote>
 <p>在以下習題中，對所有公式 $\varphi$ 和 $\psi$，我們以 $\varphi \vDash_0 \psi$ 表示 $\varphi$ 重言蘊涵 $\psi$，以 $\varphi_0,&hellip;,\varphi_n$ 表示 $\lbrace \varphi_0,&hellip;,\varphi_n\rbrace $ 重言蘊涵 $\psi$。</p>
-<p>\begin{exercisecolitem}{設 $\varphi, \psi, \chi$ 爲任意公式。用（簡化）眞值表說明下列命題都成立}</p>
+<blockquote>
+<p><bb>習題 2.11：設 $\varphi, \psi, \chi$ 爲任意公式。用（簡化）眞值表說明下列命題都成立</bb></p>
 <ol>
 <li>$ \varphi \vDash_{0} \varphi $</li>
 <li>$\psi \vDash_{0} \varphi \vee \psi $</li>
@@ -3256,18 +3194,20 @@ $</li>
 <li>$\neg \varphi \wedge \neg \psi \vDash_{0} \neg(\varphi \vee \psi) $</li>
 <li>$\neg \varphi \vee \neg \psi \vDash_{0} \neg(\varphi \wedge \psi) $</li>
 <li>$\varphi \leftrightarrow \psi, \varphi \vDash_{0} \psi $</li>
-<li>$\varphi \leftrightarrow \psi, \psi \vDash_{0} \varphi $<br />
-\end{exercisecolitem}</li>
+<li>$\varphi \leftrightarrow \psi, \psi \vDash_{0} \varphi $</li>
 </ol>
-<p>\begin{exercise}{設 $\varphi, \psi$ 爲任意公式。用（簡化）眞值表說明下列每一組中的公式都是重言等值的}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.12：設 $\varphi, \psi$ 爲任意公式。用（簡化）眞值表說明下列每一組中的公式都是重言等值的</bb></p>
 <ol>
 <li>$\varphi \rightarrow \psi, \neg \varphi \vee \psi, \neg(\varphi \wedge \neg \psi) $</li>
 <li>$\varphi \vee \psi, \neg(\neg \varphi \wedge \neg \psi), \neg \varphi \rightarrow \psi $</li>
 <li>$\varphi \wedge \psi, \neg(\neg \varphi \vee \neg \psi), \neg(\varphi \rightarrow \neg \psi) $</li>
-<li>$\varphi \leftrightarrow \psi,(\varphi \rightarrow \psi) \wedge(\psi \rightarrow \varphi),(\varphi \wedge \psi) \vee(\neg \varphi \wedge \neg \psi)$<br />
-\end{exercise}</li>
+<li>$\varphi \leftrightarrow \psi,(\varphi \rightarrow \psi) \wedge(\psi \rightarrow \varphi),(\varphi \wedge \psi) \vee(\neg \varphi \wedge \neg \psi)$</li>
 </ol>
-<p>\begin{exercisecolitem}{用（簡化）眞值表說明下列各命題都不成立}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.13：用（簡化）眞值表說明下列各命題都不成立</bb></p>
 <ol>
 <li>$p \vDash_{0} p \wedge q $</li>
 <li>$p \vee q \vDash_{0} p $</li>
@@ -3276,10 +3216,11 @@ $</li>
 <li>$p \wedge q \vDash_{0}(p \rightarrow r) \wedge(q \rightarrow r) $</li>
 <li>$p \vee q \vDash_{0}(p \rightarrow r) \vee(q \rightarrow r) $</li>
 <li>$p \leftrightarrow q \vDash_{0} p $</li>
-<li>$p \leftrightarrow q \vDash_{0} q$<br />
-\end{exercisecolitem}</li>
+<li>$p \leftrightarrow q \vDash_{0} q$</li>
 </ol>
-<p>\begin{exercisecolitem}{用（簡化）眞值表說明具有下列形式的公式都是重言式}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.14：用（簡化）眞值表說明具有下列形式的公式都是重言式</bb></p>
 <ol>
 <li>$\varphi \leftrightarrow \neg \neg \varphi $</li>
 <li>$\varphi \rightarrow(\psi \rightarrow \varphi) $</li>
@@ -3294,10 +3235,11 @@ $</li>
 <li>$(\varphi \leftrightarrow \psi) \rightarrow(\psi \leftrightarrow \varphi) $</li>
 <li>$(\varphi \leftrightarrow(\psi \leftrightarrow \chi)) \leftrightarrow((\varphi \leftrightarrow \psi) \leftrightarrow \chi) $</li>
 <li>$\varphi \vee\left(\psi_{0} \wedge \cdots \wedge \psi_{k}\right) \leftrightarrow\left(\varphi \vee \psi_{0}\right) \wedge \cdots \wedge\left(\varphi \vee \psi_{k}\right) $</li>
-<li>$\varphi \wedge\left(\psi_{0} \vee \cdots \vee \psi_{k}\right) \leftrightarrow\left(\varphi \wedge \psi_{0}\right) \vee \cdots \vee\left(\varphi \wedge \psi_{k}\right)$<br />
-\end{exercisecolitem}</li>
+<li>$\varphi \wedge\left(\psi_{0} \vee \cdots \vee \psi_{k}\right) \leftrightarrow\left(\varphi \wedge \psi_{0}\right) \vee \cdots \vee\left(\varphi \wedge \psi_{k}\right)$</li>
 </ol>
-<p>\begin{exercisecolitem}{用（簡化）眞值表說明具有下列形式的公式都是矛盾式}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.15：用（簡化）眞值表說明具有下列形式的公式都是矛盾式</bb></p>
 <ol>
 <li>$\varphi \wedge \neg(\neg \varphi \rightarrow \psi) $</li>
 <li>$(\varphi \rightarrow \neg \varphi) \wedge(\neg \varphi \rightarrow \varphi) $</li>
@@ -3306,10 +3248,11 @@ $</li>
 <li>$(\neg \varphi \rightarrow \neg \psi) \wedge \neg((\neg \varphi \rightarrow \psi) \rightarrow \varphi) $</li>
 <li>$(\varphi \rightarrow(\psi \rightarrow \chi)) \wedge \neg((\varphi \rightarrow \psi) \rightarrow(\varphi \rightarrow \chi)) $</li>
 <li>$(\varphi \leftrightarrow \psi) \leftrightarrow(\neg \varphi \leftrightarrow \psi) $</li>
-<li>$(\varphi \leftrightarrow \psi) \leftrightarrow(\varphi \leftrightarrow \neg \psi)$<br />
-\end{exercisecolitem}</li>
+<li>$(\varphi \leftrightarrow \psi) \leftrightarrow(\varphi \leftrightarrow \neg \psi)$</li>
 </ol>
-<p>\begin{exercisecolitem}{用（簡化）眞值表說明具有下列形式的公式都是或然式}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.16：用（簡化）眞值表說明具有下列形式的公式都是或然式</bb></p>
 <ol>
 <li>$\varphi \rightarrow \psi $</li>
 <li>$\varphi \rightarrow \neg \neg \neg \varphi $</li>
@@ -3318,10 +3261,11 @@ $</li>
 <li>$\neg \psi \rightarrow \neg(\varphi \vee \psi) $</li>
 <li>$(\neg \varphi \rightarrow \psi) \rightarrow((\varphi \rightarrow \psi) \rightarrow \neg \psi) $</li>
 <li>$(\varphi \leftrightarrow \psi) \rightarrow \varphi \wedge \psi $</li>
-<li>$(\varphi \leftrightarrow \psi) \rightarrow \neg \varphi \wedge \neg \psi$<br />
-\end{exercisecolitem}</li>
+<li>$(\varphi \leftrightarrow \psi) \rightarrow \neg \varphi \wedge \neg \psi$</li>
 </ol>
-<p>\begin{exercise}{設 $\Gamma = \lbrace \varphi_0,&hellip;,\varphi_n\rbrace $ 爲任意的有窮公式集，$\varphi$ 爲任意公式。給出下列命題成立的理由}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.17：設 $\Gamma = \lbrace \varphi_0,&hellip;,\varphi_n\rbrace $ 爲任意的有窮公式集，$\varphi$ 爲任意公式。給出下列命題成立的理由</bb></p>
 <ol>
 <li>如果 $\Gamma$ 可滿足，那麼對任何公式集 $\Delta$，$\Gamma \cap \Delta$也可滿足；</li>
 <li>如果 $\Gamma$ 不可滿足，那麼對任何有窮公式集 $\Delta$，$\Gamma \cup \Delta$也不可滿足；</li>
@@ -3330,10 +3274,11 @@ $</li>
 <li>如果 $\Gamma$ 不可滿足，那麼 $\Gamma$ 重言蘊涵 $\varphi$；</li>
 <li>如果 $\neg \varphi$ 不可滿足，那麼 $\Gamma$ 重言蘊涵 $\varphi$；</li>
 <li>如果 $\Gamma$ 重言蘊涵 $\varphi$，並且 $\Gamma$ 可滿足，那麼 $\varphi$ 也可滿足；</li>
-<li>如果 $\Gamma$ 重言蘊涵 $\varphi$ 並且 $\Gamma$ 重言蘊涵 $\neg \varphi$，那麼 $\Gamma$ 不可滿足。<br />
-\end{exercise}</li>
+<li>如果 $\Gamma$ 重言蘊涵 $\varphi$ 並且 $\Gamma$ 重言蘊涵 $\neg \varphi$，那麼 $\Gamma$ 不可滿足。</li>
 </ol>
-<p>\begin{exercise}{設 $\varphi, \psi, \varphi_0,&hellip;,\varphi_n$ 爲任意公式且 $\Gamma = \lbrace \varphi_0,&hellip;,\varphi_n\rbrace $。給出下列命題成立的理由}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.18：設 $\varphi, \psi, \varphi_0,&hellip;,\varphi_n$ 爲任意公式且 $\Gamma = \lbrace \varphi_0,&hellip;,\varphi_n\rbrace $。給出下列命題成立的理由</bb></p>
 <ol>
 <li>$\varphi$ 重言蘊涵 $\psi$ 當且僅當 $\varphi \rightarrow \psi$ 是重言式；</li>
 <li>$\varphi$ 重言等值於 $\psi$ 當且僅當 $\varphi \leftrightarrow \psi$ 是重言式，當且僅當 $\psi \rightarrow \varphi$ 與 $\varphi \rightarrow \psi$ 都是重言式；</li>
@@ -3345,20 +3290,11 @@ $</li>
 <li>如果 $\varphi$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma \cup  \lbrace \varphi \rbrace $ 是可滿足的；</li>
 <li>如果 $\varphi_i (i \leqslant n)$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma - \lbrace \varphi_i \rbrace $ 是可滿足的；</li>
 <li>如果 $\varphi$ 是矛盾式，那麼 $\Gamma \cup  \lbrace \varphi \rbrace $ 是不可滿足的；</li>
-<li>如果 $\varphi_i (i \leqslant n)$ 是矛盾式，那麼 $\Gamma$ 是不可滿足的。<br />
-\end{exercise}</li>
+<li>如果 $\varphi_i (i \leqslant n)$ 是矛盾式，那麼 $\Gamma$ 是不可滿足的。</li>
 </ol>
-<p>%如果一個形式語言的聯結詞用的是<z>波蘭</z>學派記法（見第 \pageref{tab:symbol} 頁表 \ref{tab:symbol}），那麼這個語言就不需要括號。<z>波蘭</z>學派記法中一元聯結詞 $N$ 的使用規則和我們的 $\neg$ 一樣，但二元聯結詞 $K, A, C, E$ 的使用規則不同，它們都位於由它們聯結的兩個直接子公式的左側。具體地說，當我們使用<z>波蘭</z>學派記法時，公式的形成規則是下面這幾條（對比\jie\ref{subsec:Fomal-Lang-L0} 中的形成規則和例子）：<br />
-%<br />
-%\begin{quofh}<br />
-%\item 所有的命題變號都是公式；<br />
-%\item 如果 $\varphi$ 是公式，那麼 $N \varphi$ 也是公式；<br />
-%\item 如果 $\varphi$ 和 $\psi$ 是公式，那麼 $K\varphi\psi, A\varphi\psi, C\varphi\psi, E\varphi\psi$ 也是公式；<br />
-%\item 只有這些是公式。<br />
-%\end{quofh}<br />
-%<br />
-%例如，$p_156, KNp_{75}p_{21}, Cp_9Ap_{57}Ep_{23}p_{601}, CCCCCp_{28}p_{28}p_{28}p_{28}p_{28}p_{28}$ 都是公式；而 $Kp_{13}, p_{822}Np_{822}, p_{69}CNp_{801}, Np_{28}Cp_{782}$ 則都不是公式。</p>
-<p>\begin{exercisecolitem}{將下列公式改寫爲使用<z>波蘭</z>學派記法的公式。完成後，不看下列公式，把那些使用<z>波蘭</z>學派記法的公式再改寫成我們這個語言的公式，然後再和下列公式對照}</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 2.18：將下列公式改寫爲使用<z>波蘭</z>學派記法的公式。完成後，不看下列公式，把那些使用<z>波蘭</z>學派記法的公式再改寫成我們這個語言的公式，然後再和下列公式對照</bb></p>
 <ol>
 <li>$p \rightarrow q \vee p $</li>
 <li>$p \rightarrow((p \rightarrow q) \rightarrow q) $</li>
@@ -3377,11 +3313,11 @@ $</li>
 <li>$(p \rightarrow(q \rightarrow r)) \wedge \neg((p \wedge q) \rightarrow(p \vee r)) $</li>
 <li>$(p \leftrightarrow q) \rightarrow(\neg p \vee \neg q) $</li>
 <li>$(\neg p \vee q) \rightarrow(p \wedge q \rightarrow \neg q) $</li>
-<li>$(p \leftrightarrow q) \rightarrow \neg q \wedge \neg p$<br />
-\end{exercisecolitem}</li>
+<li>$(p \leftrightarrow q) \rightarrow \neg q \wedge \neg p$</li>
 </ol>
+</blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, September 6, 2020, 13:23:07 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, September 6, 2020, 17:33:07 by 王小花.</p>
     </article>
     
     <script>
@@ -3929,6 +3865,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#簡化眞值表方法">簡化眞值表方法</a></li>
       </ul>
     </li>
+    <li><a href="#本章習題">本章習題</a></li>
   </ul>
 </nav>
   </div>
