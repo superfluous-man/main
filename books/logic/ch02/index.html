@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-06T01:26:11&#43;0800">
+<meta name="modified" content="2020-09-06T13:23:07&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 02 章 PL 聯結詞與真值表",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-06T01:26:11+08:00",
+    "dateModified": "2020-09-06T13:23:07+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch02/",
     "description": "The material in this chapter is an introduction to basic naive set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 6, 2020 </time>
   
-&middot; 🔢 36947 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 74 min read</span>
+&middot; 🔢 36000 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 72 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1816,10 +1816,19 @@ if (!doNotTrack) {
         <li><a href="#語法和語義">語法和語義</a></li>
       </ul>
     </li>
-    <li><a href="#眞值表和眞值的計算">眞值表和眞值的計算</a>
+    <li><a href="#基本眞值表和眞值的計算">基本眞值表和眞值的計算</a>
       <ul>
-        <li><a href="#以子公式的給定眞值計算">以子公式的給定眞值計算</a></li>
-        <li><a href="#以公式的眞值表計算">以公式的眞值表計算</a></li>
+        <li><a href="#聯結詞的語義解釋">聯結詞的語義解釋</a></li>
+        <li><a href="#公式眞值的計算">公式眞值的計算</a>
+          <ul>
+            <li><a href="#以子公式的給定眞值計算">以子公式的給定眞值計算</a></li>
+            <li><a href="#以公式的眞值表計算">以公式的眞值表計算</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#若干基本語義概念的眞值表刻畫">若干基本語義概念的眞值表刻畫</a>
+      <ul>
         <li><a href="#論說形式的有效性">論說形式的有效性</a></li>
         <li><a href="#重言蘊涵">重言蘊涵</a></li>
         <li><a href="#重言等值">重言等值</a></li>
@@ -2135,7 +2144,7 @@ if (!doNotTrack) {
 <blockquote>
 <ol>
 <li>確認所有簡單的句子及其否定。</li>
-<li>如果需要，對句子進行復述，即在不改變句子意思的前提下對句子表面結構做小的改動。</li>
+<li>如果需要，對句子進行複述，即在不改變句子意思的前提下對句子表面結構做小的改動。</li>
 <li>用小寫的<z>英</z>文字母代換簡單句，或者用給出的「辭典」中的字母來代換它們。（用不同的字母代換不同的簡單句。如果有同一個簡單句的多次出現，確保用相同字母代換相同簡單句的所有出現。）</li>
 <li>確認所有的聯結詞，並「由內至外」或「由外至內」逐步把句子符號化。</li>
 </ol>
@@ -2188,10 +2197,8 @@ if (!doNotTrack) {
 <p>「只有&ndash;纔」作聯結詞時很像<z>英</z>文的 &ldquo;only if&rdquo;. &ldquo;$p$ only if $q$, &ldquo;only if $q$, $p$&rdquo; 和 &ldquo;if $p$ then $q$&rdquo; 意思相同。</p>
 <p>另一個常見而又有點特殊的聯結詞是「除非」。比如</p>
 <blockquote>
-<p><bb>☯例 2.20</bb> 李四下午不會去聽講座，除非他學過數理邏輯。</p>
-</blockquote>
-<p>例 2.20 可以複述成：</p>
-<blockquote>
+<p><bb>☯例 2.20</bb> 李四下午不會去聽講座，除非他學過數理邏輯。<br />
+例 2.20 可以複述成：</p>
 <ol>
 <li>如果李四沒有學過數理邏輯，他下午不會去聽講座。</li>
 <li>或者李四下午不會去聽講座，或者他學過數理邏輯。</li>
@@ -2204,323 +2211,250 @@ if (!doNotTrack) {
 <p>「除非」大致與<z>英</z>文中的聯結詞「unless」相仿。</p>
 <h2 id="論說的符號化">論說的符號化</h2>
 <p>因爲論說由句子組成，所以，只要明白如何將論說中各個句子符號化，那麼整個論說的符號化應是水到渠成的事。不過，有一點要注意：對同一個論說中所有句子的符號化，都必須根據同一個「辭典」來進行。</p>
-<p>\begin{example}{將下列論說符號化}</p>
+<blockquote>
+<p><bb>☯例 2.21 將下列論說符號化</bb></p>
 <ol>
-<li>如果蓷蒂是企鵝，那麼蓷蒂是鳥。\hfill $p \rightarrow q$</li>
-<li>蓷蒂不是鳥。\hfill $\neg q$<br />
-\noindent\rule[0.5ex]{\linewidth}{.5pt}</li>
-<li>\suoyi 蓷蒂不是企鵝。\hfill  $\therefore \neg p$<br />
-\end{example}</li>
+<li>如果蓷蒂是企鵝，那麼蓷蒂是鳥。$\hspace{2em}$ $p \rightarrow q$</li>
+<li>蓷蒂不是鳥。$\hspace{2em}$ $\neg q$</li>
+<li>$\therefore$ 蓷蒂不是企鵝。$\hspace{2em}$ $\therefore \neg p$</li>
 </ol>
+</blockquote>
 <h2 id="形式">形式</h2>
 <p>我們說過一個論說的好壞在於它的形式的好壞，但對論說的形式是什麼卻說的很少。事實上，要想確切地說出論說的形式甚至命題的形式是什麼，並不是一件容易的事。這裏我們可以說一點點。</p>
-<p>在我們把一個論說符號化之後，雖然使用的符號在符號化過程中被賦予了意義，但我們很容易賦予它們別的意義（聯結詞和 ``$\therefore$&rdquo; 除外），甚至很自然地把例 \ref{ex:symbolization-4} 的符號化結果讀作「如果 $p$ 那麼 $q$,&hellip;」，而不讀作「如果蓷蒂是企鵝那麼蓷蒂是鳥，……」。這就是說，我們可以把例 \ref{ex:symbolization-4} 中的 $p$ 和 $q$ 看作能取不同句子爲值的變元，而當我們這樣做時，我們就是把例 \ref{ex:symbolization-4} 右列看作例 \ref{ex:symbolization-4} 左列的形式。通常，人們把一個論說的符號化結果稱作該論說的<bb>形式（form）</bb>，而事實上符號化也常被稱作<bb>形式化（formalization）</bb>。</p>
+<p>在我們把一個論說符號化之後，雖然使用的符號在符號化過程中被賦予了意義，但我們很容易賦予它們別的意義（聯結詞和 &ldquo;$\therefore$&rdquo; 除外），甚至很自然地把例 2.21 的符號化結果讀作「如果 $p$ 那麼 $q$,&hellip;」，而不讀作「如果蓷蒂是企鵝那麼蓷蒂是鳥，……」。這就是說，我們可以把例 2.21 中的 $p$ 和 $q$ 看作能取不同句子爲值的變元，而當我們這樣做時，我們就是把例 2.21 右列看作例 2.21 左列的形式。通常，人們把一個論說的符號化結果稱作該論說的<bb>形式（form）</bb>，而事實上符號化也常被稱作<bb>形式化（formalization）</bb>。</p>
 <p>在把命題或論說的符號化結果看作它們的形式時，我們要注意幾點：</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
 <li>雖然此時 $p$ 和 $q$ 等符號是可以取任意句子爲值的變元，但 $\neg$, $\land$, $\lor$, $\rightarrow$, $\leftrightarrow$ 卻不是變元，他們固定地表示否定、合取、析取等聯結詞。</li>
-<li>這裏說的形式，不是根據自然語言句子中的字的排列，直接用符號替換組成句子和聯結詞的「字段」而得到的。這裏又有兩層意思：<br />
-\begin{abclistu}
-<ol>
+<li>這裏說的形式，不是根據自然語言句子中的字的排列，直接用符號替換組成句子和聯結詞的「字段」而得到的。這裏又有兩層意思：</li>
+</ol>
+<ul>
 <li>句子的形式不是通過機械的「字段/符號」替換就能得到的。（符號化過程中時常要做的複述已經說明了這一點。）</li>
-<li>符號化<tt>依賴於</tt>某種邏輯分析的<tt>理論</tt>。<br />
-\end{abclistu}<br />
-\end{quofh}</li>
-</ol>
-</li>
-</ol>
-<p>上述第二層意思需要一點解釋。我們現在使用的邏輯分析理論是非常簡單的，它只有表示簡單句的符號和一些表示眞值函數聯結詞的符號，而且所謂簡單句是指相對於眞值函數聯結詞簡單的句子。基於這樣一個簡單理論，所謂形式當然是粗線條的。比如，按現有理論對下面的句子做符號化，</p>
-<p>\begin{quofb}</p>
+<li>符號化<tt>依賴於</tt>某種邏輯分析的<tt>理論</tt>。</li>
+</ul>
+</blockquote>
+<p>上述第二層意思需要一點解釋。我們現在使用的邏輯分析理論是非常簡單的，它只有表示簡單句的符號和一些表示眞值函數聯結詞的符號，而且所謂簡單句是指相對於眞值函數聯結詞簡單的句子。基於這樣一個簡單理論，所謂形式當然是粗線條的。比如，按<tt>本章</tt>現有理論對下面的句子做符號化，</p>
+<blockquote>
 <ol>
 <li>所有的企鵝都是不會飛的鳥。</li>
-<li>張三相信，如果所有的企鵝都是不會飛的鳥，那麼他的家鄉就有不會飛的鳥。<br />
-\end{quofb}</li>
+<li>張三相信，如果所有的企鵝都是不會飛的鳥，那麼他的家鄉就有不會飛的鳥。</li>
 </ol>
-<p>其結果只是兩個表示簡單句的符號，但是這些句子的內部結構暗示着某種形式上的不同和聯繫。第 \ref{p03ch01} 章中，我們會使用一個更豐富的邏輯分析理論來討論命題與論說的形式問題。</p>
+</blockquote>
+<p>其結果只是兩個表示簡單句的符號，但是這些句子的內部結構暗示着某種形式上的不同和聯繫。在§13.4.1（P.225）等章節中，我們會使用一個更豐富的邏輯分析理論來討論命題與論說的形式問題。</p>
 <h2 id="形式化的波蘭學派記法">形式化的波蘭學派記法</h2>
-<p>如果一個形式語言的聯結詞用的是<z>波蘭</z>學派記法（見第 \pageref{tab:symbol} 頁表 \ref{tab:symbol}），那麼這個語言就不需要括號。<z>波蘭</z>學派記法中一元聯結詞 $N$ 的使用規則和我們的 $\neg$ 一樣，但二元聯結詞 $K, A, C, E$ 的使用規則不同，它們都位於由它們聯結的兩個直接子公式的左側。具體地說，當我們使用<z>波蘭</z>學派記法時，公式的形成規則是下面這幾條（對比\jieref{subsec:Fomal-Lang-L0} 中的形成規則和例子）：</p>
-<p>\begin{quofh}</p>
+<p>如果一個形式語言的聯結詞用的是<z>波蘭</z>學派記法（見表 2.0），那麼這個語言就不需要括號。<z>波蘭</z>學派記法中一元聯結詞 $N$ 的使用規則和我們的 $\neg$ 一樣，但二元聯結詞 $K, A, C, E$ 的使用規則不同，它們都位於由它們聯結的兩個直接子公式的左側。具體地說，當我們使用<z>波蘭</z>學派記法時，公式的形成規則是下面這幾條（對比§2.3.0（P.79）中的形成規則和例子）：</p>
+<blockquote>
 <ol>
 <li>所有的命題變號都是公式；</li>
 <li>如果 $\varphi$ 是公式，那麼 $N \varphi$ 也是公式；</li>
 <li>如果 $\varphi$ 和 $\psi$ 是公式，那麼 $K\varphi\psi, A\varphi\psi, C\varphi\psi, E\varphi\psi$ 也是公式；</li>
-<li>只有這些是公式。<br />
-\end{quofh}</li>
+<li>只有這些是公式。</li>
 </ol>
-<p>\begin{examplecol}{下面左欄都是公式而右欄則都不是公式}<br />
-\begin{quofbe}<br />
-1. $p_156$<br />
-1. $KNp_{75}p_{21}$<br />
-1. $Cp_9Ap_{57}Ep_{23}p_{601}$<br />
-1. $CCCCCp_{28}p_{28}p_{28}p_{28}p_{28}p_{28}$<br />
-\end{quofbe}</p>
-<pre><code>\begin{quofbe}
-1. $Kp_{13}$
-1. $p_{822}Np_{822}$
-1. $p_{69}CNp_{801}$
-1. $Np_{28}Cp_{782}$
-\end{quofbe}
-</code></pre>
-<p>\end{examplecol}</p>
+</blockquote>
+<blockquote>
+<p><bb>☯例 2.22 下面編號的都是公式而無編號的則都不是公式</bb></p>
+<ol>
+<li>$p_156$</li>
+<li>$KNp_{75}p_{21}$</li>
+<li>$Cp_9Ap_{57}Ep_{23}p_{601}$</li>
+<li>$CCCCCp_{28}p_{28}p_{28}p_{28}p_{28}p_{28}$</li>
+</ol>
+<ul>
+<li>$Kp_{13}$</li>
+<li>$p_{822}Np_{822}$</li>
+<li>$p_{69}CNp_{801}$</li>
+<li>$Np_{28}Cp_{782}$</li>
+</ul>
+</blockquote>
 <h1 id="命題邏輯的基本語法">命題邏輯的基本語法</h1>
 <h2 id="形式語言-mathscrl_0">形式語言 $\mathscr{L_0}$</h2>
 <p>從這一節開始，我們要使用形式語言這一概念。命題邏輯的形式語言通常由兩部分組成：一是「初始符號」（primitive symbols），即無定義的符號；二是由這些符號根據一定的「形成規則」（formation rules）而形成的「公式」（formulas, formulae）。我們引入的第一個形式語言是 $\mathscr{L}_0$。</p>
-<p>我們稱 $\mathscr{L}_0$ 的初始符號爲 <strong>$\mathscr{L</strong>_0$-符號}。$\mathscr{L}_0$-符號有三種：</p>
-<p>\begin{quofh}</p>
+<p>我們稱 $\mathscr{L}_0$ 的初始符號爲 <strong>$\mathscr{L}_0$-符號</strong>。$\mathscr{L}_0$-符號有三種：</p>
+<blockquote>
 <ol>
-<li>命題變號：$p_0$, $p_1$, $p_2$,&hellip;;</li>
+<li>命題變號：$p_0$, $p_1$, $p_2, \cdots$;</li>
 <li>聯結詞：$\neg$, $\wedge$, $\vee$, $\rightarrow$, $\leftrightarrow$（$\neg$ 爲一元聯結詞，其餘爲二元聯結詞）；</li>
-<li>左右括號：（~和~）。<br />
-\end{quofh}</li>
+<li>左右括號：($\hspace{2em}$).</li>
 </ol>
+</blockquote>
 <p>$\mathscr{L}_0$-符號中，聯結詞 $\neg$, $\wedge$, $\vee$, $\rightarrow$, $\leftrightarrow$ 稱爲<strong>邏輯符號</strong>，命題變號稱爲<strong>非邏輯符號</strong>。命題變號也叫「命題變項」或「命題變元」。左右括號對於一個形式語言來說並不是必要的，但爲了方便，我們仍把它們作爲形式語言的初始符號，並稱它們爲「輔助符號」。</p>
-<p>我們稱 $\mathscr{L}_0$ 的公式爲 <strong>$\mathscr{L</strong>_0$-公式}，它們是由$\mathscr{L}_0$-符號根據下列形成規則形成的符號串：</p>
-<p>\begin{quofh}</p>
+<p>我們稱 $\mathscr{L}_0$ 的公式爲 <strong>$\mathscr{L}_0$-公式</strong>，它們是由 $\mathscr{L}_0$-符號根據下列形成規則形成的符號串：</p>
+<blockquote>
 <ol>
 <li>$\mathscr{L}_0$ 的所有命題變號都是 $\mathscr{L}_0$-公式；</li>
 <li>如果 $\varphi$ 是 $\mathscr{L}_0$-公式，則 $\neg \varphi$ 也是 $\mathscr{L}_0$-公式；</li>
-<li>如果 $\varphi$ 和 $\psi$ 是 $\mathscr{L}_0$-公式，則 $(\varphi \land \psi), (\varphi \lor \psi), (\varphi \rightarrow \psi), (\varphi \rightarrow \psi)$ 都是 $\mathscr{L}_0$-公式；</li>
-<li>只有這些是 $\mathscr{L}_0$-公式。\footnote{很多作者在我們用「公式」的地方用「合式公式」這個詞（<code>well-formed formula&quot; 或 </code>wff&rdquo;）。這裏用「公式」，是因爲這裏沒有不合式的公式。}%關於上述定義形式，參見附錄 B，尤其是\jieref{} B.2.4。<br />
-\end{quofh}</li>
+<li>若 $\varphi$ 和 $\psi$ 是 $\mathscr{L}_0$-公式，則 $(\varphi \land \psi), (\varphi \lor \psi), (\varphi \rightarrow \psi), (\varphi \rightarrow \psi)$ 都是 $\mathscr{L}_0$-公式；</li>
+<li>只有這些是 $\mathscr{L}_0$-公式。</li>
 </ol>
+</blockquote>
+<p>很多作者在我們用「公式」的地方用「合式公式」這個詞（&ldquo;well-formed formula&rdquo; 或 &ldquo;wff&rdquo;）。這裏用「公式」，是因爲這裏沒有不合式的公式。</p>
 <p>根據上述定義，下列 $\mathscr{L}_0$-符號串都是 $\mathscr{L}_0$-公式：</p>
-<p>\begin{quofb}</p>
+<blockquote>
 <ol>
 <li>$p_{156}$</li>
 <li>$(\neg p_{75} \land p_{21})$</li>
 <li>$(p_9 \rightarrow (p_{57} \lor (p_{23} \rightarrow p_{601})))$</li>
-<li>$(((((p_{28} \rightarrow p_{28})\rightarrow p_{28})\rightarrow p_{28})\rightarrow p_{28})\rightarrow p_{28})$<br />
-\end{quofb}</li>
+<li>$(((((p_{28} \rightarrow p_{28})\rightarrow p_{28})\rightarrow p_{28})\rightarrow p_{28})\rightarrow p_{28})$</li>
 </ol>
+</blockquote>
 <p>下列 $\mathscr{L}_0$-符號串都不是 $\mathscr{L}_0$-公式：</p>
-<p>\begin{quofbcolitem}</p>
+<blockquote>
 <ol>
 <li>$p_{13} \land$</li>
 <li>$p_{822} \neg p_{822}$</li>
 <li>$(p_{69} \rightarrow \neg p_{801}))$</li>
-<li>$(p_{28} \neg \rightarrow p_{782}))$<br />
-\end{quofbcolitem}</li>
+<li>$(p_{28} \neg \rightarrow p_{782}))$</li>
 </ol>
-<p>爲了討論的方便，我們用 $p, q, r, s$ 等表示 $p_{0}, p_{1}, p_{2},&hellip;$ 中的前幾個（如果不對它們做限制），必要時可再用 <code>{\unifonti '} &quot;, </code>{\unifonti &ldquo;} &quot; 或上下標來區分不同的命題變號。我們將用 $\varphi, \psi, \chi, \theta, \lambda$ 等小寫的<z>希臘</z>字母（加 <code>{\unifonti '} &quot;, </code>{\unifonti &ldquo;} &quot; 或上下標）表示 $\mathscr{L}_0$-公式，用 $\Gamma, \Delta$ 等大寫的<z>希臘</z>字母表示 $\mathscr{L}_0$-公式集合。</p>
+</blockquote>
+<p>爲了討論的方便，我們用 $p, q, r, s$ 等表示 $p_{0}, p_{1}, p_{2},&hellip;$ 中的前幾個（如果不對它們做限制），必要時可再用 $^\prime$, $^{\prime\prime}$ 或上下標來區分不同的命題變號。我們將用 $\varphi, \psi, \chi, \theta, \lambda$ 等小寫的<z>希臘</z>字母（加 $^\prime$, $^{\prime\prime}$ 或上下標）表示 $\mathscr{L}_0$-公式，用 $\Gamma, \Delta$ 等大寫的<z>希臘</z>字母表示 $\mathscr{L}_0$-公式集合。</p>
 <h2 id="對象語言和元語言">對象語言和元語言</h2>
 <p>初學者要學會分清「對象語言」和「元語言」。所謂<bb>對象語言（object Ianguage）</bb>，是作爲我們討論對象的語言；所謂<bb>元語言（metalanguage）</bb>，是我們討論中使用的語言。比如，在一本<z>英</z>文敎科書裏，<z>英</z>文是對象語言。如果這本書是初級敎科書，那麼很可能中文就是元語言；而如果這本書是高級敎科書，那麼它的元語言很可能也是<z>英</z>文。在本書中，元語言是中文加上一些符號（偶爾還有一點<z>英</z>文），對象語言到目前爲止就是 $\mathscr{L}_0$。</p>
-<p>注意：我們可以用 $\varphi$（或別的什麼符號）表示對象語言裏的某個公式（$\mathscr{L}_0$-公式），但那並不是說<z>希臘</z>字母 <code>$\varphi$&quot; 是對象語言裏的符號或公式。</code>$\varphi$&rdquo; 是我們元語言裏的符號，我們只是用它來<tt>表示</tt>某個 $\mathscr{L}_0$-公式。關於對象語言和元語言，現在只談這些，進一步的討論還會在\jieref{} 3.1 中出現。</p>
-<p>這一章涉及的對象語言只有 $\mathscr{L}_0$，所以在提到 $\mathscr{L}_0$-公式或 $\mathscr{L}_0$-公式集時，我們將盡可能省略前綴 ``$\mathscr{L}_0$&rdquo;，只說公式或公式集。</p>
+<p>注意：我們可以用 $\varphi$（或別的什麼符號）表示對象語言裏的某個公式（$\mathscr{L}_0$-公式），但那並不是說<z>希臘</z>字母 &ldquo;$\varphi$&rdquo; 是對象語言裏的符號或公式。&ldquo;$\varphi$&rdquo; 是我們元語言裏的符號，我們只是用它來<tt>表示</tt>某個 $\mathscr{L}_0$-公式。關於對象語言和元語言，現在只談這些，進一步的討論還會在§3.0.0（P.99）中出現。</p>
+<p>這一章涉及的對象語言只有 $\mathscr{L}_0$，所以在提到 $\mathscr{L}_0$-公式或 $\mathscr{L}_0$-公式集時，我們將盡可能省略前綴 &ldquo;$\mathscr{L}_0$&rdquo;，只說公式或公式集。</p>
 <h2 id="子公式和主聯結詞">子公式和主聯結詞</h2>
 <p>公式的<bb>子公式（subformula）</bb>是出現在該公式中的公式（包括它自己）。如果 $\psi$ 是 $\varphi$ 的子公式，且 $\psi \neq \varphi $，那麼 $\psi$ 是 $\varphi$ 的<bb>眞子公式（proper subformuIa）</bb>。一個公式的<tt>主聯結詞</tt>是該公式構造過程最後一步中使用的那個聯結詞，而它的<tt>直接子公式</tt>就是在這一步中主聯結詞聯結的公式。嚴格地說，</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
 <li>對每個命題變號 $p$，$p$ 是 $p$ 的子公式；</li>
 <li>$\varphi$ 的所有子公式和 $\neg \varphi$ 都是 $\neg \varphi$ 的子公式，$\varphi$ 是 $\neg \varphi$ 的直接子公式，且 $\neg$ 是 $\neg \varphi$ 的主聯結詞；</li>
 <li>$\varphi$ 和 $\psi$ 的所有子公式和 $(\varphi \lor \psi)$ 都是 $(\varphi \lor \psi)$ 的子公式，$\varphi$ 和 $\psi$ 是 $(\varphi \lor \psi)$ 的直接子公式，且 $\vee$ 是 $(\varphi \lor \psi)$ 的主聯結詞；</li>
 <li>$\varphi$ 和 $\psi$ 的所有子公式和 $(\varphi \land \psi)$ 都是 $(\varphi \land \psi)$ 的子公式，$\varphi$ 和 $\psi$ 是 $(\varphi \land \psi)$ 的直接子公式，且 $\wedge$ 是 $(\varphi \land \psi)$ 的主聯結詞；</li>
 <li>$\varphi$ 和 $\psi$ 的所有子公式和 $(\varphi \rightarrow \psi)$ 都是 $(\varphi \rightarrow \psi)$ 的子公式，$\varphi$ 和 $\psi$ 是 $(\varphi \rightarrow \psi)$ 的直接子公式，且 $\rightarrow$ 是 $(\varphi \rightarrow \psi)$ 的主聯結詞；</li>
-<li>$\varphi$ 和 $\psi$ 的所有子公式和 $(\varphi \rightarrow \psi)$ 都是 $(\varphi \rightarrow \psi)$ 的子公式，$\varphi$ 和 $\psi$ 是 $(\varphi \rightarrow \psi)$ 的直接子公式，且 $\leftrightarrow$ 是 $(\varphi \rightarrow \psi)$ 的主聯結詞；<br />
-\end{quofh}</li>
+<li>$\varphi$ 和 $\psi$ 的所有子公式和 $(\varphi \leftrightarrow \psi)$ 都是 $(\varphi \leftrightarrow \psi)$ 的子公式，$\varphi$ 和 $\psi$ 是 $(\varphi \leftrightarrow \psi)$ 的直接子公式，且 $\leftrightarrow$ 是 $(\varphi \leftrightarrow \psi)$ 的主聯結詞；</li>
 </ol>
+</blockquote>
 <p>以相同主聯結詞爲公式分類，我們有公式的下列類名稱：</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
 <li>命題變號稱爲 <bb>$\mathscr{L}_0$-原子公式（atomic formula）</bb>；</li>
 <li>形如 $\neg \varphi$ 的公式（即以 $\neg$ 爲主聯結詞的公式）稱爲<bb>否定式（negation）</bb>，俗稱「$\varphi$ 的否定」；</li>
 <li>形如 $(\varphi \lor \psi)$ 的公式稱爲<bb>析取式（disjunction）</bb>，俗稱「$\varphi$ 和 $\psi$ 的析取」，$\varphi$ 和 $\psi$ 稱爲它的<bb>析取支（disjuncts）</bb>；</li>
 <li>形如 $(\varphi \land \psi)$ 的公式稱爲<bb>合取式（conjunction）</bb>，俗稱「$\varphi$ 和 $\psi$ 的合取」。$\varphi$ 和 $\psi$ 稱爲它的<bb>合取支（conjuncts）</bb>；</li>
 <li>形如 $(\varphi \rightarrow \psi)$ 的公式稱爲<bb>蘊涵式（implication）</bb>或<bb>條件句（conditional）</bb>，$\varphi$ 稱爲它的<bb>前件（antecedent）</bb>，$\psi$ 稱爲它的<bb>後件（consequent）</bb>；</li>
-<li>形如 $(\varphi \rightarrow \psi)$ 的公式稱爲<bb>等值式（equivalence）</bb>，亦稱<bb>雙（向）蘊涵式（bi-implication）</bb>或<bb>雙（向）條件句（biconditional）</bb>。<br />
-\end{quofh}</li>
+<li>形如 $(\varphi \leftrightarrow \psi)$ 的公式稱爲<bb>等值式（equivalence）</bb>，亦稱<bb>雙（向）蘊涵式（bi-implication）</bb>或<bb>雙（向）條件句（biconditional）</bb>。</li>
 </ol>
+</blockquote>
 <h2 id="括號的省略">括號的省略</h2>
 <p>爲書寫和閱讀的方便，我們根據以下兩條規則省略公式中的一些括號：</p>
-<p>\begin{quofh}</p>
+<blockquote>
 <ol>
 <li>最外層的括號可以省略；</li>
-<li>假定 $\vee$ 和 $\wedge$ 的聯結比 $\rightarrow$ 和 $\leftrightarrow$ 優先，就像在做算術題時 $\times$ 和 $\div$ 比 $+$ 和 $-$ 優先（或者說 $\rightarrow$ 和 $\leftrightarrow$ 在做公式主聯結詞方面比 $\vee$ 和 $\wedge$ 優先）。<br />
-\end{quofh}</li>
+<li>假定 $\vee$ 和 $\wedge$ 的聯結比 $\rightarrow$ 和 $\leftrightarrow$ 優先，就像在做算術題時 $\times$ 和 $\div$ 比 $+$ 和 $-$ 優先（或者說 $\rightarrow$ 和 $\leftrightarrow$ 在做公式主聯結詞方面比 $\vee$ 和 $\wedge$ 優先）。</li>
 </ol>
-<p>\begin{examplecolitem}{下列符號串不是省略了括號的公式}</p>
+</blockquote>
+<blockquote>
+<p><bb>☯例 2.23 下列符號串不是省略了括號的公式</bb></p>
 <ol>
 <li>$p \land q \lor r$</li>
 <li>$p \rightarrow q \rightarrow r$</li>
 <li>$p \rightarrow q \lor r \rightarrow s$</li>
 <li>$p \rightarrow (q \lor r) \rightarrow s$</li>
-<li>$p \rightarrow q \rightarrow r \lor s$<br />
-\end{examplecolitem}</li>
+<li>$p \rightarrow q \rightarrow r \lor s$</li>
 </ol>
-<p>\begin{examplecol}{左欄爲省略括號的公式，右欄爲對應未省略括號的公式}<br />
-\begin{quofbe}<br />
-1.  $(p \rightarrow q) \land r$<br />
-1. $p \land q \rightarrow \neg r \land s$<br />
-1. $p \lor q \rightarrow \neg(p \land q)$<br />
-1. $(p \lor q) \land r \rightarrow s$<br />
-1. $((p \rightarrow q) \rightarrow r) \rightarrow s$<br />
-\end{quofbe}</p>
-<pre><code>\begin{quofbe}
-1.   $((p \rightarrow q) \land r)$
-1.  $((p \land q) \rightarrow (\neg r \land s))$
-1.  $((p \lor q) \rightarrow \neg(p \land q))$
-1.  $(((p \lor q) \land r) \rightarrow s)$
-1.  $(((p \rightarrow q) \rightarrow r) \rightarrow s)$
-\end{quofbe}
-%1.  $(p \rightarrow q) \land r$ \hfill $((p \rightarrow q) \land r)$
-%1. $p \land q \rightarrow \neg r \land s$ \hfill $((p \land q) \rightarrow (\neg r \land s))$
-%1. $p \lor q \rightarrow \neg(p \land q)$ \hfill $((p \lor q) \rightarrow \neg(p \land q))$
-%1. $(p \lor q) \land r \rightarrow s$ \hfill $(((p \lor q) \land r) \rightarrow s)$
-%1. $((p \rightarrow q) \rightarrow r) \rightarrow s$ \hfill $(((p \rightarrow q) \rightarrow r) \rightarrow s)$
-</code></pre>
-<p>\end{examplecol}</p>
-<p>注意：一個符號串是否爲省略了括號的公式，取決於省略括號的<tt>約定</tt>。根據本書的約定，例 \ref{ex:formula-omission-1} 中（左側）的符號串是公式而例 \ref{ex:formula-omission-2} 中的不是。但若按照其他約定，例 \ref{ex:formula-omission-1} 中的有可能不是公式而例 \ref{ex:formula-omission-2} 中的倒有可能是公式。比如，有的作者喜歡「右結合原則」，即同一種聯結詞連續出現時，右邊的聯結詞比左邊的優先。在這一約定下，例 \ref{ex:formula-omission-2} 中的第二個符號串就成了公式 $(p \rightarrow (q \rightarrow r))$ 的省略括號的寫法。如果在我們上述約定的基礎上再加「右結合原則」，那麼例 \ref{ex:formula-omission-2} 中的第三個符號串也就成了公式 $(p \rightarrow ((q \lor r) \rightarrow s))$ 省略括號的寫法。當然，還有很多不同的約定方法，這裏就不一一介紹了。</p>
+</blockquote>
+<blockquote>
+<p><bb>☯例 2.24 編號者爲省略括號的公式，未編號者爲對應未省略括號的公式</bb></p>
+<ol>
+<li>$(p \rightarrow q) \land r$</li>
+<li>$p \land q \rightarrow \neg r \land s$</li>
+<li>$p \lor q \rightarrow \neg(p \land q)$</li>
+<li>$(p \lor q) \land r \rightarrow s$</li>
+<li>$((p \rightarrow q) \rightarrow r) \rightarrow s$</li>
+</ol>
+<ul>
+<li>$((p \rightarrow q) \land r)$</li>
+<li>$((p \land q) \rightarrow (\neg r \land s))$</li>
+<li>$((p \lor q) \rightarrow \neg(p \land q))$</li>
+<li>$(((p \lor q) \land r) \rightarrow s)$</li>
+<li>$(((p \rightarrow q) \rightarrow r) \rightarrow s)$</li>
+</ul>
+</blockquote>
+<p>注意：一個符號串是否爲省略了括號的公式，取決於特定作者或特定書籍對省略括號的<tt>約定</tt>。根據本書的約定，例 2.24 中（編號者）的符號串是公式而例 2.23 中的不是。但若按照其他約定，例 2.24 中的有可能不是公式而例 2.23 中的倒有可能是公式。比如，有的作者喜歡「右結合原則」，卽同一種聯結詞連續出現時，右邊的聯結詞比左邊的優先。在這一約定下，例 2.23 中的第二個符號串就成了公式 $(p \rightarrow (q \rightarrow r))$ 的省略括號的寫法。如果在我們上述約定的基礎上再加「右結合原則」，那麼例 2.23 中的第三個符號串也就成了公式 $(p \rightarrow ((q \lor r) \rightarrow s))$ 省略括號的寫法。當然，還有很多不同的約定方法，這裏就不一一介紹了。</p>
 <h2 id="語法和語義">語法和語義</h2>
 <p><bb>語法（syntax）</bb>和<bb>語義（semantics）</bb>的區別對學習當代邏輯至關重要。<tt>語法</tt>理論有時叫<tt>語形</tt>理論，它涉及符號組合和公式的結構，以及公式在結構或形式方面的各種關係，唯獨不涉及這些符號和公式的意義。討論符號和公式意義的理論稱爲<tt>語義</tt>理論。本節的上述內容和以後將討論的公式的變換、公式序列（依規則）的生成等，都屬於語法理論。</p>
 <p>有時人們談論有意義的符號和無意義的符號。在邏輯學家們的筆下，「符號」多數時候是指沒有被賦予意義的東西。比如，前面討論的符號本身都是沒有意義的。一旦賦予這些符號意義，我們就進入了<tt>語義</tt>理論。針對符號和公式的意義的討論，包括公式的眞假，統稱爲語義討論。</p>
 <p>爲理解語法和語義的區別，我們來看下面幾個表達式：</p>
-<p>\begin{quofbcolitem}</p>
+<blockquote>
 <ol>
 <li>$1+1=2$</li>
 <li>One pIus one is (equal to) two.</li>
-<li>一加一等於二。<br />
-\end{quofbcolitem}</li>
+<li>一加一等於二。</li>
 </ol>
-<p>這些是不同語言中的句子，而不同語言有不同的符號和形成規則。\footnote{自然語言很難說有嚴格的形成規則，但大體上是有規則的。}所以，這些句子從語法上說是不同的。但是，根據通常的解釋，它們的意思是相同的，或者說在語義上是相同的。再來看同一個語言中的例子：</p>
-<p>\begin{quofbcolitem}</p>
+</blockquote>
+<p>這些是不同語言中的句子，而不同語言有不同的符號和形成規則。（自然語言很難說有嚴格的形成規則，但大體上是有規則的。）所以，這些句子從語法上說是不同的。但是，根據通常的解釋，它們的意思是相同的，或者說在語義上是相同的。再來看同一個語言中的例子：</p>
+<blockquote>
 <ol>
 <li>張三打了李四一拳。</li>
-<li>李四被張三打了一拳。<br />
-\end{quofbcolitem}</li>
+<li>李四被張三打了一拳。</li>
 </ol>
+</blockquote>
 <p>顯然這兩個句子的意思相同，即在語義方面相同。但是，第一句有八個字，而第二句卻有九個字；第一句的前兩個字是「張三」，而第二句的前兩個字卻是「李四」。所以，這兩個句子在語法方面是不同的。</p>
-<h1 id="眞值表和眞值的計算">眞值表和眞值的計算</h1>
+<h1 id="基本眞值表和眞值的計算">基本眞值表和眞值的計算</h1>
 <p>在這一節裏，我們介紹眞值表和公式眞值的計算方法，然後在下一節用這種方法來討論命題邏輯的一些基本語義概念。</p>
-<p>\subsection[聯結詞的語義解釋：基本眞值表]{聯結詞的語義解釋：基本眞值表}</p>
+<h2 id="聯結詞的語義解釋">聯結詞的語義解釋</h2>
 <p>命題邏輯不涉及命題中不能由聯結詞表現出來的內部結構，所以在某種意義上說，命題邏輯是研究聯結詞的。</p>
-<p>從語法角度看，聯結詞自然是「公式函數」，即從公式集合到公式集合的函數。（函數定義見 \pageref{fn:defoffunction} 頁注）這就是說，對每個聯結詞，每當給出公式作爲「輸入」，這個聯結詞確定了唯一的公式作爲「輸出」，即以該聯結詞爲主聯結詞並以給定公式爲直接子公式的公式。那麼，諸如「並非」「並且」這樣的聯結詞的意義（meaning）又是什麼呢？我們說過，這些聯結詞是眞值函數聯結詞。什麼是眞值函數（truth function）？眞值函數是從眞值集到眞值集的函數。我們用 T 或 1 表示眞，用 F 或 0 表示假。根據我們對眞值的「二值」預設（見 \pageref{item:declarative-truth} 頁），眞值函數就是從 ${1, 0}$ 到 ${1, 0}$ 的函數。眞值函數聯結詞之所以叫「眞值函數聯結詞」，是因爲從語義角度看，它們是眞值函數。換句話說，眞值函數聯結詞就是以眞值函數爲其解釋的聯結詞。關於這一點，我們在\jieref{} 3.7.1 和\jieref{} 3.9 中還會討論。</p>
-<p>%\wtable{0.7}{<br />
-%	\begin{tabular}{cc|ccccc}<br />
-%		\hline\hline<br />
-%		$\varphi$ &amp; $\psi$ &amp; $\varphi \land \psi$ &amp; $\varphi \lor \psi$ &amp; $\varphi \rightarrow \psi$ &amp; $\varphi \rightarrow \psi$  &amp; $\neg \varphi$ \<br />
-%		\midrule<br />
-%		T &amp; T &amp; T &amp; T &amp; T &amp; T  &amp; F\[.7ex]<br />
-%		T &amp; F &amp; F &amp; T &amp; T &amp; T &amp; \[.7ex]<br />
-%		F &amp; T &amp; F &amp; T &amp; T &amp; T &amp; T\[.7ex]<br />
-%		F &amp; F &amp; F &amp; T &amp; F &amp; T &amp;  \[.4ex]<br />
-%		\hline\hline<br />
-%	\end{tabular}<br />
-%	\caption{基本眞值表}<br />
-%}<br />
-\wtable{0.66}{<br />
-\begin{tabular}{cc|ccccc}<br />
-\hline\hline<br />
-$\varphi$ &amp; $\psi$ &amp; $\varphi \land \psi$ &amp; $\varphi \lor \psi$ &amp; $\varphi \rightarrow \psi$ &amp; $\varphi \rightarrow \psi$  &amp; $\neg \varphi$ \<br />
-\midrule<br />
-1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1  &amp; 0\[.7ex]<br />
-1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; \[.7ex]<br />
-0 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1\[.7ex]<br />
-0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp;  \[.4ex]<br />
-\hline\hline<br />
-\end{tabular}<br />
-\caption{基本眞值表}<br />
-}<br />
-現在，我們先用比較直觀的眞值表（truth table）來討論眞值函數聯結詞。表 \ref{tab:truth-table} 是關於五個眞值函數聯結詞的基本眞值表。</p>
-<p>%\begin{table}[htp]<br />
-%	\begin{center}<br />
-%	\begin{tabular}{cc|ccccc}<br />
-%	\hline\hline<br />
-%	$\varphi$ &amp; $\psi$ &amp; $\varphi \land \psi$ &amp; $\varphi \lor \psi$ &amp; $\varphi \rightarrow \psi$ &amp; $\varphi \rightarrow \psi$  &amp; $\neg \varphi$ \<br />
-%	\midrule<br />
-%	T &amp; T &amp; T &amp; T &amp; T &amp; T  &amp; F\[.7ex]<br />
-%	T &amp; F &amp; F &amp; T &amp; T &amp; T &amp; \[.7ex]<br />
-%	F &amp; T &amp; F &amp; T &amp; T &amp; T &amp; T\[.7ex]<br />
-%	F &amp; F &amp; F &amp; T &amp; F &amp; T &amp;  \[.4ex]<br />
-%	\hline\hline<br />
-%\end{tabular}<br />
-%\caption{基本眞值表}<br />
-%	\end{center}<br />
-%\end{table}</p>
-<p>根據表 \ref{tab:truth-table}，無論 $\varphi$ 是怎樣的公式，如果 $\varphi$ 是眞的， $\neg \varphi$ 就是假的；如果 $\varphi$ 是假的，$\neg \varphi$ 就是眞的。這就是說，$\neg \varphi$ 的眞值完全取決於 $\varphi$ 的眞值。類似地，無論 $\varphi$ 和 $\psi$ 是什麼公式，如果 $\varphi$ 和 $\psi$ 都是眞的，$\varphi \rightarrow \psi$ 就是眞的；如果 $\varphi$ 是眞的而 $\psi$ 是假的，$\varphi \rightarrow \psi$ 是假的；……用 $\land, \lor, \leftrightarrow$ 做主聯結詞的情況依此類推。</p>
+<p>從語法角度看，聯結詞自然是「公式函數」，即從公式集合到公式集合的函數。這就是說，對每個聯結詞，每當給出公式作爲「輸入」，這個聯結詞確定了唯一的公式作爲「輸出」，即以該聯結詞爲主聯結詞並以給定公式爲直接子公式的公式。那麼，諸如「並非」「並且」這樣的聯結詞的意義（meaning）又是什麼呢？我們說過，這些聯結詞是眞值函數聯結詞。什麼是眞值函數（truth function）？眞值函數是從眞值集到眞值集的函數。我們用 T 或 1 表示眞，用 F 或 0 表示假。根據我們對眞值的「二值」預設，眞值函數就是從 $\lbrace 1, 0\rbrace $ 到 $\lbrace 1, 0\rbrace $ 的函數。眞值函數聯結詞之所以叫「眞值函數聯結詞」，是因爲從語義角度看，它們是眞值函數。換句話說，眞值函數聯結詞就是以眞值函數爲其解釋的聯結詞。關於這一點，我們在§3.3.0（P.115）和§3.5（P.122）中還會討論。</p>
+<p>現在，我們先用比較直觀的眞值表（truth table）來討論眞值函數聯結詞。表 2.1 是關於五個眞值函數聯結詞的基本眞值表。</p>
+<p>
+<bb>Table 2.1: 基本真值表</bb>
+ $$
+ \begin{array}{cc|ccccc}
+\hline \hline \varphi & \psi & \varphi \wedge \psi & \varphi \vee \psi & \varphi \rightarrow \psi & \varphi \rightarrow \psi & \neg \varphi \\
+\hline 1 & 1 & 1 & 1 & 1 & 1 & 0 \\
+1 & 0 & 0 & 1 & 1 & 1 & \\
+0 & 1 & 0 & 1 & 1 & 1 & 1 \\
+0 & 0 & 0 & 1 & 0 & 1 & \\
+\hline \hline
+\end{array}
+$$
+ </p>
+<p>根據表 2.1，無論 $\varphi$ 是怎樣的公式，如果 $\varphi$ 是眞的， $\neg \varphi$ 就是假的；如果 $\varphi$ 是假的，$\neg \varphi$ 就是眞的。這就是說，$\neg \varphi$ 的眞值完全取決於 $\varphi$ 的眞值。類似地，無論 $\varphi$ 和 $\psi$ 是什麼公式，如果 $\varphi$ 和 $\psi$ 都是眞的，$\varphi \rightarrow \psi$ 就是眞的；如果 $\varphi$ 是眞的而 $\psi$ 是假的，$\varphi \rightarrow \psi$ 是假的；……用 $\land, \lor, \leftrightarrow$ 做主聯結詞的情況依此類推。</p>
 <p>因爲每個公式 $\varphi$ 都是由命題變號經五個眞值函數聯結詞構造出來的，所以，一旦 $\varphi$ 中命題變號的眞值確定了，$\varphi$ 的眞值就可以按照上述基本眞值表一步步計算出來。</p>
-<p>在計算公式的眞值前，先把基本眞值表 \ref{tab:truth-table} 記住，就像做乘法運算前要先記住乘法口訣那樣。記眞值表時要記住這些組合情況與右側眞值的對應，僅僅簡單地記住「合取：1, 0, 0, 0；析取：1, 1, 1, 0；…」並不是好辦法，甚至可能導致誤解。嘗試記住下列命題：%在表 \ref{truth-table} 中，「♦」上方的每一行，都是直接子公式眞值情況的一個可能的組合。</p>
-<p>\begin{quofh}</p>
+<p>在計算公式的眞值前，先把基本眞值表 2.1 記住，就像做乘法運算前要先記住乘法口訣那樣。記眞值表時要記住這些組合情況與右側眞值的對應，僅僅簡單地記住「合取：1, 0, 0, 0；析取：1, 1, 1, 0；…」並不是好辦法，甚至可能導致誤解。嘗試記住下列命題：</p>
+<blockquote>
 <ol>
 <li>一個否定式是眞的，當且僅當它否定的公式是假的；</li>
 <li>一個合取式是眞的，當且僅當它的合取支都是眞的；</li>
 <li>一個析取式是眞的，當且僅當它的析取支中至少有一個是眞的；</li>
 <li>一個蘊涵式是眞的，當且僅當它的前件是假的或後件是眞的；</li>
-<li>一個等值式是眞的，當且僅當它的兩個直接子公式的眞值相同。<br />
-\end{quofh}</li>
+<li>一個等值式是眞的，當且僅當它的兩個直接子公式的眞值相同。</li>
 </ol>
-<p>由此，可以對應地得岀命題「一個否定式是假的，當且僅當它否定的公式是眞的」等等。讀者應試着把餘下的幾個對應命題找出來，見練習 \ref{exe:01-03}。</p>
-<p>%## 公式眞值的計算</p>
+</blockquote>
+<p>由此，可以對應地得岀命題「一個否定式是假的，當且僅當它否定的公式是眞的」等等。讀者應試着把餘下的幾個對應命題找出來，見練習 2.3。</p>
+<h2 id="公式眞值的計算">公式眞值的計算</h2>
 <p>公式眞值的計算方法分兩類，一是用子公式的給定眞值來計算公式的眞值，二是用公式的眞值表計算公式在各種可能情況下的眞值。</p>
-<p>%\wtable{0.5}{<br />
-%	$<br />
-%	\begin{array}{c|ccc|c|c}<br />
-%	\text{步驟} &amp; 	(p &amp; \rightarrow &amp; \neg q \land r) &amp; \rightarrow &amp; (p \lor r)\<br />
-%	\hline<br />
-%	0 &amp;  ~1 &amp;  &amp; <del>0<del><del>1 &amp; &amp;1</del></del>1  \<br />
-%	1 &amp; &amp; &amp; 1</del>~~~~~~~~ &amp; &amp; ~1 \<br />
-%	2 &amp; &amp; &amp; ~1 &amp; &amp; \<br />
-%	3 &amp; &amp; 1  &amp;   &amp; &amp;  \<br />
-%	4 &amp; &amp; &amp; &amp; 1 &amp;<br />
-%	\end{array}<br />
-%	$<br />
-%}</p>
-<h2 id="以子公式的給定眞值計算">以子公式的給定眞值計算</h2>
+<h3 id="以子公式的給定眞值計算">以子公式的給定眞值計算</h3>
 <p>我們先看如何用命題變號的給定眞值來計算公式的眞值。</p>
-<p>%\wtable{0.5}{<br />
-%	$<br />
-%	\begin{array}{c|ccc|c|c}<br />
-%	\text{步驟} &amp; 	(p &amp; \rightarrow &amp; \neg q \land r) &amp; \rightarrow &amp; (p \lor r)\<br />
-%	\hline<br />
-%	0 &amp;  ~1 &amp;  &amp; <del>0<del><del>1 &amp; &amp;1</del></del>1  \<br />
-%	1 &amp; &amp; &amp; 1</del>~~~~~~~~ &amp; &amp; ~1 \<br />
-%	2 &amp; &amp; &amp; ~1 &amp; &amp; \<br />
-%	3 &amp; &amp; 1  &amp;   &amp; &amp;  \<br />
-%	4 &amp; &amp; &amp; &amp; 1 &amp;<br />
-%	\end{array}<br />
-%	$<br />
-%}<br />
-\begin{examplep}{}<br />
-設 $p$ 的眞值爲 1，$q$ 的眞值爲 0 並且 $r$ 的眞值爲 1. 計算公式 $(p \rightarrow \neg q \land r) \rightarrow (p \lor r)$ 的眞值。</p>
-<pre><code>**解：**依據基本眞值表 \ref{tab:truth-table} 層層運算即可。先根據假設把命題變號的眞值寫在相應的命題變號下方，然後逐層推得結果。
-
-\begin{center}
-    $
-    \begin{array}{c|ccc|c|c}
-    \text{步驟} &amp; 	(p &amp; \rightarrow &amp; \neg q \land r) &amp; \rightarrow &amp; (p \lor r)\\
-    \hline 
-    0 &amp;  ~1 &amp;  &amp; ~~0~~~~1 &amp; &amp;1~~~~1  \\
-    1 &amp; &amp; &amp; 1~~~~~~~~~~ &amp; &amp; ~1 \\
-    2 &amp; &amp; &amp; ~1 &amp; &amp; \\
-    3 &amp; &amp; 1  &amp;   &amp; &amp;  \\
-    4 &amp; &amp; &amp; &amp; 1 &amp;  
-    \end{array}
-    $
-\end{center}
-%	\begin{center}
-%	$
-%	\begin{array}{c|ccc|c|c}
-%\text{步驟} &amp; 	(p &amp; \rightarrow &amp; \neg q \land r) &amp; \rightarrow &amp; (p \lor r)\\
-%	\hline 
-%    0 &amp;  ~1 &amp;  &amp; ~~0~~~~1 &amp; &amp;1~~~~1  \\
-%	1 &amp; &amp; &amp; 1~~~~~~~~~~ &amp; &amp; ~1 \\
-%	2 &amp; &amp; &amp; ~1 &amp; &amp; \\
-%	3 &amp; &amp; 1  &amp;   &amp; &amp;  \\
-%	4 &amp; &amp; &amp; &amp; 1 &amp;  
-%	\end{array}
-%	$
-%\end{center}
-
-%	\begin{equation}
-%				\underbrace{(\underbrace{\underset{1}{p} \underset{\big\uparrow}{\rightarrow} \underbrace{\underbrace{\underset{\big\uparrow}{\neg} \underset{0}{\vphantom{p}q}}_{1} \underset{\big\uparrow}{\land} \underset{0}{\vphantom{p}r}}_{0}}_{0}) \underset{\big\uparrow}{\rightarrow} (\underbrace{\underset{1}{p} \underset{\big\uparrow}{\lor} \underset{0}{\vphantom{p}r}}_{1})}_{0}
-%	\end{equation}
-</code></pre>
-<p>\end{examplep}</p>
+  <div>
+  <div class="dtpcexboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯例 2.25</span>
+  </div>
+  <div class="dtpcexbox">
+  <span style="font-family:SYHei Regular;"><p>設 $p$ 的眞值爲 1，$q$ 的眞值爲 0 並且 $r$ 的眞值爲 1. 計算公式 $(p \rightarrow \neg q \land r) \rightarrow (p \lor r)$ 的眞值。</p>
+<p><bb>解：</bb>依據基本眞值表 2.1 層層運算即可。先根據假設把命題變號的眞值寫在相應的命題變號下方，然後逐層推得結果。</p>
+<p>
+$$
+\begin{array}{c|ccc|c|c}
+\text{步驟} & 	(p & \rightarrow & \neg q \land r) & \rightarrow & (p \lor r)\\
+		\hline 
+		0 &  ~1 &  & ~~0~~~~1 & &1~~~~1  \\
+		1 & & & 1~~~~~~~~~~ & & ~1 \\
+		2 & & & ~1 & & \\
+		3 & & 1  &   & &  \\
+		4 & & & & 1 &  
+\end{array}
+$$
+</p>
+</span>
+  </div>
+  </div>
 <p>一個公式的眞值的計算未必要從它的原子子公式開始——計算可以從它的其他子公式開始。比如，</p>
-<p>\begin{examplep}{}<br />
-設 $\varphi$ 的眞值爲 1，$\psi$ 的眞值爲 0 並且 $\chi$ 的眞值爲 0. 計算公式 $(\varphi \rightarrow \neg \psi \land \chi) \rightarrow (\varphi \lor \chi)$ 的眞值。</p>
-<pre><code>**解：**與例 \ref{ex:truth-value-operation-1} 解法相同，易知其眞值爲 0.
-</code></pre>
-<p>\end{examplep}</p>
-<p>例 \ref{ex:truth-value-operation-1}, \ref{ex:truth-value-operation-2} 使我們明白：要計算出一個公式的眞值，我們只需知道它的所有直接子公式的眞值，而不一定要知道它的所有原子子公式的眞值。其實，要計算出一個公式的眞值，也未必要事先知道它的<strong>所有</strong>直接子公式的眞值。</p>
+<blockquote>
+<p><bb>☯例 2.26</bb><br />
+設 $\varphi$ 的眞值爲 1，$\psi$ 的眞值爲 0 並且 $\chi$ 的眞值爲 0. 計算公式 $(\varphi \rightarrow \neg \psi \land \chi) \rightarrow (\varphi \lor \chi)$ 的眞值。<br />
+<bb>解：</bb>與例 2.25 解法相同，易知其眞值爲 0.</p>
+</blockquote>
+<p>例 2.25, 2.26 使我們明白：要計算出一個公式的眞值，我們只需知道它的所有直接子公式的眞值，而不一定要知道它的所有原子子公式的眞值。其實，要計算出一個公式的眞值，也未必要事先知道它的<strong>所有</strong>直接子公式的眞值。</p>
 <p>\begin{examplep}{}<br />
 設 $\varphi$ 的眞值爲 1 且 $\psi$ 的眞值爲 0. 那麼對任意公式 $\chi$，<br />
 \begin{quofbcolitem}<br />
@@ -2529,7 +2463,7 @@ $\varphi$ &amp; $\psi$ &amp; $\varphi \land \psi$ &amp; $\varphi \lor \psi$ &amp
 1. $\chi \land \psi$ 的眞值爲 0，<br />
 1. $\psi \rightarrow \chi$ 的眞值爲 1.<br />
 \end{quofbcolitem}<br />
-根據（眞值）表 \ref{tab:truth-table}，以上結論是顯然的。<br />
+根據（眞值）表 2.1，以上結論是顯然的。<br />
 \end{examplep}</p>
 <p>\begin{examplep}{}<br />
 設 $\varphi$ 的眞值爲 1 且 $\psi$ 的眞值爲 0. 計算公式 $\varphi \rightarrow(\varphi \rightarrow(\varphi \rightarrow(\varphi \vee(\chi \wedge \xi) \rightarrow \psi)))$ 的眞值。</p>
@@ -2552,9 +2486,9 @@ $\varphi$ &amp; $\psi$ &amp; $\varphi \land \psi$ &amp; $\varphi \lor \psi$ &amp
 <pre><code>**解：**原理與方法與前幾例並無區別。易知 $\chi \wedge \psi$ 眞值爲 0，則 $\chi \wedge \psi \rightarrow \xi$ 眞值爲 1，那麼無論前件眞值爲 1 或 0，公式眞值始終爲 1.
 </code></pre>
 <p>\end{examplep}</p>
-<h2 id="以公式的眞值表計算">以公式的眞值表計算</h2>
+<h3 id="以公式的眞值表計算">以公式的眞值表計算</h3>
 <p>一旦會用子公式的眞值來計算公式的眞值，構造<tt>公式的眞值表</tt>是件很簡單的事——它不過是列出給定公式中的全部命題變號的所有「可能取值組合」，並根據它們計算和列出該公式在每一種可能情況下的眞值。</p>
-<p>對給定公式中的每個命題變號指定一個固定的眞值，這樣指定的結果稱爲這些命題變號的一個「可能取值組合」。若干命題變號的一個<tt>可能取值組合</tt>是從這些命題變號到 ${1,0}$ 的一個函數。因爲每個命題變號的眞值或爲 1 或爲 0，則 $n$ 個命題變號的可能取值組合爲 $2^n$ 個。一個公式的眞值表一定要包含該公式中命題變號的所有可能取值組合。在構造公式 $\varphi$ 的眞值表時，按慣例先在表的左側排出 $\varphi$ 中出現的所有命題變號，然後排列出它們的全部可能取值組合（的值），再把 $\varphi$ 的各個子公式的眞值從簡單到複雜一步步計算出來。</p>
+<p>對給定公式中的每個命題變號指定一個固定的眞值，這樣指定的結果稱爲這些命題變號的一個「可能取值組合」。若干命題變號的一個<tt>可能取值組合</tt>是從這些命題變號到 $\lbrace 1,0\rbrace $ 的一個函數。因爲每個命題變號的眞值或爲 1 或爲 0，則 $n$ 個命題變號的可能取值組合爲 $2^n$ 個。一個公式的眞值表一定要包含該公式中命題變號的所有可能取值組合。在構造公式 $\varphi$ 的眞值表時，按慣例先在表的左側排出 $\varphi$ 中出現的所有命題變號，然後排列出它們的全部可能取值組合（的值），再把 $\varphi$ 的各個子公式的眞值從簡單到複雜一步步計算出來。</p>
 <p>%\wtable{0.7}{<br />
 %%\begin{table}%[htb]<br />
 %%	\begin{center}<br />
@@ -2654,7 +2588,7 @@ $	<br />
 <p>\end{examplep}</p>
 <p>例 \ref{ex:truth-value-operation-7} 有意將公式中符號間的距離加大，以使讀者清楚地看出：每個子公式的眞值都列在該子公式的主聯結詞的下方。特別地，例 \ref{ex:truth-value-operation-7} 中「$\rightarrow$」之下那列眞值，是公式 $(p \vee q) \wedge \neg r  \rightarrow p \wedge (\neg q \vee r)$ 在各種情況下的眞值。我們將一貫地將子公式的眞值列於該子公式的<tt>主聯結詞</tt>之下，但不再加大公式中符號間的距離。從現在起，將只釆用公式眞值表的第二種畫法。</p>
 <p>我們約定：凡談到眞值表中的眞值時，我們用「行」表示該表中從左到右的眞值序列，用「列」表示該表中從上到下的眞值序列。</p>
-<p>\section[若干語義概念的眞值表刻畫]{若干基本語義概念的眞值表刻畫}</p>
+<h1 id="若干基本語義概念的眞值表刻畫">若干基本語義概念的眞值表刻畫</h1>
 <p>這一節裏，我們用眞值表方法介紹和討論一些基本語義概念：重言蘊涵（重言後承）、重言等值、可滿足性、重言式、矛盾式和或然式。我們對這些概念所做的眞值表刻畫，在某些敎科書中就稱爲這些概念的定義。之所以我們不稱這些刻畫爲定義，是因爲這裏的討論不夠嚴格。在下一章中，我們要用眞值指派給出這些概念的嚴格定義。\footnote{嚴格定義見\jieref{sec:taut-value-assign-defnition}。}</p>
 <p>爲了比較和討論不同公式的眞值情況，我們可以把不同的公式放到同一個眞值表中。這樣的眞值表稱爲<tt>聯合眞值表</tt>。在公式 $\varphi_0,&hellip;\varphi_n$ 的聯合眞值表中，我們要列出這些公式的所有原子子公式和它們的可能取值組合（的值），並且根據這些組合計算 $\varphi_0,&hellip;\varphi_n$ 各自的眞值。</p>
 <p>%## 重言蘊涵與重言等值%重言蘊涵（重言後承）與重言等值</p>
@@ -2767,21 +2701,21 @@ $	<br />
 <p>讀者在這裏可能會有這樣一個問題：我們在引言裏曾說過，論說形式的好壞涉及該形式的所有特例，其數量顯然無上界；而這裏說的論說形式的有效性卻只涉及 $2^n$ 個可能的取值組合（假設其中只出現 $n$ 個命題變號）。這兩種說法如何能是「一回事」呢？</p>
 <p>可以這樣來理解這個問題：假定一個論說形式中出現 $n$ 個命題變號，進而該論說形式的眞值表有 $2^n$ 行。這個論說形式的每個特例，都可以看作是以具體命題替換那些命題變號而得到的。替換的都是具體命題，因而它們的眞值都是確定的，對應於 $2^n$ 個可能取值組合中的一個。\footnote{${\prod_{i=1}^{n}} (C_{2}^{1})_i = 2^{n}$.}這樣，我們就把該論說形式的所有特例分成了 $2^n$ 組，而每個特例的前提和結論的眞值情況，都在該論說形式眞值表的某一行中。當討論這個眞值表的任一行時，假如沿用引言中的術語，那麼我們就會說，討論涉及該論說形式的<tt>一組</tt>特例而非<tt>一個</tt>特例；當我們認定眞值表的某一行是給定論說形式的反例時，假如沿用引言中的術語，那麼我們就會說該論說形式有<tt>一組</tt>反例。%</p>
 <h2 id="重言蘊涵">重言蘊涵</h2>
-<p>設 $\varphi_0,&hellip;,\varphi_n$ 和 $\psi$ 爲任意公式。${\varphi_0,&hellip;,\varphi_n }$ <bb>重言蘊涵（tautologically implies）</bb> $\psi$ 當且僅當在 $\varphi_0,&hellip;,\varphi_n$ 與 $\psi$ 的聯合眞值表中，沒有一行是 $\varphi_0,&hellip;,\varphi_n$ 都眞而 $\psi$ 假，亦即在它們的聯合眞值表的每一行中，如果 $\varphi_0,&hellip;,\varphi_n$ 的眞值都是 1，那麼 $\psi$ 的眞值也一定是 1. $\psi$ 是${\varphi_0,&hellip;,\varphi_n }$ 的<bb>重言後承（tautological consequence）</bb>當且僅當 $\varphi_0,&hellip;,\varphi_n$ 重言蘊涵 $\psi$.%（或 $\varphi_0,&hellip;,\varphi_n$） \footnote{${\varphi_0,&hellip;,\varphi_n }$ tautologically implies $\psi$}</p>
+<p>設 $\varphi_0,&hellip;,\varphi_n$ 和 $\psi$ 爲任意公式。$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ <bb>重言蘊涵（tautologically implies）</bb> $\psi$ 當且僅當在 $\varphi_0,&hellip;,\varphi_n$ 與 $\psi$ 的聯合眞值表中，沒有一行是 $\varphi_0,&hellip;,\varphi_n$ 都眞而 $\psi$ 假，亦即在它們的聯合眞值表的每一行中，如果 $\varphi_0,&hellip;,\varphi_n$ 的眞值都是 1，那麼 $\psi$ 的眞值也一定是 1. $\psi$ 是$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ 的<bb>重言後承（tautological consequence）</bb>當且僅當 $\varphi_0,&hellip;,\varphi_n$ 重言蘊涵 $\psi$.%（或 $\varphi_0,&hellip;,\varphi_n$） \footnote{$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ tautologically implies $\psi$}</p>
 <p>%\begin{quofh}<br />
-%1. ${\varphi_0,&hellip;,\varphi_n }$ <bb>重言蘊涵（tautologically implies）</bb> $\psi$（${\varphi_0,&hellip;,\varphi_n }$ tautologically implies $\psi$）當且僅當在 $\varphi_0,&hellip;,\varphi_n$ 與 $\psi$ 的聯合眞值表中，沒有一行是 $\varphi_0,&hellip;,\varphi_n$ 都眞而 $\psi$ 假，亦即在它們的聯合眞值表的每一行中，如果 $\varphi_0,&hellip;,\varphi_n$ 的眞值都是 1，那麼 $\psi$ 的眞值也一定是 1. %（或 $\varphi_0,&hellip;,\varphi_n$）<br />
-%1. $\psi$ 是${\varphi_0,&hellip;,\varphi_n }$ 的<bb>重言後承（tautological consequence）</bb>當且僅當 $\varphi_0,&hellip;,\varphi_n$ 重言蘊涵 $\psi$。%（或 $\varphi_0,&hellip;,\varphi_n$）<br />
+%1. $\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ <bb>重言蘊涵（tautologically implies）</bb> $\psi$（$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ tautologically implies $\psi$）當且僅當在 $\varphi_0,&hellip;,\varphi_n$ 與 $\psi$ 的聯合眞值表中，沒有一行是 $\varphi_0,&hellip;,\varphi_n$ 都眞而 $\psi$ 假，亦即在它們的聯合眞值表的每一行中，如果 $\varphi_0,&hellip;,\varphi_n$ 的眞值都是 1，那麼 $\psi$ 的眞值也一定是 1. %（或 $\varphi_0,&hellip;,\varphi_n$）<br />
+%1. $\psi$ 是$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ 的<bb>重言後承（tautological consequence）</bb>當且僅當 $\varphi_0,&hellip;,\varphi_n$ 重言蘊涵 $\psi$。%（或 $\varphi_0,&hellip;,\varphi_n$）<br />
 %\end{quofh}</p>
 <p>易見，根據有效性和重言蘊涵的定義，下列兩個命題等價：</p>
 <p>\begin{quofh}</p>
 <ol>
-<li>${\varphi_0,&hellip;,\varphi_n }$ 重言蘊涵 $\psi$，</li>
+<li>$\lbrace \varphi_0,&hellip;,\varphi_n \rbrace $ 重言蘊涵 $\psi$，</li>
 <li>以 $\varphi_0,&hellip;,\varphi_n$ 爲前提並以 $\psi$ 爲結論的論說形式是有效的。<br />
 \end{quofh}</li>
 </ol>
 <p>在理論討論中，「重言蘊涵」比「有效論說形式」使用得更多，儘管根據上述等價性，我們知道在命題邏輯部分，它們說的是一回事。\footnote{這裏談到的公式集合都是有窮集合，無窮集合的情況將在\jieref{} 3.3 中討論。在謂詞邏輯部分，垂言蘊涵關係將讓位於邏輯蘊涵關係（重言後承關係將讓位於邏輯後承關係）。}</p>
 <p>\begin{examplep}{}<br />
-${p \rightarrow (q \rightarrow r), p \rightarrow q }$ 重言蘊涵 $p \rightarrow r$，而 $r \rightarrow \neg q$ 則不是 ${p \rightarrow q \lor \neg r, r \land q \rightarrow p }$ 的重言後承。</p>
+$\lbrace p \rightarrow (q \rightarrow r), p \rightarrow q \rbrace $ 重言蘊涵 $p \rightarrow r$，而 $r \rightarrow \neg q$ 則不是 $\lbrace p \rightarrow q \lor \neg r, r \land q \rightarrow p \rbrace $ 的重言後承。</p>
 <pre><code>**解：**分別見例 \ref{ex:tautologically-1} 和例 \ref{ex:tautologically-2} 中的眞值表。
 </code></pre>
 <p>\end{examplep}</p>
@@ -2873,13 +2807,13 @@ $<br />
 </code></pre>
 <p>\end{examplep}</p>
 <h2 id="可滿足性">可滿足性</h2>
-<p>這裏說的<bb>可滿足性（satisfiability）</bb>，就是\jieref{sec:consistency} 中說的語義一致性。設 $\Gamma$ 爲任意有窮的公式集合。$\Gamma$ 是<tt>可滿足</tt>的（satisfiable）當且僅當 $\Gamma$ 中公式的聯合眞值表中<tt>存在某一行</tt>，在該行裏 $\Gamma$ 中的公式的眞值都是 1.  $\Gamma$ 是不可滿足的當且僅當它不是可滿足的。設 $\varphi$ 爲任意公式。$\varphi$ 是<tt>可滿足</tt>的當且僅當 ${\varphi}$ 是可滿足的。$\varphi$ 是不可滿足的當且僅當 ${\varphi}$ 不是可滿足的。</p>
+<p>這裏說的<bb>可滿足性（satisfiability）</bb>，就是\jieref{sec:consistency} 中說的語義一致性。設 $\Gamma$ 爲任意有窮的公式集合。$\Gamma$ 是<tt>可滿足</tt>的（satisfiable）當且僅當 $\Gamma$ 中公式的聯合眞值表中<tt>存在某一行</tt>，在該行裏 $\Gamma$ 中的公式的眞值都是 1.  $\Gamma$ 是不可滿足的當且僅當它不是可滿足的。設 $\varphi$ 爲任意公式。$\varphi$ 是<tt>可滿足</tt>的當且僅當 $\lbrace \varphi\rbrace $ 是可滿足的。$\varphi$ 是不可滿足的當且僅當 $\lbrace \varphi\rbrace $ 不是可滿足的。</p>
 <p>%\begin{quofh}<br />
 %1. 設 $\Gamma$ 爲任意有窮的公式集合。$\Gamma$ 是<tt>可滿足</tt>的（satisfiable）當且僅當 $\Gamma$ 中公式的聯合眞值表中存在某一行，在該行裏 $\Gamma$ 中的公式的眞值都是 1.  $\Gamma$ 是不可滿足的當且僅當它不是可滿足的。<br />
-%1. 設 $\varphi$ 爲任意公式。$\varphi$ 是<tt>可滿足</tt>的當且僅當 ${\varphi}$ 是可滿足的。$\varphi$ 是不可滿足的當且僅當 ${\varphi}$ 不是可滿足的。<br />
+%1. 設 $\varphi$ 爲任意公式。$\varphi$ 是<tt>可滿足</tt>的當且僅當 $\lbrace \varphi\rbrace $ 是可滿足的。$\varphi$ 是不可滿足的當且僅當 $\lbrace \varphi\rbrace $ 不是可滿足的。<br />
 %\end{quofh}</p>
 <p>\begin{examplep}{}<br />
-$\Gamma = {p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, p \lor q }$ 是可滿足的。</p>
+$\Gamma = \lbrace p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, p \lor q \rbrace $ 是可滿足的。</p>
 <pre><code>\begin{center}
     $
     \begin{array}{cc|llc}
@@ -2897,7 +2831,7 @@ $\Gamma = {p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, p \l
 </code></pre>
 <p>\end{examplep}</p>
 <p>\begin{examplep}{}<br />
-$\Gamma = {p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, \neg (p \rightarrow q) }$ 不是可滿足的。</p>
+$\Gamma = \lbrace p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, \neg (p \rightarrow q) \rbrace $ 不是可滿足的。</p>
 <pre><code>\begin{center}
     $
     \begin{array}{cc|lll}
@@ -2915,14 +2849,14 @@ $\Gamma = {p \rightarrow p \land q, \neg p \rightarrow \neg p \land \neg q, \neg
 </code></pre>
 <p>\end{examplep}</p>
 <p>我們簡要地介紹一些關於可滿足性的命題，部分涉及可滿足性與重言蘊涵的關係。這些命題都有簡單的證明，其中一部分會在\jieref{} 3.3 中討論。請讀者思考這些命題成立的理由（見第 \pageref{exe:01-17} 頁習題 \ref{exe:01-17}）。%</p>
-<p>設 $\Gamma = {\varphi_0,&hellip;,\varphi_n}$ 爲任意有窮的公式集，$\varphi$ 爲任意公式。我們有：</p>
+<p>設 $\Gamma = \lbrace \varphi_0,&hellip;,\varphi_n\rbrace $ 爲任意有窮的公式集，$\varphi$ 爲任意公式。我們有：</p>
 <p>\begin{quofh}</p>
 <ol>
-<li>如果 $\Gamma$ 可滿足，那麼對任何公式集 $\Delta$，$\Gamma \cap \Delta$ 也可滿足。\footnote{對所有集合 $X$ 和 $Y$，$X \cap Y = { x: x \in X ~\text{且}~ x \in Y }$，它是包含 $X$ 和 $Y$ 的所有公共元素的集合，稱爲 $X$ 和 $Y$ 的<strong>交（intersection）</strong>。}</li>
-<li>如果 $\Gamma$ 不可滿足，那麼對任何有窮公式集 $\Delta$，$\Gamma \cup \Delta$ 也不可滿足。\footnote{對所有集合 $X$ 和 $Y$，$X \cup Y = { x: x \in X ~\text{或}~ x \in Y }$，它是包含 $X$ 的所有元素和 $Y$ 的所有元素的集合，稱爲 $X$ 和 $Y$ 的<strong>並集（union）</strong>。}</li>
+<li>如果 $\Gamma$ 可滿足，那麼對任何公式集 $\Delta$，$\Gamma \cap \Delta$ 也可滿足。\footnote{對所有集合 $X$ 和 $Y$，$X \cap Y = \lbrace  x: x \in X ~\text{且}~ x \in Y \rbrace $，它是包含 $X$ 和 $Y$ 的所有公共元素的集合，稱爲 $X$ 和 $Y$ 的<strong>交（intersection）</strong>。}</li>
+<li>如果 $\Gamma$ 不可滿足，那麼對任何有窮公式集 $\Delta$，$\Gamma \cup \Delta$ 也不可滿足。\footnote{對所有集合 $X$ 和 $Y$，$X \cup Y = \lbrace  x: x \in X ~\text{或}~ x \in Y \rbrace $，它是包含 $X$ 的所有元素和 $Y$ 的所有元素的集合，稱爲 $X$ 和 $Y$ 的<strong>並集（union）</strong>。}</li>
 <li>設 $\Gamma \subseteq \Delta$，其中 $\Delta$ 是任意有窮公式集。如果 $\Delta$ 可滿足則 $\Gamma$ 可滿足（如果 $\Gamma$ 不可滿足則 $\Delta$ 不可滿足）。\footnote{對所有集合 $X$ 和 $Y$，$X \subseteq Y$ 當且僅當 $X$ 的所有元素都是 $Y$ 的元素，$X \subset Y$ 當且僅當 $X \subseteq Y$ 並且 $Y \nsubseteq X$（並非 $Y \subseteq X$）。當 $X \subseteq Y$，我們稱 $X$ 是 $Y$ 的<strong>子集（subset）</strong>，也稱 $Y$ 是 $X$ 的<strong>擴集（superset）<strong>或</strong>擴充（extension）</strong>。當 $X \subset Y$，我們稱 $X$ 是 $Y$ 的<strong>眞子集（proper subset）</strong>，也稱 $Y$ 是 $X$ 的眞擴集或眞擴充。注意：「$X \subseteq Y$」表達的是個命題，說的是 $X$ 和 $Y$ 之間的某種關係；而「$X \cap Y$」「$X \cup Y$」和下面的「$X - Y$」不表達命題，只表示 $X$ 和 $Y$ 在某些運算下的值——集合。}</li>
-<li>$\Gamma \cup {\neg \varphi}$不可滿足當且僅當 $\Gamma$ 重言蘊涵 $\varphi$。</li>
-<li>對任意 $i \leqslant n$，$\Gamma$ 不可滿足當且僅當 $\Gamma - {\psi_i}$ 重言蘊涵 $\neg \psi_i$。\footnote{對所有集合 $X$ 和 $Y$，$X - Y = { x: x \in X ~\text{且}~ x \notin Y }$，它是包含 $X$ 的所有元素但不包含 $Y$ 的任何元素的集合，稱爲 $X$ 和 $Y$ 的<strong>差（difference）</strong>，也稱爲 $Y$ 在 $X$ 中的<strong>相對補（relative complement of  $Y$ in $X$）</strong>。}</li>
+<li>$\Gamma \cup \lbrace \neg \varphi\rbrace $不可滿足當且僅當 $\Gamma$ 重言蘊涵 $\varphi$。</li>
+<li>對任意 $i \leqslant n$，$\Gamma$ 不可滿足當且僅當 $\Gamma - \lbrace \psi_i\rbrace $ 重言蘊涵 $\neg \psi_i$。\footnote{對所有集合 $X$ 和 $Y$，$X - Y = \lbrace  x: x \in X ~\text{且}~ x \notin Y \rbrace $，它是包含 $X$ 的所有元素但不包含 $Y$ 的任何元素的集合，稱爲 $X$ 和 $Y$ 的<strong>差（difference）</strong>，也稱爲 $Y$ 在 $X$ 中的<strong>相對補（relative complement of  $Y$ in $X$）</strong>。}</li>
 <li>如果 $\Gamma$ 不可滿足，那麼 $\Gamma$ 重言蘊涵 $\varphi$。</li>
 <li>如果 $\neg \varphi$ 不可滿足，那麼 $\Gamma$ 重言蘊涵 $\varphi$。</li>
 <li>如果 $\Gamma$ 重言蘊涵 $\varphi$，並且 $\Gamma$ 可滿足，那麼 $\varphi$ 也可滿足。</li>
@@ -3019,7 +2953,7 @@ $p \rightarrow q \land p$ 是或然式。</p>
 $\left(\cdots\left(\varphi_{0} \vee \varphi_{1}\right) \vee \cdots \vee \varphi_{n-1}\right) \vee \varphi_{n}$。在極限情況  $n=0$  時，$\varphi_{0} \wedge \cdots \wedge \varphi_{n}=<br />
 \varphi_{0} \vee \cdots \vee \varphi_{n}=\varphi_{0}$。這就是說，當  $\varphi_{0} \wedge \cdots \wedge \varphi_{n}$  或  $\varphi_{0} \vee \cdots \vee \varphi_{n}$ 在討論中出<br />
 現而我們又要考慮主聯結詞時，我們可以按「左結合」的原則恢復括號。</p>
-<p>設 $\varphi, \psi, \varphi_{0},&hellip;,\varphi_{n}$ 爲任意公式且 $\Gamma = {\varphi_{0},&hellip;,\varphi_{n}}$。請思考下列命題成立的理由（見 \pageref{exe:01-18} 頁習題 \ref{exe:01-18}）：%</p>
+<p>設 $\varphi, \psi, \varphi_{0},&hellip;,\varphi_{n}$ 爲任意公式且 $\Gamma = \lbrace \varphi_{0},&hellip;,\varphi_{n}\rbrace $。請思考下列命題成立的理由（見 \pageref{exe:01-18} 頁習題 \ref{exe:01-18}）：%</p>
 <p>\begin{quofh}</p>
 <ol>
 <li>$\varphi$ 重言蘊涵 $\psi$ 當且僅當 $\varphi \rightarrow \psi$ 是重言式；</li>
@@ -3029,9 +2963,9 @@ $\left(\cdots\left(\varphi_{0} \vee \varphi_{1}\right) \vee \cdots \vee \varphi_
 <li>如果 $\varphi$ 是重言式，那麼 $\Gamma$ 重言蘊涵 $\varphi$；</li>
 <li>$\Gamma$ 可滿足當且僅當 $\varphi_{0} \land \cdots \land \varphi_{n}$ 或者是或然式或者是重言式；</li>
 <li>$\Gamma$ 不可滿足當且僅當 $\varphi_{0} \land \cdots \land \varphi_{n}$ 或者是或然式或者是矛盾式。</li>
-<li>如果 $\varphi$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma \cup {\varphi}$ 是可滿足的；</li>
-<li>如果 $\varphi_i (i \leqslant n)$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma - {\varphi_i}$ 是可滿足的；</li>
-<li>如果 $\varphi$ 是矛盾式，那麼 $\Gamma \cup {\varphi}$ 是不可滿足的；</li>
+<li>如果 $\varphi$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma \cup \lbrace \varphi\rbrace $ 是可滿足的；</li>
+<li>如果 $\varphi_i (i \leqslant n)$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma - \lbrace \varphi_i\rbrace $ 是可滿足的；</li>
+<li>如果 $\varphi$ 是矛盾式，那麼 $\Gamma \cup \lbrace \varphi\rbrace $ 是不可滿足的；</li>
 <li>如果 $\varphi_i (i \leqslant n)$ 是矛盾式，那麼 $\Gamma$ 是不可滿足的。<br />
 \end{quofh}</li>
 </ol>
@@ -3300,7 +3234,7 @@ $</li>
 <li>說明怎樣用簡化眞值表方法證明一個公式重言蘊涵另一個公式，或重言等值於另一個公式<br />
 \end{exercise}</li>
 </ol>
-<p>在以下習題中，對所有公式 $\varphi$ 和 $\psi$，我們以 $\varphi \vDash_0 \psi$ 表示 $\varphi$ 重言蘊涵 $\psi$，以 $\varphi_0,&hellip;,\varphi_n$ 表示 ${\varphi_0,&hellip;,\varphi_n}$ 重言蘊涵 $\psi$。</p>
+<p>在以下習題中，對所有公式 $\varphi$ 和 $\psi$，我們以 $\varphi \vDash_0 \psi$ 表示 $\varphi$ 重言蘊涵 $\psi$，以 $\varphi_0,&hellip;,\varphi_n$ 表示 $\lbrace \varphi_0,&hellip;,\varphi_n\rbrace $ 重言蘊涵 $\psi$。</p>
 <p>\begin{exercisecolitem}{設 $\varphi, \psi, \chi$ 爲任意公式。用（簡化）眞值表說明下列命題都成立}</p>
 <ol>
 <li>$ \varphi \vDash_{0} \varphi $</li>
@@ -3387,19 +3321,19 @@ $</li>
 <li>$(\varphi \leftrightarrow \psi) \rightarrow \neg \varphi \wedge \neg \psi$<br />
 \end{exercisecolitem}</li>
 </ol>
-<p>\begin{exercise}{設 $\Gamma = {\varphi_0,&hellip;,\varphi_n}$ 爲任意的有窮公式集，$\varphi$ 爲任意公式。給出下列命題成立的理由}</p>
+<p>\begin{exercise}{設 $\Gamma = \lbrace \varphi_0,&hellip;,\varphi_n\rbrace $ 爲任意的有窮公式集，$\varphi$ 爲任意公式。給出下列命題成立的理由}</p>
 <ol>
 <li>如果 $\Gamma$ 可滿足，那麼對任何公式集 $\Delta$，$\Gamma \cap \Delta$也可滿足；</li>
 <li>如果 $\Gamma$ 不可滿足，那麼對任何有窮公式集 $\Delta$，$\Gamma \cup \Delta$也不可滿足；</li>
-<li>$\Gamma \cup {\neg \varphi }$ 不可滿足當且僅當 $\Gamma$ 重言蘊涵 $\varphi$；</li>
-<li>對任意 $i \leqslant n$，$\Gamma$ 不可滿足當且僅當 $\Gamma - {\psi_i }$ 重言蘊涵$\neg \psi_i$；</li>
+<li>$\Gamma \cup \lbrace \neg \varphi \rbrace $ 不可滿足當且僅當 $\Gamma$ 重言蘊涵 $\varphi$；</li>
+<li>對任意 $i \leqslant n$，$\Gamma$ 不可滿足當且僅當 $\Gamma - \lbrace \psi_i \rbrace $ 重言蘊涵$\neg \psi_i$；</li>
 <li>如果 $\Gamma$ 不可滿足，那麼 $\Gamma$ 重言蘊涵 $\varphi$；</li>
 <li>如果 $\neg \varphi$ 不可滿足，那麼 $\Gamma$ 重言蘊涵 $\varphi$；</li>
 <li>如果 $\Gamma$ 重言蘊涵 $\varphi$，並且 $\Gamma$ 可滿足，那麼 $\varphi$ 也可滿足；</li>
 <li>如果 $\Gamma$ 重言蘊涵 $\varphi$ 並且 $\Gamma$ 重言蘊涵 $\neg \varphi$，那麼 $\Gamma$ 不可滿足。<br />
 \end{exercise}</li>
 </ol>
-<p>\begin{exercise}{設 $\varphi, \psi, \varphi_0,&hellip;,\varphi_n$ 爲任意公式且 $\Gamma = {\varphi_0,&hellip;,\varphi_n}$。給出下列命題成立的理由}</p>
+<p>\begin{exercise}{設 $\varphi, \psi, \varphi_0,&hellip;,\varphi_n$ 爲任意公式且 $\Gamma = \lbrace \varphi_0,&hellip;,\varphi_n\rbrace $。給出下列命題成立的理由}</p>
 <ol>
 <li>$\varphi$ 重言蘊涵 $\psi$ 當且僅當 $\varphi \rightarrow \psi$ 是重言式；</li>
 <li>$\varphi$ 重言等值於 $\psi$ 當且僅當 $\varphi \leftrightarrow \psi$ 是重言式，當且僅當 $\psi \rightarrow \varphi$ 與 $\varphi \rightarrow \psi$ 都是重言式；</li>
@@ -3408,9 +3342,9 @@ $</li>
 <li>如果 $\varphi$ 是重言式，那麼 $\Gamma$ 重言蘊涵 $\varphi$；</li>
 <li>$\Gamma$ 可滿足當且僅當 $\varphi_0 \land \cdots \land \varphi_n$ 或者是或然式或者是重言式；</li>
 <li>$\Gamma$ 不可滿足當且僅當  $\varphi_0 \land \cdots \land \varphi_n$ 是矛盾式；</li>
-<li>如果 $\varphi$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma \cup  {\varphi }$ 是可滿足的；</li>
-<li>如果 $\varphi_i (i \leqslant n)$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma - {\varphi_i }$ 是可滿足的；</li>
-<li>如果 $\varphi$ 是矛盾式，那麼 $\Gamma \cup  {\varphi }$ 是不可滿足的；</li>
+<li>如果 $\varphi$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma \cup  \lbrace \varphi \rbrace $ 是可滿足的；</li>
+<li>如果 $\varphi_i (i \leqslant n)$ 是重言式，那麼 $\Gamma$ 是可滿足的當且僅當 $\Gamma - \lbrace \varphi_i \rbrace $ 是可滿足的；</li>
+<li>如果 $\varphi$ 是矛盾式，那麼 $\Gamma \cup  \lbrace \varphi \rbrace $ 是不可滿足的；</li>
 <li>如果 $\varphi_i (i \leqslant n)$ 是矛盾式，那麼 $\Gamma$ 是不可滿足的。<br />
 \end{exercise}</li>
 </ol>
@@ -3447,7 +3381,7 @@ $</li>
 \end{exercisecolitem}</li>
 </ol>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, September 6, 2020, 01:26:11 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Sunday, September 6, 2020, 13:23:07 by 王小花.</p>
     </article>
     
     <script>
@@ -3974,10 +3908,19 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#語法和語義">語法和語義</a></li>
       </ul>
     </li>
-    <li><a href="#眞值表和眞值的計算">眞值表和眞值的計算</a>
+    <li><a href="#基本眞值表和眞值的計算">基本眞值表和眞值的計算</a>
       <ul>
-        <li><a href="#以子公式的給定眞值計算">以子公式的給定眞值計算</a></li>
-        <li><a href="#以公式的眞值表計算">以公式的眞值表計算</a></li>
+        <li><a href="#聯結詞的語義解釋">聯結詞的語義解釋</a></li>
+        <li><a href="#公式眞值的計算">公式眞值的計算</a>
+          <ul>
+            <li><a href="#以子公式的給定眞值計算">以子公式的給定眞值計算</a></li>
+            <li><a href="#以公式的眞值表計算">以公式的眞值表計算</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#若干基本語義概念的眞值表刻畫">若干基本語義概念的眞值表刻畫</a>
+      <ul>
         <li><a href="#論說形式的有效性">論說形式的有效性</a></li>
         <li><a href="#重言蘊涵">重言蘊涵</a></li>
         <li><a href="#重言等值">重言等值</a></li>
