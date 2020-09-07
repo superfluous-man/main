@@ -1201,7 +1201,7 @@
 <meta name="keywords" content="logic,lecture">
 
 <meta name="created" content="2020-09-01T05:38:22&#43;0800">
-<meta name="modified" content="2020-09-07T18:42:42&#43;0800">
+<meta name="modified" content="2020-09-07T22:02:17&#43;0800">
 <meta property="article:published_time" content="2020-09-01T05:38:22&#43;0800">
 
 <meta name="author" content="李二狗">
@@ -1248,7 +1248,7 @@
     "@type": "WebPage",
     "headline": "第 03 章 PL 概念的嚴格刻畫",
     "datePublished": "2020-09-01T05:38:22+08:00",
-    "dateModified": "2020-09-07T18:42:42+08:00",
+    "dateModified": "2020-09-07T22:02:17+08:00",
     "url" : "https://mengxianjun.org/books/logic/ch03/",
     "description": "The material in this chapter is an introduction to basic naive set theory. Sets, Relations, Functions, The Size of Sets.",
     "keywords": ["logic","lecture"],
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 7, 2020 </time>
   
-&middot; 🔢 31504 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 63 min read</span>
+&middot; 🔢 30849 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 62 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1819,6 +1819,7 @@ if (!doNotTrack) {
         <li><a href="#具有函數完全性的幾組眞值函數聯結詞">具有函數完全性的幾組眞值函數聯結詞</a></li>
       </ul>
     </li>
+    <li><a href="#本章習題">本章習題</a></li>
   </ul>
 </nav>
   </div>
@@ -1875,7 +1876,7 @@ if (!doNotTrack) {
 <p><tt>離開了證明就沒有當代邏輯</tt>。讀者從這一章起開始學習寫證明。無論讀者原來對證明是否陌生，也無論讀者是否認爲證明全不足道，若要想眞懂點邏輯而不只是侃點邏輯，那就不能繞過一個個定理及其證明。</p>
 <h1 id="眞值指派和公式的眞值">眞值指派和公式的眞值</h1>
 <h2 id="對象語言裏的符號和公式">對象語言裏的符號和公式</h2>
-<p>邏輯學家們常喜歡不把對象語言明明白白地寫下來，而只是用我們熟悉的語言來描述它們。在§2.3.0（P.79）中介紹 $\mathscr{L}_0$-符號時，我們說 $\mathscr{L}_0$-符號有命題變號 $p_0, p_1,\cdots$ 和聯結詞 $\neg, \land, \lor, \rightarrow, \leftrightarrow$ 等。這並不等於說，對象語言裏的命題變號看上去都是某種字體的\Z{英}文字母表中第 16 個字母的小寫形式，而且還有自然數下標。對象語言的命題變號到底什麼樣不是我們關心的問題，而這個語言中是否有表達自然數的符號更不是我們關心的問題——我們只是用<bb>我們的</bb>語言符號來<tt>表示</tt>那些命題變號，只是在<bb>我們的</bb>語言中把它們排成這樣一個序列。類似地，對象語言中的否定號、蘊涵號是什麼樣子之類的問題都不是我們關心的問題。我們只是用 $\neg$ 和 $\rightarrow$ 等分別<tt>表示</tt>它們。</p>
+<p>邏輯學家們常喜歡不把對象語言明明白白地寫下來，而只是用我們熟悉的語言來描述它們。在§2.3.0（P.79）中介紹 $\mathscr{L}_0$-符號時，我們說 $\mathscr{L}_0$-符號有命題變號 $p_0, p_1,\cdots$ 和聯結詞 $\neg, \land, \lor, \rightarrow, \leftrightarrow$ 等。這並不等於說，對象語言裏的命題變號看上去都是某種字體的<z>英</z>文字母表中第 16 個字母的小寫形式，而且還有自然數下標。對象語言的命題變號到底什麼樣不是我們關心的問題，而這個語言中是否有表達自然數的符號更不是我們關心的問題——我們只是用<bb>我們的</bb>語言符號來<tt>表示</tt>那些命題變號，只是在<bb>我們的</bb>語言中把它們排成這樣一個序列。類似地，對象語言中的否定號、蘊涵號是什麼樣子之類的問題都不是我們關心的問題。我們只是用 $\neg$ 和 $\rightarrow$ 等分別<tt>表示</tt>它們。</p>
 <p>雖然我們熟悉的語言都有文字符號，但畢竟不是所有的語言都一定要有文字符號。我們至少可以想像：在某個遙遠的與世隔絕的地方，生活着一個非常原始的部落，這個部落的人們還沒有發明文字語言，他們之間的交流只是通過口頭語言、動作和表情等進行。如果我們要學習、談論或研究他們的語言，那麼我們就是把他們的語言當作對象語言，因而自然地不能強求對象語言必須有文字符號。明白了這一點，即使我們使用的所有符號都是元語言符號也沒有什麼難以理解的。</p>
 <p>我們把 $\mathscr{L}_0$ 的所有命題變號的集合記作 $\mathbf{Pr}$，並把命題變號依下標排出的序 $p_0, p_1, p_2,\cdots$ 稱爲 $\mathbf{Pr}$ 上的（或命題變號的）「字典順序」或「字母表」。</p>
 <h2 id="賦值眞滿足關係">賦值、眞、滿足關係</h2>
@@ -1930,7 +1931,7 @@ if (!doNotTrack) {
 <p>由上述定義可知下列等值式成立：</p>
 <blockquote>
 <ol>
-<li>$\sigma \vDash \varphi$ 當且僅當 $\varphi^\sigma = 1;$（「$\vDash$」讀作 &ldquo;double-turnstile&rdquo;.）</li>
+<li>$\sigma \vDash \varphi$ 當且僅當 $\varphi^\sigma = 1;$ （「$\vDash$」讀作 &ldquo;double-turnstile&rdquo;.）</li>
 <li>$\sigma \nvDash \varphi$ 當且僅當 $\varphi^\sigma = 0;$</li>
 <li>$\sigma \vDash \Gamma$ 當且僅當對所有 $\varphi \in \Gamma, \sigma \vDash \varphi;$</li>
 <li>$\sigma \nvDash \Gamma$ 當且僅當對某些 $\varphi \in \Gamma, \sigma \nvDash \varphi.$</li>
@@ -2005,7 +2006,7 @@ if (!doNotTrack) {
   </div>
   </div>
 <blockquote>
-<p><bb>命題 3.2 之證明：</bb>令 $\sigma$ 爲任意眞值指派，並設 $\sigma \vDash \Gamma \cup \Delta.$ 根據滿足的定義，對所有的 $\varphi \in \Gamma \cup \Delta$ 都有 $\sigma \vDash \varphi$，因而對所有的 $\varphi \in \Gamma$ 都有 $\sigma \vDash \varphi$，並且對所有的 $\varphi \in \Delta$ 都有 $\sigma \vDash \varphi.$ 所以（i）$\sigma \vDash \Gamma$，（ii）$\sigma \vDash \Delta.$ 令 $i \leqslant n.$ 根據題設，$\Delta \vDash_{0} \varphi_i;$再根據（ii）和重言蘊涵的定義， $\sigma \vDash \varphi_i.$ 因爲這對 $i = 0,\cdots,n$ 都成立，所以由（i）和滿足定義得到 $\sigma \vDash \Gamma \cup \lbrace \varphi_0,\cdots,\varphi_n\rbrace$，再運用題設和重言蘊涵的定義，我們得到 $\sigma \vDash \psi.$ 所以，由重言蘊涵的定義得知 $\Gamma \cup \Delta \vDash_{0} \psi .$ ▗</p>
+<p><bb>命題 3.2 之證明：</bb>令 $\sigma$ 爲任意眞值指派，並設 $\sigma \vDash \Gamma \cup \Delta.$ 根據滿足的定義，對所有的 $\varphi \in \Gamma \cup \Delta$ 都有 $\sigma \vDash \varphi$，因而對所有的 $\varphi \in \Gamma$ 都有 $\sigma \vDash \varphi$，並且對所有的 $\varphi \in \Delta$ 都有 $\sigma \vDash \varphi.$ 所以（i）$\sigma \vDash \Gamma$，（ii）$\sigma \vDash \Delta.$ 令 $i \leqslant n.$ 根據題設，$\Delta \vDash_{0} \varphi_i;$ 再根據（ii）和重言蘊涵的定義， $\sigma \vDash \varphi_i.$ 因爲這對 $i = 0,\cdots,n$ 都成立，所以由（i）和滿足定義得到 $\sigma \vDash \Gamma \cup \lbrace \varphi_0,\cdots,\varphi_n\rbrace$，再運用題設和重言蘊涵的定義，我們得到 $\sigma \vDash \psi.$ 所以，由重言蘊涵的定義得知 $\Gamma \cup \Delta \vDash_{0} \psi .$ ▗</p>
 </blockquote>
 <h2 id="重言等值">重言等值</h2>
 <p>在§2.5.2（P.87）中，任意公式 $\varphi$ 與 $\psi$ <bb>重言等值</bb>（tautologically equivalent） 當且僅當在 $\varphi$ 與 $\psi$ 聯合眞值表的<tt>任意一行</tt>中，$\varphi$ 與 $\psi$ 有同樣的眞值。其賦值視角的定義如下：</p>
@@ -2017,7 +2018,7 @@ if (!doNotTrack) {
   <span style="font-family:SYHei Regular;">$\mathscr{L}_{0}$-公式 $\varphi$ 與 $\psi$ 重言等值當且僅當對每個眞值指派 $\sigma$，$\varphi^\sigma = \psi^\sigma.$</span>
   </div>
   </div>
-<p>易見：如果 $\varphi$ 與 $\psi$ 重言等值，那麼對每個眞值指派 $\sigma$，$\sigma \vDash \varphi$ 當且僅當 $\sigma \vDash \psi;$反之亦然。</p>
+<p>易見：如果 $\varphi$ 與 $\psi$ 重言等值，那麼對每個眞值指派 $\sigma$，$\sigma \vDash \varphi$ 當且僅當 $\sigma \vDash \psi;$ 反之亦然。</p>
 <blockquote>
 <p><bb>例 3.2</bb><br />
 對任意公式 $\varphi$ 和 $\psi$，$\varphi \rightarrow \psi$ 與 $\neg\varphi \lor \psi$ 重言等值。<br />
@@ -2025,7 +2026,7 @@ if (!doNotTrack) {
 </blockquote>
 <p><bb>例 3.3</bb><br />
 對任意公式 $\varphi$ 和 $\psi$，$\varphi \leftrightarrow \psi$ 與 $(\varphi \land \psi) \lor (\neg\varphi \land \neg\psi)$ 重言等值。<br />
-<bb>證明：</bb>令 $\sigma$ 爲任意眞值指派。根據眞理定義，$\sigma \vDash \varphi \leftrightarrow \psi$ 當且僅當：或者 $\varphi^\sigma = \psi^\sigma = 1$，或者 $\varphi^\sigma = \psi^\sigma = 0;$當且僅當 $\sigma \vDash \varphi$ 且 $\sigma \vDash \psi$，或者 $\sigma \nvDash \varphi$ 且 $\sigma \nvDash \psi.$ 於是由眞理定義得到</p>
+<bb>證明：</bb>令 $\sigma$ 爲任意眞值指派。根據眞理定義，$\sigma \vDash \varphi \leftrightarrow \psi$ 當且僅當：或者 $\varphi^\sigma = \psi^\sigma = 1$，或者 $\varphi^\sigma = \psi^\sigma = 0;$ 當且僅當 $\sigma \vDash \varphi$ 且 $\sigma \vDash \psi$，或者 $\sigma \nvDash \varphi$ 且 $\sigma \nvDash \psi.$ 於是由眞理定義得到</p>
 <p>
 $$
 \begin{array}{rcl}
@@ -2058,7 +2059,7 @@ $$
 <p>設 $\varphi \vDash_{0} \psi$ 且 $\psi \vDash_{0} \varphi.$ 根據此假設和重言蘊涵的定義，</p>
 <p>（i）對每個眞值指派 $\sigma_1$，如果 $\sigma_1 \vDash \varphi$ 則 $\sigma_1 \vDash \psi.$</p>
 <p>（ii）對每個眞值指派 $\sigma_2$，如果 $\sigma_2 \vDash \psi$ 則 $\sigma_2 \vDash \varphi.$</p>
-<p>令 $\sigma$ 爲任意眞值指派。由（i）知：如果如果 $\sigma \vDash \varphi$ 則 $\sigma \vDash \psi;$由（ii）知：如果 $\sigma \vDash \psi$ 則 $\sigma \vDash \varphi.$ 從而 $\sigma \vDash \varphi$ 當且僅當 $\sigma \vDash \psi.$ 根據重言等值的定義，$\varphi$ 與 $\psi$ 重言等值。▗</p>
+<p>令 $\sigma$ 爲任意眞值指派。由（i）知：如果如果 $\sigma \vDash \varphi$ 則 $\sigma \vDash \psi;$ 由（ii）知：如果 $\sigma \vDash \psi$ 則 $\sigma \vDash \varphi.$ 從而 $\sigma \vDash \varphi$ 當且僅當 $\sigma \vDash \psi.$ 根據重言等值的定義，$\varphi$ 與 $\psi$ 重言等值。▗</p>
 <h2 id="可滿足性">可滿足性</h2>
 <p>在§2.5.3（P.88）中，從聯合眞值表角度看，任意有窮公式集 $\Gamma$ <bb>可滿足</bb>（satisfiable）當且僅當 $\Gamma$ 中公式的聯合眞值表中<tt>存在某一行</tt>，在該行裏 $\Gamma$ 中的公式的眞值都是 1. 下面我們從賦值與滿足出發，重新嚴格刻畫重言蘊涵。</p>
   <div>
@@ -2066,7 +2067,7 @@ $$
   	<span style="font-family:SYHei Heavy;">☯定義 3.5【可滿足】</span>
   </div>
   <div class="dtpcbox">
-  <span style="font-family:SYHei Regular;">令 $\Gamma$ 爲任意公式集（可以是無窮集），$\varphi$ 爲任意 $\mathscr{L}_{0}$-公式。$\Gamma$ 是可滿足的當且僅當<tt>存在一個</tt>眞值指派 $\sigma$ 使得 $\sigma \vDash \Gamma;$$\varphi$ 是可滿足的當且僅當 $\lbrace \varphi\rbrace$ 是可滿足的。$\Gamma$（或 $\varphi$）是不可滿足的當且僅當它不是可滿足的。</span>
+  <span style="font-family:SYHei Regular;">令 $\Gamma$ 爲任意公式集（可以是無窮集），$\varphi$ 爲任意 $\mathscr{L}_{0}$-公式。$\Gamma$ 是可滿足的當且僅當<tt>存在一個</tt>眞值指派 $\sigma$ 使得 $\sigma \vDash \Gamma;$ $\varphi$ 是可滿足的當且僅當 $\lbrace \varphi\rbrace$ 是可滿足的。$\Gamma$（或 $\varphi$）是不可滿足的當且僅當它不是可滿足的。</span>
   </div>
   </div>
 <blockquote>
@@ -2078,10 +2079,10 @@ $$
 <p>（i） $\sigma(p)=\sigma(r)=\sigma(s)=\sigma(r^{\prime})=1$</p>
 <p>（ii）$\sigma(q)=\sigma(s^{\prime})=0$</p>
 <p>（iii）對所有與 $p,  q,  r,  s, r^{\prime}$， $s^{\prime}$  不同的命題變號  $p^{\prime}$， $\sigma(p^{\prime})=0.$</p>
-<p>由眞理定義和（i）知，$\sigma \vDash p \vee q$ 且 $\sigma \vDash r \wedge s.$ 類似地， $\sigma \vDash r \wedge r^{\prime}$ 進而 $\sigma \vDash p \rightarrow r \wedge r^{\prime}.$ 由眞理定義和（i）知 $\sigma \not=\neg s$， 並由（ii）知  $\sigma \vDash \neg q$，進而  $\sigma \nvDash \neg q \rightarrow \neg s;$再由（ii）知 $\sigma \nvDash s^{\prime}.$ 所以 $ \sigma \vDash s^{\prime} \leftrightarrow(\neg q \rightarrow \neg s).$</p>
+<p>由眞理定義和（i）知，$\sigma \vDash p \vee q$ 且 $\sigma \vDash r \wedge s.$ 類似地， $\sigma \vDash r \wedge r^{\prime}$ 進而 $\sigma \vDash p \rightarrow r \wedge r^{\prime}.$ 由眞理定義和（i）知 $\sigma \not=\neg s$， 並由（ii）知  $\sigma \vDash \neg q$，進而  $\sigma \nvDash \neg q \rightarrow \neg s;$ 再由（ii）知 $\sigma \nvDash s^{\prime}.$ 所以 $ \sigma \vDash s^{\prime} \leftrightarrow(\neg q \rightarrow \neg s).$</p>
 <p>綜上所述， $\sigma \vDash \Gamma.$ ▗</p>
 <p><bb>例 3.5</bb><br />
-設 $q_{0}, q_{1},\cdots$ 爲任意命題變號，滿足對所有 $i, j \geqslant 0$，如果 $i \neq j$ 則 $q_{i} \neq q_{j};$並設 $\Gamma=\left\lbrace q_{2k} \rightarrow \neg q_{2k+1}: k \geqslant 0\right\rbrace$ 且 $\Delta=\left\lbrace \neg q_{2k+1} \rightarrow q_{2k+2}: k \geqslant 0\right\rbrace$。我們有：$\left\lbrace q_{0}\right\rbrace \cup \Gamma \cup \Delta$ 可滿足。</p>
+設 $q_{0}, q_{1},\cdots$ 爲任意命題變號，滿足對所有 $i, j \geqslant 0$，如果 $i \neq j$ 則 $q_{i} \neq q_{j};$ 並設 $\Gamma=\left\lbrace q_{2k} \rightarrow \neg q_{2k+1}: k \geqslant 0\right\rbrace$ 且 $\Delta=\left\lbrace \neg q_{2k+1} \rightarrow q_{2k+2}: k \geqslant 0\right\rbrace$。我們有：$\left\lbrace q_{0}\right\rbrace \cup \Gamma \cup \Delta$ 可滿足。</p>
 <p><bb>證明：</bb>令 $\sigma$ 爲下列眞值指派：對每個命題變號 $p$，</p>
 <p>
 	$$
@@ -2182,7 +2183,7 @@ $$
 <li>如果 $\varphi$ 是矛盾式或者 $\psi$ 是重言式，那麼 $\varphi \rightarrow \psi$ 是重言式；但逆命題不成立。<br />
 <bb>證明</bb>：由眞理定義易見，如果 $\varphi$ 是矛盾式則 $\varphi \rightarrow \psi$  是重言式，並且如果 $\psi$ 是重言式則 $\varphi \rightarrow \psi$ 也是重言式。所以，如果 $\varphi$ 是矛盾式或者 $\psi$ 是重言式，那麼 $\varphi \rightarrow \psi$ 是重言式。逆命題不成立：令 $\varphi=\psi=p.$ 顯然，$\varphi \rightarrow \psi$ 是重言式，但 $\varphi$ 不是矛盾式， $\psi$ 也不是重言式。▗</li>
 <li>$\varphi \leftrightarrow \psi$ 是重言式當且僅當 $\varphi \rightarrow \psi$ 和 $\psi \rightarrow \varphi$ 都是重言式。<br />
-<bb>證明</bb>：設 $\varphi \leftrightarrow \psi$ 是重言式。對每個眞值指派 $\sigma$，如果 $\sigma \vDash \varphi$，那麼根據假設和眞理定義， $\sigma \vDash \psi.$ 所以，$\varphi \rightarrow \psi$ 是重言式。同理可證，$\psi \rightarrow \varphi$ 也是重言式。另一方面，設 $\varphi \rightarrow \psi$ 和 $\psi \rightarrow \varphi$ 都是重言式。令 $\sigma$ 爲任意眞值指派。根據假設和眞理定義，如果 $\sigma \vDash \varphi$ 則 $\sigma \vDash \psi$，並且如果 $\sigma \nvDash \varphi$ 則 $\sigma \nvDash \psi;$於是有 $\varphi^\sigma = \psi^\sigma$，再由眞理定義得到 $\varphi \leftrightarrow \psi.$ 所以，$\varphi \leftrightarrow \psi$ 是重言式。 ▗</li>
+<bb>證明</bb>：設 $\varphi \leftrightarrow \psi$ 是重言式。對每個眞值指派 $\sigma$，如果 $\sigma \vDash \varphi$，那麼根據假設和眞理定義， $\sigma \vDash \psi.$ 所以，$\varphi \rightarrow \psi$ 是重言式。同理可證，$\psi \rightarrow \varphi$ 也是重言式。另一方面，設 $\varphi \rightarrow \psi$ 和 $\psi \rightarrow \varphi$ 都是重言式。令 $\sigma$ 爲任意眞值指派。根據假設和眞理定義，如果 $\sigma \vDash \varphi$ 則 $\sigma \vDash \psi$，並且如果 $\sigma \nvDash \varphi$ 則 $\sigma \nvDash \psi;$ 於是有 $\varphi^\sigma = \psi^\sigma$，再由眞理定義得到 $\varphi \leftrightarrow \psi.$ 所以，$\varphi \leftrightarrow \psi$ 是重言式。 ▗</li>
 <li>如果 $\varphi \leftrightarrow \psi$ 是重言式，那麼，$\varphi$ 是重言式當且僅當 $\psi$ 是重言式；但逆命題不成立。</li>
 <li>$\varphi \lor \psi$ 是矛盾式當且僅當 $\varphi$ 是矛盾式並且 $\psi$ 都是矛盾式。</li>
 <li>如果 $\varphi$ 或 $\psi$ 是矛盾式，那麼 $\varphi \land \psi$ 是矛盾式；但逆命題不成立。</li>
@@ -2283,7 +2284,7 @@ $$
 <p>我們之所以採用「$\varphi(\mathfrak{s})$」式的記法而非「$\mathfrak{s}^{+}(\varphi)$」式的記法，是因爲前者通過定義 3.10 可以和代入的直觀說明在記法上保持一致。</p>
 <p>爲了幫助讀者理解定義 3.9-3.10，我們在下面兩個例子中（大體上）一步步地計算代入結果。注意：我們將盡量省略括號。$\theta \vee \lambda / p, \theta \wedge \neg \lambda / q$ 等就是 $(\theta \vee \lambda) / p,(\theta \wedge \neg \lambda) / q$ 等。</p>
 <p><bb>例 3.14</bb><br />
-令  $\varphi_{0}=q \rightarrow r, \varphi_{1}=p \vee r$，且 $\varphi_{2}=p \rightarrow \neg p \vee q;$並令  $\mathfrak{s}_{0}$ 爲 $q / p$，$\mathfrak{s}_{1}$ 爲 $p / p$ 且 $\mathfrak{s}_{2}$ 爲 $p \vee q / p.$ 我們有：</p>
+令  $\varphi_{0}=q \rightarrow r, \varphi_{1}=p \vee r$，且 $\varphi_{2}=p \rightarrow \neg p \vee q;$ 並令  $\mathfrak{s}_{0}$ 爲 $q / p$，$\mathfrak{s}_{1}$ 爲 $p / p$ 且 $\mathfrak{s}_{2}$ 爲 $p \vee q / p.$ 我們有：</p>
 <p>	
 	\begin{align*}
 	\checkmark \varphi_{0}\left(\mathfrak{s}_{0}\right) &=(q \rightarrow r)\left(\mathfrak{s}_{0}\right)=q\left(\mathfrak{s}_{0}\right) \rightarrow r\left(\mathfrak{s}_{0}\right)=q(q / p) \rightarrow r(q / p)=q \rightarrow r \\
@@ -2403,7 +2404,7 @@ $$
   </div>
 <p><bb>證明：</bb>令 $\mathfrak{s}$ 爲 $\psi_{0} / q_{0}, \cdots, \psi_{n} / q_{n}$ 且 $\mathfrak{s}^{\prime}$ 爲 $\chi_{0} / q_{0}, \cdots, \chi_{n} / q_{n}.$ 施歸納於公式的複雜度。<br />
 <bb>歸納基始</bb>：$\varphi=q_{i}(i \leqslant n).$ 顯然有 $\varphi(\mathfrak{s})=\psi_{i}$ 且 $\varphi(\mathfrak{s}^{\prime})=\chi_{i} $，而根據題設 $\psi_{i}^{\sigma}=\chi_{i}^{\sigma^{\prime}}$，我們有 $\sigma \vDash \psi_{i}$ 當且僅當 $\sigma^{\prime} \vDash \chi_{i}.$<br />
-<bb>歸納步驟</bb>：設 $\varphi=\neg \theta_{\circ}$ 根據歸納假設，$\sigma \vDash \theta(\mathrm{s})$ 當且僅當 $\sigma^{\prime} \vDash \theta(\mathrm{s}^{\prime})$，因而根據眞理定義，$\sigma \vDash \neg \theta(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \neg \theta(\mathfrak{s}^{\prime})$，再由定義 3.9 知，$\sigma \vDash(\neg \theta)(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash(\neg \theta)(\mathfrak{s}^{\prime}).$ 設 $\varphi=\theta \odot \lambda$，其中 $\odot \in\lbrace \vee, \wedge, \rightarrow, \leftrightarrow\rbrace.$ 由歸納假設，$\sigma \vDash \theta(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \theta(\mathfrak{s}^{\prime})$，並且$ \sigma \vDash \lambda(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \lambda(\mathfrak{s}^{\prime});$所以根據眞理定義，$\sigma \vDash \theta(\mathfrak{s}) \odot \lambda(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \theta(\mathfrak{s}^{\prime}) \odot \lambda(\mathfrak{s}^{\prime})$，再由定義 3.9 知，$\sigma \vDash(\theta \odot \lambda)(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash(\theta \odot \lambda)(\mathfrak{s}^{\prime}).$ ▗</p>
+<bb>歸納步驟</bb>：設 $\varphi=\neg \theta_{\circ}$ 根據歸納假設，$\sigma \vDash \theta(\mathrm{s})$ 當且僅當 $\sigma^{\prime} \vDash \theta(\mathrm{s}^{\prime})$，因而根據眞理定義，$\sigma \vDash \neg \theta(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \neg \theta(\mathfrak{s}^{\prime})$，再由定義 3.9 知，$\sigma \vDash(\neg \theta)(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash(\neg \theta)(\mathfrak{s}^{\prime}).$ 設 $\varphi=\theta \odot \lambda$，其中 $\odot \in\lbrace \vee, \wedge, \rightarrow, \leftrightarrow\rbrace.$ 由歸納假設，$\sigma \vDash \theta(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \theta(\mathfrak{s}^{\prime})$，並且$ \sigma \vDash \lambda(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \lambda(\mathfrak{s}^{\prime});$ 所以根據眞理定義，$\sigma \vDash \theta(\mathfrak{s}) \odot \lambda(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \theta(\mathfrak{s}^{\prime}) \odot \lambda(\mathfrak{s}^{\prime})$，再由定義 3.9 知，$\sigma \vDash(\theta \odot \lambda)(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash(\theta \odot \lambda)(\mathfrak{s}^{\prime}).$ ▗</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯定理 3.1</span>
@@ -2412,7 +2413,7 @@ $$
   <span style="font-family:SYHei Regular;">令 $\varphi$ 爲任意公式，其中出現的命題變號都在 $q_{0}, \cdots, q_{n}$ 之中。設 $\sigma$ 和 $\sigma^{\prime}$ 爲任意眞值指派，滿足 $\sigma^{\prime}\left(q_{0}\right) = \psi_{0}^{\sigma}, \cdots, \sigma^{\prime}\left(q_{n}\right) = \psi_{n}^{\sigma}.$ 我們有：對任意代入 $\mathfrak{s}$，如果 $\mathfrak{s}\left(q_{0}\right) = \psi_{0}, \cdots, \mathfrak{s}\left(q_{n}\right) = \psi_{n}$，那麼 $\sigma \vDash \varphi(\mathfrak{s})$ 當且僅當 $\sigma^{\prime} \vDash \varphi.$</span>
   </div>
   </div>
-<p><bb>證明：</bb>設 $\mathfrak{s}$ 爲任意代入，滿足  $\mathfrak{s}\left(q_{0}\right) = \psi_{0}, \cdots, \mathfrak{s}\left(q_{n}\right) = \psi_{n};$並令 $\mathfrak{s}^{*}$ 爲代入 $\psi_{0} / q_{0}, \cdots, \psi_{n} / q_{n}.$ 根據定理 3.0，$\sigma \vDash \varphi\left(\mathfrak{s}^{*}\right)$ 當且僅當 $\sigma^{\prime} \vDash \varphi$，再由命題 3.9 得知 $\varphi(\mathfrak{s}) = \varphi\left(\mathfrak{s}^{*}\right).$ 所以，$\sigma \vDash \varphi(\mathfrak{s}) $ 當且僅當 $\sigma^{\prime} \vDash \varphi.$ ▗</p>
+<p><bb>證明：</bb>設 $\mathfrak{s}$ 爲任意代入，滿足  $\mathfrak{s}\left(q_{0}\right) = \psi_{0}, \cdots, \mathfrak{s}\left(q_{n}\right) = \psi_{n};$ 並令 $\mathfrak{s}^{*}$ 爲代入 $\psi_{0} / q_{0}, \cdots, \psi_{n} / q_{n}.$ 根據定理 3.0，$\sigma \vDash \varphi\left(\mathfrak{s}^{*}\right)$ 當且僅當 $\sigma^{\prime} \vDash \varphi$，再由命題 3.9 得知 $\varphi(\mathfrak{s}) = \varphi\left(\mathfrak{s}^{*}\right).$ 所以，$\sigma \vDash \varphi(\mathfrak{s}) $ 當且僅當 $\sigma^{\prime} \vDash \varphi.$ ▗</p>
 <p>定理 3.1 的一個推論是：對每個公式 $\varphi$ 和每個代入 $\mathfrak{s}$，如果 $\varphi$ 是重言式，那麼  $\varphi(\mathfrak{s})$ 一定也是重言式。（見習題 3.17）</p>
 <p>注意：定理 3.0 和定理 3.1 都要求 $\varphi$ 中岀現的命題變號在 $q_{0}, \cdots, q_{n}$ 之中，但下面的推論 3.2 並不這樣要求。之所以推論 3.2 允許 $\varphi$ 中出現不同於 $q_{0}, \cdots, q_{n}$ 的命題變號，是因爲它涉及的眞值指派只有一個。</p>
   <div>
@@ -2921,294 +2922,348 @@ $$
 <p>如果一集眞值函數聯結詞 $\mathbb{C}$ 有函數完全性，那麼用 $\mathbb{C}$ 做初始聯結詞的命題邏輯語言就有了完善的表達力。在這樣的語言中，任何一個眞值函數聯結詞都可以由 $\mathbb{C}$ 中的聯結詞來定義，就像任何一個眞值函數都可以由解釋 $\mathbb{C}$ 中聯結詞的眞值函數來定義一樣。</p>
 <h2 id="具有函數完全性的幾組眞值函數聯結詞">具有函數完全性的幾組眞值函數聯結詞</h2>
 <p>這一小節裏我們討論具有函數完全性的幾個眞值函數聯結詞的集合。</p>
-<p>\begin{prop}{}<br />
-所有眞值函數都在 $\mathscr{L}_{\neg, \lor, \land}$ 中可表達。<br />
-\end{prop}</p>
-<p><bb>證明</bb>：令 $f$ 爲任意 $n$ 元眞值函數（$n &gt; 0$）。我們分兩種情況討論。</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯命題 3.15</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">所有眞值函數都在 $\mathscr{L}_{\neg, \lor, \land}$ 中可表達。</span>
+  </div>
+  </div>
+<p><bb>命題 3.15 之證明</bb>：令 $f$ 爲任意 $n$ 元眞值函數（$n &gt; 0$）。我們分兩種情況討論。</p>
 <p>情況 I: 對所有的 $a_{0}, \cdots, a_{n-1} \in \lbrace 0, 1\rbrace$  都有 $f(a_{0}, \cdots, a_{n-1})=0.$ 令 $\varphi=p_{0} \wedge \neg p_{0} \wedge p_{1} \wedge \cdots \wedge p_{n-1}.$ 易見對所有眞值指派 $\sigma$ 都有 $\varphi^{\sigma}=0$，所以在情況 I 下，$f$ 在 $\mathscr{L}_{\neg, \lor, \land}$ 中可表達。</p>
-<p>情況 II: 存在 $a_{0}, \cdots, a_{n-1} \in \lbrace 0, 1\rbrace$ 使得 $f(a_{0}, \cdots, a_{n-1})=1.$ 設 %$b_{0}^{0}, \cdots, b_{n-1}^{0}; \quad b_{0}^{1}, \cdots, b_{n-1}^{1} ; \quad \cdots ; \quad b_{0}^{k}, \cots, b_{n-1}^{k}$<br />
-%<br />
-\begin{equation}<br />
+<p>情況 II: 存在 $a_{0}, \cdots, a_{n-1} \in \lbrace 0, 1\rbrace$ 使得 $f(a_{0}, \cdots, a_{n-1})=1.$ 設</p>
+<p>\begin{equation}<br />
 b_{0}^{0}, \cdots, b_{n-1}^{0}; \quad b_{0}^{1}, \cdots, b_{n-1}^{1} ; \quad \cdots ; \quad b_{0}^{k}, \cdots, b_{n-1}^{k}<br />
-\end{equation}<br />
-$(k&lt;2^{n})$ 爲所有的眞值序列 $a_{0}, \cdots, a_{n-1} \in\lbrace 0, 1\rbrace$ 使得 $f(a_{0}, \cdots, a_{n-1})=1.$ 對每個 $i \leqslant k$ 和 $j&lt;n$，令</p>
-<p>$$<br />
-\theta_{j}^{i}=\left\lbrace \begin{array}{ll}<br />
-p_{j} &amp; \text { 如果 }~ b_{j}^{i}=1 \<br />
-\neg p_{j} &amp; \text { 如果 }~ b_{j}^{i}=0<br />
-\end{array}\right.<br />
-$$<br />
-且對每個 $i \leqslant k$，令 $\psi_{i}=\theta_{0}^{i} \wedge \cdots \wedge \theta_{n-1}^{i}.$ 最後，令 $\varphi=\psi_{0} \vee \cdots \vee \psi_{k}.$</p>
+\end{equation}</p>
+<p>$(k&lt;2^{n})$ 爲所有的眞值序列 $a_{0}, \cdots, a_{n-1} \in\lbrace 0, 1\rbrace$ 使得 $f(a_{0}, \cdots, a_{n-1})=1.$ 對每個 $i \leqslant k$ 和 $j &lt; n$，令</p>
+<p>
+$$
+\theta_{j}^{i}=\left\lbrace \begin{array}{ll}
+p_{j} & \text { 如果 }~ b_{j}^{i}=1 \\
+\neg p_{j} & \text { 如果 }~ b_{j}^{i}=0
+\end{array}\right.
+$$
+</p>
+<p>且對每個 $i \leqslant k$，令 $\psi_{i}=\theta_{0}^{i} \wedge \cdots \wedge \theta_{n-1}^{i}.$ 最後，令 $\varphi=\psi_{0} \vee \cdots \vee \psi_{k}.$</p>
 <p>以下證明 $\varphi$ 表達 $f.$ 令 $\sigma$ 爲任意眞值指派。</p>
-<p>設 $f(p_{0}^{\sigma}, \cdots, p_{n-1}^{\sigma})=1.$ 易見式子 \ref{eq:3-13} 中某個序列 $b_{0}^{i}, \cdots, b_{n-1}^{i}(i \leqslant k)$ 就是 $p_{0}^{\sigma}, \cdots, p_{n-1}^{\sigma}.$ 由 $\theta_{j}^{i}$ 的定義知，對每個 $j&lt;n$，如果 $p_{j}^{\sigma}=1$ 則 $\theta_{j}^{i}=p_{j}$，而如果 $p_{j}^{\sigma}=0$ 則 $\theta_{j}^{i}=\neg p_{j}.$ 這就是說，對每個 $j&lt;n$ 都有 $(\theta_{j}^{i})^{\sigma}=1$，所以$\psi_{i}^{\sigma}=1$，進而 $\varphi^{\sigma}=1.$</p>
-<p>設 $\varphi^{\sigma}=1.$ 根據 $\varphi$ 的定義，存在 $i \leqslant k$ 使得 $\psi_{i}^{\sigma}=1$，從而對每個 $j&lt;n$ 都有 $(\theta_{j}^{i})^{\sigma}=1.$ 根據 $\theta_{j}^{i}$ 的定義，如果 $p_{j}^{\sigma}=1$ 則 $b_{j}^{i}=1$，並且如果 $p_{j}^{\sigma}=0$，則 $b_{j}^{i}=0.$ 這就是說，眞值序列 $p_{0}^{\sigma}, \cdots, p_{n-1}^{\sigma}$ 就是式子 \ref{eq:3-13} 中的 $b_{0}^{i}, \cdots, b_{n-1}^{i} .$ 既然 $f(b_{0}^{i}, \cdots, b_{n-1}^{i})=1$，我們有 $f(p_{0}^{\sigma}, \cdots, p_{n-1}^{\sigma})=1.$</p>
+<p>設 $f(p_{0}^{\sigma}, \cdots, p_{n-1}^{\sigma})=1.$ 易見式子 (10) 中某個序列 $b_{0}^{i}, \cdots, b_{n-1}^{i}(i \leqslant k)$ 就是 $p_{0}^{\sigma}, \cdots, p_{n-1}^{\sigma}.$ 由 $\theta_{j}^{i}$ 的定義知，對每個 $j&lt;n$，如果 $p_{j}^{\sigma}=1$ 則 $\theta_{j}^{i}=p_{j}$，而如果 $p_{j}^{\sigma}=0$ 則 $\theta_{j}^{i}=\neg p_{j}.$ 這就是說，對每個 $j&lt;n$ 都有 $(\theta_{j}^{i})^{\sigma}=1$，所以$\psi_{i}^{\sigma}=1$，進而 $\varphi^{\sigma}=1.$</p>
+<p>設 $\varphi^{\sigma}=1.$ 根據 $\varphi$ 的定義，存在 $i \leqslant k$ 使得 $\psi_{i}^{\sigma}=1$，從而對每個 $j&lt;n$ 都有 $(\theta_{j}^{i})^{\sigma}=1.$ 根據 $\theta_{j}^{i}$ 的定義，如果 $p_{j}^{\sigma}=1$ 則 $b_{j}^{i}=1$，並且如果 $p_{j}^{\sigma}=0$，則 $b_{j}^{i}=0.$ 這就是說，眞值序列 $p_{0}^{\sigma}, \cdots, p_{n-1}^{\sigma}$ 就是式子 (10) 中的 $b_{0}^{i}, \cdots, b_{n-1}^{i} .$ 既然 $f(b_{0}^{i}, \cdots, b_{n-1}^{i})=1$，我們有 $f(p_{0}^{\sigma}, \cdots, p_{n-1}^{\sigma})=1.$</p>
 <p>綜上所述，可知 $f$ 在 $\mathscr{L}_{\neg, \lor, \land}$ 中可表達。▗</p>
-<p>\begin{theorem}{函數完全性定理}<br />
-所有眞值函數都在 $\mathscr{L}<em>{\neg, \lor}$ 中可表達，都在 $\mathscr{L}</em>{\neg, \land}$ 中可表達，也都在 $\mathscr{L}_{\neg, \rightarrow}$ 中可表達。<br />
-\end{theorem}</p>
-<p><bb>證明</bb>：易證對所有 $\mathscr{L}<em>{0}$-公式 $\chi$ 和 $\chi^{\prime}$，$\chi \wedge \chi^{\prime}$ 和 $\neg(\neg \chi \vee \neg \chi^{\prime})$ 重言等值（習題 \pref{exe:3-6}），因而對每個 $\mathscr{L}</em>{\neg, \lor, \land}$-公式 $\varphi$，運用若干次推論 \pref{coro:substitution-truth-value-2} 可以得到 $\mathscr{L}_{\neg, \lor}$-公式 $\varphi^{\prime}$， 使得 $\varphi$ 與 $\varphi^{\prime}$ 重言等值並且 $\varphi$ 和 $\varphi^{\prime}$ 含相同的命題變號（習題 \pref{exe:3-26}）。</p>
-<p>令 $f$ 爲任意 $n$ 元眞值函數。由命題 \ref{prop:117} 知有 $\mathscr{L}<em>{\neg, \lor, \land}$-公式 $\varphi$ 表達 $f$，因而 $\varphi$ 含命題變號 $q</em>{0}, \cdots, q_{n-1}$，且對所有眞值指派 $\sigma$，$\varphi^{\sigma}=f(q_{0}^{\sigma}, \cdots, q_{n-1}^{\sigma}).$ 由上述可知，存在 $\mathscr{L}_{\neg, \lor}$-公式 $\psi$，$\psi$ 含命題變號 $q_{0}, \cdots, q_{n-1}$ 並且  $\psi^{\sigma}=   f\left(q_{0}^{\sigma}, \cdots, q_{n-1}^{\sigma}\right)$,  所以  $f$  在  $\mathscr{L}_{\neg, \lor}$ 中可表達。</p>
-<p>因爲 $\chi \vee \chi^{\prime}$ 和 $\neg(\neg \chi \wedge \neg \chi^{\prime})$ 重言等值，所以類似可證所有眞值函數都在 $\mathscr{L}<em>{\neg, \land}$ 中可表達。因爲 $\chi \vee \chi^{\prime}$ 和 $\neg \chi \rightarrow \chi^{\prime}$ 以及 $\chi \wedge \chi^{\prime}$ 和 $\neg(\chi \rightarrow \neg \chi^{\prime})$  分別重言等值，所以類似可證所有眞值函數都在 $\mathscr{L}</em>{\neg, \rightarrow}$ 中可表達。▗</p>
-<p>\begin{theorem}{函數完全性定理}<br />
-$\lbrace \neg, \land\rbrace, \lbrace \neg, \land\rbrace, \lbrace \neg, \rightarrow\rbrace$ 各自都是函數完全的，並且各自都可定義所有的眞值函數聯結詞。<br />
-\end{theorem}</p>
-<p><bb>證明</bb>：根據定理 \ref{函數完全性定理-1}、定義 3.17 和定義 \ref{可定義} 得證。▗</p>
-<p>函數完全的眞值函數聯結詞的集合，可以只有兩個元素，比如 $\lbrace \neg, \lor\rbrace$，也可以只有一個元素。\Z{英}文中有兩個一元聯結詞 &ldquo;not-both&rdquo;（NAND） 和 &ldquo;neither-nor&rdquo;（NOR），我們用 &ldquo;$\mid$&rdquo; 和 &ldquo;$\mid\mid$&rdquo; 來表示它們。算上 $\veebar$ 與這兩個聯結詞，基本眞值表 \pref{tab:truth-table} 便成爲如下擴展的眞值表：</p>
-<p>\begin{center}<br />
-$<br />
-\begin{array}{cc|cccccccc}<br />
-p &amp; q &amp; p \vee q &amp; p \wedge q &amp; p \rightarrow q &amp; p \leftrightarrow q &amp; p \veebar q &amp; p \mid\mid q &amp; p \mid q &amp; \neg p\<br />
-\hline 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\<br />
-1 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; \<br />
-0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1 &amp; 0 &amp; 1  &amp; 1\<br />
-0 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 1<br />
-&amp;<br />
-\end{array}<br />
-$<br />
-%$<br />
-%\begin{array}{cc|c|c}<br />
-%\varphi &amp; \psi &amp; \varphi \mid \psi &amp; \varphi | \psi \<br />
-%\hline 1 &amp; 1 &amp; 0 &amp; 0 \<br />
-%1 &amp; 0 &amp; 1 &amp; 0 \<br />
-%0 &amp; 1 &amp; 1 &amp; 0 \<br />
-%0 &amp; 0 &amp; 1 &amp; 1<br />
-%\end{array}<br />
-%$<br />
-\end{center}<br />
-易見，$\neg({p}<em>{0} \wedge p</em>{1})$ 和 $\neg(p_{0} \vee p_{1})$ 是在 $\mathscr{L}_{\neg, \lor, \land}$ 中表達 $f_{\mid}$ 和 $f_{|}$（或定義 $\mid$ 和 $|$）的公式。請讀者自己想出在 $\mathscr{L}_{\neg, \lor}, \mathscr{L}_{\neg, \land}, \mathscr{L}_{\neg, \rightarrow}$ 中表達 $f_{\mid}$ 和 $f_{|}$ 的公式。</p>
-<p>可以證明，所有眞值函數也分別都在 $\mathscr{L}<em>{\mid}$ 和 $\mathscr{L}</em>{||}$ 中可表達，因而 $\lbrace \mid\rbrace, \lbrace  || \rbrace$ 也分別都是函數完全的。我們不給詳細證明，只陳述證明中用到的最關鍵事實：</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯定理 3.4【函數完全性定理】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;"><ol>
+<li>所有眞值函數都在 $\mathscr{L}_{\neg, \lor}$ 中可表達</li>
+<li>所有眞值函數都在 $\mathscr{L}_{\neg, \land}$ 中可表達</li>
+<li>所有眞值函數都在 $\mathscr{L}_{\neg, \rightarrow}$ 中可表達</li>
+</ol>
+</span>
+  </div>
+  </div>
+<p><bb>證明</bb>：易證對所有 $\mathscr{L}_{0}$-公式 $\chi$ 和 $\chi^{\prime}$，$\chi \wedge \chi^{\prime}$ 和 $\neg(\neg \chi \vee \neg \chi^{\prime})$ 重言等值（習題 3.5）。</p>
+<p>因而對每個 $\mathscr{L}_{\neg, \lor, \land}$-公式 $\varphi$，運用若干次推論 3.3 可以得到</p>
+<p>$\mathscr{L}_{\neg, \lor}$-公式 $\varphi^{\prime}$， 使得 $\varphi$ 與 $\varphi^{\prime}$ 重言等值並且 $\varphi$ 和 $\varphi^{\prime}$ 含相同的命題變號（習題 3.25）。</p>
+<p>令 $f$ 爲任意 $n$ 元眞值函數。由命題 3.15 知有 $\mathscr{L}_{\neg, \lor, \land}$-公式 $\varphi$ 表達 $f$，</p>
+<p>因而 $\varphi$ 含命題變號 $q_{0}, \cdots, q_{n-1}$，且對所有眞值指派 $\sigma$，$\varphi^{\sigma}=f(q_{0}^{\sigma}, \cdots, q_{n-1}^{\sigma}).$ 由上述可知，存在 $\mathscr{L}_{\neg, \lor}$-公式 $\psi$，$\psi$ 含命題變號 $q_{0}, \cdots, q_{n-1}$ 並且  $\psi^{\sigma}=   f\left(q_{0}^{\sigma}, \cdots, q_{n-1}^{\sigma}\right)$,  所以  $f$  在  $\mathscr{L}_{\neg, \lor}$ 中可表達。</p>
+<p>因爲 $\chi \vee \chi^{\prime}$ 和 $\neg(\neg \chi \wedge \neg \chi^{\prime})$ 重言等值，所以類似可證所有眞值函數都在 $\mathscr{L}_{\neg, \land}$ 中可表達。</p>
+<p>因爲 $\chi \vee \chi^{\prime}$ 和 $\neg \chi \rightarrow \chi^{\prime}$ 以及 $\chi \wedge \chi^{\prime}$ 和 $\neg(\chi \rightarrow \neg \chi^{\prime})$  分別重言等值，所以類似可證所有眞值函數都在 $\mathscr{L}_{\neg, \rightarrow}$ 中可表達。▗</p>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯定理 3.5【函數完全性定理】</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;">$\lbrace \neg, \land\rbrace, \lbrace \neg, \land\rbrace, \lbrace \neg, \rightarrow\rbrace$ 各自都是函數完全的，並且各自都可定義所有的眞值函數聯結詞。</span>
+  </div>
+  </div>
+<p><bb>證明</bb>：根據定理 3.5、定義 3.17 和定義 3.18 得證。▗</p>
+<p>函數完全的眞值函數聯結詞的集合，可以只有兩個元素，比如 $\lbrace \neg, \lor\rbrace$，也可以只有一個元素。<z>英</z>文中有兩個一元聯結詞 &ldquo;not-both&rdquo;（NAND） 和 &ldquo;neither-nor&rdquo;（NOR），我們用 &ldquo;$\mid$&rdquo; 和 &ldquo;$\mid\mid$&rdquo; 來表示它們。算上 $\veebar$ 與這兩個聯結詞，基本眞值表 2.1（P.82）便成爲如下擴展的眞值表：</p>
+  <div>
+  <div class="freeboxtitle">
+  	<span style="font-family:SYHei Heavy;">⦿ 擴展的基本真值表 ⦿</span>
+  </div>
+  <div class="freebox">
+  <span style="font-family:SYHei Regular;">$$
+\begin{array}{cc|cccccccc}
+p & q & p \vee q & p \wedge q & p \rightarrow q & p \leftrightarrow q & p \veebar q & p \mid\mid q & p \mid q & \neg p\\
+\hline 1 & 1 & 1 & 1 & 1 & 1 & 0 & 0 & 0 & 0\\
+1 & 0 & 1 & 0 & 0 & 0 & 1 & 0 & 1 & \\
+0 & 1 & 1 & 0 & 1 & 0 & 1 & 0 & 1  & 1\\
+0 & 0 & 0 & 0 & 1 & 1 & 0 & 1 & 1
+&
+\end{array}
+$$</span>
+  </div>
+  </div>
+<p>可以證明，$\lbrace \mid\rbrace, \lbrace  || \rbrace$ 也分別都是函數完全的。我們不給詳細證明，只陳述證明中用到的最關鍵事實：</p>
 <p>$\varphi \mid \varphi$ 可用來表示 $\neg \varphi$，$(\varphi \mid \varphi) \mid (\psi \mid \psi)$ 可用來表示 $\varphi \vee \psi$ 見下表：</p>
-<p>\begin{center}<br />
-$<br />
-\begin{array}{c|c|c}<br />
-\varphi &amp; \neg \varphi &amp; \varphi \mid \varphi \<br />
-\hline 1 &amp; 0 &amp; 0 \<br />
-0 &amp; 1 &amp; 1<br />
-\end{array}<br />
-$~~~~~~<br />
-%\end{center}<br />
-%<br />
-%\begin{center}<br />
-$<br />
-\begin{array}{cc|c|c}<br />
-\varphi &amp; \psi &amp; \varphi \vee \psi &amp; (\varphi \mid \varphi) \mid (\psi \mid \psi) \<br />
-\hline 1 &amp; 1 &amp; 1 &amp; 1 \<br />
-1 &amp; 0 &amp; 1 &amp; 1 \<br />
-0 &amp; 1 &amp; 1 &amp; 1 \<br />
-0 &amp; 0 &amp; 0 &amp; 0<br />
-\end{array}<br />
-$<br />
-\end{center}</p>
+<p>
+$$
+\begin{array}{c|c|c}
+\varphi & \neg \varphi & \varphi \mid \varphi \\
+\hline 1 & 0 & 0 \\
+0 & 1 & 1
+\end{array}
+$$
+</p>
+<p>
+$$
+\begin{array}{cc|c|c}
+\varphi & \psi & \varphi \vee \psi & (\varphi \mid \varphi) \mid (\psi \mid \psi) \\
+\hline 1 & 1 & 1 & 1 \\
+1 & 0 & 1 & 1 \\
+0 & 1 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{array}
+$$
+</p>
 <p>$\varphi | \varphi$ 可用來表示 $\neg \varphi$，$(\varphi | \varphi) | (\psi | \psi)$ 可用來表示 $\varphi \wedge \psi$ 見下表：</p>
-<p>\begin{center}<br />
-$<br />
-\begin{array}{c|c|c}<br />
-\varphi &amp; \neg \varphi &amp; \varphi | \varphi \<br />
-\hline 1 &amp; 0 &amp; 0 \<br />
-0 &amp; 1 &amp; 1<br />
-\end{array}<br />
-$~~~~~~<br />
-%\end{center}<br />
-%<br />
-%\begin{center}<br />
-$<br />
-\begin{array}{cc|c|c}<br />
-\varphi &amp; \psi &amp; \varphi \wedge \psi &amp; (\varphi | \varphi)|(\psi | \psi) \<br />
-\hline 1 &amp; 1 &amp; 1 &amp; 1 \<br />
-1 &amp; 0 &amp; 0 &amp; 0 \<br />
-0 &amp; 1 &amp; 0 &amp; 0 \<br />
-0 &amp; 0 &amp; 0 &amp; 0<br />
-\end{array}<br />
-$<br />
-\end{center}</p>
-<p>\clearpage<br />
-\pagestyle{maapage}<br />
-\phantomsection<br />
-\addcontentsline{toc}{section}{本章習題}<br />
-\section*{本章習題}<br />
-\sectionmark{本章習題}</p>
-<p>\begin{exercise}{證明：對所有公式集 $\Gamma$ 和 $\Delta$，以及所有公式 $\varphi$ 與 $\psi$，}</p>
+<p>
+$$
+\begin{array}{c|c|c}
+\varphi & \neg \varphi & \varphi \| \varphi \\
+\hline 1 & 0 & 0 \\
+0 & 1 & 1
+\end{array}
+$$
+</p>
+<p>
+$$
+\begin{array}{cc|c|c}
+\varphi & \psi & \varphi \wedge \psi & (\varphi \| \varphi)\|(\psi \| \psi) \\
+\hline 1 & 1 & 1 & 1 \\
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 0 & 0
+\end{array}
+$$
+</p>
+<h1 id="本章習題">本章習題</h1>
 <blockquote>
-<p>如果 $\Gamma \vDash_{0} \varphi$，那麼 $\Gamma \cup \Delta \vDash_{0} \varphi$;<br />
-如果 $\Gamma \vDash_{0} \varphi \vee \psi$ 並且 $\Delta \vDash_{0} \neg \varphi$，那麼 $\Gamma \cup \Delta \vDash_{0} \psi$;<br />
-如果 $\Gamma \vDash_{0} \varphi$　且 $\Delta \vDash_{0} \varphi \rightarrow \psi$，那麼 $\Gamma \cup \Delta \vDash_{0} \psi.$<br />
-\end{exercise}</p>
-</blockquote>
-<p>\begin{exercisep}{}<br />
-設 $\Delta \vDash_{0} \varphi$ 並且 $\varphi \vDash_{0} \psi.$ 證明：$\Delta \vDash_{0} \psi.$<br />
-\end{exercisep}</p>
-<p>\begin{exercise}{證明對所有公式 $\varphi, \psi, \chi$，下述命題成立：}</p>
-<blockquote>
+<p><bb>習題 3.0：證明：對所有公式集 $\Gamma$ 和 $\Delta$，以及所有公式 $\phi$ 與 $\psi$，</bb></p>
 <ol>
-<li>$\varphi, \varphi \rightarrow \psi \vDash_{0} \psi$</li>
-<li>$\varphi \vee \psi, \neg \psi \vDash_{0} \varphi$</li>
-<li>$\varphi \vee \psi, \neg \varphi \vee \chi \vDash_{0} \psi \vee \chi$</li>
-<li>$\varphi \vee \psi \vDash_{0} \chi$ 當且僅當 $\varphi \vDash_{0} \chi$ 且 $\psi \vDash_{0} \chi.$<br />
-\end{exercise}</li>
+<li>如果 $\Gamma \vDash_{0} \phi$，那麼 $\Gamma \cup \Delta \vDash_{0} \phi$;</li>
+<li>如果 $\Gamma \vDash_{0} \phi \vee \psi$ 並且 $\Delta \vDash_{0} \neg \phi$，那麼 $\Gamma \cup \Delta \vDash_{0} \psi$;</li>
+<li>如果 $\Gamma \vDash_{0} \phi$　且 $\Delta \vDash_{0} \phi \rightarrow \psi$，那麼 $\Gamma \cup \Delta \vDash_{0} \psi$.</li>
 </ol>
 </blockquote>
-<p>\begin{exercisecolitem}{令 $\varphi, \psi, \chi$ 爲任意公式。證明下列都是重言式：}</p>
 <blockquote>
-<p>$\varphi \rightarrow(\psi \rightarrow \varphi)$<br />
-$(\varphi \rightarrow(\psi \rightarrow \chi)) \rightarrow((\varphi \rightarrow \psi) \rightarrow(\varphi \rightarrow \chi))$<br />
-$\varphi \wedge \psi \rightarrow \varphi$<br />
-$\varphi \wedge \psi \rightarrow \psi$<br />
-$\varphi \rightarrow(\psi \rightarrow \varphi \wedge \psi)$<br />
-$\varphi \rightarrow \varphi \vee \psi$<br />
-$\varphi \rightarrow \psi \vee \varphi$<br />
-$(\varphi \rightarrow \chi) \rightarrow((\psi \rightarrow \chi) \rightarrow(\varphi \vee \psi \rightarrow \chi))$<br />
-$(\varphi \rightarrow \psi) \rightarrow((\varphi \rightarrow \neg \psi) \rightarrow \neg \varphi)$<br />
-$\neg \neg \varphi \rightarrow \varphi$<br />
-$(\varphi \leftrightarrow \psi) \rightarrow(\varphi \rightarrow \psi)$<br />
-$(\varphi \leftrightarrow \psi) \rightarrow(\psi \rightarrow \varphi)$<br />
-$(\varphi \rightarrow \psi) \rightarrow((\psi \rightarrow \varphi) \rightarrow(\varphi \leftrightarrow \psi))$<br />
-\end{exercisecolitem}</p>
+<p><bb>習題 3.1</bb><br />
+設 $\Delta \vDash_{0} \phi$ 並且 $\phi \vDash_{0} \psi$. 證明：$\Delta \vDash_{0} \psi$.</p>
 </blockquote>
-<p>\begin{exercisecolitem}{令 $\varphi, \psi, \chi$ 爲任意公式。證明下列都是重言式：}</p>
 <blockquote>
-<p>$(\neg \varphi \rightarrow \psi) \rightarrow((\neg \varphi \rightarrow \neg \psi) \rightarrow \varphi)$<br />
-$(\neg \psi \rightarrow \neg \varphi) \rightarrow(\varphi \rightarrow \psi)$<br />
-$((\varphi \rightarrow \psi) \rightarrow \varphi) \rightarrow \varphi$<br />
-$\neg \varphi \rightarrow(\varphi \rightarrow \psi)$<br />
-$(\neg \varphi \rightarrow \varphi) \rightarrow \varphi$<br />
-$(\varphi \rightarrow \neg \varphi) \rightarrow \neg \varphi$<br />
-$(\varphi \leftrightarrow \psi) \leftrightarrow(\psi \leftrightarrow \varphi)$<br />
-$((\varphi \leftrightarrow \chi) \leftrightarrow(\psi \leftrightarrow \varphi)) \leftrightarrow(\chi \leftrightarrow \psi)$<br />
-$(\varphi \leftrightarrow(\psi \leftrightarrow \chi)) \leftrightarrow((\varphi \leftrightarrow \psi) \leftrightarrow \chi)$<br />
-\end{exercisecolitem}</p>
+<p><bb>習題 3.2 證明對所有公式 $\phi, \psi, \chi$，下述命題成立：</bb></p>
+<ol>
+<li>$\phi, \phi \rightarrow \psi \vDash_{0} \psi$</li>
+<li>$\phi \vee \psi, \neg \psi \vDash_{0} \phi$</li>
+<li>$\phi \vee \psi, \neg \phi \vee \chi \vDash_{0} \psi \vee \chi$</li>
+<li>$\phi \vee \psi \vDash_{0} \chi$ 當且僅當 $\phi \vDash_{0} \chi$ 且 $\psi \vDash_{0} \chi$.</li>
+</ol>
 </blockquote>
-<p>\begin{exercisecolitem}{證明對所有公式 $\varphi, \psi, \chi$，下列各組公式都是重言等值的：}</p>
 <blockquote>
-<p>$\varphi, \varphi \vee \varphi, \varphi \wedge \varphi$<br />
-$\varphi, \neg \neg \varphi$<br />
-$\varphi \vee \psi, \psi \vee \varphi$<br />
-$\varphi \wedge \psi, \psi \wedge \varphi$<br />
-$\varphi \vee(\psi \vee \chi),(\varphi \vee \psi) \vee \chi$<br />
-$\varphi \wedge(\psi \wedge \chi),(\varphi \wedge \psi) \wedge \chi$<br />
-$\neg(\varphi \vee \psi), \neg \varphi \wedge \neg \psi$<br />
-$\varphi \vee \psi, \neg(\neg \varphi \wedge \neg \psi)$<br />
-$\neg(\varphi \wedge \psi), \neg \varphi \vee \neg \psi$<br />
-$\varphi \wedge \psi, \neg(\neg \varphi \vee \neg \psi)$<br />
-$\varphi \rightarrow \psi, \neg \psi \rightarrow \neg \varphi$<br />
-$\varphi \vee(\psi \wedge \chi),(\varphi \vee \psi) \wedge(\varphi \vee \chi)$<br />
-$\varphi \wedge(\psi \vee \chi),(\varphi \wedge \psi) \vee(\varphi \wedge \chi)$<br />
-$\varphi \rightarrow \psi, \neg \varphi \vee \psi$<br />
-$\neg \varphi \rightarrow \psi, \varphi \vee \psi$<br />
-$\varphi \leftrightarrow \psi,(\varphi \wedge \psi) \vee(\neg \varphi \wedge \neg \psi)$<br />
-$\varphi \leftrightarrow \psi,(\varphi \rightarrow \psi) \wedge(\psi \rightarrow \varphi)$<br />
-$\neg(\varphi \leftrightarrow \psi), \varphi \leftrightarrow \neg \psi, \neg \varphi \leftrightarrow \psi,(\varphi \wedge \neg \psi) \vee(\neg \varphi \wedge \psi)$<br />
-$\varphi \rightarrow(\psi \rightarrow \chi), \varphi \wedge \psi \rightarrow \chi, \psi \rightarrow(\varphi \rightarrow \chi)$<br />
-$\varphi \vee \psi \rightarrow \chi,(\varphi \rightarrow \chi) \wedge(\psi \rightarrow \chi)$<br />
-\end{exercisecolitem}</p>
+<p><bb>習題 3.3 令 $\phi, \psi, \chi$ 爲任意公式。證明下列都是重言式：</bb></p>
+<ol>
+<li>$\phi \rightarrow(\psi \rightarrow \phi)$</li>
+<li>$(\phi \rightarrow(\psi \rightarrow \chi)) \rightarrow((\phi \rightarrow \psi) \rightarrow(\phi \rightarrow \chi))$</li>
+<li>$\phi \wedge \psi \rightarrow \phi$</li>
+<li>$\phi \wedge \psi \rightarrow \psi$</li>
+<li>$\phi \rightarrow(\psi \rightarrow \phi \wedge \psi)$</li>
+<li>$\phi \rightarrow \phi \vee \psi$</li>
+<li>$\phi \rightarrow \psi \vee \phi$</li>
+<li>$(\phi \rightarrow \chi) \rightarrow((\psi \rightarrow \chi) \rightarrow(\phi \vee \psi \rightarrow \chi))$</li>
+<li>$(\phi \rightarrow \psi) \rightarrow((\phi \rightarrow \neg \psi) \rightarrow \neg \phi)$</li>
+<li>$\neg \neg \phi \rightarrow \phi$</li>
+<li>$(\phi \leftrightarrow \psi) \rightarrow(\phi \rightarrow \psi)$</li>
+<li>$(\phi \leftrightarrow \psi) \rightarrow(\psi \rightarrow \phi)$</li>
+<li>$(\phi \rightarrow \psi) \rightarrow((\psi \rightarrow \phi) \rightarrow(\phi \leftrightarrow \psi))$</li>
+</ol>
 </blockquote>
-<p>\begin{exercise}{證明：對所有公式集 $\Gamma$ 和所有公式 $\varphi$，}</p>
 <blockquote>
-<p>如果 $\Gamma \vDash_{0} \varphi$ 且 $\varphi$不可滿足，那麼 $\Gamma$ 不可滿足。<br />
-如果 $\Gamma$ 可滿足，那麼 $\lbrace \psi: \Gamma \vDash_{0} \psi\rbrace$ 也可滿足。<br />
-\end{exercise}</p>
+<p><bb>習題 3.4 令 $\phi, \psi, \chi$ 爲任意公式。證明下列都是重言式：</bb></p>
+<ol>
+<li>$(\neg \phi \rightarrow \psi) \rightarrow((\neg \phi \rightarrow \neg \psi) \rightarrow \phi)$</li>
+<li>$(\neg \psi \rightarrow \neg \phi) \rightarrow(\phi \rightarrow \psi)$</li>
+<li>$((\phi \rightarrow \psi) \rightarrow \phi) \rightarrow \phi$</li>
+<li>$\neg \phi \rightarrow(\phi \rightarrow \psi)$</li>
+<li>$(\neg \phi \rightarrow \phi) \rightarrow \phi$</li>
+<li>$(\phi \rightarrow \neg \phi) \rightarrow \neg \phi$</li>
+<li>$(\phi \leftrightarrow \psi) \leftrightarrow(\psi \leftrightarrow \phi)$</li>
+<li>$((\phi \leftrightarrow \chi) \leftrightarrow(\psi \leftrightarrow \phi)) \leftrightarrow(\chi \leftrightarrow \psi)$</li>
+<li>$(\phi \leftrightarrow(\psi \leftrightarrow \chi)) \leftrightarrow((\phi \leftrightarrow \psi) \leftrightarrow \chi)$</li>
+</ol>
 </blockquote>
-<p>\begin{exercisep}{}<br />
-完成命題 3.7 的證明。<br />
-\end{exercisep}</p>
-<p>\begin{exercise}{證明：對所有公式 $\varphi$，}</p>
 <blockquote>
-<p>$\varphi$ 是重言式當且僅當 $\neg \varphi$ 不可滿足；<br />
-$\varphi$ 是矛盾式當且僅當 $\varphi$ 不可滿足；<br />
-$\varphi$ 是或然式當且僅當 $\varphi$ 和 $\neg \varphi$ 都可滿足；<br />
-$\varphi$ 是重言式當且僅當 $\neg \varphi$ 是矛盾式；<br />
-$\varphi$ 是矛盾式當且僅當 $\neg \varphi$ 是重言式；<br />
-$\varphi$ 是或然式當且僅當 $\neg \varphi$ 是或然式。<br />
-\end{exercise}</p>
+<p><bb>習題 3.5 證明對所有公式 $\phi, \psi, \chi$，下列各組公式都是重言等值的：</bb></p>
+<ol>
+<li>$\phi, \phi \vee \phi, \phi \wedge \phi$</li>
+<li>$\phi, \neg \neg \phi$</li>
+<li>$\phi \vee \psi, \psi \vee \phi$</li>
+<li>$\phi \wedge \psi, \psi \wedge \phi$</li>
+<li>$\phi \vee(\psi \vee \chi),(\phi \vee \psi) \vee \chi$</li>
+<li>$\phi \wedge(\psi \wedge \chi),(\phi \wedge \psi) \wedge \chi$</li>
+<li>$\neg(\phi \vee \psi), \neg \phi \wedge \neg \psi$</li>
+<li>$\phi \vee \psi, \neg(\neg \phi \wedge \neg \psi)$</li>
+<li>$\neg(\phi \wedge \psi), \neg \phi \vee \neg \psi$</li>
+<li>$\phi \wedge \psi, \neg(\neg \phi \vee \neg \psi)$</li>
+<li>$\phi \rightarrow \psi, \neg \psi \rightarrow \neg \phi$</li>
+<li>$\phi \vee(\psi \wedge \chi),(\phi \vee \psi) \wedge(\phi \vee \chi)$</li>
+<li>$\phi \wedge(\psi \vee \chi),(\phi \wedge \psi) \vee(\phi \wedge \chi)$</li>
+<li>$\phi \rightarrow \psi, \neg \phi \vee \psi$</li>
+<li>$\neg \phi \rightarrow \psi, \phi \vee \psi$</li>
+<li>$\phi \leftrightarrow \psi,(\phi \wedge \psi) \vee(\neg \phi \wedge \neg \psi)$</li>
+<li>$\phi \leftrightarrow \psi,(\phi \rightarrow \psi) \wedge(\psi \rightarrow \phi)$</li>
+<li>$\neg(\phi \leftrightarrow \psi), \phi \leftrightarrow \neg \psi, \neg \phi \leftrightarrow \psi,(\phi \wedge \neg \psi) \vee(\neg \phi \wedge \psi)$</li>
+<li>$\phi \rightarrow(\psi \rightarrow \chi), \phi \wedge \psi \rightarrow \chi, \psi \rightarrow(\phi \rightarrow \chi)$</li>
+<li>$\phi \vee \psi \rightarrow \chi,(\phi \rightarrow \chi) \wedge(\psi \rightarrow \chi)$</li>
+</ol>
 </blockquote>
-<p>\begin{exercise}{證明：對所有公式 $\varphi$，}</p>
 <blockquote>
-<p>$\varphi$ 是重言式當且僅當 $p_0 \lor \neg p_0$ 重言蘊涵 $\varphi.$<br />
-$\varphi$ 是矛盾式當且僅當 $\varphi$ 重言蘊涵 $p_0 \land \neg p_0.$<br />
-\end{exercise}</p>
+<p><bb>習題 3.6 證明：對所有公式集 $\Gamma$ 和所有公式 $\phi$，</bb></p>
+<ol>
+<li>如果 $\Gamma \vDash_{0} \phi$ 且 $\phi$不可滿足，那麼 $\Gamma$ 不可滿足。</li>
+<li>如果 $\Gamma$ 可滿足，那麼 $\lbrace \psi: \Gamma \vDash_{0} \psi\rbrace$ 也可滿足。</li>
+</ol>
 </blockquote>
-<p>\begin{exercisep}{}<br />
-設 $\mathfrak{s}^{\prime}$ 和 $\mathfrak{s}^{\prime \prime}$ 都是有窮代入。證明：$\mathfrak{s}^{\prime}\mathfrak{s}^{\prime \prime}$ 也是有窮代入。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-設 $\varphi$ 和 $\psi$ 爲任意公式，並設 $p$ 和 $q$ 爲任意命題變號，其中 $q$ 不在 $\varphi$ 中出現。證明：$\varphi(\psi / p)=\varphi(q / p)(\psi / q).$<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-證明：對所有公式 $\varphi$ 及其子公式 $\psi$，存在公式 $\chi$ 和命題變號 $p$ 使得 $\varphi=\chi(\psi / p)$，並說明即使對同一個這樣的 $p$，$\chi$ 也不是唯一的。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-設 $\varnothing  \neq A \subseteq  \mathbf{Pr}$，設 $\mathfrak{s}$ 和 $\mathfrak{s}^{\prime}$ 爲任意代入，並設 $\sigma$ 和 $\sigma^{\prime}$ 爲任意眞值指派，滿足對每一個 $p \in A,(\mathfrak{s}(p))^{\sigma}=\left(\mathfrak{s}^{\prime}(p)\right)^{\sigma^{\prime}}.$ 證明：對所有 $A$-公式$\varphi$，$(\varphi(\mathfrak{s}))^{\sigma}=(\varphi(\mathfrak{s}^{\prime}))^{\sigma^{\prime}}.$<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-試從習題 \ref{exe:3-14} 直接證明定理 \pref{theo:substitution-truth-value-1}。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-試從定理 \pref{theo:substitution-truth-value-2} 直接證明定理 \pref{theo:substitution-truth-value-1}。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-證明推論 \pref{coro:substitution-truth-value-3}（提示：先將置換結果講清楚）；然後試用推論 3.4 直接證明推論 3.3。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-設 $\varphi$ 爲重言式，並設 $\mathfrak{s}$ 爲任意代入。證明：$\varphi(\mathfrak{s})$ 是重言式。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-運用重言蘊涵等語義概念的「嚴格定義」，證明習題 \pref{exe:01-17} 和習題 \pref{exe:01-18} 中的各個命題。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-完成命題 \pref{prop:103-in-p96} 的證明。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{證明下列命題：}<br />
-\begin{prop}{}<br />
-設 $\varphi$ 和 $\psi$ 爲任意不含相同命題變號的公式。證明：</p>
 <blockquote>
-<p>$\varphi \rightarrow \psi$ 是重言式當且僅當或者 $\varphi$ 是矛盾式或者 $\psi$ 是重言式。<br />
-$\varphi \leftrightarrow \psi$ 是重言式當且僅當或者 $\varphi$ 和 $\psi$ 都是矛盾式或者 $\varphi$ 和 $\psi$ 都是重言式。</p>
+<p><bb>習題 3.7</bb><br />
+完成命題 3.7（P.105）的證明。</p>
 </blockquote>
-<p>\end{prop}<br />
-\end{exercisep}</p>
-<p>\begin{exercisecolitem}{求下列公式的析取範式與合取範式：}</p>
 <blockquote>
-<p>$p \vee q \rightarrow p \wedge q$<br />
-$p \wedge q \rightarrow(\neg r \rightarrow p)$<br />
-$(p \rightarrow q \wedge r) \rightarrow(\neg p \rightarrow \neg q \wedge \neg r)$<br />
-$(p \rightarrow q \vee \neg r) \leftrightarrow(r \rightarrow q \wedge \neg p)$<br />
-$p \vee q \rightarrow(p \rightarrow \neg q)$<br />
-$(p \vee q) \wedge((r \rightarrow \neg p \wedge \neg q) \wedge(\neg r \rightarrow r))$<br />
-$(p \rightarrow \neg q \wedge r) \leftrightarrow(q \vee(\neg r \wedge p))$<br />
-$((p \rightarrow q) \rightarrow p) \rightarrow q) \rightarrow r$<br />
-\end{exercisecolitem}</p>
+<p><bb>習題 3.8 證明：對所有公式 $\phi$，</bb></p>
+<ol>
+<li>$\phi$ 是重言式當且僅當 $\neg \phi$ 不可滿足；</li>
+<li>$\phi$ 是矛盾式當且僅當 $\phi$ 不可滿足；</li>
+<li>$\phi$ 是或然式當且僅當 $\phi$ 和 $\neg \phi$ 都可滿足；</li>
+<li>$\phi$ 是重言式當且僅當 $\neg \phi$ 是矛盾式；</li>
+<li>$\phi$ 是矛盾式當且僅當 $\neg \phi$ 是重言式；</li>
+<li>$\phi$ 是或然式當且僅當 $\neg \phi$ 是或然式。</li>
+</ol>
 </blockquote>
-<p>\begin{exercisep}{}<br />
-證明範式存在定理，即定理 \pref{theo:of-disjunctive-normal-form} 和定理 \pref{theo:of-conjunctive-normal-form}。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-證明：每個含 $n$ 個命題變號 $q_0, \cdots, q_{n-1}$ 的 $\mathscr{L}_0$-公式都表達一個 $n$ 元眞值函數。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-設 $\varphi$ 和 $\psi$ 爲任意 $\mathscr{L}_0$-公式，其中出現的命題變號相同。證明：$\varphi$ 與 $\psi$ 表達同一個眞值函數當且僅當 $\varphi$ 與 $\psi$ 重言等值。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-證明：對每個 $\mathscr{L}<em>{\neg, \lor, \land}$-公式 $\varphi$，存在 $\mathscr{L}</em>{\neg, \lor}$-公式（$\mathscr{L}<em>{\neg, \land}$-公式、$\mathscr{L}</em>{\neg, \rightarrow}$-公式）$\varphi^{\prime}$，使得 $\varphi$ 與 $\varphi^{\prime}$ 重言等值並且 $\varphi$ 與 $\varphi^{\prime}$ 含相同的命題變號。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-證明：用 $\mid$ 定義 $\rightarrow$ 和 $\land$，用 $||$ 定義 $\lor$ 和 $\rightarrow$，並證明 $\lbrace \mid\rbrace$ 和 $\lbrace |\rbrace$ 分別都是函數完全的。<br />
-\end{exercisep}</p>
-<p>\begin{exercisep}{}<br />
-證明：$\lbrace \neg \leftrightarrow\rbrace$ 不可定義 $\lor$，$\lbrace \neg \veebar\rbrace$ 不可定義 $\land$，且 $\lbrace \lor, \land, \rightarrow, \leftrightarrow\rbrace$ 不可定義 $\neg.$<br />
-\end{exercisep}</p>
-<p>設 $\mathbb{F}$ 爲任意眞值函數集合，並設 $f$ 爲任意眞值函數。如果 $f$ 可以由 $\mathbb{F}$ 中的函數複合而成，我們就稱 $f$ 是 $\mathbb{F}$ 可定義的。下述習題的目的，是直接證明「函數版本」的函數完全性（見\jieref{subsec:function-in-formal-lang} 開端處的說明）。這個證明應比\jieref{subsec:function-connector-complete} 中的證明「漂亮」，儘管思路可以差不多。熟悉函數複合的讀者可以試做。</p>
+<blockquote>
+<p><bb>習題 3.9 證明：對所有公式 $\phi$，</bb></p>
+<ol>
+<li>$\phi$ 是重言式當且僅當 $p_0 \lor \neg p_0$ 重言蘊涵 $\phi$.</li>
+<li>$\phi$ 是矛盾式當且僅當 $\phi$ 重言蘊涵 $p_0 \land \neg p_0$.</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.10</bb><br />
+設 $\mathfrak{s}^{\prime}$ 和 $\mathfrak{s}^{\prime \prime}$ 都是有窮代入。證明：$\mathfrak{s}^{\prime}\mathfrak{s}^{\prime \prime}$ 也是有窮代入。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.11</bb><br />
+設 $\phi$ 和 $\psi$ 爲任意公式，並設 $p$ 和 $q$ 爲任意命題變號，其中 $q$ 不在 $\phi$ 中出現。證明：$\phi(\psi / p)=\phi(q / p)(\psi / q)$.</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.12</bb><br />
+證明：對所有公式 $\phi$ 及其子公式 $\psi$，存在公式 $\chi$ 和命題變號 $p$ 使得 $\phi=\chi(\psi / p)$，並說明即使對同一個這樣的 $p$，$\chi$ 也不是唯一的。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.13</bb><br />
+設 $\varnothing  \neq A \subseteq  \mathbf{Pr}$，設 $\mathfrak{s}$ 和 $\mathfrak{s}^{\prime}$ 爲任意代入，並設 $\sigma$ 和 $\sigma^{\prime}$ 爲任意眞值指派，滿足對每一個 $p \in A,(\mathfrak{s}(p))^{\sigma}=\left(\mathfrak{s}^{\prime}(p)\right)^{\sigma^{\prime}}$. 證明：對所有 $A$-公式$\phi$，$(\phi(\mathfrak{s}))^{\sigma}=(\phi(\mathfrak{s}^{\prime}))^{\sigma^{\prime}}$.</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.14</bb><br />
+試從習題 3.13 直接證明定理 3.0（P.112）。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.15</bb><br />
+試從定理 3.1 直接證明定理 3.0（P.112）。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.16</bb><br />
+證明推論 3.4（P.114）（提示：先將置換結果講清楚）；然後試用推論 3.4 直接證明推論 3.3。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.17</bb><br />
+設 $\phi$ 爲重言式，並設 $\mathfrak{s}$ 爲任意代入。證明：$\phi(\mathfrak{s})$ 是重言式。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.18</bb><br />
+運用重言蘊涵等語義概念的「嚴格定義」，證明習題 2.17（P.97）和習題 2.18（P.98）中的各個命題。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.19</bb><br />
+完成命題 3.13（P.118）的證明</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.20 證明下列命題：</bb></p>
+</blockquote>
+  <div>
+  <div class="dtpcboxtitle">
+  	<span style="font-family:SYHei Heavy;">☯命題 3.16</span>
+  </div>
+  <div class="dtpcbox">
+  <span style="font-family:SYHei Regular;"><p>設 $\phi$ 和 $\psi$ 爲任意不含相同命題變號的公式。證明：</p>
+<blockquote>
+<ol>
+<li>$\phi \rightarrow \psi$ 是重言式當且僅當或者 $\phi$ 是矛盾式或者 $\psi$ 是重言式。</li>
+<li>$\phi \leftrightarrow \psi$ 是重言式當且僅當或者 $\phi$ 和 $\psi$ 都是矛盾式或者 $\phi$ 和 $\psi$ 都是重言式。</li>
+</ol>
+</blockquote>
+</span>
+  </div>
+  </div>
+<blockquote>
+<p><bb>習題 3.21 求下列公式的析取範式與合取範式：</bb></p>
+<ol>
+<li>$p \vee q \rightarrow p \wedge q$</li>
+<li>$p \wedge q \rightarrow(\neg r \rightarrow p)$</li>
+<li>$(p \rightarrow q \wedge r) \rightarrow(\neg p \rightarrow \neg q \wedge \neg r)$</li>
+<li>$(p \rightarrow q \vee \neg r) \leftrightarrow(r \rightarrow q \wedge \neg p)$</li>
+<li>$p \vee q \rightarrow(p \rightarrow \neg q)$</li>
+<li>$(p \vee q) \wedge((r \rightarrow \neg p \wedge \neg q) \wedge(\neg r \rightarrow r))$</li>
+<li>$(p \rightarrow \neg q \wedge r) \leftrightarrow(q \vee(\neg r \wedge p))$</li>
+<li>$((p \rightarrow q) \rightarrow p) \rightarrow q) \rightarrow r$</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.22</bb><br />
+證明範式存在定理，卽定理 3.2（P.120）和定理 3.3（P.121）</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.23</bb><br />
+證明：每個含 $n$ 個命題變號 $q_0, \cdots, q_{n-1}$ 的 $\mathscr{L}_0$-公式都表達一個 $n$ 元眞值函數。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.24</bb><br />
+設 $\phi$ 和 $\psi$ 爲任意 $\mathscr{L}_0$-公式，其中出現的命題變號相同。證明：$\phi$ 與 $\psi$ 表達同一個眞值函數當且僅當 $\phi$ 與 $\psi$ 重言等值。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.25</bb><br />
+證明：對每個 $\mathscr{L}_{\neg, \lor, \land}$-公式 $\phi$，</p>
+<ol>
+<li>存在 $\mathscr{L}_{\neg, \lor}$-公式 $\phi^{\prime}$，使得 $\phi$ 與 $\phi^{\prime}$ 重言等值並且 $\phi$ 與 $\phi^{\prime}$ 含相同的命題變號。</li>
+<li>存在 $\mathscr{L}_{\neg, \land}$-公式 $\phi^{\prime}$，使得 $\phi$ 與 $\phi^{\prime}$ 重言等值並且 $\phi$ 與 $\phi^{\prime}$ 含相同的命題變號。</li>
+<li>存在 $\mathscr{L}_{\neg, \rightarrow}$-公式 $\phi^{\prime}$，使得 $\phi$ 與 $\phi^{\prime}$ 重言等值並且 $\phi$ 與 $\phi^{\prime}$ 含相同的命題變號。</li>
+</ol>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.26</bb><br />
+證明：用 $\mid$ 定義 $\rightarrow$ 和 $\land$，用 $||$ 定義 $\lor$ 和 $\rightarrow$，並證明 $\lbrace \mid\rbrace$ 和 $\lbrace |\rbrace$ 分別都是函數完全的。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.27</bb><br />
+證明：$\lbrace \neg \leftrightarrow\rbrace$ 不可定義 $\lor$，$\lbrace \neg \veebar\rbrace$ 不可定義 $\land$，且 $\lbrace \lor, \land, \rightarrow, \leftrightarrow\rbrace$ 不可定義 $\neg$.</p>
+</blockquote>
+<p>設 $\mathbb{F}$ 爲任意眞值函數集合，並設 $f$ 爲任意眞值函數。如果 $f$ 可以由 $\mathbb{F}$ 中的函數複合而成，我們就稱 $f$ 是 $\mathbb{F}$ 可定義的。下述習題的目的，是直接證明「函數版本」的函數完全性（見§3.5.0（P.122）開端處的説明）。這個證明應比§3.5.1（P.124）中的證明「漂亮」，儘管思路可以差不多。熟悉函數複合的讀者可以試做。</p>
 <p>對每個自然數 $n&gt;0$，令 $f_{\lor, n}$ 爲 $n$ 元眞值函數，使得對所有 $a_{0}, \cdots, a_{n-1} \in\lbrace 0,1\rbrace$，$f_{\lor, n}(a_{0}, \cdots, a_{n-1})=1$ 當且僅當 $a_{0}, \cdots, a_{n-1}$ 中至少有一個是 1；並令 $f_{\wedge, n}$ 爲 $n$ 元眞值函數，使得對所有 $a_{0}, \cdots, a_{n-1} \in \lbrace 1, 0\rbrace$，$f_{\wedge, n}(a_{0}, \cdots, a_{n-1})=1$ 當且僅當 $a_{0}, \cdots, a_{n+1}$ 都是 1.</p>
-<p>\begin{exercisep}{}<br />
-令 $\mathbb{F}=\lbrace f_{\neg}\rbrace \cup\lbrace f_{\vee, n}: n&gt;0\rbrace \cup\lbrace f_{\wedge, n}: n&gt;0\rbrace.$ 證明：所有眞值函數都是 $\mathbb{F}$ 可定義的。<br />
-\end{exercisep}</p>
-<p>\begin{exercise}{證明：}</p>
 <blockquote>
-<p>所有眞值函數都是 $\lbrace f_{\neg}, f_{\lor}, f_{\wedge}\rbrace$-可定義的；<br />
-所有眞值函數都是  $\lbrace f_{\neg}, f_{\lor}\rbrace$-可定義的，都是 $\lbrace f_{\neg}, f_{\wedge}\rbrace$-可定義的，並且都是 $\lbrace f_{\neg}, f_{\rightarrow}\rbrace$-可定義的；<br />
-所有眞值函數都是 $\lbrace f_{\mid}\rbrace$-可定義的，並且都是 $\lbrace f_{|}\rbrace$-可定義的。<br />
-\end{exercise}</p>
+<p><bb>習題 3.28</bb><br />
+令 $\mathbb{F}=\lbrace f_{\neg}\rbrace \cup\lbrace f_{\vee, n}: n&gt;0\rbrace \cup\lbrace f_{\wedge, n}: n&gt;0\rbrace$. 證明：所有眞值函數都是 $\mathbb{F}$ 可定義的。</p>
+</blockquote>
+<blockquote>
+<p><bb>習題 3.29 證明：</bb></p>
+<ol>
+<li>所有眞值函數都是 $\lbrace f_{\neg}, f_{\lor}, f_{\wedge}\rbrace$-可定義的；</li>
+<li>所有眞值函數都是  $\lbrace f_{\neg}, f_{\lor}\rbrace$-可定義的，都是 $\lbrace f_{\neg}, f_{\wedge}\rbrace$-可定義的，並且都是 $\lbrace f_{\neg}, f_{\rightarrow}\rbrace$-可定義的；</li>
+<li>所有眞值函數都是 $\lbrace f_{\mid}\rbrace$-可定義的，並且都是 $\lbrace f_{|}\rbrace$-可定義的。</li>
+</ol>
 </blockquote>
 
-<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Monday, September 7, 2020, 18:42:42 by 王小花.</p>
+<p style="font-family:SYHei Bold;text-align:right"><span class="gengxin"></span>The article was recently updated on Monday, September 7, 2020, 22:02:17 by 王小花.</p>
     </article>
     
     <script>
@@ -3738,6 +3793,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <li><a href="#具有函數完全性的幾組眞值函數聯結詞">具有函數完全性的幾組眞值函數聯結詞</a></li>
       </ul>
     </li>
+    <li><a href="#本章習題">本章習題</a></li>
   </ul>
 </nav>
   </div>
