@@ -22,120 +22,40 @@
 
       
       <item>
-        <title>Fourth</title>
-        <link>https://mengxianjun.org/presentation/dir/fourth/</link>
-        <pubDate>Wed, 30 Oct 2019 20:48:10 +0900</pubDate>
+        <title>Logic 01 Slides</title>
+        <link>https://mengxianjun.org/presentation/logic-slides/ch00-slides/</link>
+        <pubDate>Mon, 07 Sep 2020 22:16:30 +0800</pubDate>
         <author>nous@mengxianjun.com (Duōyú Rén)</author>
-        <atom:modified>Sun, 15 Mar 2020 20:24:23 +0800</atom:modified>
-        <guid>https://mengxianjun.org/presentation/dir/fourth/</guid>
+        <atom:modified>Mon, 07 Sep 2020 22:39:54 +0800</atom:modified>
+        <guid>https://mengxianjun.org/presentation/logic-slides/ch00-slides/</guid>
         <description></description>
         
-        <dc:creator>Duōyú Rén</dc:creator>
-        <media:content url="https://mengxianjun.org/images/feature/number-four.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <dc:creator>李二狗</dc:creator>
+        <media:content url="https://mengxianjun.org//images/author/schoollogo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
           
+            
+              <category>logic</category>
+            
+          
+            
+              <category>lecture</category>
             
           
         
         
           
             
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Third</title>
-        <link>https://mengxianjun.org/presentation/third/</link>
-        <pubDate>Wed, 30 Oct 2019 20:46:30 +0900</pubDate>
-        <author>nous@mengxianjun.com (Duōyú Rén)</author>
-        <atom:modified>Sun, 15 Mar 2020 20:23:19 +0800</atom:modified>
-        <guid>https://mengxianjun.org/presentation/third/</guid>
-        <description></description>
-        
-        <dc:creator>Duōyú Rén</dc:creator>
-        <media:content url="https://mengxianjun.org/images/feature/number-three.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
+              <category>logic-slides</category>
             
           
         
         
           
             
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Second</title>
-        <link>https://mengxianjun.org/presentation/second/</link>
-        <pubDate>Wed, 30 Oct 2019 20:45:24 +0900</pubDate>
-        <author>nous@mengxianjun.com (Duōyú Rén)</author>
-        <atom:modified>Sun, 15 Mar 2020 20:23:12 +0800</atom:modified>
-        <guid>https://mengxianjun.org/presentation/second/</guid>
-        <description></description>
-        
-        <dc:creator>Duōyú Rén</dc:creator>
-        <media:content url="https://mengxianjun.org/images/feature/number-two.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>First</title>
-        <link>https://mengxianjun.org/presentation/first/</link>
-        <pubDate>Wed, 30 Oct 2019 19:45:20 +0900</pubDate>
-        <author>nous@mengxianjun.com (Duōyú Rén)</author>
-        <atom:modified>Sun, 15 Mar 2020 20:23:05 +0800</atom:modified>
-        <guid>https://mengxianjun.org/presentation/first/</guid>
-        <description></description>
-        
-        <dc:creator>Duōyú Rén</dc:creator>
-        <media:content url="https://mengxianjun.org/images/feature/number-one.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-          
-        
-        
-          
+              <category>logic</category>
             
           
         

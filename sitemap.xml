@@ -44,7 +44,7 @@
   
   <url>
     <loc>https://mengxianjun.org/books/logic/ch02/</loc>
-    <lastmod>2020-09-07T01:20:51+08:00</lastmod>
+    <lastmod>2020-09-07T22:07:18+08:00</lastmod>
   </url>
   
   <url>
@@ -84,7 +84,7 @@
   
   <url>
     <loc>https://mengxianjun.org/books/logic/ch04/</loc>
-    <lastmod>2020-09-01T06:10:41+08:00</lastmod>
+    <lastmod>2020-09-07T23:55:13+08:00</lastmod>
   </url>
   
   <url>
@@ -264,37 +264,47 @@
   
   <url>
     <loc>https://mengxianjun.org/categories/</loc>
-    <lastmod>2020-09-07T22:04:21+08:00</lastmod>
+    <lastmod>2020-09-07T23:55:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mengxianjun.org/tags/lecture/</loc>
-    <lastmod>2020-09-07T22:04:21+08:00</lastmod>
+    <lastmod>2020-09-07T23:55:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mengxianjun.org/tags/logic/</loc>
-    <lastmod>2020-09-07T22:04:21+08:00</lastmod>
+    <lastmod>2020-09-07T23:55:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mengxianjun.org/series/logic/</loc>
-    <lastmod>2020-09-07T22:04:21+08:00</lastmod>
+    <lastmod>2020-09-07T23:55:13+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mengxianjun.org/categories/logic/</loc>
-    <lastmod>2020-09-07T22:04:21+08:00</lastmod>
+    <loc>https://mengxianjun.org/presentation/logic-slides/ch00-slides/</loc>
+    <lastmod>2020-09-07T22:39:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/categories/logic-slides/</loc>
+    <lastmod>2020-09-07T22:39:54+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mengxianjun.org/series/</loc>
-    <lastmod>2020-09-07T22:04:21+08:00</lastmod>
+    <lastmod>2020-09-07T23:55:13+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mengxianjun.org/tags/</loc>
-    <lastmod>2020-09-07T22:04:21+08:00</lastmod>
+    <lastmod>2020-09-07T23:55:13+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mengxianjun.org/categories/logic/</loc>
+    <lastmod>2020-09-07T23:55:13+08:00</lastmod>
   </url>
   
   <url>
@@ -405,26 +415,6 @@
   <url>
     <loc>https://mengxianjun.org/gallery/photo/</loc>
     <lastmod>2020-03-15T20:23:39+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mengxianjun.org/presentation/dir/fourth/</loc>
-    <lastmod>2020-03-15T20:24:23+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mengxianjun.org/presentation/third/</loc>
-    <lastmod>2020-03-15T20:23:19+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mengxianjun.org/presentation/second/</loc>
-    <lastmod>2020-03-15T20:23:12+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mengxianjun.org/presentation/first/</loc>
-    <lastmod>2020-03-15T20:23:05+08:00</lastmod>
   </url>
   
   <url>
