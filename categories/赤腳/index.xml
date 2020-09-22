@@ -7,16 +7,16 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>赤腳 on Duōyú Rén</title>
-    <link>https://mengxianjun.org/categories/%E8%B5%A4%E8%85%B3/</link>
+    <link>https://duoyu.ren/categories/%E8%B5%A4%E8%85%B3/</link>
     <description>Recent content in 赤腳 on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>nous@mengxianjun.com (Duōyú Rén)</managingEditor>
     <webMaster>nous@mengxianjun.com (Duōyú Rén)</webMaster>
-    <copyright>&amp;copy;2016-{year}, All Rights Reserved</copyright>
+    <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 07 Jan 2020 22:41:40 +0800</lastBuildDate>
     
-        <atom:link href="https://mengxianjun.org/categories/%E8%B5%A4%E8%85%B3/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/categories/%E8%B5%A4%E8%85%B3/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>「基础写作」试题解答与评分标准说明</title>
-        <link>https://mengxianjun.org/articles/20200107-fen-shu-shuo-ming/</link>
+        <link>https://duoyu.ren/articles/20200107-fen-shu-shuo-ming/</link>
         <pubDate>Tue, 07 Jan 2020 22:41:40 +0800</pubDate>
         <author>nous@mengxianjun.com (Duōyú Rén)</author>
         <atom:modified>Tue, 01 Sep 2020 06:53:52 +0800</atom:modified>
-        <guid>https://mengxianjun.org/articles/20200107-fen-shu-shuo-ming/</guid>
+        <guid>https://duoyu.ren/articles/20200107-fen-shu-shuo-ming/</guid>
         <description>课程分数公布后，许多同学对「基础写作」卷面分数有疑问。为了防止大家想不开，特在此公布试题解答与评分标准，并就相关问题略加解释，希望能够取得大</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://mengxianjun.org//images/author/schoollogo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren//images/author/schoollogo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -58,15 +58,15 @@
       
       <item>
         <title>過去的六個九月十號</title>
-        <link>https://mengxianjun.org/articles/20180910-teacher-day/</link>
+        <link>https://duoyu.ren/articles/20180910-teacher-day/</link>
         <pubDate>Mon, 10 Sep 2018 15:25:25 +0800</pubDate>
         <author>nous@mengxianjun.com (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Mar 2020 17:08:45 +0800</atom:modified>
-        <guid>https://mengxianjun.org/articles/20180910-teacher-day/</guid>
+        <guid>https://duoyu.ren/articles/20180910-teacher-day/</guid>
         <description>編按：今日決定「歸正」。閉門一日，完善域名。趁着網站由 http 協議轉爲 https 協議的機會，臨時拼湊一文，以測試網站訪問效果。東西南北，征途漫漫。男女老幼</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://mengxianjun.org//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

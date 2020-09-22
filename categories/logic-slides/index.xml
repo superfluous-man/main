@@ -7,16 +7,16 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>logic-slides on Duōyú Rén</title>
-    <link>https://mengxianjun.org/categories/logic-slides/</link>
+    <link>https://duoyu.ren/categories/logic-slides/</link>
     <description>Recent content in logic-slides on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>nous@mengxianjun.com (Duōyú Rén)</managingEditor>
     <webMaster>nous@mengxianjun.com (Duōyú Rén)</webMaster>
-    <copyright>&amp;copy;2016-{year}, All Rights Reserved</copyright>
+    <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 07 Sep 2020 22:16:30 +0800</lastBuildDate>
     
-        <atom:link href="https://mengxianjun.org/categories/logic-slides/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/categories/logic-slides/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>Logic 01 Slides</title>
-        <link>https://mengxianjun.org/presentation/logic-slides/ch00-slides/</link>
+        <link>https://duoyu.ren/presentation/logic-slides/ch00-slides/</link>
         <pubDate>Mon, 07 Sep 2020 22:16:30 +0800</pubDate>
         <author>nous@mengxianjun.com (Duōyú Rén)</author>
         <atom:modified>Mon, 07 Sep 2020 22:39:54 +0800</atom:modified>
-        <guid>https://mengxianjun.org/presentation/logic-slides/ch00-slides/</guid>
+        <guid>https://duoyu.ren/presentation/logic-slides/ch00-slides/</guid>
         <description></description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://mengxianjun.org//images/author/schoollogo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren//images/author/schoollogo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
