@@ -1223,7 +1223,7 @@
     <meta property="twitter:description" content="The material in this chapter is an introduction to basic naïve set theory. Sets, Relations, Functions, The Size of Sets.">
   
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.75.1" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1719,7 +1719,7 @@ if (!doNotTrack) {
   
 &middot; <time class="single__info" title="Modified At"> 📝&nbsp;Sep 6, 2020 </time>
   
-&middot; 🔢 20021 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 40 min read</span>
+&middot; 🔢 20003 words&middot; <span class="single__info" title="Reading Time"> ⏲️ 40 min read</span>
  <span class="single__info">
  &middot; 👀<span id="busuanzi_value_page_pv">...</span> views
   </span>
@@ -1842,7 +1842,7 @@ if (!doNotTrack) {
   </div>
 <h1 id="集合属性元素外延">集合：属性、元素、外延</h1>
 <h2 id="extensionality">Extensionality</h2>
-<p>A <bb>set</bb> is a collection of objects, considered {as} a single object. The objects making up the set are called <bb>elements</bb> or <bb>members</bb> of the set. If $x$ is an <bb>element</bb> of a set $a$, we write $x \in a$; if not, we write $x \notin a$. The set which has no <bb>element</bb>s is called the <bb>empty</bb> set and denoted &ldquo;$\varnothing$&rsquo;&rsquo;.</p>
+<p>A <bb>set</bb> is a collection of objects, considered {as} a single object. The objects making up the set are called <bb>elements</bb> or <bb>members</bb> of the set. If $x$ is an <bb>element</bb> of a set $a$, we write $x \in a$; if not, we write $x \notin a$. The set which has no <bb>element</bb>s is called the <bb>empty</bb> set and denoted &ldquo;$\varnothing$''.</p>
 <p>It does not matter how we <bb>specify</bb> the set, or how we <bb>order</bb> its <bb>element</bb>s, or indeed how <bb>many times</bb> we count its <bb>element</bb>s. All that matters are what its <bb>element</bb>s are. We codify this in the following principle.</p>
   <div>
   <div class="dtpcboxtitle">
@@ -1852,7 +1852,7 @@ if (!doNotTrack) {
   <span style="font-family:SYHei Regular;">If $A$ and $B$ are sets, then $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$, and vice versa.</span>
   </div>
   </div>
-<p>Extensionality licenses some notation. In general, when we have some objects $a_{1}, \cdots, a_{n}$, then $\lbrace a_{1}, \cdots, a_{n}\rbrace$ is <bb>the</bb> set whose <bb>element</bb>s are $a_1, \ldots, a_n$. We emphasise the word &ldquo;<bb>the</bb>&rsquo;&rsquo;, since extensionality tells us that there can be only <bb>one</bb> such set. Indeed, extensionality also licenses the following:</p>
+<p>Extensionality licenses some notation. In general, when we have some objects $a_{1}, \cdots, a_{n}$, then $\lbrace a_{1}, \cdots, a_{n}\rbrace$ is <bb>the</bb> set whose <bb>element</bb>s are $a_1, \ldots, a_n$. We emphasise the word &ldquo;<bb>the</bb>'', since extensionality tells us that there can be only <bb>one</bb> such set. Indeed, extensionality also licenses the following:</p>
 <p>$$\lbrace a, a, b \rbrace = \lbrace a, b \rbrace = \lbrace b,a \rbrace. $$</p>
 <p>This delivers on the point that, when we consider sets, we don&rsquo;t care about the order of their <bb>element</bb>s, or how many times they are specified.</p>
   <div>
@@ -1881,7 +1881,7 @@ if (!doNotTrack) {
 $$\lbrace 6 \rbrace = \lbrace x:  \text{is perfect and } 0 \leqslant x \leqslant 10 \rbrace.$$</span>
   </div>
   </div>
-<p>We read the notation on the right as &ldquo;the set of $x$'s such that $x$ is perfect and $0 \leqslant x \leqslant 10$&rsquo;&rsquo;. The identity here confirms that, when we consider sets, we don&rsquo;t care about how they are specified. And, more generally, extensionality guarantees that there is always only one set of $x$'s such that $\varphi(x)$. So, extensionality justifies calling $\lbrace x: \varphi(x)\rbrace$ <bb>the</bb> set of $x$'s such that $\varphi(x)$.</p>
+<p>We read the notation on the right as &ldquo;the set of $x$&rsquo;s such that $x$ is perfect and $0 \leqslant x \leqslant 10$''. The identity here confirms that, when we consider sets, we don&rsquo;t care about how they are specified. And, more generally, extensionality guarantees that there is always only one set of $x$&rsquo;s such that $\varphi(x)$. So, extensionality justifies calling $\lbrace x: \varphi(x)\rbrace$ <bb>the</bb> set of $x$&rsquo;s such that $\varphi(x)$.</p>
 <p>Extensionality gives us a way for showing that sets are identical: to show that $A = B$, show that whenever $x \in A$ then also $x \in B$, and whenever $y \in B$ then also $y \in A$.</p>
 <blockquote>
 <p><bb>Problem 1.0</bb><br />
@@ -1913,7 +1913,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
   <span style="font-family:SYHei Regular;">The number $2$ is an <bb>element</bb> of the set of integers, whereas the set of even numbers is a subset of the set of integers. However, a set may happen to <bb>both</bb> be an <bb>element</bb> and a subset of some other set, e.g., $\lbrace 0\rbrace  \in \lbrace 0, \lbrace 0 \rbrace\rbrace$ and also $\lbrace 0\rbrace \subseteq \lbrace 0, \lbrace 0\rbrace\rbrace$.</span>
   </div>
   </div>
-<p>Extensionality gives a criterion of identity for sets: $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$ and vice versa. The definition of &ldquo;subset&rsquo;&rsquo; defines $A \subseteq B$ precisely as the first half of this criterion: every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$. Of course the definition also applies if we switch $A$ and $B$: that is, $B \subseteq A$ iff every <bb>element</bb> of $B$ is also an <bb>element</bb> of $A$. And that, in turn, is exactly the &ldquo;vice versa&rsquo;&rsquo; part of extensionality. In other words, extensionality entails that sets are equal iff they are subsets of one another.</p>
+<p>Extensionality gives a criterion of identity for sets: $A = B$ iff every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$ and vice versa. The definition of &ldquo;subset'' defines $A \subseteq B$ precisely as the first half of this criterion: every <bb>element</bb> of $A$ is also an <bb>element</bb> of $B$. Of course the definition also applies if we switch $A$ and $B$: that is, $B \subseteq A$ iff every <bb>element</bb> of $B$ is also an <bb>element</bb> of $A$. And that, in turn, is exactly the &ldquo;vice versa'' part of extensionality. In other words, extensionality entails that sets are equal iff they are subsets of one another.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯命題 1.0</span>
@@ -1922,7 +1922,7 @@ Prove that there is at most one empty set, i.e., show that if $A$ and $B$ are se
   <span style="font-family:SYHei Regular;">$A = B$ iff both $A \subseteq B$ and $B \subseteq A$.</span>
   </div>
   </div>
-<p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when $A$ is a subset of $B$ we said that &ldquo;every <bb>element</bb> of $A$ is $\cdots$,&rsquo;&rsquo; and filled the &ldquo;$\cdots$&rsquo;&rsquo; with &ldquo;an <bb>element</bb> of $B$&rsquo;&rsquo;. But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
+<p>Now is also a good opportunity to introduce some further bits of helpful notation. In defining when $A$ is a subset of $B$ we said that &ldquo;every <bb>element</bb> of $A$ is $\cdots$,'' and filled the &ldquo;$\cdots$'' with &ldquo;an <bb>element</bb> of $B$''. But this is such a common <bb>shape</bb> of expression that it will be helpful to introduce some formal notation for it.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯定義 1.2</span>
@@ -1984,7 +1984,7 @@ These are all <bb>infinite</bb> sets, that is, they each have infinitely many <b
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>Another interesting example  is the set ${A}^{*}$ of  <bb>finite strings</bb> over an alphabet $A$: any finite sequence of elements of $A$ is a string over $A$. We include the <bb>empty string $\Lambda$</bb> among the strings over $A$, for every alphabet $A$. For instance,</p>
 <p>$$\mathbb{B}^*=\lbrace \Lambda,0,1,00,01,10,11,000,001,010,011,100,101,110,111,0000,\cdots\rbrace .$$</p>
-<p>If $x=x_{1}\ldots x_{n}\in A^{*}$ is a string consisting of $n$ &ldquo;letters&rsquo;&rsquo; from $A$, then we say <bb>length</bb> of the string is $n$ and write $\text{len } {x}=n$.</p>
+<p>If $x=x_{1}\ldots x_{n}\in A^{*}$ is a string consisting of $n$ &ldquo;letters'' from $A$, then we say <bb>length</bb> of the string is $n$ and write $\text{len } {x}=n$.</p>
 </span>
   </div>
   </div>
@@ -2021,7 +2021,7 @@ $$A \cup B = \lbrace x: x \in A \lor x \in B\rbrace $$</span>
 <p><bb>Problem 1.3</bb><br />
 Prove that if $A \subseteq B$, then $A \cup B = B$.</p>
 </blockquote>
-<p>We can also consider a &ldquo;dual&rsquo;&rsquo; operation to union. This is the operation that forms the set of all <bb>element</bb>s that are <bb>element</bb>s of $A$ and are also <bb>element</bb>s of $B$. This operation is called <bb>intersection</bb>, and can be depicted as in Figure 1.1.</p>
+<p>We can also consider a &ldquo;dual'' operation to union. This is the operation that forms the set of all <bb>element</bb>s that are <bb>element</bb>s of $A$ and are also <bb>element</bb>s of $B$. This operation is called <bb>intersection</bb>, and can be depicted as in Figure 1.1.</p>
 <p><img src="https://i.loli.net/2020/09/03/Fi7BoED2vNAHXkz.png" alt="intersectionofsets" /></p>
   <div>
   <div class="dtpcboxtitle">
@@ -2217,12 +2217,12 @@ Show, by induction on $k$, that for all $k \ge 1$, if $A$ has $n$ <bb>element</b
   	<span style="font-family:SYHei Heavy;">☯例 1.14</span>
   </div>
   <div class="dtpcexbox">
-  <span style="font-family:SYHei Regular;">If $A$ is a set, a <bb>word</bb> over $A$ is any sequence of <bb>element</bb>s of $A$. A sequence can be thought of as an $n$-tuple of <bb>element</bb>s of $A$. For instance, if $A = \lbrace a, b, c\rbrace $, then the sequence &ldquo;$bac$&rsquo;&rsquo; can be thought of as the triple $⟨b, a, c⟩$. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of $A$ as sequences of length $1$, and $\varnothing$ as the sequence of length $0$. The set of <bb>all</bb> words over $A$ then is<br />
+  <span style="font-family:SYHei Regular;">If $A$ is a set, a <bb>word</bb> over $A$ is any sequence of <bb>element</bb>s of $A$. A sequence can be thought of as an $n$-tuple of <bb>element</bb>s of $A$. For instance, if $A = \lbrace a, b, c\rbrace $, then the sequence &ldquo;$bac$'' can be thought of as the triple $⟨b, a, c⟩$. Words, i.e., sequences of symbols, are of crucial importance in computer science. By convention, we count <bb>element</bb>s of $A$ as sequences of length $1$, and $\varnothing$ as the sequence of length $0$. The set of <bb>all</bb> words over $A$ then is<br />
 $$A^* = \lbrace \varnothing\rbrace  \cup A \cup A^2 \cup A^3 \cup \cdots$$</span>
   </div>
   </div>
 <h2 id="russells-paradox">Russell&rsquo;s Paradox</h2>
-<p>Extensionality licenses the notation $\lbrace x: \phi(x)\rbrace $, for <bb>the</bb> set of $x$'s such that $\phi(x)$. However, all that extensionality <bb>really</bb> licenses is the following thought. <bb>If</bb> there is a set whose members are all and only the $\phi$'s, <bb>then</bb> there is only one such set. Otherwise put: having fixed some $\phi$, the set $\lbrace x: \phi(x)\rbrace $ is unique, <strong>if it exists</strong>.</p>
+<p>Extensionality licenses the notation $\lbrace x: \phi(x)\rbrace $, for <bb>the</bb> set of $x$&rsquo;s such that $\phi(x)$. However, all that extensionality <bb>really</bb> licenses is the following thought. <bb>If</bb> there is a set whose members are all and only the $\phi$&rsquo;s, <bb>then</bb> there is only one such set. Otherwise put: having fixed some $\phi$, the set $\lbrace x: \phi(x)\rbrace $ is unique, <strong>if it exists</strong>.</p>
 <p>But this conditional is important! Crucially, not every property lends itself to <bb>comprehension</bb>. That is, some  properties do <bb>not</bb> define sets. If they all did, then we would run into outright contradictions. The most famous example of this is Russell&rsquo;s Paradox.</p>
 <p>Sets may be <bb>element</bb>s of other sets&mdash;for instance, the power set of a set $A$ is made up of sets. And so it makes sense to ask or investigate whether a set is an <bb>element</bb> of another set. Can a set be a member of itself?  Nothing about the idea of a set seems to rule this out. For instance, if <bb>all</bb> sets form a collection of objects, one might think that they can be collected into a single set&mdash;the set of all sets. And it, being a set, would be an <bb>element</bb> of the set of all sets.</p>
 <p>Russell&rsquo;s Paradox arises when we consider the property of not having itself as an <bb>element</bb>, of being <bb>non-self-membered</bb>. What if we suppose that there is a set of all sets that do not have themselves as an <bb>element</bb>? Does $$R = \lbrace x: x \notin x\rbrace$$ exist? It turns out that we can prove that it does not.</p>
@@ -2289,7 +2289,7 @@ List the <bb>element</bb>s of the relation $\subseteq$ on the set $\mathscr{P}({
 </blockquote>
 <h2 id="philosophical-reflections">Philosophical Reflections</h2>
 <p>In §1.1.0（P.26）, we defined relations as certain sets. We should pause and ask a quick philosophical question: what is such a definition <bb>doing</bb>? It is extremely doubtful that we should want to say that we have <bb>discovered</bb> some metaphysical identity facts; that, for example, the order relation on $\mathbb{N}$ <strong>turned out</strong> to be the set $R=  \lbrace ⟨n,m⟩: n, m \in \mathbb{N}\text{ and } n &lt; m\rbrace $ we defined in §1.1.0（P.26）. Here are three reasons why.</p>
-<p>First: in Definition 1.9, we defined $⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace $. Consider instead the definition $\lVert a, b\rVert = \lbrace \lbrace b\rbrace , \lbrace a, b\rbrace \rbrace  = ⟨b,a⟩$. When $a \neq b$, we have that $⟨a, b⟩ \neq \lVert a,b\rVert$. But we could equally have regarded $\lVert a,b\rVert$ as our definition of an ordered pair, rather than $⟨a,b⟩$. Both definitions would have worked equally well. So now we have two equally good candidates to &ldquo;be&rsquo;&rsquo; the order relation on the natural numbers, namely:</p>
+<p>First: in Definition 1.9, we defined $⟨a, b⟩ = \lbrace \lbrace a\rbrace , \lbrace a, b\rbrace \rbrace $. Consider instead the definition $\lVert a, b\rVert = \lbrace \lbrace b\rbrace , \lbrace a, b\rbrace \rbrace  = ⟨b,a⟩$. When $a \neq b$, we have that $⟨a, b⟩ \neq \lVert a,b\rVert$. But we could equally have regarded $\lVert a,b\rVert$ as our definition of an ordered pair, rather than $⟨a,b⟩$. Both definitions would have worked equally well. So now we have two equally good candidates to &ldquo;be'' the order relation on the natural numbers, namely:</p>
 <p>
 $$
 \begin{aligned}
@@ -2300,7 +2300,7 @@ $$
 </p>
 <p>Since $R \neq S$, by extensionality, it is clear that they cannot <bb>both</bb> be identical to the order relation on $\mathbb{N}$. But it would just be arbitrary, and hence a bit embarrassing, to claim that $R$ rather than $S$ (or vice versa) <bb>is</bb> the ordering relation, as a matter of fact. (This is a very simple instance of an argument against set-theoretic reductionism which Benacerraf made famous in 1965. We will revisit it several times.)</p>
 <p>Second: if we think that <bb>every</bb> relation should be identified with a set, then the relation of set-membership itself, $\in$, should be a particular set. Indeed, it would have to be the set $\lbrace ⟨x,y⟩: x \in y\rbrace $. But does this set exist? Given Russell&rsquo;s Paradox, it is a non-trivial claim that such a set exists. In fact, it is possible to develop set theory in a rigorous way as an axiomatic theory. In this theory, it will be provable that there is no set of all sets. So, even if some relations can be treated as sets, the relation of set-membership will have to be a special case.</p>
-<p>Third: when we &ldquo;identify&rsquo;&rsquo; relations with sets, we said that we would allow ourselves to write $Rxy$ for $⟨x,y⟩ \in R$. This is fine, provided that the membership relation, &ldquo;$\in$&rsquo;&rsquo;, is treated <bb>as</bb> a predicate. But if we think that &ldquo;$\in$&rsquo;&rsquo; stands for a certain kind of set, then the expression &ldquo;$⟨x,y⟩ \in R$&rsquo;&rsquo; just consists of three singular terms which stand for sets: &ldquo;$⟨x,y⟩$&rsquo;&rsquo;, &ldquo;$\in$&rsquo;&rsquo;, and &ldquo;$R$&rsquo;&rsquo;. And such a list of names is no more capable of expressing a proposition than the nonsense string: &ldquo;the cup penholder the table&rsquo;&rsquo;. Again, even if some relations can be treated as sets, the relation of set-membership must be a special case. (This rolls together a simple version of Frege&rsquo;s concept <bb>horse</bb> paradox, and a famous objection that Wittgenstein once raised against Russell.)</p>
+<p>Third: when we &ldquo;identify'' relations with sets, we said that we would allow ourselves to write $Rxy$ for $⟨x,y⟩ \in R$. This is fine, provided that the membership relation, &ldquo;$\in$'', is treated <bb>as</bb> a predicate. But if we think that &ldquo;$\in$'' stands for a certain kind of set, then the expression &ldquo;$⟨x,y⟩ \in R$'' just consists of three singular terms which stand for sets: &ldquo;$⟨x,y⟩$'', &ldquo;$\in$'', and &ldquo;$R$''. And such a list of names is no more capable of expressing a proposition than the nonsense string: &ldquo;the cup penholder the table''. Again, even if some relations can be treated as sets, the relation of set-membership must be a special case. (This rolls together a simple version of Frege&rsquo;s concept <bb>horse</bb> paradox, and a famous objection that Wittgenstein once raised against Russell.)</p>
 <p>So where does this leave us? Well, there is nothing <bb>wrong</bb> with our saying that the relations on the numbers are sets. We just have to understand the spirit in which that remark is made. We are not stating a metaphysical identity fact. We are simply noting that, in certain contexts, we can (and will) <bb>treat</bb> (certain) relations as certain sets.</p>
 <h2 id="special-properties-of-relations">Special Properties of Relations</h2>
 <p>Some kinds of relations turn out to be so common that they have been given special names.  For instance, $\leqslant$ and $\subseteq$ both relate their respective domains (say, $\mathbb{N}$ in the case of $\leqslant$ and $\mathscr{P}({A})$ in the case of $\subseteq$) in similar ways.  To get at exactly how these relations are similar, and how they differ, we categorize them according to some special properties that relations can have.  It turns out that (combinations of) some of these special properties are especially important: orders and equivalence relations.</p>
@@ -2378,7 +2378,7 @@ common.</p>
   <span style="font-family:SYHei Regular;">A relation $R \subseteq A^2$ that is reflexive, symmetric, and transitive is called an <bb>equivalence relation</bb>. <bb>element</bb>s $x$ and $y$ of $A$ are said to be <bb>$R$-equivalent</bb> if $Rxy$.</span>
   </div>
   </div>
-<p>Equivalence relations give rise to the notion of an <bb>equivalence class</bb>. An equivalence relation &ldquo;chunks up&rsquo;&rsquo; the domain into different partitions. Within each partition, all the objects are related to one another; and no objects from different partitions relate to one another. Sometimes, it&rsquo;s helpful just to talk about these partitions <bb>directly</bb>. To that end, we introduce a definition:</p>
+<p>Equivalence relations give rise to the notion of an <bb>equivalence class</bb>. An equivalence relation &ldquo;chunks up'' the domain into different partitions. Within each partition, all the objects are related to one another; and no objects from different partitions relate to one another. Sometimes, it&rsquo;s helpful just to talk about these partitions <bb>directly</bb>. To that end, we introduce a definition:</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯定義 1.20【Equivalence class】</span>
@@ -2426,7 +2426,7 @@ For the right-to-left direction, suppose $[x]_R = [y]_R$. Since $R$ is reflexive
 Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and that ${\mathbb{N}/}_{{\equiv}_n}$ has exactly $n$ members.</p>
 </blockquote>
 <h2 id="orders">Orders</h2>
-<p>Many of our comparisons involve describing some objects as being &ldquo;less than&rsquo;&rsquo;, &ldquo;equal to&rsquo;&rsquo;, or &ldquo;greater than&rsquo;&rsquo; other objects, in a certain respect. These involve <bb>order</bb> relations. But there are different kinds of order relations. For instance, some require that any two objects be comparable, others don&rsquo;t. Some include identity (like $\leqslant$) and some exclude it (like $&lt;$). It will help us to have a taxonomy here.</p>
+<p>Many of our comparisons involve describing some objects as being &ldquo;less than'', &ldquo;equal to'', or &ldquo;greater than'' other objects, in a certain respect. These involve <bb>order</bb> relations. But there are different kinds of order relations. For instance, some require that any two objects be comparable, others don&rsquo;t. Some include identity (like $\leqslant$) and some exclude it (like $&lt;$). It will help us to have a taxonomy here.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯定義 1.21【Preorder】</span>
@@ -2532,7 +2532,7 @@ Show that $\equiv_n$ is an equivalence relation, for any $n \in \mathbb{N}$, and
 <li>$R^+$ is clearly reflexive, since $⟨x, x⟩ \in Id_A \subseteq R^+$ for all $x \in A.$</li>
 <li>To show $R^+$ is antisymmetric, suppose for reductio that $R^+xy$ and $R^+yx$ but $x \neq y$. Since $⟨x,y⟩ \in R \cup Id_X$, but $⟨x, y⟩ \notin  Id_X$, we must have $⟨x, y⟩ \in R$, i.e., $Rxy$. Similarly, $Ryx$. But this contradicts the assumption that $R$ is asymmetric.</li>
 <li>To establish transitivity, suppose that $R^+xy$ and $R^+yz$. If both $⟨x, y⟩ \in R$ and $⟨y,z⟩ \in R$, then $⟨x, z⟩ \in R$ since $R$ is transitive. Otherwise, either $⟨x, y⟩ \in Id_X$, i.e., $x = y$, or $⟨y, z⟩ \in Id_X$, i.e., $y = z$. In the first case, we have that $R^+yz$ by assumption, $x = y$, hence $R^+xz$. Similarly in the second case. In either case, $R^+xz$, thus, $R^+$ is also transitive.</li>
-<li>Concerning the &ldquo;moreover&rsquo;&rsquo; clause, suppose $R$ is a total order, i.e., that $R$ is connected. So for all $x \neq y$, either $Rxy$ or $Ryx$, i.e., either $⟨x, y⟩ \in R$ or $⟨y, x⟩ \in R$. Since $R \subseteq R^+$, this remains true of $R^+$, so $R^+$ is connected as well.</li>
+<li>Concerning the &ldquo;moreover'' clause, suppose $R$ is a total order, i.e., that $R$ is connected. So for all $x \neq y$, either $Rxy$ or $Ryx$, i.e., either $⟨x, y⟩ \in R$ or $⟨y, x⟩ \in R$. Since $R \subseteq R^+$, this remains true of $R^+$, so $R^+$ is connected as well.</li>
 </ol>
 </blockquote>
   <div>
@@ -2573,7 +2573,7 @@ Give a proof of Proposition 1.4.</p>
 Suppose $(\forall x \in A)(x &lt; a \leftrightarrow x &lt; b)$. If $a &lt; b$, then $a &lt; a$, contradicting the fact that $&lt;$ is irreflexive; so $a \nless b$. Exactly similarly, $b \nless a$. So $a = b$, as $&lt;$ is connected.</p>
 </blockquote>
 <h2 id="graphs">Graphs</h2>
-<p>A <bb>graph</bb> is a diagram in which points&mdash;called &ldquo;nodes&rsquo;&rsquo; or &ldquo;vertices&rsquo;&rsquo; (plural of &ldquo;vertex&rsquo;')&mdash;are connected by edges.  Graphs are a ubiquitous tool in discrete mathematics and in computer science. They are incredibly useful for representing, and visualizing, relationships and structures, from concrete things like networks of various kinds to abstract structures such as the possible outcomes of decisions.  There are many different kinds of graphs in the literature which differ, e.g., according to whether the edges are directed or not, have labels or not, whether there can be edges from a node to the same node, multiple edges between the same nodes, etc. <strong>Directed graphs</strong> have a special connection to relations.</p>
+<p>A <bb>graph</bb> is a diagram in which points&mdash;called &ldquo;nodes'' or &ldquo;vertices'' (plural of &ldquo;vertex'')&mdash;are connected by edges.  Graphs are a ubiquitous tool in discrete mathematics and in computer science. They are incredibly useful for representing, and visualizing, relationships and structures, from concrete things like networks of various kinds to abstract structures such as the possible outcomes of decisions.  There are many different kinds of graphs in the literature which differ, e.g., according to whether the edges are directed or not, have labels or not, whether there can be edges from a node to the same node, multiple edges between the same nodes, etc. <strong>Directed graphs</strong> have a special connection to relations.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯定義 1.27【Directed graph】</span>
@@ -2590,7 +2590,7 @@ Suppose $(\forall x \in A)(x &lt; a \leftrightarrow x &lt; b)$. If $a &lt; b$, t
   <div class="dtpcexbox">
   <span style="font-family:SYHei Regular;"><p>The graph $⟨V, E⟩$ with $V = \lbrace 1, 2, 3, 4\rbrace $ and $E = \lbrace ⟨1,1⟩, ⟨1, 2⟩, ⟨1, 3⟩, ⟨2, 3⟩\rbrace $ looks like this:</p>
 <p><img src="https://i.loli.net/2020/09/03/Eg9Ium37BZiHy62.png" alt="zzzz.png" /></p>
-<p>This is a different graph than $⟨V&rsquo;, E⟩$ with $V&rsquo; =<br />
+<p>This is a different graph than $⟨V', E⟩$ with $V' =<br />
 \lbrace 1, 2, 3\rbrace $, which looks like this:</p>
 <p><img src="https://i.loli.net/2020/09/03/xyr1JsVlTAhNX2O.png" alt="zzzz.png" /></p>
 </span>
@@ -2757,8 +2757,8 @@ Since every natural number is either even or odd, the output of this function wi
   <span style="font-family:SYHei Regular;">A function $f \colon A \rightarrow B$ is <bb>surjective</bb> iff $B$ is also the range of $f$, i.e., for every $y \in B$ there is at least one $x \in A$ such that $f(x) = y$, or in symbols: $$(\forall y \in B)(\exists x \in A)f(x) = y.$$ We call such a function a <bb>surjection</bb> from $A$ to $B$.</span>
   </div>
   </div>
-<p>If you want to show that $f$ is a <bb>surjection</bb>, then you need to show that every object in $f$'s codomain is the value of $f(x)$ for some input $x$.</p>
-<p>Note that any function <bb>induces</bb> a <bb>surjection</bb>. After all, given a function $f \colon A \to B$, let $f&rsquo; \colon A \to \text{ran}(f)$ be defined by $f&rsquo;(x) = f(x)$. Since $\text{ran}(f)$ is <bb>defined</bb> as $\lbrace f(x) \in B: x \in A\rbrace$, this function $f'$ is guaranteed to be a <bb>surjection</bb>.</p>
+<p>If you want to show that $f$ is a <bb>surjection</bb>, then you need to show that every object in $f$&rsquo;s codomain is the value of $f(x)$ for some input $x$.</p>
+<p>Note that any function <bb>induces</bb> a <bb>surjection</bb>. After all, given a function $f \colon A \to B$, let $f' \colon A \to \text{ran}(f)$ be defined by $f'(x) = f(x)$. Since $\text{ran}(f)$ is <bb>defined</bb> as $\lbrace f(x) \in B: x \in A\rbrace$, this function $f'$ is guaranteed to be a <bb>surjection</bb>.</p>
 <p>Now, any function maps each possible input to a unique output. But there are also functions which never map different inputs to the same outputs. Such functions are called <bb>injective</bb>, and can be pictured as in Figure 1.5.</p>
 <p><img src="https://i.loli.net/2020/09/04/gVLDQzdtlKMwjpN.png" alt="222.png" /></p>
   <div>
@@ -2769,7 +2769,7 @@ Since every natural number is either even or odd, the output of this function wi
   <span style="font-family:SYHei Regular;">A function $f \colon A \rightarrow B$ is <bb>injective</bb> iff for each $y \in B$ there is at most one $x \in A$ such that $f(x) = y$. We call such a function an <bb>injection</bb> from $A$ to $B$.</span>
   </div>
   </div>
-<p>If you want to show that $f$ is an <bb>injection</bb>, you need to show that for any <bb>element</bb>s $x$ and $y$ of $f$'s domain, if $f(x)=f(y)$, then $x=y$.</p>
+<p>If you want to show that $f$ is an <bb>injection</bb>, you need to show that for any <bb>element</bb>s $x$ and $y$ of $f$&rsquo;s domain, if $f(x)=f(y)$, then $x=y$.</p>
   <div>
   <div class="dtpcexboxtitle">
   	<span style="font-family:SYHei Heavy;">☯例 1.32</span>
@@ -2807,7 +2807,7 @@ The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:</p>
   </div>
   </div>
 <p>The graph of a function is uniquely determined, by extensionality. Moreover, extensionality (on sets) will immediate vindicate the implicit principle of extensionality for functions, whereby if $f$ and $g$ share a domain and codomain then they are identical if they agree on all values.</p>
-<p>Similarly, if a relation is &ldquo;functional&rsquo;&rsquo;, then it is the graph of a function.</p>
+<p>Similarly, if a relation is &ldquo;functional'', then it is the graph of a function.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯命題 1.6</span>
@@ -2828,7 +2828,7 @@ The function $f \colon \mathbb{N} \to \mathbb{N}$ defined by:</p>
 <p><bb>命題 1.6 之證明</bb><br />
 Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq y$ such that $Rxz$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, this $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$.</p>
 </blockquote>
-<p>Every function $f\colon A \to B$ has a graph, i.e., a relation on $A \times B$ defined by $f(x) = y$. On the other hand, every relation $R \subseteq A \times B$ with the properties given in Proposition 1.6 is the graph of a function $f \colon A \to B$. Because of this close connection between functions and their graphs, we can think of a function simply as its graph. In other words, functions can be identified with certain relations, i.e., with certain sets of tuples. Note, though, that the spirit of this &ldquo;identification&rsquo;&rsquo; is as in §1.1.1（P.28）: it is not a claim about the metaphysics of functions, but an observation that it is convenient to <bb>treat</bb> functions as certain sets. One reason that this is so convenient, is that We can now consider performing similar operations on functions as we performed on relations (see §1.1.6（P.34）). In particular:</p>
+<p>Every function $f\colon A \to B$ has a graph, i.e., a relation on $A \times B$ defined by $f(x) = y$. On the other hand, every relation $R \subseteq A \times B$ with the properties given in Proposition 1.6 is the graph of a function $f \colon A \to B$. Because of this close connection between functions and their graphs, we can think of a function simply as its graph. In other words, functions can be identified with certain relations, i.e., with certain sets of tuples. Note, though, that the spirit of this &ldquo;identification'' is as in §1.1.1（P.28）: it is not a claim about the metaphysics of functions, but an observation that it is convenient to <bb>treat</bb> functions as certain sets. One reason that this is so convenient, is that We can now consider performing similar operations on functions as we performed on relations (see §1.1.6（P.34）). In particular:</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯定義 1.35</span>
@@ -2844,7 +2844,7 @@ Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq y$ such t
   </div>
 <p>It follows from these definition that $\text{ran}(f) = f[\text{dom}(f)]$, for any function $f$. These notions are exactly as one would expect, given the definitions in §1.1.6（P.34）and our identification of functions with relations. But two other operations&mdash;inverses and relative products&mdash;require a little more detail. We will provide that in the §1.2.3（P.41）and §1.2.4（P.42）.</p>
 <h2 id="inverses-of-functions">Inverses of Functions</h2>
-<p>We think of functions as maps. An obvious question to ask about functions, then, is whether the mapping can be &ldquo;reversed.&rsquo;&rsquo; For instance, the successor function $f(x) = x + 1$ can be reversed, in the sense that the function $g(y) = y - 1$ &ldquo;undoes&rsquo;&rsquo; what $f$ does.</p>
+<p>We think of functions as maps. An obvious question to ask about functions, then, is whether the mapping can be &ldquo;reversed.'' For instance, the successor function $f(x) = x + 1$ can be reversed, in the sense that the function $g(y) = y - 1$ &ldquo;undoes'' what $f$ does.</p>
 <p>But we must be careful. Although the definition of $g$ defines a function $\mathbb{Z} \to \mathbb{Z}$, it does not define a <bb>function</bb> $\mathbb{N} \to \mathbb{N}$, since $g(0) \notin \mathbb{N}$.  So even in simple cases, it is not quite obvious whether a function can be reversed; it may depend on the domain and codomain.</p>
 <p>This is made more precise by the notion of an inverse of a function.</p>
   <div>
@@ -2856,7 +2856,7 @@ Suppose there is a $y$ such that $Rxy$.  If there were another $z \neq y$ such t
   </div>
   </div>
 <p>If $f$ has an inverse $g$, we often write $f^{-1}$ instead of $g$.</p>
-<p>Now we will determine when functions have inverses. A good candidate for an inverse of $f\colon A \to B$ is $g\colon B \to A$ &ldquo;defined by&rsquo;&rsquo; $$g(y) = \text{&ldquo;the&rsquo;&rsquo; $x$ such that $f(x) = y$.}$$ But the scare quotes around &ldquo;defined by&rsquo;&rsquo; (and &ldquo;the&rsquo;') suggest that this is not a definition.  At least, it will not always work, with complete generality. For, in order for this definition to specify a function, there has to be one and only one $x$ such that $f(x) = y$&mdash;the output of $g$ has to be uniquely specified. Moreover, it has to be specified for every $y \in B$.  If there are $x_1$ and $x_2 \in A$ with $x_1 \neq x_2$ but $f(x_1) = f(x_2)$, then $g(y)$ would not be uniquely specified for $y = f(x_1) = f(x_2)$. And if there is no $x$ at all such that $f(x) = y$, then $g(y)$ is not specified at all. In other words, for $g$ to be defined, $f$ must be both <bb>injective</bb> and <bb>surjective</bb>.</p>
+<p>Now we will determine when functions have inverses. A good candidate for an inverse of $f\colon A \to B$ is $g\colon B \to A$ &ldquo;defined by'' $$g(y) = \text{&ldquo;the'' $x$ such that $f(x) = y$.}$$ But the scare quotes around &ldquo;defined by'' (and &ldquo;the'') suggest that this is not a definition.  At least, it will not always work, with complete generality. For, in order for this definition to specify a function, there has to be one and only one $x$ such that $f(x) = y$&mdash;the output of $g$ has to be uniquely specified. Moreover, it has to be specified for every $y \in B$.  If there are $x_1$ and $x_2 \in A$ with $x_1 \neq x_2$ but $f(x_1) = f(x_2)$, then $g(y)$ would not be uniquely specified for $y = f(x_1) = f(x_2)$. And if there is no $x$ at all such that $f(x) = y$, then $g(y)$ is not specified at all. In other words, for $g$ to be defined, $f$ must be both <bb>injective</bb> and <bb>surjective</bb>.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯命題 1.7</span>
@@ -2873,7 +2873,7 @@ Exercise.</p>
 <p><bb>Problem 1.16</bb><br />
 Prove Proposition 1.7. That is, show that if $f\colon A \to B$ is <bb>bijective</bb>, an inverse $g$ of $f$ exists. You have to define such a $g$, show that it is a function, and show that it is an inverse of $f$, i.e., $f(g(y)) = y$ and $g(f(x)) = x$ for all $x \in A$ and $y \in B$.</p>
 </blockquote>
-<p>However, there is a slightly more general way to extract inverses. We saw in §1.2.1（P.37）that every function $f$ induces a <bb>surjection</bb> $f&rsquo; \colon A \to \text{ran}(f)$ by letting $f&rsquo;(x) = f(x)$ for all $x \in A$. Clearly, if $f$ is an <bb>injection</bb>, then $f'$ is a <bb>bijection</bb>, so that it has a unique inverse by Proposition 1.7. By a very minor abuse of notation, we sometimes call the inverse of $f'$ simply &ldquo;the inverse of $f$.&rsquo;&rsquo;</p>
+<p>However, there is a slightly more general way to extract inverses. We saw in §1.2.1（P.37）that every function $f$ induces a <bb>surjection</bb> $f' \colon A \to \text{ran}(f)$ by letting $f'(x) = f(x)$ for all $x \in A$. Clearly, if $f$ is an <bb>injection</bb>, then $f'$ is a <bb>bijection</bb>, so that it has a unique inverse by Proposition 1.7. By a very minor abuse of notation, we sometimes call the inverse of $f'$ simply &ldquo;the inverse of $f$.''</p>
 <blockquote>
 <p><bb>Problem 1.17</bb><br />
 Show that if $f\colon A \to B$ has an inverse $g$, then $f$ is <bb>bijective</bb>.</p>
@@ -2892,7 +2892,7 @@ Exercise.</p>
 </blockquote>
 <blockquote>
 <p><bb>Problem 1.18</bb><br />
-Prove Proposition 1.8. That is, show that if $g\colon B \to A$ and $g&rsquo;\colon B \to A$ are inverses of $f\colon A \to B$, then $g = g'$, i.e., for all $y \in B$, $g(y) = g&rsquo;(y)$.</p>
+Prove Proposition 1.8. That is, show that if $g\colon B \to A$ and $g'\colon B \to A$ are inverses of $f\colon A \to B$, then $g = g'$, i.e., for all $y \in B$, $g(y) = g'(y)$.</p>
 </blockquote>
 <h2 id="composition-of-functions">Composition of Functions</h2>
 <p>We saw in§1.2.3（P.41）that the inverse $f^{-1}$ of a <bb>bijection</bb> $f$ is itself a function. Another operation on functions is composition: We can define a new function by composing two functions, $f$ and $g$, i.e., by first applying $f$ and then $g$. Of course, this is only possible if the ranges and domains match, i.e., the range of $f$ must be a subset of the domain of $g$. This operation on functions is the analogue of the operation of relative product on relations from§1.1.6（P.34）.</p>
@@ -2974,7 +2974,7 @@ Given $f\colon A \nrightarrow B$, define the partial function $g\colon B \nright
   </div>
 <blockquote>
 <p><bb>命題 1.9 之證明</bb><br />
-Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$ such that $Rxy'$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, that $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$ and $f$ is total if $R$ is serial.</p>
+Suppose there is a $y$ such that $Rxy$.  If there were another $y' \neq y$ such that $Rxy'$, the condition on $R$ would be violated. Hence, if there is a $y$ such that $Rxy$, that $y$ is unique, and so $f$ is well-defined.  Obviously, $R_f = R$ and $f$ is total if $R$ is serial.</p>
 </blockquote>
 <h1 id="基数集合大小的度量">基数：集合大小的度量</h1>
 <p>This section discusses enumerations, countability and uncountability. Several sections come in two versions:  a more elementary one, that takes enumerations to be lists, or surjections from $\mathbb{Z}^{+}$; and a more abstract onethat defines enumerations as bijections with $\mathbb{N}$.</p>
@@ -2998,7 +2998,7 @@ Suppose there is a $y$ such that $Rxy$.  If there were another $y&rsquo; \neq y$
 <li>We can have different enumerations of the same set $A$ which differ by the order in which the <bb>element</bb>s appear: $4$, $1$, $25$, $16$, $9$ enumerates the (set of the) first five square numbers just as well as $1$, $4$, $9$, $16$, $25$ does.</li>
 <li>Redundant enumerations are still enumerations: $1$, $1$, $2$, $2$, $3$, $3, \cdots$, enumerates the same set as $1$, $2$, $3, \cdots$, does.</li>
 <li>Order and redundancy <bb>do</bb> matter when we specify an enumeration: we can enumerate the positive integers beginning with $1$, $2$, $3$, $1, \cdots$, but the pattern is easier to see when enumerated in the standard way as $1$, $2$, $3$, $4, \cdots$.</li>
-<li>Enumerations must have a beginning: \cdots, $3$, $2$, $1$ is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, &ldquo;at what position in the list does the number 76 appear?&rsquo;&rsquo;</li>
+<li>Enumerations must have a beginning: \cdots, $3$, $2$, $1$ is not an enumeration of the positive integers because it has no first <bb>element</bb>. To see how this follows from the informal definition, ask yourself, &ldquo;at what position in the list does the number 76 appear?''</li>
 <li>The following is not an enumeration of the positive integers: $1$, $3$, $5, \cdots, 2$, $4$, $6, \cdots$. The problem is that the even numbers occur at places $\infty + 1$, $\infty + 2$, $\infty + 3$, rather than at finite positions.</li>
 <li>The empty set is enumerable: it is enumerated by the empty list!</li>
 </ol>
@@ -3064,7 +3064,7 @@ Define an enumeration of the positive squares $1$, $4$, $9$, $16, \cdots$</p>
   	<span style="font-family:SYHei Heavy;">☯例 1.38</span>
   </div>
   <div class="dtpcexbox">
-  <span style="font-family:SYHei Regular;"><p>The function $f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil$ (where $\lceil x \rceil$ denotes the <bb>ceiling</bb> function, which rounds $x$ up to the nearest integer) enumerates the set of integers $\mathbb{Z}$. Notice how $f$ generates the values of $\mathbb{Z}$ by &ldquo;hopping&rsquo;&rsquo; back and forth between positive and negative integers:</p>
+  <span style="font-family:SYHei Regular;"><p>The function $f(n) = (-1)^{n} \lceil \frac{(n-1)}{2}\rceil$ (where $\lceil x \rceil$ denotes the <bb>ceiling</bb> function, which rounds $x$ up to the nearest integer) enumerates the set of integers $\mathbb{Z}$. Notice how $f$ generates the values of $\mathbb{Z}$ by &ldquo;hopping'' back and forth between positive and negative integers:</p>
 <p>$$
 \begin{array}{c c c c c c c c}
 f(1) & f(2) & f(3) & f(4) & f(5) & f(6) & f(7) & \cdots \\ \\
@@ -3149,7 +3149,7 @@ $A$ is <bb>enumerable</bb> iff $A$ is empty or there is a <bb>surjective</bb> $f
 According to Definition1.48（P.63）, a set $A$ is enumerable iff $A = \varnothing$ or there is a <bb>surjective</bb> $f\colon \mathbb{Z}^{+} \to A$.  It is also possible to define &ldquo;<bb>enumerable</bb> set&rdquo; precisely by: a set is enumerable iff there is a <bb>injective</bb> function $g\colon A \to \mathbb{Z}^{+}$.  Show that the definitions are equivalent, i.e., show that there is a <bb>injective</bb> function $g\colon A \to \mathbb{Z}^{+}$ iff either $A = \varnothing$ or there is a <bb>surjective</bb> $f\colon \mathbb{Z}^{+} \to A$.</p>
 </blockquote>
 <h2 id="cantors-zig-zag-method">Cantor&rsquo;s Zig-Zag Method</h2>
-<p>We&rsquo;ve already considered some &ldquo;easy&rsquo;&rsquo; enumerations. Now we will consider something a bit harder. Consider the set of pairs of natural numbers, which we defined in§1.0.4（P.22）defined by: $$\mathbb{N} \times \mathbb{N} = \lbrace ⟨n,m⟩: n,m \in \mathbb{N}\rbrace$$ We can organize these ordered pairs into an <bb>array</bb>, like so:</p>
+<p>We&rsquo;ve already considered some &ldquo;easy'' enumerations. Now we will consider something a bit harder. Consider the set of pairs of natural numbers, which we defined in§1.0.4（P.22）defined by: $$\mathbb{N} \times \mathbb{N} = \lbrace ⟨n,m⟩: n,m \in \mathbb{N}\rbrace$$ We can organize these ordered pairs into an <bb>array</bb>, like so:</p>
 <p>
 $$
 \begin{array}{ c | c | c | c | c | c}
@@ -3167,7 +3167,7 @@ $$
 \end{array}
 $$
 </p>
-<p>Clearly, every ordered pair in $\mathbb{N} \times \mathbb{N}$ will appear exactly once in the array. In particular, $⟨n,m⟩$ will appear in the $n$th row and $m$th column. But how do we organize the elements of such an array into a &ldquo;one-dimensional&rsquo;&rsquo; list? The pattern in the array below demonstrates one way to do this (although of course there are many other options):</p>
+<p>Clearly, every ordered pair in $\mathbb{N} \times \mathbb{N}$ will appear exactly once in the array. In particular, $⟨n,m⟩$ will appear in the $n$th row and $m$th column. But how do we organize the elements of such an array into a &ldquo;one-dimensional'' list? The pattern in the array below demonstrates one way to do this (although of course there are many other options):</p>
 <p>
 $$
 \begin{array}{ c | c | c | c | c | c | c}
@@ -3358,9 +3358,9 @@ $$
 <h2 id="nonenumerable-sets">Nonenumerable Sets</h2>
 <p>This section proves the non-enumerability of $\mathbb{B}^\omega$ and $\mathscr{P}({\mathbb{Z})^{+}}$ using the definition in§1.3.1（P.45）. It is designed to be a little more elementary and a little more detailed than the version in §1.3.10（P.62）.</p>
 <p>Some sets, such as the set $\mathbb{Z}^{+}$ of positive integers, are infinite. So far we&rsquo;ve seen examples of infinite sets which were all <bb>enumerable</bb>. However, there are also infinite sets which do not have this property. Such sets are called <bb>nonenumerable</bb>.</p>
-<p>First of all, it is perhaps already surprising that there are <bb>nonenumerable</bb> sets.  For any <bb>enumerable</bb> set $A$ there is a <bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.  If a set is <bb>nonenumerable</bb> there is no such function.  That is, no function mapping the infinitely many <bb>element</bb>s of $\mathbb{Z}^{+}$ to $A$ can exhaust all of $A$.  So there are &ldquo;more&rsquo;&rsquo; <bb>element</bb>s of $A$ than the infinitely many positive integers.</p>
+<p>First of all, it is perhaps already surprising that there are <bb>nonenumerable</bb> sets.  For any <bb>enumerable</bb> set $A$ there is a <bb>surjective</bb> function $f \colon \mathbb{Z}^{+} \to A$.  If a set is <bb>nonenumerable</bb> there is no such function.  That is, no function mapping the infinitely many <bb>element</bb>s of $\mathbb{Z}^{+}$ to $A$ can exhaust all of $A$.  So there are &ldquo;more'' <bb>element</bb>s of $A$ than the infinitely many positive integers.</p>
 <p>How would one prove that a set is <bb>nonenumerable</bb>? You have to show that no such surjective function can exist. Equivalently, you have to show that the elements of $A$ cannot be enumerated in a one way infinite list.  The best way to do this is to show that every list of <bb>element</bb>s of $A$ must leave at least one element out; or that no function $f\colon \mathbb{Z}^{+} \to A$ can be <bb>surjective</bb>.  We can do this using Cantor&rsquo;s <bb>diagonal method</bb>.  Given a list of <bb>element</bb>s of $A$, say, $x_1$, $x_2, \cdots$, we construct another element of $A$ which, by its construction, cannot possibly be on that list.</p>
-<p>Our first example is the set $\mathbb{B}^\omega$ of all infinite, non-gappy sequences of $0$'s and $1$'s.</p>
+<p>Our first example is the set $\mathbb{B}^\omega$ of all infinite, non-gappy sequences of $0$&rsquo;s and $1$&rsquo;s.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯Theorem 1.1</span>
@@ -3370,7 +3370,7 @@ $$
   </div>
   </div>
 <p><bb>Theorem 1.1 之證明</bb><br />
-Suppose, by way of contradiction, that $\mathbb{B}^\omega$ is <bb>enumerable</bb>, i.e., suppose that there is a list $s_{1}$, $s_{2}$, $s_{3}$, $s_{4}, \cdots$, of all <bb>element</bb>s of $\mathbb{B}^\omega$.  Each of these $s_i$ is itself an infinite sequence of $0$'s and $1$'s. Let&rsquo;s call the $j$-th element of the $i$-th sequence in this list $s_i(j)$. Then the $i$-th sequence $s_i$ is $$s_i(1), s_i(2), s_i(3), \cdots$$</p>
+Suppose, by way of contradiction, that $\mathbb{B}^\omega$ is <bb>enumerable</bb>, i.e., suppose that there is a list $s_{1}$, $s_{2}$, $s_{3}$, $s_{4}, \cdots$, of all <bb>element</bb>s of $\mathbb{B}^\omega$.  Each of these $s_i$ is itself an infinite sequence of $0$&rsquo;s and $1$&rsquo;s. Let&rsquo;s call the $j$-th element of the $i$-th sequence in this list $s_i(j)$. Then the $i$-th sequence $s_i$ is $$s_i(1), s_i(2), s_i(3), \cdots$$</p>
 <p>We may arrange this list, and the elements of each sequence $s_i$ in it, in an array:</p>
 <p>$$
 \begin{array}{c|c|c|c|c|c}
@@ -3384,8 +3384,8 @@ Suppose, by way of contradiction, that $\mathbb{B}^\omega$ is <bb>enumerable</bb
 $$
 </p>
 <p>The labels down the side give the number of the sequence in the list $s_1$, $s_2$, \cdots; the numbers across the top label the <bb>element</bb>s of the individual sequences. For instance, $s_{1}(1)$ is a name for whatever number, a $0$ or a $1$, is the first <bb>element</bb> in the sequence $s_{1}$, and so on.</p>
-<p>Now we construct an infinite sequence, $\overline{s}$, of $0$'s and $1$'s which cannot possibly be on this list. The definition of $\overline{s}$ will depend on the list $s_1$, $s_2, \cdots$. Any infinite list of infinite sequences of $0$'s and $1$'s gives rise to an infinite sequence $\overline{s}$ which is guaranteed to not appear on the list.</p>
-<p>To define $\overline{s}$, we specify what all its <bb>element</bb>s are, i.e., we specify $\overline{s}(n)$ for all $n \in \mathbb{Z}^{+}$. We do this by reading down the diagonal of the array above (hence the name &ldquo;diagonal method&rsquo;') and then changing every $1$ to a $0$ and every $1$ to a $0$. More abstractly, we define $\overline{s}(n)$ to be $0$ or $1$ according to whether the $n$-th <bb>element</bb> of the diagonal, $s_n(n)$, is $1$ or $0$.</p>
+<p>Now we construct an infinite sequence, $\overline{s}$, of $0$&rsquo;s and $1$&rsquo;s which cannot possibly be on this list. The definition of $\overline{s}$ will depend on the list $s_1$, $s_2, \cdots$. Any infinite list of infinite sequences of $0$&rsquo;s and $1$&rsquo;s gives rise to an infinite sequence $\overline{s}$ which is guaranteed to not appear on the list.</p>
+<p>To define $\overline{s}$, we specify what all its <bb>element</bb>s are, i.e., we specify $\overline{s}(n)$ for all $n \in \mathbb{Z}^{+}$. We do this by reading down the diagonal of the array above (hence the name &ldquo;diagonal method'') and then changing every $1$ to a $0$ and every $1$ to a $0$. More abstractly, we define $\overline{s}(n)$ to be $0$ or $1$ according to whether the $n$-th <bb>element</bb> of the diagonal, $s_n(n)$, is $1$ or $0$.</p>
 <p>
 $$
 \overline{s}(n) =
@@ -3396,11 +3396,11 @@ $$
 $$
 </p>
 <p>If you like formulas better than definitions by cases, you could also define $\overline{s}(n) = 1 - s_n(n)$.</p>
-<p>Clearly $\overline{s}$ is an infinite sequence of $0$'s and $1$'s, since it is just the mirror sequence to the sequence of $0$'s and $1$'s that appear on the diagonal of our array. So $\overline{s}$ is an <bb>element</bb> of $\mathbb{B}^\omega$. But it cannot be on the list $s_1$, $s_2, \cdots$, Why not?</p>
+<p>Clearly $\overline{s}$ is an infinite sequence of $0$&rsquo;s and $1$&rsquo;s, since it is just the mirror sequence to the sequence of $0$&rsquo;s and $1$&rsquo;s that appear on the diagonal of our array. So $\overline{s}$ is an <bb>element</bb> of $\mathbb{B}^\omega$. But it cannot be on the list $s_1$, $s_2, \cdots$, Why not?</p>
 <p>It can&rsquo;t be the first sequence in the list, $s_1$, because it differs from $s_1$ in the first <bb>element</bb>.  Whatever $s_1(1)$ is, we defined $\overline{s}(1)$ to be the opposite.  It can&rsquo;t be the second sequence in the list, because $\overline{s}$ differs from $s_2$ in the second element: if $s_2(2)$ is $0$, $\overline{s}(2)$ is $1$, and vice versa. And so on.</p>
 <p>More precisely: if $\overline{s}$ were on the list, there would be some $k$ so that $\overline{s} = s_{k}$.  Two sequences are identical iff they agree at every place, i.e., for any $n$, $\overline{s}(n) = s_{k}(n)$.  So in particular, taking $n = k$ as a special case, $\overline{s}(k) = s_{k}(k)$ would have to hold. $s_k(k)$ is either $0$ or $1$. If it is $0$ then $\overline{s}(k)$ must be $1$&mdash;that&rsquo;s how we defined $\overline{s}$. But if $s_k(k) = 1$ then, again because of the way we defined $\overline{s}$, $\overline{s}(k) = 0$. In either case $\overline{s}(k) \neq s_{k}(k)$.</p>
-<p>We started by assuming that there is a list of <bb>element</bb>s of $\mathbb{B}^\omega$, $s_1$, $s_2, \cdots$, From this list we constructed a sequence $\overline{s}$ which we proved cannot be on the list.  But it definitely is a sequence of $0$'s and $1$'s if all the $s_i$ are sequences of $0$'s and $1$'s, i.e., $\overline{s} \in \mathbb{B}^\omega$. This shows in particular that there can be no list of <bb>all</bb> <bb>element</bb>s of $\mathbb{B}^\omega$, since for any such list we could also construct a sequence $\overline{s}$ guaranteed to not be on the list, so the assumption that there is a list of all sequences in $\mathbb{B}^\omega$ leads to a contradiction. $\blacksquare$</p>
-<p>This proof method is called &ldquo;diagonalization&rsquo;&rsquo; because it uses the diagonal of the array to define $\overline{s}$. Diagonalization need not involve the presence of an array: we can show that sets are not <bb>enumerable</bb> by using a similar idea even when no array and no actual diagonal is involved.</p>
+<p>We started by assuming that there is a list of <bb>element</bb>s of $\mathbb{B}^\omega$, $s_1$, $s_2, \cdots$, From this list we constructed a sequence $\overline{s}$ which we proved cannot be on the list.  But it definitely is a sequence of $0$&rsquo;s and $1$&rsquo;s if all the $s_i$ are sequences of $0$&rsquo;s and $1$&rsquo;s, i.e., $\overline{s} \in \mathbb{B}^\omega$. This shows in particular that there can be no list of <bb>all</bb> <bb>element</bb>s of $\mathbb{B}^\omega$, since for any such list we could also construct a sequence $\overline{s}$ guaranteed to not be on the list, so the assumption that there is a list of all sequences in $\mathbb{B}^\omega$ leads to a contradiction. $\blacksquare$</p>
+<p>This proof method is called &ldquo;diagonalization'' because it uses the diagonal of the array to define $\overline{s}$. Diagonalization need not involve the presence of an array: we can show that sets are not <bb>enumerable</bb> by using a similar idea even when no array and no actual diagonal is involved.</p>
   <div>
   <div class="dtpcboxtitle">
   	<span style="font-family:SYHei Heavy;">☯Theorem 1.2</span>
@@ -3447,7 +3447,7 @@ Suppose that $\mathscr{P}({\mathbb{Z})^{+}}$ were <bb>enumerable</bb>, and thus 
 <p>It also is <bb>surjective</bb>: Every sequence of $0$s and $1$s corresponds to some set of positive integers, namely the one which has as its members those integers corresponding to the places where the sequence has $1$s. More precisely, suppose $s \in \mathbb{B}^\omega$.  Define $Z \subseteq \mathbb{Z}^{+}$ by: $$Z = \lbrace n \in \mathbb{Z}^{+}: s(n) = 1\rbrace$$ Then $f(Z) = s$, as can be verified by consulting the definition of $f$.</p>
 <p>Now consider the list $$f(Z_1), f(Z_2), f(Z_3), \cdots$$ Since $f$ is <bb>surjective</bb>, every member of $\mathbb{B}^\omega$ must appear as a value of $f$ for some argument, and so must appear on the list. This list must therefore enumerate all of $\mathbb{B}^\omega$.</p>
 <p>So if $\mathscr{P}({\mathbb{Z})^{+}}$ were <bb>enumerable</bb>, $\mathbb{B}^\omega$ would be <bb>enumerable</bb>.  But $\mathbb{B}^\omega$ is <bb>nonenumerable</bb> (Theorem 1.5（P.64）). Hence $\mathscr{P}({\mathbb{Z})^{+}}$ is <bb>nonenumerable</bb>. $\blacksquare$</p>
-<p>It is easy to be confused about the direction the reduction goes in. For instance, a <bb>surjective</bb> function $g \colon \mathbb{B}^\omega \to B$ does <bb>not</bb> establish that $B$ is <bb>nonenumerable</bb>.  (Consider $g \colon \mathbb{B}^\omega \to \mathbb{B}$ defined by $g(s) = s(1)$, the function that maps a sequence of $0$'s and $1$'s to its first <bb>element</bb>.  It is <bb>surjective</bb>, because some sequences start with $0$ and some start with $1$. But $\mathbb{B}$ is finite.)  Note also that the function $f$ must be <bb>surjective</bb>, or otherwise the argument does not go through: $f(x_1)$, $f(x_2), \cdots$, would then not be guaranteed to include all the <bb>element</bb>s of $B$. For instance,  $$ h(n) = \underbrace{000\cdots0}_{\text{$n$ $0$'s}} $$ defines a function $h\colon \mathbb{Z}^{+} \to \mathbb{B}^\omega$, but $\mathbb{Z}^{+}$ is <bb>enumerable</bb>.</p>
+<p>It is easy to be confused about the direction the reduction goes in. For instance, a <bb>surjective</bb> function $g \colon \mathbb{B}^\omega \to B$ does <bb>not</bb> establish that $B$ is <bb>nonenumerable</bb>.  (Consider $g \colon \mathbb{B}^\omega \to \mathbb{B}$ defined by $g(s) = s(1)$, the function that maps a sequence of $0$&rsquo;s and $1$&rsquo;s to its first <bb>element</bb>.  It is <bb>surjective</bb>, because some sequences start with $0$ and some start with $1$. But $\mathbb{B}$ is finite.)  Note also that the function $f$ must be <bb>surjective</bb>, or otherwise the argument does not go through: $f(x_1)$, $f(x_2), \cdots$, would then not be guaranteed to include all the <bb>element</bb>s of $B$. For instance,  $$ h(n) = \underbrace{000\cdots0}_{\text{$n$ $0$&rsquo;s}} $$ defines a function $h\colon \mathbb{Z}^{+} \to \mathbb{B}^\omega$, but $\mathbb{Z}^{+}$ is <bb>enumerable</bb>.</p>
 <blockquote>
 <p><bb>Problem 1.40</bb><br />
 Show that the set of all <bb>sets of</bb> pairs of positive integers is <bb>nonenumerable</bb> by a reduction argument.</p>
