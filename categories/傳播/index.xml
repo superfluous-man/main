@@ -11,8 +11,8 @@
     <description>Recent content in 傳播 on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>nous@mengxianjun.com (Duōyú Rén)</managingEditor>
-    <webMaster>nous@mengxianjun.com (Duōyú Rén)</webMaster>
+    <managingEditor>logos@duoyu.ren (Duōyú Rén)</managingEditor>
+    <webMaster>logos@duoyu.ren (Duōyú Rén)</webMaster>
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 24 Nov 2016 18:13:38 +0000</lastBuildDate>
     
@@ -26,7 +26,7 @@
         <title>Tikz Examples in Re-composing McQuail&#39;s Textbook</title>
         <link>https://duoyu.ren/articles/20161124-tikz-mcquail-figures/</link>
         <pubDate>Thu, 24 Nov 2016 18:13:38 +0000</pubDate>
-        <author>nous@mengxianjun.com (Duōyú Rén)</author>
+        <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:44:40 +0800</atom:modified>
         <guid>https://duoyu.ren/articles/20161124-tikz-mcquail-figures/</guid>
         <description>Last month re-composed the classic Textbook, McQuail&amp;rsquo;s Mass Communication Theory, the following are some tikz examples in re-making book illustrations. To try these examples, pls put below codes into the preamble of your document. 1 2 \usepackage{tikz} % Required for drawing custom shapes \usetikzlibrary{arrows,calc,fit,matrix,positioning,shapes,shadows,trees,mindmap,tikzmark,arrows.meta} Positioning Map Figure The Output: The codes: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19</description>
