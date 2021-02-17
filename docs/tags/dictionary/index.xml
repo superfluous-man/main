@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>dictionary on Duōyú Rén</title>
-    <link>https://duoyu.ren/tags/dictionary/</link>
+    <link>https://duoyu.ren/main/tags/dictionary/</link>
     <description>Recent content in dictionary on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 21 May 2020 12:35:09 +0800</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/tags/dictionary/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/main/tags/dictionary/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>編不如抄，抄不如竊：徒手攢一本字典</title>
-        <link>https://duoyu.ren/articles/20200521-diy-your-dictionary/</link>
+        <link>https://duoyu.ren/main/articles/20200521-diy-your-dictionary/</link>
         <pubDate>Thu, 21 May 2020 12:35:09 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:43:12 +0800</atom:modified>
-        <guid>https://duoyu.ren/articles/20200521-diy-your-dictionary/</guid>
+        <guid>https://duoyu.ren/main/articles/20200521-diy-your-dictionary/</guid>
         <description>大約四、五年前，本站二狗站長正式着手編輯一本符合自身喜好的自用字典。這些經歷記錄在《TeX 漢語字典模板》《編舟囈語》兩篇文章中。雖然大體的版</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/images/articles/diydic.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main/images/articles/diydic.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -58,15 +58,15 @@
       
       <item>
         <title>蔣公的面子與徐興無的風骨</title>
-        <link>https://duoyu.ren/articles/20180420-xu-xing-wu-de-feng-gu/</link>
+        <link>https://duoyu.ren/main/articles/20180420-xu-xing-wu-de-feng-gu/</link>
         <pubDate>Fri, 20 Apr 2018 16:47:15 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:44:05 +0800</atom:modified>
-        <guid>https://duoyu.ren/articles/20180420-xu-xing-wu-de-feng-gu/</guid>
+        <guid>https://duoyu.ren/main/articles/20180420-xu-xing-wu-de-feng-gu/</guid>
         <description>不久前的南大語言學敎授事件中，前任院長丁帆以個人名義勇擔引人失察之責，令人欽佩。據稱，現任院長徐興無則先斬後奏，未經學校直接以全院敎師（共同</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -94,15 +94,15 @@
       
       <item>
         <title>編舟囈語</title>
-        <link>https://duoyu.ren/articles/20180409-bian-zhou-yi-yu/</link>
+        <link>https://duoyu.ren/main/articles/20180409-bian-zhou-yi-yu/</link>
         <pubDate>Mon, 09 Apr 2018 19:51:26 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:44:20 +0800</atom:modified>
-        <guid>https://duoyu.ren/articles/20180409-bian-zhou-yi-yu/</guid>
+        <guid>https://duoyu.ren/main/articles/20180409-bian-zhou-yi-yu/</guid>
         <description>編書甚苦，進展頗慢，一日幾字，學海爬梳，皓首似難窮經，間亦嘆曰：「埋首書冊了無日，不如拋卻去尋春」。或曰，市面辭書繁多，且 APP 流行，查閱便捷，</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>牢騷 on Duōyú Rén</title>
-    <link>https://duoyu.ren/categories/%E7%89%A2%E9%A8%B7/</link>
+    <link>https://duoyu.ren/main/categories/%E7%89%A2%E9%A8%B7/</link>
     <description>Recent content in 牢騷 on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 28 Oct 2019 23:53:54 +0800</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/categories/%E7%89%A2%E9%A8%B7/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/main/categories/%E7%89%A2%E9%A8%B7/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>從培根「請人代讀」說起</title>
-        <link>https://duoyu.ren/articles/20191028-du-shu-wai-bao/</link>
+        <link>https://duoyu.ren/main/articles/20191028-du-shu-wai-bao/</link>
         <pubDate>Mon, 28 Oct 2019 23:53:54 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:43:27 +0800</atom:modified>
-        <guid>https://duoyu.ren/articles/20191028-du-shu-wai-bao/</guid>
+        <guid>https://duoyu.ren/main/articles/20191028-du-shu-wai-bao/</guid>
         <description>今天無意間看到中介發來的發包接包說明，恰好又看到培根關於讀書外包的重要論述。一時思緒萬千，不知從何說起，只好從培根「請人代讀」說起。 經過一番</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

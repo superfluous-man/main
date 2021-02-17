@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>囈語 on Duōyú Rén</title>
-    <link>https://duoyu.ren/categories/%E5%9B%88%E8%AA%9E/</link>
+    <link>https://duoyu.ren/main/categories/%E5%9B%88%E8%AA%9E/</link>
     <description>Recent content in 囈語 on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 29 Nov 2020 08:52:30 +0800</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/categories/%E5%9B%88%E8%AA%9E/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/main/categories/%E5%9B%88%E8%AA%9E/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>谁敢不讲武德？</title>
-        <link>https://duoyu.ren/articles/20201129-on-mabaoguo/</link>
+        <link>https://duoyu.ren/main/articles/20201129-on-mabaoguo/</link>
         <pubDate>Sun, 29 Nov 2020 08:52:30 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 16 Feb 2021 21:05:49 +0800</atom:modified>
-        <guid>https://duoyu.ren/articles/20201129-on-mabaoguo/</guid>
+        <guid>https://duoyu.ren/main/articles/20201129-on-mabaoguo/</guid>
         <description>这篇草稿原来名叫「旗帜鲜明地支持马保国」。转念一想，其实俺们并不支持马保国。塔也没什么好支持的，一时的热度很快便会消失。俺们只是要捍卫和马保</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/images/articles/mabaoguo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main/images/articles/mabaoguo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
