@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>misc on Duōyú Rén</title>
-    <link>https://duoyu.ren/main/publication/misc/</link>
+    <link>https://duoyu.ren/publication/misc/</link>
     <description>Recent content in misc on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/main/publication/misc/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/publication/misc/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>Book Review: Duis vulputate</title>
-        <link>https://duoyu.ren/main/publication/misc/misc_any_folder_name_1/</link>
+        <link>https://duoyu.ren/publication/misc/misc_any_folder_name_1/</link>
         <pubDate>Tue, 01 Nov 2016 00:00:00 +0000</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Wed, 11 Mar 2020 09:50:07 +0800</atom:modified>
-        <guid>https://duoyu.ren/main/publication/misc/misc_any_folder_name_1/</guid>
+        <guid>https://duoyu.ren/publication/misc/misc_any_folder_name_1/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Tags on Duōyú Rén</title>
-    <link>https://duoyu.ren/main/tags/</link>
+    <link>https://duoyu.ren/tags/</link>
     <description>Recent content in Tags on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 29 Nov 2020 08:52:30 +0800</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/main/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>essay</title>
-        <link>https://duoyu.ren/main/tags/essay/</link>
+        <link>https://duoyu.ren/tags/essay/</link>
         <pubDate>Sun, 29 Nov 2020 08:52:30 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/essay/</guid>
+        <guid>https://duoyu.ren/tags/essay/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>lecture</title>
-        <link>https://duoyu.ren/main/tags/lecture/</link>
+        <link>https://duoyu.ren/tags/lecture/</link>
         <pubDate>Mon, 07 Sep 2020 22:16:30 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/lecture/</guid>
+        <guid>https://duoyu.ren/tags/lecture/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -60,11 +60,11 @@
       
       <item>
         <title>logic</title>
-        <link>https://duoyu.ren/main/tags/logic/</link>
+        <link>https://duoyu.ren/tags/logic/</link>
         <pubDate>Mon, 07 Sep 2020 22:16:30 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/logic/</guid>
+        <guid>https://duoyu.ren/tags/logic/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -78,11 +78,11 @@
       
       <item>
         <title>poem</title>
-        <link>https://duoyu.ren/main/tags/poem/</link>
+        <link>https://duoyu.ren/tags/poem/</link>
         <pubDate>Sun, 16 Aug 2020 13:42:30 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/poem/</guid>
+        <guid>https://duoyu.ren/tags/poem/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -96,11 +96,11 @@
       
       <item>
         <title>dictionary</title>
-        <link>https://duoyu.ren/main/tags/dictionary/</link>
+        <link>https://duoyu.ren/tags/dictionary/</link>
         <pubDate>Thu, 21 May 2020 12:35:09 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/dictionary/</guid>
+        <guid>https://duoyu.ren/tags/dictionary/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -114,11 +114,11 @@
       
       <item>
         <title>barefoot</title>
-        <link>https://duoyu.ren/main/tags/barefoot/</link>
+        <link>https://duoyu.ren/tags/barefoot/</link>
         <pubDate>Tue, 07 Jan 2020 22:41:40 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/barefoot/</guid>
+        <guid>https://duoyu.ren/tags/barefoot/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -132,11 +132,11 @@
       
       <item>
         <title>thesis</title>
-        <link>https://duoyu.ren/main/tags/thesis/</link>
+        <link>https://duoyu.ren/tags/thesis/</link>
         <pubDate>Sat, 23 Nov 2019 14:50:28 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/thesis/</guid>
+        <guid>https://duoyu.ren/tags/thesis/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -150,11 +150,11 @@
       
       <item>
         <title>science</title>
-        <link>https://duoyu.ren/main/tags/science/</link>
+        <link>https://duoyu.ren/tags/science/</link>
         <pubDate>Mon, 28 Oct 2019 23:53:54 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/science/</guid>
+        <guid>https://duoyu.ren/tags/science/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -168,11 +168,11 @@
       
       <item>
         <title>novel</title>
-        <link>https://duoyu.ren/main/tags/novel/</link>
+        <link>https://duoyu.ren/tags/novel/</link>
         <pubDate>Fri, 25 Oct 2019 23:28:58 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/novel/</guid>
+        <guid>https://duoyu.ren/tags/novel/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -186,11 +186,11 @@
       
       <item>
         <title>layout</title>
-        <link>https://duoyu.ren/main/tags/layout/</link>
+        <link>https://duoyu.ren/tags/layout/</link>
         <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/layout/</guid>
+        <guid>https://duoyu.ren/tags/layout/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -204,11 +204,11 @@
       
       <item>
         <title>shortcode</title>
-        <link>https://duoyu.ren/main/tags/shortcode/</link>
+        <link>https://duoyu.ren/tags/shortcode/</link>
         <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/shortcode/</guid>
+        <guid>https://duoyu.ren/tags/shortcode/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -222,11 +222,11 @@
       
       <item>
         <title>Chinese</title>
-        <link>https://duoyu.ren/main/tags/chinese/</link>
+        <link>https://duoyu.ren/tags/chinese/</link>
         <pubDate>Tue, 16 Jul 2019 18:33:42 -0400</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/chinese/</guid>
+        <guid>https://duoyu.ren/tags/chinese/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -240,11 +240,11 @@
       
       <item>
         <title>diary</title>
-        <link>https://duoyu.ren/main/tags/diary/</link>
+        <link>https://duoyu.ren/tags/diary/</link>
         <pubDate>Mon, 10 Sep 2018 15:25:25 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/diary/</guid>
+        <guid>https://duoyu.ren/tags/diary/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -258,11 +258,11 @@
       
       <item>
         <title>Cāngjié</title>
-        <link>https://duoyu.ren/main/tags/c%C4%81ngji%C3%A9/</link>
+        <link>https://duoyu.ren/tags/c%C4%81ngji%C3%A9/</link>
         <pubDate>Mon, 17 Jul 2017 21:47:22 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/c%C4%81ngji%C3%A9/</guid>
+        <guid>https://duoyu.ren/tags/c%C4%81ngji%C3%A9/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -276,11 +276,11 @@
       
       <item>
         <title>TeX</title>
-        <link>https://duoyu.ren/main/tags/tex/</link>
+        <link>https://duoyu.ren/tags/tex/</link>
         <pubDate>Sat, 13 May 2017 09:29:32 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/tex/</guid>
+        <guid>https://duoyu.ren/tags/tex/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -294,11 +294,11 @@
       
       <item>
         <title>Confucius</title>
-        <link>https://duoyu.ren/main/tags/confucius/</link>
+        <link>https://duoyu.ren/tags/confucius/</link>
         <pubDate>Sun, 05 Jun 2016 21:39:35 +0000</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/confucius/</guid>
+        <guid>https://duoyu.ren/tags/confucius/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -312,11 +312,11 @@
       
       <item>
         <title>index</title>
-        <link>https://duoyu.ren/main/tags/index/</link>
+        <link>https://duoyu.ren/tags/index/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/tags/index/</guid>
+        <guid>https://duoyu.ren/tags/index/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>

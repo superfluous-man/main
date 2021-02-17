@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on Duōyú Rén</title>
-    <link>https://duoyu.ren/main/series/</link>
+    <link>https://duoyu.ren/series/</link>
     <description>Recent content in Series on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Mon, 07 Sep 2020 22:16:30 +0800</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/main/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>logic</title>
-        <link>https://duoyu.ren/main/series/logic/</link>
+        <link>https://duoyu.ren/series/logic/</link>
         <pubDate>Mon, 07 Sep 2020 22:16:30 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/series/logic/</guid>
+        <guid>https://duoyu.ren/series/logic/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -42,11 +42,11 @@
       
       <item>
         <title>書版</title>
-        <link>https://duoyu.ren/main/series/%E6%9B%B8%E7%89%88/</link>
+        <link>https://duoyu.ren/series/%E6%9B%B8%E7%89%88/</link>
         <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/series/%E6%9B%B8%E7%89%88/</guid>
+        <guid>https://duoyu.ren/series/%E6%9B%B8%E7%89%88/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -60,11 +60,11 @@
       
       <item>
         <title>輸入法</title>
-        <link>https://duoyu.ren/main/series/%E8%BC%B8%E5%85%A5%E6%B3%95/</link>
+        <link>https://duoyu.ren/series/%E8%BC%B8%E5%85%A5%E6%B3%95/</link>
         <pubDate>Mon, 17 Jul 2017 21:47:22 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/series/%E8%BC%B8%E5%85%A5%E6%B3%95/</guid>
+        <guid>https://duoyu.ren/series/%E8%BC%B8%E5%85%A5%E6%B3%95/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>
@@ -78,11 +78,11 @@
       
       <item>
         <title>古語辯</title>
-        <link>https://duoyu.ren/main/series/%E5%8F%A4%E8%AA%9E%E8%BE%AF/</link>
+        <link>https://duoyu.ren/series/%E5%8F%A4%E8%AA%9E%E8%BE%AF/</link>
         <pubDate>Sun, 05 Jun 2016 21:39:35 +0000</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
-        <guid>https://duoyu.ren/main/series/%E5%8F%A4%E8%AA%9E%E8%BE%AF/</guid>
+        <guid>https://duoyu.ren/series/%E5%8F%A4%E8%AA%9E%E8%BE%AF/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>

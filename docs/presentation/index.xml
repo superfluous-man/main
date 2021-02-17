@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Presentations on Duōyú Rén</title>
-    <link>https://duoyu.ren/main/presentation/</link>
+    <link>https://duoyu.ren/presentation/</link>
     <description>Recent content in Presentations on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -15,7 +15,7 @@
     <webMaster>logos@duoyu.ren (Duōyú Rén)</webMaster>
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     
-        <atom:link href="https://duoyu.ren/main/presentation/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/presentation/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -23,15 +23,15 @@
       
       <item>
         <title>Logic 01 Slides</title>
-        <link>https://duoyu.ren/main/presentation/logic-slides/ch00-slides/</link>
+        <link>https://duoyu.ren/presentation/logic-slides/ch00-slides/</link>
         <pubDate>Mon, 07 Sep 2020 22:16:30 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Mon, 07 Sep 2020 22:39:54 +0800</atom:modified>
-        <guid>https://duoyu.ren/main/presentation/logic-slides/ch00-slides/</guid>
+        <guid>https://duoyu.ren/presentation/logic-slides/ch00-slides/</guid>
         <description></description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main//images/author/schoollogo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren//images/author/schoollogo.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

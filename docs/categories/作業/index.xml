@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>作業 on Duōyú Rén</title>
-    <link>https://duoyu.ren/main/categories/%E4%BD%9C%E6%A5%AD/</link>
+    <link>https://duoyu.ren/categories/%E4%BD%9C%E6%A5%AD/</link>
     <description>Recent content in 作業 on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 25 Oct 2019 23:28:58 +0800</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/main/categories/%E4%BD%9C%E6%A5%AD/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/categories/%E4%BD%9C%E6%A5%AD/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>偷桃术</title>
-        <link>https://duoyu.ren/main/articles/20191025-tou-tao-shu/</link>
+        <link>https://duoyu.ren/articles/20191025-tou-tao-shu/</link>
         <pubDate>Fri, 25 Oct 2019 23:28:58 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:39:12 +0800</atom:modified>
-        <guid>https://duoyu.ren/main/articles/20191025-tou-tao-shu/</guid>
+        <guid>https://duoyu.ren/articles/20191025-tou-tao-shu/</guid>
         <description>⦿ 作者的話 ⦿ 本文主要情节完全改编自《故事会》某期某篇作品。所以，若非编者威逼利诱，作者是不愿意将此文公开登载在这儿的。特此声明。 民间自古流传</description>
         
         <dc:creator>康师傅冰红茶</dc:creator>
-        <media:content url="https://duoyu.ren/main//images/author/hmq.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren//images/author/hmq.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -58,15 +58,15 @@
       
       <item>
         <title>被搁浅的梦</title>
-        <link>https://duoyu.ren/main/articles/20191025-dreamlost/</link>
+        <link>https://duoyu.ren/articles/20191025-dreamlost/</link>
         <pubDate>Fri, 25 Oct 2019 22:32:03 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:39:31 +0800</atom:modified>
-        <guid>https://duoyu.ren/main/articles/20191025-dreamlost/</guid>
+        <guid>https://duoyu.ren/articles/20191025-dreamlost/</guid>
         <description>岁月就像一条长河，会带走一切。年少时做过的梦，会随着岁月被搁浅于岸。 阴郁的午后，雨散尽，云沉，天凉。世界寂静，不如入梦。 想起年少那些美好得不</description>
         
         <dc:creator>陈乐然</dc:creator>
-        <media:content url="https://duoyu.ren/main//images/author/chenleran.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren//images/author/chenleran.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -92,15 +92,15 @@
       
       <item>
         <title>窥荷</title>
-        <link>https://duoyu.ren/main/articles/20191025-kui-he/</link>
+        <link>https://duoyu.ren/articles/20191025-kui-he/</link>
         <pubDate>Fri, 25 Oct 2019 21:10:21 +0800</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:39:21 +0800</atom:modified>
-        <guid>https://duoyu.ren/main/articles/20191025-kui-he/</guid>
+        <guid>https://duoyu.ren/articles/20191025-kui-he/</guid>
         <description>⦿ 作者的話 ⦿ 写这篇东西不仅是为了完成作业，更有把高中挖的几个坑多少填一点的打算。 我最初的构思里，何先生与现版本相比没什么变化，小连则天差地别</description>
         
         <dc:creator>陆成江</dc:creator>
-        <media:content url="https://duoyu.ren/main//images/author/nezha.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren//images/author/nezha.jpg" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Chinese on Duōyú Rén</title>
-    <link>https://duoyu.ren/main/tags/chinese/</link>
+    <link>https://duoyu.ren/tags/chinese/</link>
     <description>Recent content in Chinese on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Tue, 16 Jul 2019 18:33:42 -0400</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/main/tags/chinese/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/tags/chinese/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,15 +24,15 @@
       
       <item>
         <title>漢語歐化與翻譯腔</title>
-        <link>https://duoyu.ren/main/articles/20190716-han-yu-ou-hua-yu-fan-yi-qiang/</link>
+        <link>https://duoyu.ren/articles/20190716-han-yu-ou-hua-yu-fan-yi-qiang/</link>
         <pubDate>Tue, 16 Jul 2019 18:33:42 -0400</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Tue, 17 Nov 2020 17:43:51 +0800</atom:modified>
-        <guid>https://duoyu.ren/main/articles/20190716-han-yu-ou-hua-yu-fan-yi-qiang/</guid>
+        <guid>https://duoyu.ren/articles/20190716-han-yu-ou-hua-yu-fan-yi-qiang/</guid>
         <description>這不是一篇正經的文章，故全文無嚴格的定義與嚴謹的論證。更何況目前還只是份草稿，錯別字也不少。 十年前，當五四運動九十週年時，在師友督促之下，寫</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

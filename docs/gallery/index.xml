@@ -7,7 +7,7 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Galleries on Duōyú Rén</title>
-    <link>https://duoyu.ren/main/gallery/</link>
+    <link>https://duoyu.ren/gallery/</link>
     <description>Recent content in Galleries on Duōyú Rén</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -16,7 +16,7 @@
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 31 Oct 2019 10:20:16 +0900</lastBuildDate>
     
-        <atom:link href="https://duoyu.ren/main/gallery/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://duoyu.ren/gallery/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,16 +24,16 @@
       
       <item>
         <title>Cartoon</title>
-        <link>https://duoyu.ren/main/gallery/cartoon/</link>
+        <link>https://duoyu.ren/gallery/cartoon/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Mon, 21 Sep 2020 15:54:45 +0800</atom:modified>
-        <guid>https://duoyu.ren/main/gallery/cartoon/</guid>
+        <guid>https://duoyu.ren/gallery/cartoon/</guid>
         <description>Sample images from Pixabay
 Sample images from Pixabay</description>
         
         <dc:creator>Duōyú Rén</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/feature/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/images/feature/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -43,15 +43,15 @@ Sample images from Pixabay</description>
       
       <item>
         <title>Photo</title>
-        <link>https://duoyu.ren/main/gallery/photo/</link>
+        <link>https://duoyu.ren/gallery/photo/</link>
         <pubDate>Thu, 31 Oct 2019 10:20:16 +0900</pubDate>
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         <atom:modified>Sun, 15 Mar 2020 20:23:39 +0800</atom:modified>
-        <guid>https://duoyu.ren/main/gallery/photo/</guid>
+        <guid>https://duoyu.ren/gallery/photo/</guid>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>Duōyú Rén</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/feature/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/images/feature/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
