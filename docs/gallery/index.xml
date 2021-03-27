@@ -33,7 +33,7 @@
 Sample images from Pixabay</description>
         
         <dc:creator>Duōyú Rén</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/feature/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/mainimages/feature/bam.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -51,7 +51,7 @@ Sample images from Pixabay</description>
         <description>Sample images from Pixabay</description>
         
         <dc:creator>Duōyú Rén</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/feature/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/mainimages/feature/gallery.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
