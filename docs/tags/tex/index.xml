@@ -32,7 +32,7 @@
         <description>本頁面測試 MathJax 渲染網頁上的 $\LaTeX$ 公式。MathJax 與 Hugo 匹配使用時，因與 emph 等標籤衝突，$\LaTeX$ 源碼中的下標和閉區間符號等可能有時需要稍加調</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -68,7 +68,7 @@
         <description>Typing some Chinese classical poems, I found most of the early examples are created for layouting English poems. Below I give a layout example of Tang poems anthology. Rather than a general solution, it&amp;rsquo;s just a particular example. Pls put below packages into the preamble of your document. 1 2 3 4 %漢字自動注音 \usepackage{xpinyin} %漢字注音設置 \xpinyinsetup{ratio = .4,font</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -104,7 +104,7 @@
         <description>Last month re-composed the classic Textbook, McQuail&amp;rsquo;s Mass Communication Theory, the following are some tikz examples in re-making book illustrations. To try these examples, pls put below codes into the preamble of your document. 1 2 \usepackage{tikz} % Required for drawing custom shapes \usetikzlibrary{arrows,calc,fit,matrix,positioning,shapes,shadows,trees,mindmap,tikzmark,arrows.meta} Positioning Map Figure The Output: The codes: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -140,7 +140,7 @@
         <description>In some big documents, for example The Cangjie Chinese-English Dictionary, it is necessary both for authors and readers to create one or two keywords lists in the book appendices. These lists can help to find information quite efficiently. In this article, I introduce the zhmakeindex program that aims to sort Chinese index entries. Gen­er­a­ting LaTeX Indices Separately With</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -176,7 +176,7 @@
         <description>Full of Sadness in My Heart 這些天，一想到至死也不可能「獨立」「手工」「研編」出一部滿意的漢語辭書，便滿心傷悲。獨立者，不抄襲、不取藍本；手工者，較少依賴計</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

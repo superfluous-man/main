@@ -14,13 +14,31 @@
     <managingEditor>logos@duoyu.ren (Duōyú Rén)</managingEditor>
     <webMaster>logos@duoyu.ren (Duōyú Rén)</webMaster>
     <copyright>&amp;copy;2020-{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 10 Apr 2021 15:30:18 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jul 2021 00:05:41 +0800</lastBuildDate>
     
         <atom:link href="https://duoyu.ren/main/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>shortcode</title>
+        <link>https://duoyu.ren/main/tags/shortcode/</link>
+        <pubDate>Sat, 03 Jul 2021 00:05:41 +0800</pubDate>
+        <author>logos@duoyu.ren (Duōyú Rén)</author>
+        
+        <guid>https://duoyu.ren/main/tags/shortcode/</guid>
+        <description></description>
+        
+        <dc:creator>Duōyú Rén</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>thesis</title>
@@ -191,24 +209,6 @@
         <author>logos@duoyu.ren (Duōyú Rén)</author>
         
         <guid>https://duoyu.ren/main/tags/layout/</guid>
-        <description></description>
-        
-        <dc:creator>Duōyú Rén</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>shortcode</title>
-        <link>https://duoyu.ren/main/tags/shortcode/</link>
-        <pubDate>Tue, 15 Oct 2019 00:57:29 +0800</pubDate>
-        <author>logos@duoyu.ren (Duōyú Rén)</author>
-        
-        <guid>https://duoyu.ren/main/tags/shortcode/</guid>
         <description></description>
         
         <dc:creator>Duōyú Rén</dc:creator>

@@ -32,7 +32,7 @@
         <description>本站新增樣式 參考衆多 Hugo shortcode 樣式案例，爲提高效率，本站新增以下幾種樣式。模板原有 shortcode 樣式在本文第二部分列出備查。 源代碼展示框 1 2 3 4 5 6 7 8 9 10 11</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -72,7 +72,7 @@
         <description>半個世紀以來，「橫排」逐漸成爲出版物排版的主流。十年前，境內還能偶爾看到一些出版社以「直排」方式出版一些古籍圖書。目下，僅有境外幾家出版社偶</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -108,7 +108,7 @@
         <description>不久前的南大語言學敎授事件中，前任院長丁帆以個人名義勇擔引人失察之責，令人欽佩。據稱，現任院長徐興無則先斬後奏，未經學校直接以全院敎師（共同</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -144,7 +144,7 @@
         <description>編書甚苦，進展頗慢，一日幾字，學海爬梳，皓首似難窮經，間亦嘆曰：「埋首書冊了無日，不如拋卻去尋春」。或曰，市面辭書繁多，且 APP 流行，查閱便捷，</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -180,7 +180,7 @@
         <description>本頁面測試 MathJax 渲染網頁上的 $\LaTeX$ 公式。MathJax 與 Hugo 匹配使用時，因與 emph 等標籤衝突，$\LaTeX$ 源碼中的下標和閉區間符號等可能有時需要稍加調</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -216,7 +216,7 @@
         <description>Typing some Chinese classical poems, I found most of the early examples are created for layouting English poems. Below I give a layout example of Tang poems anthology. Rather than a general solution, it&amp;rsquo;s just a particular example. Pls put below packages into the preamble of your document. 1 2 3 4 %漢字自動注音 \usepackage{xpinyin} %漢字注音設置 \xpinyinsetup{ratio = .4,font</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -252,7 +252,7 @@
         <description>Last month re-composed the classic Textbook, McQuail&amp;rsquo;s Mass Communication Theory, the following are some tikz examples in re-making book illustrations. To try these examples, pls put below codes into the preamble of your document. 1 2 \usepackage{tikz} % Required for drawing custom shapes \usetikzlibrary{arrows,calc,fit,matrix,positioning,shapes,shadows,trees,mindmap,tikzmark,arrows.meta} Positioning Map Figure The Output: The codes: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -288,7 +288,7 @@
         <description>In some big documents, for example The Cangjie Chinese-English Dictionary, it is necessary both for authors and readers to create one or two keywords lists in the book appendices. These lists can help to find information quite efficiently. In this article, I introduce the zhmakeindex program that aims to sort Chinese index entries. Gen­er­a­ting LaTeX Indices Separately With</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
@@ -324,7 +324,7 @@
         <description>Full of Sadness in My Heart 這些天，一想到至死也不可能「獨立」「手工」「研編」出一部滿意的漢語辭書，便滿心傷悲。獨立者，不抄襲、不取藍本；手工者，較少依賴計</description>
         
         <dc:creator>李二狗</dc:creator>
-        <media:content url="https://duoyu.ren/main/images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://duoyu.ren/main//images/author/avatar.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         
